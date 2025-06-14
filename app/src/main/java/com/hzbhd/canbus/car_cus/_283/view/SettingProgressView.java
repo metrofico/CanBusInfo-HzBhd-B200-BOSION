@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
 public class SettingProgressView extends RelativeLayout implements View.OnClickListener {

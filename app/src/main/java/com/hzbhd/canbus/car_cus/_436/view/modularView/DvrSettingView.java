@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._436.Interface.MdNotifyListener;
 import com.hzbhd.canbus.car_cus._436.Interface.MdOnClickListener;
 import com.hzbhd.canbus.car_cus._436.data.GeneralDvrSetting;

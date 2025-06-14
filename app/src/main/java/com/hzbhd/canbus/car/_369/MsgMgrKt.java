@@ -1,6 +1,6 @@
 package com.hzbhd.canbus.car._369;
 
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.util.InitUtilsKt;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;

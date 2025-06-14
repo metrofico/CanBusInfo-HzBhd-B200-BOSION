@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._467.air.Interface.ActionCallback;
 import com.hzbhd.canbus.car_cus._467.air.Interface.AirInfoObserver;
 import com.hzbhd.canbus.car_cus._467.air.data.AirData;

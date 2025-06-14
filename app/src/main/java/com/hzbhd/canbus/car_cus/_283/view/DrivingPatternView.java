@@ -10,7 +10,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.GeneralDzData;
 import com.hzbhd.canbus.car_cus._283.activity.MainSettingPersonalActivity;
 import com.hzbhd.canbus.util.CommUtil;

@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.ui.util.BaseUtil;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;

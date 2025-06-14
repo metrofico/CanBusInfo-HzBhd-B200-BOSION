@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import androidx.core.content.ContextCompat;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._467.smartPanel.NotifyPanel;
 import com.hzbhd.canbus.car_cus._467.smartPanel.PanelState;
 import com.hzbhd.canbus.car_cus._467.smartPanel.PanelView;

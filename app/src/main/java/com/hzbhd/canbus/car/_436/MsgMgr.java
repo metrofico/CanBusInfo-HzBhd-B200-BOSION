@@ -6,7 +6,7 @@ import android.os.RemoteException;
 import android.util.Log;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.SystemConstant;
 import com.hzbhd.canbus.car._436.DvrDataKAdapter;
 import com.hzbhd.canbus.car_cus._436.buiding.NotifyBuilding;

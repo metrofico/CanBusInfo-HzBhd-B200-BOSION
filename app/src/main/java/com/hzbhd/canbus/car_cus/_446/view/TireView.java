@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._446.Interface.CanInfoObserver;
 import com.hzbhd.canbus.car_cus._446.data.WmCarData;
 import java.text.DecimalFormat;

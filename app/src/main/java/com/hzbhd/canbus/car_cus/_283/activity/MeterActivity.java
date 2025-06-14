@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.car_cus._283.GeneralDzData;
 import com.hzbhd.canbus.car_cus._283.MessageSender;

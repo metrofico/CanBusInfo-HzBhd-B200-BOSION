@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._193;
 
 import android.content.Context;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
 import com.hzbhd.canbus.entity.PanoramicBtnUpdateEntity;

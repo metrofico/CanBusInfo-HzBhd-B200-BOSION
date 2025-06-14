@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.SparseArray;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
 import com.hzbhd.canbus.entity.OriginalCarDeviceUpdateEntity;

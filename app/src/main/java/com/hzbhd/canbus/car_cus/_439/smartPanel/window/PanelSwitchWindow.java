@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._439.air.view.CheckItemView2;
 import com.hzbhd.ui.util.BaseUtil;
 

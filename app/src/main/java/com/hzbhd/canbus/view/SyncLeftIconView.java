@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import com.android.internal.util.ArrayUtils;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
 public class SyncLeftIconView extends LinearLayout {

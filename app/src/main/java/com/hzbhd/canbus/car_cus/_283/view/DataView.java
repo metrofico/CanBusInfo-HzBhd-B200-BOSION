@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.core.internal.view.SupportMenu;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.GeneralDzData;
 import com.hzbhd.canbus.car_cus._283.utils.Utils;
 import com.hzbhd.canbus.util.SharePreUtil;

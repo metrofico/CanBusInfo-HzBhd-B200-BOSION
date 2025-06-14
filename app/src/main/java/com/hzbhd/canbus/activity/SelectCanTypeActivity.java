@@ -2,14 +2,11 @@ package com.hzbhd.canbus.activity;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemProperties;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -17,7 +14,7 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.SelectCanTypeLastLvAdapter;
 import com.hzbhd.canbus.adapter.SelectCarCateLvAdapter;
 import com.hzbhd.canbus.adapter.SelectProtocolCompanyLvAdapter;
@@ -32,6 +29,7 @@ import com.hzbhd.canbus.view.MarqueeTextView;
 import com.hzbhd.cantype.CanTypeMap;
 import com.hzbhd.cantype.CanTypeMapEng;
 import com.hzbhd.cantype.CanTypeUtil;
+import com.hzbhd.commontools.utils.SystemPropertiesUtils;
 import com.hzbhd.config.use.CanBus;
 import com.hzbhd.util.LogUtil;
 
@@ -68,41 +66,39 @@ public class SelectCanTypeActivity extends Activity implements View.OnClickListe
     private String mSelectCarCategory;
     private String mSelectProtocolCompany;
     private Button update_canbus;
-    private SelectProtocolCompanyLvAdapter.ItemCallBackInterface mProtocolCompanyItemSelect = new SelectProtocolCompanyLvAdapter.ItemCallBackInterface() { // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.2
-        @Override // com.hzbhd.canbus.adapter.SelectProtocolCompanyLvAdapter.ItemCallBackInterface
-        public void select(int i) {
-            if (SelectCanTypeActivity.this.playAnimationOnCompanyClick()) {
-                return;
-            }
-            SelectCanTypeActivity.this.mProtocolCompanyAdapter.setSelectItem((String) SelectCanTypeActivity.this.mProtocolCompanyList.get(i));
-            SelectCanTypeActivity.this.mProtocolCompanyAdapter.notifyDataSetChanged();
-            SelectCanTypeActivity selectCanTypeActivity = SelectCanTypeActivity.this;
-            selectCanTypeActivity.mSelectProtocolCompany = (String) selectCanTypeActivity.mProtocolCompanyList.get(i);
-            if (TextUtils.isEmpty(SelectCanTypeActivity.this.mSelectProtocolCompany)) {
-                return;
-            }
-            SelectCanTypeActivity.this.mCarCategoryList.clear();
-            SelectCanTypeActivity.this.mCarCategoryList.addAll(SelectCanTypeActivity.this.getCantypeMap().getCanTypeMap().get(SelectCanTypeActivity.this.mProtocolCompanyList.get(i)).keySet());
-            SelectCanTypeActivity.this.mCarCategoryAdapter.notifyDataSetChanged();
-            SelectCanTypeActivity.this.mCarModelAndYearsList.clear();
-            SelectCanTypeActivity.this.mCarModelAndYearsAdapter.notifyDataSetChanged();
+    // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.2
+// com.hzbhd.canbus.adapter.SelectProtocolCompanyLvAdapter.ItemCallBackInterface
+    private final SelectProtocolCompanyLvAdapter.ItemCallBackInterface mProtocolCompanyItemSelect = i -> {
+        if (SelectCanTypeActivity.this.playAnimationOnCompanyClick()) {
+            return;
         }
+        SelectCanTypeActivity.this.mProtocolCompanyAdapter.setSelectItem(SelectCanTypeActivity.this.mProtocolCompanyList.get(i));
+        SelectCanTypeActivity.this.mProtocolCompanyAdapter.notifyDataSetChanged();
+        SelectCanTypeActivity selectCanTypeActivity = SelectCanTypeActivity.this;
+        selectCanTypeActivity.mSelectProtocolCompany = selectCanTypeActivity.mProtocolCompanyList.get(i);
+        if (TextUtils.isEmpty(SelectCanTypeActivity.this.mSelectProtocolCompany)) {
+            return;
+        }
+        SelectCanTypeActivity.this.mCarCategoryList.clear();
+        SelectCanTypeActivity.this.mCarCategoryList.addAll(SelectCanTypeActivity.this.getCantypeMap().getCanTypeMap().get(SelectCanTypeActivity.this.mProtocolCompanyList.get(i)).keySet());
+        SelectCanTypeActivity.this.mCarCategoryAdapter.notifyDataSetChanged();
+        SelectCanTypeActivity.this.mCarModelAndYearsList.clear();
+        SelectCanTypeActivity.this.mCarModelAndYearsAdapter.notifyDataSetChanged();
     };
-    private SelectCarCateLvAdapter.ItemCallBackInterface mCarCategoryItemSelect = new SelectCarCateLvAdapter.ItemCallBackInterface() { // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.3
+    private final SelectCarCateLvAdapter.ItemCallBackInterface mCarCategoryItemSelect = new SelectCarCateLvAdapter.ItemCallBackInterface() { // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.3
         @Override // com.hzbhd.canbus.adapter.SelectCarCateLvAdapter.ItemCallBackInterface
         public void select(int i) {
             SelectCanTypeActivity.this.playAnimationOnCateporyClick();
-            SelectCanTypeActivity.this.mCarCategoryAdapter.setSelectItem((String) SelectCanTypeActivity.this.mCarCategoryList.get(i));
+            SelectCanTypeActivity.this.mCarCategoryAdapter.setSelectItem(SelectCanTypeActivity.this.mCarCategoryList.get(i));
             SelectCanTypeActivity.this.mCarCategoryAdapter.notifyDataSetChanged();
             SelectCanTypeActivity selectCanTypeActivity = SelectCanTypeActivity.this;
-            selectCanTypeActivity.mSelectCarCategory = (String) selectCanTypeActivity.mCarCategoryList.get(i);
+            selectCanTypeActivity.mSelectCarCategory = selectCanTypeActivity.mCarCategoryList.get(i);
             if (TextUtils.isEmpty(SelectCanTypeActivity.this.mSelectCarCategory)) {
                 return;
             }
             SelectCanTypeActivity.this.mCarModelAndYearsList.clear();
-            Iterator<Integer> it = SelectCanTypeActivity.this.getCantypeMap().getCanTypeMap().get(SelectCanTypeActivity.this.mSelectProtocolCompany).get(SelectCanTypeActivity.this.mSelectCarCategory).iterator();
-            while (it.hasNext()) {
-                CanTypeAllEntity carCategoryList = SelectCanTypeActivity.this.getCarCategoryList(it.next().intValue());
+            for (Integer integer : SelectCanTypeActivity.this.getCantypeMap().getCanTypeMap().get(SelectCanTypeActivity.this.mSelectProtocolCompany).get(SelectCanTypeActivity.this.mSelectCarCategory)) {
+                CanTypeAllEntity carCategoryList = SelectCanTypeActivity.this.getCarCategoryList(integer);
                 if (carCategoryList != null) {
                     SelectCanTypeActivity.this.mCarModelAndYearsList.add(carCategoryList);
                 }
@@ -110,11 +106,11 @@ public class SelectCanTypeActivity extends Activity implements View.OnClickListe
             SelectCanTypeActivity.this.mCarModelAndYearsAdapter.notifyDataSetChanged();
         }
     };
-    private SelectCanTypeLastLvAdapter.ItemCallBackInterface mCarModelItemSelect = new SelectCanTypeLastLvAdapter.ItemCallBackInterface() { // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.4
+    private final SelectCanTypeLastLvAdapter.ItemCallBackInterface mCarModelItemSelect = new SelectCanTypeLastLvAdapter.ItemCallBackInterface() { // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.4
         @Override // com.hzbhd.canbus.adapter.SelectCanTypeLastLvAdapter.ItemCallBackInterface
         public void select(int i) {
             SelectCanTypeActivity.this.mCarModelAndYearsAdapter.notifyDataSetChanged();
-            SelectCanTypeUtil.showDialogToUpdate(SelectCanTypeActivity.this, (CanTypeAllEntity) SelectCanTypeActivity.this.mCarModelAndYearsList.get(i), null);
+            SelectCanTypeUtil.showDialogToUpdate(SelectCanTypeActivity.this, SelectCanTypeActivity.this.mCarModelAndYearsList.get(i), null);
         }
     };
 
@@ -144,18 +140,15 @@ public class SelectCanTypeActivity extends Activity implements View.OnClickListe
     }
 
     private void findViews() {
-        this.mProtocolCompanyLv = (RecyclerView) findViewById(R.id.lv_0);
-        this.mCarCategoryLv = (RecyclerView) findViewById(R.id.lv_1);
-        this.mCarModelAndYearsLv = (RecyclerView) findViewById(R.id.lv_2);
-        this.mCurrentSelectedTv = (MarqueeTextView) findViewById(R.id.tv_selected);
-        Button button = (Button) findViewById(R.id.update_canbus);
+        this.mProtocolCompanyLv = findViewById(R.id.lv_0);
+        this.mCarCategoryLv = findViewById(R.id.lv_1);
+        this.mCarModelAndYearsLv = findViewById(R.id.lv_2);
+        this.mCurrentSelectedTv = findViewById(R.id.tv_selected);
+        Button button = findViewById(R.id.update_canbus);
         this.update_canbus = button;
-        button.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity$$ExternalSyntheticLambda0
-            @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                this.f$0.onClick(view);
-            }
-        });
+        // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity$$ExternalSyntheticLambda0
+// android.view.View.OnClickListener
+        button.setOnClickListener(SelectCanTypeActivity.this::onClick);
     }
 
     /* JADX WARN: Type inference failed for: r0v12, types: [com.hzbhd.canbus.activity.SelectCanTypeActivity$1] */
@@ -258,90 +251,68 @@ public class SelectCanTypeActivity extends Activity implements View.OnClickListe
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
         int id = view.getId();
-        switch (id) {
-            case R.id.btn_0 /* 2131361994 */:
-                input(0);
-                break;
-            case R.id.btn_1 /* 2131361995 */:
-                input(1);
-                break;
-            case R.id.btn_2 /* 2131361996 */:
-                input(2);
-                break;
-            case R.id.btn_3 /* 2131361997 */:
-                input(3);
-                break;
-            case R.id.btn_4 /* 2131361998 */:
-                input(4);
-                break;
-            case R.id.btn_5 /* 2131361999 */:
-                input(5);
-                break;
-            case R.id.btn_6 /* 2131362000 */:
-                input(6);
-                break;
-            case R.id.btn_7 /* 2131362001 */:
-                input(7);
-                break;
-            case R.id.btn_8 /* 2131362002 */:
-                input(8);
-                break;
-            case R.id.btn_9 /* 2131362003 */:
-                input(9);
-                break;
-            default:
-                switch (id) {
-                    case R.id.btn_delete /* 2131362019 */:
-                        if (this.mInputContentSb != null) {
-                            deleteInputContent();
-                            refreshInputTv();
-                            break;
-                        }
-                        break;
-                    case R.id.btn_input_id /* 2131362024 */:
-                        showInputIdDialog();
-                        break;
-                    case R.id.btn_select_can_type_id /* 2131362053 */:
-                        startActivity(new Intent(this, (Class<?>) SelectIdActivity.class));
-                        break;
-                    case R.id.btn_switch /* 2131362056 */:
-                        StringBuffer stringBuffer = this.mInputContentSb;
-                        if (stringBuffer != null) {
-                            try {
-                                int iIntValue = Integer.valueOf(stringBuffer.toString()).intValue();
-                                if (iIntValue == 709394) {
-                                    boolean boolValue = SharePreUtil.getBoolValue(this, Constant.SHARE_PRE_IS_DEBUG_MODEL, false);
-                                    String str = boolValue ? "Close Test Model" : "Open Test Model";
-                                    SharePreUtil.setBoolValue(this, Constant.SHARE_PRE_IS_DEBUG_MODEL, true ^ boolValue);
-                                    Toast.makeText(this, str, 0).show();
-                                    this.mDialog.dismiss();
-                                    break;
-                                } else {
-                                    deleteInputContent();
-                                    searchInList(iIntValue);
-                                    break;
-                                }
-                            } catch (Exception unused) {
-                                Toast.makeText(this, "Transform error", 0).show();
-                                return;
-                            }
-                        }
-                        break;
-                    case R.id.update_canbus /* 2131363728 */:
-                        SystemProperties.set("com.hzbhd.upgrade.cloud", "1");
-                        Intent intent = new Intent();
-                        intent.setComponent(HzbhdComponentName.CanBusOnlineUpdateActivity);
-                        intent.setFlags(268435456);
-                        startActivity(intent);
-                        break;
+        if (id == R.id.btn_0) {
+            input(0);
+        } else if (id == R.id.btn_1) {
+            input(1);
+        } else if (id == R.id.btn_2) {
+            input(2);
+        } else if (id == R.id.btn_3) {
+            input(3);
+        } else if (id == R.id.btn_4) {
+            input(4);
+        } else if (id == R.id.btn_5) {
+            input(5);
+        } else if (id == R.id.btn_6) {
+            input(6);
+        } else if (id == R.id.btn_7) {
+            input(7);
+        } else if (id == R.id.btn_8) {
+            input(8);
+        } else if (id == R.id.btn_9) {
+            input(9);
+        } else if (id == R.id.btn_delete) {
+            if (this.mInputContentSb != null) {
+                deleteInputContent();
+                refreshInputTv();
+            }
+        } else if (id == R.id.btn_input_id) {
+            showInputIdDialog();
+        } else if (id == R.id.btn_select_can_type_id) {
+            startActivity(new Intent(this, SelectIdActivity.class));
+        } else if (id == R.id.btn_switch) {
+            StringBuffer stringBuffer = this.mInputContentSb;
+            if (stringBuffer != null) {
+                try {
+                    int iIntValue = Integer.parseInt(stringBuffer.toString());
+                    if (iIntValue == 709394) {
+                        boolean boolValue = SharePreUtil.getBoolValue(this, Constant.SHARE_PRE_IS_DEBUG_MODEL, false);
+                        String str = boolValue ? "Close Test Model" : "Open Test Model";
+                        SharePreUtil.setBoolValue(this, Constant.SHARE_PRE_IS_DEBUG_MODEL, !boolValue);
+                        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
+                        this.mDialog.dismiss();
+                    } else {
+                        deleteInputContent();
+                        searchInList(iIntValue);
+                    }
+                } catch (Exception unused) {
+                    Toast.makeText(this, "Transform error", Toast.LENGTH_SHORT).show();
                 }
+            }
+        } else if (id == R.id.update_canbus) {
+            SystemPropertiesUtils.set("com.hzbhd.upgrade.cloud", "1");
+            Intent intent = new Intent();
+            intent.setComponent(HzbhdComponentName.CanBusOnlineUpdateActivity);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
+
     }
 
     private void searchInList(int i) {
         ArrayList<CanTypeAllEntity> list = CanTypeUtil.INSTANCE.getCanType(i).getList();
-        if (list.size() == 0) {
-            Toast.makeText(this, "Id Not Found", 0).show();
+        if (list.isEmpty()) {
+            Toast.makeText(this, "Id Not Found", Toast.LENGTH_SHORT).show();
         } else {
             SelectCanTypeUtil.showDialogToUpdate(this, list.get(0), null);
             this.mDialog.dismiss();
@@ -369,20 +340,20 @@ public class SelectCanTypeActivity extends Activity implements View.OnClickListe
     }
 
     public void showInputIdDialog() {
-        View viewInflate = LayoutInflater.from(this).inflate(R.layout.layout_dialog_input_id, (ViewGroup) null);
-        this.mInputIdTv = (TextView) viewInflate.findViewById(R.id.tv_id);
-        Button button = (Button) viewInflate.findViewById(R.id.btn_0);
-        Button button2 = (Button) viewInflate.findViewById(R.id.btn_1);
-        Button button3 = (Button) viewInflate.findViewById(R.id.btn_2);
-        Button button4 = (Button) viewInflate.findViewById(R.id.btn_3);
-        Button button5 = (Button) viewInflate.findViewById(R.id.btn_4);
-        Button button6 = (Button) viewInflate.findViewById(R.id.btn_5);
-        Button button7 = (Button) viewInflate.findViewById(R.id.btn_6);
-        Button button8 = (Button) viewInflate.findViewById(R.id.btn_7);
-        Button button9 = (Button) viewInflate.findViewById(R.id.btn_8);
-        Button button10 = (Button) viewInflate.findViewById(R.id.btn_9);
-        Button button11 = (Button) viewInflate.findViewById(R.id.btn_delete);
-        Button button12 = (Button) viewInflate.findViewById(R.id.btn_switch);
+        View viewInflate = LayoutInflater.from(this).inflate(R.layout.layout_dialog_input_id, null);
+        this.mInputIdTv = viewInflate.findViewById(R.id.tv_id);
+        Button button = viewInflate.findViewById(R.id.btn_0);
+        Button button2 = viewInflate.findViewById(R.id.btn_1);
+        Button button3 = viewInflate.findViewById(R.id.btn_2);
+        Button button4 = viewInflate.findViewById(R.id.btn_3);
+        Button button5 = viewInflate.findViewById(R.id.btn_4);
+        Button button6 = viewInflate.findViewById(R.id.btn_5);
+        Button button7 = viewInflate.findViewById(R.id.btn_6);
+        Button button8 = viewInflate.findViewById(R.id.btn_7);
+        Button button9 = viewInflate.findViewById(R.id.btn_8);
+        Button button10 = viewInflate.findViewById(R.id.btn_9);
+        Button button11 = viewInflate.findViewById(R.id.btn_delete);
+        Button button12 = viewInflate.findViewById(R.id.btn_switch);
         button.setOnClickListener(this);
         button2.setOnClickListener(this);
         button3.setOnClickListener(this);
@@ -399,12 +370,9 @@ public class SelectCanTypeActivity extends Activity implements View.OnClickListe
         this.mDialog = dialog;
         dialog.setContentView(viewInflate);
         this.mDialog.show();
-        this.mDialog.setOnDismissListener(new DialogInterface.OnDismissListener() { // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.5
-            @Override // android.content.DialogInterface.OnDismissListener
-            public void onDismiss(DialogInterface dialogInterface) {
-                SelectCanTypeActivity.this.deleteInputContent();
-            }
-        });
+        // from class: com.hzbhd.canbus.activity.SelectCanTypeActivity.5
+// android.content.DialogInterface.OnDismissListener
+        this.mDialog.setOnDismissListener(dialogInterface -> SelectCanTypeActivity.this.deleteInputContent());
     }
 
     private boolean isOrientationPort() {
@@ -444,18 +412,18 @@ public class SelectCanTypeActivity extends Activity implements View.OnClickListe
     }
 
     private boolean showProtocolCompany() {
-        return this.mCompanyAnimationUtil.playWidthAnimation(this.mCompanyLayoutWidth, 500L);
+        return this.mCompanyAnimationUtil.playWidthAnimation(this.mCompanyLayoutWidth, ANIMATION_PARAM_COMPANY_DURATION);
     }
 
     private void hideProtocolCompany() {
-        this.mCompanyAnimationUtil.playWidthAnimation(this.mCompanyItemDotWidth, 500L);
+        this.mCompanyAnimationUtil.playWidthAnimation(this.mCompanyItemDotWidth, ANIMATION_PARAM_COMPANY_DURATION);
     }
 
     private void showCarModel() {
-        this.mCarModelAnimationUtil.playWeightAnimation(ANIMATION_PARAM_CAR_MODEL_SHOW_WEIGHT, 500L);
+        this.mCarModelAnimationUtil.playWeightAnimation(ANIMATION_PARAM_CAR_MODEL_SHOW_WEIGHT, ANIMATION_PARAM_CAR_MODEL_DURATION);
     }
 
     private void hideCarModel() {
-        this.mCarModelAnimationUtil.playWeightAnimation(0.0f, 500L);
+        this.mCarModelAnimationUtil.playWeightAnimation(ANIMATION_PARAM_CAR_MODEL_HIDE_WEIGHT, ANIMATION_PARAM_CAR_MODEL_DURATION);
     }
 }

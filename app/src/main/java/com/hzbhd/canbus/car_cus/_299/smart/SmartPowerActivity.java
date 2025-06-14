@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car_cus._299.smart;
 
 import android.view.ViewGroup;
 import android.widget.RadioButton;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
 public class SmartPowerActivity extends com.hzbhd.canbus.activity.SmartPowerActivity {

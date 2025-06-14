@@ -1,7 +1,7 @@
 package com.hzbhd.canbus.car._94;
 
 import android.util.SparseIntArray;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car._94.MsgMgr;
 import com.hzbhd.canbus.interfaces.OnParseListener;
 import com.hzbhd.canbus.ui_datas.GeneralSyncData;

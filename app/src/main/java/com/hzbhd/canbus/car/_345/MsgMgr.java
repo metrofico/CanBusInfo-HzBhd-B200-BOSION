@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._345;
 
 import android.content.Context;
 import android.os.CountDownTimer;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.SystemConstant;
 import com.hzbhd.canbus.car._333.AlertView;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;

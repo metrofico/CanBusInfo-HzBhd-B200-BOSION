@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.DispUtility;
 import com.hzbhd.canbus.factory.Dependency;
 import com.hzbhd.canbus.factory.proxy.CanSettingProxy;

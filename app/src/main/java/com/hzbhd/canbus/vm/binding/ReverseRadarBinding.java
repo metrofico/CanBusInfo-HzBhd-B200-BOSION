@@ -4,7 +4,7 @@ import android.content.Context;
 import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.park.radar.RadarView;
 import com.hzbhd.canbus.ui_datas.GeneralParkData;
 import com.hzbhd.canbus.vm.Vm;

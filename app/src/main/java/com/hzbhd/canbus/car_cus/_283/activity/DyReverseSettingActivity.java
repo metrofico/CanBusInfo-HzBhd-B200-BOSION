@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.HandlerUtils;
 import com.hzbhd.canbus.car_cus._283.utils._283_SharedPreferencesUtils;
 import com.hzbhd.canbus.car_cus._283.view.CarImageView;

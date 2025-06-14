@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._55;
 import android.content.Context;
 import android.os.Bundle;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car._361.MsgMgrKt;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.SongListEntity;

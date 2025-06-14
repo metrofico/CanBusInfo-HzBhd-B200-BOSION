@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._290.SpaceItemDecoration;
 import com.hzbhd.canbus.car_cus._290.adapter.MediaItenAdapter;
 import com.hzbhd.canbus.car_cus._290.entity.MediaItemBean;

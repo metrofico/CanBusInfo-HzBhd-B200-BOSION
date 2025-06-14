@@ -12,7 +12,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car._161.Popup;
 import com.hzbhd.canbus.util.TimerUtil;
 import java.util.ArrayList;

@@ -9,7 +9,7 @@ import android.util.Log;
 import android.util.SparseArray;
 import androidx.core.app.NotificationCompat;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.activity.SettingActivity;
 import com.hzbhd.canbus.car._161.Popup;

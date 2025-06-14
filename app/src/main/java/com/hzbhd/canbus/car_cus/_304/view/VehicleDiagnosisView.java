@@ -15,7 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.WarningActivity;
 import com.hzbhd.canbus.car._304.MsgMgr;
 import com.hzbhd.canbus.car_cus._304.MyLinearLayoutManager;

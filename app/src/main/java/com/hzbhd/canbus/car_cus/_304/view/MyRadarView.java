@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._304.data.MyGeneralData;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener;

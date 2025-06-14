@@ -10,7 +10,7 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.util.SparseIntArray;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.MainActivity;
 import com.hzbhd.canbus.activity.WarningActivity;
 import com.hzbhd.canbus.adapter.util.FutureUtil;

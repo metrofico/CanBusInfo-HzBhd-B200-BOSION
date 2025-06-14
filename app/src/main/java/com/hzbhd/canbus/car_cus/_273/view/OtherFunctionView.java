@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.RelativeLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
 public class OtherFunctionView extends RelativeLayout implements ViewInterface {

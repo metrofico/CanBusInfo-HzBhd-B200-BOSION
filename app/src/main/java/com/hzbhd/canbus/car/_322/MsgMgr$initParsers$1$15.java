@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._322;
 
 import android.content.Context;
 import android.util.Log;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car._322.ActivePark;
 import com.hzbhd.canbus.car._322.MsgMgr;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;

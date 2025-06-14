@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car_cus._283.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.HandlerUtils;
 
 /* loaded from: classes2.dex */

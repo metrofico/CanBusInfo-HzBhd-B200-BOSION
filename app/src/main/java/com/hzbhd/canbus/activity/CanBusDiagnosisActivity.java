@@ -6,7 +6,7 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.util.OpenCanBusBuglyView;
 
 public class CanBusDiagnosisActivity extends AppCompatActivity {

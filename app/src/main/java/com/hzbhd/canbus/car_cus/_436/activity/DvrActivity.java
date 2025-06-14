@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._436.buiding.NotifyBuilding;
 import com.hzbhd.canbus.car_cus._436.data.GeneralDvrFile;
 import com.hzbhd.canbus.car_cus._436.data.GeneralDvrPlayPage;

@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._446;
 import android.content.Context;
 import android.util.Log;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._446.CanObserver;
 import com.hzbhd.canbus.car_cus._446.data.WmCarData;
 import com.hzbhd.canbus.car_cus._446.data.WmSharedKey;

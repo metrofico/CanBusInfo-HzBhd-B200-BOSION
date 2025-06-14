@@ -1,7 +1,9 @@
 package com.hzbhd.commontools.utils;
 
+import android.annotation.SuppressLint;
 import android.util.Log;
 
+@SuppressLint({"PrivateApi", "DiscouragedPrivateApi"})
 public class SystemPropertiesUtils {
     private static final String TAG = "SystemUtils";
 
@@ -19,6 +21,15 @@ public class SystemPropertiesUtils {
             Log.e(TAG, "Error al invocar SystemProperties.get: " + e.getMessage(), e);
         }
         return ""; // Fallback si falla
+    }
+
+    public static void set(String key, String value) {
+        try {
+            Class<?> clazz = Class.forName("android.os.SystemProperties");
+            clazz.getDeclaredMethod("set", String.class, String.class).invoke(null, key, value);
+        } catch (Exception e) {
+            Log.e(TAG, "Error al invocar SystemProperties.set: " + e.getMessage(), e);
+        }
     }
 
     // Método para obtener un int usando reflexión

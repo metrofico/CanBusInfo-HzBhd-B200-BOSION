@@ -4,7 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car._333.AlertView;
 import com.hzbhd.canbus.car._341.MsgMgrKt;
 import com.hzbhd.canbus.comm.Constant;

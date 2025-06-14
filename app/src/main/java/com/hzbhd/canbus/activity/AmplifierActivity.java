@@ -9,7 +9,7 @@ import android.view.ViewTreeObserver;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.interfaces.OnAmplifierCreateAndDestroyListener;
 import com.hzbhd.canbus.interfaces.OnAmplifierPositionListener;
 import com.hzbhd.canbus.interfaces.OnAmplifierResetPositionListener;

@@ -1,7 +1,7 @@
 package com.hzbhd.canbus.car_cus._283.bean;
 
 import android.text.TextUtils;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
 public class SettingDialogBean {

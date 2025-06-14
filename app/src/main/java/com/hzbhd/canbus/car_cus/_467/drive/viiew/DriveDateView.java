@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._467.drive.data.DriveData;
 import com.hzbhd.canbus.comm.ScreenConfig;
 import com.hzbhd.canbus.interfaces.ActionDo;

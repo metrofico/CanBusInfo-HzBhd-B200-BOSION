@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._467.air.window.AirSettingWindow;
 import com.hzbhd.canbus.car_cus._467.smartPanel.window.CarSelectWindow;
 import com.hzbhd.canbus.car_cus._467.smartPanel.window.PanelSwitchWindow;

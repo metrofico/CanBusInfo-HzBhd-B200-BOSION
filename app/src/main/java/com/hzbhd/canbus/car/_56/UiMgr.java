@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.MotionEvent;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirSeatClickListener;

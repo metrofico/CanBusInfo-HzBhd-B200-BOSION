@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.OnStarActivity;
 import com.hzbhd.canbus.config.CanbusConfig;
 import com.hzbhd.canbus.view.VerticalProgressBar;

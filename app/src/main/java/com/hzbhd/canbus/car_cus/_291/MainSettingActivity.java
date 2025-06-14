@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car_cus._291;
 
 import android.os.Bundle;
 import android.view.View;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.car_cus._283.MessageSender;
 import com.hzbhd.canbus.car_cus._283.view.SettingSelectView;

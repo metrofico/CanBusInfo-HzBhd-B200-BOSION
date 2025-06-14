@@ -19,7 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgService;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.UPDProgressActivity;
 import com.hzbhd.canbus.adapter.SelectedListAdapter;
 import com.hzbhd.canbus.adapter.bean.CanTypeAllEntity;

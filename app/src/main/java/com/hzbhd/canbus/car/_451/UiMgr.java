@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._451;
 import android.content.Context;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._451.Interface.ActionCallback;
 import com.hzbhd.canbus.car_cus._451.util.CycleRequestSpeed;
 import com.hzbhd.canbus.config.CanbusConfig;

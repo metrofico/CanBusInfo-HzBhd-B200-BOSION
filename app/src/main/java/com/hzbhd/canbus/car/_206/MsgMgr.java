@@ -9,7 +9,7 @@ import android.util.Log;
 import android.widget.Toast;
 import androidx.core.view.InputDeviceCompat;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.Util;
 import com.hzbhd.canbus.comm.Config;
 import com.hzbhd.canbus.control.CanbusControlAction;

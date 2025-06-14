@@ -22,7 +22,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.WarningActivity;
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
 import com.hzbhd.canbus.comm.Constant;

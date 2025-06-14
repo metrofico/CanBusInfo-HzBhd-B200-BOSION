@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._304.data.MyGeneralData;
 import com.hzbhd.canbus.util.SelectCanTypeUtil;
 import com.hzbhd.cantype.CanTypeUtil;

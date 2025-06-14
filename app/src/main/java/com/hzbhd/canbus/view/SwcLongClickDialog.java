@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.SwcLongKeyAdapter;
 import kotlin.Metadata;
 import kotlin.Unit;

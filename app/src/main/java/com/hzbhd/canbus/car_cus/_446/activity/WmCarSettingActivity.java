@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car_cus._446.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._446.CanObserver;
 import com.hzbhd.canbus.car_cus._446.view.Page1View;
 import com.hzbhd.canbus.car_cus._446.view.Page2View;

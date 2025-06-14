@@ -4,7 +4,7 @@ import android.content.Context;
 import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.widget.RelativeLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._299.RadarView;
 import com.hzbhd.common.settings.constant.BodaSysContant;
 

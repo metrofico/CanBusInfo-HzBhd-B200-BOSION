@@ -8,7 +8,7 @@ import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.FactoryItemAdapter;
 import com.hzbhd.canbus.car_cus._439.smartPanel.window.CarSelectWindow;
 import com.hzbhd.canbus.car_cus._439.smartPanel.window.PanelSwitchWindow;

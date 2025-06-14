@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._134;
 import android.content.Context;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.interfaces.OnConfirmDialogListener;
 import com.hzbhd.canbus.interfaces.OnOriginalBottomBtnClickListener;
 import com.hzbhd.canbus.interfaces.OnOriginalCarDeviceBackPressedListener;

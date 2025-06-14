@@ -12,7 +12,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._273.GeneralCwData;
 import com.hzbhd.canbus.car_cus._273.MessageSender;
 import com.hzbhd.canbus.car_cus._273.adapter.TemLvAdapter;

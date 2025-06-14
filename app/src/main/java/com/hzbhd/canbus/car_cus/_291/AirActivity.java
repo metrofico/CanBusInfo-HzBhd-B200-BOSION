@@ -7,7 +7,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.car_cus._291.view.BtnView;
 import com.hzbhd.canbus.car_cus._291.view.WindSpeedView;

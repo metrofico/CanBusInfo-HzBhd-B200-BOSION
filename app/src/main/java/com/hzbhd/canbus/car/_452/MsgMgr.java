@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._452;
 import android.content.Context;
 import android.os.Bundle;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
 import com.hzbhd.canbus.car_cus._451.Interface.ActionCallback;
 import com.hzbhd.canbus.car_cus._451.data.EquipData;

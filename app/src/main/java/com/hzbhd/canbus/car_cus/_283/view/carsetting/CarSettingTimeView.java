@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.RelativeLayout;
 import android.widget.TimePicker;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.GeneralDzData;
 import com.hzbhd.canbus.car_cus._283.MessageSender;
 import com.hzbhd.canbus.car_cus._283.bean.SettingDialogBean;

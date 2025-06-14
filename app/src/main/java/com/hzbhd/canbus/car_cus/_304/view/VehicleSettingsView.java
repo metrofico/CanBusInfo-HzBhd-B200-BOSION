@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AmplifierActivity;
 import com.hzbhd.canbus.activity.DriveDataActivity;
 import com.hzbhd.canbus.activity.HybirdActivity;

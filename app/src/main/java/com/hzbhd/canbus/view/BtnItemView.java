@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.ui_datas.GeneralAmplifierData;
 import com.hzbhd.canbus.ui_set.AirBtnAction;
 import kotlin.text.Typography;

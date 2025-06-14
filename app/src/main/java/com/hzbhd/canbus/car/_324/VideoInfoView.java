@@ -9,7 +9,7 @@ import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.proxy.camera.manager.CameraManager;
 
 /* loaded from: classes2.dex */

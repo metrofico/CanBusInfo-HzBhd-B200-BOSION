@@ -6,7 +6,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._448.DvrObserver;
 import com.hzbhd.canbus.car_cus._448.DvrSender;
 import com.hzbhd.canbus.car_cus._448.Interface.ActionCallback;

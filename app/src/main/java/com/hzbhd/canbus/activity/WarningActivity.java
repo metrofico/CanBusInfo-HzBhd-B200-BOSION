@@ -5,7 +5,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.WarningLvAdapter;
 import com.hzbhd.canbus.entity.WarningEntity;
 import com.hzbhd.canbus.interfaces.OnWarningStatusChangeListener;

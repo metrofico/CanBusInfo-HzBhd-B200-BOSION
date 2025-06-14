@@ -15,7 +15,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.core.app.NotificationCompat;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.Util;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;

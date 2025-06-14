@@ -7,7 +7,7 @@ import android.widget.RelativeLayout;
 import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.GeneralDzData;
 import com.hzbhd.canbus.car_cus._283.MessageSender;
 import com.hzbhd.canbus.car_cus._283.adapter.MeterColorAdapter;

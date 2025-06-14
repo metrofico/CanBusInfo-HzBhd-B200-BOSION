@@ -6,7 +6,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.SettingLeftLvAdapter;
 import com.hzbhd.canbus.adapter.SettingRightLvAdapter;
 import com.hzbhd.canbus.comm.Constant;

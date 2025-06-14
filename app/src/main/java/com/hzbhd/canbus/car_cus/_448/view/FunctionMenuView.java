@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._448.DvrObserver;
 import com.hzbhd.canbus.car_cus._448.DvrSender;
 import com.hzbhd.canbus.car_cus._448.Interface.ActionCallback;

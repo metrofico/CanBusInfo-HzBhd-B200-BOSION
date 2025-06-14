@@ -18,7 +18,7 @@ import android.widget.TextView;
 import androidx.core.view.InputDeviceCompat;
 import com.android.internal.util.ArrayUtils;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.SyncActivity;
 import com.hzbhd.canbus.activity.WarningActivity;
 import com.hzbhd.canbus.car._94.ActivePark;

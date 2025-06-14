@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.util.MyLog;
 import com.hzbhd.canbus.util.SelectCanTypeUtil;
 import com.hzbhd.canbus.util.SharePreUtil;

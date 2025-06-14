@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car_cus._304.activity;
 
 import android.os.Bundle;
 import android.widget.RelativeLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.car_cus._304.bean.MainPageEntity;
 import com.hzbhd.canbus.car_cus._304.view.MainView;

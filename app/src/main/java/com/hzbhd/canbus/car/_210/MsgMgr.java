@@ -8,7 +8,7 @@ import android.os.RemoteException;
 import android.os.SystemClock;
 import android.util.Log;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.MainActivity;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;

@@ -35,7 +35,8 @@ android {
 
 dependencies {
     implementation(project(":app:util"))
-    implementation(project(":app:util"))
+    implementation(project(":app:ui-base"))
+    implementation(project(":app:nfore"))
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

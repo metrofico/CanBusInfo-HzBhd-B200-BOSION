@@ -2,7 +2,7 @@ package com.hzbhd.canbus.smartpower;
 
 import android.content.Context;
 import android.content.Intent;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.commontools.utils.ConfigUtil;
 import kotlin.jvm.internal.ByteCompanionObject;

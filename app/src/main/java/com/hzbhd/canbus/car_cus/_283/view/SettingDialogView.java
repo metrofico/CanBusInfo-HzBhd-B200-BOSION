@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.DialogUtils;
 import com.hzbhd.canbus.car_cus._283.adapter.SettingDialogAdapter;
 import com.hzbhd.canbus.car_cus._283.bean.SettingDialogBean;

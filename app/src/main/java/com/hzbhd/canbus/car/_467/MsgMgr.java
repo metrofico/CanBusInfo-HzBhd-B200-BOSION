@@ -11,7 +11,7 @@ import android.os.SystemClock;
 import android.provider.Settings;
 import android.util.Log;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
 import com.hzbhd.canbus.adapter.util.SystemConstant;
 import com.hzbhd.canbus.car_cus._467.air.data.AirData;

@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._370;
 
 import android.content.Context;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
 import com.hzbhd.canbus.adapter.util.Util;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;

@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.OriginalBottomBtnLvAdapter;
 import com.hzbhd.canbus.adapter.OriginalDataLvItemAdapter;
 import com.hzbhd.canbus.adapter.SongListLvAdapter;

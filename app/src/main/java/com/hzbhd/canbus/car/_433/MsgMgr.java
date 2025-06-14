@@ -6,7 +6,7 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car._433.BluetoothView;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.OriginalCarDeviceUpdateEntity;

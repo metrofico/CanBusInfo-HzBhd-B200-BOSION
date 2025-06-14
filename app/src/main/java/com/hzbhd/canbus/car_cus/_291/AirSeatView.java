@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.PA6Utils;
 import com.hzbhd.canbus.car_cus._283.view.BtnView;
 import com.hzbhd.canbus.ui_datas.GeneralAirData;

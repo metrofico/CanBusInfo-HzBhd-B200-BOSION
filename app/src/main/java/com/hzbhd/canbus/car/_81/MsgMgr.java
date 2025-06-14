@@ -16,7 +16,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.core.view.MotionEventCompat;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.SyncActivity;
 import com.hzbhd.canbus.activity.WarningActivity;
 import com.hzbhd.canbus.adapter.util.FutureUtil;

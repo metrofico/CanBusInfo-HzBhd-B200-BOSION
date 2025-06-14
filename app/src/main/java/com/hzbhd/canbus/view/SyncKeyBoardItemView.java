@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import org.apache.log4j.varia.ExternallyRolledFileAppender;
 
 /* loaded from: classes2.dex */

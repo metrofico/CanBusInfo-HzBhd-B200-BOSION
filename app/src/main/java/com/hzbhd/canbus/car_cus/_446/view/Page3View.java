@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._446.Interface.ActionDo;
 import com.hzbhd.canbus.car_cus._446.Interface.CanInfoObserver;
 import com.hzbhd.canbus.car_cus._446.data.WmCarData;

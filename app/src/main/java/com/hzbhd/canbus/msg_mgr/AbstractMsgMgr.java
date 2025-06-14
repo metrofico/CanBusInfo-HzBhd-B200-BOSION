@@ -19,7 +19,7 @@ import android.util.Base64;
 import android.util.Log;
 import android.util.SparseArray;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.activity.AmplifierActivity;

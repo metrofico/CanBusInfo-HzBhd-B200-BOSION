@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.util.TimerUtil;

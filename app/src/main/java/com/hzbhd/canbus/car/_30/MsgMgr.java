@@ -14,7 +14,7 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import com.android.internal.util.ArrayUtils;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.car._30.MsgMgr;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;

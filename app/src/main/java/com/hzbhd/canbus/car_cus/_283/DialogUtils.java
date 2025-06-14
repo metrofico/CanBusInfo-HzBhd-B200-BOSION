@@ -13,7 +13,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._283.adapter.AirSelectAdapter;
 import com.hzbhd.canbus.car_cus._283.adapter.MainChooseAdapter;
 import com.hzbhd.canbus.car_cus._283.adapter.MainMediaAdapter;

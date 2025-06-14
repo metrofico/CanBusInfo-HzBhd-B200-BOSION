@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.park.BackCameraUiService;
 import com.hzbhd.canbus.ui_datas.GeneralParkData;

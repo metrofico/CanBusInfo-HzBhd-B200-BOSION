@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;
 import com.hzbhd.ui.util.BaseUtil;
 import kotlin.Unit;

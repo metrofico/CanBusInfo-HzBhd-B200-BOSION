@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 import java.util.List;

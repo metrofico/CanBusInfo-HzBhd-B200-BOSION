@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car_cus._451.activity.lexus;
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._451.Interface.CanInfoObserver;
 import com.hzbhd.canbus.car_cus._451.data.EquipData;
 import com.hzbhd.canbus.car_cus._451.observer.ObserverBuilding451;

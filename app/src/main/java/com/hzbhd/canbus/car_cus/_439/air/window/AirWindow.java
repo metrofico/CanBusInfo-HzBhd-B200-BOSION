@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._439.air.Interface.ActionCallback;
 import com.hzbhd.canbus.car_cus._439.air.view.AirView;
 import com.hzbhd.ui.util.BaseUtil;

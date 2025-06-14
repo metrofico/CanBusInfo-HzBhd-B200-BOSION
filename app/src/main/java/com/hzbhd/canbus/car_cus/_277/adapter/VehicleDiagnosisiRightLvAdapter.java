@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.core.internal.view.SupportMenu;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._277.ui_set.VehicleDiagnosisPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.LogUtil;

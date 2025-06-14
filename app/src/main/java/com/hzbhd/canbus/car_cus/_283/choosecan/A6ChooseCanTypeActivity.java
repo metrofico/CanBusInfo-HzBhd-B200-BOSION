@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.HzbhdLog;
 import com.hzbhd.canbus.car_cus._283.choosecan.A6AdapterCar;
 import com.hzbhd.canbus.config.CanbusConfig;

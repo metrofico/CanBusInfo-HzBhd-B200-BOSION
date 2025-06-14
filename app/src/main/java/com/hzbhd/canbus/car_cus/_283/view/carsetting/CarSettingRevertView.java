@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car._283.MsgMgr;
 import com.hzbhd.canbus.car_cus._283.DialogUtils;
 import com.hzbhd.canbus.car_cus._283.MessageSender;

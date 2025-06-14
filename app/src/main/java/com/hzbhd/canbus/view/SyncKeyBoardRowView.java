@@ -2,7 +2,7 @@ package com.hzbhd.canbus.view;
 
 import android.content.Context;
 import android.widget.LinearLayout;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.view.SyncKeyBoardItemView;
 import com.hzbhd.canbus.view.SyncKeyBoardView;
 

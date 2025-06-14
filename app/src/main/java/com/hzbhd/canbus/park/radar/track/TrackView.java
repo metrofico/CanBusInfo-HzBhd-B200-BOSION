@@ -8,7 +8,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import androidx.core.text.TextUtilsCompat;
 import androidx.core.view.InputDeviceCompat;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.util.LogUtil;
 import java.io.IOException;
 

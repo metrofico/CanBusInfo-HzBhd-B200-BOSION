@@ -9,7 +9,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.amap.AMapUtils;

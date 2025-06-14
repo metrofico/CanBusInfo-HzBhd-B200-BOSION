@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.service.TestCanBusService;
 import com.hzbhd.canbus.util.MyLog;
 import com.hzbhd.canbus.util.SetErrorLogView;

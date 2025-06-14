@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.canCustom.canBaseUtil.StatusUtil;
 import com.hzbhd.canbus.media.aux2.action.ActionCallback;
 import com.hzbhd.canbus.media.aux2.action.ActionTag;

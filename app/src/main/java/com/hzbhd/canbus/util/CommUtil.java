@@ -11,7 +11,7 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 import com.hzbhd.canbus.BuildConfig;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.factory.Dependency;
 import com.hzbhd.canbus.factory.proxy.CanSettingProxy;

@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car_cus._439.activity;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._439.drive.util.NotifyDriveDate;
 import com.hzbhd.canbus.car_cus._439.drive.viiew.DriveDateView;
 

@@ -5,7 +5,7 @@ import android.os.SystemClock;
 import android.util.Log;
 import android.util.SparseArray;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.R;
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.car_cus._304.activity.AirActivity;
 import com.hzbhd.canbus.car_cus._304.data.MyGeneralData;
