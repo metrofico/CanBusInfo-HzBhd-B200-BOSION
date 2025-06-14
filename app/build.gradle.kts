@@ -5,7 +5,9 @@ plugins {
 android {
     namespace = "com.hzbhd"
     compileSdk = 35
-
+    buildFeatures {
+        buildConfig = true // Habilita la generación de BuildConfig
+    }
     defaultConfig {
         applicationId = "com.hzbhd"
         minSdk = 28
@@ -32,7 +34,8 @@ android {
 }
 
 dependencies {
-
+    implementation(project(":app:util"))
+    implementation(project(":app:util"))
     implementation(libs.appcompat)
     implementation(libs.material)
     testImplementation(libs.junit)

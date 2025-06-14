@@ -176,7 +176,7 @@ public final class BaseUtil {
         Intrinsics.checkNotNullParameter(componentName, "componentName");
         Intent intent = new Intent();
         intent.setComponent(componentName);
-        intent.addFlags(268435456);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         getContext().startActivity(intent);
     }
 

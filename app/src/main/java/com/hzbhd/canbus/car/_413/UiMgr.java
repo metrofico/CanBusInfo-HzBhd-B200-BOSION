@@ -1,0 +1,359 @@
+package com.hzbhd.canbus.car._413;
+
+import android.content.Context;
+import com.hzbhd.canbus.CanbusMsgSender;
+import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
+import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
+import com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener;
+import com.hzbhd.canbus.adapter.interfaces.OnAirSeatClickListener;
+import com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener;
+import com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener;
+import com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener;
+import com.hzbhd.canbus.interfaces.OnDriveDataPageStatusListener;
+import com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener;
+import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
+import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
+import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
+import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
+import com.hzbhd.canbus.ui_set.SettingPageUiSet;
+import java.util.Iterator;
+import java.util.List;
+
+/* loaded from: classes2.dex */
+public class UiMgr extends AbstractUiMgr {
+    Context mContext;
+    MsgMgr mMsgMgr;
+    OnAirSeatHeatColdMinPlusClickListener mOnMinPlusClickListenerColdFrontLeft = new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.5
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickMin() {
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickPlus() {
+            UiMgr.this.sendAirInfo0x3D(23);
+        }
+    };
+    OnAirSeatHeatColdMinPlusClickListener mOnMinPlusClickListenerColdFrontRight = new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.6
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickMin() {
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickPlus() {
+            UiMgr.this.sendAirInfo0x3D(24);
+        }
+    };
+    private OnAirSeatHeatColdMinPlusClickListener onMinPlusClickListenerLeft = new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.7
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickMin() {
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickPlus() {
+            UiMgr.this.sendAirInfo0x3D(17);
+        }
+    };
+    private OnAirSeatHeatColdMinPlusClickListener onMinPlusClickListenerRight = new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.8
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickMin() {
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
+        public void onClickPlus() {
+            UiMgr.this.sendAirInfo0x3D(18);
+        }
+    };
+    private OnAirTemperatureUpDownClickListener mOnUpDownClickListenerFrontLeft = new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.9
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+        public void onClickUp() {
+            UiMgr.this.sendAirInfo0x3D(13);
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+        public void onClickDown() {
+            UiMgr.this.sendAirInfo0x3D(14);
+        }
+    };
+    private OnAirTemperatureUpDownClickListener mOnUpDownClickListenerFrontRight = new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.10
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+        public void onClickUp() {
+            UiMgr.this.sendAirInfo0x3D(15);
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+        public void onClickDown() {
+            UiMgr.this.sendAirInfo0x3D(16);
+        }
+    };
+    OnAirWindSpeedUpDownClickListener mSetWindSpeedView = new OnAirWindSpeedUpDownClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.11
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener
+        public void onClickLeft() {
+            UiMgr.this.sendAirInfo0x3D(12);
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener
+        public void onClickRight() {
+            UiMgr.this.sendAirInfo0x3D(11);
+        }
+    };
+    int nowModel = 0;
+    OnAirSeatClickListener onAirSeatClickListener = new OnAirSeatClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.12
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatClickListener
+        public void onLeftSeatClick() {
+            if (UiMgr.this.nowModel == 0) {
+                UiMgr.this.sendAirInfo0x3D(8);
+                UiMgr.this.nowModel = 1;
+            } else if (UiMgr.this.nowModel == 1) {
+                UiMgr.this.sendAirInfo0x3D(9);
+                UiMgr.this.nowModel = 2;
+            } else if (UiMgr.this.nowModel == 2) {
+                UiMgr.this.sendAirInfo0x3D(10);
+                UiMgr.this.nowModel = 0;
+            }
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatClickListener
+        public void onRightSeatClick() {
+            UiMgr.this.sendAirInfo0x3D(36);
+        }
+    };
+    OnAirBtnClickListener mOnAirBtnClickListenerFrontTop = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.13
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
+        public void onClickItem(int i) {
+            if (i == 0) {
+                UiMgr.this.sendAirInfo0x3D(1);
+                return;
+            }
+            if (i == 1) {
+                UiMgr.this.sendAirInfo0x3D(30);
+            } else if (i == 2) {
+                UiMgr.this.sendAirInfo0x3D(4);
+            } else {
+                if (i != 3) {
+                    return;
+                }
+                UiMgr.this.sendAirInfo0x3D(3);
+            }
+        }
+    };
+    OnAirBtnClickListener mOnAirBtnClickListenerFronteft = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.14
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
+        public void onClickItem(int i) {
+            if (i != 0) {
+                return;
+            }
+            UiMgr.this.sendAirInfo0x3D(2);
+        }
+    };
+    OnAirBtnClickListener mOnAirBtnClickListenerFrontRight = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.15
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
+        public void onClickItem(int i) {
+            if (i == 0) {
+                UiMgr.this.sendAirInfo0x3D(7);
+            } else {
+                if (i != 1) {
+                    return;
+                }
+                UiMgr.this.sendAirInfo0x3D(41);
+            }
+        }
+    };
+    OnAirBtnClickListener mOnAirBtnClickListenerFrontBottom = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.16
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
+        public void onClickItem(int i) {
+            if (i == 0) {
+                UiMgr.this.sendAirInfo0x3D(35);
+                return;
+            }
+            if (i == 1) {
+                UiMgr.this.sendAirInfo0x3D(25);
+            } else if (i == 3) {
+                UiMgr.this.sendAirInfo0x3D(6);
+            } else {
+                if (i != 4) {
+                    return;
+                }
+                UiMgr.this.sendAirInfo0x3D(5);
+            }
+        }
+    };
+    OnAirBtnClickListener mOnAirBtnClickListenerRearBottom = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.17
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
+        public void onClickItem(int i) {
+            if (i == 0) {
+                UiMgr.this.sendAirInfo0x3D(19);
+            } else {
+                if (i != 1) {
+                    return;
+                }
+                UiMgr.this.sendAirInfo0x3D(34);
+            }
+        }
+    };
+    private OnAirTemperatureUpDownClickListener mOnUpDownClickListenerRear = new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.18
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+        public void onClickUp() {
+            UiMgr.this.sendAirInfo0x3D(32);
+        }
+
+        @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+        public void onClickDown() {
+            UiMgr.this.sendAirInfo0x3D(33);
+        }
+    };
+    int eachId = getEachId();
+    int differentId = getCurrentCarId();
+
+    public UiMgr(Context context) {
+        this.mContext = context;
+        AirPageUiSet airUiSet = getAirUiSet(this.mContext);
+        airUiSet.getFrontArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{this.mOnAirBtnClickListenerFrontTop, this.mOnAirBtnClickListenerFronteft, this.mOnAirBtnClickListenerFrontRight, this.mOnAirBtnClickListenerFrontBottom});
+        airUiSet.getFrontArea().setOnAirSeatClickListener(this.onAirSeatClickListener);
+        airUiSet.getFrontArea().setSetWindSpeedViewOnClickListener(this.mSetWindSpeedView);
+        airUiSet.getFrontArea().setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{this.mOnUpDownClickListenerFrontLeft, null, this.mOnUpDownClickListenerFrontRight});
+        airUiSet.getFrontArea().setSeatHeatColdClickListeners(new OnAirSeatHeatColdMinPlusClickListener[]{this.onMinPlusClickListenerLeft, this.onMinPlusClickListenerRight, this.mOnMinPlusClickListenerColdFrontLeft, this.mOnMinPlusClickListenerColdFrontRight});
+        airUiSet.getRearArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{null, null, null, this.mOnAirBtnClickListenerRearBottom});
+        airUiSet.getRearArea().setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{null, this.mOnUpDownClickListenerRear, null});
+        airUiSet.setOnAirPageStatusListener(new OnAirPageStatusListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.1
+            @Override // com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener
+            public void onStatusChange(int i) {
+                UiMgr.this.activeRequest(49);
+            }
+        });
+        getDriverDataPageUiSet(this.mContext).setOnDriveDataPageStatusListener(new OnDriveDataPageStatusListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.2
+            @Override // com.hzbhd.canbus.interfaces.OnDriveDataPageStatusListener
+            public void onStatusChange(int i) {
+                UiMgr.this.activeRequest(50);
+            }
+        });
+        getSettingUiSet(this.mContext).setOnSettingItemSelectListener(new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.3
+            @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
+            public void onClickItem(int i, int i2, int i3) {
+                UiMgr uiMgr = UiMgr.this;
+                if (i == uiMgr.getSettingLeftIndexes(uiMgr.mContext, "_413_panoramic")) {
+                    UiMgr uiMgr2 = UiMgr.this;
+                    if (i2 == uiMgr2.getSettingRightIndex(uiMgr2.mContext, "_413_panoramic", "_413_panoramic1")) {
+                        UiMgr uiMgr3 = UiMgr.this;
+                        uiMgr3.getMsgMgr(uiMgr3.mContext).updateSettings(i, i2, i3);
+                        if (i3 == 0) {
+                            UiMgr uiMgr4 = UiMgr.this;
+                            uiMgr4.getMsgMgr(uiMgr4.mContext).hideDvrButton();
+                        } else {
+                            UiMgr uiMgr5 = UiMgr.this;
+                            uiMgr5.getMsgMgr(uiMgr5.mContext).showDvrButton();
+                        }
+                    }
+                }
+            }
+        });
+        getParkPageUiSet(this.mContext).setOnPanoramicItemClickListener(new OnPanoramicItemClickListener() { // from class: com.hzbhd.canbus.car._413.UiMgr.4
+            @Override // com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener
+            public void onClickItem(int i) {
+                if (i == 0) {
+                    UiMgr.this.sendPanoramicCmd(2);
+                } else {
+                    if (i != 1) {
+                        return;
+                    }
+                    UiMgr.this.sendPanoramicCmd(3);
+                }
+            }
+        });
+    }
+
+    @Override // com.hzbhd.canbus.ui_mgr.AbstractUiMgr, com.hzbhd.canbus.interfaces.UiMgrInterface
+    public void updateUiByDifferentCar(Context context) {
+        super.updateUiByDifferentCar(context);
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void sendAirInfo0x3D(int i) {
+        byte b = (byte) i;
+        CanbusMsgSender.sendMsg(new byte[]{22, 61, b, 1});
+        CanbusMsgSender.sendMsg(new byte[]{22, 61, b, 0});
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public void activeRequest(int i) {
+        CanbusMsgSender.sendMsg(new byte[]{22, 106, 5, 1, (byte) i});
+    }
+
+    public void sendPanoramicCmd(int i) {
+        CanbusMsgSender.sendMsg(new byte[]{22, -3, 2, (byte) i});
+    }
+
+    protected int getDrivingPageIndexes(Context context, String str) {
+        List<DriverDataPageUiSet.Page> list = getPageUiSet(context).getDriverDataPageUiSet().getList();
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i).getHeadTitleSrn().equals(str)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    protected int getDrivingItemIndexes(Context context, String str) {
+        List<DriverDataPageUiSet.Page> list = getPageUiSet(context).getDriverDataPageUiSet().getList();
+        for (int i = 0; i < list.size(); i++) {
+            Iterator<DriverDataPageUiSet.Page> it = list.iterator();
+            while (it.hasNext()) {
+                List<DriverDataPageUiSet.Page.Item> itemList = it.next().getItemList();
+                for (int i2 = 0; i2 < itemList.size(); i2++) {
+                    if (itemList.get(i2).getTitleSrn().equals(str)) {
+                        return i2;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+
+    protected int getSettingLeftIndexes(Context context, String str) {
+        List<SettingPageUiSet.ListBean> list = getPageUiSet(context).getSettingPageUiSet().getList();
+        Iterator<SettingPageUiSet.ListBean> it = list.iterator();
+        for (int i = 0; i < list.size(); i++) {
+            if (str.equals(it.next().getTitleSrn())) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    protected int getSettingRightIndex(Context context, String str, String str2) {
+        List<SettingPageUiSet.ListBean> list = getPageUiSet(context).getSettingPageUiSet().getList();
+        Iterator<SettingPageUiSet.ListBean> it = list.iterator();
+        for (int i = 0; i < list.size(); i++) {
+            SettingPageUiSet.ListBean next = it.next();
+            if (str.equals(next.getTitleSrn())) {
+                List<SettingPageUiSet.ListBean.ItemListBean> itemList = next.getItemList();
+                Iterator<SettingPageUiSet.ListBean.ItemListBean> it2 = itemList.iterator();
+                for (int i2 = 0; i2 < itemList.size(); i2++) {
+                    if (str2.equals(it2.next().getTitleSrn())) {
+                        return i2;
+                    }
+                }
+            }
+        }
+        return -1;
+    }
+
+    /* JADX INFO: Access modifiers changed from: private */
+    public MsgMgr getMsgMgr(Context context) {
+        if (this.mMsgMgr == null) {
+            this.mMsgMgr = (MsgMgr) MsgMgrFactory.getCanMsgMgr(context);
+        }
+        return this.mMsgMgr;
+    }
+
+    private int getDecimalFrom8Bit(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8) {
+        return Integer.parseInt(i + "" + i2 + "" + i3 + "" + i4 + "" + i5 + "" + i6 + "" + i7 + "" + i8, 2);
+    }
+
+    public boolean isLandscape() {
+        return this.mContext.getResources().getConfiguration().orientation == 2;
+    }
+
+    public boolean isPortrait() {
+        return this.mContext.getResources().getConfiguration().orientation == 1;
+    }
+}

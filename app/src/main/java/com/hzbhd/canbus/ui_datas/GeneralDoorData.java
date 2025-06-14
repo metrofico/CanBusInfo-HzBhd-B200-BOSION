@@ -1,0 +1,50 @@
+package com.hzbhd.canbus.ui_datas;
+
+/* loaded from: classes2.dex */
+public class GeneralDoorData {
+    public static boolean isBackOpen = false;
+    public static boolean isBatteryWarning = false;
+    public static boolean isEspOn = false;
+    public static boolean isFrontOpen = false;
+    public static boolean isFuelWarning = false;
+    public static boolean isHandBrakeUp = false;
+    public static boolean isIstopOn = false;
+    public static boolean isLeftFrontDoorOpen = false;
+    public static boolean isLeftRearDoorOpen = false;
+    public static boolean isLittleLightOn = false;
+    public static boolean isRightFrontDoorOpen = false;
+    public static boolean isRightRearDoorOpen = false;
+    public static boolean isSeatBeltTie = false;
+    public static boolean isSeatCoPilotBeltTie = false;
+    public static boolean isSeatMasterDriverBeltTie = false;
+    public static boolean isSeatRLBeltTie = false;
+    public static boolean isSeatRMBeltTie = false;
+    public static boolean isSeatRRBeltTie = false;
+    public static boolean isShowAcc = false;
+    public static boolean isShowBatteryWarning = false;
+    public static boolean isShowCarBody = true;
+    public static boolean isShowCarDoor = false;
+    public static boolean isShowCoPilotSeatBelt = false;
+    public static boolean isShowEsp = false;
+    public static boolean isShowFuelWarning = false;
+    public static boolean isShowGearPosition = false;
+    public static boolean isShowHandBrake = false;
+    public static boolean isShowIstop = false;
+    public static boolean isShowLeftRightLight = false;
+    public static boolean isShowLittleLight = false;
+    public static boolean isShowMasterDriverSeatBelt = false;
+    public static boolean isShowRLSeatBelt = false;
+    public static boolean isShowRMSeatBelt = false;
+    public static boolean isShowRRSeatBelt = false;
+    public static boolean isShowRev = false;
+    public static boolean isShowSeatBelt = false;
+    public static boolean isShowSpeed = false;
+    public static boolean isShowSteeringWheeAngle = false;
+    public static boolean isShowWashingFluidWarning = false;
+    public static boolean isShowWaterTemp = false;
+    public static boolean isSubSeatBeltTie = false;
+    public static boolean isSubShowSeatBelt = false;
+    public static boolean isWashingFluidWarning = false;
+    public static boolean isWaterTempWarning = false;
+    public static int skyWindowOpenLevel;
+}

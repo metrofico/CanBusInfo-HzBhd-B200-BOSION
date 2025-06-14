@@ -12,7 +12,9 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
     }
-
+    buildFeatures {
+        buildConfig = true // Habilita la generación de BuildConfig
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
