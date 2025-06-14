@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="@string/_283_title_3"
+        style="@style/_283_car_setting_little_title"/>
+    <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+        android:id="@+id/sdv_load"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:setting_title="@string/_283_car_setting_load"/>
+    <com.hzbhd.canbus.car_cus._283.view.SettingTireResetView
+        android:id="@+id/tire_reset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:setting_title="@string/_283_car_setting_load"/>
+    <TextView
+        android:text="@string/_283_car_setting_tyre"
+        style="@style/_283_car_setting_little_title"/>
+    <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+        android:id="@+id/ssv_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:setting_title="@string/_283_car_setting_alarm"/>
+    <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+        android:id="@+id/sdv_alarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:setting_title="@string/_283_car_setting_speed_alarm"/>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/_451_frame_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="32dp"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:id="@+id/txt"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:text="曾梦想仗剑走天涯，看一看世界的繁华"
+            android:maxLines="1"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

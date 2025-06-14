@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_right_list"
+        android:background="@drawable/c_268_car_set_bg"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp10"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rv_left_list"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_right_list1"
+        android:background="@drawable/c_268_car_set_bg"
+        android:paddingLeft="@dimen/dp160"
+        android:paddingTop="@dimen/dp0"
+        android:paddingRight="@dimen/dp50"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rv_left_list"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_left_list"
+        android:background="#18191b"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

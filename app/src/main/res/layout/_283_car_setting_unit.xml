@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView style="@style/_283_scrollView">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_1"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_2"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_3"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_volume"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_4"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_consumption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_5"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_electric"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_7"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_8"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_unit_title_6"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

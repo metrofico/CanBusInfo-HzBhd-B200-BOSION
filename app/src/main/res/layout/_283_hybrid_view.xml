@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" style="@style/_283_scrollView">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:text="电动行驶/充电设置"
+            style="@style/_283_car_setting_little_title"/>
+        <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+            android:id="@+id/sdv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:setting_title="最大充电电流"/>
+        <TextView
+            android:text="电动管理设置"
+            style="@style/_283_car_setting_little_title"/>
+        <com.hzbhd.canbus.car_cus._283.view.SettingProgressView
+            android:id="@+id/spv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:setting_title="车内温度"/>
+        <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+            android:id="@+id/ssv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:setting_title="空调使用蓄电池供电"/>
+        <com.hzbhd.canbus.car_cus._283.view.SettingProgressView
+            android:id="@+id/spv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:setting_title="蓄电池充电下限"/>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_left_list"
+        android:background="@drawable/c_268_car_set_bg"
+        android:paddingTop="@dimen/dp6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingStart="@dimen/dp15"
+        android:paddingEnd="@dimen/dp15"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_right_list"
+        android:background="@drawable/c_268_car_set_bg"
+        android:paddingLeft="@dimen/dp15"
+        android:paddingRight="@dimen/dp10"
+        android:visibility="gone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+</LinearLayout>

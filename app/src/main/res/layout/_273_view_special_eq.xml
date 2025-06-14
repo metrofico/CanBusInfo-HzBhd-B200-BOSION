@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:id="@+id/rl_left"
+        android:background="@drawable/cw_kt04_mid_img_tire_bg"
+        android:layout_width="400dp"
+        android:layout_height="210dp"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:textSize="@dimen/dp20"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="@string/special_tyjc_title"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tv_title">
+            <TextView
+                android:textSize="@dimen/dp20"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/special_tyjc"/>
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TableRow>
+                    <TextView
+                        android:text="@string/_273_left_front"
+                        style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/_273_right_front"
+                        style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/_273_left_rear_out"
+                        style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/_273_left_rear_in"
+                        style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/_273_right_rear_out"
+                        style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                </TableRow>
+                <TableRow>
+                    <TextView
+                        android:text="@string/_273_right_rear_in"
+                        style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                    <TextView style="@style/SpecialLeftTableTvStyle"/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:background="@drawable/cw_kt04_mid_img_report_bg"
+        android:layout_width="300dp"
+        android:layout_height="180dp"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_toRightOf="@+id/rl_left"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:textSize="@dimen/dp20"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="@string/special_bwjc"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TableRow>
+                <TextView
+                    android:text="@string/_273_tire_pressure"
+                    style="@style/SpecialRightTableTvStyle"/>
+                <TextView style="@style/SpecialRightTableTvStyle"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/_273_air"
+                    style="@style/SpecialRightTableTvStyle"/>
+                <TextView style="@style/SpecialRightTableTvStyle"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:text="@string/_273_instrument"
+                    style="@style/SpecialRightTableTvStyle"/>
+                <TextView style="@style/SpecialRightTableTvStyle"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+</RelativeLayout>

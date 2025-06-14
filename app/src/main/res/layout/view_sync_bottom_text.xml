@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_btn"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/ibt_item"
+        android:background="@drawable/btn_normal_selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:button="@null"/>
+    <TextView
+        android:textSize="@dimen/dp20"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:id="@+id/tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

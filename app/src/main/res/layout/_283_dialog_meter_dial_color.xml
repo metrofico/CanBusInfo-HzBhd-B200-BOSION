@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <com.hzbhd.canbus.car_cus._283.view.MeterDialColorView
+        android:id="@+id/meterDialColorView"
+        android:background="@drawable/_a6_meter_color_bg"
+        android:layout_width="@dimen/dp821"
+        android:layout_height="@dimen/dp468">
+        <TextView
+            android:textSize="@dimen/dp24"
+            android:textColor="@color/white"
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp24"
+            android:text="@string/_283_meter_title_2"
+            android:drawablePadding="@dimen/dp16"
+            android:drawableStart="@drawable/_a6_meter_dot_g"
+            android:layout_marginStart="@dimen/dp32"/>
+        <com.hzbhd.canbus.car_cus._283.view.MyRecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="@dimen/dp676"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginBottom="@dimen/dp16"
+            android:layout_below="@+id/tv1"
+            android:layout_centerHorizontal="true"
+            android:overScrollMode="never"
+            android:layout_marginStart="@dimen/dp45"/>
+    </com.hzbhd.canbus.car_cus._283.view.MeterDialColorView>
+</RelativeLayout>

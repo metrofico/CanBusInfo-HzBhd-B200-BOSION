@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/ll_line_set"
+    android:padding="@dimen/dp20"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.hzbhd.canbus.view.BcSettingSeekBarView
+        android:id="@+id/bc_ver"
+        android:visibility="gone"
+        style="@style/BcSettingSeekBarStyle"/>
+    <com.hzbhd.canbus.view.BcSettingSeekBarView
+        android:id="@+id/bc_ho"
+        android:visibility="gone"
+        style="@style/BcSettingSeekBarStyle"/>
+    <com.hzbhd.canbus.view.BcSettingSeekBarView
+        android:id="@+id/bc_left_right"
+        android:visibility="gone"
+        app:title="@string/line_left_right"
+        style="@style/BcSettingSeekBarStyle"/>
+    <Button
+        android:textSize="@dimen/dp21"
+        android:textColor="@android:color/white"
+        android:id="@+id/btn_track_calibration"
+        android:background="@drawable/back_camera_btn_bg"
+        android:visibility="visible"
+        android:layout_width="@dimen/dp144"
+        android:layout_height="@dimen/dp64"
+        android:text="@string/track_calibration"/>
+</LinearLayout>

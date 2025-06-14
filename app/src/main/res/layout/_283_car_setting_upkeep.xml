@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/_283_bg_line"
+        android:padding="@dimen/dp16"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginEnd="@dimen/dp32">
+        <TextView
+            android:text="@string/_283_car_setting_upkeep_title_1"
+            style="@style/_283_car_setting_little_title"/>
+        <TextView
+            android:id="@+id/tv_Imei"
+            style="@style/_283_car_setting_little_title"/>
+        <TextView
+            android:text="@string/_283_car_setting_upkeep_title_2"
+            style="@style/_283_car_setting_little_title"/>
+        <TextView
+            android:id="@+id/tv_checkCar"
+            android:text="--"
+            style="@style/_283_car_setting_little_title"/>
+        <TextView
+            android:text="@string/_283_car_setting_upkeep_title_3"
+            style="@style/_283_car_setting_little_title"/>
+        <TextView
+            android:id="@+id/tv_checkOil"
+            android:text="--"
+            style="@style/_283_car_setting_little_title"/>
+    </LinearLayout>
+</LinearLayout>

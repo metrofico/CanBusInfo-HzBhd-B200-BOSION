@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="RadarCenterCarStyle" parent="">
+        <item name="android:layout_width">@dimen/dp91</item>
+        <item name="android:layout_height">@dimen/dp186</item>
+    </style>
+    <style name="RadarLocationFrontLeftRightStyle" parent="">
+        <item name="android:layout_width">@dimen/dp39</item>
+        <item name="android:layout_height">@dimen/dp64</item>
+    </style>
+    <style name="RadarLocationUpDownStyle" parent="">
+        <item name="android:layout_width">@dimen/dp36</item>
+        <item name="android:layout_height">@dimen/dp60</item>
+    </style>
+</resources>

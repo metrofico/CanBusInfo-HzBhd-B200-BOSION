@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="track_view_cur_x_off">1060px</dimen>
+    <dimen name="track_view_x_off">-140px</dimen>
+    <dimen name="track_view_y_off">-230px</dimen>
+    <dimen name="video_height">600px</dimen>
+</resources>

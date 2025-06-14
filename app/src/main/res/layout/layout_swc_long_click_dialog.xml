@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@drawable/swc_long_key_bg"
+    android:layout_width="@dimen/dp764"
+    android:layout_height="@dimen/dp466">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp82">
+        <TextView
+            android:textSize="@dimen/dp24"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/swc_fun_longkey_select"/>
+        <ImageButton
+            android:id="@+id/ib_close"
+            android:background="@null"
+            android:layout_width="@dimen/dp84"
+            android:layout_height="@dimen/dp52"
+            android:src="@drawable/swc_close_n"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp12"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_long_keys"
+            android:layout_width="@dimen/dp744"
+            android:layout_height="@dimen/dp372"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+</LinearLayout>

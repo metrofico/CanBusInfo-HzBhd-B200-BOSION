@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="air_status_entries">
+        <item>Show full window</item>
+        <item>Show simple window</item>
+        <item>Not show window</item>
+    </array>
+    <array name="air_status_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </array>
+    <array name="hzbhd_car_type_entries">
+        <item>patriot</item>
+        <item>pickup</item>
+    </array>
+    <array name="hzbhd_car_type_values">
+        <item>0</item>
+        <item>1</item>
+    </array>
+    <array name="switch_seat_entries">
+        <item>normal</item>
+        <item>front door</item>
+        <item>rear door</item>
+        <item>all door</item>
+        <item>unshow door window</item>
+    </array>
+    <array name="switch_seat_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </array>
+</resources>

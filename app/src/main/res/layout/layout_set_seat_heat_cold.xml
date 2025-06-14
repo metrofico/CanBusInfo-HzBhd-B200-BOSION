@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/iv_click_item"
+        android:background="@drawable/btn_normal_selector"
+        android:layout_width="@dimen/dp180"
+        android:layout_height="@dimen/dp42"
+        android:layout_centerInParent="true"/>
+    <TextView
+        android:textSize="@dimen/dp20"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:id="@+id/tv_display_item"
+        android:layout_width="@dimen/dp180"
+        android:layout_height="@dimen/dp42"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

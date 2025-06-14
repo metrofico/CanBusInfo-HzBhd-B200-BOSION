@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@drawable/dz_vehicle_information_top_bg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/system_ui_height">
+        <TextView
+            android:textSize="@dimen/dp32"
+            android:textColor="@color/white"
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_283_car_setting"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp32"/>
+        <ImageView
+            android:id="@+id/iv_back"
+            android:paddingTop="@dimen/dp3"
+            android:paddingBottom="@dimen/dp3"
+            android:layout_width="@dimen/dp102"
+            android:layout_height="@dimen/dp56"
+            android:src="@drawable/_283_main_setting_back"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingEnd="@dimen/dp32"/>
+    </RelativeLayout>
+    <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+        android:id="@+id/ssv_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:setting_title="路边驻车"/>
+    <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+        android:id="@+id/ssv_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:setting_title="入库驻车"/>
+    <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+        android:id="@+id/ssv_radar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:setting_title="雷达静音"/>
+</LinearLayout>

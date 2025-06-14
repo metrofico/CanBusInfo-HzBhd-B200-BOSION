@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/ll_color_set"
+    android:padding="@dimen/dp20"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.hzbhd.canbus.view.BcSettingSeekBarView
+        android:id="@+id/bc_brightness"
+        app:title="@string/brightness"
+        style="@style/BcSettingSeekBarStyle"/>
+    <com.hzbhd.canbus.view.BcSettingSeekBarView
+        android:id="@+id/bc_contrast"
+        app:title="@string/contrast"
+        style="@style/BcSettingSeekBarStyle"/>
+    <com.hzbhd.canbus.view.BcSettingSeekBarView
+        android:id="@+id/bc_saturation"
+        app:title="@string/saturation"
+        style="@style/BcSettingSeekBarStyle"/>
+</LinearLayout>

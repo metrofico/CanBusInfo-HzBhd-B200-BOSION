@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/dz_bg_dianjiu"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:textSize="@dimen/dp26"
+        android:textColor="@drawable/_283_selector_textcolor"
+        android:gravity="center"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp60"
+        android:text="预设"/>
+    <View
+        android:layout_marginStart="@dimen/dp0"
+        android:layout_marginEnd="@dimen/dp0"
+        style="@style/_283_line"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="@dimen/dp300"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

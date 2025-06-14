@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_layout"
+    android:background="@color/transparent"
+    android:layout_marginTop="@dimen/dp70"
+    style="@style/TvSettingItemLayout">
+    <TextView
+        android:id="@+id/tv_icon"
+        android:layout_width="@dimen/dp116"
+        android:layout_height="@dimen/dp116"/>
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_marginTop="@dimen/dp20"
+        android:paddingStart="@dimen/dp10"
+        android:layout_toEndOf="@+id/tv_icon"
+        style="@style/TvSettingItemTitle"/>
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_marginTop="@dimen/dp6"
+        android:layout_below="@+id/tv_title"
+        android:paddingStart="@dimen/dp10"
+        android:layout_toEndOf="@+id/tv_icon"
+        style="@style/TvSettingItemValue"/>
+</RelativeLayout>

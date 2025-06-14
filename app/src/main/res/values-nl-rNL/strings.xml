@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="am">AM</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="browser_title">Browser</string>
+    <string name="bt_music">BT muziek</string>
+    <string name="bt_phone">BT telefoon</string>
+    <string name="car_navi">Navigatie</string>
+    <string name="dtv">DTV</string>
+    <string name="dvd_title">DVD</string>
+    <string name="dvr">DVR</string>
+    <string name="eq_title">EQ</string>
+    <string name="fcarema_title">Camera voorzijde</string>
+    <string name="folder">Folder</string>
+    <string name="music">Muziek</string>
+    <string name="navi">Navigatie</string>
+    <string name="picture_title">Afbeelding</string>
+    <string name="radio">Radio</string>
+    <string name="settings">Instellingen</string>
+    <string name="video">Video</string>
+</resources>

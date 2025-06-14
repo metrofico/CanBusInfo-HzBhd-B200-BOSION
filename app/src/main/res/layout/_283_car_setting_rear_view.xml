@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView style="@style/_283_scrollView">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="@string/_283_car_setting_rear_title_1"
+                style="@style/_283_car_setting_little_title"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_rear_title_2"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_rear_title_3"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_rear_title_4"/>
+            <TextView
+                android:text="@string/_283_car_setting_rear_title_5"
+                style="@style/_283_car_setting_little_title"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_rear_title_6"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_rear_title_7"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

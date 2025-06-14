@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:height="@dimen/dp272"
+        android:width="@dimen/dp206"
+        android:drawable="@drawable/ford_pa_0x19"/>
+    <item
+        android:height="@dimen/dp72"
+        android:width="@dimen/dp32"
+        android:drawable="@drawable/ford_pa_backward"
+        android:top="@dimen/dp100"
+        android:start="@dimen/dp150"/>
+</layer-list>

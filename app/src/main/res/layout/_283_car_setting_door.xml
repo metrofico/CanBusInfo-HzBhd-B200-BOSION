@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView style="@style/_283_scrollView">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/sdv_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_door_title_1"/>
+            <TextView
+                android:text="@string/_283_car_setting_door_title_2"
+                style="@style/_283_car_setting_little_title"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingDialogView
+                android:id="@+id/adv_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_door_title_3"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_auto_lock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_door_title_4"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_intelligence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_door_title_7"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_boot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_door_title_5"/>
+            <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
+                android:id="@+id/ssv_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:setting_title="@string/_283_car_setting_door_title_6"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

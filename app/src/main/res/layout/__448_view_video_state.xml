@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/state_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10px"/>
+        <TextView
+            android:textSize="26px"
+            android:textColor="@color/white"
+            android:gravity="center_vertical"
+            android:id="@+id/state_txt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="正在录像"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="26px"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:id="@+id/time_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40px"
+            android:text="00:00:00"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

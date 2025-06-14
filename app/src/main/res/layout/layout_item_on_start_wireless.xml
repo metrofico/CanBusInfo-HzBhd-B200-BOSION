@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_layout"
+    style="@style/TvSettingItemLayout">
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/TvSettingItemTitle"/>
+    <TextView
+        android:id="@+id/tv_value"
+        android:layout_alignParentEnd="true"
+        style="@style/TvSettingItemValue"/>
+</RelativeLayout>

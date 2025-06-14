@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="#373737"
+        android:layout_width="@dimen/dp512"
+        android:layout_height="@dimen/dp316"
+        android:layout_centerInParent="true">
+        <TextView
+            android:textSize="@dimen/dp32"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:paddingTop="@dimen/dp16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/green_net_system"
+            android:paddingStart="@dimen/dp32"/>
+        <TextView
+            android:textSize="@dimen/dp64"
+            android:textColor="@color/white"
+            android:id="@+id/tv_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="×"
+            android:layout_marginEnd="@dimen/dp28"
+            android:layout_alignParentEnd="true"/>
+        <TextView
+            android:textSize="@dimen/dp30"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_282_warning"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+</RelativeLayout>

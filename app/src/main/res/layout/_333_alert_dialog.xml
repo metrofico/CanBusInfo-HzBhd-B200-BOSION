@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/_333_frame"
+        android:layout_width="match_parent"
+        android:layout_height="240dp">
+        <ImageView
+            android:background="@drawable/ic_parking_warning"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"/>
+        <com.hzbhd.canbus.view.EverScrollTextView
+            android:textSize="18dp"
+            android:textColor="#ffffff"
+            android:ellipsize="marquee"
+            android:gravity="center"
+            android:id="@+id/alert_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="8dp"
+            android:singleLine="true"
+            android:layout_weight="1"/>
+        <Button
+            android:textSize="20dp"
+            android:textColor="#ffb343"
+            android:id="@+id/i_know"
+            android:background="#00ffffff"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/_333_I_know"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

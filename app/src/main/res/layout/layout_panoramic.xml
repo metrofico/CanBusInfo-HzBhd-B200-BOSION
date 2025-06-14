@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:id="@+id/right_pull_btn"
+        android:background="@color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:src="@drawable/selector_right_pull_btn"
+        android:layout_alignParentRight="true"/>
+    <ImageButton
+        android:id="@+id/right_hide_btn"
+        android:background="@color/transparent"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp30"
+        android:src="@drawable/selector_right_hide_btn"
+        android:layout_toLeftOf="@+id/rv_btn_list"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_btn_list"
+        android:background="@drawable/pull_right_view_btn_bg"
+        android:paddingLeft="@dimen/dp10"
+        android:paddingTop="@dimen/dp20"
+        android:paddingBottom="@dimen/dp20"
+        android:visibility="gone"
+        android:layout_width="@dimen/dp200"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp16"
+        android:layout_alignParentRight="true"/>
+</RelativeLayout>

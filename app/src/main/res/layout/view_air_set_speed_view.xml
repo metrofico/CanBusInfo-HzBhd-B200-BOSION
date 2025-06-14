@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/air_set_speed_view"
+    android:background="@drawable/bg_air_f_wind"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageButton
+        android:id="@+id/ib_down"
+        android:background="@drawable/air_wind_btn_small_selector"
+        android:layout_width="@dimen/dp62"
+        android:layout_height="@dimen/dp62"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/ll_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <ImageView
+        android:id="@+id/iv_auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_air_f_auto_n"
+        android:layout_centerInParent="true"/>
+    <ImageButton
+        android:id="@+id/ib_up"
+        android:background="@drawable/air_wind_btn_big_selector"
+        android:layout_width="@dimen/dp62"
+        android:layout_height="@dimen/dp62"
+        android:layout_marginLeft="@dimen/dp10"
+        android:layout_marginRight="@dimen/dp10"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.hzbhd.canbus.view.RowTopBtnView
+        android:orientation="horizontal"
+        android:id="@+id/ll_top"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/dp10"
+        android:paddingEnd="@dimen/dp10"/>
+</HorizontalScrollView>

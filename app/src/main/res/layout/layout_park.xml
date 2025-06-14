@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cameraView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/view_cus_panoramic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.hzbhd.canbus.park.radar.RadarView
+        android:id="@+id/view_radar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.hzbhd.canbus.park.panoramic.PanoramicView
+        android:id="@+id/view_panoramic"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+    <TextView
+        android:id="@+id/tv_camera_tis"
+        style="@style/CameraTisStyle"/>
+    <com.hzbhd.canbus.park.external360cam.IrCam360MaylasiaView
+        android:id="@+id/view_external_360_cam_my"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+    <RelativeLayout
+        android:id="@+id/radar_all_page"
+        android:layout_width="1px"
+        android:layout_height="1px"/>
+</RelativeLayout>

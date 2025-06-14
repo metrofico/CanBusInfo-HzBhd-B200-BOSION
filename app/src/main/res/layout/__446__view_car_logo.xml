@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/icon"
+        android:background="@drawable/_446_logo_off_icon"
+        android:layout_width="144px"
+        android:layout_height="144px"/>
+    <TextView
+        android:textSize="24px"
+        android:textColor="@color/white"
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:text="@string/_446_wm_car_13"/>
+</LinearLayout>

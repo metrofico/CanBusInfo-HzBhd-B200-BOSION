@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/log_layout"
+        android:background="@drawable/_frame_1b_0j"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="#bc8282"
+            android:layout_width="500dp"
+            android:layout_height="60dp"
+            android:text="Error Data"/>
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="260dp">
+            <TextView
+                android:textSize="16dp"
+                android:textColor="@color/red"
+                android:id="@+id/log_view"
+                android:background="@color/transparent"
+                android:layout_width="500dp"
+                android:layout_height="match_parent"/>
+        </ScrollView>
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+            <Button
+                android:textColor="@color/white"
+                android:id="@+id/ignore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="忽略,继续测试"
+                android:backgroundTint="@color/gray"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

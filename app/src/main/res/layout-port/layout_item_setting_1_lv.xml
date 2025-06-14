@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_layout"
+    android:background="@drawable/setting_list_bg_selector"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:gravity="center_vertical"
+        android:id="@+id/rl_layout"
+        android:background="@color/transparent"
+        style="@style/TvSettingItemLayout">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@+id/iv_right_icon">
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/TvSettingItemTitle"/>
+            <TextView
+                android:textColor="#dddddd"
+                android:id="@+id/tv_value"
+                android:layout_marginTop="@dimen/dp10"
+                android:layout_below="@+id/tv_title"
+                android:layout_alignParentEnd="true"
+                style="@style/TvSettingItemValue"/>
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/iv_right_icon"
+            android:layout_marginStart="@dimen/dp20"
+            style="@style/IvSettingItemRightImage"/>
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/setting_divider"
+        android:layout_below="@+id/rl_layout"/>
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="@drawable/_436_setting_dialog_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:textSize="@dimen/dp22"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/warning_icon"
+            android:layout_width="@dimen/dp60"
+            android:layout_height="@dimen/dp60"/>
+        <TextView
+            android:textSize="@dimen/dp22"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:id="@+id/alertContent"
+            android:background="#454545"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp140"
+            android:text="您确定要恢复出厂设置吗？"/>
+        <Button
+            android:textSize="@dimen/dp24"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:backgroundTint="@color/red"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
