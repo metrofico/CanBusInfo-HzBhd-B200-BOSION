@@ -2,7 +2,6 @@ package com.hzbhd.canbus.adapter.util;
 
 import android.content.Context;
 
-/* loaded from: classes.dex */
 public class CanTypeMsg {
     public static final String BHD = "BHD";
     public static final String BINARY = "BINARY";

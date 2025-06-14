@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.activity;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -11,10 +12,13 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.core.app.NotificationCompat;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.Util;
 import com.hzbhd.midware.constant.HotKeyConstant;
@@ -50,9 +54,9 @@ public class UPDProgressActivity extends Activity {
                     UPDProgressActivity.this.mHandler.sendMessage(UPDProgressActivity.this.mHandler.obtainMessage(3, 0, 0, intent.getStringExtra("canbus_swc_upd_name")));
                 }
                 if (intent.getIntExtra("result", 0) == 2) {
-                    Toast.makeText(UPDProgressActivity.this.getApplicationContext(), "upgrade success", 1).show();
+                    Toast.makeText(UPDProgressActivity.this.getApplicationContext(), "upgrade success", Toast.LENGTH_LONG).show();
                 } else if (intent.getIntExtra("result", 0) == -1) {
-                    Toast.makeText(UPDProgressActivity.this.getApplicationContext(), "upgrade error!", 1).show();
+                    Toast.makeText(UPDProgressActivity.this.getApplicationContext(), "upgrade error!", Toast.LENGTH_LONG).show();
                     UPDProgressActivity.this.mUpgradeTitleTv.setText(R.string.upgrade_falure);
                     UPDProgressActivity.this.showUpgradeDialog(R.string.upgrade_falure);
                 } else if (intent.getIntExtra("result", 0) == -2) {
@@ -113,6 +117,7 @@ public class UPDProgressActivity extends Activity {
         this.mUpgradeTitleTv = (TextView) findViewById(R.id.lbl_upgrade_title);
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     private void initViews() {
         int intExtra = getIntent().getIntExtra(CAN_TYPE_ID, 0);
         this.mIsCanSwcUpd = getIntent().getBooleanExtra(IS_CANBUS_SWC_UPD, false);
@@ -155,7 +160,7 @@ public class UPDProgressActivity extends Activity {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void showUpgradeDialog(int i) {
-        findViewById(R.id.main_layout).setVisibility(4);
+        findViewById(R.id.main_layout).setVisibility(View.INVISIBLE);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setCancelable(false);
         builder.setTitle(getString(R.string.upgrade_failed));

@@ -1,5 +1,6 @@
 package com.hzbhd.ui.base;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -8,18 +9,15 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
+
 import com.hzbhd.util.LogUtil;
-import kotlin.Lazy;
-import kotlin.LazyKt;
-import kotlin.Metadata;
+
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: BhdRadioButton.kt */
-@Metadata(d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\b+\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u000b\n\u0000\b\u0007\u0018\u00002\u00020\u0001B\u000f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004B\u0017\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007B\u001f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nB'\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\u000b\u001a\u00020\t¢\u0006\u0002\u0010\fJ\u0010\u0010H\u001a\u00020I2\u0006\u0010J\u001a\u00020KH\u0017J \u0010L\u001a\u00020\u000e2\u0006\u0010M\u001a\u00020\u000e2\u0006\u0010N\u001a\u00020\t2\u0006\u0010O\u001a\u00020\tH\u0002J\u001a\u0010P\u001a\u00020I2\u0006\u0010\u0002\u001a\u00020\u00032\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006H\u0002J\u0010\u0010Q\u001a\u00020I2\u0006\u0010R\u001a\u00020SH\u0016R\u001c\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u001c\u0010\u0013\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0014\u0010\u0010\"\u0004\b\u0015\u0010\u0012R\u001c\u0010\u0016\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0017\u0010\u0010\"\u0004\b\u0018\u0010\u0012R\u001c\u0010\u0019\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u0010\"\u0004\b\u001b\u0010\u0012R\u001b\u0010\u001c\u001a\u00020\u001d8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b \u0010!\u001a\u0004\b\u001e\u0010\u001fR\u001c\u0010\"\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b#\u0010\u0010\"\u0004\b$\u0010\u0012R\u001a\u0010%\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b&\u0010'\"\u0004\b(\u0010)R\u001a\u0010*\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b+\u0010'\"\u0004\b,\u0010)R\u001c\u0010-\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b.\u0010\u0010\"\u0004\b/\u0010\u0012R\u001a\u00100\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b1\u0010'\"\u0004\b2\u0010)R\u001a\u00103\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b4\u0010'\"\u0004\b5\u0010)R\u001c\u00106\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b7\u0010\u0010\"\u0004\b8\u0010\u0012R\u001a\u00109\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b:\u0010'\"\u0004\b;\u0010)R\u001a\u0010<\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b=\u0010'\"\u0004\b>\u0010)R\u001c\u0010?\u001a\u0004\u0018\u00010\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b@\u0010\u0010\"\u0004\bA\u0010\u0012R\u001a\u0010B\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bC\u0010'\"\u0004\bD\u0010)R\u001a\u0010E\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bF\u0010'\"\u0004\bG\u0010)¨\u0006T"}, d2 = {"Lcom/hzbhd/ui/base/BhdRadioButton;", "Landroid/widget/RadioButton;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "attrs", "Landroid/util/AttributeSet;", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "defStyleRes", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "fullBg", "Landroid/graphics/Bitmap;", "getFullBg", "()Landroid/graphics/Bitmap;", "setFullBg", "(Landroid/graphics/Bitmap;)V", "fullBgP", "getFullBgP", "setFullBgP", "fullFg", "getFullFg", "setFullFg", "fullFgP", "getFullFgP", "setFullFgP", "mDrawablePaint", "Landroid/graphics/Paint;", "getMDrawablePaint", "()Landroid/graphics/Paint;", "mDrawablePaint$delegate", "Lkotlin/Lazy;", "minBg", "getMinBg", "setMinBg", "minBgHeight", "getMinBgHeight", "()I", "setMinBgHeight", "(I)V", "minBgLeft", "getMinBgLeft", "setMinBgLeft", "minBgP", "getMinBgP", "setMinBgP", "minBgTop", "getMinBgTop", "setMinBgTop", "minBgWidth", "getMinBgWidth", "setMinBgWidth", "minFg", "getMinFg", "setMinFg", "minFgHeight", "getMinFgHeight", "setMinFgHeight", "minFgLeft", "getMinFgLeft", "setMinFgLeft", "minFgP", "getMinFgP", "setMinFgP", "minFgTop", "getMinFgTop", "setMinFgTop", "minFgWidth", "getMinFgWidth", "setMinFgWidth", "draw", "", "canvas", "Landroid/graphics/Canvas;", "getDrawableBitmap", "bitmap", "drawWidth", "drawHeight", "init", "setChecked", "checked", "", "bhdview_release"}, k = 1, mv = {1, 6, 0}, xi = 48)
-/* loaded from: classes2.dex */
+
+@SuppressLint("AppCompatCustomView")
 public final class BhdRadioButton extends RadioButton {
     private Bitmap fullBg;
     private Bitmap fullBgP;
@@ -27,7 +25,7 @@ public final class BhdRadioButton extends RadioButton {
     private Bitmap fullFgP;
 
     /* renamed from: mDrawablePaint$delegate, reason: from kotlin metadata */
-    private final Lazy mDrawablePaint;
+    private final Paint mDrawablePaint;
     private Bitmap minBg;
     private int minBgHeight;
     private int minBgLeft;
@@ -41,175 +39,176 @@ public final class BhdRadioButton extends RadioButton {
     private int minFgTop;
     private int minFgWidth;
 
-    private final Paint getMDrawablePaint() {
-        return (Paint) this.mDrawablePaint.getValue();
+    private Paint getMDrawablePaint() {
+        return this.mDrawablePaint;
     }
 
-    public final int getMinBgWidth() {
+    public int getMinBgWidth() {
         return this.minBgWidth;
     }
 
-    public final void setMinBgWidth(int i) {
+    public void setMinBgWidth(int i) {
         this.minBgWidth = i;
     }
 
-    public final int getMinBgHeight() {
+    public int getMinBgHeight() {
         return this.minBgHeight;
     }
 
-    public final void setMinBgHeight(int i) {
+    public void setMinBgHeight(int i) {
         this.minBgHeight = i;
     }
 
-    public final int getMinFgWidth() {
+    public int getMinFgWidth() {
         return this.minFgWidth;
     }
 
-    public final void setMinFgWidth(int i) {
+    public void setMinFgWidth(int i) {
         this.minFgWidth = i;
     }
 
-    public final int getMinFgHeight() {
+    public int getMinFgHeight() {
         return this.minFgHeight;
     }
 
-    public final void setMinFgHeight(int i) {
+    public void setMinFgHeight(int i) {
         this.minFgHeight = i;
     }
 
-    public final int getMinBgTop() {
+    public int getMinBgTop() {
         return this.minBgTop;
     }
 
-    public final void setMinBgTop(int i) {
+    public void setMinBgTop(int i) {
         this.minBgTop = i;
     }
 
-    public final int getMinBgLeft() {
+    public int getMinBgLeft() {
         return this.minBgLeft;
     }
 
-    public final void setMinBgLeft(int i) {
+    public void setMinBgLeft(int i) {
         this.minBgLeft = i;
     }
 
-    public final int getMinFgLeft() {
+    public int getMinFgLeft() {
         return this.minFgLeft;
     }
 
-    public final void setMinFgLeft(int i) {
+    public void setMinFgLeft(int i) {
         this.minFgLeft = i;
     }
 
-    public final int getMinFgTop() {
+    public int getMinFgTop() {
         return this.minFgTop;
     }
 
-    public final void setMinFgTop(int i) {
+    public void setMinFgTop(int i) {
         this.minFgTop = i;
     }
 
-    public final Bitmap getFullBg() {
+    public Bitmap getFullBg() {
         return this.fullBg;
     }
 
-    public final void setFullBg(Bitmap bitmap) {
+    public void setFullBg(Bitmap bitmap) {
         this.fullBg = bitmap;
     }
 
-    public final Bitmap getMinBg() {
+    public Bitmap getMinBg() {
         return this.minBg;
     }
 
-    public final void setMinBg(Bitmap bitmap) {
+    public void setMinBg(Bitmap bitmap) {
         this.minBg = bitmap;
     }
 
-    public final Bitmap getFullFg() {
+    public Bitmap getFullFg() {
         return this.fullFg;
     }
 
-    public final void setFullFg(Bitmap bitmap) {
+    public void setFullFg(Bitmap bitmap) {
         this.fullFg = bitmap;
     }
 
-    public final Bitmap getMinFg() {
+    public Bitmap getMinFg() {
         return this.minFg;
     }
 
-    public final void setMinFg(Bitmap bitmap) {
+    public void setMinFg(Bitmap bitmap) {
         this.minFg = bitmap;
     }
 
-    public final Bitmap getFullBgP() {
+    public Bitmap getFullBgP() {
         return this.fullBgP;
     }
 
-    public final void setFullBgP(Bitmap bitmap) {
+    public void setFullBgP(Bitmap bitmap) {
         this.fullBgP = bitmap;
     }
 
-    public final Bitmap getMinBgP() {
+    public Bitmap getMinBgP() {
         return this.minBgP;
     }
 
-    public final void setMinBgP(Bitmap bitmap) {
+    public void setMinBgP(Bitmap bitmap) {
         this.minBgP = bitmap;
     }
 
-    public final Bitmap getFullFgP() {
+    public Bitmap getFullFgP() {
         return this.fullFgP;
     }
 
-    public final void setFullFgP(Bitmap bitmap) {
+    public void setFullFgP(Bitmap bitmap) {
         this.fullFgP = bitmap;
     }
 
-    public final Bitmap getMinFgP() {
+    public Bitmap getMinFgP() {
         return this.minFgP;
     }
 
-    public final void setMinFgP(Bitmap bitmap) {
+    public void setMinFgP(Bitmap bitmap) {
         this.minFgP = bitmap;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BhdRadioButton(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
-        this.mDrawablePaint = LazyKt.lazy(BhdRadioButton$mDrawablePaint$2.INSTANCE);
+        this.mDrawablePaint = createDrawablePaint();
         init(context, null);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BhdRadioButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
-        this.mDrawablePaint = LazyKt.lazy(BhdRadioButton$mDrawablePaint$2.INSTANCE);
+        this.mDrawablePaint = createDrawablePaint();
         init(context, attrs);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BhdRadioButton(Context context, AttributeSet attrs, int i) {
         super(context, attrs, i);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
-        this.mDrawablePaint = LazyKt.lazy(BhdRadioButton$mDrawablePaint$2.INSTANCE);
+        this.mDrawablePaint = createDrawablePaint();
         init(context, attrs);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BhdRadioButton(Context context, AttributeSet attrs, int i, int i2) {
         super(context, attrs, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
-        this.mDrawablePaint = LazyKt.lazy(BhdRadioButton$mDrawablePaint$2.INSTANCE);
+        this.mDrawablePaint = createDrawablePaint();
         init(context, attrs);
     }
 
-    private final void init(Context context, AttributeSet attrs) {
-        setButtonDrawable((Drawable) null);
+
+    private Paint createDrawablePaint() {
+        Paint paint = new Paint();
+        paint.setAntiAlias(false);
+        paint.setFilterBitmap(false);
+        return paint;
+    }
+
+    private void init(Context context, AttributeSet attrs) {
+        setButtonDrawable(null);
         if (attrs != null) {
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attrs, R.styleable.radioButtonAttrs);
             this.minBgWidth = typedArrayObtainStyledAttributes.getLayoutDimension(R.styleable.radioButtonAttrs_min_bg_w, 0);
@@ -234,6 +233,7 @@ public final class BhdRadioButton extends RadioButton {
 
     @Override // android.view.View
     public void draw(Canvas canvas) {
+        super.draw(canvas);
         Intrinsics.checkNotNullParameter(canvas, "canvas");
         if (LogUtil.log2()) {
             LogUtil.d("draw: " + getMeasuredWidth() + ',' + getMeasuredHeight() + "   " + getMinWidth() + ',' + getMinHeight());
@@ -258,7 +258,6 @@ public final class BhdRadioButton extends RadioButton {
                 canvas.drawBitmap(getDrawableBitmap(bitmap4, getMinBgWidth(), getMinBgHeight()), getMinBgLeft(), getMinBgTop(), getMDrawablePaint());
             }
         }
-        super.onDraw(canvas);
         dispatchDraw(canvas);
         if (this.minFgWidth == 0) {
             this.minFgWidth = this.minBgWidth;
@@ -295,7 +294,7 @@ public final class BhdRadioButton extends RadioButton {
         canvas.drawBitmap(getDrawableBitmap(bitmap8, getMinFgWidth(), getMinFgHeight()), getMinFgLeft(), getMinFgTop(), getMDrawablePaint());
     }
 
-    private final Bitmap getDrawableBitmap(Bitmap bitmap, int drawWidth, int drawHeight) {
+    private Bitmap getDrawableBitmap(Bitmap bitmap, int drawWidth, int drawHeight) {
         Matrix matrix = new Matrix();
         if (drawWidth != 0 && drawHeight != 0) {
             matrix.postScale(drawWidth / bitmap.getWidth(), drawHeight / bitmap.getHeight());

@@ -8,6 +8,7 @@ import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
 import com.hzbhd.canbus.interfaces.OnSettingItemSwitchListener;
 import com.hzbhd.canbus.interfaces.OnSettingItemTouchListener;
 import com.hzbhd.canbus.interfaces.OnSettingPageStatusListener;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */

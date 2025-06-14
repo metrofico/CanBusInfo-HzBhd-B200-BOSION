@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.android.internal.util.ArrayUtils;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.entity.SyncListUpdateEntity;
 import com.hzbhd.canbus.entity.SyncSoftKeyUpdateEntity;
@@ -27,16 +27,17 @@ import com.hzbhd.canbus.view.SyncListItemView;
 import com.hzbhd.canbus.view.SyncSoftKeyView;
 import com.hzbhd.canbus.view.SyncTopIconIconView;
 import com.hzbhd.commontools.SourceConstantsDef;
+
 import java.util.Arrays;
 import java.util.List;
 
-/* loaded from: classes.dex */
+
 public class SyncActivity extends AbstractBaseActivity implements SyncLeftIconView.OnLeftIconClickListener, SyncInfoListView.OnListItemClickListener, SyncSoftKeyView.OnSoftKeyClickListener, SyncKeyBoardView.OnKeyBoardBtnClickListener {
     private static final int MSG_EMPTY_TV_TIME = 11;
     private static final int MSG_REFRESH_TV_TIME = 10;
     private static final String TAG = "SyncActivity";
     private final long EMPTY_TV_TIME_DELAY = 5000;
-    private Handler mHandler = new Handler(Looper.getMainLooper()) { // from class: com.hzbhd.canbus.activity.SyncActivity.1
+    private final Handler mHandler = new Handler(Looper.getMainLooper()) { // from class: com.hzbhd.canbus.activity.SyncActivity.1
         @Override // android.os.Handler
         public void handleMessage(Message message) {
             super.handleMessage(message);
@@ -73,17 +74,13 @@ public class SyncActivity extends AbstractBaseActivity implements SyncLeftIconVi
         initData();
         this.mHandler.post(new Runnable() { // from class: com.hzbhd.canbus.activity.SyncActivity$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
-            public final void run() throws Resources.NotFoundException {
-                this.f$0.m34lambda$onCreate$0$comhzbhdcanbusactivitySyncActivity();
+            public void run() {
+                initView();
+                refreshUi(null);
             }
         });
     }
 
-    /* renamed from: lambda$onCreate$0$com-hzbhd-canbus-activity-SyncActivity, reason: not valid java name */
-    /* synthetic */ void m34lambda$onCreate$0$comhzbhdcanbusactivitySyncActivity() throws Resources.NotFoundException {
-        initView();
-        refreshUi(null);
-    }
 
     @Override // com.hzbhd.canbus.activity.AbstractBaseActivity, android.app.Activity
     protected void onResume() {
@@ -107,7 +104,7 @@ public class SyncActivity extends AbstractBaseActivity implements SyncLeftIconVi
     @Override // com.hzbhd.canbus.interfaces.MgrRefreshUiInterface
     public void refreshUi(Bundle bundle) {
         Log.i(TAG, "refreshUi: in");
-        if (!ArrayUtils.isEmpty(GeneralSyncData.mSyncTopIconResIdArray)) {
+        if (GeneralSyncData.mSyncTopIconResIdArray.length > 0) {
             for (int i = 0; i < GeneralSyncData.mSyncTopIconCount; i++) {
                 try {
                     this.mSyncTopIconIconView.getItem(i).setImageResource(GeneralSyncData.mSyncTopIconResIdArray[i]);
@@ -117,7 +114,7 @@ public class SyncActivity extends AbstractBaseActivity implements SyncLeftIconVi
             }
         }
         List<SyncListUpdateEntity> list = GeneralSyncData.mInfoUpdateEntityList;
-        if (!ArrayUtils.isEmpty(list)) {
+        if (!list.isEmpty()) {
             for (SyncListUpdateEntity syncListUpdateEntity : list) {
                 SyncListItemView item = this.mSyncInfoListView.getItem(syncListUpdateEntity.getIndex());
                 item.setItem(syncListUpdateEntity.getLeftIconResId(), syncListUpdateEntity.getInfo(), syncListUpdateEntity.getRightIconResId());
@@ -126,7 +123,7 @@ public class SyncActivity extends AbstractBaseActivity implements SyncLeftIconVi
             }
         }
         List<SyncSoftKeyUpdateEntity> list2 = GeneralSyncData.mSoftKeyUpdateEntityList;
-        if (!ArrayUtils.isEmpty(list2)) {
+        if (!list2.isEmpty()) {
             for (SyncSoftKeyUpdateEntity syncSoftKeyUpdateEntity : list2) {
                 SyncBtnItemView item2 = this.mSyncSoftKeyView.getItem(syncSoftKeyUpdateEntity.getIndex());
                 item2.setText(syncSoftKeyUpdateEntity.getName());
@@ -157,29 +154,29 @@ public class SyncActivity extends AbstractBaseActivity implements SyncLeftIconVi
 
     private void setVisible(View view, boolean z) {
         if (z) {
-            view.setVisibility(0);
+            view.setVisibility(View.VISIBLE);
         } else {
-            view.setVisibility(4);
+            view.setVisibility(View.INVISIBLE);
         }
     }
 
     private void setVisibilityGone(View view, boolean z) {
         if (z) {
-            view.setVisibility(0);
+            view.setVisibility(View.VISIBLE);
         } else {
-            view.setVisibility(8);
+            view.setVisibility(android.view.View.GONE);
         }
     }
 
     private void findView() {
-        this.mSyncLeftIconView = (SyncLeftIconView) findViewById(R.id.ford_sync_left_icon);
-        this.mSyncTopIconIconView = (SyncTopIconIconView) findViewById(R.id.sync_top_icon);
-        this.mSyncInfoListView = (SyncInfoListView) findViewById(R.id.ford_sync_list);
-        this.mSyncSoftKeyView = (SyncSoftKeyView) findViewById(R.id.ford_sync_soft_key);
-        this.mTvPlayTime = (TextView) findViewById(R.id.tv_ford_sync_play_time);
-        this.mSyncKeyBoardView = (SyncKeyBoardView) findViewById(R.id.ford_sync_keyboard);
-        this.mLlScreemNumber = (LinearLayout) findViewById(R.id.ll_screem_number);
-        this.mTvScreemNumber = (TextView) findViewById(R.id.tv_screen_num);
+        this.mSyncLeftIconView = findViewById(R.id.ford_sync_left_icon);
+        this.mSyncTopIconIconView = findViewById(R.id.sync_top_icon);
+        this.mSyncInfoListView = findViewById(R.id.ford_sync_list);
+        this.mSyncSoftKeyView = findViewById(R.id.ford_sync_soft_key);
+        this.mTvPlayTime = findViewById(R.id.tv_ford_sync_play_time);
+        this.mSyncKeyBoardView = findViewById(R.id.ford_sync_keyboard);
+        this.mLlScreemNumber = findViewById(R.id.ll_screem_number);
+        this.mTvScreemNumber = findViewById(R.id.tv_screen_num);
     }
 
     private void initData() {

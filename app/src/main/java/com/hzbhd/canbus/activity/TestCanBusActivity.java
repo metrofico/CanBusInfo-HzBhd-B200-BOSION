@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.activity;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -12,7 +13,9 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.service.TestCanBusService;
 import com.hzbhd.canbus.util.MyLog;
@@ -26,7 +29,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
     public static final String BROADCAST_ACTION_SUCCESS = "com.hzbhd.canbus.activity.TestCanBusActivity.LocatiopnBroadcast_SUCCESS";
     private static final String CAN_BUS_SWITCH_KEY = "TEST_SERVICE_SWITCH_KEY";
     private static Button start_button;
-    private ServiceConnection conn = new ServiceConnection() { // from class: com.hzbhd.canbus.activity.TestCanBusActivity.3
+    private final ServiceConnection conn = new ServiceConnection() { // from class: com.hzbhd.canbus.activity.TestCanBusActivity.3
         @Override // android.content.ServiceConnection
         public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
             TestCanBusActivity.this.isBind = true;
@@ -46,16 +49,17 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
     SetErrorLogView setErrorLogView;
     SetErrorProgressView setErrorProgressView;
 
-    @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    @Override
+    // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(R.layout.activity_test_can_bus);
-        Button button = (Button) findViewById(R.id.start_button);
+        Button button = findViewById(R.id.start_button);
         start_button = button;
         button.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.activity.TestCanBusActivity$$ExternalSyntheticLambda0
             @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                this.f$0.onClick(view);
+            public void onClick(View view) {
+                TestCanBusActivity.this.onClick(view);
             }
         });
         if (SharePreUtil.getBoolValue(this, CAN_BUS_SWITCH_KEY, false)) {
@@ -63,10 +67,11 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
-    @Override // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
+    @Override
+    // androidx.appcompat.app.AppCompatActivity, android.app.Activity, android.view.KeyEvent.Callback
     public boolean onKeyDown(int i, KeyEvent keyEvent) {
         if (keyEvent.getAction() == 0 && i == 4 && SharePreUtil.getBoolValue(this, CAN_BUS_SWITCH_KEY, false)) {
-            Toast.makeText(this, "检测状态下不允许返回", 0).show();
+            Toast.makeText(this, "No se permiten regresar en el estado de detección", Toast.LENGTH_SHORT).show();
             return false;
         }
         return super.onKeyDown(i, keyEvent);
@@ -84,9 +89,9 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
 
     public void showProgressView(boolean z, boolean z2) {
         if (z) {
-            start_button.setVisibility(8);
+            start_button.setVisibility(View.GONE);
         } else {
-            start_button.setVisibility(0);
+            start_button.setVisibility(View.VISIBLE);
         }
         if (this.setErrorProgressView == null) {
             this.setErrorProgressView = new SetErrorProgressView();
@@ -95,7 +100,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
             @Override // com.hzbhd.canbus.util.SetErrorProgressView.ThisInterface
             public boolean onPause() {
                 if (TestCanBusActivity.this.service == null) {
-                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", 0).show();
+                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", Toast.LENGTH_SHORT).show();
                     TestCanBusActivity.this.bindService();
                     return false;
                 }
@@ -106,7 +111,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
             @Override // com.hzbhd.canbus.util.SetErrorProgressView.ThisInterface
             public boolean onContinue() {
                 if (TestCanBusActivity.this.service == null) {
-                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", 0).show();
+                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", Toast.LENGTH_SHORT).show();
                     TestCanBusActivity.this.bindService();
                     return false;
                 }
@@ -138,7 +143,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
             @Override // com.hzbhd.canbus.util.SetErrorProgressView.ThisInterface
             public boolean onCancel() {
                 if (TestCanBusActivity.this.service == null) {
-                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", 0).show();
+                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", Toast.LENGTH_SHORT).show();
                     TestCanBusActivity.this.bindService();
                     return false;
                 }
@@ -168,7 +173,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
             @Override // com.hzbhd.canbus.util.SetErrorLogView.ThisInterface
             public boolean ignoreCallBack() {
                 if (TestCanBusActivity.this.service == null) {
-                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", 0).show();
+                    Toast.makeText(TestCanBusActivity.this, "Operation too fast！", Toast.LENGTH_SHORT).show();
                     TestCanBusActivity.this.bindService();
                     return false;
                 }
@@ -183,7 +188,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
     public void bindService() {
         MyLog.temporaryTracking("绑定服务");
         if (this.intent == null) {
-            this.intent = new Intent(this, (Class<?>) TestCanBusService.class);
+            this.intent = new Intent(this, TestCanBusService.class);
         }
         bindService(this.intent, this.conn, 1);
     }
@@ -200,7 +205,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
     private void startService() {
         MyLog.temporaryTracking("启动服务");
         if (this.intent == null) {
-            this.intent = new Intent(this, (Class<?>) TestCanBusService.class);
+            this.intent = new Intent(this, TestCanBusService.class);
         }
         startService(this.intent);
     }
@@ -214,6 +219,7 @@ public class TestCanBusActivity extends AppCompatActivity implements View.OnClic
         }
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override // androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onResume() {
         super.onResume();

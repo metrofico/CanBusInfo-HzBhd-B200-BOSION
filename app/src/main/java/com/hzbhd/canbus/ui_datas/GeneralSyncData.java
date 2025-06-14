@@ -2,6 +2,7 @@ package com.hzbhd.canbus.ui_datas;
 
 import com.hzbhd.canbus.entity.SyncListUpdateEntity;
 import com.hzbhd.canbus.entity.SyncSoftKeyUpdateEntity;
+
 import java.util.ArrayList;
 import java.util.List;
 

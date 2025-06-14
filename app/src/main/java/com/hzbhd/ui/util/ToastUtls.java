@@ -3,6 +3,7 @@ package com.hzbhd.ui.util;
 import android.content.Context;
 import android.content.res.Resources;
 import android.widget.Toast;
+
 import com.hzbhd.util.LogUtil;
 
 /* loaded from: classes2.dex */

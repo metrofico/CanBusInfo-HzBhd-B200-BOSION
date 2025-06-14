@@ -21,6 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "hzhbd2025"
 include(":app")
-include(":app:ui-base")
 include(":app:util")
 include(":app:nfore")

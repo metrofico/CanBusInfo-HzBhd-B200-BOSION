@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.TireInfoLvAdapter;
 import com.hzbhd.canbus.entity.TireUpdateEntity;
@@ -15,11 +17,11 @@ import com.hzbhd.canbus.ui_datas.GeneralTireData;
 import com.hzbhd.canbus.ui_set.TirePageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.LogUtil;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes.dex */
 public class TirePressureActivity extends AbstractBaseActivity {
     private List<TirePageUiSet.LineItem> mList0;
     private List<TirePageUiSet.LineItem> mList1;
@@ -54,17 +56,17 @@ public class TirePressureActivity extends AbstractBaseActivity {
     }
 
     private void findViews() {
-        this.mTire0Iv = (ImageView) findViewById(R.id.iv_tire_0);
-        this.mTire1Iv = (ImageView) findViewById(R.id.iv_tire_1);
-        this.mTire2Iv = (ImageView) findViewById(R.id.iv_tire_2);
-        this.mTire3Iv = (ImageView) findViewById(R.id.iv_tire_3);
-        this.mTire4Iv = (ImageView) findViewById(R.id.iv_tire_4);
-        this.mTireInfo0Rv = (RecyclerView) findViewById(R.id.rv_info_0);
-        this.mTireInfo1Rv = (RecyclerView) findViewById(R.id.rv_info_1);
-        this.mTireInfo2Rv = (RecyclerView) findViewById(R.id.rv_info_2);
-        this.mTireInfo3Rv = (RecyclerView) findViewById(R.id.rv_info_3);
-        this.mTireInfo4Rv = (RecyclerView) findViewById(R.id.rv_info_4);
-        this.mNoTirePressureInfoRl = (RelativeLayout) findViewById(R.id.rl_no_tire_pressure_info_layout);
+        this.mTire0Iv = findViewById(R.id.iv_tire_0);
+        this.mTire1Iv = findViewById(R.id.iv_tire_1);
+        this.mTire2Iv = findViewById(R.id.iv_tire_2);
+        this.mTire3Iv = findViewById(R.id.iv_tire_3);
+        this.mTire4Iv = findViewById(R.id.iv_tire_4);
+        this.mTireInfo0Rv = findViewById(R.id.rv_info_0);
+        this.mTireInfo1Rv = findViewById(R.id.rv_info_1);
+        this.mTireInfo2Rv = findViewById(R.id.rv_info_2);
+        this.mTireInfo3Rv = findViewById(R.id.rv_info_3);
+        this.mTireInfo4Rv = findViewById(R.id.rv_info_4);
+        this.mNoTirePressureInfoRl = findViewById(R.id.rl_no_tire_pressure_info_layout);
     }
 
     private void initViews() {
@@ -77,23 +79,23 @@ public class TirePressureActivity extends AbstractBaseActivity {
         } else {
             LogUtil.showLog("mOnTirePageStatusListener==null");
         }
-        this.mList0 = new ArrayList();
+        this.mList0 = new ArrayList<>();
         TireInfoLvAdapter tireInfoLvAdapter = new TireInfoLvAdapter(this, this.mList0);
         this.mTireInfoLvAdapter0 = tireInfoLvAdapter;
         setListData(this.mTireInfo0Rv, tireInfoLvAdapter);
-        this.mList1 = new ArrayList();
+        this.mList1 = new ArrayList<>();
         TireInfoLvAdapter tireInfoLvAdapter2 = new TireInfoLvAdapter(this, this.mList1);
         this.mTireInfoLvAdapter1 = tireInfoLvAdapter2;
         setListData(this.mTireInfo1Rv, tireInfoLvAdapter2);
-        this.mList2 = new ArrayList();
+        this.mList2 = new ArrayList<>();
         TireInfoLvAdapter tireInfoLvAdapter3 = new TireInfoLvAdapter(this, this.mList2);
         this.mTireInfoLvAdapter2 = tireInfoLvAdapter3;
         setListData(this.mTireInfo2Rv, tireInfoLvAdapter3);
-        this.mList3 = new ArrayList();
+        this.mList3 = new ArrayList<>();
         TireInfoLvAdapter tireInfoLvAdapter4 = new TireInfoLvAdapter(this, this.mList3);
         this.mTireInfoLvAdapter3 = tireInfoLvAdapter4;
         setListData(this.mTireInfo3Rv, tireInfoLvAdapter4);
-        this.mList4 = new ArrayList();
+        this.mList4 = new ArrayList<>();
         TireInfoLvAdapter tireInfoLvAdapter5 = new TireInfoLvAdapter(this, this.mList4);
         this.mTireInfoLvAdapter4 = tireInfoLvAdapter5;
         setListData(this.mTireInfo4Rv, tireInfoLvAdapter5);
@@ -157,17 +159,17 @@ public class TirePressureActivity extends AbstractBaseActivity {
     public void refreshUi(Bundle bundle) {
         if (isShouldRefreshUi()) {
             if (GeneralTireData.isNoTirePressureInfo) {
-                this.mNoTirePressureInfoRl.setVisibility(0);
+                this.mNoTirePressureInfoRl.setVisibility(View.VISIBLE);
             } else {
-                this.mNoTirePressureInfoRl.setVisibility(8);
+                this.mNoTirePressureInfoRl.setVisibility(android.view.View.GONE);
                 refreshEachList(GeneralTireData.dataList);
             }
             if (GeneralTireData.isHaveSpareTire) {
-                this.mTire4Iv.setVisibility(0);
-                this.mTireInfo4Rv.setVisibility(0);
+                this.mTire4Iv.setVisibility(android.view.View.VISIBLE);
+                this.mTireInfo4Rv.setVisibility(View.VISIBLE);
             } else {
-                this.mTire4Iv.setVisibility(8);
-                this.mTireInfo4Rv.setVisibility(8);
+                this.mTire4Iv.setVisibility(View.GONE);
+                this.mTireInfo4Rv.setVisibility(android.view.View.GONE);
             }
         }
     }

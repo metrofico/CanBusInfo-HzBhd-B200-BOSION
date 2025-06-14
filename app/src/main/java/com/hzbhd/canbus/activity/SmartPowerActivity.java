@@ -13,6 +13,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.smartpower.GeneralDzSmartData;
@@ -20,10 +21,11 @@ import com.hzbhd.canbus.smartpower.SmartPowerManager;
 import com.hzbhd.canbus.smartpower.SmartPowerMsgMgr;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.view.NumberInputView;
+
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes.dex */
+
 public class SmartPowerActivity extends Activity implements SeekBar.OnSeekBarChangeListener {
     protected RelativeLayout bottomRelative;
     protected Button btnChooseVersion;
@@ -36,7 +38,7 @@ public class SmartPowerActivity extends Activity implements SeekBar.OnSeekBarCha
     protected RadioButton radioButtonTrack;
     protected RadioGroup radioGroup;
     protected SeekBar seekBar;
-    protected List<RadioButton> radioButtons = new ArrayList();
+    protected List<RadioButton> radioButtons = new ArrayList<>();
     protected boolean isClick = true;
 
     @Override // android.widget.SeekBar.OnSeekBarChangeListener
@@ -56,18 +58,17 @@ public class SmartPowerActivity extends Activity implements SeekBar.OnSeekBarCha
         initData();
         SmartPowerManager.getInstance().addOnSmartPowerChangeListener(new SmartPowerManager.OnSmartPowerChangeListener() { // from class: com.hzbhd.canbus.activity.SmartPowerActivity$$ExternalSyntheticLambda4
             @Override // com.hzbhd.canbus.smartpower.SmartPowerManager.OnSmartPowerChangeListener
-            public final void onDataChange(byte[] bArr) {
-                this.f$0.m29lambda$onCreate$0$comhzbhdcanbusactivitySmartPowerActivity(bArr);
+            public void onDataChange(byte[] bArr) {
+                m29lambda$onCreate$0$comhzbhdcanbusactivitySmartPowerActivity(bArr);
             }
         });
     }
 
-    /* renamed from: lambda$onCreate$0$com-hzbhd-canbus-activity-SmartPowerActivity, reason: not valid java name */
-    /* synthetic */ void m29lambda$onCreate$0$comhzbhdcanbusactivitySmartPowerActivity(byte[] bArr) {
+    void m29lambda$onCreate$0$comhzbhdcanbusactivitySmartPowerActivity(byte[] bArr) {
         SmartPowerMsgMgr.getInstance().canbusInfoChange(this.mContext, bArr, new SmartPowerMsgMgr.OnRefreshUiListener() { // from class: com.hzbhd.canbus.activity.SmartPowerActivity$$ExternalSyntheticLambda1
             @Override // com.hzbhd.canbus.smartpower.SmartPowerMsgMgr.OnRefreshUiListener
-            public final void onRefreshUi() {
-                this.f$0.refreshUi();
+            public void onRefreshUi() {
+                SmartPowerActivity.this.refreshUi();
             }
         });
     }
@@ -83,16 +84,16 @@ public class SmartPowerActivity extends Activity implements SeekBar.OnSeekBarCha
     }
 
     private void initView() {
-        this.seekBar = (SeekBar) findViewById(R.id.seekBar);
-        this.bottomRelative = (RelativeLayout) findViewById(R.id.bottomRelative);
-        this.radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-        this.radioButtonComfort = (RadioButton) findViewById(R.id.radioButton_comfort);
-        this.radioButtonOriginal = (RadioButton) findViewById(R.id.radioButton_original);
-        this.radioButtonSport = (RadioButton) findViewById(R.id.radioButton_sport);
-        this.radioButtonEconomics = (RadioButton) findViewById(R.id.radioButton_economics);
-        this.radioButtonTrack = (RadioButton) findViewById(R.id.radioButton_track);
-        this.mVersion = (TextView) findViewById(R.id.tv_version);
-        this.btnChooseVersion = (Button) findViewById(R.id.btn_chooseVersion);
+        this.seekBar = findViewById(R.id.seekBar);
+        this.bottomRelative = findViewById(R.id.bottomRelative);
+        this.radioGroup = findViewById(R.id.radioGroup);
+        this.radioButtonComfort = findViewById(R.id.radioButton_comfort);
+        this.radioButtonOriginal = findViewById(R.id.radioButton_original);
+        this.radioButtonSport = findViewById(R.id.radioButton_sport);
+        this.radioButtonEconomics = findViewById(R.id.radioButton_economics);
+        this.radioButtonTrack = findViewById(R.id.radioButton_track);
+        this.mVersion = findViewById(R.id.tv_version);
+        this.btnChooseVersion = findViewById(R.id.btn_chooseVersion);
         setEnabled(false);
         this.radioButtons.add(this.radioButtonEconomics);
         this.radioButtons.add(this.radioButtonOriginal);
@@ -107,59 +108,54 @@ public class SmartPowerActivity extends Activity implements SeekBar.OnSeekBarCha
     private void initData() {
         this.radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() { // from class: com.hzbhd.canbus.activity.SmartPowerActivity$$ExternalSyntheticLambda2
             @Override // android.widget.RadioGroup.OnCheckedChangeListener
-            public final void onCheckedChanged(RadioGroup radioGroup, int i) {
-                this.f$0.m27lambda$initData$1$comhzbhdcanbusactivitySmartPowerActivity(radioGroup, i);
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                m27lambda$initData$1$comhzbhdcanbusactivitySmartPowerActivity(radioGroup, i);
             }
         });
         this.seekBar.setOnSeekBarChangeListener(this);
         this.btnChooseVersion.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.activity.SmartPowerActivity$$ExternalSyntheticLambda3
             @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                this.f$0.m28lambda$initData$3$comhzbhdcanbusactivitySmartPowerActivity(view);
+            public void onClick(View view) {
+                m28lambda$initData$3$comhzbhdcanbusactivitySmartPowerActivity(view);
             }
         });
     }
 
-    /* renamed from: lambda$initData$1$com-hzbhd-canbus-activity-SmartPowerActivity, reason: not valid java name */
-    /* synthetic */ void m27lambda$initData$1$comhzbhdcanbusactivitySmartPowerActivity(RadioGroup radioGroup, int i) {
-        int i2 = 0;
-        switch (i) {
-            case R.id.radioButton_comfort /* 2131363029 */:
-                i2 = 2;
-                break;
-            case R.id.radioButton_original /* 2131363033 */:
-                i2 = 1;
-                break;
-            case R.id.radioButton_sport /* 2131363035 */:
-                i2 = 3;
-                break;
-            case R.id.radioButton_track /* 2131363037 */:
-                i2 = 4;
-                break;
+    private void m27lambda$initData$1$comhzbhdcanbusactivitySmartPowerActivity(RadioGroup radioGroup, int checkedId) {
+        int mode = 0;
+        if (checkedId == R.id.radioButton_comfort) {
+            mode = 2;
+        } else if (checkedId == R.id.radioButton_original) {
+            mode = 1;
+        } else if (checkedId == R.id.radioButton_sport) {
+            mode = 3;
+        } else if (checkedId == R.id.radioButton_track) {
+            mode = 4;
         }
         if (this.isClick) {
-            sendDzMsg(i2, GeneralDzSmartData.data3, GeneralDzSmartData.data4, GeneralDzSmartData.data5, GeneralDzSmartData.data6);
+            sendDzMsg(mode, GeneralDzSmartData.data3, GeneralDzSmartData.data4, GeneralDzSmartData.data5, GeneralDzSmartData.data6);
         }
     }
 
-    /* renamed from: lambda$initData$3$com-hzbhd-canbus-activity-SmartPowerActivity, reason: not valid java name */
-    /* synthetic */ void m28lambda$initData$3$comhzbhdcanbusactivitySmartPowerActivity(View view) {
+    private void m28lambda$initData$3$comhzbhdcanbusactivitySmartPowerActivity(View view) {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.SmartDialog);
         NumberInputView numberInputView = new NumberInputView(this);
         builder.setView(numberInputView);
         final AlertDialog alertDialogCreate = builder.create();
         alertDialogCreate.show();
-        numberInputView.setOnOkClickListener(true, "2691", new NumberInputView.OnOkClickListener() { // from class: com.hzbhd.canbus.activity.SmartPowerActivity$$ExternalSyntheticLambda0
-            @Override // com.hzbhd.canbus.view.NumberInputView.OnOkClickListener
-            public final void click(String str) throws NumberFormatException {
-                SmartPowerActivity.lambda$initData$2(alertDialogCreate, str);
+
+        // Set listener for input validation
+        numberInputView.setOnOkClickListener(true, "2691", new NumberInputView.OnOkClickListener() {
+            @Override
+            public void click(String str) throws NumberFormatException {
+                lambda$initData$2(alertDialogCreate, str);
             }
         });
     }
 
-    static /* synthetic */ void lambda$initData$2(AlertDialog alertDialog, String str) throws NumberFormatException {
-        int i = Integer.parseInt(str);
-        sendDzMsg(21, i % 256, i / 256, GeneralDzSmartData.data5, GeneralDzSmartData.data6);
+    static void lambda$initData$2(AlertDialog alertDialog, String str) throws NumberFormatException {
+        int value = Integer.parseInt(str);
+        sendDzMsg(21, value % 256, value / 256, GeneralDzSmartData.data5, GeneralDzSmartData.data6);
         alertDialog.dismiss();
     }
 
@@ -172,16 +168,16 @@ public class SmartPowerActivity extends Activity implements SeekBar.OnSeekBarCha
         }
         this.mVersion.setText(getVersionText(GeneralDzSmartData.version) + getPowerModel(GeneralDzSmartData.power_model));
         if (GeneralDzSmartData.mode == 1) {
-            this.bottomRelative.setVisibility(8);
+            this.bottomRelative.setVisibility(View.GONE);
         } else {
-            this.bottomRelative.setVisibility(0);
+            this.bottomRelative.setVisibility(View.VISIBLE);
         }
         this.isClick = true;
         if (GeneralDzSmartData.data7_3) {
-            Toast.makeText(this, R.string.smart_input_sigal_fail, 0).show();
+            Toast.makeText(this, R.string.smart_input_sigal_fail, Toast.LENGTH_SHORT).show();
         }
         if (GeneralDzSmartData.data7_4) {
-            Toast.makeText(this, R.string.smart_output_sigal_fail, 0).show();
+            Toast.makeText(this, R.string.smart_output_sigal_fail, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -211,7 +207,7 @@ public class SmartPowerActivity extends Activity implements SeekBar.OnSeekBarCha
 
     private void sendModeValue(int i) {
         int i2 = GeneralDzSmartData.mode;
-        boolean z = (i2 == 3 || i2 == 4) ? false : true;
+        boolean z = i2 != 3 && i2 != 4;
         int i3 = (i2 == 3 || i2 == 0) ? 4 : 0;
         if (z) {
             sendDzMsg(i2, DataHandleUtils.setIntFromByteWithBit(GeneralDzSmartData.data3, i + 1, i3, 4), GeneralDzSmartData.data4, GeneralDzSmartData.data5, GeneralDzSmartData.data6);

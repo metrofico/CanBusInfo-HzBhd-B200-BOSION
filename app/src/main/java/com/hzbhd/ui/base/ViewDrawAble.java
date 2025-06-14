@@ -4,13 +4,11 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
-import com.hzbhd.ui.base.BhdViewUtil;
+
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: ViewDrawAble.kt */
-@Metadata(d1 = {"\u0000>\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0017\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0005\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bJ\u0006\u0010'\u001a\u00020(J\b\u0010)\u001a\u00020(H\u0016J\u0006\u0010*\u001a\u00020(J\u0010\u0010+\u001a\u00020(2\u0006\u0010,\u001a\u00020-H\u0016J\b\u0010.\u001a\u00020(H\u0016R\u001a\u0010\t\u001a\u00020\nX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\u001a\u0010\u0015\u001a\u00020\nX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\f\"\u0004\b\u0017\u0010\u000eR\u000e\u0010\u0018\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001d\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\u0003X\u0082\u0004¢\u0006\u0002\n\u0000R\u001c\u0010!\u001a\u0004\u0018\u00010\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\"\u0010\u0012\"\u0004\b#\u0010\u0014R\u001c\u0010$\u001a\u0004\u0018\u00010\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b%\u0010\u0012\"\u0004\b&\u0010\u0014¨\u0006/"}, d2 = {"Lcom/hzbhd/ui/base/ViewDrawAble;", "Lcom/hzbhd/ui/base/BhdViewUtil$ViewUtilListener;", "view", "Landroid/view/View;", "context", "Landroid/content/Context;", "attrs", "Landroid/util/AttributeSet;", "(Landroid/view/View;Landroid/content/Context;Landroid/util/AttributeSet;)V", "focusFg", "", "getFocusFg", "()I", "setFocusFg", "(I)V", "focusFgDrawable", "Lcom/hzbhd/ui/base/PressedDrawable;", "getFocusFgDrawable", "()Lcom/hzbhd/ui/base/PressedDrawable;", "setFocusFgDrawable", "(Lcom/hzbhd/ui/base/PressedDrawable;)V", "focusId", "getFocusId", "setFocusId", "id_d", "id_d1", "id_n", "id_n1", "id_p", "id_p1", "id_s", "id_s1", "mView", "pressedDrawable", "getPressedDrawable", "setPressedDrawable", "pressedDrawable1", "getPressedDrawable1", "setPressedDrawable1", "onAttachedToWindow", "", "onColorChange", "onDetachedFromWindow", "onFocusChange", "isFocus", "", "resetBackground", "bhdview_release"}, k = 1, mv = {1, 6, 0}, xi = 48)
-/* loaded from: classes2.dex */
+
 public final class ViewDrawAble implements BhdViewUtil.ViewUtilListener {
     private int focusFg;
     private PressedDrawable focusFgDrawable;
@@ -28,9 +26,6 @@ public final class ViewDrawAble implements BhdViewUtil.ViewUtilListener {
     private PressedDrawable pressedDrawable1;
 
     public ViewDrawAble(View view, Context context, AttributeSet attrs) {
-        Intrinsics.checkNotNullParameter(view, "view");
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
         this.mView = view;
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attrs, R.styleable.color_attr);
         this.focusId = typedArrayObtainStyledAttributes.getInt(R.styleable.color_attr_focusid, 0);

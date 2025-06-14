@@ -3,7 +3,6 @@ package com.hzbhd.canbus.util;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-/* loaded from: classes2.dex */
 public class SharePreUtil {
     public static String sharePreference = "hzbhd";
 

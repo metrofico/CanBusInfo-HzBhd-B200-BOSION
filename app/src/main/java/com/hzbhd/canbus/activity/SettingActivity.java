@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.SettingLeftLvAdapter;
 import com.hzbhd.canbus.adapter.SettingRightLvAdapter;
@@ -24,6 +26,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.DialogUtil;
 import com.hzbhd.canbus.util.LogUtil;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -62,8 +65,8 @@ public class SettingActivity extends AbstractBaseActivity implements SettingLeft
     }
 
     private void findViews() {
-        this.mLeftRecyclerView = (RecyclerView) findViewById(R.id.rv_left_list);
-        this.mRightRecyclerView = (RecyclerView) findViewById(R.id.rv_right_list);
+        this.mLeftRecyclerView = findViewById(R.id.rv_left_list);
+        this.mRightRecyclerView = findViewById(R.id.rv_right_list);
     }
 
     @Override // android.app.Activity
@@ -101,9 +104,8 @@ public class SettingActivity extends AbstractBaseActivity implements SettingLeft
         this.mRightRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         this.mRightRecyclerView.setAdapter(this.mRightSettingLvAdapter);
         this.mLeftList.addAll(settingUiSet.getList());
-        Iterator<SettingPageUiSet.ListBean> it = this.mLeftList.iterator();
-        while (it.hasNext()) {
-            it.next().setIsSelected(false);
+        for (SettingPageUiSet.ListBean listBean : this.mLeftList) {
+            listBean.setIsSelected(false);
         }
         this.mLeftList.get(0).setIsSelected(true);
         this.mLeftSettingLvAdapter.notifyDataSetChanged();
@@ -132,7 +134,7 @@ public class SettingActivity extends AbstractBaseActivity implements SettingLeft
             if (GeneralSettingData.dataList == null) {
                 return;
             }
-            for (SettingUpdateEntity settingUpdateEntity : new ArrayList(GeneralSettingData.dataList)) {
+            for (SettingUpdateEntity settingUpdateEntity : GeneralSettingData.dataList) {
                 if (settingUpdateEntity != null) {
                     if (this.mCurLeftIndex == settingUpdateEntity.getLeftListIndex() && isNotError(settingUpdateEntity)) {
                         int style = this.mRightList.get(settingUpdateEntity.getRightListIndex()).getStyle();

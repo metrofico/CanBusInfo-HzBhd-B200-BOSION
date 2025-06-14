@@ -1,10 +1,13 @@
 package com.hzbhd.canbus.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.WarningLvAdapter;
 import com.hzbhd.canbus.entity.WarningEntity;
@@ -13,6 +16,7 @@ import com.hzbhd.canbus.ui_datas.GeneralWarningDataData;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.canbus.ui_set.WarningPageUiSet;
 import com.hzbhd.canbus.util.LogUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,8 +40,8 @@ public class WarningActivity extends AbstractBaseActivity {
     }
 
     private void findViews() {
-        this.mRecyclerView = (RecyclerView) findViewById(R.id.rv_list);
-        this.mTisTv = (TextView) findViewById(R.id.tv_tis);
+        this.mRecyclerView = findViewById(R.id.rv_list);
+        this.mTisTv = findViewById(R.id.tv_tis);
     }
 
     private void initViews() {
@@ -46,7 +50,7 @@ public class WarningActivity extends AbstractBaseActivity {
         if (warningPageUiSet != null) {
             this.mOnWarningStatusChangeListener = warningPageUiSet.getOnWarningStatusChangeListener();
         }
-        this.mList = new ArrayList();
+        this.mList = new ArrayList<>();
         this.mWarningLvAdapter = new WarningLvAdapter(this, this.mList);
         this.mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(this, 1);
@@ -60,7 +64,7 @@ public class WarningActivity extends AbstractBaseActivity {
         super.onResume();
         OnWarningStatusChangeListener onWarningStatusChangeListener = this.mOnWarningStatusChangeListener;
         if (onWarningStatusChangeListener != null) {
-            onWarningStatusChangeListener.onStatusChange(4);
+            onWarningStatusChangeListener.onStatusChange(STATUS_ON_RESUME);
         }
         refreshUi(null);
     }
@@ -70,7 +74,7 @@ public class WarningActivity extends AbstractBaseActivity {
         super.onStop();
         OnWarningStatusChangeListener onWarningStatusChangeListener = this.mOnWarningStatusChangeListener;
         if (onWarningStatusChangeListener != null) {
-            onWarningStatusChangeListener.onStatusChange(6);
+            onWarningStatusChangeListener.onStatusChange(STATUS_ON_STOP);
         }
     }
 
@@ -79,10 +83,10 @@ public class WarningActivity extends AbstractBaseActivity {
         if (isShouldRefreshUi()) {
             LogUtil.showLog("Warning refreshUi");
             List<WarningEntity> list = GeneralWarningDataData.dataList;
-            if (list == null || list.size() == 0) {
-                this.mTisTv.setVisibility(0);
+            if (list == null || list.isEmpty()) {
+                this.mTisTv.setVisibility(View.VISIBLE);
             } else {
-                this.mTisTv.setVisibility(8);
+                this.mTisTv.setVisibility(android.view.View.GONE);
             }
             if (list == null) {
                 return;

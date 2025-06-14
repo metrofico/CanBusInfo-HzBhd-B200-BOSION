@@ -1,5 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <declare-styleable name="seek_bar_attr">
+        <attr name="thumb_n" format="reference" />
+        <attr name="thumb_n1" format="reference" />
+        <attr name="thumb_p" format="reference" />
+        <attr name="thumb_p1" format="reference" />
+        <attr name="progressdrawable_n" format="reference" />
+        <attr name="progressdrawable_n1" format="reference" />
+        <attr name="progressdrawable_p" format="reference" />
+        <attr name="progressdrawable_p1" format="reference" />
+        <attr name="background_n" format="reference" />
+        <attr name="background_n1" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="color_attr">
+        <attr name="focusFg" format="reference" />
+        <attr name="focusid" format="integer" />
+        <attr name="p" format="reference" />
+        <attr name="p1" format="reference" />
+        <attr name="p2" format="reference" />
+        <attr name="p3" format="reference" />
+        <attr name="p4" format="reference" />
+        <attr name="n" format="reference" />
+        <attr name="n1" format="reference" />
+        <attr name="n2" format="reference" />
+        <attr name="n3" format="reference" />
+        <attr name="n4" format="reference" />
+        <attr name="s" format="reference" />
+        <attr name="s1" format="reference" />
+        <attr name="s2" format="reference" />
+        <attr name="s3" format="reference" />
+        <attr name="s4" format="reference" />
+        <attr name="d" format="reference" />
+        <attr name="d1" format="reference" />
+        <attr name="d2" format="reference" />
+        <attr name="d3" format="reference" />
+        <attr name="d4" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="radioButtonAttrs">
+        <attr name="min_bg" format="reference" />
+        <attr name="min_bg_h" format="dimension" />
+        <attr name="min_bg_l" format="dimension" />
+        <attr name="min_bg_p" format="reference" />
+        <attr name="min_bg_t" format="dimension" />
+        <attr name="min_bg_w" format="dimension" />
+        <attr name="min_fg" format="reference" />
+        <attr name="min_fg_h" format="dimension" />
+        <attr name="min_fg_l" format="dimension" />
+        <attr name="min_fg_p" format="reference" />
+        <attr name="min_fg_t" format="dimension" />
+        <attr name="min_fg_w" format="dimension" />
+        <attr name="full_bg" format="reference" />
+        <attr name="full_bg_p" format="reference" />
+        <attr name="full_fg" format="reference" />
+        <attr name="full_fg_p" format="reference" />
+    </declare-styleable>
     <attr name="actionBarDivider" format="reference" />
     <attr name="actionBarItemBackground" format="reference" />
     <attr name="actionBarPopupTheme" format="reference" />

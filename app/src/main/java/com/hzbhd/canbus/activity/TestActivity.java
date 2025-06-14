@@ -6,12 +6,12 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
 import com.hzbhd.canbus.comm.Config;
 import com.hzbhd.canbus.util.LogUtil;
 
-/* loaded from: classes.dex */
 public class TestActivity extends AbstractBaseActivity implements View.OnClickListener {
     private ServiceConnection mConnection = new ServiceConnection() { // from class: com.hzbhd.canbus.activity.TestActivity.1
         @Override // android.content.ServiceConnection
