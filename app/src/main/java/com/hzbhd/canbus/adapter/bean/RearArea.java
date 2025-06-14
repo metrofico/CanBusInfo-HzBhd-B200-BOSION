@@ -2,6 +2,7 @@ package com.hzbhd.canbus.adapter.bean;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirSeatClickListener;

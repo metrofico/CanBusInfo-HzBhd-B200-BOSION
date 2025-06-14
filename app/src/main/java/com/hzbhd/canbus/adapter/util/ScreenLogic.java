@@ -45,7 +45,7 @@ public class ScreenLogic {
 
     public static boolean isLandScreen(Context context) {
         int screenOrientation = getScreenOrientation(context);
-        return (screenOrientation == 1 || screenOrientation == 3) ? false : true;
+        return screenOrientation != 1 && screenOrientation != 3;
     }
 
     public static boolean isPortScreen(Context context) {

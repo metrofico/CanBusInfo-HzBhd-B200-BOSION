@@ -1,8 +1,9 @@
 package com.hzbhd.canbus.adapter.util;
 
 import android.content.Context;
-import android.os.SystemProperties;
 import android.provider.Settings;
+
+import com.hzbhd.commontools.utils.SystemPropertiesUtils;
 
 /* loaded from: classes.dex */
 public class PA6Utils {
@@ -18,15 +19,15 @@ public class PA6Utils {
     }
 
     public static void setIntData(int i) {
-        SystemProperties.set(WallpaperPicker_Now_ID, String.valueOf(i));
+        SystemPropertiesUtils.set(WallpaperPicker_Now_ID, String.valueOf(i));
     }
 
     public static void setAirSeatShow(boolean z) {
-        SystemProperties.set(AIR_SEAT_SHOW, z + "");
+        SystemPropertiesUtils.set(AIR_SEAT_SHOW, z + "");
     }
 
     public static boolean getAirSeatShow() {
-        return SystemProperties.getBoolean(AIR_SEAT_SHOW, true);
+        return SystemPropertiesUtils.getBoolean(AIR_SEAT_SHOW, true);
     }
 
     public static void setRadarShow(Context context, boolean z) {

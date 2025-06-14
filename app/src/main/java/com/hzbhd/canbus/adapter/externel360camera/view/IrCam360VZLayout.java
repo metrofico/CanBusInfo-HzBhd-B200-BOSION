@@ -8,8 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.externel360camera.VZ360Constance;
-import com.hzbhd.midware.proxy.R;
 
 /* loaded from: classes.dex */
 public class IrCam360VZLayout extends LinearLayout implements View.OnClickListener {
@@ -31,6 +32,7 @@ public class IrCam360VZLayout extends LinearLayout implements View.OnClickListen
 
     public IrCam360VZLayout(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
+
         this.views = new int[]{R.id.vz_irkey_button, R.id.vz_irkey_button_keybroad, R.id.id_selector_bottom_vz_1, R.id.id_selector_bottom_vz_2, R.id.id_selector_bottom_vz_3, R.id.id_selector_bottom_vz_4, R.id.id_selector_bottom_vz_5, R.id.id_selector_bottom_vz_6, R.id.id_selector_bottom_vz_7, R.id.id_selector_bottom_vz_8, R.id.id_selector_bottom_vz_9, R.id.id_selector_bottom_vz_0, R.id.id_selector_bottom_vz_add, R.id.id_selector_bottom_vz_minusr, R.id.id_selector_bottom_vz_left, R.id.id_selector_bottom_vz_right, R.id.id_selector_bottom_vz_up, R.id.id_selector_bottom_vz_down, R.id.id_selector_bottom_vz_ok, R.id.id_selector_bottom_vz_back, R.id.id_selector_bottom_vz_login, R.id.id_selector_bottom_vz_info, R.id.id_selector_bottom_vz_prev, R.id.id_selector_bottom_vz_playpause, R.id.id_selector_bottom_vz_next, R.id.id_selector_bottom_vz_stop, R.id.id_selector_bottom_vz_keybroad};
         this.showKeyBoard = false;
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.vz_ir_key_rl, (ViewGroup) null);
@@ -105,7 +107,7 @@ public class IrCam360VZLayout extends LinearLayout implements View.OnClickListen
     }
 
     public boolean is_visible_vz_irkey_button() {
-        return this.view.findViewById(R.id.vz_irkey_button).getVisibility() == 0;
+        return this.view.findViewById(R.id.vz_irkey_button).getVisibility() == View.VISIBLE;
     }
 
     private boolean isTouchPointInView(View view, int i, int i2) {

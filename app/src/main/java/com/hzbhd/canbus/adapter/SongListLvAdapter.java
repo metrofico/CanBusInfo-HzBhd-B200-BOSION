@@ -1,18 +1,22 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.entity.SongListEntity;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class SongListLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class SongListLvAdapter extends RecyclerView.Adapter<SongListLvAdapter.ViewHolder> {
     private boolean mIsSonglistShowIndex;
     private SongItemClickInterface mItemClickInterface;
     private List<SongListEntity> mList;
@@ -45,7 +49,7 @@ public class SongListLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         String str = (i + 1) + ". ";
         if (!this.mIsSonglistShowIndex) {
             str = "";
@@ -65,9 +69,9 @@ public class SongListLvAdapter extends RecyclerView.Adapter<ViewHolder> {
             }
         });
         if (this.mList.get(i).isSelected()) {
-            viewHolder.ivRightIcon.setVisibility(0);
+            viewHolder.ivRightIcon.setVisibility(View.VISIBLE);
         } else {
-            viewHolder.ivRightIcon.setVisibility(8);
+            viewHolder.ivRightIcon.setVisibility(View.GONE);
         }
         if (this.mList.get(i).isEnable()) {
             viewHolder.relativeLayout.setEnabled(true);

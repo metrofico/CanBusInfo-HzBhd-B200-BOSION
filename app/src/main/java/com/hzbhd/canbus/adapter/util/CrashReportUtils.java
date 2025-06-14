@@ -1,15 +1,18 @@
 package com.hzbhd.canbus.adapter.util;
 
+import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.os.Build;
-import android.os.SystemProperties;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.hzbhd.commontools.utils.ConfigUtil;
+import com.hzbhd.commontools.utils.SystemPropertiesUtils;
 import com.hzbhd.util.LogUtil;
-import com.tencent.bugly.crashreport.CrashReport;
+//import com.tencent.bugly.crashreport.CrashReport;
+
 import java.util.Date;
 
 /* loaded from: classes.dex */
@@ -88,9 +91,9 @@ public class CrashReportUtils {
             if (LogUtil.log5()) {
                 LogUtil.d(packageName + "<---------> is open bugly");
             }
-            CrashReport.initCrashReport(context, str, false);
-            CrashReport.putUserData(context, "OS版本", getOSVersion());
-            CrashReport.putUserData(context, "MCU版本", getMCUVersion());
+            //CrashReport.initCrashReport(context, str, false);
+            //CrashReport.putUserData(context, "OS版本", getOSVersion());
+            //CrashReport.putUserData(context, "MCU版本", getMCUVersion());
         }
     }
 
@@ -112,6 +115,7 @@ public class CrashReportUtils {
         return string.equals("true");
     }
 
+    @SuppressLint("MissingPermission")
     public static void openAll(Context context) {
         if (LogUtil.log5()) {
             LogUtil.d("--------->openAllBugly");
@@ -127,7 +131,7 @@ public class CrashReportUtils {
         setCrashReportIsOpen(context, PACKAGENAME_SETTING, true);
         setCrashReportIsOpen(context, PACKAGENAME_SWC, true);
         setCrashReportIsOpen(context, "com.hzbhd.blink", true);
-        ActivityManager activityManager = (ActivityManager) context.getSystemService("activity");
+        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         activityManager.killBackgroundProcesses("com.android.launcher3");
         activityManager.killBackgroundProcesses(PACKAGENAME_BLUETOOTH);
         activityManager.killBackgroundProcesses("com.hzbhd.canbus");
@@ -141,18 +145,19 @@ public class CrashReportUtils {
         activityManager.killBackgroundProcesses("com.hzbhd.blink");
     }
 
+    @SuppressLint("MissingPermission")
     public static void openCanBusBugly(Context context, boolean z) {
         Log.e(TAG, "开启BUGLY" + z);
         setCrashReportIsOpen(context, "com.hzbhd.canbus", z);
-        ((ActivityManager) context.getSystemService("activity")).killBackgroundProcesses("com.hzbhd.canbus");
+        ((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE)).killBackgroundProcesses("com.hzbhd.canbus");
     }
 
     public static void testJavaCrash() {
-        CrashReport.testJavaCrash();
+        // CrashReport.testJavaCrash();
     }
 
     private static String getMCUVersion() {
-        return SystemProperties.get("persist.bhd.mcu.version");
+        return SystemPropertiesUtils.get("persist.bhd.mcu.version");
     }
 
     private static String getOSVersion() {

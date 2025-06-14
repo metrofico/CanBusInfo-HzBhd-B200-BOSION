@@ -69,7 +69,7 @@ public final class SwcLongKeyAdapter extends RecyclerView.Adapter<RecyclerView.V
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Intrinsics.checkNotNullParameter(holder, "holder");
         ViewHolder viewHolder = (ViewHolder) holder;
-        SwcActivity.KeyUiEntity keyUiEntity = SwcActivity.INSTANCE.getKeyUiList().get(position);
+        SwcActivity.KeyUiEntity keyUiEntity = SwcActivity.getKeyUiList().get(position);
         viewHolder.getIvKeyIcon().setImageResource(keyUiEntity.getDrawableResId());
         viewHolder.getTvKeyName().setText(keyUiEntity.getStringResId());
         View view = holder.itemView;
@@ -89,7 +89,7 @@ public final class SwcLongKeyAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public int getItemCount() {
-        return SwcActivity.INSTANCE.getKeyUiList().size();
+        return SwcActivity.getKeyUiList().size();
     }
 
     public final void setSelectedKey(int key) {

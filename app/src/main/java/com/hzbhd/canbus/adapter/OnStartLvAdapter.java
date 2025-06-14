@@ -1,19 +1,23 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.entity.OnStartListEntity;
 import com.hzbhd.canbus.ui_set.OnStartAction;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class OnStartLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class OnStartLvAdapter extends RecyclerView.Adapter<OnStartLvAdapter.ViewHolder> {
     private ItemClickInterface mItemClickInterface;
     private List<OnStartListEntity> mList;
 
@@ -41,79 +45,43 @@ public class OnStartLvAdapter extends RecyclerView.Adapter<ViewHolder> {
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_item_on_start, viewGroup, false));
     }
 
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
-        int i2;
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         String action = this.mList.get(i).getAction();
-        action.hashCode();
-        int i3 = 0;
-        char c = 65535;
-        switch (action.hashCode()) {
-            case -1664453177:
-                if (action.equals(OnStartAction.PHONE_MORE_INFO)) {
-                    c = 0;
-                    break;
-                }
+
+        int i2 = 0; // Default image resource
+        int i3 = 0; // Default text resource
+
+        switch (action) {
+            case OnStartAction.PHONE_MORE_INFO:
+            case "phone":
+                i3 = R.string.on_start_phone;
                 break;
-            case -1000044642:
-                if (action.equals(OnStartAction.WIRELESS)) {
-                    c = 1;
-                    break;
-                }
-                break;
-            case 106642798:
-                if (action.equals("phone")) {
-                    c = 2;
-                    break;
-                }
-                break;
-            case 1862666772:
-                if (action.equals("navigation")) {
-                    c = 3;
-                    break;
-                }
-                break;
-            case 1968882350:
-                if (action.equals(OnStartAction.BLUETOOTH)) {
-                    c = 4;
-                    break;
-                }
-                break;
-        }
-        int i4 = R.string.on_start_phone;
-        int i5 = R.drawable.ic_list_l_bt_n;
-        switch (c) {
-            case 0:
-            case 2:
-                i3 = i4;
-                break;
-            case 1:
+            case OnStartAction.WIRELESS:
                 i2 = R.drawable.ic_list_l_wi_n;
-                i4 = R.string.wireless_connections;
-                i5 = i2;
-                i3 = i4;
+                i3 = R.string.wireless_connections;
                 break;
-            case 3:
+            case "navigation":
                 i2 = R.drawable.ic_list_l_navi_n;
-                i4 = R.string.navigation;
-                i5 = i2;
-                i3 = i4;
+                i3 = R.string.navigation;
                 break;
-            case 4:
+            case OnStartAction.BLUETOOTH:
                 i2 = R.drawable.ic_list_l_bt1_n;
-                i4 = R.string.bluetooth;
-                i5 = i2;
-                i3 = i4;
+                i3 = R.string.bluetooth;
                 break;
             default:
-                i5 = 0;
+                // Default image for unmatched actions
+                // Default text for unmatched actions
                 break;
         }
+
+        // Set the text and image based on the action
         viewHolder.textView.setText(i3);
-        viewHolder.imageView.setImageResource(i5);
-        viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.adapter.OnStartLvAdapter.1
-            @Override // android.view.View.OnClickListener
+        viewHolder.imageView.setImageResource(i2);
+
+        // Set click listener on the item
+        viewHolder.relativeLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
             public void onClick(View view) {
                 OnStartLvAdapter.this.mItemClickInterface.onItemClick(i);
             }

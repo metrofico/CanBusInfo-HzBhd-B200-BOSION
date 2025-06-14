@@ -6,15 +6,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.entity.WarningEntity;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class WarningLvAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private Context mContext;
-    private List<WarningEntity> mList;
+public class WarningLvAdapter extends RecyclerView.Adapter<WarningLvAdapter.ViewHolder> {
+    private final Context mContext;
+    private final List<WarningEntity> mList;
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public long getItemId(int i) {
@@ -42,13 +45,13 @@ public class WarningLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private RelativeLayout relativeLayout;
-        private TextView tvTitle;
+        private final RelativeLayout relativeLayout;
+        private final TextView tvTitle;
 
         ViewHolder(View view) {
             super(view);
-            this.relativeLayout = (RelativeLayout) view.findViewById(R.id.ll_layout);
-            this.tvTitle = (TextView) view.findViewById(R.id.tv_title);
+            this.relativeLayout = view.findViewById(R.id.ll_layout);
+            this.tvTitle = view.findViewById(R.id.tv_title);
         }
     }
 }

@@ -1,19 +1,23 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.Iterator;
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class SettingLeftLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class SettingLeftLvAdapter extends RecyclerView.Adapter<SettingLeftLvAdapter.ViewHolder> {
     private Context mContext;
     private LeftItemClickInterface mLeftItemClickInterface;
     private List<SettingPageUiSet.ListBean> mList;
@@ -44,7 +48,7 @@ public class SettingLeftLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         viewHolder.textView.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getTitleSrn()));
         if (!this.mList.get(i).isIsSelected()) {
             if (i % 2 == 0) {
@@ -83,11 +87,11 @@ public class SettingLeftLvAdapter extends RecyclerView.Adapter<ViewHolder> {
         public void setVisibility(boolean z) {
             RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) this.itemView.getLayoutParams();
             if (z) {
-                this.itemView.setVisibility(0);
+                this.itemView.setVisibility(View.VISIBLE);
                 layoutParams.height = -2;
                 layoutParams.width = -1;
             } else {
-                this.itemView.setVisibility(8);
+                this.itemView.setVisibility(View.GONE);
                 layoutParams.height = 0;
                 layoutParams.width = 0;
             }

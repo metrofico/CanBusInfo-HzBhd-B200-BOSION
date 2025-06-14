@@ -3,7 +3,6 @@ package com.hzbhd.canbus.adapter.bean;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-/* loaded from: classes.dex */
 public class CanTypeAllEntity implements Parcelable {
     public static final Parcelable.Creator<CanTypeAllEntity> CREATOR = new Parcelable.Creator<CanTypeAllEntity>() { // from class: com.hzbhd.canbus.adapter.bean.CanTypeAllEntity.1
         /* JADX WARN: Can't rename method to resolve collision */

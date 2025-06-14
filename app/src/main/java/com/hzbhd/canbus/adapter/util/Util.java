@@ -7,13 +7,15 @@ import android.provider.Settings;
 import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.hzbhd.canbus.adapter.util.CanTypeMsg;
 import com.hzbhd.canbus.car._464.MsgMgr;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.commontools.utils.ConfigUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.util.Arrays;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 import nfore.android.bt.res.NfDef;
 
@@ -72,7 +74,7 @@ public class Util {
     }
 
     public static int castByte2LegalNum(byte b) {
-        return (b & ByteCompanionObject.MIN_VALUE) != 0 ? b & 255 : b;
+        return (b & Byte.MIN_VALUE) != 0 ? b & 255 : b;
     }
 
     /* JADX WARN: Removed duplicated region for block: B:68:0x00c4 A[FALL_THROUGH, RETURN, SYNTHETIC] */
@@ -89,11 +91,35 @@ public class Util {
     }
 
     public static int getIntByBit(byte b, int i) {
-        return i != 0 ? !(1 != i ? 2 != i ? 3 != i ? 4 != i ? 5 != i ? 6 != i ? 7 != i || (b & ByteCompanionObject.MIN_VALUE) == 0 : (b & 64) == 0 : (b & 32) == 0 : (b & 16) == 0 : (b & 8) == 0 : (b & 4) == 0 : (b & 2) == 0) : (b & 1) != 0 ? 1 : 0;
+        if (i == 0) {
+            return 0;
+        }
+
+        switch (i) {
+            case 1:
+                return (b & 1) != 0 ? 1 : 0;
+            case 2:
+                return (b & 2) != 0 ? 1 : 0;
+            case 3:
+                return (b & 4) != 0 ? 1 : 0;
+            case 4:
+                return (b & 8) != 0 ? 1 : 0;
+            case 5:
+                return (b & 16) != 0 ? 1 : 0;
+            case 6:
+                return (b & 32) != 0 ? 1 : 0;
+            case 7:
+                return (b & 64) != 0 ? 1 : 0;
+            case 8:
+                return (b & Byte.MIN_VALUE) != 0 ? 1 : 0;
+            default:
+                return 0;
+        }
     }
 
+
     public static boolean getIntByteWithBit(byte b, int i) {
-        return i == 0 ? (b & 1) != 0 : 1 == i ? (b & 2) != 0 : 2 == i ? (b & 4) != 0 : 3 == i ? (b & 8) != 0 : 4 == i ? (b & 16) != 0 : 5 == i ? (b & 32) != 0 : 6 == i ? (b & 64) != 0 : 7 == i && (b & ByteCompanionObject.MIN_VALUE) != 0;
+        return i == 0 ? (b & 1) != 0 : 1 == i ? (b & 2) != 0 : 2 == i ? (b & 4) != 0 : 3 == i ? (b & 8) != 0 : 4 == i ? (b & 16) != 0 : 5 == i ? (b & 32) != 0 : 6 == i ? (b & 64) != 0 : 7 == i && (b & Byte.MIN_VALUE) != 0;
     }
 
     public static boolean getIntByteWithBit(int i, int i2) {
@@ -129,7 +155,7 @@ public class Util {
                 if (7 != i) {
                     return b;
                 }
-                i2 = b | ByteCompanionObject.MIN_VALUE;
+                i2 = b | Byte.MIN_VALUE;
             }
         } else if (i == 0) {
             i2 = b & 254;
@@ -149,13 +175,15 @@ public class Util {
             if (7 != i) {
                 return b;
             }
-            i2 = b & ByteCompanionObject.MAX_VALUE;
+            i2 = b & Byte.MAX_VALUE;
         }
         return (byte) i2;
     }
 
+    public static final int MASK = 0x7F;           // 127
+
     public static int setIntByteWithBit(int i, int i2, boolean z) {
-        return z ? i2 == 0 ? i | 1 : 1 == i2 ? i | 2 : 2 == i2 ? i | 4 : 3 == i2 ? i | 8 : 4 == i2 ? i | 16 : 5 == i2 ? i | 32 : 6 == i2 ? i | 64 : 7 == i2 ? i | 128 : i : i2 == 0 ? i & MsgMgr.DVD_MODE : 1 == i2 ? i & 253 : 2 == i2 ? i & MsgMgr.RADIO_MODE : 3 == i2 ? i & 247 : 4 == i2 ? i & 239 : 5 == i2 ? i & HotKeyConstant.K_DARK_MODE : 6 == i2 ? i & 191 : 7 == i2 ? i & WorkQueueKt.MASK : i;
+        return z ? i2 == 0 ? i | 1 : 1 == i2 ? i | 2 : 2 == i2 ? i | 4 : 3 == i2 ? i | 8 : 4 == i2 ? i | 16 : 5 == i2 ? i | 32 : 6 == i2 ? i | 64 : 7 == i2 ? i | 128 : i : i2 == 0 ? i & MsgMgr.DVD_MODE : 1 == i2 ? i & 253 : 2 == i2 ? i & MsgMgr.RADIO_MODE : 3 == i2 ? i & 247 : 4 == i2 ? i & 239 : 5 == i2 ? i & HotKeyConstant.K_DARK_MODE : 6 == i2 ? i & 191 : 7 == i2 ? i & MASK : i;
     }
 
     public static int setIntFromByteWithBit(int i, int i2, int i3, int i4) {
@@ -164,7 +192,7 @@ public class Util {
 
     public static void showToast(Context context, String str) {
         if (toast == null) {
-            Toast toastMakeText = Toast.makeText(context, str, 0);
+            Toast toastMakeText = Toast.makeText(context, str, Toast.LENGTH_SHORT);
             toast = toastMakeText;
             toastMakeText.show();
             oneTime = System.currentTimeMillis();

@@ -99,7 +99,7 @@ public class SettingActivity extends AbstractBaseActivity implements SettingLeft
         this.mLeftSettingLvAdapter = new SettingLeftLvAdapter(this, this.mLeftList, this);
         this.mLeftRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         this.mLeftRecyclerView.setAdapter(this.mLeftSettingLvAdapter);
-        this.mRightList = new ArrayList();
+        this.mRightList = new ArrayList<>();
         this.mRightSettingLvAdapter = new SettingRightLvAdapter(this, this.mRightList, this, this);
         this.mRightRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         this.mRightRecyclerView.setAdapter(this.mRightSettingLvAdapter);
@@ -150,7 +150,7 @@ public class SettingActivity extends AbstractBaseActivity implements SettingLeft
                                 this.mRightList.get(settingUpdateEntity.getRightListIndex()).setValue(strValueOf);
                                 this.mRightList.get(settingUpdateEntity.getRightListIndex()).setProgress(settingUpdateEntity.getProgress());
                             } else if (style == 3 || style == 4) {
-                                this.mRightList.get(settingUpdateEntity.getRightListIndex()).setValue(settingUpdateEntity.getValue());
+                                this.mRightList.get(settingUpdateEntity.getRightListIndex()).setValue(String.valueOf(settingUpdateEntity.getValue()));
                             }
                         } else if (settingUpdateEntity.getValue() instanceof Integer) {
                             List<String> valueSrnArray = this.mRightList.get(settingUpdateEntity.getRightListIndex()).getValueSrnArray();

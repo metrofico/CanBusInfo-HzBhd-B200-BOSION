@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,14 +8,17 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class SelectProtocolCompanyLvAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private ItemCallBackInterface mItemCallBackInterface;
-    private List<String> mList;
+public class SelectProtocolCompanyLvAdapter extends RecyclerView.Adapter<SelectProtocolCompanyLvAdapter.ViewHolder> {
+    private final ItemCallBackInterface mItemCallBackInterface;
+    private final List<String> mList;
     private String selectItem = "";
 
     public interface ItemCallBackInterface {
@@ -42,12 +46,12 @@ public class SelectProtocolCompanyLvAdapter extends RecyclerView.Adapter<ViewHol
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         if (this.selectItem.equals(this.mList.get(i))) {
             viewHolder.llItem.setBackgroundResource(R.drawable.list_left_ic_sel);
-            viewHolder.ivDot.setVisibility(0);
+            viewHolder.ivDot.setVisibility(View.VISIBLE);
         } else {
-            viewHolder.ivDot.setVisibility(4);
+            viewHolder.ivDot.setVisibility(android.view.View.INVISIBLE);
             if (i % 2 == 0) {
                 viewHolder.llItem.setBackgroundResource(R.color.select_protocol_company_color_1);
             } else {
@@ -66,15 +70,15 @@ public class SelectProtocolCompanyLvAdapter extends RecyclerView.Adapter<ViewHol
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView ivDot;
-        private LinearLayout llItem;
-        private TextView tv;
+        private final ImageView ivDot;
+        private final LinearLayout llItem;
+        private final TextView tv;
 
         ViewHolder(View view) {
             super(view);
-            this.tv = (TextView) view.findViewById(R.id.tv);
-            this.ivDot = (ImageView) view.findViewById(R.id.iv_dot);
-            this.llItem = (LinearLayout) view.findViewById(R.id.ll_item);
+            this.tv = view.findViewById(R.id.tv);
+            this.ivDot = view.findViewById(R.id.iv_dot);
+            this.llItem = view.findViewById(R.id.ll_item);
         }
     }
 

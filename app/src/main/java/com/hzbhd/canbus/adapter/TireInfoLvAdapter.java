@@ -5,14 +5,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.TirePageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class TireInfoLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class TireInfoLvAdapter extends RecyclerView.Adapter<TireInfoLvAdapter.ViewHolder> {
     private Context mContext;
     private List<TirePageUiSet.LineItem> mList;
 

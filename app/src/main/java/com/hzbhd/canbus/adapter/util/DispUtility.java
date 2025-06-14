@@ -1,8 +1,10 @@
 package com.hzbhd.canbus.adapter.util;
 
+import android.annotation.SuppressLint;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
+
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
@@ -23,12 +25,13 @@ public final class DispUtility {
         return resources;
     }
 
-    private static int getDefaultDisplayDensity() throws IllegalAccessException, NoSuchMethodException, ClassNotFoundException, SecurityException, IllegalArgumentException, InvocationTargetException {
+    @SuppressLint("PrivateApi")
+    private static int getDefaultDisplayDensity() {
         try {
             Class<?> cls = Class.forName("android.view.WindowManagerGlobal");
-            Method method = cls.getMethod("getWindowManagerService", new Class[0]);
+            Method method = cls.getMethod("getWindowManagerService");
             method.setAccessible(true);
-            Object objInvoke = method.invoke(cls, new Object[0]);
+            Object objInvoke = method.invoke(cls);
             Method method2 = objInvoke.getClass().getMethod("getInitialDisplayDensity", Integer.TYPE);
             method2.setAccessible(true);
             return ((Integer) method2.invoke(objInvoke, 0)).intValue();

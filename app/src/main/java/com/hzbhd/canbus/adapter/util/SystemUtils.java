@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.provider.Settings;
 import android.text.TextUtils;
+
 import java.io.File;
 import java.io.FileFilter;
 import java.util.List;
@@ -37,18 +38,16 @@ public class SystemUtils {
 
     public static boolean isForeground(Context context, String str) {
         List<ActivityManager.RunningTaskInfo> runningTasks;
-        return (context == null || TextUtils.isEmpty(str) || (runningTasks = ((ActivityManager) context.getSystemService("activity")).getRunningTasks(1)) == null || runningTasks.size() <= 0 || !str.equals(runningTasks.get(0).topActivity.getClassName())) ? false : true;
+        return context != null && !TextUtils.isEmpty(str) && (runningTasks = ((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE)).getRunningTasks(1)) != null && runningTasks.size() > 0 && str.equals(runningTasks.get(0).topActivity.getClassName());
     }
 
     public static boolean isNaviForeground(Context context, String str) {
         List<ActivityManager.RunningTaskInfo> runningTasks;
         HzbhdLog.d("isNaviForeground", context + " , isNaviForeground , " + str);
-        if (context != null && !TextUtils.isEmpty(str) && (runningTasks = ((ActivityManager) context.getSystemService("activity")).getRunningTasks(1)) != null && runningTasks.size() > 0) {
+        if (context != null && !TextUtils.isEmpty(str) && (runningTasks = ((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE)).getRunningTasks(1)) != null && runningTasks.size() > 0) {
             ComponentName componentName = runningTasks.get(0).topActivity;
             HzbhdLog.d("isNaviForeground", componentName.getPackageName() + " , isNaviForeground , " + str);
-            if (componentName.getPackageName().equals(str)) {
-                return true;
-            }
+            return componentName.getPackageName().equals(str);
         }
         return false;
     }

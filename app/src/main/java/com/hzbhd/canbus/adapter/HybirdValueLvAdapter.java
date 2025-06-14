@@ -4,13 +4,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class HybirdValueLvAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private List<String> mList;
+public class HybirdValueLvAdapter extends RecyclerView.Adapter<HybirdValueLvAdapter.ViewHolder> {
+    private final List<String> mList;
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public long getItemId(int i) {
@@ -37,11 +40,11 @@ public class HybirdValueLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView textView;
+        private final TextView textView;
 
         ViewHolder(View view) {
             super(view);
-            this.textView = (TextView) view.findViewById(R.id.tv_info);
+            this.textView = view.findViewById(R.id.tv_info);
         }
     }
 }

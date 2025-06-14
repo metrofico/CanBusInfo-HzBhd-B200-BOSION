@@ -5,7 +5,9 @@ plugins {
 android {
     namespace = "com.hzbhd"
     compileSdk = 35
+
     buildFeatures {
+        aidl = true
         buildConfig = true // Habilita la generación de BuildConfig
     }
     defaultConfig {
@@ -17,7 +19,11 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    sourceSets {
+        getByName("main") {
+            aidl.setSrcDirs(listOf("src/main/java"))
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = false

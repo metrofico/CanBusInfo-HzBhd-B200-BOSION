@@ -37,11 +37,26 @@ public class SystemPropertiesUtils {
         try {
             // Usar reflexión para invocar el método estático getInt(String, int) de SystemProperties
             Class<?> clazz = Class.forName("android.os.SystemProperties");
-            Object result = clazz.getDeclaredMethod("getInt", String.class, int.class)
-                    .invoke(null, key, defaultValue);
+            Object result = clazz.getDeclaredMethod("getInt", String.class, int.class).invoke(null, key, defaultValue);
 
             if (result instanceof Integer) {
                 return (Integer) result;
+            }
+        } catch (Exception e) {
+            Log.e(TAG, "Error al invocar SystemProperties.getInt: " + e.getMessage(), e);
+        }
+        return defaultValue; // Fallback si falla
+    }
+
+    // Método para obtener un int usando reflexión
+    public static boolean getBoolean(String key, boolean defaultValue) {
+        try {
+            // Usar reflexión para invocar el método estático getBoolean(String, boolean) de SystemProperties
+            Class<?> clazz = Class.forName("android.os.SystemProperties");
+            Object result = clazz.getDeclaredMethod("getBoolean", String.class, Boolean.class).invoke(null, key, defaultValue);
+
+            if (result instanceof Boolean) {
+                return (Boolean) result;
             }
         } catch (Exception e) {
             Log.e(TAG, "Error al invocar SystemProperties.getInt: " + e.getMessage(), e);

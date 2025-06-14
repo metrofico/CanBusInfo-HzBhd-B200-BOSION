@@ -1,17 +1,21 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class SelectCarCateLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class SelectCarCateLvAdapter extends RecyclerView.Adapter<SelectCarCateLvAdapter.ViewHolder> {
     private ItemCallBackInterface mItemCallBackInterface;
     private List<String> mList;
     private int mNormalTextColor;
@@ -45,7 +49,7 @@ public class SelectCarCateLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         if (this.selectItem.equals(this.mList.get(i))) {
             viewHolder.tv.setBackgroundResource(R.color.colorAccent_dark);
             viewHolder.tv.setTextColor(this.mSelectTextColor);

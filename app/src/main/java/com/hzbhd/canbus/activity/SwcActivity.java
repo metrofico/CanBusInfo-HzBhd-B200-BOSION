@@ -42,7 +42,7 @@ import kotlin.jvm.internal.Intrinsics;
 
 public final class SwcActivity extends Activity {
     private static final String TAG = "KeyLearnActivity";
-    public Map<Integer, View> _$_findViewCache = new LinkedHashMap();
+    public Map<Integer, View> _$_findViewCache = new LinkedHashMap<>();
     private Button btnReset;
     private Button btnSave;
     private final List<CustomKeyConfig.KeyMap> keyConfigList;
@@ -54,6 +54,11 @@ public final class SwcActivity extends Activity {
     private TextView tvCurrentKey;
 
     private static final List<KeyUiEntity> keyUiList = Arrays.asList(new KeyUiEntity(52, R.drawable.swc_key_home, R.string.swc_fun_home), new KeyUiEntity(K_MUTE, R.drawable.swc_key_mute, R.string.swc_fun_mute), new KeyUiEntity(K_VOL_UP, R.drawable.swc_key_vol_up, R.string.swc_fun_voladd), new KeyUiEntity(K_VOL_DN, R.drawable.swc_key_vol_down, R.string.swc_fun_volloss), new KeyUiEntity(MUTE_TYPE_AUDIO_SWITCH_MUTE, R.drawable.swc_key_source, R.string.swc_fun_mode), new KeyUiEntity(K_PLAY_PAUSE, R.drawable.swc_key_playorpause, R.string.swc_fun_play_pause), new KeyUiEntity(K_PREV, R.drawable.swc_key_prev, R.string.swc_fun_prev), new KeyUiEntity(K_NEXT, R.drawable.swc_key_next, R.string.swc_fun_next), new KeyUiEntity(K_RETURN, R.drawable.swc_key_back, R.string.swc_fun_back), new KeyUiEntity(K_EQ, R.drawable.swc_key_eq, R.string.swc_fun_eq), new KeyUiEntity(K_NAVI, R.drawable.swc_key_navi, R.string.swc_fun_navi), new KeyUiEntity(K_PHONE_ON, R.drawable.swc_key_answer, R.string.swc_fun_answer), new KeyUiEntity(K_PHONE_OFF, R.drawable.swc_key_handup, R.string.swc_fun_hangup), new KeyUiEntity(K_TUNER, R.drawable.swc_key_radio, R.string.swc_fun_radio), new KeyUiEntity(K_SLEEP, R.drawable.swc_key_power, R.string.swc_fun_power), new KeyUiEntity(K_BT_MUSIC, R.drawable.swc_key_bt_music, R.string.swc_fun_bt_music), new KeyUiEntity(K_UP, R.drawable.swc_key_up, R.string.swc_fun_up), new KeyUiEntity(K_DOWN, R.drawable.swc_key_down, R.string.swc_fun_down), new KeyUiEntity(K_LEFT, R.drawable.swc_key_left, R.string.swc_fun_left), new KeyUiEntity(K_RIGHT, R.drawable.swc_key_right, R.string.swc_fun_right), new KeyUiEntity(K_ENTER, R.drawable.swc_key_ok, R.string.swc_fun_enter), new KeyUiEntity(K_MUSIC, R.drawable.swc_key_music, R.string.swc_fun_music), new KeyUiEntity(K_VIDEO, R.drawable.swc_key_video, R.string.swc_fun_video), new KeyUiEntity(K_DISPLAY, R.drawable.swc_key_light, R.string.swc_fun_backlight), new KeyUiEntity(K_SPEECH, R.drawable.swc_key_speech, R.string.swc_fun_speech), new KeyUiEntity(K_CARPLAY_SIRI, R.drawable.swc_key_siri, R.string.swc_fun_siri));
+
+
+    public static List<KeyUiEntity> getKeyUiList() {
+        return keyUiList;
+    }
 
     public void _$_clearFindViewByIdCache() {
         this._$_findViewCache.clear();

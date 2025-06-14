@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,13 +8,16 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.bean.CanTypeAllEntity;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class SelectCanTypeLastLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class SelectCanTypeLastLvAdapter extends RecyclerView.Adapter<SelectCanTypeLastLvAdapter.ViewHolder> {
     private ItemCallBackInterface mItemCallBackInterface;
     private List<CanTypeAllEntity> mList;
     private int mNormalTextColor;
@@ -46,7 +50,7 @@ public class SelectCanTypeLastLvAdapter extends RecyclerView.Adapter<ViewHolder>
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         if (this.mList.get(i).isSelected()) {
             viewHolder.ll.setBackgroundResource(R.drawable.selct_can_type_list_right_sel);
             viewHolder.tv0.setTextColor(this.mSelectTextColor);

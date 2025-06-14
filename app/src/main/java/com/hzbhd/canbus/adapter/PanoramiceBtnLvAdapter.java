@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,18 +8,21 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class PanoramiceBtnLvAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private Context mContext;
-    private OnPanoramicItemClickListener mItemClickInterface;
-    private List<ParkPageUiSet.Bean> mList;
+public class PanoramiceBtnLvAdapter extends RecyclerView.Adapter<PanoramiceBtnLvAdapter.ViewHolder> {
+    private final Context mContext;
+    private final OnPanoramicItemClickListener mItemClickInterface;
+    private final List<ParkPageUiSet.Bean> mList;
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public long getItemId(int i) {
@@ -47,7 +51,7 @@ public class PanoramiceBtnLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         int itemViewType = getItemViewType(i);
         if (itemViewType == 0) {
             viewHolder.tvText.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getTitleSrn()));
@@ -66,15 +70,15 @@ public class PanoramiceBtnLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView ivImage;
-        private RelativeLayout relativeLayout;
-        private TextView tvText;
+        private final ImageView ivImage;
+        private final RelativeLayout relativeLayout;
+        private final TextView tvText;
 
         ViewHolder(View view) {
             super(view);
-            this.relativeLayout = (RelativeLayout) view.findViewById(R.id.ll_layout);
-            this.tvText = (TextView) view.findViewById(R.id.tv_text);
-            this.ivImage = (ImageView) view.findViewById(R.id.iv_image);
+            this.relativeLayout = view.findViewById(R.id.ll_layout);
+            this.tvText = view.findViewById(R.id.tv_text);
+            this.ivImage = view.findViewById(R.id.iv_image);
         }
     }
 }

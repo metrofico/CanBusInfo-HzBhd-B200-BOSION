@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -9,18 +10,21 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class SettingRightLvAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private Context mContext;
-    private List<SettingPageUiSet.ListBean.ItemListBean> mList;
-    private RightItemClickInterface mRightItemClickInterface;
-    private RightItemTouchInterface mRightItemTouchInterface;
+public class SettingRightLvAdapter extends RecyclerView.Adapter<SettingRightLvAdapter.ViewHolder> {
+    private final Context mContext;
+    private final List<SettingPageUiSet.ListBean.ItemListBean> mList;
+    private final RightItemClickInterface mRightItemClickInterface;
+    private final RightItemTouchInterface mRightItemTouchInterface;
 
     public interface RightItemClickInterface {
         void onRightItemClick(int i);
@@ -57,8 +61,9 @@ public class SettingRightLvAdapter extends RecyclerView.Adapter<ViewHolder> {
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(i != 0 ? i != 1 ? i != 2 ? i != 3 ? i != 4 ? 0 : R.layout.layout_item_setting_4_lv : R.layout.layout_item_setting_3_lv : R.layout.layout_item_setting_2_lv : R.layout.layout_item_setting_1_lv : R.layout.layout_item_setting_0_lv, viewGroup, false));
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         viewHolder.tvTitle.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getTitleSrn()));
         Object value = this.mList.get(i).getValue();
         boolean zIsValueStr = this.mList.get(i).isValueStr();
@@ -82,12 +87,12 @@ public class SettingRightLvAdapter extends RecyclerView.Adapter<ViewHolder> {
             } else if (value instanceof String) {
                 String str2 = (String) value;
                 if (TextUtils.isEmpty(str2)) {
-                    viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex())));
+                    viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, (String) this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex())));
                 } else {
                     viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, str2));
                 }
             } else {
-                viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex())));
+                viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, (String) this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex())));
             }
         } else if (value instanceof String) {
             String str3 = (String) value;
@@ -107,42 +112,41 @@ public class SettingRightLvAdapter extends RecyclerView.Adapter<ViewHolder> {
                 SettingRightLvAdapter.this.mRightItemClickInterface.onRightItemClick(i);
             }
         });
-        viewHolder.relativeLayout.setOnTouchListener(new View.OnTouchListener() { // from class: com.hzbhd.canbus.adapter.SettingRightLvAdapter.2
-            @Override // android.view.View.OnTouchListener
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                if (SettingRightLvAdapter.this.mRightItemTouchInterface == null) {
-                    return false;
-                }
-                SettingRightLvAdapter.this.mRightItemTouchInterface.onRightItemTouch(i, view, motionEvent);
+        // from class: com.hzbhd.canbus.adapter.SettingRightLvAdapter.2
+// android.view.View.OnTouchListener
+        viewHolder.relativeLayout.setOnTouchListener((view, motionEvent) -> {
+            if (SettingRightLvAdapter.this.mRightItemTouchInterface == null) {
                 return false;
             }
+            SettingRightLvAdapter.this.mRightItemTouchInterface.onRightItemTouch(i, view, motionEvent);
+            return false;
         });
         viewHolder.setVisibility(this.mList.get(i).isEnable());
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private Switch aSwitch;
-        private RelativeLayout relativeLayout;
-        private TextView tvTitle;
-        private TextView tvValue;
+        private final Switch aSwitch;
+        private final RelativeLayout relativeLayout;
+        private final TextView tvTitle;
+        private final TextView tvValue;
 
         ViewHolder(View view) {
             super(view);
-            this.relativeLayout = (RelativeLayout) view.findViewById(R.id.ll_layout);
-            this.tvTitle = (TextView) view.findViewById(R.id.tv_title);
-            this.tvValue = (TextView) view.findViewById(R.id.tv_value);
-            this.aSwitch = (Switch) view.findViewById(R.id.sw_status);
+            this.relativeLayout = view.findViewById(R.id.ll_layout);
+            this.tvTitle = view.findViewById(R.id.tv_title);
+            this.tvValue = view.findViewById(R.id.tv_value);
+            this.aSwitch = view.findViewById(R.id.sw_status);
         }
 
         /* JADX INFO: Access modifiers changed from: private */
         public void setVisibility(boolean z) {
             RecyclerView.LayoutParams layoutParams = (RecyclerView.LayoutParams) this.itemView.getLayoutParams();
             if (z) {
-                this.itemView.setVisibility(0);
+                this.itemView.setVisibility(View.VISIBLE);
                 layoutParams.height = -2;
                 layoutParams.width = -1;
             } else {
-                this.itemView.setVisibility(8);
+                this.itemView.setVisibility(View.GONE);
                 layoutParams.height = 0;
                 layoutParams.width = 0;
             }

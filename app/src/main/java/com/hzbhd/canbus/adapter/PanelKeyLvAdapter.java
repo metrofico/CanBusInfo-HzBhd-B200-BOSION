@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -7,18 +8,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.ArrayList;
 
 /* loaded from: classes.dex */
-public class PanelKeyLvAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private Context mContext;
-    private ItemClickInterface mItemClickInterface;
-    private ItemLongClickInterface mItemLongClickInterface;
-    private ItemTouchInterface mItemTouchInterface;
-    private ArrayList<String> mList;
+public class PanelKeyLvAdapter extends RecyclerView.Adapter<PanelKeyLvAdapter.ViewHolder> {
+    private final Context mContext;
+    private final ItemClickInterface mItemClickInterface;
+    private final ItemLongClickInterface mItemLongClickInterface;
+    private final ItemTouchInterface mItemTouchInterface;
+    private final ArrayList<String> mList;
 
     public interface ItemClickInterface {
         void onItemClick(int i);
@@ -50,8 +54,9 @@ public class PanelKeyLvAdapter extends RecyclerView.Adapter<ViewHolder> {
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_item_panel_key_btn, viewGroup, false));
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         viewHolder.textView.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i)));
         viewHolder.imageButton.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.adapter.PanelKeyLvAdapter.1
             @Override // android.view.View.OnClickListener
@@ -87,13 +92,13 @@ public class PanelKeyLvAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageButton imageButton;
-        private TextView textView;
+        private final ImageButton imageButton;
+        private final TextView textView;
 
         ViewHolder(View view) {
             super(view);
-            this.imageButton = (ImageButton) view.findViewById(R.id.ibt_item);
-            this.textView = (TextView) view.findViewById(R.id.tv_item);
+            this.imageButton = view.findViewById(R.id.ibt_item);
+            this.textView = view.findViewById(R.id.tv_item);
         }
     }
 }

@@ -6,16 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class DriveDataLvItemAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private Context mContext;
-    private List<DriverDataPageUiSet.Page.Item> mList;
+public class DriveDataLvItemAdapter extends RecyclerView.Adapter<DriveDataLvItemAdapter.ViewHolder> {
+    private final Context mContext;
+    private final List<DriverDataPageUiSet.Page.Item> mList;
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public long getItemId(int i) {
@@ -53,13 +56,13 @@ public class DriveDataLvItemAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tvTitle;
-        private TextView tvValue;
+        private final TextView tvTitle;
+        private final TextView tvValue;
 
         ViewHolder(View view) {
             super(view);
-            this.tvTitle = (TextView) view.findViewById(R.id.tv_title);
-            this.tvValue = (TextView) view.findViewById(R.id.tv_value);
+            this.tvTitle = view.findViewById(R.id.tv_title);
+            this.tvValue = view.findViewById(R.id.tv_value);
         }
     }
 }

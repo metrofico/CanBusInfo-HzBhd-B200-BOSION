@@ -7,16 +7,19 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class OriginalDataLvItemAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private Context mContext;
-    private List<OriginalCarDevicePageUiSet.Item> mList;
+public class OriginalDataLvItemAdapter extends RecyclerView.Adapter<OriginalDataLvItemAdapter.ViewHolder> {
+    private final Context mContext;
+    private final List<OriginalCarDevicePageUiSet.Item> mList;
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public long getItemId(int i) {
@@ -40,10 +43,10 @@ public class OriginalDataLvItemAdapter extends RecyclerView.Adapter<ViewHolder> 
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(ViewHolder viewHolder, int i) {
-        if (this.mList.size() == 0) {
-            viewHolder.linearLayout.setVisibility(4);
+        if (this.mList.isEmpty()) {
+            viewHolder.linearLayout.setVisibility(View.INVISIBLE);
         } else {
-            viewHolder.linearLayout.setVisibility(0);
+            viewHolder.linearLayout.setVisibility(android.view.View.VISIBLE);
         }
         viewHolder.tvTitle.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getTitleSrn()));
         viewHolder.ivHeadImg.setImageResource(CommUtil.getImgIdByResId(this.mContext, this.mList.get(i).getImageId()));
@@ -51,17 +54,17 @@ public class OriginalDataLvItemAdapter extends RecyclerView.Adapter<ViewHolder> 
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageView ivHeadImg;
-        private LinearLayout linearLayout;
-        private TextView tvTitle;
-        private TextView tvValue;
+        private final ImageView ivHeadImg;
+        private final LinearLayout linearLayout;
+        private final TextView tvTitle;
+        private final TextView tvValue;
 
         ViewHolder(View view) {
             super(view);
-            this.linearLayout = (LinearLayout) view.findViewById(R.id.ll_layout);
-            this.ivHeadImg = (ImageView) view.findViewById(R.id.iv_head_img);
-            this.tvTitle = (TextView) view.findViewById(R.id.tv_title);
-            this.tvValue = (TextView) view.findViewById(R.id.tv_value);
+            this.linearLayout = view.findViewById(R.id.ll_layout);
+            this.ivHeadImg = view.findViewById(R.id.iv_head_img);
+            this.tvTitle = view.findViewById(R.id.tv_title);
+            this.tvValue = view.findViewById(R.id.tv_value);
         }
     }
 }

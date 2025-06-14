@@ -4,6 +4,7 @@ import android.content.res.Resources;
 import android.os.Build;
 import android.view.Window;
 import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 /* loaded from: classes.dex */
@@ -44,18 +45,19 @@ public class StatusUtil {
         }
     }
 
-    public static void fullScreen(AppCompatActivity appCompatActivity, boolean z) {
-        if (z) {
-            WindowManager.LayoutParams attributes = appCompatActivity.getWindow().getAttributes();
-            attributes.flags |= 1024;
-            appCompatActivity.getWindow().setAttributes(attributes);
-            appCompatActivity.getWindow().addFlags(512);
-            return;
+    public static void fullScreen(AppCompatActivity appCompatActivity, boolean enableFullScreen) {
+        Window window = appCompatActivity.getWindow();
+        WindowManager.LayoutParams attributes = window.getAttributes();
+
+        if (enableFullScreen) {
+            attributes.flags |= WindowManager.LayoutParams.FLAG_FULLSCREEN;
+            window.setAttributes(attributes);
+            window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        } else {
+            attributes.flags &= ~WindowManager.LayoutParams.FLAG_FULLSCREEN;
+            window.setAttributes(attributes);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         }
-        WindowManager.LayoutParams attributes2 = appCompatActivity.getWindow().getAttributes();
-        attributes2.flags &= -1025;
-        appCompatActivity.getWindow().setAttributes(attributes2);
-        appCompatActivity.getWindow().clearFlags(512);
     }
 
     public static void setStatusBar(AppCompatActivity appCompatActivity) {

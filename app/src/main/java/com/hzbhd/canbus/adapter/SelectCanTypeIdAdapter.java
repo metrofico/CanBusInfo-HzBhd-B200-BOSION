@@ -1,21 +1,25 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
+
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class SelectCanTypeIdAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private int mCurSelectedId;
-    private ItemCallBackInterface mItemCallBackInterface;
-    private List<Integer> mList;
-    private int mNormalTextColor;
-    private int mSelectTextColor;
+public class SelectCanTypeIdAdapter extends RecyclerView.Adapter<SelectCanTypeIdAdapter.ViewHolder> {
+    private final int mCurSelectedId;
+    private final ItemCallBackInterface mItemCallBackInterface;
+    private final List<Integer> mList;
+    private final int mNormalTextColor;
+    private final int mSelectTextColor;
 
     public interface ItemCallBackInterface {
         void select(int i);
@@ -45,8 +49,8 @@ public class SelectCanTypeIdAdapter extends RecyclerView.Adapter<ViewHolder> {
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
-        if (this.mList.get(i).intValue() == this.mCurSelectedId) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
+        if (this.mList.get(i) == this.mCurSelectedId) {
             viewHolder.tv.setBackgroundResource(R.drawable.selct_can_type_list_right_sel);
             viewHolder.tv.setTextColor(this.mSelectTextColor);
         } else {
@@ -58,18 +62,18 @@ public class SelectCanTypeIdAdapter extends RecyclerView.Adapter<ViewHolder> {
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
                 if (SelectCanTypeIdAdapter.this.mItemCallBackInterface != null) {
-                    SelectCanTypeIdAdapter.this.mItemCallBackInterface.select(((Integer) SelectCanTypeIdAdapter.this.mList.get(i)).intValue());
+                    SelectCanTypeIdAdapter.this.mItemCallBackInterface.select(SelectCanTypeIdAdapter.this.mList.get(i));
                 }
             }
         });
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private TextView tv;
+        private final TextView tv;
 
         ViewHolder(View view) {
             super(view);
-            this.tv = (TextView) view.findViewById(R.id.tv);
+            this.tv = view.findViewById(R.id.tv);
         }
     }
 }

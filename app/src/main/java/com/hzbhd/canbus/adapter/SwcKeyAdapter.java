@@ -137,12 +137,12 @@ public final class SwcKeyAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public int getItemCount() {
-        return SwcActivity.INSTANCE.getKeyUiList().size();
+        return SwcActivity.getKeyUiList().size();
     }
 
     private void setKeyUi(int key, ImageView icon, TextView name) {
         SwcActivity.KeyUiEntity obj;
-        Iterator<SwcActivity.KeyUiEntity> it = SwcActivity.INSTANCE.getKeyUiList().iterator();
+        Iterator<SwcActivity.KeyUiEntity> it = SwcActivity.getKeyUiList().iterator();
         while (true) {
             if (!it.hasNext()) {
                 obj = null;

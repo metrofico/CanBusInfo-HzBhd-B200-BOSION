@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.comm;
 
 import android.app.Application;
+import android.content.Context;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.WindowManager;
@@ -12,7 +13,7 @@ public class ScreenConfig {
 
     public static void initScreenConfig(Application application) {
         try {
-            WindowManager windowManager = (WindowManager) application.getSystemService("window");
+            WindowManager windowManager = (WindowManager) application.getSystemService(Context.WINDOW_SERVICE);
             DisplayMetrics displayMetrics = new DisplayMetrics();
             windowManager.getDefaultDisplay().getMetrics(displayMetrics);
             screenWidth = displayMetrics.widthPixels;

@@ -4,12 +4,15 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.PagerAdapter;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.util.LogUtil;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +41,7 @@ public class DriveDataPvAdapter extends PagerAdapter {
         if (spanCount == 0) {
             spanCount = 3;
         }
-        recyclerView.setLayoutManager(new GridLayoutManager(viewGroup.getContext(), spanCount, 1, false));
+        recyclerView.setLayoutManager(new GridLayoutManager(viewGroup.getContext(), spanCount, RecyclerView.VERTICAL, false));
         recyclerView.setAdapter(driveDataLvItemAdapter);
         viewGroup.addView(viewInflate, 0);
         this.mDriveDataLvItemAdapterList.add(driveDataLvItemAdapter);

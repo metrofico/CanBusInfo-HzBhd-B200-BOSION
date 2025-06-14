@@ -1,22 +1,26 @@
 package com.hzbhd.canbus.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.interfaces.OnOriginalBottomBtnClickListener;
+
 import java.util.Arrays;
 import java.util.List;
 
 /* loaded from: classes.dex */
-public class OriginalBottomBtnLvAdapter extends RecyclerView.Adapter<ViewHolder> {
-    private OnOriginalBottomBtnClickListener mBtnClickInterface;
+public class OriginalBottomBtnLvAdapter extends RecyclerView.Adapter<OriginalBottomBtnLvAdapter.ViewHolder> {
+    private final OnOriginalBottomBtnClickListener mBtnClickInterface;
     private int mCurrentClick = 0;
-    private List<String> mDisplayList;
-    private List<String> mOriginalList;
+    private final List<String> mDisplayList;
+    private final List<String> mOriginalList;
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public long getItemId(int i) {
@@ -40,11 +44,11 @@ public class OriginalBottomBtnLvAdapter extends RecyclerView.Adapter<ViewHolder>
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(final ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(final ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         viewHolder.mIb.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.adapter.OriginalBottomBtnLvAdapter.1
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
-                int iIndexOf = OriginalBottomBtnLvAdapter.this.mOriginalList.indexOf((String) OriginalBottomBtnLvAdapter.this.mDisplayList.get(i));
+                int iIndexOf = OriginalBottomBtnLvAdapter.this.mOriginalList.indexOf(OriginalBottomBtnLvAdapter.this.mDisplayList.get(i));
                 if (OriginalBottomBtnLvAdapter.this.mBtnClickInterface != null) {
                     OriginalBottomBtnLvAdapter.this.mBtnClickInterface.onClickBottomBtnItem(iIndexOf);
                 }
@@ -52,7 +56,6 @@ public class OriginalBottomBtnLvAdapter extends RecyclerView.Adapter<ViewHolder>
         });
         if (viewHolder.mIb.getDrawable() == null) {
             String str = this.mDisplayList.get(i);
-            str.hashCode();
             switch (str) {
                 case "preset_scan":
                     viewHolder.mIb.setImageResource(R.drawable.kt01_radio_preset);
@@ -128,11 +131,11 @@ public class OriginalBottomBtnLvAdapter extends RecyclerView.Adapter<ViewHolder>
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-        private ImageButton mIb;
+        private final ImageButton mIb;
 
         ViewHolder(View view) {
             super(view);
-            this.mIb = (ImageButton) view.findViewById(R.id.btn_bottom);
+            this.mIb = view.findViewById(R.id.btn_bottom);
         }
     }
 }

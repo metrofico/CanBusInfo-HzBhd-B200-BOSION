@@ -10,6 +10,7 @@ import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
+
 import com.hzbhd.canbus.BuildConfig;
 import com.hzbhd.R;
 import com.hzbhd.canbus.comm.Constant;
@@ -19,6 +20,7 @@ import com.hzbhd.canbus.util.MediaShareData;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;
 import com.hzbhd.proxy.sourcemanager.SourceManager;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
