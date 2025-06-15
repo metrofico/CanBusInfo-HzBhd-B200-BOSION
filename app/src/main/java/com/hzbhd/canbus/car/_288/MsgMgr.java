@@ -11,6 +11,7 @@ import android.os.Message;
 import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
@@ -31,6 +32,7 @@ import com.hzbhd.canbus.util.SelectCanTypeUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.canbus.util.TimerUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -95,7 +97,8 @@ public class MsgMgr extends AbstractMsgMgr {
         return i != 1 ? i != 2 ? i != 16 ? "" : "AM" : "FM2" : "FM1";
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         this.mCanId = SelectCanTypeUtil.getCurrentCanTypeId(context);
@@ -105,14 +108,16 @@ public class MsgMgr extends AbstractMsgMgr {
         updateAmplifier();
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
         this.mContext = context;
         SelectCanTypeUtil.enableApp(context, Constant.OriginalDeviceActivity);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) throws Resources.NotFoundException {
         super.canbusInfoChange(context, bArr);
         super.canbusInfoChange(context, bArr);
@@ -573,7 +578,8 @@ public class MsgMgr extends AbstractMsgMgr {
         return DataHandleUtils.getIntFromByteWithBit(this.mCanBusInfo[i], i2, 4);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchNoMediaInfoChange(boolean z) {
         super.sourceSwitchNoMediaInfoChange(z);
         if (z) {
@@ -589,15 +595,16 @@ public class MsgMgr extends AbstractMsgMgr {
             intValue = SharePreUtil.getIntValue(context, "share_288_language", 0);
         }
         TimerUtil timerUtil = new TimerUtil();
-        timerUtil.startTimer(new TimerTask(intValue, timerUtil) { // from class: com.hzbhd.canbus.car._288.MsgMgr.1
+        int finalIntValue = intValue;
+        timerUtil.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.car._288.MsgMgr.1
             final Iterator<byte[]> iterator;
             final /* synthetic */ int val$finalLanguage;
             final /* synthetic */ TimerUtil val$util;
 
             {
-                this.val$finalLanguage = intValue;
+                this.val$finalLanguage = finalIntValue;
                 this.val$util = timerUtil;
-                this.iterator = Arrays.stream(new byte[][]{new byte[]{22, -127, 1, 1}, new byte[]{22, -127, 1, 1}, new byte[]{22, -125, 36, (byte) intValue}, new byte[]{22, -124, 8, 1}, new byte[]{22, -124, 1, (byte) (7 - GeneralAmplifierData.frontRear)}, new byte[]{22, -124, 2, (byte) (GeneralAmplifierData.leftRight + 7)}, new byte[]{22, -124, 4, (byte) (GeneralAmplifierData.bandBass + 2)}, new byte[]{22, -124, 5, (byte) (GeneralAmplifierData.bandTreble + 2)}, new byte[]{22, -124, 6, (byte) (GeneralAmplifierData.bandMiddle + 2)}, new byte[]{22, -124, 7, (byte) GeneralAmplifierData.volume}}).iterator();
+                this.iterator = Arrays.stream(new byte[][]{new byte[]{22, -127, 1, 1}, new byte[]{22, -127, 1, 1}, new byte[]{22, -125, 36, (byte) finalIntValue}, new byte[]{22, -124, 8, 1}, new byte[]{22, -124, 1, (byte) (7 - GeneralAmplifierData.frontRear)}, new byte[]{22, -124, 2, (byte) (GeneralAmplifierData.leftRight + 7)}, new byte[]{22, -124, 4, (byte) (GeneralAmplifierData.bandBass + 2)}, new byte[]{22, -124, 5, (byte) (GeneralAmplifierData.bandTreble + 2)}, new byte[]{22, -124, 6, (byte) (GeneralAmplifierData.bandMiddle + 2)}, new byte[]{22, -124, 7, (byte) GeneralAmplifierData.volume}}).iterator();
             }
 
             @Override // java.util.TimerTask, java.lang.Runnable
@@ -816,7 +823,7 @@ public class MsgMgr extends AbstractMsgMgr {
         ComponentName componentName = new ComponentName(HzbhdComponentName.MISC, "com.hzbhd.misc.auxin.MainActivity");
         Intent intent = new Intent();
         intent.setComponent(componentName);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         this.mContext.startActivity(intent);
     }
 
@@ -850,7 +857,8 @@ public class MsgMgr extends AbstractMsgMgr {
         return this.mContext.getResources().getString(i);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
         CanbusMsgSender.sendMsg(new byte[]{22, -112, 48, 0});
     }

@@ -363,7 +363,7 @@ public class MainActivity extends AbstractBaseActivity implements MainLeftLvAdap
             return false;
         }
         Intent intent = new Intent("android.intent.action.MAIN");
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.addCategory("android.intent.category.HOME");
         startActivity(intent);
         return true;

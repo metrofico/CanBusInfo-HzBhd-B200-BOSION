@@ -247,7 +247,7 @@ public class MsgMgr extends AbstractMsgMgr {
 
     private void openWarningActivity() {
         Intent intent = new Intent(this.mContext, (Class<?>) WarningActivity.class);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         this.mContext.startActivity(intent);
     }
 

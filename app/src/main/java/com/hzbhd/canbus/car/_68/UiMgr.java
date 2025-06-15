@@ -6,8 +6,9 @@ import android.os.Looper;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import com.hzbhd.canbus.CanbusMsgSender;
+
 import com.hzbhd.R;
+import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener;
@@ -35,10 +36,11 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.LogUtil;
 import com.hzbhd.canbus.util.TimerUtil;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.TimerTask;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
@@ -1599,7 +1601,7 @@ public class UiMgr extends AbstractUiMgr {
                 CanbusMsgSender.sendMsg(new byte[]{22, -30, NfDef.AVRCP_EVENT_ID_VOLUME_CHANGED});
                 break;
             default:
-                CanbusMsgSender.sendMsg(new byte[]{22, -30, ByteCompanionObject.MIN_VALUE});
+                CanbusMsgSender.sendMsg(new byte[]{22, -30, Byte.MIN_VALUE});
                 break;
         }
     }

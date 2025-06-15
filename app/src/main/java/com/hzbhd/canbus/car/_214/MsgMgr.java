@@ -820,7 +820,7 @@ public class MsgMgr extends AbstractMsgMgr {
             try {
                 Intent intent = new Intent();
                 intent.setComponent(new ComponentName(PackageName.google_youtube, ClassName.google_youtube));
-                intent.setFlags(268435456);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
                 return;
             } catch (Exception unused) {

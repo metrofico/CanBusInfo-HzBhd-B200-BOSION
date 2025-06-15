@@ -5,13 +5,16 @@ import android.content.Intent;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
+import android.view.Gravity;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.hzbhd.canbus.CanbusMsgSender;
+
 import com.hzbhd.R;
+import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.activity.OnStarActivity;
 import com.hzbhd.canbus.adapter.util.HzbhdLog;
@@ -40,10 +43,12 @@ import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.commontools.utils.FgeString;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
+import org.apache.log4j.helpers.DateLayout;
+
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import org.apache.log4j.helpers.DateLayout;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -80,7 +85,8 @@ public class MsgMgr extends AbstractMsgMgr {
         return (i * 256) + i2;
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         this.mContext = context;
@@ -90,13 +96,15 @@ public class MsgMgr extends AbstractMsgMgr {
         initActivePark(context);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
         SelectCanTypeUtil.enableApp(context, Constant.OnStarActivity);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         super.canbusInfoChange(context, bArr);
         this.mCanBusInfoByte = bArr;
@@ -276,7 +284,7 @@ public class MsgMgr extends AbstractMsgMgr {
             } else {
                 AirActivity.mIsClickOpen = true;
                 Intent intent = new Intent(this.mContext, (Class<?>) AirActivity.class);
-                intent.setFlags(268435456);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 this.mContext.startActivity(intent);
             }
         }
@@ -306,7 +314,7 @@ public class MsgMgr extends AbstractMsgMgr {
         runOnUi(new AbstractMsgMgr.CallBackInterface() { // from class: com.hzbhd.canbus.car._68.MsgMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr.CallBackInterface
             public final void callback() {
-                this.f$0.m926lambda$setCarSettings0x43$0$comhzbhdcanbuscar_68MsgMgr();
+                m926lambda$setCarSettings0x43$0$comhzbhdcanbuscar_68MsgMgr();
             }
         });
         ArrayList arrayList = new ArrayList();
@@ -758,13 +766,15 @@ public class MsgMgr extends AbstractMsgMgr {
         updateDoorView(this.mContext);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
         super.dateTimeRepCanbus(i, i2, i3, i4, i5, i6, i7, i8, i9, z, z2, z3, i10);
         CanbusMsgSender.sendMsg(DataHandleUtils.byteMerger(new byte[]{22, -119}, new byte[]{(byte) i8, (byte) i6, (byte) (!z ? 1 : 0)}));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int i, String str, String str2, String str3, int i2) {
         String str4;
         int i3;
@@ -779,7 +789,8 @@ public class MsgMgr extends AbstractMsgMgr {
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.FM.name(), DataHandleUtils.byteMerger(new byte[]{22, -64, (byte) i3}, (str + " P" + i + " " + str2 + str4).getBytes()));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8, String str, String str2, String str3, long j, byte b9, int i3, boolean z, long j2, String str4, String str5, String str6, boolean z2) {
         super.musicInfoChange(b, b2, i, i2, b3, b4, b5, b6, b7, b8, str, str2, str3, j, b9, i3, z, j2, str4, str5, str6, z2);
         if (b == 9) {
@@ -791,7 +802,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, String str, byte b6, byte b7, String str2, String str3, String str4, int i3, byte b8, boolean z, int i4) {
         super.videoInfoChange(b, b2, i, i2, b3, b4, b5, str, b6, b7, str2, str3, str4, i3, b8, z, i4);
         if (b == 9) {
@@ -801,13 +813,15 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusicInfoChange() {
         super.btMusicInfoChange();
         getUiMgr(this.mContext).send0xC0Info(SplicingByte(new byte[]{22, -64, 5}, "Bluetooth music".getBytes()));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInInfoChange() {
         super.auxInInfoChange();
         getUiMgr(this.mContext).send0xC0Info(SplicingByte(new byte[]{22, -64, 5}, "Aux playing".getBytes()));
@@ -833,7 +847,7 @@ public class MsgMgr extends AbstractMsgMgr {
         }
         Intent intent = new Intent();
         intent.setComponent(Constant.OnStarActivity);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(OnStarActivity.BUNDLE_OPEN_FRAGMENT, OnStartPhoneMoreInfoFragment.class);
         this.mContext.startActivity(intent);
     }
@@ -954,11 +968,11 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     private void initActivePark(Context context) {
-        this.mWindowManager = (WindowManager) context.getSystemService("window");
+        this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         this.mLayoutParams = layoutParams;
-        layoutParams.type = 2002;
-        this.mLayoutParams.gravity = 17;
+        layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+        this.mLayoutParams.gravity = Gravity.CENTER;
         this.mLayoutParams.width = -1;
         this.mLayoutParams.height = -1;
         this.mActiveParkView = new ActiveParkView(context);
@@ -1035,11 +1049,11 @@ public class MsgMgr extends AbstractMsgMgr {
         }
 
         public void showAlert() {
-            this.mLlAlert.setVisibility(0);
+            this.mLlAlert.setVisibility(View.VISIBLE);
         }
 
         public void hideAlert() {
-            this.mLlAlert.setVisibility(8);
+            this.mLlAlert.setVisibility(View.GONE);
         }
 
         /* JADX INFO: Access modifiers changed from: private */

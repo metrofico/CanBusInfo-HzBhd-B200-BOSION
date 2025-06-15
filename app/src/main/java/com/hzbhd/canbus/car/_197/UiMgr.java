@@ -192,22 +192,22 @@ public class UiMgr extends AbstractUiMgr {
         airUiSet.getFrontArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._197.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m302lambda$new$0$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
+                m302lambda$new$0$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._197.UiMgr$$ExternalSyntheticLambda1
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m303lambda$new$1$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
+                m303lambda$new$1$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._197.UiMgr$$ExternalSyntheticLambda2
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m304lambda$new$2$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
+                m304lambda$new$2$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._197.UiMgr$$ExternalSyntheticLambda3
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m305lambda$new$3$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
+                m305lambda$new$3$comhzbhdcanbuscar_197UiMgr(lineBtnAction, i);
             }
         }});
         airUiSet.getFrontArea().setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._197.UiMgr.6

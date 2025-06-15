@@ -31,7 +31,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -843,7 +842,7 @@ public class MsgMgr extends AbstractMsgMgr {
             setOutDoorTemperature();
             byte[] bArr = this.mCanBusInfoByte;
             bArr[7] = 0;
-            bArr[8] = (byte) (bArr[8] & ByteCompanionObject.MAX_VALUE);
+            bArr[8] = (byte) (bArr[8] & Byte.MAX_VALUE);
             if (isAirMsgRepeat(bArr)) {
                 return;
             }

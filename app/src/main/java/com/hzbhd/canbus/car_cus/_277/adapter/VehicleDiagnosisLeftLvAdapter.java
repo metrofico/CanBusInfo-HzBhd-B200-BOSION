@@ -1,19 +1,23 @@
 package com.hzbhd.canbus.car_cus._277.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
 import androidx.core.internal.view.SupportMenu;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._277.ui_set.VehicleDiagnosisPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */
-public class VehicleDiagnosisLeftLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class VehicleDiagnosisLeftLvAdapter extends RecyclerView.Adapter<VehicleDiagnosisLeftLvAdapter.ViewHolder> {
     private Context mContext;
     private LeftItemClickInterface mLeftItemClickInterface;
     private List<VehicleDiagnosisPageUiSet.ListBean> mList;
@@ -43,8 +47,9 @@ public class VehicleDiagnosisLeftLvAdapter extends RecyclerView.Adapter<ViewHold
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout._277_layout_item_setting_cate, viewGroup, false));
     }
 
+    @SuppressLint("RestrictedApi")
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         int strIdByResId = CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getTitleSrn());
         int strIdByResId2 = CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getValue());
         viewHolder.textView.setText(strIdByResId);

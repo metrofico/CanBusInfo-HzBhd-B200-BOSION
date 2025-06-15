@@ -27,7 +27,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -832,7 +832,7 @@ public class UiMgr extends AbstractUiMgr {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void sendCarParamInfo(int i, int i2) {
-        CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, (byte) i, (byte) i2});
+        CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, (byte) i, (byte) i2});
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -246,7 +246,7 @@ public class MsgMgr extends AbstractMsgMgr {
         if (isDriveData0x16Change()) {
             int fuelRange = getFuelRange(this.mCanBusInfoInt[15]);
             ArrayList arrayList = new ArrayList();
-            arrayList.add(new DriverUpdateEntity(1, 0, new DecimalFormat("0.0").format((fuelRange / 21.0f) * r2[2]) + getFuelUnit(DataHandleUtils.getIntFromByteWithBit(this.mCanBusInfoInt[14], 0, 2))));
+            arrayList.add(new DriverUpdateEntity(1, 0, new DecimalFormat("0.0").format((fuelRange / 21.0f) * mCanBusInfoInt[2]) + getFuelUnit(DataHandleUtils.getIntFromByteWithBit(this.mCanBusInfoInt[14], 0, 2))));
             int[] iArr = this.mCanBusInfoInt;
             int driveData = getDriveData(iArr[3], iArr[4]);
             String str = (driveData / 10.0f) + getFuelUnit(DataHandleUtils.getIntFromByteWithBit(this.mCanBusInfoInt[14], 2, 2));

@@ -11,9 +11,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -128,47 +130,34 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_pa /* 2131362038 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 65, 1});
-                break;
-            case R.id.btn_para_park /* 2131362040 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 67, 1});
-                break;
-            case R.id.btn_up_down /* 2131362062 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 71, 1});
-                break;
-            case R.id.btn_vert_park /* 2131362063 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 66, 1});
-                break;
-            case R.id.ib_down /* 2131362387 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 73, 1});
-                break;
-            case R.id.ib_left /* 2131362402 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 74, 1});
-                break;
-            case R.id.ib_left_down /* 2131362403 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 79, 1});
-                break;
-            case R.id.ib_right /* 2131362420 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 75, 1});
-                break;
-            case R.id.ib_right_down /* 2131362421 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 78, 1});
-                break;
-            case R.id.ib_up /* 2131362425 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 72, 1});
-                break;
-            case R.id.rl_btn_back /* 2131363184 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 70, 1});
-                break;
-            case R.id.rl_btn_cancel /* 2131363185 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 68, 1});
-                break;
-            case R.id.rl_btn_start /* 2131363186 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 69, 1});
-                break;
+        if (view.getId() == R.id.btn_pa) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 65, 1});
+        } else if (view.getId() == R.id.btn_para_park) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 67, 1});
+        } else if (view.getId() == R.id.btn_up_down) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 71, 1});
+        } else if (view.getId() == R.id.btn_vert_park) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 66, 1});
+        } else if (view.getId() == R.id.ib_down) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 73, 1});
+        } else if (view.getId() == R.id.ib_left) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 74, 1});
+        } else if (view.getId() == R.id.ib_left_down) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 79, 1});
+        } else if (view.getId() == R.id.ib_right) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 75, 1});
+        } else if (view.getId() == R.id.ib_right_down) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 78, 1});
+        } else if (view.getId() == R.id.ib_up) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 72, 1});
+        } else if (view.getId() == R.id.rl_btn_back) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 70, 1});
+        } else if (view.getId() == R.id.rl_btn_cancel) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 68, 1});
+        } else if (view.getId() == R.id.rl_btn_start) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 69, 1});
         }
+
     }
 
     @Override // android.view.View.OnTouchListener
@@ -204,15 +193,15 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
     }
 
     private void setParkAssistTips(String str) {
-        this.mTvParkAssistTips.setVisibility(CommUtil.getStrByResId(this.mContext, "null_value").equals(str) ? 4 : 0);
+        this.mTvParkAssistTips.setVisibility(CommUtil.getStrByResId(this.mContext, "null_value").equals(str) ? View.INVISIBLE : View.VISIBLE);
         this.mTvParkAssistTips.setText(str);
     }
 
     private void setCurrentPage(int i) {
-        this.mRlBottomBtn.setVisibility(i == 0 ? 4 : 0);
+        this.mRlBottomBtn.setVisibility(i == 0 ? View.INVISIBLE : View.VISIBLE);
         try {
             for (View view : this.mCurrentPage) {
-                view.setVisibility(4);
+                view.setVisibility(View.INVISIBLE);
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -223,7 +212,7 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
         View[] viewArr = this.mPageArrays[i - 1];
         this.mCurrentPage = viewArr;
         for (View view2 : viewArr) {
-            view2.setVisibility(0);
+            view2.setVisibility(View.VISIBLE);
         }
     }
 
@@ -240,7 +229,7 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
         } else if (i == 0) {
             this.mIvCamera.setImageDrawable(this.mContext.getDrawable(R.drawable.nissan_panoramic_front_camera));
         }
-        this.mIvCamera.setVisibility(0);
+        this.mIvCamera.setVisibility(View.VISIBLE);
         setParkAssistTips(this.mTvTips);
         setCurrentPage(this.mPageNumber);
     }

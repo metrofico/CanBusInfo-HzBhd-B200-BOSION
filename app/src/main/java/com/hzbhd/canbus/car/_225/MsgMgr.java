@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car._225;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -28,6 +29,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private boolean mIsFirstTime;
     private Resources resource;
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);

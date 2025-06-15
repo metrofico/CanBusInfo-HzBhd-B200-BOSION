@@ -24,7 +24,7 @@ import com.hzbhd.canbus.ui_set.MainAction;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.common.settings.constant.BodaSysContant;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
@@ -194,7 +194,7 @@ public class UiMgr extends AbstractUiMgr {
         @Override // com.hzbhd.canbus.interfaces.OnSettingPageStatusListener
         public void onStatusChange(int i) {
             if (i == 0) {
-                UiMgr.this.sendData(new byte[]{22, -112, ByteCompanionObject.MAX_VALUE});
+                UiMgr.this.sendData(new byte[]{22, -112, Byte.MAX_VALUE});
                 UiMgr.this.mContext.sendBroadcast(new Intent(com.hzbhd.canbus.car._237.MsgMgr.UPDATE_SETTING_ACTION));
             }
         }
@@ -567,7 +567,7 @@ public class UiMgr extends AbstractUiMgr {
             }
             switch (c) {
                 case 0:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 8, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 8, (byte) i3});
                     break;
                 case 1:
                     byte[] bArr = new byte[3];
@@ -577,7 +577,7 @@ public class UiMgr extends AbstractUiMgr {
                     CanbusMsgSender.sendMsg(bArr);
                     break;
                 case 2:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 22, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 22, (byte) i3});
                     break;
                 case 3:
                     CanbusMsgSender.sendMsg(new byte[]{22, -126, 4});
@@ -591,23 +591,23 @@ public class UiMgr extends AbstractUiMgr {
                     break;
                 case 5:
                 case '5':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 2, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 2, (byte) i3});
                     break;
                 case 6:
                 case 14:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 4, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 4, (byte) i3});
                     break;
                 case 7:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 26, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 26, (byte) i3});
                     break;
                 case '\b':
                     CanbusMsgSender.sendMsg(new byte[]{22, -126, 5});
                     break;
                 case '\t':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 20, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 20, (byte) i3});
                     break;
                 case '\n':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 28, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 28, (byte) i3});
                     break;
                 case 11:
                     byte[] bArr3 = new byte[3];
@@ -619,14 +619,14 @@ public class UiMgr extends AbstractUiMgr {
                 case '\f':
                 case '*':
                 case ':':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 1, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 1, (byte) i3});
                     break;
                 case '\r':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 10, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 10, (byte) i3});
                     break;
                 case 15:
                 case '+':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 3, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 3, (byte) i3});
                     break;
                 case 16:
                     byte[] bArr4 = new byte[3];
@@ -636,7 +636,7 @@ public class UiMgr extends AbstractUiMgr {
                     CanbusMsgSender.sendMsg(bArr4);
                     break;
                 case 17:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 0, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 0, (byte) i3});
                     break;
                 case 18:
                     byte[] bArr5 = new byte[3];
@@ -646,70 +646,70 @@ public class UiMgr extends AbstractUiMgr {
                     CanbusMsgSender.sendMsg(bArr5);
                     break;
                 case 19:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 19, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 19, (byte) i3});
                     break;
                 case 20:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 40, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 40, (byte) i3});
                     break;
                 case 21:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 42, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 42, (byte) i3});
                     break;
                 case 22:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 43, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 43, (byte) i3});
                     break;
                 case 23:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 44, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 44, (byte) i3});
                     break;
                 case 24:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 45, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 45, (byte) i3});
                     break;
                 case 25:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 46, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 46, (byte) i3});
                     break;
                 case 26:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 47, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 47, (byte) i3});
                     break;
                 case 27:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 48, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 48, (byte) i3});
                     break;
                 case 28:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, ByteCompanionObject.MIN_VALUE, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, Byte.MIN_VALUE, (byte) i3});
                     break;
                 case 29:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 27, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 27, (byte) i3});
                     break;
                 case 30:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 6, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 6, (byte) i3});
                     break;
                 case 31:
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 18, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 18, (byte) i3});
                     break;
                 case ' ':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 29, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 29, (byte) i3});
                     break;
                 case '!':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 30, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 30, (byte) i3});
                     break;
                 case '\"':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 31, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 31, (byte) i3});
                     break;
                 case '#':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 32, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 32, (byte) i3});
                     break;
                 case '$':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 33, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 33, (byte) i3});
                     break;
                 case '%':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 34, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 34, (byte) i3});
                     break;
                 case '&':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 35, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 35, (byte) i3});
                     break;
                 case '\'':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 36, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 36, (byte) i3});
                     break;
                 case '(':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 9, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 9, (byte) i3});
                     break;
                 case ')':
                     byte[] bArr6 = new byte[3];
@@ -719,7 +719,7 @@ public class UiMgr extends AbstractUiMgr {
                     CanbusMsgSender.sendMsg(bArr6);
                     break;
                 case ',':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, (byte) (i3 + 11), 0});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, (byte) (i3 + 11), 0});
                     break;
                 case '-':
                     byte[] bArr7 = new byte[3];
@@ -732,7 +732,7 @@ public class UiMgr extends AbstractUiMgr {
                     CanbusMsgSender.sendMsg(new byte[]{22, -126, 2});
                     break;
                 case '/':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 5, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 5, (byte) i3});
                     break;
                 case '0':
                     byte[] bArr8 = new byte[3];
@@ -752,27 +752,27 @@ public class UiMgr extends AbstractUiMgr {
                     CanbusMsgSender.sendMsg(new byte[]{22, -126, 3});
                     break;
                 case '3':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 17, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 17, (byte) i3});
                     break;
                 case '4':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 21, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 21, (byte) i3});
                     break;
                 case '6':
                     if (i3 != 3) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 39, (byte) i3});
+                        CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 39, (byte) i3});
                         break;
                     } else {
-                        CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 39, -1});
+                        CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 39, -1});
                         break;
                     }
                 case '7':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 23, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 23, (byte) i3});
                     break;
                 case '8':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 24, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 24, (byte) i3});
                     break;
                 case '9':
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 25, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 25, (byte) i3});
                     break;
             }
         }
@@ -786,9 +786,9 @@ public class UiMgr extends AbstractUiMgr {
             String titleSrn = uiMgr2.getSettingUiSet(uiMgr2.mContext).getList().get(i).getItemList().get(i2).getTitleSrn();
             titleSrn.hashCode();
             if (titleSrn.equals("_189_car_setting_2")) {
-                CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 41, (byte) i3});
+                CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 41, (byte) i3});
             } else if (titleSrn.equals("geely_title_9")) {
-                CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 37, (byte) i3});
+                CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 37, (byte) i3});
             }
         }
     };

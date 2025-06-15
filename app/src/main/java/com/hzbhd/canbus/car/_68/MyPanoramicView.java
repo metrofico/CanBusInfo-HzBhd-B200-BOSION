@@ -25,22 +25,22 @@ public class MyPanoramicView extends RelativeLayout {
     }
 
     void updatePanoramicView() {
-        this.mRearCarWarnLeft1.setVisibility(4);
-        this.mRearCarWarnLeft2.setVisibility(4);
-        this.mRearCarWarnRight1.setVisibility(4);
-        this.mRearCarWarnRight2.setVisibility(4);
+        this.mRearCarWarnLeft1.setVisibility(View.INVISIBLE);
+        this.mRearCarWarnLeft2.setVisibility(View.INVISIBLE);
+        this.mRearCarWarnRight1.setVisibility(View.INVISIBLE);
+        this.mRearCarWarnRight2.setVisibility(View.INVISIBLE);
         int i = this.mRearCarStatus;
         if (i == 1) {
-            this.mRearCarWarnLeft1.setVisibility(0);
-            this.mRearCarWarnLeft2.setVisibility(0);
+            this.mRearCarWarnLeft1.setVisibility(View.VISIBLE);
+            this.mRearCarWarnLeft2.setVisibility(View.VISIBLE);
         } else if (i == 2) {
-            this.mRearCarWarnRight1.setVisibility(0);
-            this.mRearCarWarnRight2.setVisibility(0);
+            this.mRearCarWarnRight1.setVisibility(View.VISIBLE);
+            this.mRearCarWarnRight2.setVisibility(View.VISIBLE);
         } else if (i == 3) {
-            this.mRearCarWarnLeft1.setVisibility(0);
-            this.mRearCarWarnLeft2.setVisibility(0);
-            this.mRearCarWarnRight1.setVisibility(0);
-            this.mRearCarWarnRight2.setVisibility(0);
+            this.mRearCarWarnLeft1.setVisibility(View.VISIBLE);
+            this.mRearCarWarnLeft2.setVisibility(View.VISIBLE);
+            this.mRearCarWarnRight1.setVisibility(View.VISIBLE);
+            this.mRearCarWarnRight2.setVisibility(View.VISIBLE);
         }
     }
 }

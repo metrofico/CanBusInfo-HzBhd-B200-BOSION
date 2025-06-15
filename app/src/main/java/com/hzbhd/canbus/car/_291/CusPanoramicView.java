@@ -48,8 +48,8 @@ public class CusPanoramicView extends RelativeLayout {
 
     public void refreshUiLine() {
         this.mRadarView.showRadar();
-        this.baselineImage.setVisibility(0);
-        this.trackImage.setVisibility(0);
+        this.baselineImage.setVisibility(View.VISIBLE);
+        this.trackImage.setVisibility(View.VISIBLE);
     }
 
     public void refreRadarUi() {

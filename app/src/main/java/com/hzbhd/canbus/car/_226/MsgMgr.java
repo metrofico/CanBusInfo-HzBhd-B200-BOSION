@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car._226;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.Log;
@@ -98,6 +99,7 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
+    @SuppressLint("StringFormatInvalid")
     private void setVehicleInfo0x7d() throws Resources.NotFoundException {
         String str;
         String str2;

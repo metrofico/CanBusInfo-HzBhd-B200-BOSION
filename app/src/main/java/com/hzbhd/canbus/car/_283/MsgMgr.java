@@ -58,7 +58,7 @@ import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.util.Arrays;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import kotlin.text.Typography;
 
 
@@ -169,7 +169,7 @@ public class MsgMgr extends AbstractMsgMgr {
         new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.MsgMgr$$ExternalSyntheticLambda1
             @Override // java.lang.Runnable
             public final void run() {
-                this.f$0.m353lambda$initCommand$0$comhzbhdcanbuscar_283MsgMgr(context);
+                m353lambda$initCommand$0$comhzbhdcanbuscar_283MsgMgr(context);
             }
         }).start();
     }
@@ -266,7 +266,7 @@ public class MsgMgr extends AbstractMsgMgr {
         } else {
             this.result = Integer.parseInt(this.mDecimalFormat.format((aMapEntity.getNextDistance() * 100) / aMapEntity.getDestinationDistance()));
         }
-        sendGdOtherInfo(new byte[]{22, -28, ByteCompanionObject.MIN_VALUE, ByteCompanionObject.MIN_VALUE, (byte) getMsb(aMapEntity.getNextDistance() * 10), (byte) getMidMsb(aMapEntity.getNextDistance() * 10), (byte) getMidLsb(aMapEntity.getNextDistance() * 10), (byte) getLsb(aMapEntity.getNextDistance() * 10), (byte) this.result, (byte) getMsb(aMapEntity.getDestinationDistance() * 10), (byte) getMidMsb(aMapEntity.getDestinationDistance() * 10), (byte) getMidLsb(aMapEntity.getDestinationDistance() * 10), (byte) getLsb(aMapEntity.getDestinationDistance() * 10), (byte) i, (byte) Integer.parseInt(aMapEntity.getPlanTime().substring(0, aMapEntity.getPlanTime().indexOf(":"))), (byte) Integer.parseInt(aMapEntity.getPlanTime().substring(aMapEntity.getPlanTime().indexOf(":") + 1)), (byte) Integer.parseInt(aMapEntity.getSurplusAllTimeStr().substring(0, aMapEntity.getSurplusAllTimeStr().indexOf(":"))), (byte) Integer.parseInt(aMapEntity.getSurplusAllTimeStr().substring(aMapEntity.getSurplusAllTimeStr().indexOf(":") + 1)), (byte) i2, 0, 0});
+        sendGdOtherInfo(new byte[]{22, -28, Byte.MIN_VALUE, Byte.MIN_VALUE, (byte) getMsb(aMapEntity.getNextDistance() * 10), (byte) getMidMsb(aMapEntity.getNextDistance() * 10), (byte) getMidLsb(aMapEntity.getNextDistance() * 10), (byte) getLsb(aMapEntity.getNextDistance() * 10), (byte) this.result, (byte) getMsb(aMapEntity.getDestinationDistance() * 10), (byte) getMidMsb(aMapEntity.getDestinationDistance() * 10), (byte) getMidLsb(aMapEntity.getDestinationDistance() * 10), (byte) getLsb(aMapEntity.getDestinationDistance() * 10), (byte) i, (byte) Integer.parseInt(aMapEntity.getPlanTime().substring(0, aMapEntity.getPlanTime().indexOf(":"))), (byte) Integer.parseInt(aMapEntity.getPlanTime().substring(aMapEntity.getPlanTime().indexOf(":") + 1)), (byte) Integer.parseInt(aMapEntity.getSurplusAllTimeStr().substring(0, aMapEntity.getSurplusAllTimeStr().indexOf(":"))), (byte) Integer.parseInt(aMapEntity.getSurplusAllTimeStr().substring(aMapEntity.getSurplusAllTimeStr().indexOf(":") + 1)), (byte) i2, 0, 0});
         byte[] bytes = aMapEntity.getNextWayName().trim().getBytes(StandardCharsets.UTF_8);
         byte[] bArr = new byte[30];
         if (bytes.length > 30) {
@@ -1783,7 +1783,7 @@ public class MsgMgr extends AbstractMsgMgr {
             new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.MsgMgr$$ExternalSyntheticLambda3
                 @Override // java.lang.Runnable
                 public final void run() throws InterruptedException, UnsupportedEncodingException {
-                    this.f$0.m352x651dda15(z);
+                    m352x651dda15(z);
                 }
             }).start();
             MeterManager.m0xE6Data[2] = (byte) DataHandleUtils.setIntByteWithBit(0, 6, z);
@@ -1984,7 +1984,7 @@ public class MsgMgr extends AbstractMsgMgr {
         new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.MsgMgr$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
             public final void run() throws InterruptedException {
-                this.f$0.m354lambda$subTempCommonds$2$comhzbhdcanbuscar_283MsgMgr(str);
+                m354lambda$subTempCommonds$2$comhzbhdcanbuscar_283MsgMgr(str);
             }
         }).start();
     }
@@ -2010,7 +2010,7 @@ public class MsgMgr extends AbstractMsgMgr {
         new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.MsgMgr$$ExternalSyntheticLambda2
             @Override // java.lang.Runnable
             public final void run() throws InterruptedException {
-                this.f$0.m351lambda$addTempCommonds$3$comhzbhdcanbuscar_283MsgMgr(str);
+                m351lambda$addTempCommonds$3$comhzbhdcanbuscar_283MsgMgr(str);
             }
         }).start();
     }

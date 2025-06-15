@@ -52,7 +52,7 @@ public class RadarView extends RelativeLayout {
         this.mRunnable = new Runnable() { // from class: com.hzbhd.canbus.car._331.RadarView$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
             public final void run() {
-                this.f$0.dismissView();
+                dismissView();
             }
         };
         this.mContext = context;

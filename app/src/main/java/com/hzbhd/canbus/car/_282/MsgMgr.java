@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
-import com.android.internal.util.ArrayUtils;
-import com.hzbhd.canbus.CanbusMsgSender;
+
 import com.hzbhd.R;
+import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.activity.DriveDataActivity;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
@@ -27,11 +27,11 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.canbus.util.SystemUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -100,7 +100,8 @@ public class MsgMgr extends AbstractMsgMgr {
     private void setTtsData0x06() {
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         this.mContext = context;
@@ -112,7 +113,8 @@ public class MsgMgr extends AbstractMsgMgr {
         updateRadarSetup();
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         super.canbusInfoChange(context, bArr);
         this.mCanBusInfoByte = bArr;
@@ -455,7 +457,7 @@ public class MsgMgr extends AbstractMsgMgr {
                 } else {
                     AirActivity.mIsClickOpen = true;
                     Intent intent = new Intent(this.mContext, (Class<?>) AirActivity.class);
-                    intent.setFlags(268435456);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     this.mContext.startActivity(intent);
                     break;
                 }
@@ -553,19 +555,22 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void cameraInfoChange() {
         super.cameraInfoChange();
-        CanbusMsgSender.sendMsg(new byte[]{22, 9, ByteCompanionObject.MIN_VALUE});
+        CanbusMsgSender.sendMsg(new byte[]{22, 9, Byte.MIN_VALUE});
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void cameraDestroy() {
         super.cameraDestroy();
         CanbusMsgSender.sendMsg(new byte[]{22, 9, 0});
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
         int i11;
         super.dateTimeRepCanbus(i, i2, i3, i4, i5, i6, i7, i8, i9, z, z2, z3, i10);
@@ -613,7 +618,8 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     private String resolveOutDoorTem() {
-        return GeneralAirData.fahrenheit_celsius ? new DecimalFormat("0.0").format(((r0 * 9.0f) / 5.0f) + 32.0f) + getTempUnitF(this.mContext) : ((this.mCanBusInfoInt[7] / 2.0f) - 40.0f) + getTempUnitC(this.mContext);
+        float f = (float) this.mCanBusInfoInt[7] / 2.0f - 40.0f;
+        return GeneralAirData.fahrenheit_celsius ? new DecimalFormat("0.0").format(((f * 9.0f) / 5.0f) + 32.0f) + getTempUnitF(this.mContext) : f + getTempUnitC(this.mContext);
     }
 
     private boolean isFirst() {
@@ -634,13 +640,15 @@ public class MsgMgr extends AbstractMsgMgr {
         if (i < 1 || i > 29) {
             return "";
         }
-        return GeneralAirData.fahrenheit_celsius ? new DecimalFormat("0.0").format(((r5 * 9.0f) / 5.0f) + 32.0f) + getTempUnitF(this.mContext) : ((i + 35) / 2.0f) + getTempUnitC(this.mContext);
+
+        float f = (float) (i + 35) / 2.0f;
+        return GeneralAirData.fahrenheit_celsius ? new DecimalFormat("0.0").format(((f * 9.0f) / 5.0f) + 32.0f) + getTempUnitF(this.mContext) : f + getTempUnitC(this.mContext);
     }
 
     private int getAirWhat() {
         int i;
         int[] iArr = this.mCanBusInfoInt;
-        int[] iArr2 = {iArr[2], iArr[3], iArr[4], iArr[5], iArr[6] & com.hzbhd.canbus.car._464.MsgMgr.REAR_DISC_MODE};
+        int[] iArr2 = {iArr[2], iArr[3], iArr[4], iArr[5], iArr[6] & com.hzbhd.canbus.car._0.MsgMgr.REAR_DISC_MODE};
         int[] iArr3 = {iArr[8], iArr[9]};
         if (Arrays.equals(this.mAirFrontDataNow, iArr2)) {
             i = !Arrays.equals(this.mAirRearDataNow, iArr3) ? 1002 : -1;
@@ -815,13 +823,13 @@ public class MsgMgr extends AbstractMsgMgr {
 
     private void initWindow() {
         if (this.mWindowManager == null) {
-            this.mWindowManager = (WindowManager) this.mContext.getSystemService("window");
+            this.mWindowManager = (WindowManager) this.mContext.getSystemService(Context.WINDOW_SERVICE);
         }
         if (this.mLayoutParams == null) {
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
             this.mLayoutParams = layoutParams;
-            layoutParams.type = 2002;
-            this.mLayoutParams.gravity = 17;
+            layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+            this.mLayoutParams.gravity = android.view.Gravity.CENTER;
             this.mLayoutParams.width = -2;
             this.mLayoutParams.height = -2;
         }
@@ -866,17 +874,17 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     byte[] get0x19Data() {
-        if (ArrayUtils.isEmpty(this.m0x19Data)) {
+        if (this.m0x19Data.length == 0) {
             this.m0x19Data = new byte[4];
         }
         return this.m0x19Data;
     }
 
     byte[] get0x07Data() {
-        if (ArrayUtils.isEmpty(this.m0x07Data)) {
+        if (this.m0x07Data.length == 0) {
             this.m0x07Data = new byte[4];
         }
-        return Arrays.copyOf(this.m0x07Data, r0.length - 1);
+        return Arrays.copyOf(this.m0x07Data, m0x07Data.length - 1);
     }
 
     private void openDriveData() {

@@ -632,7 +632,7 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     private String resolveOutDoorTem() {
-        float fRangeNumber = (DataHandleUtils.rangeNumber(this.mCanBusInfoInt[13], 0, com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE) * 0.5f) - 40.0f;
+        float fRangeNumber = (DataHandleUtils.rangeNumber(this.mCanBusInfoInt[13], 0, com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE) * 0.5f) - 40.0f;
         String tempUnitC = getTempUnitC(this.mContext);
         if (SharePreUtil.getBoolValue(this.mContext, SHARE_97_TEMPERATURE_UNIT, false)) {
             fRangeNumber = ((fRangeNumber * 9.0f) / 5.0f) + 32.0f;

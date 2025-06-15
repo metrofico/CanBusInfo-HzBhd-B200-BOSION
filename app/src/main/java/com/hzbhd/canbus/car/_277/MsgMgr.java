@@ -503,7 +503,7 @@ public class MsgMgr extends AbstractMsgMgr {
                     DialogUtil.getInstance().showDiagnosisWindow(MsgMgr.this.mContext, MsgMgr.this.mDiagnosisList, MsgMgr.this.mIsNeedShow);
                     MsgMgr.this.mIsNeedShow = false;
                     Intent intent = new Intent();
-                    intent.setFlags(268435456);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.setComponent(Constant.VehicleDiagnosisActivity);
                     MsgMgr.this.mContext.startActivity(intent);
                 }

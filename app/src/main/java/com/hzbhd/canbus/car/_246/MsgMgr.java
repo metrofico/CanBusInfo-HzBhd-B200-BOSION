@@ -600,8 +600,8 @@ public class MsgMgr extends AbstractMsgMgr {
         GeneralAirData.front_right_blow_head = DataHandleUtils.getBoolBit6(this.mCanBusInfoInt[3]);
         GeneralAirData.front_right_blow_foot = DataHandleUtils.getBoolBit5(this.mCanBusInfoInt[3]);
         GeneralAirData.front_wind_level = DataHandleUtils.getIntFromByteWithBit(this.mCanBusInfoInt[3], 0, 4);
-        GeneralAirData.front_left_temperature = getTemperature(this.mCanBusInfoInt[4], 0.5d, 0.0d, "C", 0, com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE);
-        GeneralAirData.front_right_temperature = getTemperature(this.mCanBusInfoInt[5], 0.5d, 0.0d, "C", 0, com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE);
+        GeneralAirData.front_left_temperature = getTemperature(this.mCanBusInfoInt[4], 0.5d, 0.0d, "C", 0, com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE);
+        GeneralAirData.front_right_temperature = getTemperature(this.mCanBusInfoInt[5], 0.5d, 0.0d, "C", 0, com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE);
         GeneralAirData.aqs = DataHandleUtils.getBoolBit7(this.mCanBusInfoInt[6]);
         GeneralAirData.ac_max = DataHandleUtils.getBoolBit6(this.mCanBusInfoInt[6]);
         GeneralAirData.front_left_seat_heat_level = DataHandleUtils.getIntFromByteWithBit(this.mCanBusInfoInt[6], 4, 2);

@@ -12,7 +12,7 @@ import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -100,7 +100,7 @@ public class UiMgr extends AbstractUiMgr {
             public void onStatusChange(int i) {
                 if (i == 0) {
                     UiMgr.this.sendData(new byte[]{22, -112, 81});
-                    UiMgr.this.sendData(new byte[]{22, -112, ByteCompanionObject.MAX_VALUE});
+                    UiMgr.this.sendData(new byte[]{22, -112, Byte.MAX_VALUE});
                 }
             }
         });

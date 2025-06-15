@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 
@@ -21,20 +22,16 @@ public class MyPanoramicView extends RelativeLayout {
         View.OnClickListener onClickListener = new View.OnClickListener() { // from class: com.hzbhd.canbus.car._204.MyPanoramicView.1
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
-                switch (view.getId()) {
-                    case R.id.front /* 2131362264 */:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 4});
-                        break;
-                    case R.id.left /* 2131362718 */:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 6});
-                        break;
-                    case R.id.rear /* 2131363042 */:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 5});
-                        break;
-                    case R.id.right /* 2131363146 */:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 7});
-                        break;
+                if (view.getId() == R.id.front) {
+                    CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 4});
+                } else if (view.getId() == R.id.left) {
+                    CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 6});
+                } else if (view.getId() == R.id.rear) {
+                    CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 5});
+                } else if (view.getId() == R.id.right) {
+                    CanbusMsgSender.sendMsg(new byte[]{22, -3, 3, 7});
                 }
+
             }
         };
         viewInflate.findViewById(R.id.front).setOnClickListener(onClickListener);

@@ -832,7 +832,7 @@ public class UiMgr extends AbstractUiMgr {
         settingUiSet.setOnSettingItemSwitchListener(new OnSettingItemSwitchListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSwitchListener
             public final void onSwitch(int i2, int i3, int i4) {
-                this.f$0.m120lambda$new$0$comhzbhdcanbuscar_158UiMgr(settingUiSet, context, i2, i3, i4);
+                m120lambda$new$0$comhzbhdcanbuscar_158UiMgr(settingUiSet, context, i2, i3, i4);
             }
         });
         AmplifierPageUiSet amplifierPageUiSet = getAmplifierPageUiSet(context);
@@ -945,22 +945,22 @@ public class UiMgr extends AbstractUiMgr {
             airUiSet.getFrontArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda13
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m125lambda$new$5$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m125lambda$new$5$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda1
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m126lambda$new$6$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m126lambda$new$6$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda2
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m127lambda$new$7$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m127lambda$new$7$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda3
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m128lambda$new$8$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m128lambda$new$8$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }});
             airUiSet.getFrontArea().setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr.9
@@ -998,7 +998,7 @@ public class UiMgr extends AbstractUiMgr {
             airUiSet.getRearArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{null, null, null, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda4
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m129lambda$new$9$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m129lambda$new$9$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }});
             if (this.mDifferentId == 33) {
@@ -1016,22 +1016,22 @@ public class UiMgr extends AbstractUiMgr {
             airUiSet.getFrontArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda5
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m121lambda$new$10$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m121lambda$new$10$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda6
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m122lambda$new$11$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m122lambda$new$11$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda7
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m123lambda$new$12$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m123lambda$new$12$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr$$ExternalSyntheticLambda8
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i4) {
-                    this.f$0.m124lambda$new$13$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
+                    m124lambda$new$13$comhzbhdcanbuscar_158UiMgr(airUiSet, i4);
                 }
             }});
             airUiSet.getFrontArea().setSetWindSpeedViewOnClickListener(new OnAirWindSpeedUpDownClickListener() { // from class: com.hzbhd.canbus.car._158.UiMgr.12

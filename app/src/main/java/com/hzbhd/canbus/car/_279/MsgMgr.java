@@ -254,7 +254,7 @@ public class MsgMgr extends AbstractMsgMgr {
 
     private void setOriginalSourceInfo0x3A() {
         GeneralOriginalCarDeviceData.cdStatus = "Line " + this.mCanBusInfoInt[2];
-        GeneralOriginalCarDeviceData.discStatus = new String(Arrays.copyOfRange(this.mCanBusInfoByte, 3, r1.length - 1));
+        GeneralOriginalCarDeviceData.discStatus = new String(Arrays.copyOfRange(this.mCanBusInfoByte, 3, mCanBusInfoInt.length - 1));
         updateOriginalCarDeviceActivity(null);
     }
 

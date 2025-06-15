@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -27,7 +27,7 @@ public class UiMgr extends AbstractUiMgr {
     OnSettingItemSelectListener onSettingItemSelectListener = new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._245.UiMgr$$ExternalSyntheticLambda0
         @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
         public final void onClickItem(int i, int i2, int i3) {
-            this.f$0.m326lambda$new$0$comhzbhdcanbuscar_245UiMgr(i, i2, i3);
+            m326lambda$new$0$comhzbhdcanbuscar_245UiMgr(i, i2, i3);
         }
     };
 
@@ -186,7 +186,7 @@ public class UiMgr extends AbstractUiMgr {
     }
 
     private void sendSettingData(int i, int i2) {
-        CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, (byte) i, (byte) i2});
+        CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, (byte) i, (byte) i2});
     }
 
     public Map<String, Integer> initSettingPageIndex(Context context) {

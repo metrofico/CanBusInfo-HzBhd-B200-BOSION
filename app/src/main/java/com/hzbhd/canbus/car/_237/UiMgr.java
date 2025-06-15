@@ -2,6 +2,7 @@ package com.hzbhd.canbus.car._237;
 
 import android.content.Context;
 import android.content.Intent;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
@@ -21,10 +22,9 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.LogUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
-
 
 public class UiMgr extends AbstractUiMgr {
     int ProgressLightness;
@@ -147,7 +147,7 @@ public class UiMgr extends AbstractUiMgr {
         @Override // com.hzbhd.canbus.interfaces.OnSettingPageStatusListener
         public void onStatusChange(int i) {
             if (i == 0) {
-                UiMgr.this.sendData(new byte[]{22, -112, ByteCompanionObject.MAX_VALUE});
+                UiMgr.this.sendData(new byte[]{22, -112, Byte.MAX_VALUE});
                 UiMgr.this.mContext.sendBroadcast(new Intent(MsgMgr.UPDATE_SETTING_ACTION));
             }
         }

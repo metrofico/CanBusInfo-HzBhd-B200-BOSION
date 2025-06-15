@@ -60,22 +60,22 @@ public class UiMgr extends AbstractUiMgr {
         airUiSet.getFrontArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m485lambda$new$0$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
+                m485lambda$new$0$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda12
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m486lambda$new$1$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
+                m486lambda$new$1$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda13
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m488lambda$new$2$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
+                m488lambda$new$2$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda14
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m489lambda$new$3$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
+                m489lambda$new$3$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
             }
         }});
         airUiSet.getFrontArea().setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._310.UiMgr.1
@@ -113,7 +113,7 @@ public class UiMgr extends AbstractUiMgr {
         airUiSet.getRearArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{null, null, null, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda15
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m490lambda$new$4$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
+                m490lambda$new$4$comhzbhdcanbuscar_310UiMgr(airUiSet, i);
             }
         }});
         airUiSet.getRearArea().setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._310.UiMgr.4
@@ -152,7 +152,7 @@ public class UiMgr extends AbstractUiMgr {
         settingUiSet.setOnSettingItemSelectListener(new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda1
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
             public final void onClickItem(int i, int i2, int i3) {
-                this.f$0.m491lambda$new$5$comhzbhdcanbuscar_310UiMgr(settingUiSet, context, i, i2, i3);
+                m491lambda$new$5$comhzbhdcanbuscar_310UiMgr(settingUiSet, context, i, i2, i3);
             }
         });
         settingUiSet.setOnSettingItemSeekbarSelectListener(new OnSettingItemSeekbarSelectListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda2
@@ -195,7 +195,7 @@ public class UiMgr extends AbstractUiMgr {
         getParkPageUiSet(context).setOnBackCameraStatusListener(new OnBackCameraStatusListener() { // from class: com.hzbhd.canbus.car._310.UiMgr$$ExternalSyntheticLambda9
             @Override // com.hzbhd.canbus.interfaces.OnBackCameraStatusListener
             public final void addViewToWindows() {
-                this.f$0.m487lambda$new$12$comhzbhdcanbuscar_310UiMgr(context);
+                m487lambda$new$12$comhzbhdcanbuscar_310UiMgr(context);
             }
         });
         final PanelKeyPageUiSet panelKeyPageUiSet = getPanelKeyPageUiSet(context);

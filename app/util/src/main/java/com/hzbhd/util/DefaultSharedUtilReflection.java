@@ -2,6 +2,8 @@ package com.hzbhd.util;
 
 import android.util.Log;
 
+import java.lang.reflect.Method;
+
 public class DefaultSharedUtilReflection {
     public static int getInt(String key, int defaultValue) {
         try {
@@ -33,6 +35,23 @@ public class DefaultSharedUtilReflection {
             clazz.getDeclaredMethod("setStr", String.class, String.class).invoke(null, key, value);
         } catch (Exception e) {
             Log.e("DefaultSharedUtilReflection.java", "Error al invocar DefaultSharedUtil.setStr: " + e.getMessage(), e);
+        }
+    }
+
+    public static String getStr(String key, String defaultValue) {
+        try {
+            // Obtiene la clase de "DefaultSharedUtil"
+            Class<?> clazz = Class.forName("android.app.DefaultSharedUtil");
+
+            // Obtiene el método getStr de la clase DefaultSharedUtil
+            Method method = clazz.getDeclaredMethod("getStr", String.class, String.class);
+
+            // Invoca el método y obtiene el resultado
+            return (String) method.invoke(null, key, defaultValue);
+        } catch (Exception e) {
+            // En caso de error, se imprime en log y devuelve el valor por defecto
+            Log.e("DefaultSharedUtilReflection.java", "Error al invocar DefaultSharedUtil.getStr: " + e.getMessage(), e);
+            return defaultValue;
         }
     }
 

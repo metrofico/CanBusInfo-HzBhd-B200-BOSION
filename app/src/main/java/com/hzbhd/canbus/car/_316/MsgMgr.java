@@ -11,7 +11,7 @@ import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -333,6 +333,6 @@ public class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
         super.dateTimeRepCanbus(i, i2, i3, i4, i5, i6, i7, i8, i9, z, z2, z3, i10);
-        CanbusMsgSender.sendMsg(new byte[]{22, -1, ByteCompanionObject.MAX_VALUE, 0});
+        CanbusMsgSender.sendMsg(new byte[]{22, -1, Byte.MAX_VALUE, 0});
     }
 }

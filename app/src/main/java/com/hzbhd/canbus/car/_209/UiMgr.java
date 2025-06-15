@@ -2,6 +2,7 @@ package com.hzbhd.canbus.car._209;
 
 import android.content.Context;
 import android.util.Log;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.interfaces.OnConfirmDialogListener;
@@ -22,6 +23,7 @@ import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -120,7 +122,7 @@ public class UiMgr extends AbstractUiMgr {
                         bArr[2] = 48;
                         bArr[3] = (byte) (UiMgr.this.mIsSearching ? 3 : 2);
                         CanbusMsgSender.sendMsg(bArr);
-                        UiMgr.this.mIsSearching = !r9.mIsSearching;
+                        UiMgr.this.mIsSearching = !mIsSearching;
                         break;
                     case "right":
                         byte[] bArr2 = new byte[4];
@@ -129,7 +131,7 @@ public class UiMgr extends AbstractUiMgr {
                         bArr2[2] = 48;
                         bArr2[3] = (byte) (UiMgr.this.mIsSearching ? 3 : 1);
                         CanbusMsgSender.sendMsg(bArr2);
-                        UiMgr.this.mIsSearching = !r9.mIsSearching;
+                        UiMgr.this.mIsSearching = !mIsSearching;
                         break;
                     case "next_disc":
                         CanbusMsgSender.sendMsg(new byte[]{22, -58, 53, 1});
@@ -280,7 +282,7 @@ public class UiMgr extends AbstractUiMgr {
         settingUiSet.setOnSettingItemSwitchListener(new OnSettingItemSwitchListener() { // from class: com.hzbhd.canbus.car._209.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSwitchListener
             public final void onSwitch(int i, int i2, int i3) {
-                this.f$0.m306lambda$new$0$comhzbhdcanbuscar_209UiMgr(settingUiSet, context, i, i2, i3);
+                m306lambda$new$0$comhzbhdcanbuscar_209UiMgr(settingUiSet, context, i, i2, i3);
             }
         });
         final DriverDataPageUiSet driverDataPageUiSet = getDriverDataPageUiSet(context);

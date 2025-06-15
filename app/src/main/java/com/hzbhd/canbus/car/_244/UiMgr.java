@@ -6,7 +6,6 @@ import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
 import com.hzbhd.canbus.interfaces.OnSettingPageStatusListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 
 public class UiMgr extends AbstractUiMgr {
@@ -24,13 +23,13 @@ public class UiMgr extends AbstractUiMgr {
         public void onClickItem(int i, int i2, int i3) {
             if (i == 0) {
                 if (i2 == 0) {
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 0, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 0, (byte) i3});
                     return;
                 } else {
                     if (i2 != 1) {
                         return;
                     }
-                    CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 1, (byte) i3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 1, (byte) i3});
                     return;
                 }
             }
@@ -38,12 +37,12 @@ public class UiMgr extends AbstractUiMgr {
                 return;
             }
             if (i2 == 0) {
-                CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 2, (byte) i3});
+                CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 2, (byte) i3});
             } else {
                 if (i2 != 1) {
                     return;
                 }
-                CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 3, (byte) i3});
+                CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 3, (byte) i3});
             }
         }
     };

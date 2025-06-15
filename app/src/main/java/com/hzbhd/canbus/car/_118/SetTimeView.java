@@ -112,49 +112,49 @@ public class SetTimeView {
             this.imageButtonReduce5 = (ImageButton) view.findViewById(R.id.reduce5);
         }
         if (!z) {
-            this.year.setVisibility(8);
-            this.imageButtonAdd1.setVisibility(8);
-            this.imageButtonReduce1.setVisibility(8);
+            this.year.setVisibility(View.GONE);
+            this.imageButtonAdd1.setVisibility(View.GONE);
+            this.imageButtonReduce1.setVisibility(View.GONE);
         } else {
-            this.year.setVisibility(0);
-            this.imageButtonAdd1.setVisibility(0);
-            this.imageButtonReduce1.setVisibility(0);
+            this.year.setVisibility(View.VISIBLE);
+            this.imageButtonAdd1.setVisibility(View.VISIBLE);
+            this.imageButtonReduce1.setVisibility(View.VISIBLE);
         }
         if (!z2) {
-            this.month.setVisibility(8);
-            this.imageButtonAdd2.setVisibility(8);
-            this.imageButtonReduce2.setVisibility(8);
+            this.month.setVisibility(View.GONE);
+            this.imageButtonAdd2.setVisibility(View.GONE);
+            this.imageButtonReduce2.setVisibility(View.GONE);
         } else {
-            this.month.setVisibility(0);
-            this.imageButtonAdd2.setVisibility(0);
-            this.imageButtonReduce2.setVisibility(0);
+            this.month.setVisibility(View.VISIBLE);
+            this.imageButtonAdd2.setVisibility(View.VISIBLE);
+            this.imageButtonReduce2.setVisibility(View.VISIBLE);
         }
         if (!z3) {
-            this.day.setVisibility(8);
-            this.imageButtonAdd3.setVisibility(8);
-            this.imageButtonReduce3.setVisibility(8);
+            this.day.setVisibility(View.GONE);
+            this.imageButtonAdd3.setVisibility(View.GONE);
+            this.imageButtonReduce3.setVisibility(View.GONE);
         } else {
-            this.day.setVisibility(0);
-            this.imageButtonAdd3.setVisibility(0);
-            this.imageButtonReduce3.setVisibility(0);
+            this.day.setVisibility(View.VISIBLE);
+            this.imageButtonAdd3.setVisibility(View.VISIBLE);
+            this.imageButtonReduce3.setVisibility(View.VISIBLE);
         }
         if (!z4) {
-            this.hour.setVisibility(8);
-            this.imageButtonAdd4.setVisibility(8);
-            this.imageButtonReduce4.setVisibility(8);
+            this.hour.setVisibility(View.GONE);
+            this.imageButtonAdd4.setVisibility(View.GONE);
+            this.imageButtonReduce4.setVisibility(View.GONE);
         } else {
-            this.hour.setVisibility(0);
-            this.imageButtonAdd4.setVisibility(0);
-            this.imageButtonReduce4.setVisibility(0);
+            this.hour.setVisibility(View.VISIBLE);
+            this.imageButtonAdd4.setVisibility(View.VISIBLE);
+            this.imageButtonReduce4.setVisibility(View.VISIBLE);
         }
         if (!z5) {
-            this.minute.setVisibility(8);
-            this.imageButtonAdd5.setVisibility(8);
-            this.imageButtonReduce5.setVisibility(8);
+            this.minute.setVisibility(View.GONE);
+            this.imageButtonAdd5.setVisibility(View.GONE);
+            this.imageButtonReduce5.setVisibility(View.GONE);
         } else {
-            this.minute.setVisibility(0);
-            this.imageButtonAdd5.setVisibility(0);
-            this.imageButtonReduce5.setVisibility(0);
+            this.minute.setVisibility(View.VISIBLE);
+            this.imageButtonAdd5.setVisibility(View.VISIBLE);
+            this.imageButtonReduce5.setVisibility(View.VISIBLE);
         }
     }
 

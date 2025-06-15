@@ -228,9 +228,9 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     private void setParkAssistTips(Context context, int i) {
         if (i == 0) {
-            this.mTvParkAssistTips.setVisibility(4);
+            this.mTvParkAssistTips.setVisibility(View.INVISIBLE);
         } else {
-            this.mTvParkAssistTips.setVisibility(0);
+            this.mTvParkAssistTips.setVisibility(View.VISIBLE);
             this.mTvParkAssistTips.setText(context.getString(this.mTipsArray.get(i, R.string.null_value)));
         }
     }
@@ -244,20 +244,20 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
         }
         try {
             for (View view : this.mCurrentPage) {
-                view.setVisibility(4);
+                view.setVisibility(View.INVISIBLE);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         if (i == 0) {
-            this.mRlBottomBtn.setVisibility(4);
+            this.mRlBottomBtn.setVisibility(View.INVISIBLE);
             return;
         }
-        this.mRlBottomBtn.setVisibility(0);
+        this.mRlBottomBtn.setVisibility(View.VISIBLE);
         View[] viewArr = this.mPageArrays[i - 1];
         this.mCurrentPage = viewArr;
         for (View view2 : viewArr) {
-            view2.setVisibility(0);
+            view2.setVisibility(View.VISIBLE);
         }
     }
 
@@ -274,7 +274,7 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
         } else if (i == 0) {
             this.mIvCamera.setImageDrawable(this.mContext.getDrawable(R.drawable.nissan_panoramic_front_camera));
         }
-        this.mIvCamera.setVisibility(0);
+        this.mIvCamera.setVisibility(View.VISIBLE);
         setParkAssistTips(context, this.mTvTipsStatus);
         setCurrentPage(this.mPageNumber);
     }

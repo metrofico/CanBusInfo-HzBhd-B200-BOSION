@@ -552,7 +552,7 @@ public class MsgMgr extends AbstractMsgMgr {
             } else {
                 AirActivity.mIsClickOpen = true;
                 Intent intent = new Intent(context, (Class<?>) AirActivity.class);
-                intent.setFlags(268435456);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         }

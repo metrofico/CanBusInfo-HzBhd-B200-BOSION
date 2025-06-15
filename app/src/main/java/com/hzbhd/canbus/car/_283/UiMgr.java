@@ -119,7 +119,7 @@ public class UiMgr extends AbstractUiMgr {
             new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.UiMgr$6$$ExternalSyntheticLambda1
                 @Override // java.lang.Runnable
                 public final void run() throws InterruptedException {
-                    this.f$0.m356lambda$onClickUp$0$comhzbhdcanbuscar_283UiMgr$6();
+                    m356lambda$onClickUp$0$comhzbhdcanbuscar_283UiMgr$6();
                 }
             }).start();
         }
@@ -146,7 +146,7 @@ public class UiMgr extends AbstractUiMgr {
             new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.UiMgr$6$$ExternalSyntheticLambda0
                 @Override // java.lang.Runnable
                 public final void run() throws InterruptedException {
-                    this.f$0.m355lambda$onClickDown$1$comhzbhdcanbuscar_283UiMgr$6();
+                    m355lambda$onClickDown$1$comhzbhdcanbuscar_283UiMgr$6();
                 }
             }).start();
         }
@@ -179,7 +179,7 @@ public class UiMgr extends AbstractUiMgr {
             new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.UiMgr$7$$ExternalSyntheticLambda0
                 @Override // java.lang.Runnable
                 public final void run() throws InterruptedException {
-                    this.f$0.m358lambda$onClickUp$0$comhzbhdcanbuscar_283UiMgr$7();
+                    m358lambda$onClickUp$0$comhzbhdcanbuscar_283UiMgr$7();
                 }
             }).start();
         }
@@ -206,7 +206,7 @@ public class UiMgr extends AbstractUiMgr {
             new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._283.UiMgr$7$$ExternalSyntheticLambda1
                 @Override // java.lang.Runnable
                 public final void run() throws InterruptedException {
-                    this.f$0.m357lambda$onClickDown$1$comhzbhdcanbuscar_283UiMgr$7();
+                    m357lambda$onClickDown$1$comhzbhdcanbuscar_283UiMgr$7();
                 }
             }).start();
         }

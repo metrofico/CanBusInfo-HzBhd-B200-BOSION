@@ -898,7 +898,7 @@ public class MsgMgr extends AbstractMsgMgr {
         }
         Intent intent = new Intent();
         intent.setComponent(Constant.TireInfoActivity);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 }

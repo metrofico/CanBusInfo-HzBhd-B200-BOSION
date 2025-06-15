@@ -4,10 +4,11 @@ import android.content.Context;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Base64;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
+
 import java.text.DecimalFormat;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -17,7 +18,8 @@ public class MsgMgr extends AbstractMsgMgr {
     private Context mContext;
     private boolean mPreMuteStatus;
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         super.canbusInfoChange(context, bArr);
         this.mCanBusInfoByte = bArr;
@@ -35,7 +37,8 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     /* JADX WARN: Type inference failed for: r1v1, types: [com.hzbhd.canbus.car._247.MsgMgr$1] */
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         this.mContext = context;
@@ -57,20 +60,23 @@ public class MsgMgr extends AbstractMsgMgr {
         }.start();
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void destroyCommand() {
         super.destroyCommand();
         sendContentStr(" WELCOME");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchNoMediaInfoChange(boolean z) {
         super.sourceSwitchNoMediaInfoChange(z);
         sendContentStr("  OFF   ");
         Settings.System.putString(this.mContext.getContentResolver(), "reportAfterHangUp", Base64.encodeToString(mCdInfo, 0));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int i, String str, String str2, String str3, int i2) {
         super.radioInfoChange(i, str, str2, str3, i2);
         mCdInfo[12] = getAllBandTypeData(str);
@@ -111,7 +117,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
         super.dateTimeRepCanbus(i, i2, i3, i4, i5, i6, i7, i8, i9, z, z2, z3, i10);
         byte[] bArr = mCdInfo;
@@ -120,7 +127,8 @@ public class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(bArr);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void discInfoChange(byte b, int i, int i2, int i3, int i4, int i5, int i6, boolean z, boolean z2, int i7, String str, String str2, String str3) {
         super.discInfoChange(b, i, i2, i3, i4, i5, i6, z, z2, i7, str, str2, str3);
         byte[] bArr = mCdInfo;
@@ -129,31 +137,34 @@ public class MsgMgr extends AbstractMsgMgr {
         sendContentStr("  DISC  ");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8, String str, String str2, String str3, long j, byte b9, int i3, boolean z, long j2, String str4, String str5, String str6, boolean z2) {
         super.musicInfoChange(b, b2, i, i2, b3, b4, b5, b6, b7, b8, str, str2, str3, j, b9, i3, z, j2, str4, str5, str6, z2);
         if (b == 9) {
             mCdInfo[12] = 64;
         } else {
-            mCdInfo[12] = ByteCompanionObject.MIN_VALUE;
+            mCdInfo[12] = Byte.MIN_VALUE;
         }
         mCdInfo[15] = 0;
         sendContentStr(" MUSIC  ");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, String str, byte b6, byte b7, String str2, String str3, String str4, int i3, byte b8, boolean z, int i4) {
         super.videoInfoChange(b, b2, i, i2, b3, b4, b5, str, b6, b7, str2, str3, str4, i3, b8, z, i4);
         if (b == 9) {
             mCdInfo[12] = 64;
         } else {
-            mCdInfo[12] = ByteCompanionObject.MIN_VALUE;
+            mCdInfo[12] = Byte.MIN_VALUE;
         }
         mCdInfo[15] = 0;
         sendContentStr(" VIDEO  ");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInInfoChange() {
         super.auxInInfoChange();
         byte[] bArr = mCdInfo;
@@ -162,7 +173,8 @@ public class MsgMgr extends AbstractMsgMgr {
         sendContentStr("  AUX   ");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void currentVolumeInfoChange(int i, boolean z) {
         super.currentVolumeInfoChange(i, z);
         if (this.mPreMuteStatus == z) {

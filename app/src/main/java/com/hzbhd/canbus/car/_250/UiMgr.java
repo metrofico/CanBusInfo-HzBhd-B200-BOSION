@@ -5,6 +5,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Toast;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
@@ -28,10 +29,11 @@ import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -574,7 +576,7 @@ public class UiMgr extends AbstractUiMgr {
         byte[] bArr = {22, -57, 0, 0, 0, 0, 0, 0};
         switch (AnonymousClass13.$SwitchMap$com$hzbhd$canbus$car$_250$UiMgr$AIR_CMD[air_cmd.ordinal()]) {
             case 1:
-                bArr[2] = ByteCompanionObject.MIN_VALUE;
+                bArr[2] = Byte.MIN_VALUE;
                 CanbusMsgSender.sendMsg(bArr);
                 bArr[2] = 0;
                 CanbusMsgSender.sendMsg(bArr);

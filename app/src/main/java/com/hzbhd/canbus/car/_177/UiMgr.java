@@ -13,7 +13,7 @@ import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
 import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -161,22 +161,22 @@ public class UiMgr extends AbstractUiMgr {
                 return;
             }
             if (i2 == 0) {
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 1});
+                CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 1});
                 return;
             }
             if (i2 == 1) {
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 2});
+                CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 2});
                 return;
             }
             if (i2 == 2) {
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 3});
+                CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 3});
             } else if (i2 == 3) {
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 4});
+                CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 4});
             } else {
                 if (i2 != 4) {
                     return;
                 }
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 5});
+                CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 5});
             }
         }
     };

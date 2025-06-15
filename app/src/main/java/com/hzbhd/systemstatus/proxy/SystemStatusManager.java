@@ -1,7 +1,7 @@
 package com.hzbhd.systemstatus.proxy;
 
-import android.os.ServiceManager;
 import com.hzbhd.systemstatus.proxy.aidl.ISystemStatusManager;
+import com.hzbhd.util.ServiceManagerReflection;
 
 /* loaded from: classes2.dex */
 public class SystemStatusManager {
@@ -9,6 +9,6 @@ public class SystemStatusManager {
     private static final String TAG = "SystemStatusManager";
 
     protected static ISystemStatusManager getISystemStatusManager() {
-        return ISystemStatusManager.Stub.asInterface(ServiceManager.getService(SERVICE_NAME_SYSTEM_STATUS));
+        return ISystemStatusManager.Stub.asInterface(ServiceManagerReflection.getService(SERVICE_NAME_SYSTEM_STATUS));
     }
 }

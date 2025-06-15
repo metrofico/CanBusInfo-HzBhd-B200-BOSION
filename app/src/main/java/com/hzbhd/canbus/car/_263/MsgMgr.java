@@ -123,8 +123,8 @@ public class MsgMgr extends AbstractMsgMgr {
             return;
         }
         if (i == 128) {
-            Intent intent = new Intent(this.mContext, (Class<?>) MainActivity.class);
-            intent.addFlags(268435456);
+            Intent intent = new Intent(this.mContext, MainActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             this.mContext.startActivity(intent);
         } else if (i == 19) {
             realKeyClick(45);
@@ -137,7 +137,7 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     private void setDriveDataInfo() {
-        float f = ((float) ((((r0[3] * 256) + r0[4]) * 0.1d) * 10.0d)) / 10.0f;
+        float f = ((float) ((((mCanBusInfoInt[3] * 256) + mCanBusInfoInt[4]) * 0.1d) * 10.0d)) / 10.0f;
         String str = this.mCanBusInfoInt[2] == 255 ? "--KM/h" : this.mCanBusInfoInt[2] + "KM/h";
         int[] iArr = this.mCanBusInfoInt;
         String str2 = (iArr[3] == 255 && iArr[4] == 255) ? "----.-KM" : f + "KM";

@@ -40,13 +40,13 @@ public class MsgMgr extends AbstractMsgMgr {
             return i;
         }
         switch (i) {
-            case com.hzbhd.canbus.car._464.MsgMgr.RADIO_MODE /* 251 */:
+            case com.hzbhd.canbus.car._0.MsgMgr.RADIO_MODE /* 251 */:
                 return -5;
             case 252:
                 return -4;
             case 253:
                 return -3;
-            case com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE /* 254 */:
+            case com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE /* 254 */:
                 return -2;
             case 255:
                 return -1;
@@ -64,7 +64,7 @@ public class MsgMgr extends AbstractMsgMgr {
                 return 1;
             case 253:
                 return 2;
-            case com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE /* 254 */:
+            case com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE /* 254 */:
                 return 3;
             case 255:
                 return 4;
@@ -229,13 +229,13 @@ public class MsgMgr extends AbstractMsgMgr {
             return i + "";
         }
         switch (i) {
-            case com.hzbhd.canbus.car._464.MsgMgr.RADIO_MODE /* 251 */:
+            case com.hzbhd.canbus.car._0.MsgMgr.RADIO_MODE /* 251 */:
                 return "-5";
             case 252:
                 return "-4";
             case 253:
                 return "-3";
-            case com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE /* 254 */:
+            case com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE /* 254 */:
                 return "-2";
             case 255:
                 return "-1";
@@ -266,7 +266,7 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     private void trackInfo0x09() {
-        GeneralParkData.trackAngle = TrackInfoUtil.getTrackAngle0(this.mCanBusInfoByte[2], (byte) 0, WorkQueueKt.MASK, 255, 16);
+        GeneralParkData.trackAngle = TrackInfoUtil.getTrackAngle0(this.mCanBusInfoByte[2], (byte) 0, 0x7F, 255, 16);
         updateParkUi(null, this.mContext);
     }
 
@@ -505,7 +505,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private void startActivityNow(ComponentName componentName) {
         Intent intent = new Intent();
         intent.setComponent(componentName);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         this.mContext.startActivity(intent);
     }
 

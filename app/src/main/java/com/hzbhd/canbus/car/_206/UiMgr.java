@@ -196,7 +196,7 @@ public class UiMgr extends AbstractUiMgr {
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
         public void onClickDown() {
             boolean z = GeneralAirData.fahrenheit_celsius;
-            int i = com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE;
+            int i = com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE;
             if (z) {
                 int i2 = (int) (MsgMgr.leftFrontTemp - 1.0f);
                 if (MsgMgr.leftFrontTemp != 32.0f && MsgMgr.leftFrontTemp != 254.0f) {
@@ -246,7 +246,7 @@ public class UiMgr extends AbstractUiMgr {
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
         public void onClickDown() {
             boolean z = GeneralAirData.fahrenheit_celsius;
-            int i = com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE;
+            int i = com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE;
             if (z) {
                 int i2 = (int) (MsgMgr.rightFrontTemp - 1.0f);
                 if (MsgMgr.rightFrontTemp != 32.0f && MsgMgr.rightFrontTemp != 254.0f) {
@@ -405,7 +405,7 @@ public class UiMgr extends AbstractUiMgr {
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
         public void onClickDown() {
             boolean z = GeneralAirData.fahrenheit_celsius;
-            int i = com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE;
+            int i = com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE;
             if (z) {
                 int i2 = (int) (MsgMgr.rearTemp - 1.0f);
                 if (MsgMgr.rearTemp != 32.0f && MsgMgr.rearTemp != 254.0f) {

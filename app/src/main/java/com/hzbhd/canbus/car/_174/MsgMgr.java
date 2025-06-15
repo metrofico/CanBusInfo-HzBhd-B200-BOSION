@@ -23,7 +23,7 @@ import com.hzbhd.canbus.util.RadarInfoUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -632,7 +632,7 @@ public class MsgMgr extends AbstractMsgMgr {
         if (b2 >= b) {
             b2 = b;
         }
-        CanbusMsgSender.sendMsg(new byte[]{22, -60, (byte) (((z ? 1 : 0) << 7) | (b2 & ByteCompanionObject.MAX_VALUE))});
+        CanbusMsgSender.sendMsg(new byte[]{22, -60, (byte) (((z ? 1 : 0) << 7) | (b2 & Byte.MAX_VALUE))});
     }
 
     private void setVwRadioInfo(String str, String str2) throws NumberFormatException {

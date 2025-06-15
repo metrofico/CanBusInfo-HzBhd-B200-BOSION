@@ -257,7 +257,7 @@ public class MsgMgr extends AbstractMsgMgr {
                     return;
                 }
                 Intent intent = new Intent(context, (Class<?>) DriveDataActivity.class);
-                intent.setFlags(268435456);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
             }
         }

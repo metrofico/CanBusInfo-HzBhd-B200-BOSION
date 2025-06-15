@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car_cus._277.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -8,14 +9,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._277.ui_set.VehicleMonitorPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */
-public class VehicleMonitorRightLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class VehicleMonitorRightLvAdapter extends RecyclerView.Adapter<VehicleMonitorRightLvAdapter.ViewHolder> {
     private Context mContext;
     private List<VehicleMonitorPageUiSet.ListBean.ItemListBean> mList;
     private RightItemClickInterface mRightItemClickInterface;
@@ -69,7 +73,7 @@ public class VehicleMonitorRightLvAdapter extends RecyclerView.Adapter<ViewHolde
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         viewHolder.tvTitle.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getTitleSrn()));
         Object value = this.mList.get(i).getValue();
         String strByResId = CommUtil.getStrByResId(this.mContext, this.mList.get(i).getUnit());
@@ -78,7 +82,7 @@ public class VehicleMonitorRightLvAdapter extends RecyclerView.Adapter<ViewHolde
             if (itemViewType == 1) {
                 String str = (String) value;
                 if (TextUtils.isEmpty(str)) {
-                    viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex())));
+                    viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, String.valueOf(this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex()))));
                 } else {
                     viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, str));
                 }

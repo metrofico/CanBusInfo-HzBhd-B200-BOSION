@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car._283;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.location.GpsSatellite;
 import android.location.GpsStatus;
@@ -8,7 +9,9 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
+
 import androidx.core.app.ActivityCompat;
+
 import java.util.Calendar;
 import java.util.Iterator;
 
@@ -35,7 +38,7 @@ public class GPSTimeManager {
             if (i != 4) {
                 return;
             }
-            GpsStatus gpsStatus = GPSTimeManager.this.locationManager.getGpsStatus(null);
+            @SuppressLint("MissingPermission") GpsStatus gpsStatus = GPSTimeManager.this.locationManager.getGpsStatus(null);
             int maxSatellites = gpsStatus.getMaxSatellites();
             Iterator<GpsSatellite> it = gpsStatus.getSatellites().iterator();
             int i2 = 0;
@@ -96,9 +99,10 @@ public class GPSTimeManager {
         return mGPSTimeManager;
     }
 
+    @SuppressLint("MissingPermission")
     public void start(Context context) {
         this.mContext = context;
-        this.locationManager = (LocationManager) context.getSystemService("location");
+        this.locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         if (ActivityCompat.checkSelfPermission(this.mContext, "android.permission.ACCESS_FINE_LOCATION") == 0 || ActivityCompat.checkSelfPermission(this.mContext, "android.permission.ACCESS_COARSE_LOCATION") == 0) {
             this.locationManager.addGpsStatusListener(this.mGpsStatus);
             this.locationManager.requestLocationUpdates("gps", 1000L, 1.0f, this.mLocationListener);

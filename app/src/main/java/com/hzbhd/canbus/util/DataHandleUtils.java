@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import androidx.core.view.InputDeviceCompat;
 import androidx.core.view.MotionEventCompat;
 
-import com.hzbhd.canbus.car._464.MsgMgr;
+import com.hzbhd.canbus.car._0.MsgMgr;
 import com.hzbhd.midware.constant.HotKeyConstant;
 
 import java.io.UnsupportedEncodingException;

@@ -277,7 +277,7 @@ public class UiMgr extends AbstractUiMgr {
                         } else {
                             CanbusMsgSender.sendMsg(new byte[]{22, -54, 4, 1});
                         }
-                        UiMgr.this.isFr = !r8.isFr;
+                        UiMgr.this.isFr = !isFr;
                         break;
                     case "down":
                         if (UiMgr.this.isFf) {
@@ -296,7 +296,7 @@ public class UiMgr extends AbstractUiMgr {
                         } else {
                             CanbusMsgSender.sendMsg(new byte[]{22, -54, 3, 1});
                         }
-                        UiMgr.this.isFf = !r8.isFf;
+                        UiMgr.this.isFf = !isFf;
                         break;
                     case "left":
                         CanbusMsgSender.sendMsg(new byte[]{22, -54, 7, 0});

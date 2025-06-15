@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.util.SelectCanTypeUtil;
@@ -44,24 +45,24 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
         this.d3_360_View.setOnClickListener(this);
         this.out_360_View.setOnClickListener(this);
         if (SelectCanTypeUtil.getCurrentCanDiffId() == 2) {
-            this.relativeLayout.setVisibility(8);
+            this.relativeLayout.setVisibility(View.GONE);
             return;
         }
         if (SelectCanTypeUtil.getCurrentCanDiffId() == 1) {
-            this.relativeLayout.setVisibility(0);
+            this.relativeLayout.setVisibility(View.VISIBLE);
             this.d2_360_View.setImageResource(R.drawable._306_360_2d_view);
-            this.d3_360_View.setVisibility(0);
-            this.lineView.setVisibility(0);
+            this.d3_360_View.setVisibility(View.VISIBLE);
+            this.lineView.setVisibility(View.VISIBLE);
             return;
         }
-        this.relativeLayout.setVisibility(0);
-        this.d3_360_View.setVisibility(8);
+        this.relativeLayout.setVisibility(View.VISIBLE);
+        this.d3_360_View.setVisibility(View.GONE);
         this.d2_360_View.setImageResource(-1);
         this.d2_360_View.setOnClickListener(null);
-        this.out_360_View.setVisibility(8);
+        this.out_360_View.setVisibility(View.GONE);
         this.out_360_View.setImageResource(-1);
         this.out_360_View.setOnClickListener(null);
-        this.lineView.setVisibility(8);
+        this.lineView.setVisibility(View.GONE);
     }
 
     public MyPanoramicView(Context context, AttributeSet attributeSet) {
@@ -83,28 +84,20 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.d2_360_View /* 2131362166 */:
-                sendCmd(5);
-                break;
-            case R.id.d3_360_View /* 2131362168 */:
-                sendCmd(6);
-                break;
-            case R.id.front_360_View /* 2131362265 */:
-                sendCmd(1);
-                break;
-            case R.id.left_360_View /* 2131362725 */:
-                sendCmd(3);
-                break;
-            case R.id.out_360_View /* 2131362930 */:
-                sendCmd(0);
-                break;
-            case R.id.rear_360_View /* 2131363043 */:
-                sendCmd(2);
-                break;
-            case R.id.right_360_View /* 2131363153 */:
-                sendCmd(4);
-                break;
+        if (view.getId() == R.id.d2_360_View) { // 2131362166
+            sendCmd(5);
+        } else if (view.getId() == R.id.d3_360_View) { // 2131362168
+            sendCmd(6);
+        } else if (view.getId() == R.id.front_360_View) { // 2131362265
+            sendCmd(1);
+        } else if (view.getId() == R.id.left_360_View) { // 2131362725
+            sendCmd(3);
+        } else if (view.getId() == R.id.out_360_View) { // 2131362930
+            sendCmd(0);
+        } else if (view.getId() == R.id.rear_360_View) { // 2131363043
+            sendCmd(2);
+        } else if (view.getId() == R.id.right_360_View) { // 2131363153
+            sendCmd(4);
         }
     }
 

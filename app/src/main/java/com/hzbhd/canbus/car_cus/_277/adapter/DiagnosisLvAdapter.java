@@ -6,13 +6,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._277.DiagnosisEntity;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */
-public class DiagnosisLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class DiagnosisLvAdapter extends RecyclerView.Adapter<DiagnosisLvAdapter.ViewHolder> {
     private Context mContext;
     private List<DiagnosisEntity> mList;
 

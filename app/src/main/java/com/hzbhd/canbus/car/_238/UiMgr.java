@@ -19,7 +19,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.LogUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 
 
 public class UiMgr extends AbstractUiMgr {
@@ -133,7 +133,7 @@ public class UiMgr extends AbstractUiMgr {
         @Override // com.hzbhd.canbus.interfaces.OnSettingPageStatusListener
         public void onStatusChange(int i) {
             if (i == 0) {
-                UiMgr.this.sendData(new byte[]{22, -112, ByteCompanionObject.MAX_VALUE});
+                UiMgr.this.sendData(new byte[]{22, -112, Byte.MAX_VALUE});
                 UiMgr.this.mContext.sendBroadcast(new Intent(com.hzbhd.canbus.car._237.MsgMgr.UPDATE_SETTING_ACTION));
             }
         }

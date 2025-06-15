@@ -2,6 +2,7 @@ package com.hzbhd.canbus.car._255;
 
 import android.content.Context;
 import android.os.Bundle;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
@@ -12,9 +13,9 @@ import com.hzbhd.canbus.util.RadarInfoUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -27,7 +28,8 @@ public class MsgMgr extends AbstractMsgMgr {
     private Context mContext;
     private boolean mIsHfpConnected;
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         this.mContext = context;
@@ -38,7 +40,8 @@ public class MsgMgr extends AbstractMsgMgr {
         this.isid12 = z;
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         super.canbusInfoChange(context, bArr);
         this.mCanBusInfoByte = bArr;
@@ -149,7 +152,8 @@ public class MsgMgr extends AbstractMsgMgr {
         updateVersionInfo(this.mContext, getVersionStr(this.mCanBusInfoByte));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchNoMediaInfoChange(boolean z) {
         super.sourceSwitchNoMediaInfoChange(z);
         if (this.isid12) {
@@ -158,7 +162,8 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int i, String str, String str2, String str3, int i2) {
         byte b;
         super.radioInfoChange(i, str, str2, str3, i2);
@@ -260,7 +265,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneStatusInfoChange(int i, byte[] bArr, boolean z, boolean z2, boolean z3, boolean z4, int i2, int i3, Bundle bundle) {
         super.btPhoneStatusInfoChange(i, bArr, z, z2, z3, z4, i2, i3, bundle);
         byte[] bArrByteMerger = DataHandleUtils.byteMerger(new byte[]{22, -64, 5, i != 1 ? i != 2 ? i != 4 ? (byte) 0 : (byte) 4 : (byte) 3 : (byte) 1, 18, 2, 18}, bArr);
@@ -269,15 +275,16 @@ public class MsgMgr extends AbstractMsgMgr {
         }
         if (this.mIsHfpConnected != z) {
             this.mIsHfpConnected = z;
-            byte[] bArrByteMerger2 = DataHandleUtils.byteMerger(new byte[]{22, -64, 5, z ? (byte) -127 : ByteCompanionObject.MIN_VALUE, 18, 2, 18}, bArr);
+            byte[] bArrByteMerger2 = DataHandleUtils.byteMerger(new byte[]{22, -64, 5, z ? (byte) -127 : Byte.MIN_VALUE, 18, 2, 18}, bArr);
             if (this.isid12) {
                 CanbusMsgSender.sendMsg(bArrByteMerger2);
             }
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
-    public void musicInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8, String str, String str2, String str3, long j, byte b9, int i3, boolean z, long j2, String str4, String str5, String str6, boolean z2) throws UnsupportedEncodingException {
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    public void musicInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8, String str, String str2, String str3, long j, byte b9, int i3, boolean z, long j2, String str4, String str5, String str6, boolean z2) {
         super.musicInfoChange(b, b2, i, i2, b3, b4, b5, b6, b7, b8, str, str2, str3, j, b9, i3, z, j2, str4, str5, str6, z2);
         if (b == 9) {
             return;
@@ -294,7 +301,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, String str, byte b6, byte b7, String str2, String str3, String str4, int i3, byte b8, boolean z, int i4) {
         super.videoInfoChange(b, b2, i, i2, b3, b4, b5, str, b6, b7, str2, str3, str4, i3, b8, z, i4);
         String str5 = "VEDIO " + ((b6 * 256) + i) + "/" + i2 + " " + str2 + ":" + str3 + ":" + str4;
@@ -304,7 +312,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusicInfoChange() {
         super.btMusicInfoChange();
         if (this.isid12) {
@@ -312,7 +321,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInInfoChange() {
         super.auxInInfoChange();
         if (this.isid12) {

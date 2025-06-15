@@ -7,9 +7,11 @@ import android.content.IntentFilter;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.SparseArray;
+
 import androidx.core.view.MotionEventCompat;
-import com.hzbhd.canbus.CanbusMsgSender;
+
 import com.hzbhd.R;
+import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
@@ -24,7 +26,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.RadarInfoUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
-import java.io.IOException;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,20 +55,23 @@ public class MsgMgr extends AbstractMsgMgr {
         return i == 2 ? 4 : 0;
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         CanbusMsgSender.sendMsg(new byte[]{22, -127, 1});
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void destroyCommand() {
         super.destroyCommand();
         CanbusMsgSender.sendMsg(new byte[]{22, -127, 0});
         this.mContext.unregisterReceiver(this.languageReceiver);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
         this.mContext = context;
@@ -86,8 +91,9 @@ public class MsgMgr extends AbstractMsgMgr {
         setLanguage(context);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
-    public void canbusInfoChange(Context context, byte[] bArr) throws IllegalStateException, IOException, IllegalArgumentException {
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    public void canbusInfoChange(Context context, byte[] bArr) throws IllegalStateException, IllegalArgumentException {
         super.canbusInfoChange(context, bArr);
         this.mCanBusInfoByte = bArr;
         int[] byteArrayToIntArray = getByteArrayToIntArray(bArr);
@@ -156,13 +162,15 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInInfoChange() {
         super.auxInInfoChange();
         CanbusMsgSender.sendMsg(new byte[]{22, -124, 1});
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInDestdroy() {
         super.auxInDestdroy();
         CanbusMsgSender.sendMsg(new byte[]{22, -124, 0});
@@ -426,13 +434,17 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    private void set0x37AutoParkVoice(Context context) throws IllegalStateException, IOException, IllegalArgumentException {
+    private void set0x37AutoParkVoice(Context context) {
         if (TextUtils.isEmpty(mLanguage) || TextUtils.isEmpty(this.mAutoParkVoiceArray.get(this.mCanBusInfoInt[2]))) {
             return;
         }
         String str = "voice/_306" + mLanguage + this.mAutoParkVoiceArray.get(this.mCanBusInfoInt[2]);
         Log.i(TAG, "set0x37AutoParkVoice: fileName \"" + str + "\"");
-        this.mAutoParkVoiceManger.play(context, str);
+        try {
+            this.mAutoParkVoiceManger.play(context, str);
+        } catch (Throwable w) {
+            w.printStackTrace();
+        }
     }
 
     private String resolveLeftAndRightAutoTemp(int i) {
@@ -442,11 +454,12 @@ public class MsgMgr extends AbstractMsgMgr {
     private void startActivity(ComponentName componentName) {
         Intent intent = new Intent();
         intent.setComponent(componentName);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         this.mContext.startActivity(intent);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
         super.dateTimeRepCanbus(i, i2, i3, i4, i5, i6, i7, i8, i9, z, z2, z3, i10);
         hour = i5;

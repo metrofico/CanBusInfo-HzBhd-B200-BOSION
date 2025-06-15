@@ -717,7 +717,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private void startActivity(ComponentName componentName) {
         Intent intent = new Intent();
         intent.setComponent(componentName);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         this.mContext.startActivity(intent);
     }
 

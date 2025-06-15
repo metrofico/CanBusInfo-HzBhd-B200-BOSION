@@ -5,6 +5,7 @@ import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Looper;
 import android.widget.Toast;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
@@ -27,6 +28,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.MainAction;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Iterator;
@@ -297,21 +299,21 @@ public class UiMgr extends AbstractUiMgr {
         public void click(int i) {
             if (i == 0) {
                 CanbusMsgSender.sendMsg(new byte[]{22, -48, 1, 0});
-                Toast.makeText(UiMgr.this.mContext, "播放原车CD音源", 0).show();
+                Toast.makeText(UiMgr.this.mContext, "播放原车CD音源", Toast.LENGTH_SHORT).show();
                 return;
             }
             if (i == 1) {
                 CanbusMsgSender.sendMsg(new byte[]{22, -48, 0, 0});
-                Toast.makeText(UiMgr.this.mContext, "播放非原车CD", 0).show();
+                Toast.makeText(UiMgr.this.mContext, "播放非原车CD", android.widget.Toast.LENGTH_SHORT).show();
             } else if (i == 2) {
                 CanbusMsgSender.sendMsg(new byte[]{22, -48, 1, 1});
-                Toast.makeText(UiMgr.this.mContext, "音量 +", 0).show();
+                Toast.makeText(UiMgr.this.mContext, "音量 +", android.widget.Toast.LENGTH_SHORT).show();
             } else {
                 if (i != 3) {
                     return;
                 }
                 CanbusMsgSender.sendMsg(new byte[]{22, -48, 1, 2});
-                Toast.makeText(UiMgr.this.mContext, "音量 -", 0).show();
+                Toast.makeText(UiMgr.this.mContext, "音量 -", android.widget.Toast.LENGTH_SHORT).show();
             }
         }
     };
@@ -345,11 +347,11 @@ public class UiMgr extends AbstractUiMgr {
                     if (i2 == 0) {
                         if (i3 == 0) {
                             CanbusMsgSender.sendMsg(new byte[]{22, -48, 0, 0});
-                            Toast.makeText(UiMgr.this.mContext, "播放非原车CD", 0).show();
+                            Toast.makeText(UiMgr.this.mContext, "播放非原车CD", Toast.LENGTH_SHORT).show();
                             break;
                         } else {
                             CanbusMsgSender.sendMsg(new byte[]{22, -48, 1, 0});
-                            Toast.makeText(UiMgr.this.mContext, "播放原车CD音源", 0).show();
+                            Toast.makeText(UiMgr.this.mContext, "播放原车CD音源", Toast.LENGTH_SHORT).show();
                             break;
                         }
                     }
@@ -557,7 +559,7 @@ public class UiMgr extends AbstractUiMgr {
                 UiMgr uiMgr7 = UiMgr.this;
                 CanbusMsgSender.sendMsg(new byte[]{22, -90, (byte) uiMgr2.getmMsgMgr(uiMgr2.mContext).nowYear, (byte) uiMgr3.getmMsgMgr(uiMgr3.mContext).nowMonth, (byte) uiMgr4.getmMsgMgr(uiMgr4.mContext).nowDay, (byte) uiMgr5.getmMsgMgr(uiMgr5.mContext).nowHours, (byte) uiMgr6.getmMsgMgr(uiMgr6.mContext).nowMins, (byte) uiMgr7.getmMsgMgr(uiMgr7.mContext).nowSecond});
                 CanbusMsgSender.sendMsg(new byte[]{22, -122, 4, (byte) (UiMgr.this.appointmentYear - 2000), (byte) UiMgr.this.appointmentMonth, (byte) UiMgr.this.appointmentDay, (byte) UiMgr.this.appointmentHours, (byte) UiMgr.this.appointmentMins});
-                Toast.makeText(UiMgr.this.mContext, "预约成功！时间：" + UiMgr.this.appointmentYear + "年" + UiMgr.this.appointmentMonth + "月" + UiMgr.this.appointmentDay + "日" + UiMgr.this.appointmentHours + ":" + UiMgr.this.appointmentMins, 0).show();
+                Toast.makeText(UiMgr.this.mContext, "预约成功！时间：" + UiMgr.this.appointmentYear + "年" + UiMgr.this.appointmentMonth + "月" + UiMgr.this.appointmentDay + "日" + UiMgr.this.appointmentHours + ":" + UiMgr.this.appointmentMins, Toast.LENGTH_SHORT).show();
             }
         }
     };
@@ -834,13 +836,13 @@ public class UiMgr extends AbstractUiMgr {
             if ((((((this.appointmentDay - 1) * 24) * 60) + ((this.appointmentHours - 1) * 60)) + this.appointmentMins) - (((((getmMsgMgr(this.mContext).nowDay - 1) * 24) * 60) + ((getmMsgMgr(this.mContext).nowHours - 1) * 60)) + getmMsgMgr(this.mContext).nowMins) <= 2880) {
                 return true;
             }
-            Toast.makeText(this.mContext, "预约充电时间不能超过当前时间48小时", 0).show();
+            Toast.makeText(this.mContext, "预约充电时间不能超过当前时间48小时", Toast.LENGTH_SHORT).show();
             return false;
         }
         if (this.appointmentYear < getmMsgMgr(this.mContext).nowYear) {
-            Toast.makeText(this.mContext, "指定时间不在预约范围内", 0).show();
+            Toast.makeText(this.mContext, "指定时间不在预约范围内", android.widget.Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this.mContext, "预约充电时间不能超过当前时间48小时", 0).show();
+            Toast.makeText(this.mContext, "预约充电时间不能超过当前时间48小时", android.widget.Toast.LENGTH_SHORT).show();
         }
         return false;
     }

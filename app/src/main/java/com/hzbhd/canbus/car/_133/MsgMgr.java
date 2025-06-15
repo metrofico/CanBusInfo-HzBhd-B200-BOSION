@@ -159,7 +159,7 @@ public class MsgMgr extends AbstractMsgMgr {
     public void currentVolumeInfoChange(int i, boolean z) {
         super.currentVolumeInfoChange(i, z);
         super.currentVolumeInfoChange(i, z);
-        CanbusMsgSender.sendMsg(new byte[]{22, -124, NfDef.AVRCP_EVENT_ID_VOLUME_CHANGED, (byte) ((z ? 128 : 0) + (i & WorkQueueKt.MASK)), 0, 0, 0});
+        CanbusMsgSender.sendMsg(new byte[]{22, -124, NfDef.AVRCP_EVENT_ID_VOLUME_CHANGED, (byte) ((z ? 128 : 0) + (i & 0x7F)), 0, 0, 0});
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface

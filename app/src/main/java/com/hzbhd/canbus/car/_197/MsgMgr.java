@@ -7,8 +7,9 @@ import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
 import android.util.Log;
+
 import androidx.core.view.MotionEventCompat;
-import com.android.internal.util.ArrayUtils;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
@@ -31,6 +32,7 @@ import com.hzbhd.canbus.util.TimerUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.io.UnsupportedEncodingException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -39,6 +41,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.TimerTask;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -107,7 +110,8 @@ public class MsgMgr extends AbstractMsgMgr {
         return i == 1 ? "mile" : i == 2 ? "km" : "";
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         Log.i("_197_MsgMgr", "CanbusMsgService initCommand: 197");
@@ -134,7 +138,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }, 0L, 100L);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
         Log.i("_197_MsgMgr", "CanbusMsgService afterServiceNormalSetting: ");
@@ -153,7 +158,8 @@ public class MsgMgr extends AbstractMsgMgr {
         initHandler(context);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         super.canbusInfoChange(context, bArr);
         this.mCanBusInfoByte = bArr;
@@ -418,7 +424,7 @@ public class MsgMgr extends AbstractMsgMgr {
 
     private void setRearAirInfo0x56() {
         int[] iArr = this.mCanBusInfoInt;
-        iArr[6] = iArr[6] & com.hzbhd.canbus.car._464.MsgMgr.RADIO_MODE;
+        iArr[6] = iArr[6] & com.hzbhd.canbus.car._0.MsgMgr.RADIO_MODE;
         if (is0x56DataChange()) {
             GeneralAirData.rear_left_temperature = resolveAirTemperature(this.mCanBusInfoInt[2]);
             GeneralAirData.rear_right_temperature = GeneralAirData.rear_left_temperature;
@@ -586,7 +592,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchChange(String str) {
         super.sourceSwitchChange(str);
         if (SourceConstantsDef.SOURCE_ID.NULL.name().equals(str)) {
@@ -599,7 +606,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchNoMediaInfoChange(boolean z) {
         super.sourceSwitchNoMediaInfoChange(z);
         if (z) {
@@ -608,7 +616,8 @@ public class MsgMgr extends AbstractMsgMgr {
         initAmplifier(this.mContext);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int i, String str, String str2, String str3, int i2) {
         super.radioInfoChange(i, str, str2, str3, i2);
         Log.i("_197_media_debug", "radioInfoChange: ");
@@ -620,7 +629,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.FM.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void discInfoChange(byte b, int i, int i2, int i3, int i4, int i5, int i6, boolean z, boolean z2, int i7, String str, String str2, String str3) {
         super.discInfoChange(b, i, i2, i3, i4, i5, i6, z, z2, i7, str, str2, str3);
         Log.i("_197_media_debug", "discInfoChange: ");
@@ -645,7 +655,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.NULL.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void atvInfoChange() {
         super.atvInfoChange();
         Log.i("_197_media_debug", "atvInfoChange: ");
@@ -656,7 +667,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.ATV.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneIncomingInfoChange(byte[] bArr, boolean z, boolean z2) {
         super.btPhoneIncomingInfoChange(bArr, z, z2);
         Log.i("_197_media_debug", "btPhoneIncomingInfoChange: ");
@@ -667,7 +679,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.NULL.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneOutGoingInfoChange(byte[] bArr, boolean z, boolean z2) {
         super.btPhoneOutGoingInfoChange(bArr, z, z2);
         Log.i("_197_media_debug", "btPhoneOutGoingInfoChange: ");
@@ -678,7 +691,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.NULL.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneTalkingWithTimeInfoChange(byte[] bArr, boolean z, boolean z2, int i) {
         super.btPhoneTalkingWithTimeInfoChange(bArr, z, z2, i);
         Log.i("_197_media_debug", "btPhoneTalkingWithTimeInfoChange: ");
@@ -689,7 +703,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.NULL.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneHangUpInfoChange(byte[] bArr, boolean z, boolean z2) {
         super.btPhoneHangUpInfoChange(bArr, z, z2);
         Log.i("_197_media_debug", "btPhoneHangUpInfoChange: ");
@@ -700,13 +715,15 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.NULL.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneStatusInfoChange(int i, byte[] bArr, boolean z, boolean z2, boolean z3, boolean z4, int i2, int i3, Bundle bundle) {
         super.btPhoneStatusInfoChange(i, bArr, z, z2, z3, z4, i2, i3, bundle);
         this.m0xC1Data0 = DataHandleUtils.setIntByteWithBit(this.m0xC1Data0, 4, z);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInInfoChange() {
         super.auxInInfoChange();
         Log.i("_197_media_debug", "auxInInfoChange: ");
@@ -717,7 +734,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.AUX1.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8, String str, String str2, String str3, long j, byte b9, int i3, boolean z, long j2, String str4, String str5, String str6, boolean z2) {
         super.musicInfoChange(b, b2, i, i2, b3, b4, b5, b6, b7, b8, str, str2, str3, j, b9, i3, z, j2, str4, str5, str6, z2);
         Log.i("_197_media_debug", "musicInfoChange: ");
@@ -728,7 +746,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.MUSIC.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicDestroy() {
         super.musicDestroy();
         Log.i("_197_media_debug", "musicDestroy: ");
@@ -738,7 +757,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.NULL.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, String str, byte b6, byte b7, String str2, String str3, String str4, int i3, byte b8, boolean z, int i4) {
         super.videoInfoChange(b, b2, i, i2, b3, b4, b5, str, b6, b7, str2, str3, str4, i3, b8, z, i4);
         Log.i("_197_media_debug", "videoInfoChange: ");
@@ -749,7 +769,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.VIDEO.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dtvInfoChange() {
         super.dtvInfoChange();
         Log.i("_197_media_debug", "dtvInfoChange: ");
@@ -760,14 +781,16 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.DTV.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusicInfoChange() {
         super.btMusicInfoChange();
         Log.i("_197_media_debug", "btMusicInfoChange: ");
         sendMediaMessage(SourceConstantsDef.SOURCE_ID.BTAUDIO.ordinal(), DataHandleUtils.byteMerger(new byte[]{22, -64, 11, (byte) 255}, new byte[]{0, 0, 0, 0, 0, 0}));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusicId3InfoChange(String str, String str2, String str3) {
         super.btMusicId3InfoChange(str, str2, str3);
         Log.i("_197_media_debug", "btMusicId3InfoChange: ");
@@ -777,7 +800,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.BTAUDIO.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusiceDestdroy() {
         super.btMusiceDestdroy();
         Log.i("_197_media_debug", "btMusiceDestdroy: ");
@@ -787,7 +811,8 @@ public class MsgMgr extends AbstractMsgMgr {
         reportID3Info(SourceConstantsDef.SOURCE_ID.NULL.ordinal(), this.mMeidaInfos);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void deviceStatusInfoChange(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, int i10, int i11, int i12) {
         super.deviceStatusInfoChange(i, i2, i3, i4, i5, i6, i7, i8, i9, i10, i11, i12);
         int intFromByteWithBit = DataHandleUtils.setIntFromByteWithBit(this.m0xC1Data0, i4, 2, 1);
@@ -796,7 +821,8 @@ public class MsgMgr extends AbstractMsgMgr {
         send0xC1Data();
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
         super.dateTimeRepCanbus(i, i2, i3, i4, i5, i6, i7, i8, i9, z, z2, z3, i10);
         CanbusMsgSender.sendMsg(new byte[]{22, -112, 48});

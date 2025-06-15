@@ -129,9 +129,9 @@ public class MsgMgr extends AbstractMsgMgr {
 
     private String resolveOutdoorTemperature(int i) {
         if (this.mCanBusInfoInt[6] == 240) {
-            return (DataHandleUtils.rangeNumber(i, WorkQueueKt.MASK) - 40) + this.mAirUnit;
+            return (DataHandleUtils.rangeNumber(i, 0x7F) - 40) + this.mAirUnit;
         }
-        return this.mDecimalFormat0p0.format((((DataHandleUtils.rangeNumber(i, WorkQueueKt.MASK) - 40) * 9) / 5.0f) + 32.0f) + this.mAirUnit;
+        return this.mDecimalFormat0p0.format((((DataHandleUtils.rangeNumber(i, 0x7F) - 40) * 9) / 5.0f) + 32.0f) + this.mAirUnit;
     }
 
     private void set0x24BaseData(Context context) {

@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.os.RemoteException;
-import android.os.SystemProperties;
 import android.provider.Settings;
 import android.util.Base64;
 import com.hzbhd.canbus.CanbusMsgSender;
@@ -26,6 +25,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.canbus.util.TimerUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
+import com.hzbhd.commontools.utils.SystemPropertiesUtils;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -33,7 +33,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Timer;
 import java.util.TimerTask;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -93,7 +93,7 @@ public class MsgMgr extends AbstractMsgMgr {
 
     private void startTask() {
         final byte[][] bArr = {new byte[]{22, -112, 34}, new byte[]{22, -112, 35}, new byte[]{22, -112, 37}, new byte[]{22, -112, 38}};
-        final byte[][] bArr2 = {new byte[]{22, -112, 35}, new byte[]{22, -112, ByteCompanionObject.MAX_VALUE}};
+        final byte[][] bArr2 = {new byte[]{22, -112, 35}, new byte[]{22, -112, Byte.MAX_VALUE}};
         Timer timer = this.mTimer;
         if (timer == null) {
             Timer timer2 = new Timer();
@@ -103,7 +103,7 @@ public class MsgMgr extends AbstractMsgMgr {
 
                 @Override // java.util.TimerTask, java.lang.Runnable
                 public void run() {
-                    if ("true".equals(SystemProperties.get("vendor.backCamera_needshow"))) {
+                    if ("true".equals(SystemPropertiesUtils.get("vendor.backCamera_needshow"))) {
                         byte[][] bArr3 = bArr;
                         CanbusMsgSender.sendMsg(bArr3[this.i % bArr3.length]);
                     } else {
@@ -587,7 +587,7 @@ public class MsgMgr extends AbstractMsgMgr {
         if (b2 >= b) {
             b2 = b;
         }
-        CanbusMsgSender.sendMsg(new byte[]{22, -60, (byte) ((b2 & ByteCompanionObject.MAX_VALUE) | ((z ? -128 : 0) << 7))});
+        CanbusMsgSender.sendMsg(new byte[]{22, -60, (byte) ((b2 & Byte.MAX_VALUE) | ((z ? -128 : 0) << 7))});
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface

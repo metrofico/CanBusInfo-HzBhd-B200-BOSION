@@ -203,7 +203,7 @@ public class MsgMgr extends AbstractMsgMgr {
             }
             GeneralOriginalCarDeviceData.runningState = str;
             int i3 = this.mCanBusInfoInt[7];
-            String strValueOf = String.valueOf(((r3[5] * 256) + r3[6]) / 10.0f);
+            String strValueOf = String.valueOf(((mCanBusInfoInt[5] * 256) + mCanBusInfoInt[6]) / 10.0f);
             if (str.contains("AM")) {
                 strValueOf = strValueOf.split("\\.")[0];
             }

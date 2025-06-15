@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car_cus._277.adapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -8,16 +9,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import androidx.core.internal.view.SupportMenu;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._277.ui_set.VehicleDiagnosisPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.LogUtil;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */
-public class VehicleDiagnosisiRightLvAdapter extends RecyclerView.Adapter<ViewHolder> {
+public class VehicleDiagnosisiRightLvAdapter extends RecyclerView.Adapter<VehicleDiagnosisiRightLvAdapter.ViewHolder> {
     private Context mContext;
     private List<VehicleDiagnosisPageUiSet.ListBean.ItemListBean> mList;
     private RightItemClickInterface mRightItemClickInterface;
@@ -58,8 +62,9 @@ public class VehicleDiagnosisiRightLvAdapter extends RecyclerView.Adapter<ViewHo
         return new ViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(i != 0 ? i != 1 ? i != 2 ? i != 3 ? 0 : R.layout.layout_item_setting_3_lv : R.layout.layout_item_setting_2_lv : R.layout.layout_item_setting_1_lv : R.layout.layout_item_setting_0_lv, viewGroup, false));
     }
 
+    @SuppressLint("RestrictedApi")
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
-    public void onBindViewHolder(ViewHolder viewHolder, final int i) {
+    public void onBindViewHolder(ViewHolder viewHolder, @SuppressLint("RecyclerView") final int i) {
         viewHolder.tvTitle.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getTitleSrn()));
         Object value = this.mList.get(i).getValue();
         int itemViewType = getItemViewType(i);
@@ -78,7 +83,7 @@ public class VehicleDiagnosisiRightLvAdapter extends RecyclerView.Adapter<ViewHo
             } else if (value instanceof String) {
                 String str2 = (String) value;
                 if (TextUtils.isEmpty(str2)) {
-                    viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex())));
+                    viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, String.valueOf(this.mList.get(i).getValueSrnArray().get(this.mList.get(i).getSelectIndex()))));
                 } else {
                     viewHolder.tvValue.setText(CommUtil.getStrIdByResId(this.mContext, str2));
                 }

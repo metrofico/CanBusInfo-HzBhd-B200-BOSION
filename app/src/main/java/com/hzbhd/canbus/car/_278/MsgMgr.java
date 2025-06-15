@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car._278;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -313,7 +314,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private void startSelKonbIncrease() {
         new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._278.MsgMgr.2
             @Override // java.lang.Runnable
-            public void run() throws InterruptedException {
+            public void run()  {
                 while (true) {
                     try {
                         if (MsgMgr.this.mCurSource.equals("FM")) {
@@ -337,7 +338,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private void startSelKonbDecrease() {
         new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._278.MsgMgr.3
             @Override // java.lang.Runnable
-            public void run() throws InterruptedException {
+            public void run()  {
                 while (true) {
                     try {
                         if (MsgMgr.this.mCurSource.equals("FM")) {
@@ -548,6 +549,7 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mLastKonbCount = this.mCanBusInfoInt[2];
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);

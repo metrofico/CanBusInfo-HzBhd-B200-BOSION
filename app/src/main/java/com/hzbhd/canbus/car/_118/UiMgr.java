@@ -61,13 +61,13 @@ public class UiMgr extends AbstractUiMgr {
     OnAirBtnClickListener onAirBtnClickListener_rearTop = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._118.UiMgr$$ExternalSyntheticLambda0
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
         public final void onClickItem(int i) {
-            this.f$0.m108lambda$new$0$comhzbhdcanbuscar_118UiMgr(i);
+            m108lambda$new$0$comhzbhdcanbuscar_118UiMgr(i);
         }
     };
     OnAirBtnClickListener onAirBtnClickListener_rearBottom = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._118.UiMgr$$ExternalSyntheticLambda1
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
         public final void onClickItem(int i) {
-            this.f$0.m109lambda$new$1$comhzbhdcanbuscar_118UiMgr(i);
+            m109lambda$new$1$comhzbhdcanbuscar_118UiMgr(i);
         }
     };
     OnAirTemperatureUpDownClickListener onAirTemperatureUpDownClickListener_rear = new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._118.UiMgr.6

@@ -30,19 +30,19 @@ public class UiMgr extends AbstractUiMgr {
     private OnAirBtnClickListener mOnAirTopBtnClickListener = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._260.UiMgr$$ExternalSyntheticLambda0
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
         public final void onClickItem(int i) {
-            this.f$0.m337lambda$new$0$comhzbhdcanbuscar_260UiMgr(i);
+            m337lambda$new$0$comhzbhdcanbuscar_260UiMgr(i);
         }
     };
     private OnAirBtnClickListener mOnAirBottomLeftBtnClickListener = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._260.UiMgr$$ExternalSyntheticLambda1
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
         public final void onClickItem(int i) {
-            this.f$0.m338lambda$new$1$comhzbhdcanbuscar_260UiMgr(i);
+            m338lambda$new$1$comhzbhdcanbuscar_260UiMgr(i);
         }
     };
     private OnAirBtnClickListener mOnAirBottomBtnClickListener = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._260.UiMgr$$ExternalSyntheticLambda2
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
         public final void onClickItem(int i) {
-            this.f$0.m339lambda$new$2$comhzbhdcanbuscar_260UiMgr(i);
+            m339lambda$new$2$comhzbhdcanbuscar_260UiMgr(i);
         }
     };
     private OnAirWindSpeedUpDownClickListener mSetWindSpeedViewOnClickListener = new OnAirWindSpeedUpDownClickListener() { // from class: com.hzbhd.canbus.car._260.UiMgr.1
@@ -165,7 +165,7 @@ public class UiMgr extends AbstractUiMgr {
         settingUiSet.setOnSettingItemSelectListener(new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._260.UiMgr$$ExternalSyntheticLambda3
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
             public final void onClickItem(int i, int i2, int i3) {
-                this.f$0.m340lambda$new$3$comhzbhdcanbuscar_260UiMgr(i, i2, i3);
+                m340lambda$new$3$comhzbhdcanbuscar_260UiMgr(i, i2, i3);
             }
         });
         this.settingPageUiSet.setOnSettingItemSwitchListener(new OnSettingItemSwitchListener() { // from class: com.hzbhd.canbus.car._260.UiMgr.5

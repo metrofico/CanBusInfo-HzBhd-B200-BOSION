@@ -1,7 +1,7 @@
 package com.hzbhd.cantype.id;
 
 import com.hzbhd.canbus.adapter.bean.CanTypeAllEntity;
-import com.hzbhd.canbus.car._464.MsgMgr;
+import com.hzbhd.canbus.car._0.MsgMgr;
 import com.hzbhd.cantype.CanTypeBase;
 
 import java.util.ArrayList;

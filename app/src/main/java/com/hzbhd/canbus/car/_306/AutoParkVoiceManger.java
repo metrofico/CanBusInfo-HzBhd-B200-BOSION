@@ -24,13 +24,13 @@ public class AutoParkVoiceManger {
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() { // from class: com.hzbhd.canbus.car._306.AutoParkVoiceManger$$ExternalSyntheticLambda0
             @Override // android.media.MediaPlayer.OnCompletionListener
             public final void onCompletion(MediaPlayer mediaPlayer2) throws IllegalStateException {
-                this.f$0.m483xe90e1d69(mediaPlayer2);
+                m483xe90e1d69(mediaPlayer2);
             }
         });
         this.mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() { // from class: com.hzbhd.canbus.car._306.AutoParkVoiceManger$$ExternalSyntheticLambda1
             @Override // android.media.MediaPlayer.OnPreparedListener
             public final void onPrepared(MediaPlayer mediaPlayer2) throws IllegalStateException {
-                this.f$0.m484x5e8843aa(mediaPlayer2);
+                m484x5e8843aa(mediaPlayer2);
             }
         });
     }

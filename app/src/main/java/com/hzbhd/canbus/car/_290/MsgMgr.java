@@ -145,7 +145,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private void start290MainActivity(Context context) {
         Intent intent = new Intent();
         intent.setComponent(Constant.ChengWeiMainActivity290);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 }

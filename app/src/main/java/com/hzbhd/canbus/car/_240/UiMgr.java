@@ -3,6 +3,7 @@ package com.hzbhd.canbus.car._240;
 import android.content.Context;
 import android.provider.Settings;
 import android.widget.Toast;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
@@ -20,11 +21,8 @@ import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.LogUtil;
-import kotlin.Metadata;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import kotlin.jvm.internal.Intrinsics;
-
-
 
 
 public final class UiMgr extends AbstractUiMgr {
@@ -62,7 +60,7 @@ public final class UiMgr extends AbstractUiMgr {
         OnAirPageStatusListener onAirPageStatusListener = new OnAirPageStatusListener() { // from class: com.hzbhd.canbus.car._240.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener
             public final void onStatusChange(int i) {
-                UiMgr.m322mOnAirPageStatusListener$lambda0(this.f$0, i);
+                UiMgr.m322mOnAirPageStatusListener$lambda0(UiMgr.this, i);
             }
         };
         this.mOnAirPageStatusListener = onAirPageStatusListener;
@@ -125,21 +123,21 @@ public final class UiMgr extends AbstractUiMgr {
         OnSettingPageStatusListener onSettingPageStatusListener = new OnSettingPageStatusListener() { // from class: com.hzbhd.canbus.car._240.UiMgr$$ExternalSyntheticLambda5
             @Override // com.hzbhd.canbus.interfaces.OnSettingPageStatusListener
             public final void onStatusChange(int i) {
-                UiMgr.m324mOnSettingPageStatusListener$lambda5(this.f$0, i);
+                UiMgr.m324mOnSettingPageStatusListener$lambda5(UiMgr.this, i);
             }
         };
         this.mOnSettingPageStatusListener = onSettingPageStatusListener;
         OnSettingItemSelectListener onSettingItemSelectListener = new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._240.UiMgr$$ExternalSyntheticLambda6
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
             public final void onClickItem(int i, int i2, int i3) {
-                UiMgr.m323mOnSettingItemSelectListener$lambda6(this.f$0, i, i2, i3);
+                UiMgr.m323mOnSettingItemSelectListener$lambda6(UiMgr.this, i, i2, i3);
             }
         };
         this.mOnSettingItemSelectListener = onSettingItemSelectListener;
         OnSettingItemSeekbarSelectListener onSettingItemSeekbarSelectListener = new OnSettingItemSeekbarSelectListener() { // from class: com.hzbhd.canbus.car._240.UiMgr$$ExternalSyntheticLambda7
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSeekbarSelectListener
             public final void onClickItem(int i, int i2, int i3) {
-                UiMgr.m325onSettingItemSeekbarSelectListener$lambda7(this.f$0, i, i2, i3);
+                UiMgr.m325onSettingItemSeekbarSelectListener$lambda7(UiMgr.this, i, i2, i3);
             }
         };
         this.onSettingItemSeekbarSelectListener = onSettingItemSeekbarSelectListener;
@@ -153,7 +151,7 @@ public final class UiMgr extends AbstractUiMgr {
         settingUiSet.setOnSettingItemClickListener(new OnSettingItemClickListener() { // from class: com.hzbhd.canbus.car._240.UiMgr$$ExternalSyntheticLambda8
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemClickListener
             public final void onClickItem(int i, int i2) {
-                UiMgr.m315_init_$lambda8(settingUiSet, this, i, i2);
+                UiMgr.m315_init_$lambda8(settingUiSet, UiMgr.this, i, i2);
             }
         });
         AirPageUiSet airUiSet = getAirUiSet(mContext);
@@ -164,7 +162,7 @@ public final class UiMgr extends AbstractUiMgr {
         parkPageUiSet.setOnPanoramicItemClickListener(new OnPanoramicItemClickListener() { // from class: com.hzbhd.canbus.car._240.UiMgr$$ExternalSyntheticLambda9
             @Override // com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener
             public final void onClickItem(int i) {
-                UiMgr.m316_init_$lambda9(this.f$0, i);
+                UiMgr.m316_init_$lambda9(UiMgr.this, i);
             }
         });
     }
@@ -302,15 +300,15 @@ public final class UiMgr extends AbstractUiMgr {
             return;
         }
         if (i2 == 0) {
-            CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 1, (byte) DataHandleUtils.setIntFromByteWithBit(DataHandleUtils.setIntByteWithBit(0, 7, i3 == 1), Settings.System.getInt(this$0.mContext.getContentResolver(), "data0_06", 0), 0, 7)});
+            CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 1, (byte) DataHandleUtils.setIntFromByteWithBit(DataHandleUtils.setIntByteWithBit(0, 7, i3 == 1), Settings.System.getInt(this$0.mContext.getContentResolver(), "data0_06", 0), 0, 7)});
         } else {
             if (i2 != 2) {
                 return;
             }
             if (this$0.getCurrentCarId() == 2) {
-                CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 2, (byte) i3});
+                CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 2, (byte) i3});
             } else {
-                CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 3, (byte) i3});
+                CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 3, (byte) i3});
             }
         }
     }
@@ -319,7 +317,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: onSettingItemSeekbarSelectListener$lambda-7, reason: not valid java name */
     public static final void m325onSettingItemSeekbarSelectListener$lambda7(UiMgr this$0, int i, int i2, int i3) {
 
-        CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 1, (byte) DataHandleUtils.setIntFromByteWithBit(DataHandleUtils.setIntByteWithBit(0, 7, Settings.System.getInt(this$0.mContext.getContentResolver(), "data0_7", 0) == 1), i3, 0, 7)});
+        CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 1, (byte) DataHandleUtils.setIntFromByteWithBit(DataHandleUtils.setIntByteWithBit(0, 7, Settings.System.getInt(this$0.mContext.getContentResolver(), "data0_7", 0) == 1), i3, 0, 7)});
     }
 
     public final ParkPageUiSet getMParkPageUiSet() {
@@ -341,7 +339,7 @@ public final class UiMgr extends AbstractUiMgr {
         } else if (Intrinsics.areEqual(titleSrn, "high_car")) {
             m317lambda8$sendCarData(1);
         }
-        Toast.makeText(this$0.mContext, "Success!", 0).show();
+        Toast.makeText(this$0.mContext, "Success!", Toast.LENGTH_SHORT).show();
     }
 
     /* JADX INFO: Access modifiers changed from: private */

@@ -21,7 +21,7 @@ import com.hzbhd.canbus.ui_set.MainAction;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -180,25 +180,25 @@ public class UiMgr extends AbstractUiMgr {
             } else if (i == 1) {
                 switch (i2) {
                     case 0:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 1});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 1});
                         break;
                     case 1:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 2});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 2});
                         break;
                     case 2:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 3});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 3});
                         break;
                     case 3:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 4});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 4});
                         break;
                     case 4:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 5});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 5});
                         break;
                     case 5:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 6});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 6});
                         break;
                     case 6:
-                        CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 7});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 7});
                         break;
                 }
             } else if (i == 2) {
@@ -339,25 +339,25 @@ public class UiMgr extends AbstractUiMgr {
             }
             switch (i2) {
                 case 0:
-                    CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 1});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 1});
                     break;
                 case 1:
-                    CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 2});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 2});
                     break;
                 case 2:
-                    CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 3});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 3});
                     break;
                 case 3:
-                    CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 4});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 4});
                     break;
                 case 4:
-                    CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 5});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 5});
                     break;
                 case 5:
-                    CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 6});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 6});
                     break;
                 case 6:
-                    CanbusMsgSender.sendMsg(new byte[]{22, -125, ByteCompanionObject.MIN_VALUE, 7});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -125, Byte.MIN_VALUE, 7});
                     break;
             }
         }

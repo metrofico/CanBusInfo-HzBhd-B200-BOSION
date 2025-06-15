@@ -393,7 +393,7 @@ public class MsgMgr extends AbstractMsgMgr {
                 return;
             }
             this.mIntent.setComponent(componentName);
-            this.mIntent.setFlags(268435456);
+            this.mIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             this.mContext.startActivity(this.mIntent);
         }
 

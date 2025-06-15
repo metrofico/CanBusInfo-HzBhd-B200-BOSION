@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.R;
 
 
@@ -58,24 +59,17 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        if (this.mOnBtnClickListener == null) {
-        }
-        switch (view.getId()) {
-            case R.id.ib_end_bottom /* 2131362388 */:
-                this.mOnBtnClickListener.onEndBottomClick();
-                break;
-            case R.id.ib_end_top /* 2131362389 */:
-                this.mOnBtnClickListener.onEndTopClick();
-                break;
-            case R.id.ib_mid_bottom /* 2131362407 */:
-                this.mOnBtnClickListener.onMidBottomClick();
-                break;
-            case R.id.ib_start_bottom /* 2131362422 */:
-                this.mOnBtnClickListener.onStartBottomClick();
-                break;
-            case R.id.ib_start_top /* 2131362423 */:
-                this.mOnBtnClickListener.onStartTopClick();
-                break;
+        int id = view.getId();
+        if (id == R.id.ib_end_bottom) {
+            this.mOnBtnClickListener.onEndBottomClick();
+        } else if (id == R.id.ib_end_top) {
+            this.mOnBtnClickListener.onEndTopClick();
+        } else if (id == R.id.ib_mid_bottom) {
+            this.mOnBtnClickListener.onMidBottomClick();
+        } else if (id == R.id.ib_start_bottom) {
+            this.mOnBtnClickListener.onStartBottomClick();
+        } else if (id == R.id.ib_start_top) {
+            this.mOnBtnClickListener.onStartTopClick();
         }
     }
 }

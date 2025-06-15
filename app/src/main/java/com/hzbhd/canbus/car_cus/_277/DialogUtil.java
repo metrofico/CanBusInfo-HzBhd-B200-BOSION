@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car_cus._277;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.util.Log;
@@ -11,10 +12,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._277.adapter.DiagnosisLvAdapter;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;
@@ -63,10 +67,11 @@ public class DialogUtil {
         alertDialogCreate.show();
     }
 
+    @SuppressLint("WrongConstant")
     public void showDiagnosisWindow(Context context, List<DiagnosisEntity> list, boolean z) {
-        this.mWindowManager = (WindowManager) context.getSystemService("window");
+        this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-        layoutParams.type = 2010;
+        layoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
         layoutParams.flags = 16777512;
         layoutParams.x = 0;
         layoutParams.y = 0;

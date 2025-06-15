@@ -2,6 +2,7 @@ package com.hzbhd.canbus.car._309;
 
 import android.content.Context;
 import android.view.MotionEvent;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
@@ -13,6 +14,7 @@ import com.hzbhd.canbus.interfaces.OnPanelKeyPositionTouchListener;
 import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.util.TimerUtil;
+
 import java.util.TimerTask;
 
 
@@ -150,21 +152,18 @@ public class UiMgr extends AbstractUiMgr {
                 UiMgr.this.timerUtil.stopTimer();
                 new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._309.UiMgr$9$$ExternalSyntheticLambda0
                     @Override // java.lang.Runnable
-                    public final void run() throws InterruptedException {
-                        UiMgr.AnonymousClass9.lambda$onTouch$0(b);
+                    public final void run() {
+                        try {
+                            Thread.sleep(50L);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        CanbusMsgSender.sendMsg(new byte[]{22, 116, b, 0});
                     }
                 }).start();
             }
         }
 
-        static /* synthetic */ void lambda$onTouch$0(byte b) throws InterruptedException {
-            try {
-                Thread.sleep(50L);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            CanbusMsgSender.sendMsg(new byte[]{22, 116, b, 0});
-        }
     }
 
     /* JADX INFO: Access modifiers changed from: private */

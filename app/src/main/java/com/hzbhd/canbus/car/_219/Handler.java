@@ -1,17 +1,14 @@
 package com.hzbhd.canbus.car._219;
 
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.constant.share.lcd.LcdInfoShare;
+
 import java.util.ArrayList;
 import java.util.List;
-import kotlin.Metadata;
+
 import kotlin.collections.ArraysKt;
 import kotlin.collections.CollectionsKt;
-import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 import nfore.android.bt.res.NfDef;
-
-
 
 
 public final class Handler {
@@ -81,7 +78,8 @@ public final class Handler {
         }
         arrayList.add(Byte.valueOf(b));
         String str = freq;
-        int iIndexOf$default = StringsKt.indexOf$default((CharSequence) str, ".", 0, false, 6, (Object) null);
+        int iIndexOf$default = str.indexOf(".");
+        ;
         if (iIndexOf$default != -1) {
             String strSubstring = freq.substring(0, iIndexOf$default);
 

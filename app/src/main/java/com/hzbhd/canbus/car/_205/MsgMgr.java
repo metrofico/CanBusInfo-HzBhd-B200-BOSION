@@ -292,7 +292,7 @@ public class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void currentVolumeInfoChange(int i, boolean z) {
         super.currentVolumeInfoChange(i, z);
-        CanbusMsgSender.sendMsg(new byte[]{22, -60, (byte) ((z ? 128 : 0) + (i & WorkQueueKt.MASK))});
+        CanbusMsgSender.sendMsg(new byte[]{22, -60, (byte) ((z ? 128 : 0) + (i & 0x7F))});
     }
 
     private void getFreqByteHiLo(String str, String str2) {

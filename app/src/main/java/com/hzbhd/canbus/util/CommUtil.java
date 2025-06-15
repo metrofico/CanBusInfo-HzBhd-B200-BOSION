@@ -11,12 +11,11 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-import com.hzbhd.canbus.BuildConfig;
 import com.hzbhd.R;
+import com.hzbhd.canbus.BuildConfig;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.factory.Dependency;
 import com.hzbhd.canbus.factory.proxy.CanSettingProxy;
-import com.hzbhd.canbus.util.MediaShareData;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;
 import com.hzbhd.proxy.sourcemanager.SourceManager;
@@ -156,7 +155,7 @@ public class CommUtil {
     }
 
     public static void printScreenWidthHeigh(Context context) {
-        WindowManager windowManager = (WindowManager) context.getSystemService("window");
+        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics displayMetrics = new DisplayMetrics();
         windowManager.getDefaultDisplay().getMetrics(displayMetrics);
         int i = displayMetrics.widthPixels;
@@ -167,7 +166,7 @@ public class CommUtil {
 
     public static byte getRadioFreqHiOrLow(String str, String str2, boolean z) throws NumberFormatException {
         int i;
-        int i2;
+        int i2 = 0;
         if (str.equals("AM2") || str.equals("MW") || str.equals("AM1") || str.equals("LW")) {
             if (z) {
                 i = Integer.parseInt(str2);
@@ -206,7 +205,7 @@ public class CommUtil {
     }
 
     public static void showToast(Context context, String str) {
-        Toast.makeText(context, str, 1).show();
+        Toast.makeText(context, str, Toast.LENGTH_LONG).show();
     }
 
     public static Bitmap decodeSampleBitmapFromResource(Resources resources, int i, int i2, int i3) {

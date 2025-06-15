@@ -517,7 +517,7 @@ public class UiMgr extends AbstractUiMgr {
             public void onConfirmClick(int i, int i2) {
                 if (i == 4 && i2 == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, 126, 10, 0, 26, 1});
-                    Toast.makeText(context, R.string.reset_completed, 0).show();
+                    Toast.makeText(context, R.string.reset_completed, Toast.LENGTH_SHORT).show();
                 }
             }
         });

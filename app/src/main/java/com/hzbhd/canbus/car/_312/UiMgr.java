@@ -43,13 +43,13 @@ public class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._312.UiMgr$$ExternalSyntheticLambda2
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
             public final void position(AmplifierActivity.AmplifierPosition amplifierPosition, int i) {
-                this.f$0.m492lambda$new$2$comhzbhdcanbuscar_312UiMgr(amplifierPosition, i);
+                m492lambda$new$2$comhzbhdcanbuscar_312UiMgr(amplifierPosition, i);
             }
         });
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._312.UiMgr$$ExternalSyntheticLambda3
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public final void progress(AmplifierActivity.AmplifierBand amplifierBand, int i) {
-                this.f$0.m493lambda$new$3$comhzbhdcanbuscar_312UiMgr(amplifierBand, i);
+                m493lambda$new$3$comhzbhdcanbuscar_312UiMgr(amplifierBand, i);
             }
         });
         initAmplifierData(amplifierPageUiSet);

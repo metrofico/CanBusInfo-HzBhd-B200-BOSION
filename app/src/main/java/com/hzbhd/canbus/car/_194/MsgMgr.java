@@ -1034,35 +1034,35 @@ public class MsgMgr extends AbstractMsgMgr {
         Button button4 = (Button) viewInflate.findViewById(R.id.b4);
         Button button5 = (Button) viewInflate.findViewById(R.id.b5);
         if (i < 37) {
-            button.setVisibility(0);
-            button2.setVisibility(4);
-            button3.setVisibility(4);
-            button4.setVisibility(4);
-            button5.setVisibility(4);
+            button.setVisibility(View.VISIBLE);
+            button2.setVisibility(View.INVISIBLE);
+            button3.setVisibility(View.INVISIBLE);
+            button4.setVisibility(View.INVISIBLE);
+            button5.setVisibility(View.INVISIBLE);
         } else if (i > 37 && i <= 75) {
-            button.setVisibility(0);
-            button2.setVisibility(0);
-            button3.setVisibility(4);
-            button4.setVisibility(4);
-            button5.setVisibility(4);
+            button.setVisibility(View.VISIBLE);
+            button2.setVisibility(View.VISIBLE);
+            button3.setVisibility(View.INVISIBLE);
+            button4.setVisibility(View.INVISIBLE);
+            button5.setVisibility(View.INVISIBLE);
         } else if (i > 75 && i <= 125) {
-            button.setVisibility(0);
-            button2.setVisibility(0);
-            button3.setVisibility(0);
-            button4.setVisibility(4);
-            button5.setVisibility(4);
+            button.setVisibility(View.VISIBLE);
+            button2.setVisibility(View.VISIBLE);
+            button3.setVisibility(View.VISIBLE);
+            button4.setVisibility(View.INVISIBLE);
+            button5.setVisibility(View.INVISIBLE);
         } else if (i > 125 && i <= 250) {
-            button.setVisibility(0);
-            button2.setVisibility(0);
-            button3.setVisibility(0);
-            button4.setVisibility(0);
-            button5.setVisibility(4);
+            button.setVisibility(View.VISIBLE);
+            button2.setVisibility(View.VISIBLE);
+            button3.setVisibility(View.VISIBLE);
+            button4.setVisibility(View.VISIBLE);
+            button5.setVisibility(View.INVISIBLE);
         } else if (i > 250 && i < 255) {
-            button.setVisibility(0);
-            button2.setVisibility(0);
-            button3.setVisibility(0);
-            button4.setVisibility(0);
-            button5.setVisibility(0);
+            button.setVisibility(View.VISIBLE);
+            button2.setVisibility(View.VISIBLE);
+            button3.setVisibility(View.VISIBLE);
+            button4.setVisibility(View.VISIBLE);
+            button5.setVisibility(View.VISIBLE);
         }
         alertDialogCreate.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         alertDialogCreate.show();

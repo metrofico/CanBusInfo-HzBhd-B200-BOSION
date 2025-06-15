@@ -10,8 +10,6 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
-import kotlin.jvm.internal.Intrinsics;
-
 
 public final class InitUtilsKt {
     public static Context mContext;
@@ -85,8 +83,7 @@ public final class InitUtilsKt {
         initSettingItemsIndexHashMap(context, abstractUiMgr, map);
     }
 
-    public static void initSettingItemsIndexHashMap(Context context, AbstractUiMgr uiMgr, HashMap<String, SettingPageUiSet.ListBean.ItemListBean<?>> hashMap) {
-
+    public static void initSettingItemsIndexHashMap(Context context, AbstractUiMgr uiMgr, HashMap<String, SettingPageUiSet.ListBean.ItemListBean> hashMap) {
 
 
         init(context, uiMgr);
@@ -118,7 +115,6 @@ public final class InitUtilsKt {
     }
 
     public static void initDrivingItemsIndexHashMap(Context context, AbstractUiMgr uiMgr, HashMap<String, DriverDataPageUiSet.Page.Item> hashMap) {
-
 
 
         init(context, uiMgr);

@@ -389,4 +389,9 @@
     <dimen name="track_view_y_translation">30px</dimen>
     <dimen name="video_height">480dp</dimen>
     <dimen name="width_full_screen_distance_tv">115dp</dimen>
+    <dimen name="dp1024">1024dp</dimen>
+    <dimen name="dp600">600dp</dimen>
+    <dimen name="dp0">0dp</dimen>
+    <dimen name="dp100">100dp</dimen>
+    <dimen name="dp96">96dp</dimen>
 </resources>

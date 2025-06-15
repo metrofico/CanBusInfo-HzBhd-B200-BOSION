@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.car._239;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
@@ -13,8 +14,8 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.RadarInfoUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.util.ArrayList;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -26,13 +27,15 @@ public class MsgMgr extends AbstractMsgMgr {
         return z ? 1 : 0;
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
-        CanbusMsgSender.sendMsg(new byte[]{22, -126, ByteCompanionObject.MAX_VALUE});
+        CanbusMsgSender.sendMsg(new byte[]{22, -126, Byte.MAX_VALUE});
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         super.canbusInfoChange(context, bArr);
         this.mCanBusInfoByte = bArr;
@@ -362,7 +365,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private void setRadar0x24() {
         GeneralParkData.isShowDistanceNotShowLocationUi = false;
         RadarInfoUtil.mMinIsClose = true;
-        RadarInfoUtil.mDisableData = com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE;
+        RadarInfoUtil.mDisableData = com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE;
         int[] iArr = this.mCanBusInfoInt;
         RadarInfoUtil.setRearRadarLocationData(3, iArr[2], iArr[3], iArr[4], iArr[5]);
         GeneralParkData.radar_location_data = RadarInfoUtil.mLocationMap;

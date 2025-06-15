@@ -143,12 +143,12 @@ public class UiMgr extends AbstractUiMgr {
     };
     OnAirSeatClickListener mOnAirSeatClickListener = new OnAirSeatClickListener() { // from class: com.hzbhd.canbus.car._303.UiMgr.8
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatClickListener
-        public void onLeftSeatClick() throws InterruptedException {
+        public void onLeftSeatClick()  {
             UiMgr.this.setFrontSearClick();
         }
 
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatClickListener
-        public void onRightSeatClick() throws InterruptedException {
+        public void onRightSeatClick()  {
             UiMgr.this.setFrontSearClick();
         }
     };
@@ -314,7 +314,7 @@ public class UiMgr extends AbstractUiMgr {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void setFrontSearClick() throws InterruptedException {
+    public void setFrontSearClick()  {
         if (!GeneralAirData.front_left_blow_foot && !GeneralAirData.front_left_blow_head && !GeneralAirData.front_left_blow_window) {
             setWindMode(true, false, true);
             return;
@@ -344,7 +344,7 @@ public class UiMgr extends AbstractUiMgr {
         }
     }
 
-    private void setWindMode(boolean z, boolean z2, boolean z3) throws InterruptedException {
+    private void setWindMode(boolean z, boolean z2, boolean z3)  {
         sendAirMsg(3, z);
         try {
             Thread.sleep(100L);

@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.car._236;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
@@ -13,11 +14,10 @@ import com.hzbhd.canbus.ui_datas.GeneralTireData;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.RadarInfoUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
-import kotlinx.coroutines.scheduling.WorkQueueKt;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -57,12 +57,14 @@ public class MsgMgr extends AbstractMsgMgr {
         return (-i) + 7;
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         this.mCanBusInfoByte = bArr;
         int[] byteArrayToIntArray = getByteArrayToIntArray(bArr);
@@ -223,10 +225,11 @@ public class MsgMgr extends AbstractMsgMgr {
         realKeyLongClick1(this.mContext, 2, i);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         this.mDifferent = getCurrentCanDifferentId();
-        CanbusMsgSender.sendMsg(new byte[]{22, -112, ByteCompanionObject.MAX_VALUE});
+        CanbusMsgSender.sendMsg(new byte[]{22, -112, Byte.MAX_VALUE});
         CanbusMsgSender.sendMsg(new byte[]{22, -112, 54});
         int i = this.mDifferent;
         if (i == 0) {
@@ -238,7 +241,7 @@ public class MsgMgr extends AbstractMsgMgr {
         } else if (i == 5) {
             CanbusMsgSender.sendMsg(new byte[]{22, -18, 82, 3});
         } else if (i != 6) {
-            CanbusMsgSender.sendMsg(new byte[]{22, -18, 82, ByteCompanionObject.MIN_VALUE});
+            CanbusMsgSender.sendMsg(new byte[]{22, -18, 82, Byte.MIN_VALUE});
         } else {
             CanbusMsgSender.sendMsg(new byte[]{22, -18, 82, 4});
         }
@@ -246,9 +249,10 @@ public class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(new byte[]{22, -127, 1});
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
-        CanbusMsgSender.sendMsg(new byte[]{22, -90, (byte) i2, (byte) i3, (byte) i4, (byte) ((i5 & WorkQueueKt.MASK) | (((!z ? 1 : 0) << 7) & 128)), (byte) i6, (byte) i7});
+        CanbusMsgSender.sendMsg(new byte[]{22, -90, (byte) i2, (byte) i3, (byte) i4, (byte) ((i5 & 0x7F) | (((!z ? 1 : 0) << 7) & 128)), (byte) i6, (byte) i7});
     }
 
     private void set0x27RearRadarInfo() {

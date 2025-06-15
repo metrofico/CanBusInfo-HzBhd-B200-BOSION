@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.car._48;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.interfaces.OnConfirmDialogListener;
 import com.hzbhd.canbus.interfaces.OnDriveDataPageStatusListener;
@@ -22,7 +23,9 @@ import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.canbus.util.TimerUtil;
+
 import java.util.TimerTask;
+
 import nfore.android.bt.res.NfDef;
 
 
@@ -106,7 +109,6 @@ public class UiMgr extends AbstractUiMgr {
             @Override // com.hzbhd.canbus.interfaces.OnOriginalBottomBtnClickListener
             public void onClickBottomBtnItem(int i) {
                 String str = originalCarDevicePageUiSet.getRowBottomBtnAction()[i];
-                str.hashCode();
                 switch (str) {
                     case "prev_disc":
                         CanbusMsgSender.sendMsg(new byte[]{22, -58, 53, 2});
@@ -124,7 +126,7 @@ public class UiMgr extends AbstractUiMgr {
                         bArr[2] = 48;
                         bArr[3] = (byte) (UiMgr.this.mIsSearching ? 3 : 2);
                         CanbusMsgSender.sendMsg(bArr);
-                        UiMgr.this.mIsSearching = !r9.mIsSearching;
+                        UiMgr.this.mIsSearching = !mIsSearching;
                         break;
                     case "right":
                         byte[] bArr2 = new byte[4];
@@ -133,7 +135,7 @@ public class UiMgr extends AbstractUiMgr {
                         bArr2[2] = 48;
                         bArr2[3] = (byte) (UiMgr.this.mIsSearching ? 3 : 1);
                         CanbusMsgSender.sendMsg(bArr2);
-                        UiMgr.this.mIsSearching = !r9.mIsSearching;
+                        UiMgr.this.mIsSearching = !mIsSearching;
                         break;
                     case "next_disc":
                         CanbusMsgSender.sendMsg(new byte[]{22, -58, 53, 1});

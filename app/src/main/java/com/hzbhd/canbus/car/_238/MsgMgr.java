@@ -22,7 +22,7 @@ import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -36,7 +36,7 @@ public class MsgMgr extends AbstractMsgMgr {
     public void initCommand(Context context) {
         super.initCommand(context);
         this.mContext = context;
-        CanbusMsgSender.sendMsg(new byte[]{22, -112, ByteCompanionObject.MAX_VALUE});
+        CanbusMsgSender.sendMsg(new byte[]{22, -112, Byte.MAX_VALUE});
         CanbusMsgSender.sendMsg(new byte[]{22, -112, 54});
         BroadcastReceiver broadcastReceiver = new BroadcastReceiver() { // from class: com.hzbhd.canbus.car._238.MsgMgr.1
             @Override // android.content.BroadcastReceiver

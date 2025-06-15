@@ -127,8 +127,8 @@ public class TypeInView implements View.OnClickListener {
     }
 
     private void deletePassword() {
-        erase_page1.setVisibility(8);
-        erase_page2.setVisibility(0);
+        erase_page1.setVisibility(View.GONE);
+        erase_page2.setVisibility(View.VISIBLE);
         CanbusMsgSender.sendMsg(new byte[]{22, 111, 6, 0, 0, 0});
     }
 
@@ -152,11 +152,11 @@ public class TypeInView implements View.OnClickListener {
             return;
         }
         if (i == 1) {
-            linearLayout2.setVisibility(0);
+            linearLayout2.setVisibility(View.VISIBLE);
         } else {
-            linearLayout.setVisibility(0);
+            linearLayout.setVisibility(View.VISIBLE);
         }
-        enter_code.setVisibility(8);
+        enter_code.setVisibility(View.GONE);
     }
 
     private void dismiss() {
@@ -222,8 +222,8 @@ public class TypeInView implements View.OnClickListener {
                 dismiss();
                 break;
             case R.id.Erase_page1_no /* 2131361813 */:
-                switch_add_erase.setVisibility(0);
-                erase_page1.setVisibility(8);
+                switch_add_erase.setVisibility(View.VISIBLE);
+                erase_page1.setVisibility(View.GONE);
                 break;
             case R.id.Erase_page1_yes /* 2131361814 */:
                 deletePassword();
@@ -232,16 +232,16 @@ public class TypeInView implements View.OnClickListener {
                 verifyPassword();
                 break;
             case R.id.true_code_add /* 2131363566 */:
-                switch_add_erase.setVisibility(8);
-                add_page1.setVisibility(0);
+                switch_add_erase.setVisibility(View.GONE);
+                add_page1.setVisibility(View.VISIBLE);
                 break;
             case R.id.true_code_cancel /* 2131363567 */:
-                switch_add_erase.setVisibility(8);
-                enter_code.setVisibility(0);
+                switch_add_erase.setVisibility(View.GONE);
+                enter_code.setVisibility(View.VISIBLE);
                 break;
             case R.id.true_code_erase /* 2131363569 */:
-                switch_add_erase.setVisibility(8);
-                erase_page1.setVisibility(0);
+                switch_add_erase.setVisibility(View.GONE);
+                erase_page1.setVisibility(View.VISIBLE);
                 break;
         }
     }
@@ -259,8 +259,8 @@ public class TypeInView implements View.OnClickListener {
                 return;
             }
             CanbusMsgSender.sendMsg(new byte[]{22, 111, 5, (byte) i, (byte) i2, (byte) i3});
-            add_page1.setVisibility(8);
-            add_page2.setVisibility(0);
+            add_page1.setVisibility(View.GONE);
+            add_page2.setVisibility(View.VISIBLE);
             return;
         }
         Toast.makeText(this.mContext, "Passwords do not match", 0);

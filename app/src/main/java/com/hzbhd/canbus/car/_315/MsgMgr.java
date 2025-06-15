@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.car._315;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -28,7 +29,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -65,11 +66,12 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         CanbusMsgSender.sendMsg(new byte[]{22, -127, 1});
-        CanbusMsgSender.sendMsg(new byte[]{22, -112, ByteCompanionObject.MAX_VALUE});
+        CanbusMsgSender.sendMsg(new byte[]{22, -112, Byte.MAX_VALUE});
         CanbusMsgSender.sendMsg(new byte[]{22, -112, 54});
         BroadcastReceiver broadcastReceiver = new BroadcastReceiver() { // from class: com.hzbhd.canbus.car._315.MsgMgr.1
             @Override // android.content.BroadcastReceiver

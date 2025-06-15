@@ -8,15 +8,13 @@ import android.util.Base64;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.hzbhd.canbus.adapter.util.CanTypeMsg;
-import com.hzbhd.canbus.car._464.MsgMgr;
+import com.hzbhd.canbus.car._0.MsgMgr;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.commontools.utils.ConfigUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 
 import java.util.Arrays;
 
-import kotlinx.coroutines.scheduling.WorkQueueKt;
 import nfore.android.bt.res.NfDef;
 
 /* loaded from: classes.dex */

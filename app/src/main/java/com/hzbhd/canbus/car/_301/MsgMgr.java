@@ -398,7 +398,7 @@ public class MsgMgr extends AbstractMsgMgr {
             } else {
                 AirActivity.mIsClickOpen = true;
                 Intent intent = new Intent(this.mContext, (Class<?>) AirActivity.class);
-                intent.setFlags(268435456);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 this.mContext.startActivity(intent);
             }
         }
@@ -962,7 +962,7 @@ public class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         int i = 0;
         int i2 = iArr[6];
-        int[] iArr2 = {iArr[2] & com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE, iArr[3], iArr[4], iArr[5], i2 & 129, iArr[7]};
+        int[] iArr2 = {iArr[2] & com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE, iArr[3], iArr[4], iArr[5], i2 & 129, iArr[7]};
         int[] iArr3 = {iArr[2] & 1, i2 & 4, iArr[8], iArr[9], iArr[10]};
         if (!Arrays.equals(this.mAirFrontDataNow, iArr2)) {
             i = 1001;

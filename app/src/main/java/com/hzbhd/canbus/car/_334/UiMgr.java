@@ -30,7 +30,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
 
@@ -68,7 +68,7 @@ public class UiMgr extends AbstractUiMgr {
         settingUiSet.setOnSettingItemSelectListener(new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._334.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
             public final void onClickItem(int i, int i2, int i3) {
-                this.f$0.m702lambda$new$0$comhzbhdcanbuscar_334UiMgr(i, i2, i3);
+                m702lambda$new$0$comhzbhdcanbuscar_334UiMgr(i, i2, i3);
             }
         });
         settingUiSet.setOnSettingItemSeekbarSelectListener(new OnSettingItemSeekbarSelectListener() { // from class: com.hzbhd.canbus.car._334.UiMgr.1
@@ -108,26 +108,26 @@ public class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._334.UiMgr$$ExternalSyntheticLambda2
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public final void progress(AmplifierActivity.AmplifierBand amplifierBand, int i) {
-                this.f$0.m703lambda$new$2$comhzbhdcanbuscar_334UiMgr(amplifierBand, i);
+                m703lambda$new$2$comhzbhdcanbuscar_334UiMgr(amplifierBand, i);
             }
         });
         OriginalCarDevicePageUiSet originalCarDevicePageUiSet = getOriginalCarDevicePageUiSet(context);
         originalCarDevicePageUiSet.setOnOriginalCarDevicePageStatusListener(new OnOriginalCarDevicePageStatusListener() { // from class: com.hzbhd.canbus.car._334.UiMgr$$ExternalSyntheticLambda3
             @Override // com.hzbhd.canbus.interfaces.OnOriginalCarDevicePageStatusListener
             public final void onStatusChange(int i) {
-                this.f$0.m704lambda$new$3$comhzbhdcanbuscar_334UiMgr(context, i);
+                m704lambda$new$3$comhzbhdcanbuscar_334UiMgr(context, i);
             }
         });
         originalCarDevicePageUiSet.setOnOriginalTopBtnClickListeners(new OnOriginalTopBtnClickListener() { // from class: com.hzbhd.canbus.car._334.UiMgr$$ExternalSyntheticLambda4
             @Override // com.hzbhd.canbus.interfaces.OnOriginalTopBtnClickListener
             public final void onClickTopBtnItem(int i) {
-                this.f$0.m705lambda$new$4$comhzbhdcanbuscar_334UiMgr(i);
+                m705lambda$new$4$comhzbhdcanbuscar_334UiMgr(i);
             }
         });
         originalCarDevicePageUiSet.setOnOriginalBottomBtnClickListeners(new OnOriginalBottomBtnClickListener() { // from class: com.hzbhd.canbus.car._334.UiMgr$$ExternalSyntheticLambda5
             @Override // com.hzbhd.canbus.interfaces.OnOriginalBottomBtnClickListener
             public final void onClickBottomBtnItem(int i) {
-                this.f$0.m706lambda$new$5$comhzbhdcanbuscar_334UiMgr(i);
+                m706lambda$new$5$comhzbhdcanbuscar_334UiMgr(i);
             }
         });
         originalCarDevicePageUiSet.setOnOriginalSongItemClickListener(new OnOriginalSongItemClickListener() { // from class: com.hzbhd.canbus.car._334.UiMgr.2
@@ -363,7 +363,7 @@ public class UiMgr extends AbstractUiMgr {
                     return;
                 }
                 if (i == 1) {
-                    CanbusMsgSender.sendMsg(new byte[]{22, -126, ByteCompanionObject.MIN_VALUE});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -126, Byte.MIN_VALUE});
                     return;
                 } else if (i == 2) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -126, -127});
@@ -523,7 +523,7 @@ public class UiMgr extends AbstractUiMgr {
         this.cmd_carId_Map.put(80, arrayList);
         this.cmd_carId_Map.put(81, arrayList);
         this.cmd_carId_Map.put(82, arrayList);
-        this.cmd_carId_Map.put(Integer.valueOf(WorkQueueKt.MASK), arrayList);
+        this.cmd_carId_Map.put(Integer.valueOf(0x7F), arrayList);
         this.cmd_carId_Map.put(129, arrayList);
         this.cmd_carId_Map.put(144, arrayList);
         this.cmd_carId_Map.put(131, arrayList);

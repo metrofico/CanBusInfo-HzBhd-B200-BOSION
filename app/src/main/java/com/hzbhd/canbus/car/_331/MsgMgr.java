@@ -88,7 +88,7 @@ public class MsgMgr extends AbstractMsgMgr {
         runOnUi(new AbstractMsgMgr.CallBackInterface() { // from class: com.hzbhd.canbus.car._331.MsgMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr.CallBackInterface
             public final void callback() {
-                this.f$0.m700lambda$updateDZRadarView$0$comhzbhdcanbuscar_331MsgMgr();
+                m700lambda$updateDZRadarView$0$comhzbhdcanbuscar_331MsgMgr();
             }
         });
     }

@@ -1,14 +1,15 @@
 package com.hzbhd.canbus.car._45;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.interfaces.OnOriginalBottomBtnClickListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
+
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 
 public class UiMgr extends AbstractUiMgr {
@@ -49,7 +50,7 @@ public class UiMgr extends AbstractUiMgr {
     }
 
     public void makeConnection() {
-        CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 1});
+        CanbusMsgSender.sendMsg(new byte[]{22, Byte.MIN_VALUE, 1});
     }
 
     public void send0x82MediaType(int i) {

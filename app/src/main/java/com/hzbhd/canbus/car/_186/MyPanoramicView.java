@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 
@@ -171,49 +172,34 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_pa /* 2131362038 */:
-                sendCameraButtonCommand(65);
-                break;
-            case R.id.btn_para_park /* 2131362040 */:
-                sendCameraButtonCommand(67);
-                break;
-            case R.id.btn_up_down /* 2131362062 */:
-                sendCameraButtonCommand(71);
-                break;
-            case R.id.btn_vert_park /* 2131362063 */:
-                sendCameraButtonCommand(66);
-                break;
-            case R.id.ib_down /* 2131362387 */:
-                sendCameraButtonCommand(73);
-                break;
-            case R.id.ib_left /* 2131362402 */:
-                sendCameraButtonCommand(74);
-                break;
-            case R.id.ib_left_down /* 2131362403 */:
-                sendCameraButtonCommand(79);
-                break;
-            case R.id.ib_panoramic_camera /* 2131362409 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -57, 1});
-                break;
-            case R.id.ib_right /* 2131362420 */:
-                sendCameraButtonCommand(75);
-                break;
-            case R.id.ib_right_down /* 2131362421 */:
-                sendCameraButtonCommand(78);
-                break;
-            case R.id.ib_up /* 2131362425 */:
-                sendCameraButtonCommand(72);
-                break;
-            case R.id.rl_btn_back /* 2131363184 */:
-                sendCameraButtonCommand(70);
-                break;
-            case R.id.rl_btn_cancel /* 2131363185 */:
-                sendCameraButtonCommand(69);
-                break;
-            case R.id.rl_btn_start /* 2131363186 */:
-                sendCameraButtonCommand(68);
-                break;
+        if (view.getId() == R.id.btn_pa) {
+            sendCameraButtonCommand(65);
+        } else if (view.getId() == R.id.btn_para_park) {
+            sendCameraButtonCommand(67);
+        } else if (view.getId() == R.id.btn_up_down) {
+            sendCameraButtonCommand(71);
+        } else if (view.getId() == R.id.btn_vert_park) {
+            sendCameraButtonCommand(66);
+        } else if (view.getId() == R.id.ib_down) {
+            sendCameraButtonCommand(73);
+        } else if (view.getId() == R.id.ib_left) {
+            sendCameraButtonCommand(74);
+        } else if (view.getId() == R.id.ib_left_down) {
+            sendCameraButtonCommand(79);
+        } else if (view.getId() == R.id.ib_panoramic_camera) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -57, 1});
+        } else if (view.getId() == R.id.ib_right) {
+            sendCameraButtonCommand(75);
+        } else if (view.getId() == R.id.ib_right_down) {
+            sendCameraButtonCommand(78);
+        } else if (view.getId() == R.id.ib_up) {
+            sendCameraButtonCommand(72);
+        } else if (view.getId() == R.id.rl_btn_back) {
+            sendCameraButtonCommand(70);
+        } else if (view.getId() == R.id.rl_btn_cancel) {
+            sendCameraButtonCommand(69);
+        } else if (view.getId() == R.id.rl_btn_start) {
+            sendCameraButtonCommand(68);
         }
     }
 
@@ -228,9 +214,9 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     private void setParkAssistTips(Context context, int i) {
         if (i == 0) {
-            this.mTvParkAssistTips.setVisibility(4);
+            this.mTvParkAssistTips.setVisibility(View.INVISIBLE);
         } else {
-            this.mTvParkAssistTips.setVisibility(0);
+            this.mTvParkAssistTips.setVisibility(View.VISIBLE);
             this.mTvParkAssistTips.setText(context.getString(this.mTipsArray.get(i, R.string.null_value)));
         }
     }
@@ -244,20 +230,20 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
         }
         try {
             for (View view : this.mCurrentPage) {
-                view.setVisibility(4);
+                view.setVisibility(View.INVISIBLE);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         if (i == 0) {
-            this.mRlBottomBtn.setVisibility(4);
+            this.mRlBottomBtn.setVisibility(View.INVISIBLE);
             return;
         }
-        this.mRlBottomBtn.setVisibility(0);
+        this.mRlBottomBtn.setVisibility(View.VISIBLE);
         View[] viewArr = this.mPageArrays[i - 1];
         this.mCurrentPage = viewArr;
         for (View view2 : viewArr) {
-            view2.setVisibility(0);
+            view2.setVisibility(View.VISIBLE);
         }
     }
 
@@ -274,7 +260,7 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
         } else if (i == 0) {
             this.mIvCamera.setImageDrawable(this.mContext.getDrawable(R.drawable.nissan_panoramic_front_camera));
         }
-        this.mIvCamera.setVisibility(0);
+        this.mIvCamera.setVisibility(View.VISIBLE);
         setParkAssistTips(context, this.mTvTipsStatus);
         setCurrentPage(this.mPageNumber);
     }

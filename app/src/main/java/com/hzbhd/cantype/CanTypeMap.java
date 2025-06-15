@@ -3,7 +3,7 @@ package com.hzbhd.cantype;
 import androidx.core.view.InputDeviceCompat;
 
 import com.hzbhd.canbus.adapter.util.SystemConstant;
-import com.hzbhd.canbus.car._464.MsgMgr;
+import com.hzbhd.canbus.car._0.MsgMgr;
 import com.hzbhd.constant.disc.MpegConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
 

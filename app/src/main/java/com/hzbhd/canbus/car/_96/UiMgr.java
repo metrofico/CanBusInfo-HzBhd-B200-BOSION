@@ -864,7 +864,7 @@ public class UiMgr extends AbstractUiMgr {
 
     private void sendSettingResetData(int i) {
         Context context = this.mContext;
-        Toast.makeText(context, context.getText(R.string.reset_completed), 0).show();
+        Toast.makeText(context, context.getText(R.string.reset_completed), Toast.LENGTH_SHORT).show();
         sendData(new byte[]{22, 26, (byte) i});
     }
 

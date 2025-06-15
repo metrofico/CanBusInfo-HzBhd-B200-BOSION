@@ -2,9 +2,8 @@ package com.hzbhd.cantype;
 
 import androidx.core.view.InputDeviceCompat;
 
-import com.hzbhd.canbus.adapter.util.CanTypeMsg;
 import com.hzbhd.canbus.adapter.util.SystemConstant;
-import com.hzbhd.canbus.car._464.MsgMgr;
+import com.hzbhd.canbus.car._0.MsgMgr;
 import com.hzbhd.constant.disc.MpegConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
 
@@ -15,10 +14,6 @@ import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import kotlin.Metadata;
-import kotlin.Pair;
-import kotlin.collections.CollectionsKt;
-import kotlin.collections.MapsKt;
 import nfore.android.bt.res.NfDef;
 
 

@@ -164,7 +164,7 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     private void setBaseTrack0x81() {
-        GeneralParkData.trackAngle = TrackInfoUtil.getTrackAngle1(this.mCanBusInfoByte[7], (byte) 0, 0, WorkQueueKt.MASK, 8);
+        GeneralParkData.trackAngle = TrackInfoUtil.getTrackAngle1(this.mCanBusInfoByte[7], (byte) 0, 0, 0x7F, 8);
         updateParkUi(null, this.mContext);
     }
 

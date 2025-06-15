@@ -605,7 +605,7 @@ public class MsgMgr extends AbstractMsgMgr {
 
     private int getAirWhat() {
         int[] iArr = this.mCanbusInfoInt;
-        int[] iArr2 = {iArr[2], iArr[3], iArr[4], iArr[5], iArr[6] & com.hzbhd.canbus.car._464.MsgMgr.DVD_MODE, iArr[10]};
+        int[] iArr2 = {iArr[2], iArr[3], iArr[4], iArr[5], iArr[6] & com.hzbhd.canbus.car._0.MsgMgr.DVD_MODE, iArr[10]};
         int[] iArr3 = {iArr[7], iArr[8], iArr[9]};
         if (!Arrays.equals(this.mAirFrontData, iArr2)) {
             this.mAirFrontData = Arrays.copyOf(iArr2, 6);

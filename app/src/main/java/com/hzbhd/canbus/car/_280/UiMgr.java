@@ -131,22 +131,22 @@ public class UiMgr extends AbstractUiMgr {
         airUiSet.getFrontArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._280.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m341lambda$new$0$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
+                m341lambda$new$0$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._280.UiMgr$$ExternalSyntheticLambda1
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m342lambda$new$1$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
+                m342lambda$new$1$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._280.UiMgr$$ExternalSyntheticLambda2
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m343lambda$new$2$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
+                m343lambda$new$2$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
             }
         }, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._280.UiMgr$$ExternalSyntheticLambda3
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i) {
-                this.f$0.m344lambda$new$3$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
+                m344lambda$new$3$comhzbhdcanbuscar_280UiMgr(airUiSet, i);
             }
         }});
         if (this.mDifferent == 2) {

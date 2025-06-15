@@ -4,6 +4,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
@@ -21,6 +22,7 @@ import com.hzbhd.canbus.util.TimerUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,13 +62,15 @@ public class MsgMgr extends AbstractMsgMgr {
     private int mAmplifierBalanceMid = 10;
     private int mAmplifierBandMin = 3;
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         sendAmplifierInit(context);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
         this.mContext = context;
@@ -85,7 +89,8 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mAmplifierBandMin = getUiMgr(context).getBandMin();
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] bArr) {
         super.canbusInfoChange(context, bArr);
         int[] byteArrayToIntArray = getByteArrayToIntArray(bArr);
@@ -316,13 +321,15 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void currentVolumeInfoChange(int i, boolean z) {
         super.currentVolumeInfoChange(i, z);
         this.mIsMute = z;
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchChange(String str) {
         super.sourceSwitchChange(str);
         if (SourceConstantsDef.SOURCE_ID.NULL.name().equals(str)) {
@@ -331,7 +338,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchNoMediaInfoChange(boolean z) {
         super.sourceSwitchNoMediaInfoChange(z);
         if (z) {
@@ -340,7 +348,8 @@ public class MsgMgr extends AbstractMsgMgr {
         sendAmplifierInit(this.mContext);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int i, String str, String str2, String str3, int i2) {
         super.radioInfoChange(i, str, str2, str3, i2);
         int i3 = str.contains("AM") ? 16 : 0;
@@ -349,7 +358,8 @@ public class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(DataHandleUtils.byteMerger(new byte[]{22, -64, b, b}, new byte[]{(byte) i3, (byte) freqByteHiLo[1], (byte) freqByteHiLo[0], (byte) i, 0, 0}));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void discInfoChange(byte b, int i, int i2, int i3, int i4, int i5, int i6, boolean z, boolean z2, int i7, String str, String str2, String str3) {
         super.discInfoChange(b, i, i2, i3, i4, i5, i6, z, z2, i7, str, str2, str3);
         if (i6 == 1) {
@@ -368,7 +378,8 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mId3.sendId3Datas(" ", " ", " ");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneStatusInfoChange(int i, byte[] bArr, boolean z, boolean z2, boolean z3, boolean z4, int i2, int i3, Bundle bundle) {
         super.btPhoneStatusInfoChange(i, bArr, z, z2, z3, z4, i2, i3, bundle);
         if (z) {
@@ -378,7 +389,8 @@ public class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneIncomingInfoChange(byte[] bArr, boolean z, boolean z2) {
         super.btPhoneIncomingInfoChange(bArr, z, z2);
         byte[] bArrByteMerger = {22, -56, 16, 1};
@@ -390,7 +402,8 @@ public class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(DataHandleUtils.makeBytesFixedLength(bArrByteMerger, 58));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneOutGoingInfoChange(byte[] bArr, boolean z, boolean z2) {
         super.btPhoneOutGoingInfoChange(bArr, z, z2);
         byte[] bArrByteMerger = {22, -56, 16, 1};
@@ -402,7 +415,8 @@ public class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(DataHandleUtils.makeBytesFixedLength(bArrByteMerger, 58));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneHangUpInfoChange(byte[] bArr, boolean z, boolean z2) {
         super.btPhoneHangUpInfoChange(bArr, z, z2);
         byte[] bArrByteMerger = {22, -56, 16, 1};
@@ -414,13 +428,15 @@ public class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(DataHandleUtils.makeBytesFixedLength(bArrByteMerger, 58));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInInfoChange() {
         super.auxInInfoChange();
         CanbusMsgSender.sendMsg(DataHandleUtils.byteMerger(new byte[]{22, -64, (byte) 7, (byte) 0}, new byte[6]));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, byte b6, byte b7, byte b8, String str, String str2, String str3, long j, byte b9, int i3, boolean z, long j2, String str4, String str5, String str6, boolean z2) {
         super.musicInfoChange(b, b2, i, i2, b3, b4, b5, b6, b7, b8, str, str2, str3, j, b9, i3, z, j2, str4, str5, str6, z2);
         byte[] bArr = new byte[6];
@@ -430,13 +446,15 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mId3.sendId3Datas(str4, str5, str6);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicDestroy() {
         super.musicDestroy();
         this.mId3.sendId3Datas(" ", " ", " ");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte b, byte b2, int i, int i2, byte b3, byte b4, byte b5, String str, byte b6, byte b7, String str2, String str3, String str4, int i3, byte b8, boolean z, int i4) {
         super.videoInfoChange(b, b2, i, i2, b3, b4, b5, str, b6, b7, str2, str3, str4, i3, b8, z, i4);
         byte[] bArr = new byte[6];
@@ -445,7 +463,8 @@ public class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(DataHandleUtils.byteMerger(new byte[]{22, -64, (byte) 8, (byte) 19}, bArr));
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusicId3InfoChange(String str, String str2, String str3) {
         super.btMusicId3InfoChange(str, str2, str3);
         Log.i("_999_MsgMgr", "btMusicId3InfoChange: \ntitle <--> " + str + "\nartist <--> " + str2 + "\nalbum <--> " + str3);
@@ -453,7 +472,8 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mId3.sendId3Datas(str, str3, str2);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusiceDestdroy() {
         super.btMusiceDestdroy();
         Log.i("_999_MsgMgr", "btMusiceDestdroy: ");
@@ -582,7 +602,7 @@ public class MsgMgr extends AbstractMsgMgr {
                     int i = 0;
 
                     @Override // java.util.TimerTask, java.lang.Runnable
-                    public void run() throws UnsupportedEncodingException {
+                    public void run() {
                         if (this.i >= Id3.this.items.length) {
                             Id3.this.timer.stopTimer();
                             return;
@@ -596,7 +616,7 @@ public class MsgMgr extends AbstractMsgMgr {
         }
 
         /* JADX INFO: Access modifiers changed from: private */
-        public void sendId3Data(String str, int i) throws UnsupportedEncodingException {
+        public void sendId3Data(String str, int i) {
             byte[] bArr = {22, (byte) this.dataType, 16, (byte) i};
             byte[] bytes = new byte[0];
             try {

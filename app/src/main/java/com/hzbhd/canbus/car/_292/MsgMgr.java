@@ -590,7 +590,7 @@ public class MsgMgr extends AbstractMsgMgr {
         }
         Intent intent = new Intent();
         intent.setComponent(Constant.OnStarActivity);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(OnStarActivity.BUNDLE_OPEN_FRAGMENT, OnStartPhoneFragment.class);
         this.mContext.startActivity(intent);
     }

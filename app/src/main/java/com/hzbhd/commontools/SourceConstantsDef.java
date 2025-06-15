@@ -237,7 +237,7 @@ public class SourceConstantsDef {
         NORMAL_SOURCE(124),
         EC_ANDROID(125),
         EC_IPHONE(126),
-        CANOFF(WorkQueueKt.MASK),
+        CANOFF(0x7F),
         DABTOFM(128),
         XIMALAYA(129),
         KUWO(130),

@@ -15,7 +15,7 @@ public class UiMgr extends AbstractUiMgr {
     private OnPanelKeyPositionTouchListener mOnPanelKeyPositionTouchListener = new OnPanelKeyPositionTouchListener() { // from class: com.hzbhd.canbus.car._60.UiMgr$$ExternalSyntheticLambda0
         @Override // com.hzbhd.canbus.interfaces.OnPanelKeyPositionTouchListener
         public final void onTouch(int i, MotionEvent motionEvent) {
-            this.f$0.m918lambda$new$0$comhzbhdcanbuscar_60UiMgr(i, motionEvent);
+            m918lambda$new$0$comhzbhdcanbuscar_60UiMgr(i, motionEvent);
         }
     };
     private String[] str = {"panel_btn_num1", "panel_btn_num2", "panel_btn_num3", "panel_btn_num4", "panel_btn_num5", "panel_btn_num6", "panel_btn_num7", "panel_btn_num8", "panel_btn_num9", "panel_btn_left", "panel_btn_ok", "panel_btn_right", "panel_btn_fmam", "panel_btn_cdmp3", "panel_btn_bc"};

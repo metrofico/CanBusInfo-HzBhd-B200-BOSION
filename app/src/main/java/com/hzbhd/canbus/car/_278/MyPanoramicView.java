@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 
@@ -54,31 +55,26 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.back_rev_guide /* 2131361959 */:
-                resetVisual();
-                setCameraBtnStatus(this.m_back_rev_guide, false);
-                sendCameraButtonCommand(3);
-                break;
-            case R.id.broadside_rev_guide /* 2131361990 */:
-                resetVisual();
-                setCameraBtnStatus(this.m_broadside_rev_guide, false);
-                sendCameraButtonCommand(2);
-                break;
-            case R.id.h2_exit /* 2131362364 */:
-                CanbusMsgSender.sendMsg(new byte[]{22, -125, 1, 0});
-                break;
-            case R.id.h2_hide /* 2131362365 */:
-                boolean z = !this.mListBtns;
-                this.mListBtns = z;
-                hideH2Btns(z);
-                break;
-            case R.id.vertical_rev_guide /* 2131363753 */:
-                resetVisual();
-                setCameraBtnStatus(this.m_vertical_rev_guide, false);
-                sendCameraButtonCommand(1);
-                break;
+        if (view.getId() == R.id.back_rev_guide) { // 2131361959
+            resetVisual();
+            setCameraBtnStatus(this.m_back_rev_guide, false);
+            sendCameraButtonCommand(3);
+        } else if (view.getId() == R.id.broadside_rev_guide) { // 2131361990
+            resetVisual();
+            setCameraBtnStatus(this.m_broadside_rev_guide, false);
+            sendCameraButtonCommand(2);
+        } else if (view.getId() == R.id.h2_exit) { // 2131362364
+            CanbusMsgSender.sendMsg(new byte[]{22, -125, 1, 0});
+        } else if (view.getId() == R.id.h2_hide) { // 2131362365
+            boolean z = !this.mListBtns;
+            this.mListBtns = z;
+            hideH2Btns(z);
+        } else if (view.getId() == R.id.vertical_rev_guide) { // 2131363753
+            resetVisual();
+            setCameraBtnStatus(this.m_vertical_rev_guide, false);
+            sendCameraButtonCommand(1);
         }
+
     }
 
     private void sendCameraButtonCommand(int i) {
@@ -98,9 +94,9 @@ public class MyPanoramicView extends RelativeLayout implements View.OnClickListe
 
     private void hideH2Btns(boolean z) {
         if (z) {
-            this.m_ll_haval_h2_right_list_btns.setVisibility(0);
+            this.m_ll_haval_h2_right_list_btns.setVisibility(View.VISIBLE);
         } else {
-            this.m_ll_haval_h2_right_list_btns.setVisibility(8);
+            this.m_ll_haval_h2_right_list_btns.setVisibility(View.GONE);
         }
     }
 }
