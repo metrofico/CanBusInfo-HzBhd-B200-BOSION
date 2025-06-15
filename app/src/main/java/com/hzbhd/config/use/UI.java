@@ -7,6 +7,8 @@ import android.text.TextUtils;
 import com.hzbhd.build.ui.UIUtil;
 import com.hzbhd.config.bean.UIBean;
 import com.hzbhd.constant.config.ConfigConstant;
+import com.hzbhd.util.DefaultSharedUtilReflection;
+
 import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
@@ -169,14 +171,14 @@ public final class UI {
 
     public final void setUI(String uiId) {
         Intrinsics.checkNotNullParameter(uiId, "uiId");
-        DefaultSharedUtil.setStr(UIKey.ui_s_id_encrypt.name(), UIEncrypt.INSTANCE.changeUIToString(uiId));
+        DefaultSharedUtilReflection.setStr(UIKey.ui_s_id_encrypt.name(), UIEncrypt.INSTANCE.changeUIToString(uiId));
     }
 
     public final boolean getRestartWhenSelectUI() {
-        return DefaultSharedUtil.getBool(UIKey.ui_b_restart_when_select_ui.name(), UIDefault.INSTANCE.getRestartWhenSelectUI());
+        return DefaultSharedUtilReflection.getBool(UIKey.ui_b_restart_when_select_ui.name(), UIDefault.INSTANCE.getRestartWhenSelectUI());
     }
 
     public final void setRestartWhenSelectUI(boolean z) {
-        DefaultSharedUtil.setBool(UIKey.ui_b_restart_when_select_ui.name(), z);
+        DefaultSharedUtilReflection.setBool(UIKey.ui_b_restart_when_select_ui.name(), z);
     }
 }

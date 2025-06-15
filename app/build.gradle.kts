@@ -49,7 +49,6 @@ dependencies {
     implementation("org.slf4j:slf4j-api:2.0.9")
     annotationProcessor("org.apache.logging.log4j:log4j-core:2.14.1")
     implementation("org.apache.logging.log4j:log4j-api:2.14.1")
-    implementation("org.apache.logging.log4j:log4j-syslog:2.14.1")
     implementation("log4j:log4j:1.2.17")
     implementation("com.google.code.gson:gson:2.10.1") // O la última versión estable
     implementation(project(":app:util"))

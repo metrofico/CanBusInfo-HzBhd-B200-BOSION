@@ -1,10 +1,11 @@
 package com.hzbhd.proxy.keydispatcher;
 
-import android.os.ServiceManager;
+
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.keydispatcher.aidl.IKeyDispatcherService;
 import com.hzbhd.systemstatus.proxy.IServiceConnectListener;
 import com.hzbhd.systemstatus.proxy.ServiceStateManager;
+import com.hzbhd.util.ServiceManagerReflection;
 
 /* loaded from: classes2.dex */
 public class KeyDispatcherManager {
@@ -21,6 +22,6 @@ public class KeyDispatcherManager {
                 }
             });
         }
-        return IKeyDispatcherService.Stub.asInterface(ServiceManager.getService(SERVICE_NAME_KEY_DISPATCHER));
+        return IKeyDispatcherService.Stub.asInterface(ServiceManagerReflection.getService(SERVICE_NAME_KEY_DISPATCHER));
     }
 }

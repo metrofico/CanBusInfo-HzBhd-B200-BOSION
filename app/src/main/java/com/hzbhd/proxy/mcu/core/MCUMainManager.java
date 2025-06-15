@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.os.RemoteException;
-import android.os.ServiceManager;
+
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.mcu.aidl.IMCUCanBoxControlCallback;
 import com.hzbhd.proxy.mcu.aidl.IMCUMainCallback;
@@ -15,6 +15,8 @@ import com.hzbhd.proxy.service.ServiceConstants;
 import com.hzbhd.systemstatus.proxy.IServiceConnectListener;
 import com.hzbhd.systemstatus.proxy.ServiceStateManager;
 import com.hzbhd.util.LogUtil;
+import com.hzbhd.util.ServiceManagerReflection;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -26,75 +28,94 @@ public class MCUMainManager implements IMCUMainManager {
     private final Set<IMCUMainListener> mMCUMainList = new HashSet();
     private final HashSet<IMCUCanBoxControlListener> mMCUCanList = new HashSet<>();
     private IMCUMainCallback mMCUImcuMainCallback = new MCUMainCallback();
-    private IMCUCanBoxControlCallback mMCUCanBoxControlCallback = new IMCUCanBoxControlCallback.Stub() { // from class: com.hzbhd.proxy.mcu.core.MCUMainManager.1
-        @Override // com.hzbhd.proxy.mcu.aidl.IMCUCanBoxControlCallback
-        public void notifyCanboxData(int i, byte[] bArr) throws RemoteException {
-            Iterator it = MCUMainManager.this.mMCUCanList.iterator();
-            while (it.hasNext()) {
-                ((IMCUCanBoxControlListener) it.next()).notifyCanboxData(i, bArr);
+    private MainHandlerMCUManager handler = new MainHandlerMCUManager();
+
+    public class CanBoxControlCallback extends IMCUCanBoxControlCallback.Stub {
+
+        MCUMainManager mMCUMainManager;
+
+        public CanBoxControlCallback(MCUMainManager mMCUMainManager) {
+            this.mMCUMainManager = mMCUMainManager;
+        }
+
+        @Override
+        public void notifyCanboxData(int cmd, byte[] data) {
+            for (IMCUCanBoxControlListener listener : mMCUCanList) {
+                listener.notifyCanboxData(cmd, data);
             }
         }
-    };
-    private Handler mMainHandler = new Handler() { // from class: com.hzbhd.proxy.mcu.core.MCUMainManager.2
-        @Override // android.os.Handler
+    }
+
+    private final IMCUCanBoxControlCallback mMCUCanBoxControlCallback = new CanBoxControlCallback(this);
+
+    private static class MainHandlerMCUManager extends Handler {
+
+
+        @Override
         public void handleMessage(Message message) {
             super.handleMessage(message);
-            switch (AnonymousClass4.$SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID[MSG_ID.values()[message.what].ordinal()]) {
-                case 1:
-                    Bundle bundle = (Bundle) message.obj;
-                    Iterator it = MCUMainManager.this.mMCUMainList.iterator();
-                    while (it.hasNext()) {
-                        ((IMCUMainListener) it.next()).mcuInit(bundle.getByte("procotolVersion"), bundle.getBoolean("powerOnType"), bundle.getBoolean("hardwareReset"));
+            MCUMainManager mainManager = MCUMainManager.getInstance();
+            switch (MSG_ID.values()[message.what]) {
+                case mcuInit:
+                    Bundle mcuInitBundle = (Bundle) message.obj;
+                    Iterator<IMCUMainListener> it1 = mainManager.mMCUMainList.iterator();
+                    byte protocolVersion = mcuInitBundle.getByte("procotolVersion");
+                    boolean powerOnType = mcuInitBundle.getBoolean("powerOnType");
+                    boolean hardwareReset = mcuInitBundle.getBoolean("hardwareReset");
+                    while (it1.hasNext()) {
+                        it1.next().mcuInit(protocolVersion, powerOnType, hardwareReset);
                     }
                     break;
-                case 2:
-                    String string = ((Bundle) message.obj).getString("McuVersion");
-                    Iterator it2 = MCUMainManager.this.mMCUMainList.iterator();
-                    while (it2.hasNext()) {
-                        ((IMCUMainListener) it2.next()).notifyMCUVersion(string, null, null);
+
+                case notifyMCUVersion:
+                    Bundle mcuVersionBundle = (Bundle) message.obj;
+                    String mcuVersion = mcuVersionBundle.getString("McuVersion");
+                    for (IMCUMainListener item : mainManager.mMCUMainList) {
+                        item.notifyMCUVersion(mcuVersion, null, null);
                     }
                     break;
-                case 3:
-                    Iterator it3 = MCUMainManager.this.mMCUMainList.iterator();
-                    while (it3.hasNext()) {
-                        ((IMCUMainListener) it3.next()).notifyPowerStatus(((Integer) message.obj).intValue());
+
+                case notifyPowerStatus:
+                    Integer powerStatusValue = (Integer) message.obj;
+                    for (IMCUMainListener value : mainManager.mMCUMainList) {
+                        value.notifyPowerStatus(powerStatusValue != null ? powerStatusValue : 0);
                     }
                     break;
-                case 4:
-                    Bundle bundle2 = (Bundle) message.obj;
-                    String string2 = bundle2.getString("modelName");
-                    String string3 = bundle2.getString("hardwareVersion");
-                    String string4 = bundle2.getString("serialNum");
-                    String string5 = bundle2.getString("data");
-                    Iterator it4 = MCUMainManager.this.mMCUMainList.iterator();
-                    while (it4.hasNext()) {
-                        ((IMCUMainListener) it4.next()).notifyHardwareVersion(string2, string3, string4, string5);
+
+                case notifyHardwareVersion:
+                    Bundle hardwareVersionBundle = (Bundle) message.obj;
+                    String modelName = hardwareVersionBundle.getString("modelName");
+                    String hardwareVersion = hardwareVersionBundle.getString("hardwareVersion");
+                    String serialNum = hardwareVersionBundle.getString("serialNum");
+                    String data = hardwareVersionBundle.getString("data");
+                    for (IMCUMainListener listener : mainManager.mMCUMainList) {
+                        listener.notifyHardwareVersion(modelName, hardwareVersion, serialNum, data);
                     }
                     break;
-                case 5:
-                    Iterator it5 = MCUMainManager.this.mMCUMainList.iterator();
-                    while (it5.hasNext()) {
-                        ((IMCUMainListener) it5.next()).notifyScreenVersion((String) message.obj);
+
+                case notifyScreenVersion:
+                    String screenVersion = (String) message.obj;
+                    for (IMCUMainListener mainListener : mainManager.mMCUMainList) {
+                        mainListener.notifyScreenVersion(screenVersion);
                     }
                     break;
-                case 6:
-                    Iterator it6 = MCUMainManager.this.mMCUMainList.iterator();
-                    while (it6.hasNext()) {
-                        ((IMCUMainListener) it6.next()).notifyCanboxVersion((String) message.obj);
+
+                case notifyCanboxVersion:
+                    String canboxVersion = (String) message.obj;
+                    for (IMCUMainListener imcuMainListener : mainManager.mMCUMainList) {
+                        imcuMainListener.notifyCanboxVersion(canboxVersion);
                     }
+                    break;
+
+                default:
                     break;
             }
         }
-    };
+    }
+
 
     private enum MSG_ID {
-        notifyCanboxData,
-        mcuInit,
-        notifyMCUVersion,
-        notifyHardwareVersion,
-        notifyCanboxVersion,
-        notifyScreenVersion,
-        notifyPowerStatus
+        notifyCanboxData, mcuInit, notifyMCUVersion, notifyHardwareVersion, notifyCanboxVersion, notifyScreenVersion, notifyPowerStatus
     }
 
     @Override // com.hzbhd.proxy.mcu.base.IMCUBaseManager
@@ -104,45 +125,12 @@ public class MCUMainManager implements IMCUMainManager {
     /* JADX INFO: Access modifiers changed from: private */
     public IMCUMainService getMCUMainService() {
         if (this.mMCUMainService == null) {
-            this.mMCUMainService = IMCUMainService.Stub.asInterface(ServiceManager.getService(ServiceConstants.SERVICE_NAME_MCU_SERVICE));
+            this.mMCUMainService = IMCUMainService.Stub.asInterface(ServiceManagerReflection.getService(ServiceConstants.SERVICE_NAME_MCU_SERVICE));
             onServiceConn();
         }
-        return IMCUMainService.Stub.asInterface(ServiceManager.getService(ServiceConstants.SERVICE_NAME_MCU_SERVICE));
+        return IMCUMainService.Stub.asInterface(ServiceManagerReflection.getService(ServiceConstants.SERVICE_NAME_MCU_SERVICE));
     }
 
-    /* renamed from: com.hzbhd.proxy.mcu.core.MCUMainManager$4, reason: invalid class name */
-    static /* synthetic */ class AnonymousClass4 {
-        static final /* synthetic */ int[] $SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID;
-
-        static {
-            int[] iArr = new int[MSG_ID.values().length];
-            $SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID = iArr;
-            try {
-                iArr[MSG_ID.mcuInit.ordinal()] = 1;
-            } catch (NoSuchFieldError unused) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID[MSG_ID.notifyMCUVersion.ordinal()] = 2;
-            } catch (NoSuchFieldError unused2) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID[MSG_ID.notifyPowerStatus.ordinal()] = 3;
-            } catch (NoSuchFieldError unused3) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID[MSG_ID.notifyHardwareVersion.ordinal()] = 4;
-            } catch (NoSuchFieldError unused4) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID[MSG_ID.notifyScreenVersion.ordinal()] = 5;
-            } catch (NoSuchFieldError unused5) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$proxy$mcu$core$MCUMainManager$MSG_ID[MSG_ID.notifyCanboxVersion.ordinal()] = 6;
-            } catch (NoSuchFieldError unused6) {
-            }
-        }
-    }
 
     public static MCUMainManager getInstance() {
         if (instance == null) {
@@ -511,7 +499,7 @@ public class MCUMainManager implements IMCUMainManager {
             bundle.putByte("procotolVersion", b);
             bundle.putBoolean("powerOnType", z);
             bundle.putBoolean("hardwareReset", z2);
-            MCUMainManager.this.mMainHandler.obtainMessage(MSG_ID.mcuInit.ordinal(), bundle).sendToTarget();
+            handler.obtainMessage(MSG_ID.mcuInit.ordinal(), bundle).sendToTarget();
         }
 
         @Override // com.hzbhd.proxy.mcu.aidl.IMCUMainCallback
@@ -520,7 +508,7 @@ public class MCUMainManager implements IMCUMainManager {
             bundle.putString("softVerion", str);
             bundle.putString("softDate", str2);
             bundle.putString("hardwareConfig", str3);
-            MCUMainManager.this.mMainHandler.obtainMessage(MSG_ID.notifyMCUVersion.ordinal(), bundle).sendToTarget();
+            handler.obtainMessage(MSG_ID.notifyMCUVersion.ordinal(), bundle).sendToTarget();
         }
 
         @Override // com.hzbhd.proxy.mcu.aidl.IMCUMainCallback
@@ -530,22 +518,22 @@ public class MCUMainManager implements IMCUMainManager {
             bundle.putString("hardwareVersion", str2);
             bundle.putString("serialNum", str3);
             bundle.putString("data", str4);
-            MCUMainManager.this.mMainHandler.obtainMessage(MSG_ID.notifyHardwareVersion.ordinal(), bundle).sendToTarget();
+            handler.obtainMessage(MSG_ID.notifyHardwareVersion.ordinal(), bundle).sendToTarget();
         }
 
         @Override // com.hzbhd.proxy.mcu.aidl.IMCUMainCallback
         public void notifyCanboxVersion(String str) throws RemoteException {
-            MCUMainManager.this.mMainHandler.obtainMessage(MSG_ID.notifyCanboxVersion.ordinal(), str).sendToTarget();
+            handler.obtainMessage(MSG_ID.notifyCanboxVersion.ordinal(), str).sendToTarget();
         }
 
         @Override // com.hzbhd.proxy.mcu.aidl.IMCUMainCallback
         public void notifyScreenVersion(String str) throws RemoteException {
-            MCUMainManager.this.mMainHandler.obtainMessage(MSG_ID.notifyScreenVersion.ordinal(), str).sendToTarget();
+            handler.obtainMessage(MSG_ID.notifyScreenVersion.ordinal(), str).sendToTarget();
         }
 
         @Override // com.hzbhd.proxy.mcu.aidl.IMCUMainCallback
         public void notifyPowerStatus(int i) throws RemoteException {
-            MCUMainManager.this.mMainHandler.obtainMessage(MSG_ID.notifyPowerStatus.ordinal(), Integer.valueOf(i)).sendToTarget();
+            handler.obtainMessage(MSG_ID.notifyPowerStatus.ordinal(), i).sendToTarget();
         }
     }
 

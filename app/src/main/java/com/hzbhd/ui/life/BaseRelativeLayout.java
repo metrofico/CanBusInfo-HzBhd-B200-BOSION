@@ -4,18 +4,19 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.FrameLayout;
+
 import androidx.lifecycle.Lifecycle;
+
 import com.hzbhd.ui.base.BhdRelativeLayout;
 import com.hzbhd.ui.base.BhdViewUtil;
 import com.hzbhd.util.LogUtil;
+
 import kotlin.Metadata;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: BaseRelativeLayout.kt */
-@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\b&\u0018\u00002\u00020\u0001B\u000f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004B\u0017\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007B!\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nB)\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\u000b\u001a\u00020\t¢\u0006\u0002\u0010\fJ\b\u0010\u001a\u001a\u00020\u001bH\u0002J\b\u0010\u001c\u001a\u00020\u001bH\u0002J\b\u0010\u001d\u001a\u00020\u0010H\u0016J\b\u0010\u001e\u001a\u00020\u0010H\u0016J\b\u0010\u001f\u001a\u00020 H\u0014J\b\u0010!\u001a\u00020\u000eH&J\u0006\u0010\"\u001a\u00020\u001bJ\b\u0010#\u001a\u00020\u001bH\u0014J\b\u0010$\u001a\u00020\u001bH\u0014J\b\u0010%\u001a\u00020\u001bH\u0014J\u0010\u0010&\u001a\u00020\u001b2\u0006\u0010'\u001a\u00020(H\u0016J\b\u0010)\u001a\u00020\u001bH\u0016J\u0018\u0010*\u001a\u00020\u001b2\u0006\u0010+\u001a\u00020,2\u0006\u0010-\u001a\u00020\tH\u0014J\u0010\u0010.\u001a\u00020\u001b2\u0006\u0010-\u001a\u00020\tH\u0014R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0010X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\tX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\tX\u0082\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\u0014\u001a\u0004\u0018\u00010\u0015X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\u0017\"\u0004\b\u0018\u0010\u0019¨\u0006/"}, d2 = {"Lcom/hzbhd/ui/life/BaseRelativeLayout;", "Lcom/hzbhd/ui/base/BhdRelativeLayout;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "attrs", "Landroid/util/AttributeSet;", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "defStyleRes", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "emptyBinding", "Lcom/hzbhd/ui/life/EmptyBinding;", "isAdd", "", "isNeedAdd", "mVisibility", "mWindowVisibility", "myLifeCycleOwner", "Lcom/hzbhd/ui/life/MyLifeCycleOwner;", "getMyLifeCycleOwner", "()Lcom/hzbhd/ui/life/MyLifeCycleOwner;", "setMyLifeCycleOwner", "(Lcom/hzbhd/ui/life/MyLifeCycleOwner;)V", "addBaseChild", "", "addOrRemoveView", "autoInitChild", "autoRemoveChild", "generateDefaultLayoutParams", "Landroid/widget/FrameLayout$LayoutParams;", "getBinding", "initChild", "onAttachedToWindow", "onDetachedFromWindow", "onFinishInflate", "onLifeCycleChange", "state", "Landroidx/lifecycle/Lifecycle$State;", "onViewAdd", "onVisibilityChanged", "changedView", "Landroid/view/View;", "visibility", "onWindowVisibilityChanged", "lifeview_release"}, k = 1, mv = {1, 6, 0}, xi = 48)
-/* loaded from: classes2.dex */
+
 public abstract class BaseRelativeLayout extends BhdRelativeLayout {
     private EmptyBinding emptyBinding;
     private boolean isAdd;
@@ -83,19 +84,9 @@ public abstract class BaseRelativeLayout extends BhdRelativeLayout {
     }
 
     public final void initChild() {
-        BhdViewUtil.INSTANCE.runBack(new Function0<Unit>() { // from class: com.hzbhd.ui.life.BaseRelativeLayout.initChild.1
-            {
-                super(0);
-            }
-
-            @Override // kotlin.jvm.functions.Function0
-            public /* bridge */ /* synthetic */ Unit invoke() {
-                invoke2();
-                return Unit.INSTANCE;
-            }
-
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final void invoke2() {
+        BhdViewUtil.INSTANCE.runBack(new Runnable() {
+            @Override
+            public void run() {
                 if (!BaseRelativeLayout.this.autoRemoveChild() && BaseRelativeLayout.this.emptyBinding != null) {
                     BaseRelativeLayout.this.addBaseChild();
                     return;
@@ -115,6 +106,7 @@ public abstract class BaseRelativeLayout extends BhdRelativeLayout {
                 BaseRelativeLayout.this.addBaseChild();
             }
         });
+
     }
 
     @Override // com.hzbhd.ui.base.BhdRelativeLayout, android.view.View
@@ -158,19 +150,9 @@ public abstract class BaseRelativeLayout extends BhdRelativeLayout {
 
     /* JADX INFO: Access modifiers changed from: private */
     public final void addBaseChild() {
-        BhdViewUtil.INSTANCE.runUi(new Function0<Unit>() { // from class: com.hzbhd.ui.life.BaseRelativeLayout.addBaseChild.1
-            {
-                super(0);
-            }
-
-            @Override // kotlin.jvm.functions.Function0
-            public /* bridge */ /* synthetic */ Unit invoke() {
-                invoke2();
-                return Unit.INSTANCE;
-            }
-
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final void invoke2() {
+        BhdViewUtil.INSTANCE.runUi(new Runnable() {
+            @Override
+            public void run() {
                 View root;
                 if (BaseRelativeLayout.this.isNeedAdd) {
                     BaseRelativeLayout.this.removeAllViews();
@@ -184,30 +166,23 @@ public abstract class BaseRelativeLayout extends BhdRelativeLayout {
                 }
             }
         });
+
     }
 
     private final void addOrRemoveView() {
-        BhdViewUtil.INSTANCE.runUi(new Function0<Unit>() { // from class: com.hzbhd.ui.life.BaseRelativeLayout.addOrRemoveView.1
-            {
-                super(0);
-            }
-
-            @Override // kotlin.jvm.functions.Function0
-            public /* bridge */ /* synthetic */ Unit invoke() {
-                invoke2();
-                return Unit.INSTANCE;
-            }
-
-            /* renamed from: invoke, reason: avoid collision after fix types in other method */
-            public final void invoke2() {
+        BhdViewUtil.INSTANCE.runUi(new Runnable() {
+            @Override
+            public void run() {
                 Lifecycle lifecycle;
                 Lifecycle lifecycle2;
                 Lifecycle lifecycle3;
                 if (LogUtil.log3()) {
-                    LogUtil.d("addOrRemoveView: " + ((Object) BaseRelativeLayout.this.getClass().getSimpleName()) + "  " + BaseRelativeLayout.this.isAttachedToWindow() + " , " + BaseRelativeLayout.this.getWindowVisibility() + " , " + BaseRelativeLayout.this.getVisibility() + " , " + BaseRelativeLayout.this.isAdd + " , " + BaseRelativeLayout.this.isNeedAdd + " , " + BaseRelativeLayout.this.mWindowVisibility + ", " + BaseRelativeLayout.this.mVisibility);
+                    LogUtil.d("addOrRemoveView: " + BaseRelativeLayout.this.getClass().getSimpleName() + "  " + BaseRelativeLayout.this.isAttachedToWindow() + " , " + BaseRelativeLayout.this.getWindowVisibility() + " , " + BaseRelativeLayout.this.getVisibility() + " , " + BaseRelativeLayout.this.isAdd + " , " + BaseRelativeLayout.this.isNeedAdd + " , " + BaseRelativeLayout.this.mWindowVisibility + ", " + BaseRelativeLayout.this.mVisibility);
                 }
                 Lifecycle.State currentState = null;
-                if (!BaseRelativeLayout.this.isAttachedToWindow() || BaseRelativeLayout.this.getWindowVisibility() != 0 || BaseRelativeLayout.this.getVisibility() != 0 || BaseRelativeLayout.this.mWindowVisibility != 0 || BaseRelativeLayout.this.mVisibility != 0) {
+                if (!BaseRelativeLayout.this.isAttachedToWindow() || BaseRelativeLayout.this.getWindowVisibility() != View.VISIBLE
+                        || BaseRelativeLayout.this.getVisibility() != View.VISIBLE || BaseRelativeLayout.this.mWindowVisibility != 0
+                        || BaseRelativeLayout.this.mVisibility != 0) {
                     if (BaseRelativeLayout.this.isAdd) {
                         BaseRelativeLayout.this.isAdd = false;
                         BaseRelativeLayout.this.isNeedAdd = false;
@@ -277,5 +252,6 @@ public abstract class BaseRelativeLayout extends BhdRelativeLayout {
                 baseRelativeLayout3.onLifeCycleChange(currentState);
             }
         });
+
     }
 }

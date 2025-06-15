@@ -1,6 +1,7 @@
 package com.hzbhd.proxy.keydispatcher;
 
 import android.os.Bundle;
+
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import com.hzbhd.proxy.keydispatcher.aidl.IKeyDispatcherService;
@@ -16,7 +17,6 @@ public class SendKeyManager {
                 mSendKeyManager = new SendKeyManager();
             }
         }
-        return mSendKeyManager;
         return mSendKeyManager;
     }
 

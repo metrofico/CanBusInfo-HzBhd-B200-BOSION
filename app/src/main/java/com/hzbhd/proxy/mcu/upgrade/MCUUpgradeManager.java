@@ -7,7 +7,9 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.os.RemoteException;
+
 import androidx.core.app.NotificationCompat;
+
 import com.hzbhd.proxy.mcu.aidl.IMCUUpgradeCallback;
 import com.hzbhd.proxy.mcu.aidl.IMCUUpgradeService;
 import com.hzbhd.proxy.mcu.constant.MCUConstants;
@@ -15,6 +17,7 @@ import com.hzbhd.proxy.mcu.upgrade.UpgradeConstants;
 import com.hzbhd.proxy.service.ServiceConstants;
 import com.hzbhd.proxy.service.bhdNewServiceConnection;
 import com.hzbhd.util.LogUtil;
+
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -43,7 +46,8 @@ public class MCUUpgradeManager extends bhdNewServiceConnection implements IMCUUp
         return MCUConstants.MCU_ACTION;
     }
 
-    @Override // com.hzbhd.proxy.service.bhdNewServiceConnection, com.hzbhd.proxy.service.IbhdServiceConnection
+    @Override
+    // com.hzbhd.proxy.service.bhdNewServiceConnection, com.hzbhd.proxy.service.IbhdServiceConnection
     public String getServiceName() {
         return ServiceConstants.SERVICE_NAME_MCU_UPGRADE;
     }
@@ -59,44 +63,50 @@ public class MCUUpgradeManager extends bhdNewServiceConnection implements IMCUUp
 
     public MCUUpgradeManager(Context context) {
         super(context);
-        this.mUpgradeList = new HashSet();
+        this.mUpgradeList = new HashSet<>();
         this.mIMCUUpgradeCallback = new MCUUpgradeCallback();
-        this.mMsgHandler = new Handler(Looper.getMainLooper()) { // from class: com.hzbhd.proxy.mcu.upgrade.MCUUpgradeManager.1
-            @Override // android.os.Handler
+        this.mMsgHandler = new Handler(Looper.getMainLooper()) {
+            @Override
             public void handleMessage(Message message) {
-                int i = AnonymousClass2.$SwitchMap$com$hzbhd$proxy$mcu$upgrade$MCUUpgradeManager$UPGRADE_MSG_ID[UPGRADE_MSG_ID.values()[message.what].ordinal()];
-                if (i == 1) {
-                    Bundle bundle = (Bundle) message.obj;
-                    boolean z = bundle.getBoolean("isUpgrade");
-                    String string = bundle.getString(NotificationCompat.CATEGORY_STATUS);
-                    synchronized (MCUUpgradeManager.this.mUpgradeList) {
-                        Iterator it = MCUUpgradeManager.this.mUpgradeList.iterator();
-                        while (it.hasNext()) {
-                            ((IMCUUpgradeListener) it.next()).notifyMCUUpgradeStartCheckStatus(z, UpgradeConstants.UpgradeStartCheckStatus.valueOf(string));
+                UPGRADE_MSG_ID msgId = UPGRADE_MSG_ID.values()[message.what];
+
+                switch (msgId) {
+                    case notifyMCUUpgradeStartCheckStatus:
+                        Bundle bundle = (Bundle) message.obj;
+                        boolean isUpgrade = bundle.getBoolean("isUpgrade");
+                        String statusString = bundle.getString(NotificationCompat.CATEGORY_STATUS);
+                        synchronized (MCUUpgradeManager.this.mUpgradeList) {
+                            for (IMCUUpgradeListener listener : MCUUpgradeManager.this.mUpgradeList) {
+                                listener.notifyMCUUpgradeStartCheckStatus(isUpgrade,
+                                        UpgradeConstants.UpgradeStartCheckStatus.valueOf(statusString));
+                            }
                         }
-                    }
-                    return;
-                }
-                if (i == 2) {
-                    synchronized (MCUUpgradeManager.this.mUpgradeList) {
-                        Iterator it2 = MCUUpgradeManager.this.mUpgradeList.iterator();
-                        while (it2.hasNext()) {
-                            ((IMCUUpgradeListener) it2.next()).notifyMCUUpgradeEndCheckStatus(UpgradeConstants.UpgradeStartEndStatus.valueOf((String) message.obj));
+                        break;
+
+                    case notifyMCUUpgradeEndCheckStatus:
+                        synchronized (MCUUpgradeManager.this.mUpgradeList) {
+                            for (IMCUUpgradeListener listener : MCUUpgradeManager.this.mUpgradeList) {
+                                listener.notifyMCUUpgradeEndCheckStatus(
+                                        UpgradeConstants.UpgradeStartEndStatus.valueOf((String) message.obj));
+                            }
                         }
-                    }
-                    return;
-                }
-                if (i != 3) {
-                    return;
-                }
-                synchronized (MCUUpgradeManager.this.mUpgradeList) {
-                    Iterator it3 = MCUUpgradeManager.this.mUpgradeList.iterator();
-                    while (it3.hasNext()) {
-                        ((IMCUUpgradeListener) it3.next()).notifyMCUUpgradeSendDataSeq(((Integer) message.obj).intValue());
-                    }
+                        break;
+
+                    case notifyMCUUpgradeSendDataSeq:
+                        synchronized (MCUUpgradeManager.this.mUpgradeList) {
+                            for (IMCUUpgradeListener listener : MCUUpgradeManager.this.mUpgradeList) {
+                                listener.notifyMCUUpgradeSendDataSeq((Integer) message.obj);
+                            }
+                        }
+                        break;
+
+                    default:
+                        // No se maneja ningún otro caso
+                        break;
                 }
             }
         };
+
     }
 
     public static MCUUpgradeManager getInstance(Context context) {

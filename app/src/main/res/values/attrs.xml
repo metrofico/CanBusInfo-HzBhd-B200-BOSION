@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <declare-styleable name="recycleViewAttrs">
+        <attr name="default_item_layout" format="reference" />
+        <attr name="default_item_width" format="dimension" />
+        <attr name="default_item_height" format="dimension" />
+        <attr name="first_item_layout" format="reference" />
+        <attr name="last_item_layout" format="reference" />
+        <attr name="scroll_style" format="reference" />
+        <attr name="default_item_layout_child" format="reference" />
+        <attr name="recyclerview_style" format="reference" />
+    </declare-styleable>
     <declare-styleable name="BcSettingSeekBarView">
         <attr name="title" format="string" />
     </declare-styleable>
@@ -61,8 +70,6 @@
         <attr name="full_fg" format="reference" />
         <attr name="full_fg_p" format="reference" />
     </declare-styleable>
-    <declare-styleable name="BcSettingSeekBarStyle">title</declare-styleable>
-    <declare-styleable name="BcSettingSeekBarStyle">test</declare-styleable>
     <attr name="actionBarDivider" format="reference" />
     <attr name="actionBarItemBackground" format="reference" />
     <attr name="actionBarPopupTheme" format="reference" />

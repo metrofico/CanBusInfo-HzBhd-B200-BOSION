@@ -1,11 +1,11 @@
 package com.hzbhd.setting.proxy;
 
-import android.os.ServiceManager;
 import com.hzbhd.common.settings.constant.BodaSysContant;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.setting.proxy.aidl.ISettingServiceManager;
 import com.hzbhd.systemstatus.proxy.IServiceConnectListener;
 import com.hzbhd.systemstatus.proxy.ServiceStateManager;
+import com.hzbhd.util.ServiceManagerReflection;
 
 /* loaded from: classes2.dex */
 public class SettingServiceManager {
@@ -23,7 +23,7 @@ public class SettingServiceManager {
                 }
             });
         }
-        return ISettingServiceManager.Stub.asInterface(ServiceManager.getService(SERVICE_NAME_SETTING_SERVICE));
+        return ISettingServiceManager.Stub.asInterface(ServiceManagerReflection.getService(SERVICE_NAME_SETTING_SERVICE));
     }
 
     protected static int getKey(SourceConstantsDef.MODULE_ID module_id, BodaSysContant.TypeDef typeDef) {

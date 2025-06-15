@@ -2,10 +2,12 @@ package com.hzbhd.proxy.sourcemanager;
 
 import android.os.Bundle;
 import android.os.RemoteException;
+
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.sourcemanager.aidl.ISourceBluetoothCallback;
 import com.hzbhd.proxy.sourcemanager.aidl.ISourceCallback;
 import com.hzbhd.proxy.sourcemanager.aidl.ISourceService;
+
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -15,10 +17,10 @@ public class SourceManager {
     public static final int ERR_NO_SERVICE = -1;
     public static final int ERR_SOURCE_NOT_DEFINED = -3;
     private static SourceManager mSourceManager;
-    private HashMap<Integer, ISourceListener> mDispSourceListeners = new HashMap<>();
-    private HashMap<Integer, MyISourceCallback> mDispSourceCallbacks = new HashMap<>();
-    private HashMap<Integer, ISourceBluetoothListener> mSourceBluetoothListeners = new HashMap<>();
-    private HashMap<Integer, ISourceBluetoothCallback> mSourceBluetoothCallbacks = new HashMap<>();
+    private final HashMap<Integer, ISourceListener> mDispSourceListeners = new HashMap<>();
+    private final HashMap<Integer, MyISourceCallback> mDispSourceCallbacks = new HashMap<>();
+    private final HashMap<Integer, ISourceBluetoothListener> mSourceBluetoothListeners = new HashMap<>();
+    private final HashMap<Integer, ISourceBluetoothCallback> mSourceBluetoothCallbacks = new HashMap<>();
 
     public static synchronized SourceManager getInstance() {
         synchronized (SourceManager.class) {
@@ -26,7 +28,6 @@ public class SourceManager {
                 mSourceManager = new SourceManager();
             }
         }
-        return mSourceManager;
         return mSourceManager;
     }
 
@@ -140,13 +141,11 @@ public class SourceManager {
     }
 
     private void removeISourceCallback(int i) {
-        if (this.mDispSourceCallbacks.containsKey(Integer.valueOf(i))) {
-            this.mDispSourceCallbacks.remove(Integer.valueOf(i));
-        }
+        this.mDispSourceCallbacks.remove(Integer.valueOf(i));
     }
 
     private class MyISourceCallback extends ISourceCallback.Stub {
-        private int mDispSource;
+        private final int mDispSource;
 
         public MyISourceCallback(int i) {
             this.mDispSource = i;
@@ -155,7 +154,7 @@ public class SourceManager {
         @Override // com.hzbhd.proxy.sourcemanager.aidl.ISourceCallback
         public void onAction(int i, Bundle bundle) throws RemoteException {
             if (SourceManager.this.mDispSourceListeners.containsKey(Integer.valueOf(this.mDispSource))) {
-                ((ISourceListener) SourceManager.this.mDispSourceListeners.get(Integer.valueOf(this.mDispSource))).onAction(SourceConstantsDef.SOURCE_ACTION.values()[i], bundle);
+                SourceManager.this.mDispSourceListeners.get(Integer.valueOf(this.mDispSource)).onAction(SourceConstantsDef.SOURCE_ACTION.values()[i], bundle);
             }
         }
     }
@@ -229,7 +228,7 @@ public class SourceManager {
     }
 
     private class MyISourceBluetoothCallback extends ISourceBluetoothCallback.Stub {
-        private int mSourceId;
+        private final int mSourceId;
 
         public MyISourceBluetoothCallback(int i) {
             this.mSourceId = i;
@@ -238,7 +237,7 @@ public class SourceManager {
         @Override // com.hzbhd.proxy.sourcemanager.aidl.ISourceBluetoothCallback
         public void onState(int i) throws RemoteException {
             if (SourceManager.this.mSourceBluetoothListeners.containsKey(Integer.valueOf(this.mSourceId))) {
-                ((ISourceBluetoothListener) SourceManager.this.mSourceBluetoothListeners.get(Integer.valueOf(this.mSourceId))).onState(i);
+                SourceManager.this.mSourceBluetoothListeners.get(Integer.valueOf(this.mSourceId)).onState(i);
             }
         }
     }

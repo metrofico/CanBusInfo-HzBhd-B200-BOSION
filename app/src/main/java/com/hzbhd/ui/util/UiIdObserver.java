@@ -26,7 +26,7 @@ public final class UiIdObserver {
         ShareDataManager.getInstance().registerShareStringListener(ShareConstants.SHARE_UI_ID, new IShareStringListener() { // from class: com.hzbhd.ui.util.UiIdObserver$$ExternalSyntheticLambda1
             @Override // com.hzbhd.proxy.share.interfaces.IShareStringListener
             public final void onString(String str) {
-                UiIdObserver.m1206_init_$lambda0(this.f$0, str);
+                notifyUIChange(str);
             }
         });
     }
@@ -40,15 +40,8 @@ public final class UiIdObserver {
         this.oldId = str;
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: _init_$lambda-0, reason: not valid java name */
-    public static final void m1206_init_$lambda0(UiIdObserver this$0, String uiid) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullExpressionValue(uiid, "uiid");
-        this$0.notifyUIChange(uiid);
-    }
 
-    public static /* synthetic */ void addUIChangeListener$default(UiIdObserver uiIdObserver, int i, UIChangeListener uIChangeListener, int i2, Object obj) {
+    public static void addUIChangeListener$default(UiIdObserver uiIdObserver, int i, UIChangeListener uIChangeListener, int i2, Object obj) {
         if ((i2 & 1) != 0) {
             i = -1;
         }

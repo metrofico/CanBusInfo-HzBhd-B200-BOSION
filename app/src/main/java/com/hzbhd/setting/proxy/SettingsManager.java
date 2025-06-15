@@ -5,6 +5,7 @@ import com.hzbhd.common.settings.constant.Configs;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.setting.proxy.aidl.ISettingServiceManager;
 import com.hzbhd.setting.proxy.aidl.ISettingsCallBack;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -12,8 +13,8 @@ import java.util.HashMap;
 public class SettingsManager {
     private static final String TAG = "SettingsManager";
     private static SettingsManager mSettingsManager;
-    private HashMap<Integer, ArrayList<ISettingsListener>> mSettingsListenerLists = new HashMap<>();
-    private HashMap<Integer, ISettingsCallBack> mISettingsCallBacks = new HashMap<>();
+    private final HashMap<Integer, ArrayList<ISettingsListener>> mSettingsListenerLists = new HashMap<>();
+    private final HashMap<Integer, ISettingsCallBack> mISettingsCallBacks = new HashMap<>();
 
     public static synchronized SettingsManager getInstance() {
         synchronized (SettingsManager.class) {
@@ -21,7 +22,6 @@ public class SettingsManager {
                 mSettingsManager = new SettingsManager();
             }
         }
-        return mSettingsManager;
         return mSettingsManager;
     }
 
@@ -81,7 +81,7 @@ public class SettingsManager {
     }
 
     private class MyISettingsCallBack extends ISettingsCallBack.Stub {
-        private int mKey;
+        private final int mKey;
 
         private MyISettingsCallBack(int i) {
             this.mKey = i;
@@ -90,7 +90,7 @@ public class SettingsManager {
         @Override // com.hzbhd.setting.proxy.aidl.ISettingsCallBack
         public void onSettingsInt(int i, int i2, int i3) {
             if (SettingsManager.this.mSettingsListenerLists.containsKey(Integer.valueOf(this.mKey)) && SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey)) != null) {
-                for (int i4 = 0; i4 < ((ArrayList) SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey))).size(); i4++) {
+                for (int i4 = 0; i4 < SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey)).size(); i4++) {
                     ((ISettingsListener) ((ArrayList) SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey))).get(i4)).onReceived(i, i2, Integer.valueOf(i3));
                 }
             }
@@ -99,7 +99,7 @@ public class SettingsManager {
         @Override // com.hzbhd.setting.proxy.aidl.ISettingsCallBack
         public void onSettingsBytes(int i, int i2, byte[] bArr) {
             if (SettingsManager.this.mSettingsListenerLists.containsKey(Integer.valueOf(this.mKey)) && SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey)) != null) {
-                for (int i3 = 0; i3 < ((ArrayList) SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey))).size(); i3++) {
+                for (int i3 = 0; i3 < SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey)).size(); i3++) {
                     ((ISettingsListener) ((ArrayList) SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey))).get(i3)).onReceived(i, i2, bArr);
                 }
             }
@@ -108,7 +108,7 @@ public class SettingsManager {
         @Override // com.hzbhd.setting.proxy.aidl.ISettingsCallBack
         public void onSettingsString(int i, int i2, String str) {
             if (SettingsManager.this.mSettingsListenerLists.containsKey(Integer.valueOf(this.mKey)) && SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey)) != null) {
-                for (int i3 = 0; i3 < ((ArrayList) SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey))).size(); i3++) {
+                for (int i3 = 0; i3 < SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey)).size(); i3++) {
                     ((ISettingsListener) ((ArrayList) SettingsManager.this.mSettingsListenerLists.get(Integer.valueOf(this.mKey))).get(i3)).onReceived(i, i2, str);
                 }
             }

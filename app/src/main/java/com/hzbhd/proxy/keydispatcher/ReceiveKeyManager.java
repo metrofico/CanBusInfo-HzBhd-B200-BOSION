@@ -1,9 +1,11 @@
 package com.hzbhd.proxy.keydispatcher;
 
 import android.os.Bundle;
+
 import com.hzbhd.proxy.keydispatcher.aidl.IKeyDispatcherCallback;
 import com.hzbhd.proxy.keydispatcher.aidl.IKeyDispatcherService;
 import com.hzbhd.proxy.keydispatcher.interfaces.IHotKeyListener;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -21,7 +23,6 @@ public class ReceiveKeyManager {
                 mReceiveKeyManager = new ReceiveKeyManager();
             }
         }
-        return mReceiveKeyManager;
         return mReceiveKeyManager;
     }
 

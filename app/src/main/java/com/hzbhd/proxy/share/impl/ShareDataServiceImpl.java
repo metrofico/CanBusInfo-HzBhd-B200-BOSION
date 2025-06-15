@@ -6,13 +6,15 @@ import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
-import android.os.ServiceManager;
+
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.share.aidl.IShareBundleCallback;
 import com.hzbhd.proxy.share.aidl.IShareDataService;
 import com.hzbhd.proxy.share.aidl.IShareIntCallback;
 import com.hzbhd.proxy.share.aidl.IShareStringCallback;
 import com.hzbhd.util.LogUtil;
+import com.hzbhd.util.ServiceManagerReflection;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -142,7 +144,7 @@ public final class ShareDataServiceImpl extends IShareDataService.Stub {
     }
 
     public static void init(SourceConstantsDef.MODULE_ID module_id) {
-        ServiceManager.addService("share_" + module_id, getInstance());
+        ServiceManagerReflection.addService("share_" + module_id, getInstance());
     }
 
     public static void setInt(String str, int i) {

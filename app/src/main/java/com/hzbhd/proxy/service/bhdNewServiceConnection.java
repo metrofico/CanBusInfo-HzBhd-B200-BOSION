@@ -96,7 +96,7 @@ public abstract class bhdNewServiceConnection implements IbhdServiceConnection, 
     }
 
     @Override // android.content.ServiceConnection
-    public void onServiceConnected(ComponentName componentName, IBinder iBinder) throws RemoteException {
+    public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
         String str = TAG;
         Log.i(str, "onServiceConnected,ComponentName=" + componentName + " service=" + iBinder);
         this.isConnected = true;

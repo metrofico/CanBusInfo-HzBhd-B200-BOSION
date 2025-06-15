@@ -2,6 +2,7 @@ package com.hzbhd.systemstatus.proxy;
 
 import com.hzbhd.systemstatus.proxy.aidl.IServiceConnectCallback;
 import com.hzbhd.systemstatus.proxy.aidl.ISystemStatusManager;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -9,8 +10,8 @@ import java.util.List;
 /* loaded from: classes2.dex */
 public class ServiceStateManager {
     private static ServiceStateManager mServiceStateManager;
-    private HashMap<Integer, List<IServiceConnectListener>> mServiceConnectListenerList = new HashMap<>();
-    private HashMap<Integer, IServiceConnectCallback> mServiceConnectCallbacks = new HashMap<>();
+    private final HashMap<Integer, List<IServiceConnectListener>> mServiceConnectListenerList = new HashMap<>();
+    private final HashMap<Integer, IServiceConnectCallback> mServiceConnectCallbacks = new HashMap<>();
 
     public static synchronized ServiceStateManager getInstance() {
         ServiceStateManager serviceStateManager;
@@ -20,7 +21,6 @@ public class ServiceStateManager {
             }
             serviceStateManager = mServiceStateManager;
         }
-        return serviceStateManager;
         return serviceStateManager;
     }
 
@@ -94,7 +94,7 @@ public class ServiceStateManager {
     }
 
     private class MyIServiceConnectCallback extends IServiceConnectCallback.Stub {
-        private int mModuleId;
+        private final int mModuleId;
 
         public MyIServiceConnectCallback(int i) {
             this.mModuleId = i;
@@ -102,10 +102,10 @@ public class ServiceStateManager {
 
         @Override // com.hzbhd.systemstatus.proxy.aidl.IServiceConnectCallback
         public void onConnected() {
-            if (ServiceStateManager.this.mServiceConnectListenerList.containsKey(Integer.valueOf(this.mModuleId))) {
-                List list = (List) ServiceStateManager.this.mServiceConnectListenerList.get(Integer.valueOf(this.mModuleId));
+            if (ServiceStateManager.this.mServiceConnectListenerList.containsKey(this.mModuleId)) {
+                List<IServiceConnectListener> list = ServiceStateManager.this.mServiceConnectListenerList.get(this.mModuleId);
                 for (int i = 0; i < list.size(); i++) {
-                    ((IServiceConnectListener) list.get(i)).onConnected();
+                    list.get(i).onConnected();
                 }
             }
         }

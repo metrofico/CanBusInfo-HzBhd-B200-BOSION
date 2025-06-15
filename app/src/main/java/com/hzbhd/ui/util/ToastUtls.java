@@ -59,23 +59,23 @@ public class ToastUtls {
     }
 
     public static void showShortText(Context context, int i) throws Resources.NotFoundException {
-        Toast toastMakeText = Toast.makeText(context, i, 0);
+        Toast toastMakeText = Toast.makeText(context, i, Toast.LENGTH_SHORT);
         toastMakeText.setGravity(80, 0, 250);
         toastMakeText.show();
     }
 
     public static void showShortTextBottom(Context context, int i) {
-        Toast.makeText(context, i, 0).show();
+        Toast.makeText(context, i, Toast.LENGTH_SHORT).show();
     }
 
     public static void showLongText(Context context, int i) throws Resources.NotFoundException {
-        Toast toastMakeText = Toast.makeText(context, i, 1);
+        Toast toastMakeText = Toast.makeText(context, i, Toast.LENGTH_LONG);
         toastMakeText.setGravity(80, 0, 250);
         toastMakeText.show();
     }
 
     public static void showLongText(Context context, String str) {
-        Toast toastMakeText = Toast.makeText(context, str, 1);
+        Toast toastMakeText = Toast.makeText(context, str, Toast.LENGTH_LONG);
         toastMakeText.setGravity(80, 0, 250);
         toastMakeText.show();
     }

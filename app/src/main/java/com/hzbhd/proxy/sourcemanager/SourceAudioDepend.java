@@ -1,17 +1,19 @@
 package com.hzbhd.proxy.sourcemanager;
 
 import android.os.RemoteException;
+
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.sourcemanager.aidl.IAudioCallback;
 import com.hzbhd.proxy.sourcemanager.aidl.ISourceService;
+
 import java.util.HashMap;
 import java.util.Iterator;
 
 /* loaded from: classes2.dex */
 public class SourceAudioDepend {
     private static SourceAudioDepend mAudioDepend;
-    private HashMap<Integer, IAudioDependListener> mDispAudioListeners = new HashMap<>();
-    private HashMap<Integer, IAudioCallback> mDispAudioCallbacks = new HashMap<>();
+    private final HashMap<Integer, IAudioDependListener> mDispAudioListeners = new HashMap<>();
+    private final HashMap<Integer, IAudioCallback> mDispAudioCallbacks = new HashMap<>();
 
     public static synchronized SourceAudioDepend getInstance() {
         synchronized (SourceAudioDepend.class) {
@@ -19,7 +21,6 @@ public class SourceAudioDepend {
                 mAudioDepend = new SourceAudioDepend();
             }
         }
-        return mAudioDepend;
         return mAudioDepend;
     }
 
@@ -79,7 +80,7 @@ public class SourceAudioDepend {
     }
 
     private class MyIAudioCallback extends IAudioCallback.Stub {
-        private int mDispId;
+        private final int mDispId;
 
         public MyIAudioCallback(int i) {
             this.mDispId = i;
@@ -88,14 +89,14 @@ public class SourceAudioDepend {
         @Override // com.hzbhd.proxy.sourcemanager.aidl.IAudioCallback
         public void requestAudio(int i, int i2, boolean z) throws RemoteException {
             if (SourceAudioDepend.this.mDispAudioListeners.containsKey(Integer.valueOf(this.mDispId))) {
-                ((IAudioDependListener) SourceAudioDepend.this.mDispAudioListeners.get(Integer.valueOf(this.mDispId))).requestAudio(i, i2, z);
+                SourceAudioDepend.this.mDispAudioListeners.get(Integer.valueOf(this.mDispId)).requestAudio(i, i2, z);
             }
         }
 
         @Override // com.hzbhd.proxy.sourcemanager.aidl.IAudioCallback
         public void setNavi(int i, int i2) throws RemoteException {
             if (SourceAudioDepend.this.mDispAudioListeners.containsKey(Integer.valueOf(this.mDispId))) {
-                ((IAudioDependListener) SourceAudioDepend.this.mDispAudioListeners.get(Integer.valueOf(this.mDispId))).setNavi(i, i2);
+                SourceAudioDepend.this.mDispAudioListeners.get(Integer.valueOf(this.mDispId)).setNavi(i, i2);
             }
         }
     }

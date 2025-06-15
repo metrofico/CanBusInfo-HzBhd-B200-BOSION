@@ -1,6 +1,7 @@
 package com.hzbhd.proxy.service;
 
 import android.util.Log;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Vector;
@@ -45,9 +46,7 @@ public class ServiceConnectionManager {
 
     public boolean connectService() {
         this.mLock.lock();
-        Iterator<ServiceConnection> it = this.mServiceNeedConnected.iterator();
-        while (it.hasNext()) {
-            ServiceConnection next = it.next();
+        for (ServiceConnection next : this.mServiceNeedConnected) {
             if (!next.getServiceConnection()) {
                 Log.w(TAG, "doBindService in back thread fail: " + next.getServiceName());
             } else {
@@ -62,9 +61,7 @@ public class ServiceConnectionManager {
     public void checkService() {
         this.mLock.lock();
         Vector<ServiceConnection> vector = new Vector<>();
-        Iterator<ServiceConnection> it = this.mServiceNeedConnected.iterator();
-        while (it.hasNext()) {
-            ServiceConnection next = it.next();
+        for (ServiceConnection next : this.mServiceNeedConnected) {
             if (!next.isServiceConnected()) {
                 vector.add(next);
                 Log.i(TAG, "checkService in back thread add: " + next.getServiceName());
@@ -81,7 +78,7 @@ public class ServiceConnectionManager {
         }
 
         @Override // java.lang.Runnable
-        public void run() throws InterruptedException {
+        public void run() {
             while (true) {
                 try {
                     if (ServiceConnectionManager.this.mServiceNeedConnected.isEmpty()) {

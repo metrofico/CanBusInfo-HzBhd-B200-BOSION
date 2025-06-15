@@ -1,5 +1,6 @@
 package com.hzbhd.ui.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
@@ -11,15 +12,16 @@ import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
+
 import com.hzbhd.util.LogUtil;
+
 import kotlin.Lazy;
 import kotlin.LazyKt;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MyRadioButton.kt */
-@Metadata(d1 = {"\u0000N\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u000e\n\u0002\u0018\u0002\n\u0002\b+\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0007\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0000\b\u0017\u0018\u00002\u00020\u0001B\u000f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004B\u0017\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006¢\u0006\u0002\u0010\u0007B\u001f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\t¢\u0006\u0002\u0010\nB'\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0006\u0012\u0006\u0010\b\u001a\u00020\t\u0012\u0006\u0010\u000b\u001a\u00020\t¢\u0006\u0002\u0010\fJ\u0010\u0010I\u001a\u00020J2\u0006\u0010K\u001a\u00020LH\u0017J \u0010M\u001a\u00020\u000f2\u0006\u0010N\u001a\u00020\u000f2\u0006\u0010O\u001a\u00020\t2\u0006\u0010P\u001a\u00020\tH\u0002J\u0010\u0010Q\u001a\u00020R2\u0006\u0010S\u001a\u00020\tH\u0002J\u001a\u0010T\u001a\u00020J2\u0006\u0010\u0002\u001a\u00020\u00032\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006H\u0002J\u0010\u0010U\u001a\u00020J2\u0006\u0010V\u001a\u00020WH\u0016R\u000e\u0010\r\u001a\u00020\tX\u0082\u000e¢\u0006\u0002\n\u0000R\u001c\u0010\u000e\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0010\u0010\u0011\"\u0004\b\u0012\u0010\u0013R\u001c\u0010\u0014\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0011\"\u0004\b\u0016\u0010\u0013R\u001c\u0010\u0017\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0018\u0010\u0011\"\u0004\b\u0019\u0010\u0013R\u001c\u0010\u001a\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001b\u0010\u0011\"\u0004\b\u001c\u0010\u0013R\u001b\u0010\u001d\u001a\u00020\u001e8BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b!\u0010\"\u001a\u0004\b\u001f\u0010 R\u001c\u0010#\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b$\u0010\u0011\"\u0004\b%\u0010\u0013R\u001a\u0010&\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b'\u0010(\"\u0004\b)\u0010*R\u001a\u0010+\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b,\u0010(\"\u0004\b-\u0010*R\u001c\u0010.\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b/\u0010\u0011\"\u0004\b0\u0010\u0013R\u001a\u00101\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b2\u0010(\"\u0004\b3\u0010*R\u001a\u00104\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b5\u0010(\"\u0004\b6\u0010*R\u001c\u00107\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b8\u0010\u0011\"\u0004\b9\u0010\u0013R\u001a\u0010:\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b;\u0010(\"\u0004\b<\u0010*R\u001a\u0010=\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b>\u0010(\"\u0004\b?\u0010*R\u001c\u0010@\u001a\u0004\u0018\u00010\u000fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bA\u0010\u0011\"\u0004\bB\u0010\u0013R\u001a\u0010C\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bD\u0010(\"\u0004\bE\u0010*R\u001a\u0010F\u001a\u00020\tX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bG\u0010(\"\u0004\bH\u0010*¨\u0006X"}, d2 = {"Lcom/hzbhd/ui/view/MyRadioButton;", "Landroid/widget/RadioButton;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "attrs", "Landroid/util/AttributeSet;", "(Landroid/content/Context;Landroid/util/AttributeSet;)V", "defStyleAttr", "", "(Landroid/content/Context;Landroid/util/AttributeSet;I)V", "defStyleRes", "(Landroid/content/Context;Landroid/util/AttributeSet;II)V", "drawGravity", "fullBg", "Landroid/graphics/Bitmap;", "getFullBg", "()Landroid/graphics/Bitmap;", "setFullBg", "(Landroid/graphics/Bitmap;)V", "fullBgP", "getFullBgP", "setFullBgP", "fullFg", "getFullFg", "setFullFg", "fullFgP", "getFullFgP", "setFullFgP", "mDrawablePaint", "Landroid/graphics/Paint;", "getMDrawablePaint", "()Landroid/graphics/Paint;", "mDrawablePaint$delegate", "Lkotlin/Lazy;", "minBg", "getMinBg", "setMinBg", "minBgHeight", "getMinBgHeight", "()I", "setMinBgHeight", "(I)V", "minBgLeft", "getMinBgLeft", "setMinBgLeft", "minBgP", "getMinBgP", "setMinBgP", "minBgTop", "getMinBgTop", "setMinBgTop", "minBgWidth", "getMinBgWidth", "setMinBgWidth", "minFg", "getMinFg", "setMinFg", "minFgHeight", "getMinFgHeight", "setMinFgHeight", "minFgLeft", "getMinFgLeft", "setMinFgLeft", "minFgP", "getMinFgP", "setMinFgP", "minFgTop", "getMinFgTop", "setMinFgTop", "minFgWidth", "getMinFgWidth", "setMinFgWidth", "draw", "", "canvas", "Landroid/graphics/Canvas;", "getDrawableBitmap", "bitmap", "drawWidth", "drawHeight", "getGravityFactor", "", "axis", "init", "setChecked", "checked", "", "commonview-base_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes3.dex */
+
+@SuppressLint("AppCompatCustomView")
 public class MyRadioButton extends RadioButton {
     private int drawGravity;
     private Bitmap fullBg;
@@ -28,7 +30,7 @@ public class MyRadioButton extends RadioButton {
     private Bitmap fullFgP;
 
     /* renamed from: mDrawablePaint$delegate, reason: from kotlin metadata */
-    private final Lazy mDrawablePaint;
+    private final Paint mDrawablePaint;
     private Bitmap minBg;
     private int minBgHeight;
     private int minBgLeft;
@@ -43,7 +45,7 @@ public class MyRadioButton extends RadioButton {
     private int minFgWidth;
 
     private final Paint getMDrawablePaint() {
-        return (Paint) this.mDrawablePaint.getValue();
+        return this.mDrawablePaint;
     }
 
     public final int getMinBgWidth() {
@@ -178,8 +180,16 @@ public class MyRadioButton extends RadioButton {
     public MyRadioButton(Context context) {
         super(context);
         Intrinsics.checkNotNullParameter(context, "context");
-        this.mDrawablePaint = LazyKt.lazy(MyRadioButton$mDrawablePaint$2.INSTANCE);
+
+        this.mDrawablePaint = createPaint();
         init(context, null);
+    }
+
+    public Paint createPaint() {
+        Paint paint = new Paint();
+        paint.setAntiAlias(false);
+        paint.setFilterBitmap(false);
+        return paint;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
@@ -187,7 +197,7 @@ public class MyRadioButton extends RadioButton {
         super(context, attrs);
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(attrs, "attrs");
-        this.mDrawablePaint = LazyKt.lazy(MyRadioButton$mDrawablePaint$2.INSTANCE);
+        this.mDrawablePaint = createPaint();
         init(context, attrs);
     }
 
@@ -196,7 +206,7 @@ public class MyRadioButton extends RadioButton {
         super(context, attrs, i);
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(attrs, "attrs");
-        this.mDrawablePaint = LazyKt.lazy(MyRadioButton$mDrawablePaint$2.INSTANCE);
+        this.mDrawablePaint = createPaint();
         init(context, attrs);
     }
 
@@ -205,12 +215,12 @@ public class MyRadioButton extends RadioButton {
         super(context, attrs, i, i2);
         Intrinsics.checkNotNullParameter(context, "context");
         Intrinsics.checkNotNullParameter(attrs, "attrs");
-        this.mDrawablePaint = LazyKt.lazy(MyRadioButton$mDrawablePaint$2.INSTANCE);
+        this.mDrawablePaint = createPaint();
         init(context, attrs);
     }
 
     private final void init(Context context, AttributeSet attrs) {
-        setButtonDrawable((Drawable) null);
+        setButtonDrawable(null);
         if (attrs != null) {
             TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attrs, R.styleable.radioButtonAttrs);
             this.minBgWidth = typedArrayObtainStyledAttributes.getLayoutDimension(R.styleable.radioButtonAttrs_min_bg_w, 0);
@@ -238,7 +248,7 @@ public class MyRadioButton extends RadioButton {
 
     @Override // android.view.View
     public void draw(Canvas canvas) {
-        Intrinsics.checkNotNullParameter(canvas, "canvas");
+        super.draw(canvas);
         if (LogUtil.log2()) {
             LogUtil.d("draw: " + getMeasuredWidth() + ',' + getMeasuredHeight() + "   " + getMinWidth() + ',' + getMinHeight());
         }
@@ -264,7 +274,6 @@ public class MyRadioButton extends RadioButton {
                 canvas.drawBitmap(getDrawableBitmap(bitmap4, this.minBgWidth, this.minBgHeight), this.minBgLeft + gravityFactor, this.minBgTop + gravityFactor2, getMDrawablePaint());
             }
         }
-        super.onDraw(canvas);
         dispatchDraw(canvas);
         if (this.minFgWidth == 0) {
             this.minFgWidth = this.minBgWidth;

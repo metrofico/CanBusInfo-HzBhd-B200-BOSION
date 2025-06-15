@@ -2,7 +2,7 @@ package com.hzbhd.proxy.share;
 
 import android.os.Bundle;
 import android.os.RemoteException;
-import android.os.ServiceManager;
+
 import com.hzbhd.commontools.AppIdDef;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.constant.share.SharedModule;
@@ -16,6 +16,8 @@ import com.hzbhd.proxy.share.interfaces.IShareStringListener;
 import com.hzbhd.systemstatus.proxy.IServiceConnectListener;
 import com.hzbhd.systemstatus.proxy.ServiceStateManager;
 import com.hzbhd.util.LogUtil;
+import com.hzbhd.util.ServiceManagerReflection;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -38,12 +40,11 @@ public class ShareDataManager {
             }
         }
         return mThis;
-        return mThis;
     }
 
     private IShareDataService getIShareDataService(SourceConstantsDef.MODULE_ID module_id) {
         try {
-            return IShareDataService.Stub.asInterface(ServiceManager.getService("share_" + module_id));
+            return IShareDataService.Stub.asInterface(ServiceManagerReflection.getService("share_" + module_id));
         } catch (Exception e) {
             e.printStackTrace();
             return null;

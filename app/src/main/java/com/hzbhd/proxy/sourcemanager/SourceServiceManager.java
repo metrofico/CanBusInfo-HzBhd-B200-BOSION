@@ -1,10 +1,11 @@
 package com.hzbhd.proxy.sourcemanager;
 
-import android.os.ServiceManager;
+
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.proxy.sourcemanager.aidl.ISourceService;
 import com.hzbhd.systemstatus.proxy.IServiceConnectListener;
 import com.hzbhd.systemstatus.proxy.ServiceStateManager;
+import com.hzbhd.util.ServiceManagerReflection;
 
 /* loaded from: classes2.dex */
 public class SourceServiceManager {
@@ -24,6 +25,6 @@ public class SourceServiceManager {
                 }
             });
         }
-        return ISourceService.Stub.asInterface(ServiceManager.getService(SERVICE_NAME_SOURCE_SERVICE));
+        return ISourceService.Stub.asInterface(ServiceManagerReflection.getService(SERVICE_NAME_SOURCE_SERVICE));
     }
 }
