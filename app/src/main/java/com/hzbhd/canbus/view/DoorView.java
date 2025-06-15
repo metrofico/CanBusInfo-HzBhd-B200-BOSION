@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.DispUtility;
 import com.hzbhd.canbus.factory.Dependency;
@@ -20,7 +22,7 @@ import com.hzbhd.canbus.util.LogUtil;
 public class DoorView {
     private ImageView mBackIv;
     private TextView mBatteryWarningTv;
-    private Context mContext;
+    private final Context mContext;
     private TextView mEspTv;
     private RelativeLayout mFloatView;
     private ImageView mFrontIv;
@@ -45,7 +47,7 @@ public class DoorView {
     private ImageView mSkyWindowIv;
     private TextView mWashingFluidWarning;
     private TextView mWaterTempTv;
-    private WindowManager mWindowManager;
+    private final WindowManager mWindowManager;
     private boolean isShowing = false;
     private final DoorItem<Boolean> mFrontLeftDoor = new DoorItem<>(false);
     private final DoorItem<Boolean> mFrontRightDoor = new DoorItem<>(false);
@@ -53,7 +55,7 @@ public class DoorView {
     private final DoorItem<Boolean> mRearRightDoor = new DoorItem<>(false);
     private final DoorItem<Boolean> mHood = new DoorItem<>(false);
     private final DoorItem<Boolean> mTrunk = new DoorItem<>(false);
-    private final DoorItem<Integer> mSkyWindowOpenLevel = new DoorItem<>(0);
+    private final DoorItem<Integer> mSkyWindowOpenLevel = new DoorItem<>(View.VISIBLE);
     private final DoorItem<Boolean> mIsHandBrakeUp = new DoorItem<>(false);
     private final DoorItem<Boolean> mIsSeatBeltTie = new DoorItem<>(false);
     private final DoorItem<Boolean> mIsSubSeatBeltTie = new DoorItem<>(false);
@@ -69,8 +71,8 @@ public class DoorView {
     private final DoorItem<Boolean> mIsBatteryWarning = new DoorItem<>(false);
     private final DoorItem<Boolean> mIsFuelWarning = new DoorItem<>(false);
     private final DoorItem<Boolean> mIsWashingFluidWarning = new DoorItem<>(false);
-    CanSettingProxy mProxy = (CanSettingProxy) Dependency.get(CanSettingProxy.class);
-    private Runnable mRunnable = new Runnable() { // from class: com.hzbhd.canbus.view.DoorView.2
+    CanSettingProxy mProxy = Dependency.get(CanSettingProxy.class);
+    private final Runnable mRunnable = new Runnable() { // from class: com.hzbhd.canbus.view.DoorView.2
         @Override // java.lang.Runnable
         public void run() {
             DoorView.this.dismissView();
@@ -79,39 +81,39 @@ public class DoorView {
 
     public DoorView(Context context) {
         this.mContext = context;
-        this.mWindowManager = (WindowManager) context.getSystemService("window");
+        this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         initView();
     }
 
     private void initView() {
         DispUtility.disabledDisplayDpiChange(this.mContext.getResources());
-        RelativeLayout relativeLayout = (RelativeLayout) LayoutInflater.from(this.mContext).inflate(R.layout.layout_door_view, (ViewGroup) null);
+        RelativeLayout relativeLayout = (RelativeLayout) LayoutInflater.from(this.mContext).inflate(R.layout.layout_door_view, null);
         this.mFloatView = relativeLayout;
-        this.mLeftFrontIv = (ImageView) relativeLayout.findViewById(R.id.iv_left_front);
-        this.mRightFrontIv = (ImageView) this.mFloatView.findViewById(R.id.iv_right_front);
-        this.mLeftRearIv = (ImageView) this.mFloatView.findViewById(R.id.iv_left_rear);
-        this.mRightRearIv = (ImageView) this.mFloatView.findViewById(R.id.iv_right_rear);
-        this.mBackIv = (ImageView) this.mFloatView.findViewById(R.id.iv_back);
-        this.mSkyWindowIv = (ImageView) this.mFloatView.findViewById(R.id.iv_sky_window);
-        this.mFrontIv = (ImageView) this.mFloatView.findViewById(R.id.iv_head);
-        this.mHandBrakeTv = (TextView) this.mFloatView.findViewById(R.id.tv_handbrake);
-        this.mSeatBeltTv = (TextView) this.mFloatView.findViewById(R.id.tv_seat_belt);
-        this.mSeatBeltSubTv = (TextView) this.mFloatView.findViewById(R.id.tv_seat_belt_sub);
-        this.mEspTv = (TextView) this.mFloatView.findViewById(R.id.tv_esp);
-        this.mIstopTv = (TextView) this.mFloatView.findViewById(R.id.tv_istop);
-        this.mLittleLightTv = (TextView) this.mFloatView.findViewById(R.id.tv_little_light);
-        this.mWaterTempTv = (TextView) this.mFloatView.findViewById(R.id.tv_water_temp_warning);
-        this.mBatteryWarningTv = (TextView) this.mFloatView.findViewById(R.id.tv_battery_warning);
-        this.mFuelWarningTv = (TextView) this.mFloatView.findViewById(R.id.tv_fuel_warning);
-        this.mWashingFluidWarning = (TextView) this.mFloatView.findViewById(R.id.tv_washing_fluid_warning);
-        this.mSeatBeltMasterTv = (TextView) this.mFloatView.findViewById(R.id.tv_seat_belt_master);
-        this.mSeatBeltCoPilotTv = (TextView) this.mFloatView.findViewById(R.id.tv_seat_belt_co_Pilot);
-        this.mSeatBeltRearLeftTv = (TextView) this.mFloatView.findViewById(R.id.tv_seat_belt_r_l);
-        this.mSeatBeltRearMidTv = (TextView) this.mFloatView.findViewById(R.id.tv_seat_belt_r_m);
-        this.mSeatBeltRearRightTv = (TextView) this.mFloatView.findViewById(R.id.tv_seat_belt_r_r);
-        this.mRlCarBody = (RelativeLayout) this.mFloatView.findViewById(R.id.rl_door);
+        this.mLeftFrontIv = relativeLayout.findViewById(R.id.iv_left_front);
+        this.mRightFrontIv = this.mFloatView.findViewById(R.id.iv_right_front);
+        this.mLeftRearIv = this.mFloatView.findViewById(R.id.iv_left_rear);
+        this.mRightRearIv = this.mFloatView.findViewById(R.id.iv_right_rear);
+        this.mBackIv = this.mFloatView.findViewById(R.id.iv_back);
+        this.mSkyWindowIv = this.mFloatView.findViewById(R.id.iv_sky_window);
+        this.mFrontIv = this.mFloatView.findViewById(R.id.iv_head);
+        this.mHandBrakeTv = this.mFloatView.findViewById(R.id.tv_handbrake);
+        this.mSeatBeltTv = this.mFloatView.findViewById(R.id.tv_seat_belt);
+        this.mSeatBeltSubTv = this.mFloatView.findViewById(R.id.tv_seat_belt_sub);
+        this.mEspTv = this.mFloatView.findViewById(R.id.tv_esp);
+        this.mIstopTv = this.mFloatView.findViewById(R.id.tv_istop);
+        this.mLittleLightTv = this.mFloatView.findViewById(R.id.tv_little_light);
+        this.mWaterTempTv = this.mFloatView.findViewById(R.id.tv_water_temp_warning);
+        this.mBatteryWarningTv = this.mFloatView.findViewById(R.id.tv_battery_warning);
+        this.mFuelWarningTv = this.mFloatView.findViewById(R.id.tv_fuel_warning);
+        this.mWashingFluidWarning = this.mFloatView.findViewById(R.id.tv_washing_fluid_warning);
+        this.mSeatBeltMasterTv = this.mFloatView.findViewById(R.id.tv_seat_belt_master);
+        this.mSeatBeltCoPilotTv = this.mFloatView.findViewById(R.id.tv_seat_belt_co_Pilot);
+        this.mSeatBeltRearLeftTv = this.mFloatView.findViewById(R.id.tv_seat_belt_r_l);
+        this.mSeatBeltRearMidTv = this.mFloatView.findViewById(R.id.tv_seat_belt_r_m);
+        this.mSeatBeltRearRightTv = this.mFloatView.findViewById(R.id.tv_seat_belt_r_r);
+        this.mRlCarBody = this.mFloatView.findViewById(R.id.rl_door);
         if (!GeneralDoorData.isShowCarBody) {
-            this.mRlCarBody.setVisibility(8);
+            this.mRlCarBody.setVisibility(View.GONE);
         }
         this.mFloatView.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.view.DoorView.1
             @Override // android.view.View.OnClickListener
@@ -206,18 +208,18 @@ public class DoorView {
             setImageViewStatus(this.mRightFrontIv, this.mFrontRightDoor.getValue(), R.drawable.car_door_front_right_on, R.drawable.car_door_front_right_off);
             setImageViewStatus(this.mLeftRearIv, this.mRearLeftDoor.getValue(), R.drawable.car_door_rear_left_on, R.drawable.car_door_rear_left_off);
             setImageViewStatus(this.mRightRearIv, this.mRearRightDoor.getValue(), R.drawable.car_door_rear_right_on, R.drawable.car_door_rear_right_off);
-            if (this.mHood.getValue().booleanValue()) {
-                this.mFrontIv.setVisibility(0);
+            if (this.mHood.getValue()) {
+                this.mFrontIv.setVisibility(View.VISIBLE);
             } else {
-                this.mFrontIv.setVisibility(4);
+                this.mFrontIv.setVisibility(View.INVISIBLE);
             }
-            if (this.mTrunk.getValue().booleanValue()) {
-                this.mBackIv.setVisibility(0);
+            if (this.mTrunk.getValue()) {
+                this.mBackIv.setVisibility(View.VISIBLE);
             } else {
-                this.mBackIv.setVisibility(4);
+                this.mBackIv.setVisibility(View.INVISIBLE);
             }
-            int iIntValue = this.mSkyWindowOpenLevel.getValue().intValue();
-            if (iIntValue == 0) {
+            int iIntValue = this.mSkyWindowOpenLevel.getValue();
+            if (iIntValue == View.VISIBLE) {
                 this.mSkyWindowIv.setImageResource(R.drawable.car_door_skylight_off);
             } else if (iIntValue == 1) {
                 this.mSkyWindowIv.setImageResource(R.drawable.car_door_skylight_half_on);
@@ -225,155 +227,156 @@ public class DoorView {
                 this.mSkyWindowIv.setImageResource(R.drawable.car_door_skylight_whole_on);
             }
             if (GeneralDoorData.isShowHandBrake) {
-                this.mHandBrakeTv.setVisibility(0);
-                if (this.mIsHandBrakeUp.getValue().booleanValue()) {
+                this.mHandBrakeTv.setVisibility(View.VISIBLE);
+                if (this.mIsHandBrakeUp.getValue()) {
                     this.mHandBrakeTv.setText(R.string.hand_brake_up);
-                    this.mHandBrakeTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.handbreak_on, 0, 0, 0);
+                    this.mHandBrakeTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.handbreak_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
                     this.mHandBrakeTv.setText(R.string.hand_brake_down);
-                    this.mHandBrakeTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.handbreak_off, 0, 0, 0);
+                    this.mHandBrakeTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.handbreak_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowSeatBelt) {
-                this.mSeatBeltTv.setVisibility(0);
-                if (this.mIsSeatBeltTie.getValue().booleanValue()) {
+                this.mSeatBeltTv.setVisibility(View.VISIBLE);
+                if (this.mIsSeatBeltTie.getValue()) {
                     this.mSeatBeltTv.setText(GeneralDoorData.isSubShowSeatBelt ? R.string.master_driver_belt_has_been_attached : R.string.seat_belt_has_been_attached);
-                    this.mSeatBeltTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, 0, 0, 0);
+                    this.mSeatBeltTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
                     this.mSeatBeltTv.setText(GeneralDoorData.isSubShowSeatBelt ? R.string.master_driver_belt_not_tied : R.string.seat_belt_not_tied);
-                    this.mSeatBeltTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, 0, 0, 0);
+                    this.mSeatBeltTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isSubShowSeatBelt) {
-                this.mSeatBeltSubTv.setVisibility(0);
-                if (this.mIsSubSeatBeltTie.getValue().booleanValue()) {
+                this.mSeatBeltSubTv.setVisibility(View.VISIBLE);
+                if (this.mIsSubSeatBeltTie.getValue()) {
                     this.mSeatBeltSubTv.setText(R.string.co_pilot_belt_has_been_attached);
-                    this.mSeatBeltSubTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, 0, 0, 0);
+                    this.mSeatBeltSubTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
                     this.mSeatBeltSubTv.setText(R.string.co_pilot_belt_not_tied);
-                    this.mSeatBeltSubTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, 0, 0, 0);
+                    this.mSeatBeltSubTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowMasterDriverSeatBelt) {
-                this.mSeatBeltMasterTv.setVisibility(0);
+                this.mSeatBeltMasterTv.setVisibility(View.VISIBLE);
                 this.mSeatBeltMasterTv.setText(R.string.master_driver);
                 if (this.mIsSeatMasterDriverBeltTie.getValue().booleanValue()) {
-                    this.mSeatBeltMasterTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, 0, 0, 0);
+                    this.mSeatBeltMasterTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mSeatBeltMasterTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, 0, 0, 0);
+                    this.mSeatBeltMasterTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowCoPilotSeatBelt) {
-                this.mSeatBeltCoPilotTv.setVisibility(0);
+                this.mSeatBeltCoPilotTv.setVisibility(View.VISIBLE);
                 this.mSeatBeltCoPilotTv.setText(R.string.co_pilot);
                 if (this.mIsSeatCoPilotBeltTie.getValue().booleanValue()) {
-                    this.mSeatBeltCoPilotTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, 0, 0, 0);
+                    this.mSeatBeltCoPilotTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mSeatBeltCoPilotTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, 0, 0, 0);
+                    this.mSeatBeltCoPilotTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowRLSeatBelt) {
-                this.mSeatBeltRearLeftTv.setVisibility(0);
+                this.mSeatBeltRearLeftTv.setVisibility(View.VISIBLE);
                 this.mSeatBeltRearLeftTv.setText(R.string.back_left);
                 if (this.mIsSeatRLBeltTie.getValue().booleanValue()) {
-                    this.mSeatBeltRearLeftTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, 0, 0, 0);
+                    this.mSeatBeltRearLeftTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mSeatBeltRearLeftTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, 0, 0, 0);
+                    this.mSeatBeltRearLeftTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowRMSeatBelt) {
-                this.mSeatBeltRearMidTv.setVisibility(0);
+                this.mSeatBeltRearMidTv.setVisibility(View.VISIBLE);
                 this.mSeatBeltRearMidTv.setText(R.string.back_mid);
                 if (this.mIsSeatRMBeltTie.getValue().booleanValue()) {
-                    this.mSeatBeltRearMidTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, 0, 0, 0);
+                    this.mSeatBeltRearMidTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mSeatBeltRearMidTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, 0, 0, 0);
+                    this.mSeatBeltRearMidTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowRRSeatBelt) {
-                this.mSeatBeltRearRightTv.setVisibility(0);
+                this.mSeatBeltRearRightTv.setVisibility(View.VISIBLE);
                 this.mSeatBeltRearRightTv.setText(R.string.back_right);
                 if (this.mIsSeatRRBeltTie.getValue().booleanValue()) {
-                    this.mSeatBeltRearRightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, 0, 0, 0);
+                    this.mSeatBeltRearRightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mSeatBeltRearRightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, 0, 0, 0);
+                    this.mSeatBeltRearRightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.belt_off, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowEsp) {
-                this.mEspTv.setVisibility(0);
+                this.mEspTv.setVisibility(View.VISIBLE);
                 if (this.mIsEspOn.getValue().booleanValue()) {
                     this.mEspTv.setText(R.string.esp_off);
-                    this.mEspTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.esp_p, 0, 0, 0);
+                    this.mEspTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.esp_p, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mEspTv.setVisibility(8);
+                    this.mEspTv.setVisibility(View.GONE);
                 }
             }
             if (GeneralDoorData.isShowIstop) {
-                this.mIstopTv.setVisibility(0);
+                this.mIstopTv.setVisibility(View.VISIBLE);
                 if (this.mIsIsTopOn.getValue().booleanValue()) {
                     this.mIstopTv.setText(R.string.istop_on);
-                    this.mIstopTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.istop_p, 0, 0, 0);
+                    this.mIstopTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.istop_p, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
                     this.mIstopTv.setText(R.string.istop_off);
-                    this.mIstopTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.istop_n, 0, 0, 0);
+                    this.mIstopTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.istop_n, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowLittleLight) {
-                this.mLittleLightTv.setVisibility(0);
+                this.mLittleLightTv.setVisibility(View.VISIBLE);
                 if (this.mIsLittleLightOn.getValue().booleanValue()) {
                     this.mLittleLightTv.setText(R.string.little_light_on);
-                    this.mLittleLightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.small_light_p, 0, 0, 0);
+                    this.mLittleLightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.small_light_p, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
                     this.mLittleLightTv.setText(R.string.little_light_off);
-                    this.mLittleLightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.small_light_n, 0, 0, 0);
+                    this.mLittleLightTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.small_light_n, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowWaterTemp) {
-                this.mWaterTempTv.setVisibility(0);
+                this.mWaterTempTv.setVisibility(View.VISIBLE);
                 if (this.mIsWaterTempWarning.getValue().booleanValue()) {
                     this.mWaterTempTv.setText(R.string.water_temp_warning_);
-                    this.mWaterTempTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.water_warning_p, 0, 0, 0);
+                    this.mWaterTempTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.water_warning_p, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
                     this.mWaterTempTv.setText(R.string.water_temp);
-                    this.mWaterTempTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.water_warning_n, 0, 0, 0);
+                    this.mWaterTempTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.water_warning_n, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 }
             }
             if (GeneralDoorData.isShowBatteryWarning) {
-                if (this.mIsBatteryWarning.getValue().booleanValue()) {
-                    this.mBatteryWarningTv.setVisibility(0);
+                if (this.mIsBatteryWarning.getValue()) {
+                    this.mBatteryWarningTv.setVisibility(View.VISIBLE);
                     this.mBatteryWarningTv.setText(R.string.battery_warning);
-                    this.mBatteryWarningTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.battery_on, 0, 0, 0);
+                    this.mBatteryWarningTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.battery_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mBatteryWarningTv.setVisibility(8);
+                    this.mBatteryWarningTv.setVisibility(View.GONE);
                 }
             }
             if (GeneralDoorData.isShowFuelWarning) {
-                if (this.mIsFuelWarning.getValue().booleanValue()) {
-                    this.mFuelWarningTv.setVisibility(0);
+                if (this.mIsFuelWarning.getValue()) {
+                    this.mFuelWarningTv.setVisibility(View.VISIBLE);
                     this.mFuelWarningTv.setText(R.string.fuel_warning);
-                    this.mFuelWarningTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.fuel_on, 0, 0, 0);
+                    this.mFuelWarningTv.setCompoundDrawablesWithIntrinsicBounds(R.drawable.fuel_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mFuelWarningTv.setVisibility(8);
+                    this.mFuelWarningTv.setVisibility(View.GONE);
                 }
             }
             if (GeneralDoorData.isShowWashingFluidWarning) {
-                if (this.mIsWashingFluidWarning.getValue().booleanValue()) {
-                    this.mWashingFluidWarning.setVisibility(0);
+                if (this.mIsWashingFluidWarning.getValue()) {
+                    this.mWashingFluidWarning.setVisibility(View.VISIBLE);
                     this.mWashingFluidWarning.setText(R.string.washing_fluid_warning);
-                    this.mWashingFluidWarning.setCompoundDrawablesWithIntrinsicBounds(R.drawable.water_on, 0, 0, 0);
+                    this.mWashingFluidWarning.setCompoundDrawablesWithIntrinsicBounds(R.drawable.water_on, View.VISIBLE, View.VISIBLE, View.VISIBLE);
                 } else {
-                    this.mWashingFluidWarning.setVisibility(8);
+                    this.mWashingFluidWarning.setVisibility(View.GONE);
                 }
             }
             addViewToWindow();
         }
     }
 
+    @SuppressLint("WrongConstant")
     private void addViewToWindow() {
         if (this.mLayoutParams == null) {
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
             this.mLayoutParams = layoutParams;
-            layoutParams.type = 2002;
+            layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
             this.mLayoutParams.format = 1;
             this.mLayoutParams.gravity = 17;
             this.mLayoutParams.width = -2;
@@ -383,7 +386,7 @@ public class DoorView {
             this.mWindowManager.addView(this.mFloatView, this.mLayoutParams);
             this.isShowing = true;
         }
-        if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getDoorCountDownTimerState()) {
+        if (Dependency.get(CanSettingProxy.class).getDoorCountDownTimerState()) {
             return;
         }
         this.mFloatView.removeCallbacks(this.mRunnable);
@@ -391,7 +394,7 @@ public class DoorView {
     }
 
     private void setImageViewStatus(ImageView imageView, Boolean bool, int i, int i2) {
-        if (!bool.booleanValue()) {
+        if (!bool) {
             i = i2;
         }
         imageView.setImageResource(i);

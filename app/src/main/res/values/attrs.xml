@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <declare-styleable name="BcSettingSeekBarView">
+        <attr name="title" format="string" />
+    </declare-styleable>
+    <declare-styleable name="EqSeekBarStyle">
+        <attr name="seek_bar_title" format="string" />
+    </declare-styleable>
     <declare-styleable name="seek_bar_attr">
         <attr name="thumb_n" format="reference" />
         <attr name="thumb_n1" format="reference" />
@@ -54,6 +61,8 @@
         <attr name="full_fg" format="reference" />
         <attr name="full_fg_p" format="reference" />
     </declare-styleable>
+    <declare-styleable name="BcSettingSeekBarStyle">title</declare-styleable>
+    <declare-styleable name="BcSettingSeekBarStyle">test</declare-styleable>
     <attr name="actionBarDivider" format="reference" />
     <attr name="actionBarItemBackground" format="reference" />
     <attr name="actionBarPopupTheme" format="reference" />
@@ -846,7 +855,6 @@
     <attr name="searchHintIcon" format="reference" />
     <attr name="searchIcon" format="reference" />
     <attr name="searchViewStyle" format="reference" />
-    <attr name="seekBarStyle" format="reference" />
     <attr name="seek_bar_title" format="string" />
     <attr name="select_ic" format="integer" />
     <attr name="selectableItemBackground" format="reference" />

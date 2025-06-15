@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -35,11 +36,11 @@ public class EqSeekBarView extends RelativeLayout {
     public EqSeekBarView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_eq_seekbar, this);
-        this.mIvMin = (ImageView) viewInflate.findViewById(R.id.iv_reduce);
-        this.mIvPlus = (ImageView) viewInflate.findViewById(R.id.iv_add);
-        this.mSeekBar = (SeekBar) viewInflate.findViewById(R.id.seekbar);
-        this.mChannelTv = (TextView) viewInflate.findViewById(R.id.tv_channel);
-        this.mChannelValueTv = (TextView) viewInflate.findViewById(R.id.tv_channel_value);
+        this.mIvMin = viewInflate.findViewById(R.id.iv_reduce);
+        this.mIvPlus = viewInflate.findViewById(R.id.iv_add);
+        this.mSeekBar = viewInflate.findViewById(R.id.seekbar);
+        this.mChannelTv = viewInflate.findViewById(R.id.tv_channel);
+        this.mChannelValueTv = viewInflate.findViewById(R.id.tv_channel_value);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.EqSeekBarStyle);
         String string = typedArrayObtainStyledAttributes.getString(0);
         typedArrayObtainStyledAttributes.recycle();
@@ -84,11 +85,11 @@ public class EqSeekBarView extends RelativeLayout {
 
     public void setCanMinPlus(boolean z) {
         if (z) {
-            this.mIvMin.setVisibility(0);
-            this.mIvPlus.setVisibility(0);
+            this.mIvMin.setVisibility(View.VISIBLE);
+            this.mIvPlus.setVisibility(View.VISIBLE);
         } else {
-            this.mIvMin.setVisibility(8);
-            this.mIvPlus.setVisibility(8);
+            this.mIvMin.setVisibility(View.GONE);
+            this.mIvPlus.setVisibility(View.GONE);
         }
     }
 

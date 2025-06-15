@@ -9,8 +9,10 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,10 +40,10 @@ public class SetWindSpeedView extends RelativeLayout {
 
     public void initViews(Context context, boolean z, int i, final OnAirWindSpeedUpDownClickListener onAirWindSpeedUpDownClickListener) {
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_air_set_speed_view, this);
-        this.mWindSpeedLl = (LinearLayout) viewInflate.findViewById(R.id.ll_layout);
-        this.mUpIb = (ImageButton) viewInflate.findViewById(R.id.ib_up);
-        this.mDownIb = (ImageButton) viewInflate.findViewById(R.id.ib_down);
-        this.mAutoIv = (ImageView) viewInflate.findViewById(R.id.iv_auto);
+        this.mWindSpeedLl = viewInflate.findViewById(R.id.ll_layout);
+        this.mUpIb = viewInflate.findViewById(R.id.ib_up);
+        this.mDownIb = viewInflate.findViewById(R.id.ib_down);
+        this.mAutoIv = viewInflate.findViewById(R.id.iv_auto);
         this.mUpIb.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.view.SetWindSpeedView.1
             @Override // android.view.View.OnClickListener
             public void onClick(View view) {
@@ -61,11 +63,11 @@ public class SetWindSpeedView extends RelativeLayout {
             }
         });
         if (z) {
-            this.mUpIb.setVisibility(0);
-            this.mDownIb.setVisibility(0);
+            this.mUpIb.setVisibility(View.VISIBLE);
+            this.mDownIb.setVisibility(View.VISIBLE);
         } else {
-            this.mUpIb.setVisibility(4);
-            this.mDownIb.setVisibility(4);
+            this.mUpIb.setVisibility(View.INVISIBLE);
+            this.mDownIb.setVisibility(View.INVISIBLE);
         }
         if (context.getResources().getConfiguration().orientation == 1) {
             this.mWeight = 0.5f;
@@ -80,7 +82,7 @@ public class SetWindSpeedView extends RelativeLayout {
         this.mImageViewList = new ArrayList();
         this.mTotalWindLevel = i;
         for (int i2 = 0; i2 < this.mTotalWindLevel; i2++) {
-            ImageView imageView = (ImageView) LayoutInflater.from(context).inflate(R.layout.view_wind_speed_item, (ViewGroup) null).findViewById(R.id.iv_item);
+            ImageView imageView = LayoutInflater.from(context).inflate(R.layout.view_wind_speed_item, null).findViewById(R.id.iv_item);
             ((ViewGroup) imageView.getParent()).removeAllViews();
             this.mWindSpeedLl.addView(imageView);
             this.mImageViewList.add(imageView);
@@ -89,11 +91,11 @@ public class SetWindSpeedView extends RelativeLayout {
 
     public void setAuto(boolean z) {
         if (z) {
-            this.mWindSpeedLl.setVisibility(4);
-            this.mAutoIv.setVisibility(0);
+            this.mWindSpeedLl.setVisibility(View.INVISIBLE);
+            this.mAutoIv.setVisibility(View.VISIBLE);
         } else {
-            this.mWindSpeedLl.setVisibility(0);
-            this.mAutoIv.setVisibility(4);
+            this.mWindSpeedLl.setVisibility(View.VISIBLE);
+            this.mAutoIv.setVisibility(View.INVISIBLE);
         }
     }
 

@@ -1,13 +1,16 @@
 package com.hzbhd.canbus.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.Util;
 import com.hzbhd.canbus.util.CommUtil;
@@ -23,19 +26,19 @@ public class ParkAssistFloatView {
     private ImageView img_ford_pa_tips_icon;
     private ImageView img_left_ford_pa;
     private ImageView img_right_ford_pa;
-    private Context mContext;
+    private final Context mContext;
     private LinearLayout mFloatLayout;
     private WindowManager mWindowManager;
     private TextView text_ford_pa_tips;
     private WindowManager.LayoutParams wmParams;
     private boolean mHaveAdded = false;
-    private int[] carInLeftIds = {2, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 35, 37};
-    private int[] carInRightIds = {4, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 27, 36, 38};
-    private int[] noCarIds = {6, 29, 30, 31, 32, 33, 34, 39};
-    private int[] iconStopIds = {11, 12, 13, 14, 19, 20, 23, 24};
-    private int[] iconForwardIds = {9, 10, 21, 22, 35, 36};
-    private int[] iconBackwardIds = {15, 16, 17, 18, 25, 26, 37, 38};
-    private Runnable mRunnable = new Runnable() { // from class: com.hzbhd.canbus.view.ParkAssistFloatView.1
+    private final int[] carInLeftIds = {2, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 35, 37};
+    private final int[] carInRightIds = {4, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 27, 36, 38};
+    private final int[] noCarIds = {6, 29, 30, 31, 32, 33, 34, 39};
+    private final int[] iconStopIds = {11, 12, 13, 14, 19, 20, 23, 24};
+    private final int[] iconForwardIds = {9, 10, 21, 22, 35, 36};
+    private final int[] iconBackwardIds = {15, 16, 17, 18, 25, 26, 37, 38};
+    private final Runnable mRunnable = new Runnable() { // from class: com.hzbhd.canbus.view.ParkAssistFloatView.1
         @Override // java.lang.Runnable
         public void run() {
             ParkAssistFloatView.this.dismissView();
@@ -119,19 +122,19 @@ public class ParkAssistFloatView {
         int cmdType = getCmdType(b);
         int tipsImageResId = getTipsImageResId(b);
         if (cmdType == 0) {
-            this.img_left_ford_pa.setVisibility(4);
-            this.img_right_ford_pa.setVisibility(4);
+            this.img_left_ford_pa.setVisibility(View.INVISIBLE);
+            this.img_right_ford_pa.setVisibility(View.INVISIBLE);
             this.img_ford_pa_tips_icon.setImageResource(tipsImageResId);
             this.text_ford_pa_tips.setText(CommUtil.getStrIdByResId(this.mContext, "ford_park_assist_" + cmdHexString(b)));
         } else if (cmdType == 1) {
-            this.img_left_ford_pa.setVisibility(0);
-            this.img_right_ford_pa.setVisibility(4);
+            this.img_left_ford_pa.setVisibility(View.VISIBLE);
+            this.img_right_ford_pa.setVisibility(View.INVISIBLE);
             this.img_ford_pa_tips_icon.setImageResource(tipsImageResId);
             this.img_left_ford_pa.setImageResource(CommUtil.getImgIdByResId(this.mContext, "ford_pa_" + cmdHexString(b)));
             this.text_ford_pa_tips.setText(CommUtil.getStrIdByResId(this.mContext, "ford_park_assist_" + cmdHexString(b)));
         } else if (cmdType == 2) {
-            this.img_left_ford_pa.setVisibility(4);
-            this.img_right_ford_pa.setVisibility(0);
+            this.img_left_ford_pa.setVisibility(View.INVISIBLE);
+            this.img_right_ford_pa.setVisibility(View.VISIBLE);
             this.img_ford_pa_tips_icon.setImageResource(tipsImageResId);
             this.img_right_ford_pa.setImageResource(CommUtil.getImgIdByResId(this.mContext, "ford_pa_" + cmdHexString(b)));
             this.text_ford_pa_tips.setText(CommUtil.getStrIdByResId(this.mContext, "ford_park_assist_" + cmdHexString(b)));
@@ -157,24 +160,25 @@ public class ParkAssistFloatView {
         this.mHaveAdded = false;
     }
 
+    @SuppressLint("WrongConstant")
     private void initFloatView() {
         this.wmParams = new WindowManager.LayoutParams();
-        this.mWindowManager = (WindowManager) this.mContext.getSystemService("window");
-        this.wmParams.type = 2010;
+        this.mWindowManager = (WindowManager) this.mContext.getSystemService(Context.WINDOW_SERVICE);
+        this.wmParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ERROR;
         this.wmParams.format = 1;
-        this.wmParams.windowAnimations = android.R.style.Animation.Toast;
+        this.wmParams.windowAnimations = android.R.style.Animation_Toast;
         this.wmParams.gravity = 17;
         LayoutInflater layoutInflaterFrom = LayoutInflater.from(this.mContext);
         this.wmParams.width = -2;
         this.wmParams.height = -2;
-        this.mFloatLayout = (LinearLayout) layoutInflaterFrom.inflate(R.layout.ford_park_assist_flow_window, (ViewGroup) null);
+        this.mFloatLayout = (LinearLayout) layoutInflaterFrom.inflate(R.layout.ford_park_assist_flow_window, null);
     }
 
     private void initWidegets() {
-        this.img_left_ford_pa = (ImageView) this.mFloatLayout.findViewById(R.id.img_left_ford_pa);
-        this.img_right_ford_pa = (ImageView) this.mFloatLayout.findViewById(R.id.img_right_ford_pa);
-        this.text_ford_pa_tips = (TextView) this.mFloatLayout.findViewById(R.id.text_ford_pa_tips);
-        this.img_ford_pa_tips_icon = (ImageView) this.mFloatLayout.findViewById(R.id.img_ford_pa_tips_icon);
+        this.img_left_ford_pa = this.mFloatLayout.findViewById(R.id.img_left_ford_pa);
+        this.img_right_ford_pa = this.mFloatLayout.findViewById(R.id.img_right_ford_pa);
+        this.text_ford_pa_tips = this.mFloatLayout.findViewById(R.id.text_ford_pa_tips);
+        this.img_ford_pa_tips_icon = this.mFloatLayout.findViewById(R.id.img_ford_pa_tips_icon);
     }
 
     private void dismissCanbusAirInfoPanel() {

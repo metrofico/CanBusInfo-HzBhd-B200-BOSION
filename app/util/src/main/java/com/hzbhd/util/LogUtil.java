@@ -1,6 +1,5 @@
 package com.hzbhd.util;
 
-import android.os.SystemProperties;
 import android.util.Log;
 
 /* loaded from: classes3.dex */
@@ -32,8 +31,23 @@ public class LogUtil {
         return stringBuffer.toString();
     }
 
+    public static int getInt(String key, int defaultValue) {
+        try {
+            // Usar reflexión para invocar el método estático getInt(String, int) de SystemProperties
+            Class<?> clazz = Class.forName("android.os.SystemProperties");
+            Object result = clazz.getDeclaredMethod("getInt", String.class, int.class).invoke(null, key, defaultValue);
+
+            if (result instanceof Integer) {
+                return (Integer) result;
+            }
+        } catch (Exception e) {
+            Log.e("LogUtil", "Error al invocar SystemProperties.getInt: " + e.getMessage(), e);
+        }
+        return defaultValue; // Fallback si falla
+    }
+
     public static int getLogLevel() {
-        return SystemProperties.getInt("persist.log", 5);
+        return getInt("persist.log", 5);
     }
 
     public static boolean log0() {

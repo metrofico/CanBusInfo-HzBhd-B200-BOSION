@@ -3,12 +3,12 @@ package com.hzbhd.canbus.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
+
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
 import com.hzbhd.canbus.view.BtnItemView;
 
 /* loaded from: classes2.dex */
 public class LineBtnView extends LinearLayout {
-    private boolean mCanClick;
 
     public LineBtnView(Context context) {
         super(context);
@@ -22,22 +22,18 @@ public class LineBtnView extends LinearLayout {
         if (strArr == null) {
             return;
         }
-        for (final int i = 0; i < strArr.length; i++) {
-            if (z) {
-                if (isInDisableBtnArray(strArr2, strArr[i])) {
-                    this.mCanClick = false;
-                } else {
-                    this.mCanClick = true;
-                }
-            }
-            BtnItemView btnItemView = new BtnItemView(context, strArr[i], this.mCanClick);
+        for (int i = 0; i < strArr.length; i++) {
+            boolean canClick = z && !isInDisableBtnArray(strArr2, strArr[i]);
+
+            BtnItemView btnItemView = new BtnItemView(context, strArr[i], canClick);
             addView(btnItemView, new LinearLayout.LayoutParams(0, -1, 1.0f));
-            btnItemView.setOnItemClickListener(new BtnItemView.OnItemClickListener() { // from class: com.hzbhd.canbus.view.LineBtnView.1
-                @Override // com.hzbhd.canbus.view.BtnItemView.OnItemClickListener
+
+            final int index = i;  // Capturar el índice actual
+            btnItemView.setOnItemClickListener(new BtnItemView.OnItemClickListener() {
+                @Override
                 public void onClick() {
-                    OnAirBtnClickListener onAirBtnClickListener2 = onAirBtnClickListener;
-                    if (onAirBtnClickListener2 != null) {
-                        onAirBtnClickListener2.onClickItem(i);
+                    if (onAirBtnClickListener != null) {
+                        onAirBtnClickListener.onClickItem(index);
                     }
                 }
             });

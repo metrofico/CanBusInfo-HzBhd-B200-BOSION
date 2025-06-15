@@ -1,11 +1,13 @@
 package com.hzbhd.canbus.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_datas.GeneralDisplayMsgData;
 
@@ -26,7 +28,7 @@ public class DisplayMsgView {
 
     public DisplayMsgView(Context context) {
         this.mContext = context;
-        this.mWindowManager = (WindowManager) context.getSystemService("window");
+        this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         initView();
     }
 
@@ -36,6 +38,7 @@ public class DisplayMsgView {
         this.mTv = (TextView) linearLayout.findViewById(R.id.tv_display_msg);
     }
 
+    @SuppressLint("WrongConstant")
     public void refreshUi() {
         if (GeneralDisplayMsgData.displayMsg == null) {
             return;
@@ -44,7 +47,7 @@ public class DisplayMsgView {
         if (this.mLayoutParams == null) {
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
             this.mLayoutParams = layoutParams;
-            layoutParams.type = 2002;
+            layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
             this.mLayoutParams.gravity = 17;
             this.mLayoutParams.width = -2;
             this.mLayoutParams.height = -2;

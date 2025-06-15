@@ -3,6 +3,7 @@ package com.hzbhd.canbus.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
+
 import com.hzbhd.canbus.interfaces.OnOriginalTopBtnClickListener;
 import com.hzbhd.canbus.view.OriginalTopBtnItemView;
 
@@ -20,15 +21,18 @@ public class RowTopBtnView extends LinearLayout {
         if (strArr == null) {
             return;
         }
-        for (final int i = 0; i < strArr.length; i++) {
+        for (int i = 0; i < strArr.length; i++) {
             OriginalTopBtnItemView originalTopBtnItemView = new OriginalTopBtnItemView(context, strArr[i]);
             addView(originalTopBtnItemView, new LinearLayout.LayoutParams(0, -1, 1.0f));
+            final int index = i;
             originalTopBtnItemView.setOnItemClickListener(new OriginalTopBtnItemView.OnItemClickListener() { // from class: com.hzbhd.canbus.view.RowTopBtnView.1
+
+
                 @Override // com.hzbhd.canbus.view.OriginalTopBtnItemView.OnItemClickListener
                 public void onClick() {
                     OnOriginalTopBtnClickListener onOriginalTopBtnClickListener2 = onOriginalTopBtnClickListener;
                     if (onOriginalTopBtnClickListener2 != null) {
-                        onOriginalTopBtnClickListener2.onClickTopBtnItem(i);
+                        onOriginalTopBtnClickListener2.onClickTopBtnItem(index);
                     }
                 }
             });

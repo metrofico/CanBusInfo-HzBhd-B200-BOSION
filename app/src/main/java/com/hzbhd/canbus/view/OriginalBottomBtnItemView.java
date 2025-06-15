@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -40,7 +41,6 @@ public class OriginalBottomBtnItemView extends RelativeLayout {
                 }
             }
         });
-        str.hashCode();
         switch (str) {
             case "preset_scan":
                 this.mIbtn.setImageResource(R.drawable.kt01_radio_preset);

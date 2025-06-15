@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -28,7 +29,7 @@ public class SmallBtnItemView extends LinearLayout {
     }
 
     private void initViews(Context context, int i) {
-        TextView textView = (TextView) LayoutInflater.from(context).inflate(R.layout.view_air_line_small_btn_item, this).findViewById(R.id.btn);
+        TextView textView = LayoutInflater.from(context).inflate(R.layout.view_air_line_small_btn_item, this).findViewById(R.id.btn);
         this.mTv = textView;
         textView.setText(context.getString(i));
         this.mTv.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.view.SmallBtnItemView.1

@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -11,6 +12,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
@@ -58,8 +60,9 @@ public class AirPageWindowView extends AbstractBaseActivity {
         initWindow(context);
     }
 
+    @SuppressLint("WrongConstant")
     public void initWindow(Context context) {
-        this.mWindowManager = (WindowManager) context.getSystemService("window");
+        this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         this.layoutParams = layoutParams;
         layoutParams.gravity = 80;
@@ -73,17 +76,17 @@ public class AirPageWindowView extends AbstractBaseActivity {
     }
 
     private void initView(Context context) {
-        View viewInflate = LayoutInflater.from(context).inflate(R.layout._air_page_window_view, (ViewGroup) null);
+        View viewInflate = LayoutInflater.from(context).inflate(R.layout._air_page_window_view, null);
         this.view = viewInflate;
         findViews(viewInflate);
         initViews(this.view);
     }
 
     private void findViews(View view) {
-        this.window_lay = (LinearLayout) view.findViewById(R.id.window_lay);
-        this.mAirFrontView = (AirFrontWindowView) view.findViewById(R.id.air_front);
-        this.mAirRearView = (AirRearWindowView) view.findViewById(R.id.air_rear);
-        ImageButton imageButton = (ImageButton) view.findViewById(R.id.hide);
+        this.window_lay = view.findViewById(R.id.window_lay);
+        this.mAirFrontView = view.findViewById(R.id.air_front);
+        this.mAirRearView = view.findViewById(R.id.air_rear);
+        ImageButton imageButton = view.findViewById(R.id.hide);
         this.hide = imageButton;
         imageButton.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.view.AirPageWindowView.1
             @Override // android.view.View.OnClickListener
@@ -110,27 +113,27 @@ public class AirPageWindowView extends AbstractBaseActivity {
             this.mSet.getOnAirInitListener().onInit();
         }
         this.mAirFrontView.initViews(this, this.mSet);
-        this.mAirRearView.setVisibility(4);
+        this.mAirRearView.setVisibility(View.INVISIBLE);
         if (this.mSet.isHaveRearArea()) {
             this.mAirRearView.initViews(this, this.mSet);
         }
     }
 
     public boolean isNeedSwitchTemAndSeat() {
-        return ((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getSwitchAcTemperature();
+        return Dependency.get(CanSettingProxy.class).getSwitchAcTemperature();
     }
 
     public void switchViewPager(int i) {
         if (i == 0) {
-            this.mAirFrontView.setVisibility(0);
-            this.mAirRearView.setVisibility(4);
+            this.mAirFrontView.setVisibility(View.VISIBLE);
+            this.mAirRearView.setVisibility(View.INVISIBLE);
             page = i;
         } else {
             if (i != 1) {
                 return;
             }
-            this.mAirFrontView.setVisibility(4);
-            this.mAirRearView.setVisibility(0);
+            this.mAirFrontView.setVisibility(View.INVISIBLE);
+            this.mAirRearView.setVisibility(View.VISIBLE);
             page = i;
         }
     }

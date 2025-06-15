@@ -3,6 +3,7 @@ package com.hzbhd.canbus.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
+
 import com.hzbhd.canbus.view.SyncListItemView;
 
 /* loaded from: classes2.dex */
@@ -21,13 +22,14 @@ public class SyncInfoListView extends LinearLayout {
     }
 
     public void initItem(Context context, int i, final OnListItemClickListener onListItemClickListener) {
-        for (final int i2 = 0; i2 < i; i2++) {
+        for (int i2 = 0; i2 < i; i2++) {
             SyncListItemView syncListItemView = new SyncListItemView(context);
             addView(syncListItemView, new LinearLayout.LayoutParams(-1, -2));
+            final int index = i2;
             syncListItemView.setOnClickListener(new SyncListItemView.OnClickListener() { // from class: com.hzbhd.canbus.view.SyncInfoListView$$ExternalSyntheticLambda0
                 @Override // com.hzbhd.canbus.view.SyncListItemView.OnClickListener
                 public final void onItemClick() {
-                    SyncInfoListView.lambda$initItem$0(onListItemClickListener, i2);
+                    SyncInfoListView.lambda$initItem$0(onListItemClickListener, index);
                 }
             });
         }

@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -28,10 +29,10 @@ public class SyncListItemView extends LinearLayout {
     }
 
     private void findView() {
-        this.mLlListItem = (LinearLayout) findViewById(R.id.ll_list_item);
-        this.mIvLeftIcon = (ImageView) findViewById(R.id.iv_left_icon);
-        this.mIvRightIcon = (ImageView) findViewById(R.id.iv_right_icon);
-        this.mTvInfo = (TextView) findViewById(R.id.tv_info);
+        this.mLlListItem = findViewById(R.id.ll_list_item);
+        this.mIvLeftIcon = findViewById(R.id.iv_left_icon);
+        this.mIvRightIcon = findViewById(R.id.iv_right_icon);
+        this.mTvInfo = findViewById(R.id.tv_info);
     }
 
     private void initView() {

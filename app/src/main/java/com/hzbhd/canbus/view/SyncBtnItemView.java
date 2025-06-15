@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -29,8 +30,8 @@ public class SyncBtnItemView extends RelativeLayout {
 
     private void initViews(Context context) {
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_sync_bottom_text, this);
-        this.mTv = (TextView) viewInflate.findViewById(R.id.tv_item);
-        ImageButton imageButton = (ImageButton) viewInflate.findViewById(R.id.ibt_item);
+        this.mTv = viewInflate.findViewById(R.id.tv_item);
+        ImageButton imageButton = viewInflate.findViewById(R.id.ibt_item);
         this.mIb = imageButton;
         imageButton.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.view.SyncBtnItemView.1
             @Override // android.view.View.OnClickListener
@@ -59,9 +60,9 @@ public class SyncBtnItemView extends RelativeLayout {
 
     public void setVisible(boolean z) {
         if (z) {
-            setVisibility(0);
+            setVisibility(View.VISIBLE);
         } else {
-            setVisibility(4);
+            setVisibility(View.INVISIBLE);
         }
     }
 

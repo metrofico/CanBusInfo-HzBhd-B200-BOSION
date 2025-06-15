@@ -7,7 +7,9 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
+
 import org.apache.log4j.varia.ExternallyRolledFileAppender;
 
 /* loaded from: classes2.dex */
@@ -23,26 +25,32 @@ public class SyncKeyBoardItemView extends RelativeLayout {
 
     public SyncKeyBoardItemView(Context context) {
         super(context);
-        LayoutInflater.from(context).inflate(R.layout.ford_sync_keyboard_item, (ViewGroup) this, true);
+        LayoutInflater.from(context).inflate(R.layout.ford_sync_keyboard_item, this, true);
         findView();
     }
 
     private void findView() {
-        this.mIb = (ImageButton) findViewById(R.id.ib);
-        this.mTv = (TextView) findViewById(R.id.tv);
+        this.mIb = findViewById(R.id.ib);
+        this.mTv = findViewById(R.id.tv);
     }
 
     public void initView(String str, final OnClickListener onClickListener) {
         this.mIb.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.view.SyncKeyBoardItemView$$ExternalSyntheticLambda0
             @Override // android.view.View.OnClickListener
-            public final void onClick(View view) {
-                SyncKeyBoardItemView.lambda$initView$0(onClickListener, view);
+            public void onClick(View view) {
+                if (onClickListener != null) {
+                    onClickListener.onClick();
+                }
             }
         });
         this.mIb.setOnLongClickListener(new View.OnLongClickListener() { // from class: com.hzbhd.canbus.view.SyncKeyBoardItemView$$ExternalSyntheticLambda1
             @Override // android.view.View.OnLongClickListener
-            public final boolean onLongClick(View view) {
-                return SyncKeyBoardItemView.lambda$initView$1(onClickListener, view);
+            public boolean onLongClick(View view) {
+                if (onClickListener == null) {
+                    return true;
+                }
+                onClickListener.onLongClick();
+                return true;
             }
         });
         str.hashCode();
@@ -137,17 +145,5 @@ public class SyncKeyBoardItemView extends RelativeLayout {
         }
     }
 
-    static /* synthetic */ void lambda$initView$0(OnClickListener onClickListener, View view) {
-        if (onClickListener != null) {
-            onClickListener.onClick();
-        }
-    }
 
-    static /* synthetic */ boolean lambda$initView$1(OnClickListener onClickListener, View view) {
-        if (onClickListener == null) {
-            return true;
-        }
-        onClickListener.onLongClick();
-        return true;
-    }
 }

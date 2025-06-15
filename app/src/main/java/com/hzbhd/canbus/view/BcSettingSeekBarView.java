@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -23,9 +24,9 @@ public class BcSettingSeekBarView extends RelativeLayout {
     public BcSettingSeekBarView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_back_camera_seek_bar, this);
-        this.mSeekBar = (SeekBar) viewInflate.findViewById(R.id.seekbar);
-        this.mTitleTv = (TextView) viewInflate.findViewById(R.id.tv_title);
-        this.mValueTv = (TextView) viewInflate.findViewById(R.id.tv_value);
+        this.mSeekBar = viewInflate.findViewById(R.id.seekbar);
+        this.mTitleTv = viewInflate.findViewById(R.id.tv_title);
+        this.mValueTv = viewInflate.findViewById(R.id.tv_value);
         TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.BcSettingSeekBarStyle);
         String string = typedArrayObtainStyledAttributes.getString(0);
         typedArrayObtainStyledAttributes.recycle();

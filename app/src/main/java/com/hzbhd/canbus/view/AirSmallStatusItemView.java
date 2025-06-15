@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -25,7 +26,7 @@ public class AirSmallStatusItemView extends RelativeLayout {
     }
 
     private void initViews(Context context, String str, int i, int i2, OnAirInfoChangeListener onAirInfoChangeListener) {
-        ImageView imageView = (ImageView) LayoutInflater.from(context).inflate(R.layout.view_air_small_line_status_item, this).findViewById(R.id.iv_item);
+        ImageView imageView = LayoutInflater.from(context).inflate(R.layout.view_air_small_line_status_item, this).findViewById(R.id.iv_item);
         this.mIv = imageView;
         this.mAction = str;
         this.mOffResId = i;

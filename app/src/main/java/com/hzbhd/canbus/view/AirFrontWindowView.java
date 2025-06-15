@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
@@ -23,8 +24,8 @@ import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_set.AirBtnAction;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.LogUtil;
+
 import java.util.Locale;
-import kotlin.text.Typography;
 
 /* loaded from: classes2.dex */
 public class AirFrontWindowView extends RelativeLayout implements View.OnClickListener {
@@ -40,7 +41,7 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
     private LineBtnView mBottomRightLbv;
     private SeatHeatHotSetView mColdLeftShhsv;
     private SeatHeatHotSetView mColdRightShhsv;
-    private Context mContext;
+    private final Context mContext;
     private SeatHeatHotSetView mHeatLeftShhsv;
     private SeatHeatHotSetView mHeatRightShhsv;
     private String mLanguage;
@@ -70,7 +71,7 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
     private TempSetView mTempSetViewLeft;
     private TempSetView mTempSetViewRight;
     private LineBtnView mTopLbv;
-    private View mView;
+    private final View mView;
     private FrontArea set;
 
     public AirFrontWindowView(Context context, AttributeSet attributeSet) {
@@ -84,46 +85,46 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
         Locale locale = this.mContext.getResources().getConfiguration().locale;
         this.mLocale = locale;
         this.mLanguage = locale.getLanguage();
-        this.mPmLayoutLl = (LinearLayout) this.mView.findViewById(R.id.ll_pm_layout);
-        this.mPmInValueTv = (TextView) this.mView.findViewById(R.id.tv_pm_in_value);
-        this.mPmOutValueTv = (TextView) this.mView.findViewById(R.id.tv_pm_out_value);
-        this.mLeftWindSpeedWsv = (SetWindSpeedView) this.mView.findViewById(R.id.swsv_left_wind_speed);
-        this.mRightWindSpeedWsv = (SetWindSpeedView) this.mView.findViewById(R.id.swsv_right_wind_speed);
-        this.mTempSetViewLeft = (TempSetView) this.mView.findViewById(R.id.tsv_left);
-        this.mTempSetViewCenter = (TempSetView) this.mView.findViewById(R.id.tsv_center);
-        this.mTempSetViewRight = (TempSetView) this.mView.findViewById(R.id.tsv_right);
-        this.mLlSeatHeat = (LinearLayout) this.mView.findViewById(R.id.ll_seat_heat);
-        this.mLlSeatCold = (LinearLayout) this.mView.findViewById(R.id.ll_seat_cold);
-        this.mHeatLeftShhsv = (SeatHeatHotSetView) this.mView.findViewById(R.id.sv_heat_left);
-        this.mHeatRightShhsv = (SeatHeatHotSetView) this.mView.findViewById(R.id.sv_heat_right);
-        this.mColdLeftShhsv = (SeatHeatHotSetView) this.mView.findViewById(R.id.sv_cold_left);
-        this.mColdRightShhsv = (SeatHeatHotSetView) this.mView.findViewById(R.id.sv_cold_right);
-        this.mTopLbv = (LineBtnView) this.mView.findViewById(R.id.ll_top_0);
-        this.mBottomLbv = (LineBtnView) this.mView.findViewById(R.id.lbv_bottom_0);
-        this.mBottomLeftLbv = (LineBtnView) this.mView.findViewById(R.id.lbv_bottom_1_left);
-        this.mBottomRightLbv = (LineBtnView) this.mView.findViewById(R.id.lbv_bottom_1_right);
-        this.mLeftSeatIv = (ImageView) this.mView.findViewById(R.id.iv_left_seat);
-        this.mBlowWindowsLeftIv = (ImageView) this.mView.findViewById(R.id.iv_left_blow_window);
-        this.mBlowHeadLeftIv = (ImageView) this.mView.findViewById(R.id.iv_left_blow_head);
-        this.mBlowFootLeftIv = (ImageView) this.mView.findViewById(R.id.iv_left_blow_foot);
-        this.mLeftBlowAuto = (ImageView) this.mView.findViewById(R.id.iv_left_blow_auto);
-        this.mSeatBottomLeftIv = (ImageView) this.mView.findViewById(R.id.iv_left_bottom);
-        this.mSeatBackLeftTv = (ImageView) this.mView.findViewById(R.id.iv_left_back);
-        this.mRightSeatIv = (ImageView) this.mView.findViewById(R.id.iv_right_seat);
-        this.mBlowWindowsRightIv = (ImageView) this.mView.findViewById(R.id.iv_right_blow_window);
-        this.mBlowHeadRightIv = (ImageView) this.mView.findViewById(R.id.iv_right_blow_head);
-        this.mBlowFootRightIv = (ImageView) this.mView.findViewById(R.id.iv_right_blow_foot);
-        this.mRightBlowAuto = (ImageView) this.mView.findViewById(R.id.iv_right_blow_auto);
-        this.mSeatBottomRightIv = (ImageView) this.mView.findViewById(R.id.iv_right_bottom);
-        this.mSeatBackRightTv = (ImageView) this.mView.findViewById(R.id.iv_right_back);
-        this.mSwitchFrontRearLl = (LinearLayout) this.mView.findViewById(R.id.ll_sw_front_area);
+        this.mPmLayoutLl = this.mView.findViewById(R.id.ll_pm_layout);
+        this.mPmInValueTv = this.mView.findViewById(R.id.tv_pm_in_value);
+        this.mPmOutValueTv = this.mView.findViewById(R.id.tv_pm_out_value);
+        this.mLeftWindSpeedWsv = this.mView.findViewById(R.id.swsv_left_wind_speed);
+        this.mRightWindSpeedWsv = this.mView.findViewById(R.id.swsv_right_wind_speed);
+        this.mTempSetViewLeft = this.mView.findViewById(R.id.tsv_left);
+        this.mTempSetViewCenter = this.mView.findViewById(R.id.tsv_center);
+        this.mTempSetViewRight = this.mView.findViewById(R.id.tsv_right);
+        this.mLlSeatHeat = this.mView.findViewById(R.id.ll_seat_heat);
+        this.mLlSeatCold = this.mView.findViewById(R.id.ll_seat_cold);
+        this.mHeatLeftShhsv = this.mView.findViewById(R.id.sv_heat_left);
+        this.mHeatRightShhsv = this.mView.findViewById(R.id.sv_heat_right);
+        this.mColdLeftShhsv = this.mView.findViewById(R.id.sv_cold_left);
+        this.mColdRightShhsv = this.mView.findViewById(R.id.sv_cold_right);
+        this.mTopLbv = this.mView.findViewById(R.id.ll_top_0);
+        this.mBottomLbv = this.mView.findViewById(R.id.lbv_bottom_0);
+        this.mBottomLeftLbv = this.mView.findViewById(R.id.lbv_bottom_1_left);
+        this.mBottomRightLbv = this.mView.findViewById(R.id.lbv_bottom_1_right);
+        this.mLeftSeatIv = this.mView.findViewById(R.id.iv_left_seat);
+        this.mBlowWindowsLeftIv = this.mView.findViewById(R.id.iv_left_blow_window);
+        this.mBlowHeadLeftIv = this.mView.findViewById(R.id.iv_left_blow_head);
+        this.mBlowFootLeftIv = this.mView.findViewById(R.id.iv_left_blow_foot);
+        this.mLeftBlowAuto = this.mView.findViewById(R.id.iv_left_blow_auto);
+        this.mSeatBottomLeftIv = this.mView.findViewById(R.id.iv_left_bottom);
+        this.mSeatBackLeftTv = this.mView.findViewById(R.id.iv_left_back);
+        this.mRightSeatIv = this.mView.findViewById(R.id.iv_right_seat);
+        this.mBlowWindowsRightIv = this.mView.findViewById(R.id.iv_right_blow_window);
+        this.mBlowHeadRightIv = this.mView.findViewById(R.id.iv_right_blow_head);
+        this.mBlowFootRightIv = this.mView.findViewById(R.id.iv_right_blow_foot);
+        this.mRightBlowAuto = this.mView.findViewById(R.id.iv_right_blow_auto);
+        this.mSeatBottomRightIv = this.mView.findViewById(R.id.iv_right_bottom);
+        this.mSeatBackRightTv = this.mView.findViewById(R.id.iv_right_back);
+        this.mSwitchFrontRearLl = this.mView.findViewById(R.id.ll_sw_front_area);
     }
 
     protected void showOrHide(View view, boolean z) {
         if (z) {
-            view.setVisibility(0);
+            view.setVisibility(View.VISIBLE);
         } else {
-            view.setVisibility(4);
+            view.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -152,10 +153,10 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
         }
         LogUtil.showLog("holdSet.isHaveRearArea():" + airPageUiSet.isHaveRearArea());
         if (airPageUiSet.isHaveRearArea()) {
-            this.mSwitchFrontRearLl.setVisibility(0);
+            this.mSwitchFrontRearLl.setVisibility(View.VISIBLE);
             this.mSwitchFrontRearLl.setOnClickListener(this);
         } else {
-            this.mSwitchFrontRearLl.setVisibility(8);
+            this.mSwitchFrontRearLl.setVisibility(View.GONE);
         }
         FrontArea frontArea = airPageUiSet.getFrontArea();
         this.set = frontArea;
@@ -163,7 +164,7 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
             return;
         }
         if (frontArea.isShowPmValue()) {
-            this.mPmLayoutLl.setVisibility(0);
+            this.mPmLayoutLl.setVisibility(View.VISIBLE);
         }
         this.mLineBtnAction = this.set.getLineBtnAction();
         OnAirBtnClickListener[] onAirBtnClickListeners = this.set.getOnAirBtnClickListeners();
@@ -191,9 +192,9 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
             }
         }
         if (this.set.isShowSeatHeat()) {
-            this.mHeatLeftShhsv.setVisibility(0);
+            this.mHeatLeftShhsv.setVisibility(View.VISIBLE);
             this.mHeatLeftShhsv.setControllable(this.set.isCanSetSeatHeat());
-            this.mHeatRightShhsv.setVisibility(0);
+            this.mHeatRightShhsv.setVisibility(View.VISIBLE);
             this.mHeatRightShhsv.setControllable(this.set.isCanSetSeatHeat());
             String stringByName = getStringByName(this.set.getSeatHeatSrnArray()[0]);
             this.mHeatLeftShhsv.setValue(stringByName);
@@ -205,11 +206,11 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
                 this.mHeatRightShhsv.setOnUpDownClickListener(seatHeatColdClickListeners[1]);
             }
         } else if (this.mContext.getResources().getConfiguration().orientation == 1) {
-            this.mLlSeatHeat.setVisibility(8);
+            this.mLlSeatHeat.setVisibility(View.GONE);
         }
         if (this.set.isShowSeatCold()) {
-            this.mColdLeftShhsv.setVisibility(0);
-            this.mColdRightShhsv.setVisibility(0);
+            this.mColdLeftShhsv.setVisibility(View.VISIBLE);
+            this.mColdRightShhsv.setVisibility(View.VISIBLE);
             this.mColdLeftShhsv.setControllable(this.set.isCanSetSeatCold());
             this.mColdRightShhsv.setControllable(this.set.isCanSetSeatCold());
             String stringByName2 = getStringByName(this.set.getSeatColdSrnArray()[0]);
@@ -222,7 +223,7 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
                 this.mColdRightShhsv.setOnUpDownClickListener(seatHeatColdClickListeners2[3]);
             }
         } else if (this.mContext.getResources().getConfiguration().orientation == 1) {
-            this.mLlSeatCold.setVisibility(8);
+            this.mLlSeatCold.setVisibility(View.GONE);
         }
         if (this.set.isCanSetLeftTemp()) {
             OnAirTemperatureUpDownClickListener[] tempSetViewOnUpDownClickListeners = this.set.getTempSetViewOnUpDownClickListeners();
@@ -263,9 +264,9 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
         this.mLeftWindSpeedWsv.initViews(this.mContext, this.set.isCanSetWindSpeed(), this.set.getWindMaxLevel(), this.set.getSetWindSpeedViewOnClickListener());
         if (this.set.getIsHaveLeftRightWindSpeed()) {
             if (this.mActivity.isNeedSwitchTemAndSeat()) {
-                this.mLeftWindSpeedWsv.setVisibility(0);
+                this.mLeftWindSpeedWsv.setVisibility(View.VISIBLE);
             } else {
-                this.mRightWindSpeedWsv.setVisibility(0);
+                this.mRightWindSpeedWsv.setVisibility(View.VISIBLE);
             }
             this.mRightWindSpeedWsv.initViews(this.mContext, this.set.isCanSetWindSpeed(), this.set.getWindMaxLevel(), this.set.getSetRightWindSpeedViewOnClickListener());
         }
@@ -303,623 +304,211 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
         }
         if (this.mLineBtnAction != null) {
             for (int i = 0; i < this.mLineBtnAction.length; i++) {
-                int i2 = 0;
-                while (true) {
-                    String[] strArr = this.mLineBtnAction[i];
-                    if (i2 < strArr.length) {
-                        String str = strArr[i2];
-                        str.hashCode();
-                        char c = 65535;
-                        switch (str.hashCode()) {
-                            case -1878365090:
-                                if (str.equals(AirBtnAction.RIGHT_SET_SEAT_COLD)) {
-                                    c = 0;
-                                    break;
-                                }
-                                break;
-                            case -1878226070:
-                                if (str.equals(AirBtnAction.RIGHT_SET_SEAT_HEAT)) {
-                                    c = 1;
-                                    break;
-                                }
-                                break;
-                            case -1786872896:
-                                if (str.equals(AirBtnAction.STEERING_WHEEL_HEATING)) {
-                                    c = 2;
-                                    break;
-                                }
-                                break;
-                            case -1761278488:
-                                if (str.equals(AirBtnAction.POLLRN_REMOVAL)) {
-                                    c = 3;
-                                    break;
-                                }
-                                break;
-                            case -1640478633:
-                                if (str.equals(AirBtnAction.SMALL_WIND_LIGHT)) {
-                                    c = 4;
-                                    break;
-                                }
-                                break;
-                            case -1604835367:
-                                if (str.equals(AirBtnAction.WINDSHIELD_DEICING)) {
-                                    c = 5;
-                                    break;
-                                }
-                                break;
-                            case -1470045433:
-                                if (str.equals("front_defog")) {
-                                    c = 6;
-                                    break;
-                                }
-                                break;
-                            case -1428679594:
-                                if (str.equals(AirBtnAction.AUTO_MANUAL)) {
-                                    c = 7;
-                                    break;
-                                }
-                                break;
-                            case -1423573049:
-                                if (str.equals(AirBtnAction.AC_MAX)) {
-                                    c = '\b';
-                                    break;
-                                }
-                                break;
-                            case -1406322270:
-                                if (str.equals(AirBtnAction.AUTO_2)) {
-                                    c = '\t';
-                                    break;
-                                }
-                                break;
-                            case -1274277292:
-                                if (str.equals(AirBtnAction.CLEAN_AIR)) {
-                                    c = '\n';
-                                    break;
-                                }
-                                break;
-                            case -1181429844:
-                                if (str.equals(AirBtnAction.AC_AUTO)) {
-                                    c = 11;
-                                    break;
-                                }
-                                break;
-                            case -1181328134:
-                                if (str.equals(AirBtnAction.AC_ECON)) {
-                                    c = '\f';
-                                    break;
-                                }
-                                break;
-                            case -1081415738:
-                                if (str.equals(AirBtnAction.MANUAL)) {
-                                    c = '\r';
-                                    break;
-                                }
-                                break;
-                            case -1073935955:
-                                if (str.equals(AirBtnAction.THREE_ZONE)) {
-                                    c = 14;
-                                    break;
-                                }
-                                break;
-                            case -1039745817:
-                                if (str.equals(AirBtnAction.NORMAL)) {
-                                    c = 15;
-                                    break;
-                                }
-                                break;
-                            case -825767279:
-                                if (str.equals(AirBtnAction.AUTO_WIND_LV)) {
-                                    c = 16;
-                                    break;
-                                }
-                                break;
-                            case -712865050:
-                                if (str.equals(AirBtnAction.REAR_LOCK)) {
-                                    c = 17;
-                                    break;
-                                }
-                                break;
-                            case -631663038:
-                                if (str.equals("rear_defog")) {
-                                    c = 18;
-                                    break;
-                                }
-                                break;
-                            case -597744666:
-                                if (str.equals("blow_positive")) {
-                                    c = 19;
-                                    break;
-                                }
-                                break;
-                            case -479653111:
-                                if (str.equals(AirBtnAction.LEFT_SET_SEAT_COLD)) {
-                                    c = 20;
-                                    break;
-                                }
-                                break;
-                            case -479514091:
-                                if (str.equals(AirBtnAction.LEFT_SET_SEAT_HEAT)) {
-                                    c = 21;
-                                    break;
-                                }
-                                break;
-                            case -424438238:
-                                if (str.equals(AirBtnAction.BLOW_NEGATIVE)) {
-                                    c = 22;
-                                    break;
-                                }
-                                break;
-                            case -386400856:
-                                if (str.equals(AirBtnAction.SEAT_STEERING_WHEEL_SYNCHRONIZATION)) {
-                                    c = 23;
-                                    break;
-                                }
-                                break;
-                            case -246396018:
-                                if (str.equals(AirBtnAction.MAX_FRONT)) {
-                                    c = 24;
-                                    break;
-                                }
-                                break;
-                            case -148776258:
-                                if (str.equals(AirBtnAction.BIG_WIND_LIGHT)) {
-                                    c = 25;
-                                    break;
-                                }
-                                break;
-                            case -92674103:
-                                if (str.equals(AirBtnAction.FRONT_WINDOW_HEAT)) {
-                                    c = 26;
-                                    break;
-                                }
-                                break;
-                            case -54617514:
-                                if (str.equals(AirBtnAction.AUTO_CYCLE)) {
-                                    c = 27;
-                                    break;
-                                }
-                                break;
-                            case -54286835:
-                                if (str.equals(AirBtnAction.AUTO_DEFOG)) {
-                                    c = 28;
-                                    break;
-                                }
-                                break;
-                            case 3106:
-                                if (str.equals("ac")) {
-                                    c = 29;
-                                    break;
-                                }
-                                break;
-                            case 96694:
-                                if (str.equals(AirBtnAction.AMB)) {
-                                    c = 30;
-                                    break;
-                                }
-                                break;
-                            case 96835:
-                                if (str.equals(AirBtnAction.AQS)) {
-                                    c = 31;
-                                    break;
-                                }
-                                break;
-                            case 100241:
-                                if (str.equals(AirBtnAction.ECO)) {
-                                    c = ' ';
-                                    break;
-                                }
-                                break;
-                            case 104456:
-                                if (str.equals(AirBtnAction.ION)) {
-                                    c = '!';
-                                    break;
-                                }
-                                break;
-                            case 1782194:
-                                if (str.equals(AirBtnAction.LEFT_SEAT_HEAT)) {
-                                    c = Typography.quote;
-                                    break;
-                                }
-                                break;
-                            case 3005871:
-                                if (str.equals("auto")) {
-                                    c = '#';
-                                    break;
-                                }
-                                break;
-                            case 3094652:
-                                if (str.equals("dual")) {
-                                    c = Typography.dollar;
-                                    break;
-                                }
-                                break;
-                            case 3107581:
-                                if (str.equals(AirBtnAction.ECON)) {
-                                    c = '%';
-                                    break;
-                                }
-                                break;
-                            case 3135580:
-                                if (str.equals(AirBtnAction.FAST)) {
-                                    c = Typography.amp;
-                                    break;
-                                }
-                                break;
-                            case 3357411:
-                                if (str.equals(AirBtnAction.MONO)) {
-                                    c = '\'';
-                                    break;
-                                }
-                                break;
-                            case 3496356:
-                                if (str.equals(AirBtnAction.REAR)) {
-                                    c = '(';
-                                    break;
-                                }
-                                break;
-                            case 3496916:
-                                if (str.equals(AirBtnAction.REST)) {
-                                    c = ')';
-                                    break;
-                                }
-                                break;
-                            case 3535914:
-                                if (str.equals(AirBtnAction.SOFT)) {
-                                    c = '*';
-                                    break;
-                                }
-                                break;
-                            case 3545755:
-                                if (str.equals("sync")) {
-                                    c = '+';
-                                    break;
-                                }
-                                break;
-                            case 88944080:
-                                if (str.equals(AirBtnAction.SYNC_TEMPERATURE)) {
-                                    c = ',';
-                                    break;
-                                }
-                                break;
-                            case 99489345:
-                                if (str.equals(AirBtnAction.IN_OUT_AUTO_CYCLE)) {
-                                    c = '-';
-                                    break;
-                                }
-                                break;
-                            case 106858757:
-                                if (str.equals("power")) {
-                                    c = '.';
-                                    break;
-                                }
-                                break;
-                            case 109854462:
-                                if (str.equals(AirBtnAction.SWING)) {
-                                    c = '/';
-                                    break;
-                                }
-                                break;
-                            case 349917670:
-                                if (str.equals(AirBtnAction.CYCLE_IN_OUT_CLOSE)) {
-                                    c = '0';
-                                    break;
-                                }
-                                break;
-                            case 395882750:
-                                if (str.equals(AirBtnAction.NEGATIVE_ION)) {
-                                    c = '1';
-                                    break;
-                                }
-                                break;
-                            case 407601476:
-                                if (str.equals(AirBtnAction.MAX_COOL)) {
-                                    c = '2';
-                                    break;
-                                }
-                                break;
-                            case 407740395:
-                                if (str.equals(AirBtnAction.MAX_HEAT)) {
-                                    c = '3';
-                                    break;
-                                }
-                                break;
-                            case 756225563:
-                                if (str.equals("in_out_cycle")) {
-                                    c = '4';
-                                    break;
-                                }
-                                break;
-                            case 860813349:
-                                if (str.equals(AirBtnAction.CLIMATE)) {
-                                    c = '5';
-                                    break;
-                                }
-                                break;
-                            case 1006620906:
-                                if (str.equals(AirBtnAction.AUTO_WIND_MODE)) {
-                                    c = '6';
-                                    break;
-                                }
-                                break;
-                            case 1139377839:
-                                if (str.equals(AirBtnAction.AUTO_WIND_LIGHT)) {
-                                    c = '7';
-                                    break;
-                                }
-                                break;
-                            case 1171871774:
-                                if (str.equals(AirBtnAction.AUTO_WIND_STRONG)) {
-                                    c = '8';
-                                    break;
-                                }
-                                break;
-                            case 1252031879:
-                                if (str.equals(AirBtnAction.RIGHT_SEAT_HEAT)) {
-                                    c = '9';
-                                    break;
-                                }
-                                break;
-                            case 1438998804:
-                                if (str.equals(AirBtnAction.AUTO_1_2)) {
-                                    c = ':';
-                                    break;
-                                }
-                                break;
+                for (int i2 = 0; i2 < this.mLineBtnAction[i].length; i2++) {
+                    String str = this.mLineBtnAction[i][i2];
+                    // Comprobar las diferentes condiciones y ejecutar la acción correspondiente
+                    if (str.equals(AirBtnAction.RIGHT_SET_SEAT_COLD)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.right_set_seat_cold);
+                    } else if (str.equals(AirBtnAction.RIGHT_SET_SEAT_HEAT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.right_set_seat_heat);
+                    } else if (str.equals(AirBtnAction.STEERING_WHEEL_HEATING)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.steering_wheel_heating);
+                    } else if (str.equals(AirBtnAction.POLLRN_REMOVAL)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.pollrn_removal);
+                    } else if (str.equals(AirBtnAction.SMALL_WIND_LIGHT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.small_wind_light);
+                    } else if (str.equals(AirBtnAction.WINDSHIELD_DEICING)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.windshield_deicing);
+                    } else if (str.equals("front_defog")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.front_defog);
+                    } else if (str.equals(AirBtnAction.AUTO_MANUAL)) {
+                        getBtnItemView(i, i2).turn(true);
+                        if (GeneralAirData.auto_manual) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_auto_n);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_man_n);
+                            break;
                         }
-                        switch (c) {
-                            case 0:
-                                getBtnItemView(i, i2).turn(GeneralAirData.right_set_seat_cold);
-                                break;
-                            case 1:
-                                getBtnItemView(i, i2).turn(GeneralAirData.right_set_seat_heat);
-                                break;
-                            case 2:
-                                getBtnItemView(i, i2).turn(GeneralAirData.steering_wheel_heating);
-                                break;
-                            case 3:
-                                getBtnItemView(i, i2).turn(GeneralAirData.pollrn_removal);
-                                break;
-                            case 4:
-                                getBtnItemView(i, i2).turn(GeneralAirData.small_wind_light);
-                                break;
-                            case 5:
-                                getBtnItemView(i, i2).turn(GeneralAirData.windshield_deicing);
-                                break;
-                            case 6:
-                                getBtnItemView(i, i2).turn(GeneralAirData.front_defog);
-                                break;
-                            case 7:
-                                getBtnItemView(i, i2).turn(true);
-                                if (GeneralAirData.auto_manual) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_auto_n);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_man_n);
-                                    break;
-                                }
-                            case '\b':
-                                getBtnItemView(i, i2).turn(GeneralAirData.ac_max);
-                                break;
-                            case '\t':
-                                getBtnItemView(i, i2).turn(GeneralAirData.auto_2);
-                                break;
-                            case '\n':
-                                getBtnItemView(i, i2).turn(GeneralAirData.clean_air);
-                                break;
-                            case 11:
-                                getBtnItemView(i, i2).turn(GeneralAirData.ac_auto);
-                                break;
-                            case '\f':
-                                getBtnItemView(i, i2).turn(true);
-                                getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_ac_n);
-                                if (GeneralAirData.ac_econ == 0) {
-                                    getBtnItemView(i, i2).turn(false);
-                                    break;
-                                } else if (GeneralAirData.ac_econ == 1) {
-                                    getBtnItemView(i, i2).turn(true);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_econ_n);
-                                    break;
-                                }
-                            case '\r':
-                                getBtnItemView(i, i2).turn(GeneralAirData.manual);
-                                break;
-                            case 14:
-                                getBtnItemView(i, i2).turn(GeneralAirData.threeZone);
-                                break;
-                            case 15:
-                                getBtnItemView(i, i2).turn(GeneralAirData.normal);
-                                break;
-                            case 16:
-                                getBtnItemView(i, i2).turn(true);
-                                if (this.mLanguage.contains("zh")) {
-                                    if (GeneralAirData.auto_wind_lv == 0) {
-                                        getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_ruo_n);
-                                        break;
-                                    } else if (GeneralAirData.auto_wind_lv == 1) {
-                                        getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_zhong_n);
-                                        break;
-                                    } else {
-                                        getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_qiang_n);
-                                        break;
-                                    }
-                                } else if (GeneralAirData.auto_wind_lv == 0) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_winl_n);
-                                    break;
-                                } else if (GeneralAirData.auto_wind_lv == 1) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_windme_n);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_windst_n);
-                                    break;
-                                }
-                            case 17:
-                                getBtnItemView(i, i2).turn(true);
-                                if (GeneralAirData.rear_lock) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_rearl_n);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_rearunl_n);
-                                    break;
-                                }
-                            case 18:
-                                getBtnItemView(i, i2).turn(GeneralAirData.rear_defog);
-                                break;
-                            case 19:
-                                getBtnItemView(i, i2).turn(GeneralAirData.blow_positive);
-                                break;
-                            case 20:
-                                getBtnItemView(i, i2).turn(GeneralAirData.left_set_seat_cold);
-                                break;
-                            case 21:
-                                getBtnItemView(i, i2).turn(GeneralAirData.left_set_seat_heat);
-                                break;
-                            case 22:
-                                getBtnItemView(i, i2).turn(GeneralAirData.blow_negative);
-                                break;
-                            case 23:
-                                getBtnItemView(i, i2).turn(GeneralAirData.seat_steering_wheel_synchronization);
-                                break;
-                            case 24:
-                                getBtnItemView(i, i2).turn(GeneralAirData.max_front);
-                                break;
-                            case 25:
-                                getBtnItemView(i, i2).turn(GeneralAirData.big_wind_light);
-                                break;
-                            case 26:
-                                getBtnItemView(i, i2).turn(GeneralAirData.front_window_heat);
-                                break;
-                            case 27:
-                                getBtnItemView(i, i2).turn(GeneralAirData.auto_cycle);
-                                break;
-                            case 28:
-                                getBtnItemView(i, i2).turn(GeneralAirData.auto_defog);
-                                break;
-                            case 29:
-                                getBtnItemView(i, i2).turn(GeneralAirData.ac);
-                                break;
-                            case 30:
-                                getBtnItemView(i, i2).turn(GeneralAirData.amb);
-                                break;
-                            case 31:
-                                getBtnItemView(i, i2).turn(GeneralAirData.aqs);
-                                break;
-                            case ' ':
-                                getBtnItemView(i, i2).turn(GeneralAirData.eco);
-                                break;
-                            case '!':
-                                getBtnItemView(i, i2).turn(GeneralAirData.ion);
-                                break;
-                            case '\"':
-                                getBtnItemView(i, i2).turn(GeneralAirData.is_left_seat_heat);
-                                break;
-                            case '#':
-                                getBtnItemView(i, i2).turn(GeneralAirData.auto);
-                                break;
-                            case '$':
-                                getBtnItemView(i, i2).turn(GeneralAirData.dual);
-                                break;
-                            case '%':
-                                getBtnItemView(i, i2).turn(GeneralAirData.econ);
-                                break;
-                            case '&':
-                                getBtnItemView(i, i2).turn(GeneralAirData.fast);
-                                break;
-                            case '\'':
-                                getBtnItemView(i, i2).turn(GeneralAirData.mono);
-                                break;
-                            case '(':
-                                getBtnItemView(i, i2).turn(GeneralAirData.rear);
-                                break;
-                            case ')':
-                                getBtnItemView(i, i2).turn(GeneralAirData.rest);
-                                break;
-                            case '*':
-                                getBtnItemView(i, i2).turn(GeneralAirData.soft);
-                                break;
-                            case '+':
-                                getBtnItemView(i, i2).turn(GeneralAirData.sync);
-                                break;
-                            case ',':
-                                getBtnItemView(i, i2).turn(GeneralAirData.sync_temperature);
-                                break;
-                            case '-':
-                                getBtnItemView(i, i2).turn(GeneralAirData.in_out_auto_cycle != 0);
-                                if (GeneralAirData.in_out_auto_cycle == 0) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_caro_n);
-                                    break;
-                                } else if (GeneralAirData.in_out_auto_cycle == 1) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_carin_n);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.auto_in_out_cycle);
-                                    break;
-                                }
-                            case '.':
-                                getBtnItemView(i, i2).turn(GeneralAirData.power);
-                                break;
-                            case '/':
-                                getBtnItemView(i, i2).turn(GeneralAirData.swing);
-                                break;
-                            case '0':
-                                getBtnItemView(i, i2).turn(true);
-                                if (GeneralAirData.cycle_in_out_close == 0) {
-                                    getBtnItemView(i, i2).turn(false);
-                                    break;
-                                } else if (GeneralAirData.cycle_in_out_close == 1) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_caro_n);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_carin_n);
-                                    break;
-                                }
-                            case '1':
-                                getBtnItemView(i, i2).turn(GeneralAirData.negative_ion);
-                                break;
-                            case '2':
-                                getBtnItemView(i, i2).turn(GeneralAirData.max_cool);
-                                break;
-                            case '3':
-                                getBtnItemView(i, i2).turn(GeneralAirData.max_heat);
-                                break;
-                            case '4':
-                                getBtnItemView(i, i2).turn(!GeneralAirData.in_out_cycle);
-                                if (GeneralAirData.in_out_cycle) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_caro_n);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_carin_n);
-                                    break;
-                                }
-                            case '5':
-                                getBtnItemView(i, i2).turn(GeneralAirData.climate);
-                                break;
-                            case '6':
-                                getBtnItemView(i, i2).turn(GeneralAirData.front_auto_wind_model);
-                                break;
-                            case '7':
-                                getBtnItemView(i, i2).turn(GeneralAirData.auto_wind_light);
-                                break;
-                            case '8':
-                                getBtnItemView(i, i2).turn(GeneralAirData.auto_wind_strong);
-                                break;
-                            case '9':
-                                getBtnItemView(i, i2).turn(GeneralAirData.is_right_seat_heat);
-                                break;
-                            case ':':
-                                getBtnItemView(i, i2).turn(GeneralAirData.auto_1_2 != 0);
-                                if (GeneralAirData.auto_1_2 == 0 || GeneralAirData.auto_1_2 == 1) {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_auto_n);
-                                    break;
-                                } else {
-                                    getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_auto2_n);
-                                    break;
-                                }
+                    } else if (str.equals(AirBtnAction.AC_MAX)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.ac_max);
+                    } else if (str.equals(AirBtnAction.AUTO_2)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.auto_2);
+                    } else if (str.equals(AirBtnAction.CLEAN_AIR)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.clean_air);
+                    } else if (str.equals(AirBtnAction.AC_AUTO)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.ac_auto);
+                    } else if (str.equals(AirBtnAction.AC_ECON)) {
+                        getBtnItemView(i, i2).turn(true);
+                        getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_ac_n);
+                        if (GeneralAirData.ac_econ == 0) {
+                            getBtnItemView(i, i2).turn(false);
+                            break;
+                        } else if (GeneralAirData.ac_econ == 1) {
+                            getBtnItemView(i, i2).turn(true);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_econ_n);
+                            break;
                         }
-                        i2++;
+                    } else if (str.equals(AirBtnAction.MANUAL)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.manual);
+                    } else if (str.equals(AirBtnAction.THREE_ZONE)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.threeZone);
+                    } else if (str.equals(AirBtnAction.NORMAL)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.normal);
+                    } else if (str.equals(AirBtnAction.AUTO_WIND_LV)) {
+                        getBtnItemView(i, i2).turn(true);
+                        if (this.mLanguage.contains("zh")) {
+                            if (GeneralAirData.auto_wind_lv == 0) {
+                                getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_ruo_n);
+                                break;
+                            } else if (GeneralAirData.auto_wind_lv == 1) {
+                                getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_zhong_n);
+                                break;
+                            } else {
+                                getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_qiang_n);
+                                break;
+                            }
+                        } else if (GeneralAirData.auto_wind_lv == 0) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_winl_n);
+                            break;
+                        } else if (GeneralAirData.auto_wind_lv == 1) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_windme_n);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_windst_n);
+                            break;
+                        }
+                    } else if (str.equals(AirBtnAction.REAR_LOCK)) {
+                        getBtnItemView(i, i2).turn(true);
+                        if (GeneralAirData.rear_lock) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_rearl_n);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_rearunl_n);
+                            break;
+                        }
+                    } else if (str.equals("rear_defog")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.rear_defog);
+                    } else if (str.equals("blow_positive")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.blow_positive);
+                    } else if (str.equals(AirBtnAction.LEFT_SET_SEAT_COLD)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.left_set_seat_cold);
+                    } else if (str.equals(AirBtnAction.LEFT_SET_SEAT_HEAT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.left_set_seat_heat);
+                    } else if (str.equals(AirBtnAction.BLOW_NEGATIVE)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.blow_negative);
+                    } else if (str.equals(AirBtnAction.SEAT_STEERING_WHEEL_SYNCHRONIZATION)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.seat_steering_wheel_synchronization);
+                    } else if (str.equals(AirBtnAction.MAX_FRONT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.max_front);
+                    } else if (str.equals(AirBtnAction.BIG_WIND_LIGHT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.big_wind_light);
+                    } else if (str.equals(AirBtnAction.FRONT_WINDOW_HEAT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.front_window_heat);
+                    } else if (str.equals(AirBtnAction.AUTO_CYCLE)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.auto_cycle);
+                    } else if (str.equals(AirBtnAction.AUTO_DEFOG)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.auto_defog);
+                    } else if (str.equals("ac")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.ac);
+                    } else if (str.equals(AirBtnAction.AMB)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.amb);
+                    } else if (str.equals(AirBtnAction.AQS)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.aqs);
+                    } else if (str.equals(AirBtnAction.ECO)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.eco);
+                    } else if (str.equals(AirBtnAction.ION)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.ion);
+                    } else if (str.equals(AirBtnAction.LEFT_SEAT_HEAT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.is_left_seat_heat);
+                    } else if (str.equals("auto")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.auto);
+                    } else if (str.equals("dual")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.dual);
+                    } else if (str.equals(AirBtnAction.ECON)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.econ);
+                    } else if (str.equals(AirBtnAction.FAST)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.fast);
+                    } else if (str.equals(AirBtnAction.MONO)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.mono);
+                    } else if (str.equals(AirBtnAction.REAR)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.rear);
+                    } else if (str.equals(AirBtnAction.REST)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.rest);
+                    } else if (str.equals(AirBtnAction.SOFT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.soft);
+                    } else if (str.equals("sync")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.sync);
+                    } else if (str.equals(AirBtnAction.SYNC_TEMPERATURE)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.sync_temperature);
+                    } else if (str.equals(AirBtnAction.IN_OUT_AUTO_CYCLE)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.in_out_auto_cycle != 0);
+                        if (GeneralAirData.in_out_auto_cycle == 0) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_caro_n);
+                            break;
+                        } else if (GeneralAirData.in_out_auto_cycle == 1) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_carin_n);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.auto_in_out_cycle);
+                            break;
+                        }
+                    } else if (str.equals("power")) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.power);
+                    } else if (str.equals(AirBtnAction.SWING)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.swing);
+                    } else if (str.equals(AirBtnAction.CYCLE_IN_OUT_CLOSE)) {
+                        getBtnItemView(i, i2).turn(true);
+                        if (GeneralAirData.cycle_in_out_close == 0) {
+                            getBtnItemView(i, i2).turn(false);
+                            break;
+                        } else if (GeneralAirData.cycle_in_out_close == 1) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_caro_n);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_carin_n);
+                            break;
+                        }
+                    } else if (str.equals(AirBtnAction.NEGATIVE_ION)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.negative_ion);
+                    } else if (str.equals(AirBtnAction.MAX_COOL)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.max_cool);
+                    } else if (str.equals(AirBtnAction.MAX_HEAT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.max_heat);
+                    } else if (str.equals("in_out_cycle")) {
+                        getBtnItemView(i, i2).turn(!GeneralAirData.in_out_cycle);
+                        if (GeneralAirData.in_out_cycle) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_caro_n);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_carin_n);
+                            break;
+                        }
+                    } else if (str.equals(AirBtnAction.CLIMATE)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.climate);
+                    } else if (str.equals(AirBtnAction.AUTO_WIND_MODE)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.front_auto_wind_model);
+                    } else if (str.equals(AirBtnAction.AUTO_WIND_LIGHT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.auto_wind_light);
+                    } else if (str.equals(AirBtnAction.AUTO_WIND_STRONG)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.auto_wind_strong);
+                    } else if (str.equals(AirBtnAction.RIGHT_SEAT_HEAT)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.is_right_seat_heat);
+                    } else if (str.equals(AirBtnAction.AUTO_1_2)) {
+                        getBtnItemView(i, i2).turn(GeneralAirData.auto_1_2 != 0);
+                        if (GeneralAirData.auto_1_2 == 0 || GeneralAirData.auto_1_2 == 1) {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_auto_n);
+                            break;
+                        } else {
+                            getBtnItemView(i, i2).setImageResource(R.drawable.ic_air_f_auto2_n);
+                            break;
+                        }
                     }
+                    i2++;
                 }
+
             }
         }
         if (this.set.isShowPmValue()) {
@@ -990,10 +579,10 @@ public class AirFrontWindowView extends RelativeLayout implements View.OnClickLi
 
     private void setIvShowImgOrNot(ImageView imageView, boolean z, int i) {
         if (z) {
-            imageView.setVisibility(0);
+            imageView.setVisibility(View.VISIBLE);
             imageView.setImageResource(i);
         } else {
-            imageView.setVisibility(4);
+            imageView.setVisibility(View.INVISIBLE);
         }
     }
 

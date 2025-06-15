@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.interfaces.OnAirTempTouchListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener;
@@ -24,6 +26,7 @@ public class TempSetView extends RelativeLayout {
         super(context);
     }
 
+    @SuppressLint("ClickableViewAccessibility")
     public TempSetView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_air_temp_set, this);
@@ -86,11 +89,11 @@ public class TempSetView extends RelativeLayout {
 
     public void setControllable(boolean z) {
         if (z) {
-            this.mIvUp.setVisibility(0);
-            this.mIvDown.setVisibility(0);
+            this.mIvUp.setVisibility(View.VISIBLE);
+            this.mIvDown.setVisibility(View.VISIBLE);
         } else {
-            this.mIvUp.setVisibility(8);
-            this.mIvDown.setVisibility(8);
+            this.mIvUp.setVisibility(View.GONE);
+            this.mIvDown.setVisibility(View.GONE);
         }
     }
 }

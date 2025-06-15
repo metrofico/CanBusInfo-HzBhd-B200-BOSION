@@ -6,7 +6,9 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
 import com.hzbhd.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,7 +20,7 @@ public class WindSpeedView extends LinearLayout {
     public WindSpeedView(Context context) {
         super(context);
         this.mTotalWindLevel = 0;
-        setOrientation(0);
+        setOrientation(LinearLayout.HORIZONTAL);
         setGravity(17);
     }
 
@@ -34,7 +36,7 @@ public class WindSpeedView extends LinearLayout {
         layoutParams.gravity = 17;
         setLayoutParams(layoutParams);
         for (int i2 = 0; i2 < this.mTotalWindLevel; i2++) {
-            ImageView imageView = (ImageView) LayoutInflater.from(context).inflate(R.layout.view_wind_speed_item, (ViewGroup) null).findViewById(R.id.iv_item);
+            ImageView imageView = LayoutInflater.from(context).inflate(R.layout.view_wind_speed_item, null).findViewById(R.id.iv_item);
             ((ViewGroup) imageView.getParent()).removeAllViews();
             addView(imageView);
             this.mImageViewList.add(imageView);

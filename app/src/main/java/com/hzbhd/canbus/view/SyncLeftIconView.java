@@ -6,7 +6,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
-import com.android.internal.util.ArrayUtils;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -26,9 +26,6 @@ public class SyncLeftIconView extends LinearLayout {
 
     public void initButton(Context context, String[] strArr, final OnLeftIconClickListener onLeftIconClickListener) throws Resources.NotFoundException {
         ImageButton imageButton;
-        if (ArrayUtils.isEmpty(strArr)) {
-            return;
-        }
         for (final String str : strArr) {
             imageButton = new ImageButton(context);
             str.hashCode();
@@ -50,9 +47,8 @@ public class SyncLeftIconView extends LinearLayout {
             imageButton.setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.view.SyncLeftIconView.1
                 @Override // android.view.View.OnClickListener
                 public void onClick(View view) {
-                    OnLeftIconClickListener onLeftIconClickListener2 = onLeftIconClickListener;
-                    if (onLeftIconClickListener2 != null) {
-                        onLeftIconClickListener2.onIconClick(str);
+                    if (onLeftIconClickListener != null) {
+                        onLeftIconClickListener.onIconClick(str);
                     }
                 }
             });

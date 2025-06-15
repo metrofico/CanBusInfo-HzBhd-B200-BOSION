@@ -3,6 +3,7 @@ package com.hzbhd.canbus.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
+
 import com.hzbhd.canbus.view.SyncBtnItemView;
 
 /* loaded from: classes2.dex */
@@ -21,21 +22,17 @@ public class SyncSoftKeyView extends LinearLayout {
     }
 
     public void initButton(Context context, int i, final OnSoftKeyClickListener onSoftKeyClickListener) {
-        for (final int i2 = 0; i2 < i; i2++) {
+        for (int i2 = 0; i2 < i; i2++) {
             SyncBtnItemView syncBtnItemView = new SyncBtnItemView(context);
             addView(syncBtnItemView, new LinearLayout.LayoutParams(0, -1, 1.0f));
             syncBtnItemView.setOnClickListener(new SyncBtnItemView.OnClickListener() { // from class: com.hzbhd.canbus.view.SyncSoftKeyView$$ExternalSyntheticLambda0
                 @Override // com.hzbhd.canbus.view.SyncBtnItemView.OnClickListener
                 public final void onclick() {
-                    SyncSoftKeyView.lambda$initButton$0(onSoftKeyClickListener, i2);
+                    if (onSoftKeyClickListener != null) {
+                        onSoftKeyClickListener.onSoftKeyClick(i);
+                    }
                 }
             });
-        }
-    }
-
-    static /* synthetic */ void lambda$initButton$0(OnSoftKeyClickListener onSoftKeyClickListener, int i) {
-        if (onSoftKeyClickListener != null) {
-            onSoftKeyClickListener.onSoftKeyClick(i);
         }
     }
 

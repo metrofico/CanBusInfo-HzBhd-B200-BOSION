@@ -2,6 +2,7 @@ package com.hzbhd.canbus.view;
 
 import android.content.Context;
 import android.widget.LinearLayout;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.view.SyncKeyBoardItemView;
 import com.hzbhd.canbus.view.SyncKeyBoardView;
@@ -19,17 +20,15 @@ public class SyncKeyBoardRowView extends LinearLayout {
             syncKeyBoardItemView.initView(str, new SyncKeyBoardItemView.OnClickListener() { // from class: com.hzbhd.canbus.view.SyncKeyBoardRowView.1
                 @Override // com.hzbhd.canbus.view.SyncKeyBoardItemView.OnClickListener
                 public void onClick() {
-                    SyncKeyBoardView.OnKeyBoardBtnClickListener onKeyBoardBtnClickListener2 = onKeyBoardBtnClickListener;
-                    if (onKeyBoardBtnClickListener2 != null) {
-                        onKeyBoardBtnClickListener2.onBtnClick(str);
+                    if (onKeyBoardBtnClickListener != null) {
+                        onKeyBoardBtnClickListener.onBtnClick(str);
                     }
                 }
 
                 @Override // com.hzbhd.canbus.view.SyncKeyBoardItemView.OnClickListener
                 public void onLongClick() {
-                    SyncKeyBoardView.OnKeyBoardBtnClickListener onKeyBoardBtnClickListener2 = onKeyBoardBtnClickListener;
-                    if (onKeyBoardBtnClickListener2 != null) {
-                        onKeyBoardBtnClickListener2.onBtnLongClick(str);
+                    if (onKeyBoardBtnClickListener != null) {
+                        onKeyBoardBtnClickListener.onBtnLongClick(str);
                     }
                 }
             });

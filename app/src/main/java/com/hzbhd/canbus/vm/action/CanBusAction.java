@@ -1,7 +1,9 @@
 package com.hzbhd.canbus.vm.action;
 
 import android.view.WindowManager;
+
 import androidx.lifecycle.MutableLiveData;
+
 import com.hzbhd.canbus.vm.Vm;
 import com.hzbhd.canbus.vm.action.CanBusAction;
 import com.hzbhd.canbus.vm.action.CanBusAction.Main;
@@ -12,6 +14,7 @@ import com.hzbhd.common.settings.constant.BodaSysContant;
 import com.hzbhd.ui.util.BaseUtil;
 import com.hzbhd.util.HandlerThreadUtilKt;
 import com.hzbhd.util.LogUtil;
+
 import kotlin.Lazy;
 import kotlin.LazyKt;
 import kotlin.Metadata;
@@ -121,8 +124,7 @@ public class CanBusAction {
                 LogUtil.d("setCustomPanoramicVisible: " + visible);
             }
             HandlerThreadUtilKt.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.vm.action.CanBusAction$Reverse$setCustomPanoramicVisible$1
-                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                {
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */ {
                     super(0);
                 }
 
@@ -144,8 +146,7 @@ public class CanBusAction {
                 LogUtil.d("setPanoramicVisible: " + visible);
             }
             HandlerThreadUtilKt.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.vm.action.CanBusAction$Reverse$setPanoramicVisible$1
-                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                {
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */ {
                     super(0);
                 }
 
@@ -195,8 +196,7 @@ public class CanBusAction {
                 LogUtil.d("setRadarVisible: " + visible);
             }
             HandlerThreadUtilKt.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.vm.action.CanBusAction$Radar$setRadarVisible$1
-                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                {
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */ {
                     super(0);
                 }
 
@@ -218,8 +218,7 @@ public class CanBusAction {
                 LogUtil.d("setRadarScale: " + scale);
             }
             HandlerThreadUtilKt.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.vm.action.CanBusAction$Radar$setRadarScale$1
-                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                {
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */ {
                     super(0);
                 }
 
@@ -241,8 +240,7 @@ public class CanBusAction {
                 LogUtil.d("setShowDistanceNotShowLocationUi: " + show);
             }
             HandlerThreadUtilKt.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.vm.action.CanBusAction$Radar$setShowDistanceNotShowLocationUi$1
-                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                {
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */ {
                     super(0);
                 }
 
@@ -264,8 +262,7 @@ public class CanBusAction {
                 LogUtil.d("setShowLeftTopOneDistanceUi: " + show);
             }
             HandlerThreadUtilKt.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.vm.action.CanBusAction$Radar$setShowLeftTopOneDistanceUi$1
-                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                {
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */ {
                     super(0);
                 }
 
@@ -287,8 +284,7 @@ public class CanBusAction {
                 LogUtil.d("setSmallRadar: " + small);
             }
             HandlerThreadUtilKt.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.vm.action.CanBusAction$Radar$setSmallRadar$1
-                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-                {
+                /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */ {
                     super(0);
                 }
 
