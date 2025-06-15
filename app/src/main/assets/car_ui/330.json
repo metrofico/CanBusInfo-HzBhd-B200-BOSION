@@ -1,0 +1,228 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["drive_data","air","setting","amplifier","panel_key","original_car_device"]
+  },
+  "driverDataPageUiSet": {
+    "isHaveBtn": false,
+    "buttonText": "_330_Reset_of_driving_info",
+    "list": [
+      {
+        "headTitleSrn":"_330_traffic_information",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_330_driver_data_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Instantaneous_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Average_fuel_consumption_after_refueling","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Mileage_you_can_drive","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_average_velocity","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_rotate_speed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_330_Multimedia_global_state",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_330_currently_selected_disc","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Subtitle_language","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Voice_language","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_dvd_language","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_6","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn":"_330_Radar_setting_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_330_Display_switch_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_distance","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Radar_switch_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Volume_intensity","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["max_front", "in_out_cycle", "power", "rear","front_window_heat"],
+        ["auto", "auto_2"], ["ac", "auto_wind_mode"],
+        ["dual", "aqs", "clean_air","front_defog", "rear_defog"]
+      ],
+      "disableBtnArray": ["max_front","aqs"],
+      "isAllBtnCanClick": true,
+
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": true,
+      "seatColdSrnArray": [
+        "_330_seat_cold_off",
+        "_330_seat_heat_negative1",
+        "_330_seat_heat_negative2",
+        "_330_seat_heat_negative3"
+      ],
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_ac","rear_auto","manual"]
+      ],
+      "isAllBtnCanClick": true,
+      "disableBtnArray": ["rear_ac"],
+
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 5,
+
+      "isCanSetTemp": true,
+
+      "isShowCenterWheel": true,
+      "isCanSetCenterTemp": false,
+
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": false,
+      "seatColdSrnArray": [
+        "_330_seat_cold_off",
+        "_330_seat_heat_negative1",
+        "_330_seat_heat_negative2",
+        "_330_seat_heat_negative3"
+      ],
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_330_amplifier_info",
+        "itemList": [
+          {"titleSrn": "_330_amplifier_switch","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Power_amplifier_mute","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Original_power_amplifier_node","style": 0},
+          {"titleSrn": "_330_asl","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Vehicle_volume_follows_ASL","style": 0},
+          {"titleSrn": "_330_p_sel","style": 1,"valueSrnArray": ["_330_POS_ALL","_330_POS_FRONT","_330_POS_REAR","_330_POS_DRIVER"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_330_Mode_selection",
+        "itemList": [
+          {"titleSrn": "_330_Steering_wheel_control_mode","style": 1,"valueSrnArray": ["_330_Rear_mounted_host","_330_Front_mounted_host"],"selectIndex": 1,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_330_setting_info",
+        "itemList": [
+          {"titleSrn": "_330_setting_cat_type","style": 1,"valueSrnArray": ["_330_car_1","_330_car_2","_330_car_3","_330_car_4","_330_car_5","_330_car_6","_330_car_7","_330_car_8","_330_car_9","_330_car_10","_330_car_11","_330_car_12","_330_car_13","_330_car_14"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_330_other_settings",
+        "itemList": [
+          {"titleSrn": "_330_Rotating_Speed_report","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_330_millisecond"},
+          {"titleSrn": "_330_car_Speed_report","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_330_millisecond"}
+        ]
+      },
+      {
+        "titleSrn": "_330_Information_reset",
+        "itemList": [
+          {"titleSrn": "_330_Reset_of_driving_info","style": 3,"confirmTis": "_330_is_Reset","value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_330_media_Language_settings",
+        "itemList": [
+          {"titleSrn": "_330_Subtitle_language","style": 1,"valueSrnArray": ["_330_chinese","_330_english","_330_French","_330_Spanish","_330_German","_330_Italian"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Voice_language","style": 1,"valueSrnArray": ["_330_chinese","_330_english","_330_French","_330_Spanish","_330_German","_330_Italian"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_dvd_language","style": 1,"valueSrnArray": ["_330_chinese","_330_english","_330_French","_330_Spanish","_330_German","_330_Italian"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_330_unit_selection",
+        "itemList": [
+          {"titleSrn": "_330_unit_selection1","style": 1,"valueSrnArray": ["_330_unit_selection5","_330_unit_selection6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_unit_selection2","style": 1,"valueSrnArray": ["_330_unit_selection4","_330_unit_selection3"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "_330_fm_1",
+      "_330_fm_2",
+      "_330_am",
+      "_330_disc",
+      "_330_aux",
+      "_330_rear_disc"
+    ],
+    "count": 3
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  }
+}

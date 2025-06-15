@@ -1,0 +1,190 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "tire_info"
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "ac",
+          "auto",
+          "sync",
+          "ac_max"
+        ],
+        [
+          "front_defog",
+          "rear_defog"
+        ],
+        [
+          "in_out_cycle",
+          "power"
+        ],
+        [
+          "blow_head",
+          "blow_head_foot",
+          "blow_foot",
+          "blow_window_foot",
+          "blow_window"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "auto",
+        "in_out_cycle",
+        "front_defog"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_315_light_setup",
+        "itemList": [
+          {
+            "titleSrn": "_250_ambient_light_brightness",
+            "style": 2,
+            "max": 7,
+            "min": 1,
+            "progress": 0,
+            "value": "1",
+            "unit": "level"
+          },
+          {
+            "titleSrn": "_304_atoms_lamp_control",
+            "style": 4
+          },
+          {
+            "titleSrn": "_315_seat_courtesy_switch",
+            "style": 4
+          },
+          {
+            "titleSrn": "light_ctrl_5",
+            "style": 1,
+            "valueSrnArray": [
+              "_103_car_setting_value_38",
+              "_315_mazda_binary_setup",
+              "_315_force"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_315_light_static_setup",
+            "style": 1,
+            "valueSrnArray": [
+              "_315_Monochromatic_static",
+              "_315_Monochromatic_breathing",
+              "_315_Discoloration_breathing"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_315_light_static_sampling_bgr",
+            "style": 2,
+            "max": 255,
+            "min": 0,
+            "progress": 0,
+            "value": "1",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_315_light_static_sampling_bpr",
+            "style": 2,
+            "max": 255,
+            "min": 0,
+            "progress": 0,
+            "value": "1",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_315_light_dynamic_setup",
+            "style": 4
+          },
+          {
+            "titleSrn": "_315_light_dynamic_sampling",
+            "style": 1,
+            "valueSrnArray": [
+              "_315_color_bgr",
+              "_315_color_bpr"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_315_light_dynamic_speed",
+            "style": 2,
+            "max": 255,
+            "min": 0,
+            "progress": 0,
+            "value": "1",
+            "unit": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_41_system_setting",
+        "itemList": [
+          {
+            "titleSrn": "_279_temperature_unit",
+            "style": 1,
+            "valueSrnArray": [
+              "hiworld_jeep_123_item_30",
+              "hiworld_jeep_123_item_31"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  },
+  "tirePageUiSet": {
+  "isHaveSpareTire": false,
+  "tireInfoStrList": [
+    {"whichTire":0,"list": [{"title":"temperature_content","value":"_284_tire_temperature_default"},{"title":"tire_pressure_content","value":"_284_tire_pressure_default"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"}
+    ]},
+    {"whichTire":1,"list": [{"title":"temperature_content","value":"_284_tire_temperature_default"},{"title":"tire_pressure_content","value":"_284_tire_pressure_default"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"}
+    ]},
+    {"whichTire":2,"list": [{"title":"temperature_content","value":"_284_tire_temperature_default"},{"title":"tire_pressure_content","value":"_284_tire_pressure_default"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"}
+    ]},
+    {"whichTire":3,"list": [{"title":"temperature_content","value":"_284_tire_temperature_default"},{"title":"tire_pressure_content","value":"_284_tire_pressure_default"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"},
+      {"title":"null_value","value":"null_value"}
+    ]}
+  ]
+}
+}

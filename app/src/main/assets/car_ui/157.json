@@ -1,0 +1,1186 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "air",
+      "original_car_device",
+      "drive_data",
+      "amplifier",
+      "hybird"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "in_out_cycle",
+          "ac",
+          "sync",
+          "auto"
+        ],
+        [
+          "front_defog"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "dual",
+          "blow_positive",
+          "blow_negative",
+          "blow_head",
+          "blow_head_foot",
+          "blow_foot",
+          "blow_window_foot",
+          "rear"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "dual",
+        "auto",
+        "in_out_cycle"
+      ],
+      "disableBtnArray": [
+        "rear"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": false,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ],
+      "isShowSeatCold": false,
+      "isCanSetSeatCold": false,
+      "seatColdSrnArray": [
+        "close_seat_cold",
+        "left_seat_cold_1",
+        "left_seat_cold_2",
+        "left_seat_cold_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        [
+          "rear_power",
+          "rear_auto"
+        ]
+      ],
+      "disableBtnArray": [
+        "rear_auto"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "windMaxLevel": 7
+    }
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 12,
+    "bandRange": 6,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "isHaveMegaBass": true,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_209_mileage_setting",
+        "itemList": [
+          {"titleSrn": "_55_0x69_data1_bit65","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1", "_55_0x69_data1_bit65_item2", "_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit43","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1", "_55_0x69_data1_bit65_item2", "_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit20","style": 2,"max": 5,"min": -5,"progress": 5,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_194_light_set",
+        "itemList": [
+          {
+            "titleSrn": "_55_0x67_data1_bit64",
+            "style": 1,
+            "valueSrnArray": [
+              "lowest",
+              "lower",
+              "middle",
+              "higher",
+              "hightest"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x67_data1_bit32",
+            "style": 1,
+            "valueSrnArray": [
+              "zero_second",
+              "fifteen_second",
+              "thirty_second",
+              "sixty_second"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x67_data1_bit10",
+            "style": 1,
+            "valueSrnArray": [
+              "fifteen_second",
+              "thirty_second",
+              "sixty_second"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x67_data0_bit20",
+            "style": 1,
+            "valueSrnArray": [
+              "lowest",
+              "lower",
+              "middle",
+              "higher",
+              "hightest"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_55_0x65_title",
+        "itemList": [
+          {
+            "titleSrn": "_55_0x65_data1_bit0",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_41_key_remote_unlock",
+            "style": 1,
+            "valueSrnArray": [
+              "driver_door",
+              "all_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x65_data1_bit21",
+            "style": 1,
+            "valueSrnArray": [
+              "thirty_second",
+              "sixty_second",
+              "ninety_second"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x65_data1_bit76",
+            "style": 1,
+            "valueSrnArray": [
+              "by_driver_door",
+              "_55_0x65_data1_bit76_item1",
+              "_55_0x65_data1_bit76_item2",
+              "english_off"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x65_data1_bit54",
+            "style": 1,
+            "valueSrnArray": [
+              "_55_0x65_data1_bit54_item1",
+              "_55_0x65_data1_bit54_item2",
+              "english_off"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_auto_trunk",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_seat_auto_move",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_Rear_seat_reminder",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_55_0x66_title",
+        "itemList": [
+          {
+            "titleSrn": "_55_0x66_data1_bit3",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x66_data1_bit0",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_unlock_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "all_door",
+              "driver_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x66_data1_bit2",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {
+            "titleSrn": "_55_0x69_data0_bit10",
+            "style": 1,
+            "valueSrnArray": [
+              "_250_high",
+              "_250_mid",
+              "_250_low"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x69_data0_bit2",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x69_data0_bit4",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_41_speed_distance_units",
+            "style": 1,
+            "valueSrnArray": [
+              "_41_km_h_km",
+              "_41_mph_miles"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_41_tachometer",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x65_data1_bit3",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x67_data0_bit3",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_55_0x68_title",
+        "itemList": [
+          {
+            "titleSrn": "_55_0x66_data1_bit1",
+            "style": 1,
+            "valueSrnArray": [
+              "small",
+              "big"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x69_data0_bit3",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x68_data1_bit2",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x68_data1_bit3",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x68_data1_bit10",
+            "style": 1,
+            "valueSrnArray": [
+              "far",
+              "mid",
+              "near"
+            ],
+            ",selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x68_data1_bit54",
+            "style": 1,
+            "valueSrnArray": [
+              "mid",
+              "_55_0x68_data1_bit54_item2",
+              "_55_0x68_data0_bit31_item3"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x68_data1_bit76",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "_55_0x68_data1_bit76_item1",
+              "_55_0x68_data1_bit76_item2"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x69_data1_bit7",
+            "style": 1,
+            "valueSrnArray": [
+              "_55_0x69_data1_bit7_item0",
+              "_55_0x69_data1_bit7_item1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x68_data0_bit0",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_memory_position",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_Straight_line_driving_assistance_reminder",
+            "style": 1,
+            "valueSrnArray": [
+              "_157_Activated_during_cruise_control",
+              "_157_Activated_in_certain_speed"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_157_panoramic_setting",
+        "itemList": [
+          {
+            "titleSrn": "_55_0x64_data2_bit0",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data6_bit0",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data6_bit1",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data6_bit2",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data6_bit3",
+            "style": 1,
+            "valueSrnArray": [
+              "narrow",
+              "width"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data5",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x69_data0_bit6",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data0_bit10",
+            "style": 1,
+            "valueSrnArray": [
+              "_157_front_pano",
+              "_55_0xE8_data0_bit32_item1",
+              "_157_front_only",
+              "_157_left_right_view"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data0_bit32",
+            "style": 1,
+            "valueSrnArray": [
+              "_157_back_pano",
+              "_55_0xE8_data0_bit32_item1",
+              "_157_back_wide",
+              "_157_back_standard"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data6_bit4",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data6_bit5",
+            "style": 1,
+            "valueSrnArray": [
+              "_55_0xE8_data6_bit5_item0",
+              "_55_0xE8_data6_bit5_item1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_revers_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_157_narrow_mode",
+              "_157_wide_mode"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0xE8_data0_bit4",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_panoramic_reset",
+            "style": 3,
+            "confirmTis": "_157_panoramic_reset"
+          }
+        ]
+      },
+      {
+        "titleSrn": "sport_mode_backlight_set",
+        "itemList": [
+          {
+            "titleSrn": "_157_backlight_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_157_close",
+              "_157_daytime",
+              "_157_at_night"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_backlight_color",
+            "style": 1,
+            "valueSrnArray": [
+              "_250_blue",
+              "_209_amber",
+              "_250_red",
+              "_250_green",
+              "_209_violet"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_brightness",
+            "style": 2,
+            "max": 5,
+            "min": -5,
+            "progress": 5,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_157_contrast",
+            "style": 2,
+            "max": 5,
+            "min": -5,
+            "progress": 5,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_157_saturation",
+            "style": 2,
+            "max": 5,
+            "min": -5,
+            "progress": 5,
+            "value": "0",
+            "unit": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_41_system_setting",
+        "itemList": [
+          {
+            "titleSrn": "_41_tachometer_switch",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_41_ctm_system",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "language_setup",
+            "style": 1,
+            "valueSrnArray": [
+              "language_status_0",
+              "language_status_1",
+              "language_cn_fan",
+              "language_phase_thai",
+              "language_bahasa_melayu",
+              "language_bahasa_indonesia",
+              "language_status_16",
+              "language_status_2",
+              "language_status_3",
+              "language_status_4",
+              "language_status_6",
+              "language_status_7",
+              "language_status_5",
+              "language_status_9",
+              "language_status_11",
+              "language_status_8",
+              "language_status_21",
+              "language_status_12",
+              "language_status_13",
+              "language_status_15",
+              "vm_golf7_language_setup_czech",
+              "language_hungary",
+              "language_status_23",
+              "language_status_25",
+              "language_status_14",
+              "language_bulgarian",
+              "language_ivrit",
+              "language_latvian",
+              "language_lithuanian",
+              "language_srpski",
+              "language_hrvatski",
+              "language_slovak",
+              "language_status_10"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_rear_entertainment_system",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_55_0x75_title",
+        "itemList": [
+          {
+            "titleSrn": "_55_0x75_data1_bit1",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_55_0x75_data1_bit0",
+            "style": 1,
+            "valueSrnArray": [
+              "_55_0x75_data1_bit0_item0",
+              "_55_0x75_data1_bit0_item1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_trunk_sense_switch",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_back_mirror_fold",
+            "style": 1,
+            "valueSrnArray": [
+              "_157_manual_only",
+              "_157_auto_fold"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_turn_guide_signal",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "compass",
+        "itemList": [
+          {
+            "titleSrn": "compass_run_calibration",
+            "style": 3,
+            "confirmTis": "compass_run_calibration"
+          },
+          {
+            "titleSrn": "compass_calibration_status",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "compass_zoom",
+            "style": 2,
+            "max": 15,
+            "min": 1,
+            "progress": 0,
+            "value": "1",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "magnetic_field_angle",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_157_dashboard_setting",
+        "itemList": [
+          {
+            "titleSrn": "_157_endurance_distance",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_average_speed",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_display",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_turbine",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_sound",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_phone",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_sms_email",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_navigation",
+            "style": 1,
+            "valueSrnArray": [
+              "honda_delete",
+              "honda_add"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_delete_all_icons",
+            "style": 3,
+            "confirmTis": "_157_delete_all_icons"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_41_park_assist_system_status",
+        "itemList": [
+          {
+            "titleSrn": "_41_rear_radar",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "_41_front_radar",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "_41_park_assist",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "_41_radar_sound",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "front_camera_setup",
+        "itemList": [
+          {
+            "titleSrn": "_157_bsm_reference_line",
+            "style": 1,
+            "valueSrnArray": [
+              "_288_0x31_setting8",
+              "_288_0x31_setting7"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "front_camera_switch",
+            "style": 3,
+            "confirmTis": "front_camera_switch"
+          },
+          {"style": 4,"titleSrn": "_157_front_link_turn"}
+        ]
+      },
+      {
+        "titleSrn": "reset",
+        "itemList": [
+          {
+            "titleSrn": "_41_default_all",
+            "style": 3,
+            "confirmTis": "_41_default_all"
+          },
+          {
+            "titleSrn": "_157_tmps_correction",
+            "style": 3,
+            "confirmTis": "_157_tmps_correction"
+          },
+          {
+            "titleSrn": "_55_0x6E_0x06",
+            "style": 3,
+            "confirmTis": "_55_0x6E_0x06"
+          }
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {
+            "titleSrn": "_301_volume_and_speed_linkage",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "low",
+              "middle",
+              "high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_301_dts_audio",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_157_amplifier_reset",
+            "style": 3,
+            "confirmTis": "_157_amplifier_reset"
+          },
+          {
+            "titleSrn": "_157_sheng",
+            "style": 0
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_41_fuel_mileage_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_18_current_fuel",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x16_data12",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x16_data34",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x16_data56",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "trip_a",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_186_endurancee_mileage",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_real_soc",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_41_historical_itinerary_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_55_0x17_first_record",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "trip_a",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x17_data34",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x17_second_record",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "trip_a",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x17_data34",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x17_third_record",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "trip_a",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_55_0x17_data34",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "standard"
+      },
+      {
+        "style": 0,
+        "titleSrn": "honda_set_angle_wide"
+      },
+      {
+        "style": 0,
+        "titleSrn": "overlook"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_41_full_wide_angle"
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [
+      "st",
+      "scan",
+      "refresh"
+    ],
+    "rowBottomBtnAction": [
+      "prev_disc",
+      "left",
+      "up",
+      "band",
+      "down",
+      "right",
+      "next_disc"
+    ],
+    "items": [
+      {
+        "imageId": "music_list",
+        "titleSrn": "_186_band",
+        "value": ""
+      },
+      {
+        "imageId": "music_list",
+        "titleSrn": "_186_preset",
+        "value": ""
+      },
+      {
+        "imageId": "music_music",
+        "titleSrn": "_186_frequency",
+        "value": ""
+      }
+    ],
+    "isHaveSongList": true,
+    "isHavePlayTimeSeekBar": false
+  }
+}

@@ -1,0 +1,223 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "tire_info",
+      "drive_data",
+      "setting",
+      "air"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "auto",
+          "ac",
+          "in_out_cycle"
+        ],
+        [],
+        [],
+        [
+          "front_defog",
+          "rear_defog"
+        ]
+      ],
+      "disableBtnArray": ["power"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S404_0x61_d0_0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S404_0x61_d0_1"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S404_0x61_d0_2"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S404_0x61_d0_3",
+            "valueSrnArray": [
+              "S404_0x61_d0_3_1",
+              "S404_0x61_d0_3_2"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S404_0x61_d0_4",
+            "valueSrnArray": [
+              "S404_0x61_d0_4_1",
+              "S404_0x61_d0_4_2"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S404_0x61_d1_0",
+        "itemList": [
+          {
+            "titleSrn": "S404_0x61_d1_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S404_0x61_d1_2",
+            "style": 4
+          },
+          {
+            "titleSrn": "S404_0x61_d1_3",
+            "style": 1,
+            "valueSrnArray": [
+              "S404_0x61_d1_3_1",
+              "S404_0x61_d1_3_2",
+              "S404_0x61_d1_3_3",
+              "S404_0x61_d1_3_4",
+              "S404_0x61_d1_3_5",
+              "S404_0x61_d1_3_6"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S404_0x61_d2_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S404_0x61_d2_1",
+            "valueSrnArray": [
+              "S404_0x61_d2_1_1",
+              "S404_0x61_d2_1_2",
+              "S404_0x61_d2_1_3",
+              "S404_0x61_d2_1_4",
+              "S404_0x61_d2_1_5"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S404_0x61_d2_2",
+            "valueSrnArray": [
+              "S404_0x61_d2_2_2",
+              "S404_0x61_d2_2_1"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_computer_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S404_0x32_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S404_0x32_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S404_0x32_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S404_0x32_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S404_0x32_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S404_0x32_6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S404_0x32_7",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {
+        "whichTire": 0,
+        "list": [
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          },
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 1,
+        "list": [
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          },
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 2,
+        "list": [
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          },
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 3,
+        "list": [
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          },
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["amplifier","panel_key"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction":[
+        ["power", "sync", "auto","in_out_cycle","dual"],
+        ["ac"],["front_defog","rear_defog"],
+        ["blow_head","blow_head_foot","blow_foot","blow_window_foot","blow_positive","blow_negative"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "disableBtnArray": ["sync"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": false,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": false,
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power", "rear_lock", "rear_auto"]
+      ],
+      "isAllBtnCanClick": false,
+      "isShowCenterWheel": true,
+      "windMaxLevel": 7,
+      "isCanSetWindSpeed": false
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_209_mileage_setting",
+        "itemList": [
+          {"titleSrn": "_55_0x69_data1_bit65","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1", "_55_0x69_data1_bit65_item2", "_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit43","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1", "_55_0x69_data1_bit65_item2", "_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit20","style": 2,"max": 5,"min": -5,"progress": 5,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_194_light_set",
+        "itemList": [
+          {"titleSrn": "_55_0x67_data1_bit64","style": 1,"valueSrnArray": ["lowest","lower","middle","higher","hightest"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit32","style": 1,"valueSrnArray": ["zero_second","fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit10","style": 1,"valueSrnArray": ["fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data0_bit20","style": 1,"valueSrnArray": ["lowest","lower","middle","higher","hightest"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x65_title",
+        "itemList": [
+          {"titleSrn": "_55_0x65_data1_bit0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_41_key_remote_unlock","style": 1,"valueSrnArray": ["driver_door","all_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit21","style": 1,"valueSrnArray": ["thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit76","style": 1,"valueSrnArray": ["by_driver_door", "_55_0x65_data1_bit76_item1", "_55_0x65_data1_bit76_item2", "english_off"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit54","style": 1,"valueSrnArray": ["_55_0x65_data1_bit54_item1", "_55_0x65_data1_bit54_item2","english_off"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x66_title",
+        "itemList": [
+          {"titleSrn": "_55_0x66_data1_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x66_data1_bit0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_194_unlock_mode","style": 1,"valueSrnArray": ["all_door","driver_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x66_data1_bit2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {"titleSrn": "_55_0x69_data0_bit10","style": 1,"valueSrnArray": ["_250_high","_250_mid","_250_low"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data0_bit2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data0_bit4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_41_speed_distance_units","style": 1,"valueSrnArray": ["_41_km_h_km","_41_mph_miles"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_41_tachometer","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data0_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x68_title",
+        "itemList": [
+          {"titleSrn": "_55_0x66_data1_bit1","style": 1,"valueSrnArray": ["small","big"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data0_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x68_data1_bit2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x68_data1_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x68_data1_bit10","style": 1,"valueSrnArray": ["far","mid","near"],",selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x68_data1_bit54","style": 1,"valueSrnArray": ["mid","_55_0x68_data1_bit54_item2","_55_0x68_data0_bit31_item3"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "_55_0x68_data1_bit76","style": 1,"valueSrnArray": ["close","_55_0x68_data1_bit76_item1","_55_0x68_data1_bit76_item2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_163_setting_16","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_301_four_wheel_drive_awd","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_41_system_setting",
+        "itemList": [
+          {"titleSrn": "_41_tachometer_switch","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_301_reverse_gear_tone","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_301_personalized_driving_position","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_301_seat_position_movement","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_status_0","language_status_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_301_original_car_power_amplifier","style": 0,"value": "null_value"},
+          {"titleSrn": "_301_original_car_rear_seat","style": 0,"value": "null_value"},
+          {"titleSrn": "amplifier_switch","style": 0,"value": "null_value"},
+          {"titleSrn": "mute","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x75_title",
+        "itemList": [
+          {"titleSrn": "_55_0x75_data1_bit1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x75_data1_bit0","style": 1,"valueSrnArray": ["_55_0x75_data1_bit0_item0","_55_0x75_data1_bit0_item1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "compass",
+        "itemList": [
+          {"titleSrn": "compass_run_calibration","style": 3,"confirmTis": "compass_run_calibration"},
+          {"titleSrn": "compass_calibration_status","style": 0,"value": "null_value"},
+          {"titleSrn": "compass_zoom","style": 2,"max": 15,"min": 1,"progress": 0,"value": "1","unit": "null_value"},
+          {"titleSrn": "magnetic_field_angle","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_41_park_assist_system_status",
+        "itemList": [
+          {"titleSrn": "_41_rear_radar","style": 0,"value": "null_value"},
+          {"titleSrn": "_41_front_radar","style": 0,"value": "null_value"},
+          {"titleSrn": "_41_park_assist","style": 0,"value": "null_value"},
+          {"titleSrn": "_41_radar_sound","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "front_camera_setup",
+        "itemList": [
+          {"titleSrn": "front_camera_switch","style": 3,"confirmTis": "front_camera_switch"}
+        ]
+      },
+      {
+        "titleSrn": "reset",
+        "itemList": [
+          {"titleSrn": "_41_default_all","style": 3,"confirmTis": "_41_default_all"}
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_301_volume_and_speed_linkage","style": 1,"valueSrnArray": ["_291_close","low","middle","high"],"selectIndex": 0,"value": ""},
+          {
+            "titleSrn": "_301_dts_audio",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+
+        ]
+      }
+
+    ]
+  },
+  "driverDataPageUiSet": {
+    "isHaveBtn": false,
+    "list": [
+      {
+        "headTitleSrn": "_41_fuel_mileage_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x16_data12","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x16_data34","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x16_data56","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_a","defaultValueSrn": "null_value"},
+          {"titleSrn": "_186_endurancee_mileage","defaultValueSrn": "null_value"},
+          {
+            "titleSrn": "a_current_speed",
+            "defaultValueSrn": "set_default"
+          },
+          {"titleSrn": "mazda_binary_car_set78","defaultValueSrn": "set_default"},
+          {"titleSrn": "_16_avg_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "cat_set_mileage","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 14,
+    "bandRange": 7,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "isHaveMegaBass": false,
+    "isCanSeekBarMinPlus": false,
+    "isHaveBandMiddle": false,
+    "lineBtnAction": [
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "standard"},
+      {"style": 0,"titleSrn": "honda_set_angle_wide"},
+      {"style": 0,"titleSrn": "overlook"},
+      {"style": 0,"titleSrn": "_41_full_wide_angle"}
+    ]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "OPEL_KEY_OK",
+      "OPEL_KEY_Dark",
+      "OPEL_KEY_Mode",
+      "OPEL_KEY_Right",
+      "OPEL_KEY_Left",
+      "OPEL_KEY_Down",
+      "OPEL_KEY_Up",
+      "OPEL_KEY_ESC",
+      "OPEL_KEY_Menu",
+      "OPEL_KEY_Loud"
+    ],
+    "count": 4
+  }
+}

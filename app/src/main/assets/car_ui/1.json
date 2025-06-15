@@ -1,0 +1,141 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting", "drive_data","amplifier","original_car_device","tire_info"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac","in_out_cycle"],
+        ["auto"], ["auto_2"],
+        ["dual", "aqs", "max_front", "rear","ac_max","rear_lock"]
+      ],
+      "disableBtnArray": ["power", "ac", "ac_max","in_out_cycle","auto","auto_2","dual", "aqs", "max_front", "rear"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_246_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_246_car_info2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info10","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info13","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info15","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info16","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info17","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_driver_1","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_1001_bt",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_1001_bt_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_bt_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_bt_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_bt_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_bt_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_bt_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_bt_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1001_bt_8","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_246_paring_info",
+        "itemList": [
+          {"titleSrn": "_246_paring_info1","style": 0},
+          {"titleSrn": "_246_paring_info2","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1004_settings","style": 1,"valueSrnArray": ["_1004_settings1","_1004_settings2"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_1001_bt2",
+        "itemList": [
+          {"titleSrn": "_1001_bt_7","style": 1,"valueSrnArray": ["_1001_bt_7_0","_1001_bt_7_1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_1001_tire_3",
+        "itemList": [
+          {"titleSrn": "_1001_tire_3","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_326_radar_info_1",
+        "itemList": [
+          {"titleSrn": "_326_radar_info_1","style": 4}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  }
+}

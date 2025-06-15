@@ -1,0 +1,45 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "drive_data"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "in_out_cycle","dual"],
+        [], [],
+        ["max_front", "power", "auto"]
+      ],
+      "disableBtnArray": [],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isCanSetWindSpeed": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_337_drive_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_246_paring_info","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+
+}

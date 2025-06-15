@@ -1,0 +1,71 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data","tire_info"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction":[
+        ["power","ac","in_out_cycle","auto"],
+        ["front_defog"],["rear_defog"],
+        ["ac_max","max_front","dual","rear"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {"titleSrn": "_286_settings_item_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_286_settings_item_6","style": 2,"max": 12,"min": 1,"progress": 0,"value": "10","unit": "unit_second"},
+          {"titleSrn": "_286_settings_item_7","style": 2,"max": 30,"min": 0,"progress": 1,"value": "10","unit": "unit_second"},
+          {"titleSrn": "_286_settings_item_8","style": 2,"max": 10,"min": 0,"progress": 1,"value": "10","unit": "null_value"},
+          {"titleSrn": "_286_settings_item_9","style": 1,"valueSrnArray": ["manual","auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_286_settings_item_a","style": 1,"valueSrnArray": ["_220_normal","_286_soft","_286_strong"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_286_settings_item_b","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_286_settings_item_c","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_286_settings_item_d","style": 1,"valueSrnArray": ["all_door","driver_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_286_settings_item_e","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_current_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "_286_totle_drive_time","defaultValueSrn": "null_value"},
+          {"titleSrn": "_286_totle_drive_distance","defaultValueSrn": "null_value"},
+          {"titleSrn": "_163_drive_data3","defaultValueSrn": "null_value"},
+          {"titleSrn": "_286_continuous_average_speed","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title":"null_value","value":"null_value"}]},
+      {"whichTire":1,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title":"null_value","value":"null_value"}]},
+      {"whichTire":2,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title":"null_value","value":"null_value"}]},
+      {"whichTire":3,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title":"null_value","value":"null_value"}]}
+    ]
+  }
+}

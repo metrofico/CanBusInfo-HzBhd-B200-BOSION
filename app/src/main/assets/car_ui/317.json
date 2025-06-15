@@ -1,0 +1,90 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["amplifier","setting","air","tire_info","drive_data"]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 22,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 45,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"amplifier_setting",
+        "itemList": [
+          {"style": 4,"titleSrn": "amplifier_switch"},
+          {"style": 1,"titleSrn": "outlander_simple_car_set_17","valueSrnArray": ["outlander_simple_car_set_170","outlander_simple_car_set_171","outlander_simple_car_set_172","outlander_simple_car_set_173","outlander_simple_car_set_174"],"selectIndex": 0,"value": ""},
+          {"style": 2,"titleSrn": "_103_punch","min": -3,"max": 3,"progress": 0,"value": "0","unit": "null_value"},
+          {"style": 1,"titleSrn": "outlander_simple_car_set_8","valueSrnArray": ["close","outlander_simple_car_set_81","outlander_simple_car_set_82"],"selectIndex": 0,"value": ""},
+          {"style": 1,"titleSrn": "outlander_simple_car_set_9","valueSrnArray": ["outlander_simple_car_set_90","outlander_simple_car_set_91","outlander_simple_car_set_92"],"selectIndex": 0,"value": ""},
+          {"style": 1,"titleSrn": "outlander_simple_car_set_10","valueSrnArray": ["close","outlander_simple_car_set_101","outlander_simple_car_set_102"],"selectIndex": 0,"value": ""},
+          {"style": 1,"titleSrn": "outlander_simple_car_set_11","valueSrnArray": ["close","outlander_simple_car_set_111","outlander_simple_car_set_112","outlander_simple_car_set_113"],"selectIndex": 0,"value": ""},
+          {"style": 1,"titleSrn": "outlander_simple_car_set_12","valueSrnArray": ["close","outlander_simple_car_set_111","outlander_simple_car_set_112","outlander_simple_car_set_113"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "outlander_simple_car_set_14","style": 3,"confirmTis": "outlander_simple_car_set_14","value": ""},
+          {"titleSrn": "outlander_simple_car_set_15","style": 3,"confirmTis": "outlander_simple_car_set_15","value": ""},
+          {"titleSrn": "outlander_simple_car_set_16","style": 3,"confirmTis": "outlander_simple_car_set_16","value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_317_hand_select",
+        "itemList": [
+          {"style": 1,"titleSrn": "_283_choose","valueSrnArray": ["_317_left_hand","_317_right_hand"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "smallWindowStatusArray": ["ac", "auto", "sync", "in_out_cycle"],
+      "lineBtnAction": [
+        ["auto","ac","sync"],
+        ["rear_defog"],["blow_positive"],
+        ["power","max_front","in_out_cycle","rear"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "windMaxLevel": 8,
+      "isCanSetWindSpeed": true
+    }
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title": "temperature_content","value":"null_value"},{"title": "_317_battery","value":"null_value"}]},
+      {"whichTire":1,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title": "temperature_content","value":"null_value"},{"title": "_317_battery","value":"null_value"}]},
+      {"whichTire":2,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title": "temperature_content","value":"null_value"},{"title": "_317_battery","value":"null_value"}]},
+      {"whichTire":3,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title": "temperature_content","value":"null_value"},{"title": "_317_battery","value":"null_value"}]},
+      {"whichTire":4,"list": [{"title":"tire_pressure_content","value":"null_value"},{"title": "temperature_content","value":"null_value"},{"title": "_317_battery","value":"null_value"}]}
+    ],
+    "isHaveSpareTire": true
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "battery_voltage","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "mainPageUiSet": {
+    "btnAction": []
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

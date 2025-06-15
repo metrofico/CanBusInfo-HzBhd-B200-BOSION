@@ -1,0 +1,331 @@
+{"mainPageUiSet": {
+  "btnAction": [
+    "air",
+    "drive_data",
+    "setting",
+    "warning",
+    "tire_info"
+  ]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "ac",
+          "ac_max",
+          "auto",
+          "auto_wind_lv"
+        ],
+        [
+          "rear_defog",
+          "front_defog"
+        ],
+        [
+          "power",
+          "steering_wheel_heating"
+        ],
+        [
+          "clean_air",
+          "aqs",
+          "dual",
+          "max_front",
+          "in_out_cycle"
+        ]
+      ],
+      "disableBtnArray": ["ac_max","auto","rear_defog","dual","rear_defog","max_front"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        ["rear_power","rear_lock"],
+        [],[],
+        ["rear_auto"]
+      ],
+      "disableBtnArray": ["rear_auto"],
+      "isCanSetTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_2_driver_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_8","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_9","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_10","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_11","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_12","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_13","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_15","defaultValueSrn": "set_default"},
+          {"titleSrn": "_2_driver_16","defaultValueSrn": "set_default"}
+
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_2_setting_0",
+        "itemList": [
+          {"titleSrn": "_2_setting_0_0","style": 1,"valueSrnArray": ["_2_setting_0_0_0","_2_setting_0_0_1","_2_setting_0_0_2"],"selectIndex": 0,"value": ""}
+
+
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_1",
+        "itemList": [
+          {"titleSrn": "_2_setting_1_0","style": 1,"valueSrnArray": ["_2_setting_1_0_off","_2_setting_1_0_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_1_1","style":2,"max": 240,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_2_setting_1_2","style": 1,"valueSrnArray": ["_2_setting_1_2_0","_2_setting_1_2_1","_2_setting_1_2_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_1_3","style": 0},
+          {"titleSrn": "_2_setting_1_4","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_2",
+        "itemList": [
+          {"titleSrn": "_2_setting_2_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_2_1","style": 1,"valueSrnArray": ["_2_setting_1_0_off","_2_setting_1_0_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_2_2","style": 1,"valueSrnArray": ["_2_setting_1_0_off","_2_setting_1_0_on"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_3",
+        "itemList": [
+          {"titleSrn": "_2_setting_3_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_3_2","style": 1,"valueSrnArray": ["_2_setting_1_0_off","_2_setting_1_0_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_3_3","style": 1,"valueSrnArray": ["_2_setting_1_0_off","_2_setting_1_0_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_3_4","style": 1,"valueSrnArray": ["_2_setting_1_0_off","_2_setting_1_0_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_3_5","style": 1,"valueSrnArray": ["_2_setting_3_5_0","_2_setting_3_5_1","_2_setting_3_5_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_3_6","style": 1,"valueSrnArray": ["_2_setting_3_6_0","_2_setting_3_6_1","_2_setting_3_6_2","_2_setting_3_6_3","_2_setting_3_6_4"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_4",
+        "itemList": [
+          {"titleSrn": "_2_setting_4_1","style": 4},
+          {"titleSrn": "_2_setting_4_2","style": 4},
+          {"titleSrn": "_2_setting_4_3","style":2,"max": 9,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_2_setting_4_4","style":2,"max": 9,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_2_setting_4_5","style":2,"max": 9,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_2_setting_4_6","style":2,"max": 9,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_5",
+        "itemList": [
+          {"titleSrn": "_2_setting_5_1","style": 1,"valueSrnArray": ["_2_setting_5_1_1","_2_setting_5_1_2","_2_setting_5_1_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_5_2","style": 4},
+          {"titleSrn": "_2_setting_5_3","style": 4},
+          {"titleSrn": "_2_setting_5_4","style": 4},
+          {"titleSrn": "_2_setting_5_5","style":2,"max": 10,"progress": 0,"value": "0","unit": "_2_unit_1"},
+          {"titleSrn": "_2_setting_5_6","style":2,"max": 6,"progress": 0,"value": "0","unit": "_2_unit_2"},
+          {"titleSrn": "_2_setting_5_7","style":2,"max": 6,"progress": 0,"value": "0","unit": "_2_unit_2"}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_6",
+        "itemList": [
+          {"titleSrn": "_2_setting_6_0","style": 1,"valueSrnArray": ["_2_setting_6_0_1","_2_setting_6_0_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_6_1","style":2,"max": 10,"progress": 0,"value": "0","unit": "_2_unit_1"},
+          {"titleSrn": "_2_setting_6_2","style":2,"max": 10,"progress": 0,"value": "0","unit": "_2_unit_1"},
+          {"titleSrn": "_2_setting_6_3","style":2,"max": 6,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_2_setting_6_4","style": 4},
+          {"titleSrn": "_2_setting_6_5","style": 4}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_7",
+        "itemList": [
+          {"titleSrn": "_2_setting_7_1","style":2,"max": 10,"progress": 0,"value": "0","unit": "_2_unit_1"},
+          {"titleSrn": "_2_setting_7_2","style":2,"max": 10,"progress": 0,"value": "0","unit": "_2_unit_1"},
+          {"titleSrn": "_2_setting_7_3","style": 1,"valueSrnArray": ["_2_setting_7_3_0","_2_setting_7_3_1","_2_setting_7_3_2"
+          ,"_2_setting_7_3_3","_2_setting_7_3_4","_2_setting_7_3_5","_2_setting_7_3_6","_2_setting_7_3_7","_2_setting_7_3_8"
+            ,"_2_setting_7_3_9","_2_setting_7_3_10","_2_setting_7_3_11","_2_setting_7_3_12","_2_setting_7_3_13","_2_setting_7_3_14"
+          ],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_7_4","style":2,"max": 10,"progress": 0,"value": "0","unit": "_2_unit_1"}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_8",
+        "itemList": [
+          {"titleSrn": "_2_setting_8_1","style": 4},
+          {"titleSrn": "_2_setting_8_2","style": 4},
+          {"titleSrn": "_2_setting_8_3","style": 4},
+          {"titleSrn": "_2_setting_8_4","style": 4},
+          {"titleSrn": "_2_setting_8_5","style": 4}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_9",
+        "itemList": [
+          {"titleSrn": "_2_setting_9_1","style": 1,"valueSrnArray": ["_2_setting_9_1_1","_2_setting_9_1_2","_2_setting_9_1_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_9_2","style": 1,"valueSrnArray": ["_2_setting_9_2_1","_2_setting_9_2_2","_2_setting_9_2_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_9_3","style": 4},
+          {"titleSrn": "_2_setting_9_4","style": 4},
+          {"titleSrn": "_2_setting_9_5","style": 4},
+          {"titleSrn": "_2_setting_9_6","style": 4}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_10",
+        "itemList": [
+          {"titleSrn": "_2_setting_10_1","style": 4},
+          {"titleSrn": "_2_setting_10_2","style": 4},
+          {"titleSrn": "_2_setting_10_3","style": 4},
+          {"titleSrn": "_2_setting_10_4","style": 4},
+          {"titleSrn": "_2_setting_10_5","style": 4},
+          {"titleSrn": "_2_setting_10_6","style": 4},
+          {"titleSrn": "_2_setting_10_7","style": 4},
+          {"titleSrn": "_2_setting_10_8","style": 4},
+          {"titleSrn": "_2_setting_10_9","style": 4},
+          {"titleSrn": "_2_setting_10_10","style": 4}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_11",
+        "itemList": [
+          {"titleSrn": "_2_setting_11_1","style": 1,"valueSrnArray": ["_2_setting_11_1_1","_2_setting_11_1_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_11_2","style": 1,"valueSrnArray": ["_2_setting_11_2_1","_2_setting_11_2_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_11_3","style": 1,"valueSrnArray": ["_2_setting_11_3_1","_2_setting_11_3_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_11_4","style": 1,"valueSrnArray": ["_2_setting_11_4_1","_2_setting_11_4_2","_2_setting_11_4_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_11_5","style": 1,"valueSrnArray": ["_2_setting_11_5_1","_2_setting_11_5_2","_2_setting_11_5_3","_2_setting_11_5_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_11_6","style": 1,"valueSrnArray": ["_2_setting_11_6_1","_2_setting_11_6_2","_2_setting_11_6_3"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_12",
+        "itemList": [
+          {"titleSrn": "_2_setting_12_2","style": 0},
+          {"titleSrn": "_2_setting_12_3","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2","_2_setting_12_3_2_1","_2_setting_12_3_3","_2_setting_12_3_4","_2_setting_12_3_5","_2_setting_12_3_6","_2_setting_12_3_7"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_12_4","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2","_2_setting_12_3_2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_12_5","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_12_6","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2","_2_setting_12_3_2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_12_7","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_13_1","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_5"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_13_2","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_13_3","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2","_2_setting_12_3_2_1","_2_setting_12_3_5"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_13_4","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_13_5","style": 4},
+          {"titleSrn": "_2_setting_13_6","style": 4},
+          {"titleSrn": "_2_setting_13_7","style": 4},
+          {"titleSrn": "_2_setting_13_8","style": 1,"valueSrnArray": ["_2_setting_12_3_1","_2_setting_12_3_5"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_14",
+        "itemList": [
+          {"titleSrn": "_2_setting_14_1","style": 4}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_15",
+        "itemList": [
+          {"titleSrn": "_2_setting_15_1","style": 1,"valueSrnArray": ["_2_setting_15_1_1","_2_setting_15_1_2","_2_setting_15_1_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_15_2","style": 4},
+          {"titleSrn": "_2_setting_15_3","style": 4},
+          {"titleSrn": "_2_setting_15_4","style": 4}
+        ]
+      },
+      {
+        "titleSrn": "_2_setting_16",
+        "itemList": [
+          {"titleSrn": "_2_setting_16_1","style": 1,"valueSrnArray": ["_2_setting_16_1_1","_2_setting_16_1_2","_2_setting_16_1_3","_2_setting_16_1_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_2_setting_16_2","style":2,"max": 70,"min": 30,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_2_setting_16_3","style":2,"max": 70,"min": 30,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_2_setting_16_4","style":2,"max": 70,"min": 30,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_2_ERA_b",
+        "itemList": [
+          {"titleSrn": "_2_ERA_","style": 0}
+        ]
+      },{
+        "titleSrn":"vm_golf7_language_setup",
+        "itemList": [
+          {"titleSrn": "_2_set_language","style": 1,"valueSrnArray": [
+            "_2_set_language_0",
+            "_2_set_language_1",
+            "_2_set_language_2",
+            "_2_set_language_3",
+            "_2_set_language_4",
+            "_2_set_language_5",
+            "_2_set_language_6",
+            "_2_set_language_7",
+            "_2_set_language_8",
+            "_2_set_language_9",
+            "_2_set_language_10",
+            "_2_set_language_11",
+            "_2_set_language_12",
+            "_2_set_language_13",
+            "_2_set_language_14",
+            "_2_set_language_15",
+            "_2_set_language_16",
+            "_2_set_language_17",
+            "_2_set_language_18",
+            "_2_set_language_19"
+          ],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_326_radar_info_1",
+        "itemList": [
+          {"titleSrn": "_326_radar_info_1","style": 4}
+          ]
+      }
+
+
+
+
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_2_park_assist_1"},
+      {"style": 0,"titleSrn": "_2_park_assist_2"}
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"Reference_tire_pressure","value":"null_value"},{"title":"Actual_tire_pressure","value":"null_value"},{"title":"null_value","value":"null_value"}]},
+      {"whichTire":1,"list": [{"title":"Reference_tire_pressure","value":"null_value"},{"title":"Actual_tire_pressure","value":"null_value"},{"title":"null_value","value":"null_value"}]},
+      {"whichTire":2,"list": [{"title":"Reference_tire_pressure","value":"null_value"},{"title":"Actual_tire_pressure","value":"null_value"},{"title":"null_value","value":"null_value"}]},
+      {"whichTire":3,"list": [{"title":"Reference_tire_pressure","value":"null_value"},{"title":"Actual_tire_pressure","value":"null_value"},{"title":"null_value","value":"null_value"}]}
+    ]
+  },
+  "warningPageUiSet": {}
+}

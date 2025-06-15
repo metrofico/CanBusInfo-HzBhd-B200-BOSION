@@ -1,0 +1,248 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","amplifier","drive_data","hybird"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "auto",
+          "dual",
+          "in_out_cycle",
+          "windshield_deicing"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "max_front"
+        ],
+        [
+          "blow_positive",
+          "pollrn_removal",
+          "ac",
+          "blow_negative"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "dual",
+        "auto",
+        "in_out_cycle"
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        [
+          "rear_power",
+          "rear_lock",
+          "rear_auto",
+          "dual",
+          "auto_wind_mode"
+        ]
+      ],
+      "disableBtnArray": [
+        "rear_auto",
+        "dual"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_55_0x67_title",
+        "itemList": [
+          {"titleSrn": "geely_daytime_running_lights","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit64","style": 2,"max": 4,"min": 0,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_18_vehicle_setting_item_3_43","style": 1,"valueSrnArray": ["close","mazda_binary_car_set10_1", "mazda_binary_car_set10_2","mazda_binary_car_set10_3"],"selectIndex": 0,"value": ""},
+          {
+            "titleSrn": "_55_0x67_data1_bit32",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "mazda_binary_car_set10_3",
+              "mazda_binary_car_set10_4",
+              "mazda_binary_car_set20_1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_197_car_lock_settings",
+        "itemList": [
+          {"titleSrn": "_197_autolock_by_speed","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_autolock_by_shift_from_p","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_autolock_by_shift_to_p","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_remote_2_press_unlock","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_lock_unlcok_feedback_tone","style": 2,"max": 6,"min": 0,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_197_unlock_when_operating_key_twice","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_Driver_seat_open_door_linkage_unlock","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_smart_car_door_unlock","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_smart_car_lock_and_one_button_start","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_emergency_flashing_light_response_when_unlocking_locking","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_automatic_relock_time","style": 1,"valueSrnArray": ["close", "mazda_binary_car_set10_3","mazda_binary_car_set10_4","mazda_binary_car_set20_1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "airSetting",
+        "itemList": [
+          {
+            "titleSrn": "_197_linkage_of_air_conditioner_and_auto_key",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_197_linkage_between_internal_and_external_circulation_and_auto_key",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "amplifier_switch","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_asl","style": 1,"valueSrnArray": ["open","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_96","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_amplifier_mute","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_197_ceiling_screen_settings",
+        "itemList": [
+          {"titleSrn": "_197_rear_system","style": 1,"valueSrnArray": ["open","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_197_rear_system_lock","style": 1,"valueSrnArray": ["open","close"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_283_car_setting_unit_title_5",
+        "itemList": [
+          {"titleSrn": "_197_update_history_fuel","style": 0,"value": ""},
+          {"titleSrn": "_197_clear_history_fuel","style": 3,"confirmTis": "_197_clear_history_fuel"},
+          {"titleSrn": "_197_clear_15_fuel","style": 3,"confirmTis": "_197_clear_15_fuel"}
+        ]
+      },
+      {
+        "titleSrn": "other_set",
+        "itemList": [
+          {"titleSrn": "_197_rear_camera_guide","style": 1,"valueSrnArray": ["_197_guide_line_1", "_197_guide_line_2","_197_guide_line_3"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "isHaveBtn": true,
+    "buttonText": "_41_reset_fuel_record",
+    "list": [
+      {
+        "headTitleSrn": "trip_information",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "elapsed_time","defaultValueSrn": "null_value"},
+          {"titleSrn": "cruising_range","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "null_value"}
+        ]
+      },
+      {
+        "headTitleSrn":"_18_historical_fuel",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "current_trip_fuel_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_1_fuel_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_2_fuel_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_3_fuel_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_4_fuel_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_5_fuel_consumption","defaultValueSrn": "null_value"}
+        ]
+      },
+      {
+        "headTitleSrn":"_197_past_15_fuel",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_last_1min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_2min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_3min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_4min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_5min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_6min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_7min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_8min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_9min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_10min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_11min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_12min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_13min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_14min_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_18_last_15min_fuel","defaultValueSrn": "null_value"}
+        ]
+      },
+      {
+        "headTitleSrn":"_197_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "_250_current_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "_197_odo","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": true,
+    "lineBtnAction":[
+    ]
+  }
+}

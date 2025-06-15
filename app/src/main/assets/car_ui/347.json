@@ -1,0 +1,108 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting", "drive_data","amplifier"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac", "ac_max","in_out_cycle"],
+        ["auto"], ["auto_2"],
+        ["dual", "aqs", "max_front", "rear"]
+      ],
+      "disableBtnArray": ["power", "ac", "ac_max","in_out_cycle","auto","auto_2","dual", "aqs", "max_front", "rear"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_246_setting_car_info32",
+        "itemList": [
+          {"titleSrn": "_246_setting_car_info22","style": 1,"valueSrnArray": ["_246_setting_car_info24","_246_setting_car_info23"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_setting_car_info28","style": 1,"valueSrnArray": ["_347_setting_0_3_0","_347_setting_0_3_1","_347_setting_0_3_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_347_setting_0_2","style": 1,"valueSrnArray": ["_347_setting_0_2_0","_347_setting_0_2_1"],"selectIndex": 0,"value": ""}]
+      },
+      {
+        "titleSrn": "_246_paring_info",
+        "itemList": [
+          {"titleSrn": "_246_paring_info2","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_330_amplifier_info",
+        "itemList": [
+          {"titleSrn": "_330_Vehicle_volume_follows_ASL","style": 2,"max":7,"min":0,"progress":0,"value": "0"},
+          {"titleSrn": "_347_setting_0_4","style": 2,"max":9,"min":1,"progress":0,"value": "0"},
+          {"titleSrn": "_347_setting_0_5","style": 2,"max":9,"min":1,"progress":0,"value": "0"},
+          {"titleSrn": "_347_setting_0_6","style": 2,"max":9,"min":1,"progress":0,"value": "0"},
+          {"titleSrn": "_347_setting_0_7","style": 2,"max":9,"min":1,"progress":0,"value": "0"}
+        ]
+      },{
+        "titleSrn": "_347_setting_0_10",
+        "itemList": [
+          {"titleSrn": "_347_setting_0_8","style": 1,"valueSrnArray": ["_347_setting_0_8_0","_347_setting_0_8_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_347_setting_0_9","style": 2,"max":127,"min":0,"progress":0,"value": "0"}
+        ]
+      }
+    ,{
+        "titleSrn": "_347_settings",
+        "itemList": [
+          {"titleSrn": "_347_settings_0","style": 1,"valueSrnArray": ["_347_settings_01","_347_settings_02","_347_settings_03"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_347_settings_1","style": 1,"valueSrnArray": ["_347_settings_11","_347_settings_12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_347_settings_2","style": 1,"valueSrnArray": ["_347_settings_21","_347_settings_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_451_reverse_flag","style": 1,"valueSrnArray": ["_451_reverse_flag1","_451_reverse_flag2"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_246_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_246_car_info1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info10","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info13","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info15","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info16","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info17","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_paring_info1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_paring_info2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": false
+  }
+}

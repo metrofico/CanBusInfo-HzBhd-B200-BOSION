@@ -1,0 +1,50 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","ac_max","power","auto","auto_2"],
+        ["front_defog"],["rear_defog"],
+        ["dual","aqs","eco","auto_wind_mode","in_out_cycle"]
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+
+      {
+        "titleSrn":"_228_setting_0",
+        "itemList": [
+          {"titleSrn": "_228_initial_perspective","style": 1,"valueSrnArray": ["_228_normal","_228_overlook","_228_birds_eye_view"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_228_car_type","defaultValueSrn": "set_default"},
+          {"titleSrn": "_228_driveInfo_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_228_driveInfo_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_228_initial_perspective","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  }
+}

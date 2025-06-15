@@ -1,0 +1,511 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air", "drive_data", "setting", "tire_info"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog", "rear_defog", "dual", "in_out_cycle", "auto_cycle"],
+        ["ac"], ["power"],
+        ["auto", "soft", "fast", "normal", "eco"]
+      ],
+      "disableBtnArray": [
+        "eco",
+        "auto_wind_mode"
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_176_car_setting_title_43",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "a_average_speed",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "driven_distance",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_176_car_setting_title_big_1",
+        "itemList": [
+          {
+            "titleSrn": "_176_car_setting_title_7",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_6",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_8",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_9",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_10",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_none",
+              "_176_car_setting_value_4",
+              "_176_car_setting_value_5"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_11",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_12",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_13",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_14",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_15",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_16",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_6_1",
+              "_176_car_setting_value_6_2",
+              "_176_car_setting_value_6_3"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_27",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_7_1",
+              "_176_car_setting_value_7_2",
+              "_176_car_setting_value_7_3",
+              "_176_car_setting_value_7_4"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_28",
+            "style": 2,
+            "min": 0,
+            "max": 100,
+            "progress": 0,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_176_car_setting_title_35",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_green",
+              "_176_car_setting_value_red",
+              "_176_car_setting_value_blue",
+              "_176_car_setting_value_purple",
+              "_176_car_setting_value_orange"
+            ],
+            "selectIndex": 1,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_33",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_9_1",
+              "_176_car_setting_value_9_2",
+              "_176_car_setting_title_61"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "reset",
+        "itemList": [
+          {
+            "titleSrn": "_176_car_setting_title_36",
+            "style": 3,
+            "confirmTis": "_176_car_setting_title_36",
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_37",
+            "style": 3,
+            "confirmTis": "_176_car_setting_title_37",
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_38",
+            "style": 3,
+            "confirmTis": "_176_car_setting_title_38",
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_39",
+            "style": 3,
+            "confirmTis": "_176_car_setting_title_39",
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_40",
+            "style": 3,
+            "confirmTis": "_176_car_setting_title_40",
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_176_car_setting_title_big_2",
+        "itemList": [
+          {
+            "titleSrn": "_176_car_setting_title_1",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_2",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_3",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_none",
+              "_176_car_setting_value_1",
+              "_176_car_setting_value_2",
+              "_176_car_setting_value_3"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_4",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_5",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_17",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_18",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_34",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_19",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_20",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_21",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_green",
+              "_176_car_setting_value_red",
+              "_176_car_setting_value_blue",
+              "_176_car_setting_value_purple",
+              "_176_car_setting_value_orange"
+            ],
+            "selectIndex": 1,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_29",
+            "style": 2,
+            "min": 0,
+            "max": 100,
+            "progress": 0,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_176_car_setting_title_22",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_23",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_8_1",
+              "_176_car_setting_value_8_2",
+              "_176_car_setting_value_8_3",
+              "_176_car_setting_value_8_4",
+              "_176_car_setting_value_8_5"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_24",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_high",
+              "_176_car_setting_value_middle",
+              "_176_car_setting_value_low"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_25",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_26",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_30",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_10_1",
+              "_176_car_setting_value_10_2",
+              "_176_car_setting_value_10_3",
+              "_176_car_setting_value_10_4",
+              "_176_car_setting_value_10_5"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_31",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_32",
+            "style": 1,
+            "valueSrnArray": [
+              "_176_car_setting_value_close",
+              "_176_car_setting_value_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {
+        "whichTire": 0,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 1,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 2,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 3,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      }
+    ],
+    "isHaveSpareTire": false
+  }
+}

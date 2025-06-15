@@ -1,0 +1,142 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "amplifier",
+      "drive_data"
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_341_drive_0",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_341_drive_0_0",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_341_drive_0_1",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_341_setting_0",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_341_setting_0_0",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_341_setting_0_1",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_341_setting_0_2",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_341_setting_0_3",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveBandMiddle": true,
+    "isCanBalanceControl": false,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_341_setting_0",
+        "itemList": [
+          {
+            "titleSrn": "_341_setting_0_4",
+            "style": 4
+          },
+          {
+            "titleSrn": "_341_setting_0_5",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "_341_setting_1",
+        "itemList": [
+          {
+            "titleSrn": "_341_setting_1_0",
+            "style": 4
+          },
+          {
+            "titleSrn": "_341_setting_1_1",
+            "style": 4
+          }
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "isHaveRearArea": true,
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "in_out_cycle",
+          "pollrn_removal",
+          "windshield_deicing",
+          "rear_lock",
+          "power"
+        ],
+        [
+          "max_front"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "auto",
+          "sync",
+          "ac"
+        ]
+      ],
+      "disableBtnArray": [
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "rearArea": {
+      "lineBtnAction": [
+        ["rear_auto"],
+        [],
+        [],
+        []
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetTemp": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  }
+}

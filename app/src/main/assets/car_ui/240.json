@@ -1,0 +1,139 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "front_defog",
+          "rear_defog"
+        ],
+        [
+          "auto"
+        ],
+        [
+          "power"
+        ],
+        [
+          "ac",
+          "in_out_cycle"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "auto",
+        "in_out_cycle",
+        "front_defog"
+      ],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isAllBtnCanClick": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {
+            "titleSrn": "back_home_with_me",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "keep_light_time_when_back_home",
+            "style": 2,
+            "max": 60,
+            "progress": 30,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "lane_departure",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "language_status",
+            "style": 1,
+            "valueSrnArray": [
+              "language_status_0",
+              "language_status_1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "car_type",
+        "itemList": [
+          {
+            "titleSrn": "low_car",
+            "style": 0
+          },
+          {
+            "titleSrn": "high_car",
+            "style": 0
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_161_panoramic"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_253_exit_panoramic"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_front_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_rear_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_left_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_right_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "S240_Panorama_1"
+      },
+      {
+        "style": 0,
+        "titleSrn": "S240_Panorama_2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","original_car_device"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","in_out_cycle","auto","dual"],
+        ["swing"],["clean_air"],
+        ["front_defog","rear","ac","pollrn_removal"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_384_CDC",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_384_CDC66","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC8","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC9","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_CDC10","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_384_driver_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_384_driver_data1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_driver_data2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_driver_data3","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"S97_Fuel_cons_mile_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_384_item1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_item2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_item3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_item4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_item5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_384_item6","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": false,
+    "isShowTrack": true
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  }
+
+}

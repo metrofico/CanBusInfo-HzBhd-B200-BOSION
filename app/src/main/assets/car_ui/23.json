@@ -1,0 +1,103 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data","amplifier"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_186_driver_sound_field","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_bose_centerpoint","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_asl_UP","style": 0},
+          {"titleSrn": "_186_asl_DOWN","style": 0},
+          {"titleSrn": "_186_surround_volume_UP","style": 0},
+          {"titleSrn": "_186_surround_volume_DOWN","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_status_1","language_status_0"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "support_panorama","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_39","hiworld_jeep_123_item_38"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0xE8_data4","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","auto","in_out_auto_cycle","dual"],
+        ["front_defog"],["rear_defog"],
+        ["ac_max","manual","clean_air","sync","aqs","auto_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "disableBtnArray": ["aqs"," auto_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "isShowSeatCold": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetSeatCold": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power","rear_lock"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 10,
+    "isCanRateControl": false,
+    "isCanBalanceControl": false,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "lineBtnAction":[
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data","amplifier"]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 20,
+    "seekBarVolumeMax": 39,
+    "volumeRange": 0,
+    "isHaveVolumeControl": true,
+    "isCanRateControl": false,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  },
+
+
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "outlander_simple_car_set_8","style": 1,"valueSrnArray": ["surround_sound","stereo"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_vol_with_speed","style": 1,"valueSrnArray": ["close","outlander_simple_car_set_111","outlander_simple_car_set_112","outlander_simple_car_set_113"],"selectIndex": 0,"value": ""}
+
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_language_setup",
+        "itemList": [
+          {"titleSrn": "_250_language","style": 1,"valueSrnArray": ["language_1","language_2"],"value": ""}
+        ]
+      }, {
+        "titleSrn": "_1204_Valid_bit_of_v_set_info",
+        "itemList": [
+          {"titleSrn": "_1204_ceiling_light_delay","style": 0,"valueSrnArray": ["_1204_Invalid","_1204_Valid"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_follow_home_delay","style": 0,"valueSrnArray": ["_1204_Invalid","_1204_Valid"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_power_saving","style": 0,"valueSrnArray": ["_1204_Invalid","_1204_Valid"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_rainfall_light_sensor","style": 0,"valueSrnArray": ["_1204_Invalid","_1204_Valid"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_trailer_setup","style": 0,"valueSrnArray": ["_1204_Invalid","_1204_Valid"],"selectIndex": 0,"value": ""}
+
+        ]
+      }, {
+        "titleSrn": "_1204_vehicle_setup_info",
+        "itemList": [
+          {"titleSrn": "_1204_ceiling_light_delay","style": 1,"valueSrnArray": ["_1204_3s","_1204_10s","_1204_20s","_1204_30s"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_follow_home_delay","style": 1,"valueSrnArray": ["_1204_30s","_1204_1Min","_1204_2Min","_1204_3Min"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_power_saving","style": 1,"valueSrnArray": ["_1204_10Min","_1204_20Min","_1204_30Min"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_rainfall_light_sensor","style": 1,"valueSrnArray": ["_1204_area_europe","_1204_Asia"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1204_trailer_setup","style": 4}
+        ]
+      }, {
+        "titleSrn": "_1204_rear_view_mirror_fold_info",
+        "itemList": [
+          {"titleSrn": "_1204_rear_view_mirror_fold","style": 1,"valueSrnArray": ["manual","auto"],"selectIndex": 0,"value": ""}
+
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowCusPanoramicView": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0, "titleSrn": "_204_camera_status_1"},
+      {"style": 0, "titleSrn": "_204_camera_status_2"},
+      {"style": 0, "titleSrn": "_204_camera_status_3"},
+      {"style": 0, "titleSrn": "_204_camera_status_4"},
+      {"style": 0, "titleSrn": "_204_camera_status_5"}
+    ]
+  }
+}

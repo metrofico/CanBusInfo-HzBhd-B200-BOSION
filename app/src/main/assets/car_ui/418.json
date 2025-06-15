@@ -1,0 +1,64 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["drive_data","tire_info","setting"]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_418_drive",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_418_drive1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_418_drive2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_418_drive3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_418_drive4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_418_drive5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_418_drive6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_418_drive7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_418_drive8","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_396_tire0","value":"_327_null"},
+        {"title":"_396_tire1","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_396_tire0","value":"_327_null"},
+        {"title":"_396_tire1","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_396_tire0","value":"_327_null"},
+        {"title":"_396_tire1","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_396_tire0","value":"_327_null"},
+        {"title":"_396_tire1","value":"_327_null"}
+      ]}
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_418_setting",
+        "itemList": [
+          {"titleSrn": "_418_setting0","style": 1,"valueSrnArray": ["_418_OFF","_418_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_418_setting1","style": 1,"valueSrnArray": ["_418_OFF","_418_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_418_setting2","style": 1,"valueSrnArray": ["_418_OFF","_418_ON"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true
+  }
+
+}

@@ -1,0 +1,10 @@
+{"mainPageUiSet": {
+  "btnAction": []
+},
+  "parkPageUiSet":{
+    "isShowCusPanoramicView": true,
+    "isShowCustomBaseLine": false,
+    "isShowCustomTrack": false,
+    "isShowTrack" : false
+  }
+}

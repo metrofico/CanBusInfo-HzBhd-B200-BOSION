@@ -1,0 +1,116 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data","tire_info"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "air_setting",
+        "itemList": [
+          {"titleSrn": "air_conditioner_type","style": 1,"valueSrnArray": ["auto_air_conditioner","manual_air_conditioner"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "hiworld_jeep_123_0xC1_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0xCA_0X01","style": 1,"valueSrnArray": ["unit_km","_96_range_unit_mile"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "temperature_unit","style": 1,"valueSrnArray": ["celsius","fahrenheit"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_status_0","language_status_1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_light_set",
+        "itemList": [
+          {"titleSrn": "on_off_btn_txt_7","style": 1,"valueSrnArray": [
+            "close",
+            "ford_raise_color_ice_blue",
+            "koleo_dashboard_color_orange",
+            "ford_raise_color_light_blue",
+            "ford_raise_color_light_red",
+            "ford_raise_color_light_green",
+            "vm_golf7_vehicle_setup_evironment_blue",
+            "ford_raise_color_light_purple"
+          ],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_97_car",
+        "itemList": [
+          {"titleSrn": "_97_car","style": 1,"valueSrnArray": [
+            "_97_car_1",
+            "_97_car_2",
+            "_97_car_3",
+            "_97_car_4",
+            "_97_car_5",
+            "_97_car_6",
+            "_97_car_7",
+            "_97_car_8",
+            "_97_car_9",
+            "_97_car_10"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","auto","steering_wheel_heating"],
+        ["max_heat"],["rear_defog"],
+        ["ac_max","blow_window","blow_head","blow_foot","dual"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "rear_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowCenterWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isShowSeatCold": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetSeatCold": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "S97_Fuel_cons_mile_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "S97_recharge_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "S97_total_mileage","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"tire_pressure_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"tire_pressure_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"tire_pressure_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"tire_pressure_content","value":"set_default"}]}
+    ]
+  }
+}

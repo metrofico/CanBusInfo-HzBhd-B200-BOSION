@@ -1,0 +1,116 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data","tire_info","amplifier"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","dual"],
+        ["auto"],["power"],
+        ["in_out_cycle","front_defog"]
+      ],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        []
+      ],
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "vm_golf7_park_mode",
+        "itemList": [
+          {"titleSrn": "vm_golf7_guide_line","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_park_warninge","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_front_mode","style": 1,"valueSrnArray": ["hyundai_front_mode_all","hyundai_front_mode_front","hyundai_front_mode_front_left","hyundai_front_mode_front_right"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_rear_mode","style": 1,"valueSrnArray": ["hyundai_rear_mode_all","hyundai_rear_mode_rear","hyundai_rear_mode_rear_left","hyundai_rear_mode_rear_right"],"selectIndex": 0,"value": ""}
+        ]
+      },{
+        "titleSrn": "language_status",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": [
+            "_31_language1",
+            "_31_language2",
+            "_31_language3",
+            "_31_language4",
+            "_31_language5",
+            "_31_language6",
+            "_31_language7",
+            "_31_language8",
+            "language_ce",
+            "language_da",
+            "language_4",
+            "language_ma",
+            "language_ne",
+            "language_sp",
+            "language_polski",
+            "siluofake",
+            "language_sv",
+            "language_po",
+            "language_alb"
+          ],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "keyboard_backlight_adjustment","defaultValueSrn": "set_default"},
+          {"titleSrn": "Lights","defaultValueSrn": "set_default"},
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "outlander_simple_car_set_13","defaultValueSrn": "set_default"},
+          {"titleSrn": "era_glonass","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 1,"imgRes": "hyundai_rear_all"},
+      {"style": 1,"imgRes": "hyundai_only_rear"},
+      {"style": 1,"imgRes": "hyundai_rear_left_rear"},
+      {"style": 1,"imgRes": "hyundai_rear_right_rear"}
+    ]
+  },
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"type_status","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_31_tire_data0","value":"set_default"},{"title": "_31_tire_date13","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"type_status","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_31_tire_data0","value":"set_default"},{"title": "_31_tire_date13","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"type_status","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_31_tire_data0","value":"set_default"},{"title": "_31_tire_date13","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"type_status","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_31_tire_data0","value":"set_default"},{"title": "_31_tire_date13","value":"set_default"}]},
+      {"whichTire":4,"list": [{"title":"type_status","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_31_tire_data0","value":"set_default"},{"title": "_31_tire_date13","value":"set_default"}]}
+    ],
+    "isHaveSpareTire": true
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 20,
+    "lineBtnAction":[
+    ],
+    "isCanBalanceControl": false,
+    "isCanSeekBarMinPlus": false
+  }
+
+}

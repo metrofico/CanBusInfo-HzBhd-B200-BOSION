@@ -1,0 +1,213 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting"
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_327_front_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_right_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_left_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_rear_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_360_camera"
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "ac"
+        ],
+        [
+          "front_defog"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "in_out_cycle",
+          "auto",
+          "dual"
+        ]
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 6
+    },
+    "isHaveRearArea": false
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_340_cars_setting",
+        "itemList": [
+          {
+            "titleSrn": "_340_restore_setting",
+            "style": 0
+          },
+          {
+            "titleSrn": "_340_automatic_folding",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_tire_pressure",
+            "style": 0
+          },
+          {
+            "titleSrn": "_340_scenarios_rain_snow_mode",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_scenarios_smoking_mode",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_scenarios_cool_mode",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_scenarios_warm_mode",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_remote_control_window_lowering",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_remote_control_active_entry",
+            "style": 1,
+            "valueSrnArray": [
+              "_340_driver_side",
+              "_340_all_side"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_340_turn_off_the_engine_and_unlock_the_door_automatically",
+            "style": 1,
+            "valueSrnArray": [
+              "_340_close",
+              "_340_driver_side",
+              "_340_all_side"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_340_locking_tips",
+            "style": 1,
+            "valueSrnArray": [
+              "_340_flash_light",
+              "_340_flash_light_whistle"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_340_automatic_trip_lock",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_lane_change_flashing_light",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_indoor_light_delay",
+            "style": 1,
+            "valueSrnArray": [
+              "_340_10_minute",
+              "_340_20_minute",
+              "_340_30_minute"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_340_accompany_me_home",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_accompany_me_home_delay",
+            "style": 1,
+            "valueSrnArray": [
+              "_340_accompany_me_home_delay_30",
+              "_340_accompany_me_home_delay_50",
+              "_340_accompany_me_home_delay_75"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_340_looking_for_my_car",
+            "style": 1,
+            "valueSrnArray": [
+              "_340_looking_for_my_car_double_flashing",
+              "_340_looking_for_my_car_double_flashing_and_whistle"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_340_wiper_maintenance_function",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_adaptive_cruise_speed_setting",
+            "style": 2,
+            "max": 11,
+            "min": 1,
+            "value": 1,
+            "unit": "_340_kmh",
+            "enable": "true",
+            "progress": 0
+          },
+          {
+            "titleSrn": "_340_anti_collision_warning",
+            "style": 4
+          },
+          {
+            "titleSrn": "_340_anti_collision_warning_sensitivity",
+            "style": 1,
+            "valueSrnArray": [
+              "_340_high",
+              "_340_medium",
+              "_340_low"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_340_automatic_emergency_braking_system",
+            "style": 4
+          }
+        ]
+      }
+    ]
+  }
+}

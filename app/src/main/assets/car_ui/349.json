@@ -1,0 +1,190 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data","warning","sync"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac", "in_out_cycle", "ac_max", "auto"],
+        ["max_front"], ["dual"],
+        ["blow_window", "blow_head", "blow_foot","front_defog","rear_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "dual"],
+      "isCanSetLeftTemp": true,
+      "isShowLeftWheel": true,
+      "isAllBtnCanClick": true,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [[],[],[],
+        ["rear_power","rear_lock"]
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {"titleSrn": "_81_traction_control_system", "style": 1, "valueSrnArray": ["close", "open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_81_turn_signals_setup", "style": 1, "valueSrnArray": ["ford_direction_indicators_flash_1_times", "ford_direction_indicators_flash_3_times"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "ford_message_tone", "style": 1, "valueSrnArray": ["close", "open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "ford_alert_tone", "style": 1, "valueSrnArray": ["close", "open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_81_current_voice_mode", "style": 1, "valueSrnArray": ["close", "_81_slow", "_81_medium", "_81_rush"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "ford_range_unit", "style": 1, "valueSrnArray": ["unit_km", "_96_range_unit_mile"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "brightness", "style": 1, "valueSrnArray": ["manual", "auto"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "language_setup", "style": 1,
+            "valueSrnArray": [
+              "language_status_1",
+              "language_status_1_1",
+              "language_status_2",
+              "language_status_3",
+              "language_status_4",
+              "language_status_4_1",
+              "language_status_6",
+              "language_status_6_1",
+              "language_status_13",
+              "language_status_15",
+              "language_status_7",
+              "language_status_12",
+              "language_status_17",
+              "language_status_8",
+              "language_status_8_1",
+              "language_status_0_1",
+              "language_status_0_2"
+            ], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_279_temperature_unit", "style": 1, "valueSrnArray": ["celsius", "fahrenheit"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_176_car_setting_title_21", "style": 1,
+            "valueSrnArray": [
+              "ford_raise_color_ice_blue",
+              "_176_car_setting_value_orange",
+              "ford_raise_color_light_blue",
+              "_176_car_setting_value_red",
+              "_176_car_setting_value_green",
+              "_176_car_setting_value_blue",
+              "_176_car_setting_value_purple"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_1193_setting_5_3","style": 2,"max": 100,"min": 0,"progress": 1,"value": "1"},
+          {"titleSrn": "_349_setting_5_0","style": 2,"max": 15,"min": 0,"progress": 1,"value": "1"}
+        ]
+      },
+      {
+        "titleSrn": "_349_setting_2",
+        "itemList": [
+          {"titleSrn": "_349_setting_2_0", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_2_1", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_2_2", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_2_3", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_2_4", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_3_0", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_3_1", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_3_2", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_3_3", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_3_4", "style": 1, "valueSrnArray": ["_349_setting_2_0_1", "_349_setting_2_0_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_4_0", "style": 1, "valueSrnArray": ["close", "_349_setting_0","_349_setting_0_0"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_4_1", "style": 1, "valueSrnArray": ["close", "_349_setting_0","_349_setting_0_0"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_4_2", "style": 1, "valueSrnArray": ["close", "_349_setting_0","_349_setting_0_0"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_349_setting_4_3", "style": 1, "valueSrnArray": ["close", "_349_setting_0","_349_setting_0_0"], "selectIndex": 0, "value": ""}
+        ]
+      },{
+        "titleSrn": "_330_other_settings",
+        "itemList": [
+          {"titleSrn": "_330_Rotating_Speed_report","style": 2,"max": 255,"min": 0,"progress": 1,"unit": "_349_setting_0_01"},
+          {"titleSrn": "_330_car_Speed_report","style": 2,"max": 255,"min": 0,"progress": 1,"unit": "_349_setting_0_01"}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_41_front_radar", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_41_rear_radar", "defaultValueSrn": "null_value"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "mazda_binary_car_set77","defaultValueSrn": "null_value"},
+          {"titleSrn": "hand_brake_status","defaultValueSrn": "null_value"},
+          {"titleSrn": "light_info","defaultValueSrn": "set_default"},
+          {"titleSrn": "reverse_state","defaultValueSrn": "set_default"},
+          {"titleSrn": "keyboard_backlight_adjustment","defaultValueSrn": "null_value"},
+          {"titleSrn": "_81_engine", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_81_engine_display", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_309_title_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_85_passenger_airbag_sataus","defaultValueSrn": "set_default"},
+          {"titleSrn": "_81_ford_driving_plan", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_81_ford_vehicle_speed", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_81_my_key_mute_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_81_my_key_vol_limit","defaultValueSrn": "set_default"}
+        ]
+      }]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_81_video_restore"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_81_video_enlarge"
+      }
+    ]
+  },
+  "syncPageUiSet": {
+    "leftBtnActions": [
+      "media",
+      "phone",
+      "voice",
+      "keyboard"
+    ],
+    "keyboardActions": [
+      [
+        "null",
+        "up",
+        "null"
+      ],
+      [
+        "left",
+        "ok",
+        "right"
+      ],
+      [
+        "null",
+        "down",
+        "null"
+      ],
+      [
+        "info",
+        "menu",
+        "device"
+      ],
+      [
+        "prev",
+        "shuff",
+        "next"
+      ]
+    ]
+  }
+
+}

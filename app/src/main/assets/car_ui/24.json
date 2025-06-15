@@ -1,0 +1,29 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air", "original_car_device"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","auto"],
+        ["front_defog"],["rear"],
+        ["in_out_cycle","dual"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "originalCarDevicePageUiSet": {
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  },
+
+
+  "parkPageUiSet":{
+  }
+}

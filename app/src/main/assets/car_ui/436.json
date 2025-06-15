@@ -1,0 +1,56 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","ac_max","in_out_cycle"],
+        ["front_defog"], ["rear_defog"],
+        ["auto", "power", "rear"]
+      ],
+      "disableBtnArray": [],
+      "isCanSetRightTemp": false,
+      "isCanSetCenterTemp": true,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": false,
+      "isShowCenterWheel": true,
+      "isShowRightWheel": false,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": false,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_436_Setting_function",
+        "itemList": [
+          {"titleSrn": "_436_Setting_function_1","style": 1,"valueSrnArray": ["_436_Setting_function_Disable","_436_Setting_function_Open","_436_Setting_function_Close","_436_Setting_function_Enable"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_436_Setting_function_2","style": 1,"valueSrnArray": ["_436_Setting_function_off","_436_Setting_function_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_436_Setting_function_3","style": 1,"valueSrnArray": ["_436_Setting_function_drive_mode1","_436_Setting_function_drive_mode2","_436_Setting_function_drive_mode3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_436_Setting_function_4","style": 1,"valueSrnArray": ["_436_Setting_function_drive_LDW1","_436_Setting_function_drive_LDW2","_436_Setting_function_drive_LDW3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_436_Setting_function_6","style": 1,"valueSrnArray": ["_436_Setting_function_drive_FCW1","_436_Setting_function_drive_FCW2","_436_Setting_function_drive_FCW3"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+}

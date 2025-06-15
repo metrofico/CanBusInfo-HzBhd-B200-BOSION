@@ -1,0 +1,77 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","setting"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["auto","power","ac"],
+        ["front_defog"],["rear_defog"],
+        ["dual","in_out_cycle"]
+      ],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "isShowSeatCold": true,
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_431_setting0",
+        "itemList": [
+          {"titleSrn": "_431_setting_l","style": 2,"max":7,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_r","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_g","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_b","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"}
+        ]
+      },
+      {
+        "titleSrn": "_431_setting1",
+        "itemList": [
+          {"titleSrn": "_431_setting_l","style": 2,"max":7,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_r","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_g","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_b","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"}
+        ]
+      },
+      {
+        "titleSrn": "_431_setting2",
+        "itemList": [
+          {"titleSrn": "_431_setting_l","style": 2,"max":7,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_r","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_g","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"},
+          {"titleSrn": "_431_setting_b","style": 2,"max":255,"min":0,"progress":0,"value": "0","unit": "_431_level"}
+        ]
+      },
+      {
+        "titleSrn": "_431_panoramic",
+        "itemList": [
+          {"titleSrn": "_431_panoramic1","style": 1,"valueSrnArray": ["_431_off","_431_on"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"},
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_431_exit"}
+    ]
+  }
+}

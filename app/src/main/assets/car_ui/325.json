@@ -1,0 +1,142 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "null_value"}
+        ]
+      },
+      {"headTitleSrn":"_303_setting_title_7",
+        "spanCount": 2,
+        "itemList": [
+          {"titleSrn": "_303_setting_content_31","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_32","defaultValueSrn": "set_default"},
+          {"titleSrn": "_325_setting_content_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_325_setting_content_35","defaultValueSrn": "set_default"},
+          {"titleSrn": "_325_setting_content_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_325_setting_content_45","defaultValueSrn": "set_default"},
+          {"titleSrn": "_325_setting_content_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_325_setting_content_6","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["in_out_auto_cycle","auto_wind_lv","steering_wheel_heating"],
+        ["power"],["front_defog"],
+        ["blow_window","blow_head","blow_foot"]
+      ],
+      "disableBtnArray": [],
+      "smallWindowStatusArray": ["ac", "auto", "dual", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "isShowSeatHeat": false,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "windMaxLevel": 7
+    }
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["fm1","fm2","am","cdc","rear_cdc","aux"],
+    "rowBottomBtnAction":
+    [],
+    "items": [
+    ],
+    "isTopBtnCanScroll": true,
+    "isHavePlayTimeSeekBar": true,
+    "isHaveSongList": true
+
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_325_setting_1",
+        "itemList": [
+          {"titleSrn": "_325_setting_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_325_setting_3","style": 2,"max": 1000,"min": 1,"progress": 0,"value": "0","unit": "unit_km_h"},
+          {"titleSrn": "_303_setting_content_37","style": 1,"valueSrnArray": ["_303_setting_answer_5","_303_setting_answer_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_38","style": 2,"max": 8,"min": 0,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x68_title",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_39","style": 2,"max": 15,"min": 0,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },{
+        "titleSrn": "_303_setting_title_3",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_8","style": 1,"valueSrnArray": ["close","_303_setting_num_10","_303_setting_num_20","_303_setting_num_30"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_9","style": 1,"valueSrnArray": ["close","_303_setting_num_10","_303_setting_num_20","_303_setting_num_30"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_10","style": 2,"max": 100,"min": 0,"progress": 0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "_325_light_1","style": 2,"max": 100,"min": 0,"progress": 0,"value": "0","unit": "unit_percent"}
+        ]
+      },
+      {
+        "titleSrn": "_303_setting_title_4",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_11","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_12","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_13","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_14","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_15","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_16","style": 1,"valueSrnArray": ["_303_setting_answer_2","_303_setting_answer_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_17","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_303_setting_title_5",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_22","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_18","style": 2,"max": 9,"min": 1,"progress": 1,"value": "0","unit": "null_value"},
+          {"titleSrn": "_303_setting_content_19","style": 2,"max": 9,"min": 1,"progress": 1,"value": "0","unit": "null_value"},
+          {"titleSrn": "_303_setting_content_20","style": 2,"max": 9,"min": 1,"progress": 1,"value": "0","unit": "null_value"},
+          {"titleSrn": "_303_setting_content_21","style": 2,"max": 9,"min": 1,"progress": 1,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_303_setting_title_6",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_23","style": 1,"valueSrnArray": ["unit_m","unit_km"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_24","style": 1,"valueSrnArray": ["unit_mh","unit_kmh"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_25","style": 1,"valueSrnArray": ["unit_f","unit_degc"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_26","style": 1,"valueSrnArray": ["unit_l","unit_gal_us","unit_gal_uk"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_27","style": 1,"valueSrnArray": ["unit_l_100_km","unit_kml","unit_mpg_us","unit_mpg_uk"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_28","style": 1,"valueSrnArray": ["unit_kpa","unit_bar","unit_psi"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_7",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_29","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "_303_setting_content_30","style": 1,"valueSrnArray": ["_303_setting_answer_3","_303_setting_answer_4"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_1","language_2","language_3","language_4","language_5","language_6","language_7","language_8","language_9","language_10","language_11","language_12","language_14","language_15","language_16"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  }
+}

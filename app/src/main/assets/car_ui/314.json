@@ -1,0 +1,696 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "drive_data",
+      "tire_info",
+      "amplifier",
+      "original_car_device",
+      "panel_key"
+    ]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "S314_x2A_1",
+      "S314_x2A_2",
+      "S314_x2A_3",
+      "S314_x2A_4",
+      "S314_x2A_5",
+      "S314_x2A_6",
+      "S314_x2A_7",
+      "S314_x2A_8",
+      "S314_x2A_9",
+      "S314_x2A_10",
+      "S314_x2A_11",
+      "S314_x2A_12",
+      "S314_x2A_13",
+      "S314_x2A_14",
+      "S314_x2A_15",
+      "S314_x2A_16",
+      "S314_x2A_17",
+      "S314_x2A_18",
+      "S314_x2A_19",
+      "S314_x2A_20",
+      "S314_x2A_21",
+      "S314_x2A_22",
+      "S314_x2A_23",
+      "S314_x2A_24",
+      "S314_x2A_25",
+      "S314_x2A_26",
+      "S314_x2A_27"
+    ],
+    "count": 4
+  },
+  "originalCarDevicePageUiSet": {
+    "isHavePlayTimeSeekBar": false,
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": []
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D314_Speed_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D314_Speed_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S314_OilConsumption_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumption_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumption_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumption_4",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S314_OilConsumptionHistory_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_7",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_8",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_9",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S314_OilConsumptionHistory_10",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "isHaveRearArea": true,
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "ac",
+          "power"
+        ],
+        [
+          "front_defog",
+          "rear_defog"
+        ],
+        [
+          "dual"
+        ],
+        [
+          "auto",
+          "in_out_auto_cycle"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "auto",
+        "in_out_auto_cycle",
+        "front_defog"
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3",
+        "_330_seat_heat_4"
+      ]
+    },
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [
+          "rear_power"
+        ],
+        [
+          "rear_auto"
+        ],
+        [
+          "rear_lock"
+        ]
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetTemp": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 5
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S314_title_1",
+        "itemList": [
+          {
+            "titleSrn": "S314_radar_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_radar_2",
+            "style": 2,
+            "max": 4,
+            "min": 1
+          },
+          {
+            "titleSrn": "S314_radar_3",
+            "style": 2,
+            "max": 4,
+            "min": 1
+          },
+          {
+            "titleSrn": "S314_radar_4",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_title_2",
+        "itemList": [
+          {
+            "titleSrn": "S314_setting1_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting1_2",
+            "style": 2,
+            "max": 4,
+            "min": 0
+          },
+          {
+            "titleSrn": "S314_setting1_3",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting1_3_1",
+              "S314_setting1_3_2",
+              "S314_setting1_3_3",
+              "S314_setting1_3_4",
+              "S314_setting1_3_5",
+              "S314_setting1_3_6",
+              "S314_setting1_3_7",
+              "S314_setting1_3_8"
+            ]
+          },
+          {
+            "titleSrn": "S314_setting1_4",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_title_3",
+        "itemList": [
+          {
+            "titleSrn": "S314_setting2_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting2_2",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting2_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting2_4",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting2_4_1",
+              "S314_setting2_4_2",
+              "S314_setting2_4_3"
+            ]
+          },
+          {
+            "titleSrn": "S314_setting2_5",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting2_6",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting2_7",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_title_4",
+        "itemList": [
+          {
+            "titleSrn": "S314_display_1",
+            "style": 2,
+            "max": 3,
+            "min": 1
+          },
+          {
+            "titleSrn": "S314_display_2",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_display_2_1",
+              "S314_display_2_2",
+              "S314_display_2_3"
+            ]
+          },
+          {
+            "titleSrn": "S314_display_3",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_display_2_1",
+              "S314_display_2_2",
+              "S314_display_2_3"
+            ]
+          },
+          {
+            "titleSrn": "S314_display_4",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_display_2_1",
+              "S314_display_2_2",
+              "S314_display_2_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_title_5",
+        "itemList": [
+          {
+            "titleSrn": "S314_setting3_2",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting3_2_1",
+              "S314_setting3_2_2",
+              "S314_setting3_2_3"
+            ]
+          },
+          {
+            "titleSrn": "S314_setting3_3",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting3_2_1",
+              "S314_setting3_2_2",
+              "S314_setting3_2_4"
+            ]
+          },
+          {
+            "titleSrn": "S314_setting3_4",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting3_4_1",
+              "S314_setting3_4_2"
+            ]
+          },
+          {
+            "titleSrn": "S314_setting3_5",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting3_6",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_title_6",
+        "itemList": [
+          {
+            "titleSrn": "S314_setting4_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting4_2",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting4_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting4_4",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting4_5",
+            "style": 2,
+            "max": 3,
+            "min": 1
+          },
+          {
+            "style": 1,
+            "titleSrn": "S314_setting4_6",
+            "valueSrnArray": [
+              "S314_setting4_6_1",
+              "S314_setting4_6_2",
+              "S314_setting4_6_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_title_7",
+        "itemList": [
+          {
+            "titleSrn": "S314_setting5_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting5_2",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting5_2_1",
+              "S314_setting5_2_2"
+            ]
+          },
+          {
+            "titleSrn": "S314_setting5_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_setting5_4",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting5_4_1",
+              "S314_setting5_4_2",
+              "S314_setting5_4_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_SettingForAir_0",
+        "itemList": [
+          {
+            "titleSrn": "S314_SettingForAir_1",
+            "style": 2,
+            "min": 1,
+            "max": 5
+          },
+          {
+            "titleSrn": "S314_SettingForAir_2",
+            "style": 2,
+            "min": 1,
+            "max": 5
+          },
+          {
+            "titleSrn": "S314_SettingForAir_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S314_SettingForAir_4",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_SettingForAir_4_1",
+              "S314_SettingForAir_4_2"
+            ]
+          },
+          {
+            "titleSrn": "S314_SettingForAir_5",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_DSPSettings_0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S314_DSPSettings_1"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S314_DSPSettings_2"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S314_Language_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S314_Language_0",
+            "valueSrnArray": [
+              "set_default",
+              "S314_Language_1",
+              "S314_Language_2",
+              "S314_Language_3",
+              "S314_Language_4",
+              "S314_Language_5"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "D314_Other_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "D314_Other_1",
+            "valueSrnArray": [
+              "D314_Other_1_1",
+              "D314_Other_1_2",
+              "D314_Other_1_3",
+              "D314_Other_1_4"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "D314_Other_2",
+            "valueSrnArray": [
+              "D314_Other_2_1",
+              "D314_Other_2_2"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "D314_Other_3",
+            "valueSrnArray": [
+              "D314_Other_3_1",
+              "D314_Other_3_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_4"
+          },
+          {
+            "style": 2,
+            "titleSrn": "D314_Other_5",
+            "min": 1,
+            "max": 15
+          },
+          {
+            "style": 2,
+            "titleSrn": "D314_Other_6",
+            "min": 1,
+            "max": 15
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_7"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_8"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_9"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_10"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_11"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_12"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_13"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_14"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_15"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_16"
+          },
+          {
+            "style": 4,
+            "titleSrn": "D314_Other_17"
+          },
+          {
+            "style": 0,
+            "titleSrn": "D314_Other_18"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "P314_Camera_1"},
+      {"style": 0,"titleSrn": "P314_Camera_2"},
+      {"style": 0,"titleSrn": "P314_Camera_3"},
+      {"style": 0,"titleSrn": "P314_Camera_4"},
+      {"style": 0,"titleSrn": "P314_Camera_5"},
+      {"style": 0,"titleSrn": "P314_Camera_6"},
+      {"style": 0,"titleSrn": "P314_Camera_7"},
+      {"style": 0,"titleSrn": "P314_Camera_8"},
+      {"style": 0,"titleSrn": "P314_Camera_9"},
+      {"style": 0,"titleSrn": "P314_Camera_10"},
+      {"style": 0,"titleSrn": "P314_Camera_11"},
+      {"style": 0,"titleSrn": "P314_Camera_12"},
+      {"style": 0,"titleSrn": "P314_Camera_13"},
+      {"style": 0,"titleSrn": "P314_Camera_14"},
+      {"style": 0,"titleSrn": "P314_Camera_15"},
+      {"style": 0,"titleSrn": "P314_Camera_16"},
+      {"style": 0,"titleSrn": "P314_Camera_17"},
+      {"style": 0,"titleSrn": "P314_Camera_18"},
+      {"style": 0,"titleSrn": "P314_Camera_19"}
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {
+        "whichTire": 0,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 1,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 2,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 3,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 10,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "isCanRateControl": false
+  }
+}

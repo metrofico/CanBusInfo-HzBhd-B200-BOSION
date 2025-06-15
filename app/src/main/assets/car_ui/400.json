@@ -1,0 +1,9 @@
+{
+  "mainPageUiSet": {
+    "btnAction": []
+  },
+  "parkPageUiSet":{
+    "isShowTrack": false,
+    "isShowRadar": true
+  }
+}

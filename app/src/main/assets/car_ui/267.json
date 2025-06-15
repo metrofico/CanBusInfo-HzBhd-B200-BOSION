@@ -1,0 +1,131 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "drive_data"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "front_defog",
+          "rear_defog",
+          "dual"
+        ],
+        [
+          "auto"
+        ],
+        [
+          "power"
+        ],
+        [
+          "ac",
+          "in_out_cycle"
+        ]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "channel_settings",
+        "itemList": [
+          {
+            "titleSrn": "channel_settings",
+            "style": 1,
+            "valueSrnArray": [
+              "original_car_host",
+              "original_car_aux"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "original_car_volume",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "volume",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "touch_button",
+        "itemList": [
+          {
+            "titleSrn": "touch_button_ff",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "touch_button_fr",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "touch_button_next",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "touch_button_pre",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "media_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "current_media_state",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "radio_current_band",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "radio_current_radio_station_number",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "radio_current_freq",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "current_number_disc",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "current_track",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "current_play_time",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "current_cd_state",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      }
+    ]
+  }
+}

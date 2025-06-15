@@ -1,0 +1,201 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","original_car_device","amplifier","air","drive_data","panel_key"]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn": "_18_historical_fuel",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "current_trip_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_1_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_2_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_3_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_4_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_5_fuel_consumption","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "_16_min_title",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_last_1min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_2min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_3min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_4min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_5min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_6min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_7min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_8min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_9min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_10min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_11min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_12min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_13min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_14min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_15min_fuel","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "drive_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_197_odo","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_dashboard_data3","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","pollrn_removal","aqs","clean_air"],
+        ["front_defog","rear_defog"],["front_window_heat","negative_ion"],
+        ["auto","dual","auto_wind_mode","swing","blow_positive","blow_negative","rear"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power","rear_auto","rear_blow_positive"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [{
+      "titleSrn": "light_settings",
+      "itemList": [
+        {"titleSrn": "light_ctrl_3","style": 4},
+        {"titleSrn": "light_ctrl_4","style": 1,"valueSrnArray": ["_18_level_0","_18_level_1","_18_level_2","_18_level_3","_18_level_4"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_18_vehicle_setting_item_3_43","style": 1,"valueSrnArray": ["close","mazda_binary_car_set10_1","mazda_binary_car_set10_2","mazda_binary_car_set10_3"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_55_0x67_data1_bit32","style": 1,"valueSrnArray": ["close","thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""}
+      ]
+    },
+      {
+        "titleSrn": "lock_settings",
+        "itemList": [
+          {"titleSrn": "_310_speed_auto_lock", "style": 4},
+          {"titleSrn": "_310_shift_auto_lock", "style": 4},
+          {"titleSrn": "_310_position_p_unlock", "style": 4},
+          {"titleSrn": "_18_vehicle_setting_item_2_6", "style": 4},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_65", "style": 2,"max": 6,"min": 0,"progress": 3,"value": "3","unit": "null_value"},
+          {"titleSrn": "_18_vehicle_setting_item_2_4", "style": 4},
+          {"titleSrn": "_18_vehicle_setting_item_1_4", "style": 4},
+          {"titleSrn": "_18_vehicle_setting_item_1_5", "style": 1, "valueSrnArray": ["all_door","driver_door"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_2_5", "style": 4},
+          {"titleSrn": "_18_vehicle_setting_item_2_7", "style": 4},
+          {"titleSrn": "_11_0x26_data2_bit20", "style": 1, "valueSrnArray": ["first_gear","second_gear","third_gear","fourth_gear","fifth_gear"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_55_0x65_data1_bit21", "style": 1, "valueSrnArray": ["close","thirty_second","sixty_second","ninety_second"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn":"airSetting",
+        "itemList": [
+          {"titleSrn": "_18_vehicle_setting_item_1_1","style": 4},
+          {"titleSrn": "_18_vehicle_setting_item_1_0","style": 4},
+          {"titleSrn": "_310_passenger_wind_mode","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_39","hiworld_jeep_123_item_38"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"other_set",
+        "itemList": [
+          {"titleSrn": "_310_auto_circulation_sensitivity","style": 2,"max": 7,"min": 1,"progress": 0,"value": "1","unit": "null_value"},
+          {"titleSrn": "_157_seat_auto_move","style": 1,"valueSrnArray": ["close","_307_value_13","_310_a_few"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_186_asl","style": 4},
+          {"titleSrn": "_16_title_23","style": 4}
+        ]
+      },
+      {
+        "titleSrn":"_310_system_info",
+        "itemList": [
+          {"titleSrn": "_301_original_car_power_amplifier","style": 0,"value": "null_value"},
+          {"titleSrn": "_301_original_car_rear_seat","style": 0,"value": "null_value"},
+          {"titleSrn": "_310_panoramic_node","style": 0,"value": "null_value"},
+          {"titleSrn": "_310_amplifier_status","style": 0,"value": "null_value"},
+          {"titleSrn": "_310_mute_status","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn":"_2_settings_offroad_parking_assist",
+        "itemList": [
+          {"titleSrn": "radar_distance","style": 1,"valueSrnArray": ["near","far"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_283_radar_switch","style": 4},
+          {"titleSrn": "radar_volume","style": 2,"max": 5,"min": 1,"progress": 0,"value": "1","unit": "null_value"},
+          {"titleSrn": "_11_0x26_data3_bit32","style": 1,"valueSrnArray": ["_11_0x26_data3_bit32_item0","_11_0x26_data3_bit32_item1","_11_0x26_data3_bit32_item2"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_18_historical_fuel",
+        "itemList": [
+          {"titleSrn": "update_data","style": 0,"confirmTis": "null_value"},
+          {"titleSrn": "clear_data","style": 3,"confirmTis": "clear_data"}
+        ]
+      },
+      {
+        "titleSrn": "_16_title_17",
+        "itemList": [
+          {"titleSrn": "_165_clear_data","style": 3,"confirmTis": "_165_clear_data"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": true
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  },
+
+  "panelKeyPageUiSet": {
+    "list": [
+      "_309_panel_19",
+      "_309_panel_20",
+      "_310_min_0"
+    ],
+    "count": 3
+  }
+}

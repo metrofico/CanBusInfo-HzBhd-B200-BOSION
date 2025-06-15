@@ -1,0 +1,86 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air", "setting","panel_key"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","auto","dual","front_defog","rear_defog"],
+        ["power"],["aqs"],
+        ["ion","max_front","eco","ac_max","rear"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "front_defog"],
+      "disableBtnArray": ["max_front", "eco", "ac_max", "rear","ion"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowCenterWheel":true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": false,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic":true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_253_3d_model"},
+      {"style": 0,"titleSrn": "_253_2d_model"},
+      {"style": 0,"titleSrn": "_253_front_view"},
+      {"style": 0,"titleSrn": "_253_rear_view"},
+      {"style": 0,"titleSrn": "_253_left_view"},
+      {"style": 0,"titleSrn": "_253_right_view"},
+      {"style": 0,"titleSrn": "_253_enlarge"},
+      {"style": 0,"titleSrn": "_253_normal"},
+      {"style": 0,"titleSrn": "_253_exit_panoramic"}
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "_253_initial_perspective","style": 1,"valueSrnArray": ["_253_normal","_253_overlook","_253_birds_eye_view"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_front_radar_switch","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_rear_radar_switch","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Lane_deviation_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Blind_spot_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Language","style": 1,"valueSrnArray": ["language_cn","language_en"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Unit_of_speed_and_fuel_consumption","style": 1,"valueSrnArray": ["_253_unit_Metric","_253_unit_Imperial"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Temperature_unit","style": 1,"valueSrnArray": ["_253_unit_Celsius","_253_unit_Fahrenheit"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Theme","style": 1,"valueSrnArray": ["_253_theme1","_253_theme2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_HeadLight_delay","style": 1,"valueSrnArray": ["close","_253_delay_time1","_253_delay_time2","_253_delay_time3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Remote_lock_reminder","style": 1,"valueSrnArray": ["_253_Remote_lock_reminder_mode1","_253_Remote_lock_reminder_mode2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Ambient_light_Lightness","style": 1,"valueSrnArray": ["_253_Lightness1","_253_Lightness2","_253_Lightness3","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Tire_Pressure_Monitoring","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Automatic_folding_Rearview_mirror","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Parking_unlocked","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Ambient_light_mode","style": 1,"valueSrnArray": ["_253_light_mode1","_253_light_mode2","_253_light_mode3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_253_Rearview_mirror_backlight_brightness","style": 2,"max":7,"min":1,"progress":0,"value": "1","unit": "_327_unit_level"},
+          {"titleSrn": "_253_Rearview_mirror_automatically_anti_glare","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "enter_panorama",
+        "itemList": [
+          {"titleSrn": "_253_click_into_the_panorama","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "_253_DVR_ON",
+      "_253_DVR_OFF"
+    ],
+    "count": 2
+  }
+}

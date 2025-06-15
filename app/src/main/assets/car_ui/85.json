@@ -1,0 +1,400 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "air",
+      "drive_data",
+      "amplifier",
+      "sync"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac",
+          "ac_max",
+          "max_front",
+          "auto"
+        ],
+        [
+          "rear_defog",
+          "front_defog"
+        ],
+        [
+          "in_out_cycle",
+          "steering_wheel_heating"
+        ],
+        [
+          "blow_window",
+          "blow_head",
+          "blow_foot",
+          "blow_positive",
+          "dual"
+        ]
+    ],
+      "smallWindowStatusArray": [
+        "ac",
+        "auto",
+        "in_out_cycle",
+        "dual"
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ],
+      "seatColdSrnArray": [
+        "close_seat_cold",
+        "left_seat_cold_1",
+        "left_seat_cold_2",
+        "left_seat_cold_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        [
+          "rear_power",
+          "rear_lock"
+        ]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {
+            "titleSrn": "_176_car_setting_title_21",
+            "style": 1,
+            "valueSrnArray": [
+              "ford_raise_color_ice_blue",
+              "_176_car_setting_value_orange",
+              "ford_raise_color_light_blue",
+              "_176_car_setting_value_red",
+              "_176_car_setting_value_green",
+              "_176_car_setting_value_blue",
+              "_176_car_setting_value_purple"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_279_temperature_unit",
+            "style": 1,
+            "valueSrnArray": [
+              "celsius",
+              "fahrenheit"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "ford_range_unit",
+            "style": 1,
+            "valueSrnArray": [
+              "unit_km",
+              "_96_range_unit_mile"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "language_setup",
+            "style": 1,
+            "valueSrnArray": [
+              "language_status_1",
+              "language_status_1_1",
+              "language_status_2",
+              "language_status_3",
+              "language_status_4",
+              "language_status_4_1",
+              "language_status_6",
+              "language_status_6_1",
+              "language_status_13",
+              "language_status_15",
+              "language_status_7",
+              "language_status_12",
+              "language_status_17",
+              "language_status_8",
+              "language_status_0_1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_85_driver_seat_setup",
+        "itemList": [
+          {
+            "titleSrn": "_85_driver_seat_massage_backrest",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "low",
+              "high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_85_driver_seat_massage_cushion",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "low",
+              "high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_85_driver_seat_adjust_upper_plus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_driver_seat_adjust_upper_minus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_driver_seat_adjust_middle_plus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_driver_seat_adjust_middle_minus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_driver_seat_adjust_lower_plus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_driver_seat_adjust_lower_minus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_85_passenger_seat_setup",
+        "itemList": [
+          {
+            "titleSrn": "_85_passenger_seat_massage_backrest",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "low",
+              "high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_85_passenger_seat_massage_cushion",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "low",
+              "high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_85_passenger_seat_adjust_upper_plus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_passenger_seat_adjust_upper_minus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_passenger_seat_adjust_middle_plus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_passenger_seat_adjust_middle_minus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_passenger_seat_adjust_lower_plus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_85_passenger_seat_adjust_lower_minus",
+            "style": 0,
+            "value": "null_value",
+            "unit": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {
+            "titleSrn": "speed_linkage_volume_adjustment",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "low",
+              "middle",
+              "high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_85_sound_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "stereo",
+              "surround_sound"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "a_current_speed",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_85_passenger_airbag_sataus",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_my_key_vol_limit",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_my_key_mute_status",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_41_front_radar",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_41_rear_radar",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_81_video_restore"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_81_video_enlarge"
+      }
+    ]
+  },
+  "syncPageUiSet": {
+    "leftBtnActions": [
+      "media",
+      "phone",
+      "voice",
+      "keyboard"
+    ],
+    "keyboardActions": [
+      [
+        "null",
+        "up",
+        "null"
+      ],
+      [
+        "left",
+        "ok",
+        "right"
+      ],
+      [
+        "null",
+        "down",
+        "null"
+      ],
+      [
+        "info",
+        "menu",
+        "device"
+      ],
+      [
+        "prev",
+        "shuff",
+        "next"
+      ]
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 14,
+    "bandRange": 7,
+    "balanceRange": 14,
+    "isCanBalanceControl": false,
+    "lineBtnAction": [
+    ]
+  }
+}

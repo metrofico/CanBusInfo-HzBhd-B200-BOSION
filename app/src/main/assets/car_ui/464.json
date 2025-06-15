@@ -1,0 +1,91 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","amplifier","setting","drive_data","original_car_device"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac","in_out_cycle"],
+        ["auto","auto_2"], ["front_defog","rear_defog"],
+        ["dual", "aqs", "max_front", "rear","clean_air"]
+      ],
+      "disableBtnArray": ["aqs", "max_front"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": false
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_auto"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "windMaxLevel": 0,
+      "isCanSetWindSpeed": false
+    }
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": true,
+    "lineBtnAction":[]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_464_ampl",
+        "itemList": [
+          {"titleSrn": "_464_ampl_0","style": 0},
+          {"titleSrn": "_464_ampl_1","style": 1,"valueSrnArray": ["_464_ampl_1_0","_464_ampl_1_1","_464_ampl_1_2","_464_ampl_1_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_464_ampl_4","style": 1,"valueSrnArray": ["_464_ampl_4_0","_464_ampl_4_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_464_ampl_5","style": 1,"valueSrnArray": ["_464_ampl_5_0","_464_ampl_5_1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_464_settings_swc",
+        "itemList": [
+          {"titleSrn": "_464_settings_swc0","style": 1,"valueSrnArray": ["_464_settings_swc0_0","_464_settings_swc0_1"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_464_drive",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_464_drive_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_464_drive_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_464_drive_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_464_drive_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_464_drive_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_464_drive_5","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","auto_wind_strong","dual","auto_wind_light","pollrn_removal","windshield_deicing","negative_ion"],
+        ["front_defog","rear_defog"],["blow_positive","blow_negative"],
+        ["auto_manual","ac_max","max_front","aqs","eco","swing","econ"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "in_out_cycle", "front_defog"],
+      "disableBtnArray": ["auto_wind_light","ac_max","max_front","aqs","eco","auto_manual"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3","left_seat_heat_4"],
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3","left_seat_cold_4"]
+    }
+  },
+  "parkPageUiSet":{
+    "isShowCusPanoramicView": true,
+    "isShowCustomBaseLine": true,
+    "isShowCustomTrack": true
+  }
+}

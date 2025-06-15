@@ -1,0 +1,40 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_setting",
+        "itemList": [
+          {"titleSrn": "clean_current_car_computer_info","style": 3,"confirmTis": "clean_current_car_computer_info"}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "acc","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set32","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"car_computer_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "driven_distance","defaultValueSrn": "set_default"},
+          {"titleSrn": "driving_time","defaultValueSrn": "set_default"}
+        ]
+      }]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

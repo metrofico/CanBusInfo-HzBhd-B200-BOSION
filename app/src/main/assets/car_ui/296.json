@@ -1,0 +1,55 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","auto"],
+        [],[],
+        ["in_out_cycle","front_defog","rear_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "drive_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "backlight_adjustment","defaultValueSrn": "set_default"},
+          {"titleSrn": "acc","defaultValueSrn": "set_default"},
+          {"titleSrn": "rev","defaultValueSrn": "set_default"},
+          {"titleSrn": "bluetooth","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_total_trip","defaultValueSrn": "set_default"},
+          {"titleSrn": "_194_warning_msg_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_296_close_light","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_Conv_consumers_prompt_10","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_Conv_consumers_prompt_11","defaultValueSrn": "set_default"},
+          {"titleSrn": "_296_brake_light","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status_1","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_dashboard_data2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

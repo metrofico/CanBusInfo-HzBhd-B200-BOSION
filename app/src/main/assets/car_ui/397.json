@@ -1,0 +1,31 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","panel_key"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac"],
+        ["front_defog"], ["rear_defog"],
+        ["in_out_cycle","rear"]
+      ],
+      "disableBtnArray": ["rear"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": ["_330_seat_heat_off","_330_seat_heat_1"]
+    }
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "_397_PanelKey"
+    ],
+    "count": 1
+  }
+}

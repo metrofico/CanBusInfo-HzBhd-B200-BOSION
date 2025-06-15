@@ -1,0 +1,99 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "drive_data",
+      "original_car_device"
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "isHavePlayTimeSeekBar": false,
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": []
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S18_CarBody_6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S18_CarBody_7",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S18_CarBody_8",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S18_CarBody_9",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S18_CarBody_10",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S18_CarBody_11",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S18_CarBody_12",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_2_setting_10_6",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "cycle_in_out_close",
+          "auto",
+          "dual"
+        ],
+        [
+          "swing",
+          "clean_air"
+        ],
+        [
+          "pollrn_removal",
+          "max_front"
+        ],
+        [
+          "front_defog",
+          "rear",
+          "ac"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "dual",
+        "auto",
+        "front_defog"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "parkPageUiSet": {
+    "isShowRadar": false,
+    "isShowTrack": true
+  }
+}

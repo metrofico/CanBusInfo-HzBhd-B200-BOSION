@@ -1,0 +1,82 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","blow_positive","blow_negative","rear_defog"],
+        ["auto"],["power"],
+        ["ac","in_out_auto_cycle","eco"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "rear_defog", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "disableBtnArray": ["rear_defog","power","eco"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"_270_setting_0",
+        "itemList": [
+          {"titleSrn": "_270_setting_1","style": 2,"max": 15,"min": 0,"progress": 1,"value": "1","unit": "null_value"},
+          {"titleSrn": "_270_setting_2","style": 1,"valueSrnArray": ["zero_second","_270_setting_item0","_270_setting_item1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_270_setting_3","style": 1,"valueSrnArray": ["_270_setting_item2","_270_setting_item3","_270_setting_item4"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_270_setting_4",
+        "itemList": [
+          {"titleSrn": "_270_setting_5","style": 1,"valueSrnArray": ["all_door_unlocked","driving_door_unlocked"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_270_setting_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_270_setting_7","style": 1,"valueSrnArray": ["thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_270_setting_8",
+        "itemList": [
+          {"titleSrn": "_270_setting_9","style": 1,"valueSrnArray": ["close","open","auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_270_setting_10","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_270_setting_11","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_270_setting_12","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_evironment_white",
+            "ford_raise_color_light_red",
+            "vm_golf7_vehicle_setup_evironment_blue",
+            "koleo_dashboard_color_orange",
+            "ford_raise_color_light_purple",
+            "_270_setting_item7",
+            "_270_setting_item5",
+            "_270_setting_item6"
+          ],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_270_setting_13","style": 2,"max": 5,"min": 1,"progress": 0,"value": "1","unit": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

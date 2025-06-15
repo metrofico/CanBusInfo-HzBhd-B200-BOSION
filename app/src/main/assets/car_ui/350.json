@@ -1,0 +1,504 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "drive_data",
+      "air",
+      "setting",
+      "amplifier",
+      "original_car_device"
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_350_d_0",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_350_d_0_0",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_0_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_0_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_0_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_0_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_0_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_0_6",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_350_d_1",
+        "spanCount": 2,
+        "itemList": [
+          {
+            "titleSrn": "_350_d_1_0",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_7",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_8",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_9",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_10",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_11",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_12",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_13",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_14",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_1_15",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_350_d_2",
+        "spanCount": 2,
+        "itemList": [
+          {
+            "titleSrn": "_350_d_2_0_0",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_0_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_0_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_0_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_0_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_0_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_2_6",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_350_d_3",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_350_d_3_0",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_5",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "isHaveRearArea": true,
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "in_out_cycle",
+          "negative_ion",
+          "power"
+        ],
+        [
+          "front_window_heat"
+        ],
+        [
+          "pollrn_removal"
+        ],
+        [
+          "ac",
+          "auto",
+          "dual",
+          "aqs",
+          "clean_air"
+        ]
+      ],
+      "disableBtnArray": [
+        "aqs"
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "rearArea": {
+      "lineBtnAction": [
+        [
+          "rear_lock",
+          "rear_power"
+        ],
+        [],
+        [],
+        ["rear_auto"]
+      ],
+      "disableBtnArray": [
+        "rear_power"
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetTemp": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_350_s_0",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_0_0",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_0_1",
+            "style": 2,
+            "max": 4,
+            "min": 0
+          },
+          {
+            "titleSrn": "_350_s_0_2",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_0_2_0",
+              "_350_s_0_2_1",
+              "_350_s_0_2_2",
+              "_350_s_0_2_3"
+            ]
+          },
+          {
+            "titleSrn": "_350_s_0_3",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_0_3_0",
+              "_350_s_0_3_1",
+              "_350_s_0_3_2",
+              "_350_s_0_3_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "_350_s_1",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_1_0",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_1_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_1_2",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_1_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_1_4",
+            "style": 2,
+            "max": 6,
+            "min": 0
+          }
+        ]
+      },
+      {
+        "titleSrn": "_350_s_2",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_2_0",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_2_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_2_2",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_2_2_0",
+              "_350_s_2_2_1"
+            ]
+          },
+          {
+            "titleSrn": "_350_s_2_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_2_4",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_2_5",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_2_5_0",
+              "_350_s_2_5_1",
+              "_350_s_2_5_2",
+              "_350_s_2_5_3",
+              "_350_s_2_5_4"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "_350_s_3",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_3_0",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_3_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_3_2",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_3_2_0",
+              "_350_s_3_2_1",
+              "_350_s_3_2_2"
+            ]
+          },
+          {
+            "titleSrn": "_350_s_3_3",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_3_3_0",
+              "_350_s_3_3_1",
+              "_350_s_3_3_2",
+              "_350_s_3_3_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "_350_s_4",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_4_0",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_4_0_0",
+              "_350_s_4_0_1",
+              "_350_s_4_0_2",
+              "_350_s_4_0_3"
+            ]
+          },
+          {
+            "titleSrn": "_350_s_4_1",
+            "style": 2,
+            "max": 7,
+            "min": 1
+          },
+          {
+            "titleSrn": "_350_s_4_2",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_4_2_0",
+              "_350_s_4_2_1",
+              "_350_s_4_2_2"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "_350_s_5",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_5_0",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_5_1",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_5_1_0",
+              "_350_s_5_1_1"
+            ]
+          },
+          {
+            "titleSrn": "_350_s_5_2",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_5_3",
+            "style": 2,
+            "min": 1,
+            "max": 5
+          }
+        ]
+      },
+      {
+        "titleSrn": "_350_s_6",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_6_0",
+            "style": 4
+          },
+          {
+            "titleSrn": "_350_s_6_1",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "_350_s_7",
+        "itemList": [
+          {
+            "titleSrn": "_350_s_7_0",
+            "style": 1,
+            "valueSrnArray": [
+              "_350_s_7_0_0",
+              "_350_s_7_0_1"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["rpt_track","rdm_disc","exit_cd","select_cd"],
+    "rowBottomBtnAction":
+    ["left","play","right"],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "total_file", "value": ""},
+      {"imageId": "music_list", "titleSrn": "current_song_list", "value": ""},
+      {"imageId": "music_music", "titleSrn": "song_name", "value": ""},
+      {"imageId": "music_artist", "titleSrn": "singer", "value": ""}
+    ],
+    "isHavePlayTimeSeekBar": true,
+    "isHaveSongList": true
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["in_out_cycle","auto_wind_light","max_front"],
+        ["power"],["ac"],
+        ["rear_defog","dual","ac_max"]
+      ],
+      "disableBtnArray": [],
+      "smallWindowStatusArray": ["ac", "auto", "dual", "rear_defog"],
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "windMaxLevel": 7
+    }
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowCusPanoramicView": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0, "titleSrn": "_326_radar_info_1"},
+      {"style": 0, "titleSrn": "_326_radar_info_2"}
+
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_326_setting_title",
+        "itemList": [
+          {"titleSrn": "_326_setting_1","style": 1,"valueSrnArray": ["_326_setting_data_1","_326_setting_data_2","_326_setting_data_3","_326_setting_data_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_326_setting_2","style": 1,"valueSrnArray": ["_326_setting_data_1","_326_setting_data_2","_326_setting_data_3","_326_setting_data_4"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  }
+}

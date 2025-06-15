@@ -1,0 +1,266 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting","tire_info","on_start"]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": true,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "check_pressure","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "check_pressure","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "check_pressure","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "check_pressure","value":"set_default"}]},
+      {"whichTire":4,"list": [{"title":"tire_pressure_content","value":"set_default"}]}
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac_auto","sync","hybrid_ac","aqs"],
+        ["auto_cycle"],
+        ["in_out_cycle"],
+        ["auto_defog","rear_defog","front_defog"]
+      ],
+      "disableBtnArray": ["ac_auto","hybrid_ac","sync","aqs","auto_defog","rear_defog","front_defog","auto_cycle","in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowSeatHeat": true,
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowSeatCold": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 18,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        ["rear_power","rear_lock"],
+        [],[],
+        ["rear_sync"]
+      ],
+      "isAllBtnCanClick": true,
+      "disableBtnArray": [],
+      "isCanSetTemp": true,
+      "isShowLeftWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "battery_voltage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_throttle_location","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_remain_fuel_num","defaultValueSrn": "set_default"},
+          {"titleSrn": "ac_diagnostic_info_title_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_hydraulics_pressure","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_atmospheric_pressure","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_remain_fuel_percent","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_1168_comsup_and_range",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"},
+          {"titleSrn": "_186_total_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_ave_comsup_one","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_ave_comsup_two","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_ave_comsup_three","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_ave_trip_one","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_ave_trip_two","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_ave_trip_three","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "instaneous_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "left_front_window","defaultValueSrn": "set_default"},
+          {"titleSrn": "right_front_window","defaultValueSrn": "set_default"},
+          {"titleSrn": "left_rear_window","defaultValueSrn": "set_default"},
+          {"titleSrn": "right_rear_window","defaultValueSrn": "set_default"},
+          {"titleSrn": "battery_voltage","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_1168_set_ac_system",
+        "itemList": [
+          {"titleSrn": "_1168_set_ac_system_auto_wind_level","style": 1,"valueSrnArray": ["low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_mode_switch","style": 1,"valueSrnArray": ["close","open","set_by_last"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_air_quality_sensor_one","style": 1,"valueSrnArray": ["low_sensor","high_sensor","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_auto_area_temp_contrl","style": 1,"valueSrnArray": ["set_unite","set_partition","set_by_last"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_seat_auto_wind","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_seat_auto_heat","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_rmote_start_seat_auto_wind","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_rmote_start_seat_auto_heat","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_rear_area_temp_contrl","style": 1,"valueSrnArray": ["close","_1168_rear_seat_same_with_front","set_by_last"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_front_window_auto_defog","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_rear_window_auto_defog","style": 1,"valueSrnArray": ["manual","auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_remote_start_ac_setting","style": 1,"valueSrnArray": ["manual","auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_air_quality_sensor_two","style": 1,"valueSrnArray": ["low_sensor","high_sensor","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_ac_system_ac_rmote_start_seat_auto_heat_one","style": 1,"valueSrnArray": ["close","driver_and_passenger","driver"],"selectIndex": 0,"value": ""},
+          {
+            "titleSrn": "S168_x35_1",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "_1168_collision_detection",
+        "itemList": [
+          {"titleSrn": "park_help","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "flank_blind_zone_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_collision_detection_park_assist_compensate","style": 1,"valueSrnArray": ["close","open","_1168_collision_detection_towing"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_collision_detection_warning_type","style": 1,"valueSrnArray": ["whistle","_1168_seat"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_collision_detection_24hz_radar","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_prevent_ready","style": 1,"valueSrnArray": ["close","alarm","alarm_and_stop_car"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_status_notify","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "ramp_start_assist","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_drive_program","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "front_work_man_check","style": 1,"valueSrnArray": ["close","alarm","alarm_and_stop_car"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "sport_turn","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_1168_set_comfort",
+        "itemList": [
+          {"titleSrn": "driver_seat_auto_return","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_comfort_out_back_mirror_auto_Lean","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "steering_shift_hiworld","style": 1,"valueSrnArray": ["close","steering_column_contraction","lift_to_the_column","steering_tube_shrink_lift"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "exterior_mirror_folding_hiworld","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "personalization_by_driver_hiworld","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "rear_window_wiper_setting_hiworld","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "steering_column_off_car_tilt_setting_hiworld","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_wiper","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "S168_x56_2","style": 4}
+        ]
+      },
+      {
+        "titleSrn": "car_lock_set",
+        "itemList": [
+          {"titleSrn": "unlocked_door_anti_lock_out","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_unlock_automatic_file","style": 1,"valueSrnArray": ["close","honda_set_auto_door_unlock_driver_in_p","honda_set_auto_door_unlock_all_in_p"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "delayed_door_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_unlock_manual_file","style": 1,"valueSrnArray": ["close","_1168_set_lock_pull_out_key_only_unlock_driver_door","_1168_set_lock_pull_out_key_only_unlock_all_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "prevent_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x66_title",
+        "itemList": [
+          {"titleSrn": "geely_remote_lock_feedback","style": 1,"valueSrnArray": ["only_light","light_and_horn","only_horn","close"],"selectIndex": 3,"value": ""},
+          {"titleSrn": "_1168_set_remote_unlock_feedback","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_unlock_set","style": 1,"valueSrnArray": ["driving_door_unlocked","all_door_unlocked"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_unlocking_door_automatic_relock_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "relock_remote_control_open_door_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "driver_key_automatic_identification_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_start_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "smart_near_car_unlock_set","style": 1,"valueSrnArray": ["driving_door_unlocked","all_door_unlocked"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "key_forget_reminder","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "intelligent_car_lock_set","style": 1,"valueSrnArray": ["close","open","enable_when_lound"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_sliding_door_set","style": 1,"valueSrnArray": ["unlock_all_doors_and_open_sliding_door","unlock_sliding_door_and_open_sliding_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_window_control","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_18_vehicle_setting_title_3",
+        "itemList": [
+          {"titleSrn": "find_car_light_function","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lock_big_light_delay_set","style": 1,"valueSrnArray": ["close","second_30","minute_1","minute_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vehicle_positioning_lamp","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {
+            "titleSrn": "S168_x67_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S168_x67_2",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "compass",
+        "itemList": [
+          {"titleSrn": "compass_calibration_status","style": 0,"value": "null_value"},
+          {"titleSrn": "compass_zoom","style": 0,"value": "null_value"},
+          {"titleSrn": "magnetic_field_angle","style": 0,"value": "null_value", "unit": "unit_degree"}
+        ]
+      },
+      {
+        "titleSrn": "dashbaord_display",
+        "itemList": [
+          {"titleSrn": "hybrid_eco_hiworld","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "instrument_navigation_hiworld","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "speed_range__hiworld","style": 1,"valueSrnArray": ["full","partial"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "little_trip","style": 1,"valueSrnArray": ["switch_id","reset_zero"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "sport_mode_set_hiwold",
+        "itemList": [
+          {"titleSrn": "engine_status","style": 1,"valueSrnArray": ["normal_mode","sport_mode"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "sport_mode_backlight_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_status","style": 1,"valueSrnArray":
+             [ "language_status_1",
+               "language_status_0",
+               "language_status_2",
+               "language_status_3",
+               "language_status_4",
+               "language_status_17",
+               "language_status_6",
+               "language_status_7",
+               "language_status_8",
+               "language_status_18",
+               "language_status_19",
+               "language_status_20",
+               "language_status_11",
+               "language_status_21",
+               "language_status_14",
+               "language_status_13",
+               "language_status_16",
+               "language_status_15",
+               "language_status_22",
+               "language_status_23"
+                ],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_langaug_car_individuation_factory_reset","style": 3,"confirmTis": "confirm_reset_alert_dialog"}
+        ]
+      },
+      {
+        "titleSrn": "_1168_set_bluetooth_title",
+        "itemList": [
+          {"titleSrn": "_1168_set_bluetooth_pincode","style": 0,"value": "null_value"},
+          {"titleSrn": "_1168_set_bluetooth_phone_name","style": 0,"value": "null_value"},
+          {"titleSrn": "_1168_set_bluetooth_pair","style": 1,"valueSrnArray": ["_1168_set_bluetooth_click_to_pair"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1168_set_bluetooth_delete","style": 1,"valueSrnArray": ["_1168_set_bluetooth_click_to_delete"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "onStartPageUiSet": {
+    "btnAction": ["phone_more_info"]
+  }
+}

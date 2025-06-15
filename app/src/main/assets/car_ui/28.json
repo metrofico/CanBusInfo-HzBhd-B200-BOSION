@@ -1,0 +1,67 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "air",
+      "amplifier"
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {
+            "titleSrn": "_197_amplifier_mute",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac"
+        ],
+        [],
+        [],
+        [
+          "auto",
+          "dual"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "power",
+        "ac",
+        "auto",
+        "dual"
+      ],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "windMaxLevel": 8
+    }
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 20,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 45,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "isCanRateControl": false
+  },
+  "parkPageUiSet": {
+    "isShowRadar": false,
+    "isShowTrack": false
+  }
+}

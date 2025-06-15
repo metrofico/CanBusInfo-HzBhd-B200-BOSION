@@ -1,0 +1,75 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "warning"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "ac",
+          "ac_max",
+          "auto"
+        ],
+        [
+          "dual",
+          "front_defog"
+        ],
+        [
+          "rear_defog",
+          "power"
+        ],
+        [
+          "auto_wind_mode",
+          "in_out_cycle"
+        ]
+      ],
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": false,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [
+          "rear_power",
+          "rear_lock"
+        ],
+        [],
+        [],
+        [
+          "rear_auto"
+        ]
+      ],
+      "isCanSetTemp": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_346_setting_0",
+        "itemList": [
+          {
+            "titleSrn": "_346_setting_0_0","valueSrnArray": ["close","open"],"selectIndex": 0,"value": "",
+            "style": 1
+          }
+        ]
+      }
+    ]
+  },
+  "warningPageUiSet": {},
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle"],
+        ["blow_window","blow_foot"],["blow_head"],
+        ["front_defog","mono","auto"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+  }
+}

@@ -1,0 +1,442 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog","soft","fast","auto_cycle"],
+        ["sync"],["power"],
+        ["ac","in_out_cycle","auto","rear"]
+      ],
+      "disableBtnArray": [],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_163_drive_data1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_163_drive_data2","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "average_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "accumulated_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "driving_time","defaultValueSrn": "set_default"},
+          {"titleSrn": "_163_drive_data3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_163_drive_data4","defaultValueSrn": "set_default"}
+        ]
+      }
+    ],
+    "isHaveBtn": true,
+    "leftPosition": 0,
+    "rightPosition": 0,
+    "buttonText": "_163_drive_data5"
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "clear_data",
+        "itemList": [
+          {
+            "titleSrn": "_163_drive_data5",
+            "style": 3,
+            "confirmTis": "_163_cofirm_dialog"
+          }
+        ]
+      },
+      {
+        "titleSrn": "car_info",
+        "itemList": [
+          {
+            "titleSrn": "_163_setting_1",
+            "style": 1,
+            "valueSrnArray": [
+              "S163Color_1",
+              "S163Color_2",
+              "S163Color_3",
+              "S163Color_4",
+              "S163Color_5",
+              "S163Color_6",
+              "S163Color_7",
+              "S163Color_8"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_163_setting_2",
+            "style": 2,
+            "max": 20,
+            "min": 0
+          },
+          {
+            "titleSrn": "_163_setting_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_4",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_5",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_6",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_7",
+            "style": 1,
+            "valueSrnArray": [
+              "geely_sport",
+              "geely_comfort",
+              "_220_standard",
+              "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco",
+              "ford_lndividual"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_8",
+            "style": 1,
+            "valueSrnArray": [
+              "_163_setting_item5",
+              "_163_setting_item6",
+              "_163_setting_item7",
+              "_163_setting_item8"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_9",
+            "style": 1,
+            "valueSrnArray": [
+              "geely_sport",
+              "geely_comfort",
+              "_220_standard"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_10",
+            "style": 1,
+            "valueSrnArray": [
+              "geely_sport",
+              "_220_standard",
+              "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_11",
+            "style": 1,
+            "valueSrnArray": [
+              "_220_standard",
+              "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_12",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_13",
+            "style": 1,
+            "valueSrnArray": [
+              "_163_setting_item9",
+              "_163_setting_item10",
+              "_163_setting_item11"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_14",
+            "style": 2,
+            "max": 5,
+            "min": 1
+          },
+          {
+            "titleSrn": "_163_setting_15",
+            "style": 2,
+            "max": 5,
+            "min": 1
+          },
+          {
+            "titleSrn": "_163_setting_16",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_17",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_18",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_19",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_20",
+            "style": 1,
+            "valueSrnArray": [
+              "_163_setting_item2",
+              "_163_setting_item3",
+              "_163_setting_item4"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_21",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_22",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_23",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_24",
+            "style": 2,
+            "max": 20,
+            "min": 0
+          },
+          {
+            "titleSrn": "_163_setting_26",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_27",
+            "style": 1,
+            "valueSrnArray": [
+              "_163_setting_item12",
+              "_163_setting_item13",
+              "_163_setting_item14"
+            ]
+          },
+          {
+            "titleSrn": "_163_setting_28",
+            "style": 2,
+            "max": 31,
+            "min": 0
+          },
+          {
+            "titleSrn": "_163_setting_29",
+            "style": 4
+          },
+          {
+            "titleSrn": "_163_setting_30",
+            "style": 4
+          }
+        ]
+      },
+      {
+        "titleSrn": "S163_CarInfo2_0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S163_CarInfo2_1"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S163_CarInfo2_2"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S163_CarInfo2_3"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S163_CarInfo2_4"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S163_CarInfo2_5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S163_CarInfo2_6"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S163_CarInfo2_7",
+            "valueSrnArray": [
+              "S163_CarInfo2_7_1",
+              "S163_CarInfo2_7_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S163_CarInfo2_8"
+          },
+          {
+            "style": 0,
+            "titleSrn": "S163_CarInfo2_9"
+          },
+          {
+            "style": 0,
+            "titleSrn": "S163_CarInfo2_10"
+          },
+          {
+            "style": 0,
+            "titleSrn": "S163_CarInfo2_11"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S163_x2A_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S163_x2A_1",
+            "valueSrnArray": [
+              "S163_x2A_1_0",
+              "S163_x2A_1_1",
+              "S163_x2A_1_2",
+              "S163_x2A_1_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S163_x6F_0",
+        "itemList": [
+          {
+            "style": 3,
+            "titleSrn": "S163_x6F_1",
+            "confirmTis": "S163_x6F_Tips"
+          },
+          {
+            "style": 3,
+            "titleSrn": "S163_x6F_2",
+            "confirmTis": "S163_x6F_Tips"
+          },
+          {
+            "style": 3,
+            "titleSrn": "S163_x6F_3",
+            "confirmTis": "S163_x6F_Tips"
+          },
+          {
+            "style": 3,
+            "titleSrn": "S163_x6F_4",
+            "confirmTis": "S163_x6F_Tips"
+          },
+          {
+            "style": 3,
+            "titleSrn": "S163_x6F_5",
+            "confirmTis": "S163_x6F_Tips"
+          },
+          {
+            "style": 3,
+            "titleSrn": "S163_x6F_6",
+            "confirmTis": "S163_x6F_Tips"
+          },
+          {
+            "style": 3,
+            "titleSrn": "S163_x6F_7",
+            "confirmTis": "S163_x6F_Tips"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S163_Language_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S163_Language_0",
+            "valueSrnArray": [
+              "set_default",
+              "English",
+              "简体中文",
+              "Deutsch",
+              "Italiano",
+              "Francais",
+              "Svenska",
+              "Espanol",
+              "Nederlands",
+              "Portugues",
+              "Norsk",
+              "Suomi",
+              "Dansk",
+              "Eyynvlka",
+              "auell",
+              "Turkce",
+              "Pyccknn",
+              "Romana",
+              "Ykpaihcbka",
+              "Polski",
+              "Slovencina",
+              "Cesky",
+              "Magyar",
+              "Srpski",
+              "PortuguesdoBrasil",
+              "Hrvatski",
+              "bbnrapckn",
+              "Eesti",
+              "Vlaams",
+              "NNNy",
+              "印度语",
+              "uule",
+              "Latviesu",
+              "Lietuviu",
+              "Slovenscina",
+              "America_latina"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S18_Car_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S18_Car_0",
+            "valueSrnArray": [
+              "set_default",
+              "S163_Car_1",
+              "S163_Car_2",
+              "S163_Car_3",
+              "S163_Car_4",
+              "S163_Car_5",
+              "S163_Car_6",
+              "S163_Car_7",
+              "S163_Car_8",
+              "S163_Car_9",
+              "S163_Car_10",
+              "S163_Car_11",
+              "S163_Car_12",
+              "S163_Car_13"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic":true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_253_right_view"},
+      {"style": 0,"titleSrn": "_253_left_view"},
+      {"style": 0,"titleSrn": "_253_front_view"},
+      {"style": 0,"titleSrn": "_253_rear_view"}
+    ]
+  }
+}

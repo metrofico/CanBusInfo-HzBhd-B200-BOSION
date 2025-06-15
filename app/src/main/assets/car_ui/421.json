@@ -1,0 +1,63 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","power","auto"],
+        ["front_defog"], ["rear_defog"],
+        [ "in_out_cycle","ac_max","sync"]
+      ],
+      "disableBtnArray": [],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_375_car_setting",
+        "itemList": [
+          {"titleSrn": "_421_Item_01","style": 1,"valueSrnArray": ["_375_car_setting130","_375_car_setting131","_375_car_setting132","_375_car_setting133"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_02","style": 1,"valueSrnArray": ["_375_car_setting120","_375_car_setting121","_375_car_setting122","_375_car_setting123","_375_car_setting124"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_03","style": 4,"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_04","style": 4,"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_05","style": 1,"valueSrnArray": ["_68_add13","_68_add12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_06","style": 4,"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_07","style": 4,"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_08","style": 4,"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_09","style": 4,"selectIndex": 0,"value": ""},
+          {"titleSrn": "_421_Item_10","style": 4,"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_375_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_421_Item_11","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_284_85_0_1"},
+      {"style": 0,"titleSrn": "_284_85_0_2"},
+      {"style": 0,"titleSrn": "_284_85_0_3"}
+    ]
+  }
+}

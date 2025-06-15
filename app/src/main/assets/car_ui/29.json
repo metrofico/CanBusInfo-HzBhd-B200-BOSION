@@ -1,0 +1,98 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data","amplifier"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "_29_rear_init_view_model","style": 1,"valueSrnArray": ["_29_all_view","_29_only_rear","_29_rear_left_rear","_29_rear_right_rear"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_29_front_init_view_model","style": 1,"valueSrnArray": ["_29_all_view","_29_only_front","_29_front_left_front","_29_front_right_front"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_29_park_distance_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_29_rear_view_parking_guide_line","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "air_setting",
+        "itemList": [
+          {"titleSrn": "_29_air_in_cycle","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_29_air_in_out_auto_cycle","style": 0 }
+        ]
+      },
+      {
+        "titleSrn": "_29_third_seat_backrest",
+        "itemList": [
+          {"titleSrn": "_29_left_side","style": 1,"valueSrnArray": ["_29_fold","_29_expand"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_29_right_side","style": 1,"valueSrnArray": ["_29_fold","_29_expand"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_29_heat_cold",
+        "itemList": [
+          {"titleSrn": "_29_steering_wheel_heater","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_29_seat_heat_ventil","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac"],
+        ["front_defog"],["aqs"],
+        ["auto","in_out_cycle","sync"]
+      ],
+      "disableBtnArray": ["aqs"],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowRadarDistance": true,
+    "isShowPanoramic":true,
+    "panoramicBtnList": [
+      {"style": 1,"imgRes": "hyundai_front_all"},
+      {"style": 1,"imgRes": "hyundai_only_front"},
+      {"style": 1,"imgRes": "hyundai_front_left_front"},
+      {"style": 1,"imgRes": "hyundai_front_right_front"},
+      {"style": 1,"imgRes": "hyundai_only_rear"}
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 20,
+    "isCanRateControl": false,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  }
+}

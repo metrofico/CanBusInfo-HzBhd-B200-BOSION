@@ -1,0 +1,19 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["tire_info"]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_420_item_1","value":"set_default"},{"title": "_420_item_6","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_420_item_1","value":"set_default"},{"title": "_420_item_6","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_420_item_1","value":"set_default"},{"title": "_420_item_6","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_420_item_1","value":"set_default"},{"title": "_420_item_6","value":"set_default"}]}
+    ]
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data"]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_enviroment_temp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_value_21","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_average_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_1104_System_config_info",
+        "itemList": [
+          {"titleSrn": "_279_distance_unit","style": 1,"valueSrnArray": ["unit_km","_96_range_unit_mile"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_250_language","style": 1,"valueSrnArray": ["language_status_2","vm_golf7_language_setup_english_uk","vm_golf7_language_setup_english_us","vm_golf7_language_setup_spanish","vm_golf7_language_setup_italian","vm_golf7_language_setup_french"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_283_meter_value_5","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_consumption_l100km","vm_golf7_vehicle_setup_units_consumption_mpg_us","vm_golf7_vehicle_setup_units_consumption_mpg_uk","vm_golf7_vehicle_setup_units_consumption_kml"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_279_temperature_unit","style": 1,"valueSrnArray": ["celsius","fahrenheit"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_hour_format","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_hour_format_1","vm_golf7_vehicle_setup_hour_format_0"],"selectIndex": 0,"value": ""}
+
+        ]
+      },
+      {
+        "titleSrn": "radar_settings",
+        "itemList": [
+          {"titleSrn": "_283_radar_switch","style": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_1104_window_setup",
+        "itemList": [
+          {"titleSrn": "_1104_window_switch","style":1,"valueSrnArray": ["_1104_window_close","_1104_window_open"],"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_1104_seat_heat_setup",
+        "itemList": [
+          {"titleSrn": "_1104_left_seat_heat","style": 0, "value": "close"},
+          {"titleSrn": "_1104_right_seat_heat","style": 0, "value": "close"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

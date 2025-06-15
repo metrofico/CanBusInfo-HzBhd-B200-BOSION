@@ -1,0 +1,138 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting","amplifier"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","ac_max", "power", "auto"],
+        ["blow_head","blow_window"], ["blow_foot"],
+        ["steering_wheel_heating","rear_defog","max_heat","dual","in_out_cycle"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": true,
+      "seatColdSrnArray": [
+        "_330_seat_cold_off",
+        "_330_seat_heat_negative1",
+        "_330_seat_heat_negative2",
+        "_330_seat_heat_negative3"
+      ],
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "S96ColorTitle","style": 1, "valueSrnArray": ["close","ford_raise_color_ice_blue", "_375_car_setting455", "ford_raise_color_light_blue", "ford_raise_color_light_red","ford_raise_color_light_green","_375_car_setting453","ford_raise_color_light_purple"]},
+          {"titleSrn":"_379_item_11","style": 2, "max": 100, "min": 0},
+          {"titleSrn":"_379_item_01","style": 1, "valueSrnArray": ["_379_item_01_01","_379_item_01_02","_379_item_01_03"]},
+          {"titleSrn":"_379_item_02","style": 1, "valueSrnArray": ["_379_item_01_01","_379_item_01_02","_379_item_01_03"]},
+          {"titleSrn":"_379_item_03","style": 1, "valueSrnArray": ["_379_item_01_01","_379_item_01_02","_379_item_01_03"]},
+          {"titleSrn":"_379_item_04","style": 1, "valueSrnArray": ["_379_item_01_01","close","_379_item_01_05","_379_item_01_06"]},
+          {"titleSrn":"_379_item_05","style": 1, "valueSrnArray": ["_379_item_01_01","close","_379_item_01_05","_379_item_01_06"]},
+          {"titleSrn":"_379_item_06","style": 1, "valueSrnArray": ["_379_item_01_01","_379_item_01_02","_379_item_01_03"]},
+          {"titleSrn":"_379_item_07","style": 1, "valueSrnArray": ["_379_item_01_01","_379_item_01_02","_379_item_01_03"]},
+          {"titleSrn":"_379_item_08","style": 1, "valueSrnArray": ["_379_item_01_01","_379_item_01_02","_379_item_01_03"]},
+          {"titleSrn":"_379_item_09","style": 1, "valueSrnArray": ["_379_item_01_01","close","_379_item_01_05","_379_item_01_06"]},
+          {"titleSrn":"_379_item_10","style": 1, "valueSrnArray": ["_379_item_01_01","close","_379_item_01_05","_379_item_01_06"]}
+        ]
+      },
+      {
+        "titleSrn": "ford_setting_0x68_0",
+        "itemList": [
+          {"titleSrn": "_379_item_12","style": 1,"valueSrnArray": ["unit_km","_96_range_unit_mile"]},
+          {"titleSrn": "temperature_unit","style": 1,"valueSrnArray": ["celsius","fahrenheit"]}
+        ]
+      },
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_en_uk","language_cn_jian","language_5","language_7"]}
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "speed_linkage_volume_adjustment","style": 1,"valueSrnArray": ["close","_375_car_setting511","_375_car_setting512","_375_car_setting513"]},
+          {"titleSrn": "surround_sound","style": 1,"valueSrnArray": ["stereo","surround_sound"]},
+          {"titleSrn": "reset_balance","style": 0},
+          {"titleSrn": "reset_all","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_379_big_item_1",
+        "itemList": [
+          {"titleSrn": "_379_item_13","style": 1,"valueSrnArray": ["_379_item_13_1","_379_item_13_2","_379_item_13_3","_379_item_13_4"]},
+          {"titleSrn": "_379_item_14","style": 1,"valueSrnArray": ["_379_item_14_1","_379_item_14_2","_379_item_14_3","_379_item_14_4","_379_item_14_5","_379_item_14_6","_379_item_14_7"]},
+          {"titleSrn": "_379_item_15","style": 1,"valueSrnArray": ["_379_item_15_1","_379_item_15_2","_379_item_15_3"]},
+          {"titleSrn": "_379_item_16","style": 1,"valueSrnArray": ["_379_item_16_1","_379_item_16_2","_379_item_16_3"]},
+          {"titleSrn": "_379_item_17","style": 1,"valueSrnArray": ["_379_item_17_1","_379_item_17_2","_379_item_17_3"]}
+        ]
+      },
+      {
+        "titleSrn": "_379_item_26",
+        "itemList": [
+          {"titleSrn": "_379_item_26","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_379_item_30",
+        "itemList": [
+          {"titleSrn": "_379_item_30","style": 0}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_214_car_speed1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_214_car_speed2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]},
+  "amplifierPageUiSet": {
+    "seekBarMax": 14,
+    "bandRange": 7,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": true,
+    "lineBtnAction":[
+
+     ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"titleSrn": "_379_item_18", "style": 0},
+      {"titleSrn": "_379_item_19", "style": 0},
+      {"titleSrn": "_379_item_21", "style": 0},
+      {"titleSrn": "_379_item_22", "style": 0},
+      {"titleSrn": "_379_item_23", "style": 0},
+      {"titleSrn": "_379_item_24", "style": 0},
+      {"titleSrn": "_379_item_25", "style": 0}
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting", "air", "original_car_device", "drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac",
+          "auto"
+        ],
+        [
+          "front_defog"
+        ],
+        [
+          "dual"
+        ],
+        [
+          "in_out_cycle",
+          "rear"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "auto",
+        "in_out_cycle",
+        "front_defog"
+      ],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_209_mileage_setting",
+        "itemList": [
+          {"titleSrn": "_55_0x69_data1_bit65","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1", "_55_0x69_data1_bit65_item2", "_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit43","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1", "_55_0x69_data1_bit65_item2", "_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit20","style": 2,"max": 5,"min": -5,"progress": 5,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_194_light_set",
+        "itemList": [
+          {"titleSrn": "_209_32_1_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit64","style": 1,"valueSrnArray": ["lowest","lower","middle","higher","hightest"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit32","style": 1,"valueSrnArray": ["zero_second","fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit10","style": 1,"valueSrnArray": ["fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x65_title",
+        "itemList": [
+          {"titleSrn": "_55_0x65_data1_bit0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_41_key_remote_unlock","style": 1,"valueSrnArray": ["driver_door","all_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit21","style": 1,"valueSrnArray": ["thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit76","style": 1,"valueSrnArray": ["by_driver_door", "_55_0x65_data1_bit76_item1", "_55_0x65_data1_bit76_item2", "english_off"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit54","style": 1,"valueSrnArray": ["_55_0x65_data1_bit54_item1", "_55_0x65_data1_bit54_item2","english_off"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x66_title",
+        "itemList": [
+          {"titleSrn": "_209_32_3_7","style": 1,"valueSrnArray": ["_250_low","_250_high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x66_data1_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_194_unlock_mode","style": 1,"valueSrnArray": ["driver_door","all_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x66_data1_bit2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_48_memory_position_link","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x66_data1_bit0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_48_forward_collision_warning_distance","style": 1,"valueSrnArray": ["close","_103_car_setting_value_23","_220_normal","_103_car_setting_value_24"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_209_screen_setting",
+        "itemList": [
+          {"titleSrn": "_209_screen_display","style": 1,"valueSrnArray": ["_220_normal","_209_darken","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "brightness","style": 2,"max": 5,"min": -5,"progress": 5,"value": "0","unit": "null_value"},
+          {"titleSrn": "contrast","style": 2,"max": 5,"min": -5,"progress": 5,"value": "0","unit": "null_value"},
+          {"titleSrn": "saturation","style": 2,"max": 5,"min": -5,"progress": 5,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "compass",
+        "itemList": [
+          {"titleSrn": "compass_calibration_status","style": 0,"value": "null_value"},
+          {"titleSrn": "compass_run_calibration","style": 0,"value": "null_value"},
+          {"titleSrn": "compass_zoom","style": 2,"max": 15,"min": 1,"progress": 0,"value": "1","unit": "null_value"},
+          {"titleSrn": "magnetic_field_angle","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "front_camera_setup",
+        "itemList": [
+          {"titleSrn": "_48_bsm_reference_line","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "reset",
+        "itemList": [
+          {"titleSrn": "_55_0x6E_0x06","style": 3,"confirmTis": "_55_0x6E_0x06"},
+          {"titleSrn": "_41_default_all","style": 3,"confirmTis": "_41_default_all"},
+          {"titleSrn": "_41_delete_fuel_record","style": 3,"confirmTis": "_41_delete_fuel_record"}
+        ]
+      }
+    ]
+  },
+
+  "originalCarDevicePageUiSet": {
+    "isHavePlayTimeSeekBar": false,
+    "isHaveSongList": true,
+    "isSongListShowIndex": false,
+    "rowTopBtnAction":
+    ["fm","am","aux","st","scan","refresh"],
+    "rowBottomBtnAction":
+    ["left","up","prev_disc","next_disc","down","right"],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "_186_band", "value": ""},
+      {"imageId": "music_list", "titleSrn": "_186_preset", "value": ""},
+      {"imageId": "music_list", "titleSrn": "_186_frequency", "value": ""}
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "standard"},
+        {"style": 0,"titleSrn": "honda_set_angle_wide"},
+        {"style": 0,"titleSrn": "overlook"}
+      ]
+  },
+
+  "driverDataPageUiSet": {
+    "isHaveBtn": true,
+    "buttonText": "_41_delete_fuel_record",
+    "list": [
+      {
+        "headTitleSrn": "_41_fuel_mileage_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x16_data12","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x16_data34","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x16_data56","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_a","defaultValueSrn": "null_value"},
+          {"titleSrn": "_186_endurancee_mileage","defaultValueSrn": "null_value"}
+        ]
+      },
+      {
+        "headTitleSrn":"_41_historical_itinerary_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_55_0x17_first_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_a","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_second_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_a","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_third_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "trip_a","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "null_value"}
+        ]
+      },
+      {
+        "headTitleSrn":"vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_41_rear_radar","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  }
+}

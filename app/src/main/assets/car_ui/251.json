@@ -1,0 +1,204 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "drive_data",
+      "setting",
+      "warning"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "front_defog",
+          "ac_max",
+          "rear_defog"
+        ],
+        [
+          "power"
+        ],
+        [
+          "in_out_cycle"
+        ],
+        [
+          "ac",
+          "auto",
+          "rear"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "auto",
+        "in_out_cycle",
+        "front_defog"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_327_front_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_rear_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_left_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_right_camera"
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "D251_Title1",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D251_OriginalCar_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_OriginalCar_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D251_Title2",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D251_Battery_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_7",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_8",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_Battery_9",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D251_Title3",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D251_CarBody_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D251_CarBody_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S251_Title_1",
+        "itemList": [
+          {
+            "titleSrn": "S251_Other_1",
+            "style": 1,
+            "valueSrnArray": [
+              "S251_Other_1_1",
+              "S251_Other_1_2",
+              "S251_Other_1_3",
+              "S251_Other_1_4"
+            ]
+          },
+          {
+            "titleSrn": "S251_Other_2",
+            "style": 4
+          },
+          {
+            "titleSrn": "S251_Other_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S251_Other_4",
+            "style": 1,
+            "valueSrnArray": [
+              "S251_Other_1_1",
+              "S251_Other_1_2",
+              "S251_Other_1_3",
+              "S251_Other_1_4"
+            ]
+          },
+          {
+            "titleSrn": "S251_Other_5",
+            "style": 4
+          },
+          {
+            "titleSrn": "S251_Other_6",
+            "style": 1,
+            "valueSrnArray": [
+              "S314_setting1_3_1",
+              "S314_setting1_3_2",
+              "S314_setting1_3_4",
+              "S314_setting1_3_5"
+            ]
+          },
+          {
+            "titleSrn": "S251_Other_7",
+            "style": 1,
+            "valueSrnArray": [
+              "S251_Other_7_1",
+              "S251_Other_7_2",
+              "S251_Other_7_3"
+            ]
+          },
+          {
+            "titleSrn": "S251_Other_8",
+            "style": 4
+          }
+        ]
+      }
+    ]
+  }
+}

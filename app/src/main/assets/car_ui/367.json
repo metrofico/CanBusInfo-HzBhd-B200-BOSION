@@ -1,0 +1,67 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "air",
+      "original_car_device"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "auto",
+          "dual",
+          "max_front"
+        ],
+        [],
+        [],
+        [
+          "ac",
+          "rear_defog",
+          "in_out_auto_cycle",
+          "front_defog"
+        ]
+      ],
+      "isAllBtnCanClick": false,
+      "disableBtnArray": [],
+      "isShowCenterWheel": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": false,
+      "isCanSetRightTemp": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+  "originalCarDevicePageUiSet": {
+    "isHavePlayTimeSeekBar": false,
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": []
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S367_Car_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S367_Car_0",
+            "valueSrnArray": [
+              "set_default",
+              "S367_Car_1",
+              "S367_Car_2"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

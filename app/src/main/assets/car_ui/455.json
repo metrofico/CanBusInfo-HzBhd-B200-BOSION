@@ -1,0 +1,47 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","tire_info"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","auto"],
+        [], [],
+        ["in_out_cycle","rear_defog"]
+      ],
+      "disableBtnArray": ["ac","auto","in_out_cycle","rear_defog"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowPanoramic": false
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  }
+}

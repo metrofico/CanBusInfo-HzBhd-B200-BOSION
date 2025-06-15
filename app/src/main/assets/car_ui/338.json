@@ -1,0 +1,84 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting"
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_327_front_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_right_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_left_camera"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_327_rear_camera"
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "in_out_cycle",
+          "ac",
+          "auto"
+        ],
+        [
+          "front_defog"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "econ",
+          "dual"
+        ]
+      ],
+      "disableBtnArray": [
+        "dual",
+        "econ",
+        "front_defog"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": false,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": false
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_338_air_condition_setting",
+        "itemList": [
+          {
+            "titleSrn": "_338_auto_manual_air",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_manual",
+              "_334_auto"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  }
+}

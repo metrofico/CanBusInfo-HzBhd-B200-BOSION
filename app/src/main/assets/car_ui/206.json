@@ -1,0 +1,509 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data","tire_info","warning","mqb_hybrid"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["rear_lock","clean_air","steering_wheel_heating","seat_steering_wheel_synchronization","auto_wind_mode"],
+        ["auto","sync"],["power"],
+        ["auto_wind_lv","ac_max","ac","in_out_cycle","front_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "disableBtnArray": ["auto_wind_mode","front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowCenterWheel": false,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isShowSeatCold": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetSeatCold": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        [
+          "rear_auto",
+          "rear_power"
+        ]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetSeatHeat": true,
+      "isShowSeatHeat": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "seatDriveProfile_select",
+        "itemList": [
+          {"titleSrn": "seatDriveProfile","style": 1,"valueSrnArray": ["comfortable",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco",
+            "ford_lndividual",
+            "ford_snow",
+            "ford_offoad",
+            "offoadlndividual"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "lndividual_setting",
+        "itemList": [
+          {"titleSrn": "vm_golf7_drive_mode_dcc","style": 1,"valueSrnArray": ["comfortable",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "vm_golf7_vehicle_setup_light_dynamic_light_follow","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "engine","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "vm_golf7_drive_program","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "climate","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_eco",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "steering","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "reset","style": 3,"confirmTis": "confirm_reset_alert_dialog"}
+        ]
+      },
+      {
+        "titleSrn": "offoadlndividual_setting",
+        "itemList": [
+          {"titleSrn": "drive","style": 1,"valueSrnArray": [
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "ford_offoad"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "steering","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "vm_golf7_drive_program","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "vm_golf7_vehicle_setup_light_dynamic_light_follow","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "airCondtitoning","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_drive_program_eco",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "hillDescentAssist","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hillHoidAssist","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "parkingAssist","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "fourWheelDrive","style": 1,"valueSrnArray": ["ford_normalo", "ford_offoad"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "reset","style": 3,"confirmTis": "confirm_reset_alert_dialog"}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_esc_system",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_esc_system","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_esc_system_ars_off",
+            "vm_golf7_vehicle_setup_esc_system_activated",
+            "vm_golf7_vehicle_setup_esc_system_esc_sport_mode"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_tyres",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_tyres_tpms_set","style": 3,"confirmTis": "vm_golf7_vehicle_setup_tyres_dialog_content"},
+          {"titleSrn": "vm_golf7_vehicle_setup_tyres_warning_at","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_tyres_speed_warning","style": 2,"max": 240,"min": 30,"progress": 0,"value": "0","unit": "vm_golf7_vehicle_setup_units_speed_kmh"},
+          {"titleSrn": "vm_golf7_vehicle_setup_direct_tpms","style": 1,"valueSrnArray": ["standard","drive_assist_5_3", "fully_loaded"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_driver_assitance",
+        "itemList": [
+          {"titleSrn": "vm_golf7_drive_program","style": 1,"valueSrnArray": [
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_eco",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_normal",
+            "vm_golf7_vehicle_setup_driver_assistance_drive_program_sport"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_driver_assistance_last_distance_selected","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_drive_program_distance","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_driver_assistance_distance_very_close",
+            "vm_golf7_vehicle_setup_driver_assistance_distance_close",
+            "vm_golf7_vehicle_setup_driver_assistance_distance_medium",
+            "vm_golf7_vehicle_setup_driver_assistance_distance_far",
+            "vm_golf7_vehicle_setup_driver_assistance_distance_very_far"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_front_access_active","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_front_access_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_front_access_distance_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_front_warning","style": 1,"valueSrnArray": ["close",
+            "vm_golf7_vehicle_setup_light_switch_on_time_early",
+            "vm_golf7_vehicle_setup_light_switch_on_time_medium",
+            "vm_golf7_vehicle_setup_light_switch_on_time_late"
+            ],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_driver_assistance_adaptive","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_traffice_sign_recognition","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf_driver_alert_system","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "chery_blind_area_monitoring_title","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_proactive_occupation_protection","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_driver_assistance_lane_assisit","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_parking_and_manoeuvring",
+        "itemList": [
+          {"titleSrn": "vm_golf_parking","style": 1,"valueSrnArray": ["energy_no_display", "reversing_storage_is_valid","roadside_parking_is_effective"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_parking_active_auto","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "reversing_radar_sound","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "driving_out_of_the_parking_space","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "parking_brake_function","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_parking_front_volume","style": 2,"max": 9,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_parking_front_tone_setting","style": 2,"max": 9,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_parking_rear_volume","style": 2,"max": 9,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_parking_rear_tone_setting","style": 2,"max": 9,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "off_road_btn","style": 0,"value": "null_value"},
+          {"titleSrn": "off_road_img","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "roadside_parking_is_open","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "Lights",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_light_switch_on_time","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_light_switch_on_time_early",
+            "vm_golf7_vehicle_setup_light_switch_on_time_medium",
+            "vm_golf7_vehicle_setup_light_switch_on_time_late"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_travel_mode","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_light_travel_mode_left_traffic",
+            "vm_golf7_vehicle_setup_light_travel_mode_right_traffic"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_auto_control","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_lane_change_flash","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_dynamic_light_assist","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_dynamic_light_follow","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "chery_daytime_traffic_light_title","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_coming_home","style": 2,"max": 30,"progress": 0,"value": "0","unit": "unit_second"},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_leaving_home","style": 2,"max": 30,"progress": 0,"value": "0","unit": "unit_second"},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_ins_swi_lighting","style": 2,"max": 100,"progress": 0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_door_ambient_light","style": 2,"max": 100,"progress": 0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "vm_golf7_vehicle_setup_light_footwell_light","style": 2,"max": 100,"progress": 0,"value": "0","unit": "unit_percent"}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_background_lighting",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_environment_color","style": 1,"valueSrnArray": ["close",
+            "vm_golf7_vehicle_setup_evironment_white",
+            "koleo_dashboard_color_orange",
+            "vm_golf7_vehicle_setup_evironment_blue",
+            "vm_golf7_vehicle_setup_evironment_dark_ash",
+            "vm_golf7_vehicle_setup_evironment_navy_blue",
+            "vm_golf7_vehicle_setup_evironment_deep_sky_blue",
+            "vm_golf7_vehicle_setup_evironment_dark_emerald",
+            "vm_golf7_vehicle_setup_evironment_chatter_green",
+            "vm_golf7_vehicle_setup_evironment_pure_yellow",
+            "vm_golf7_vehicle_setup_evironment_pure_red",
+            "vm_golf7_vehicle_setup_evironment_fuchsia",
+            "vm_golf7_vehicle_setup_evironment_medium_blue",
+            "vm_golf7_vehicle_setup_evironment_paint_black",
+            "vm_golf7_vehicle_setup_evironment_num11",
+            "vm_golf7_vehicle_setup_evironment_num12",
+            "vm_golf7_vehicle_setup_evironment_num13",
+            "vm_golf7_vehicle_setup_evironment_num14",
+            "vm_golf7_vehicle_setup_evironment_num15",
+            "vm_golf7_vehicle_setup_evironment_num16",
+            "vm_golf7_vehicle_setup_evironment_num17",
+            "vm_golf7_vehicle_setup_evironment_num18",
+            "vm_golf7_vehicle_setup_evironment_num19",
+            "vm_golf7_vehicle_setup_evironment_num20",
+            "vm_golf7_vehicle_setup_evironment_num21",
+            "vm_golf7_vehicle_setup_evironment_num22",
+            "vm_golf7_vehicle_setup_evironment_num23",
+            "vm_golf7_vehicle_setup_evironment_num24",
+            "vm_golf7_vehicle_setup_evironment_num25",
+            "vm_golf7_vehicle_setup_evironment_num26",
+            "vm_golf7_vehicle_setup_evironment_num27",
+            "vm_golf7_vehicle_setup_evironment_num28",
+            "vm_golf7_vehicle_setup_evironment_num29",
+            "vm_golf7_vehicle_setup_evironment_num30"
+          ],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lane_assist_system_brightness","style": 1,"valueSrnArray": [
+            "num1",
+            "num2",
+            "num3",
+            "num4",
+            "num5"
+           ],"selectIndex": 0,"value": ""},
+          {"titleSrn": "headlight_illumination_distance_adjustment","style": 1,"valueSrnArray": ["close",
+            "num1",
+            "num2",
+            "num3",
+            "num4",
+            "num5",
+            "num6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_car_roof_lighting","style": 2,"max": 100,"progress": 0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "vm_golf7_vehicle_setup_front_area_lighting","style": 2,"max": 100,"progress": 0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "vm_golf7_vehicle_setup_total_lighting","style": 2,"max": 100,"progress": 0,"value": "0","unit": "unit_percent"}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_mirror_and_wipers",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_mirror_wipers_synchronous","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mirror_wipers_lower","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mirror_wipers_fold_away","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mirror_wipers_auto_wiping","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mirror_wipers_rear_window_wiping","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_opening_and_closing",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_open_close_conv_opening","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_open_close_conv_opening_all_windows",
+            "vm_golf7_vehicle_setup_open_close_conv_opening_driver_window","vm_golf7_vehicle_setup_open_close_conv_opening_off"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_open_close_door_unlocking","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_open_close_door_unlocking_all_doors",
+            "vm_golf7_vehicle_setup_open_close_door_unlocking_single_door",
+            "vm_golf7_vehicle_setup_open_close_door_unlocking_vehicle_side"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_open_close_auto_locking","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "seat_remote_key_memory_matching","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "inductive_trunk_lid","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "door_lock_control_sound_confirmation","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_multifuction_display",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_current_consumption","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_con_consumers","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_eco_tips","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_travelling_time","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_distance_travelled","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_speed","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_digital_speed_display","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_speed_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_oil_temperature","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_reset_since_start","style": 3,"confirmTis": "vm_golf7_vehicle_setup_mfd_reset_dialog_content"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_reset_long_term","style": 3,"confirmTis": "vm_golf7_vehicle_setup_mfd_reset_dialog_content"}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_vehicle_setup_unit",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_units_distance","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_distance_mi_hw","vm_golf7_vehicle_setup_units_distance_km"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_units_speed","style": 1,"valueSrnArray": ["unit_mh","unit_kmh"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_units_temperature","style": 1,"valueSrnArray": ["unit_f","unit_degc"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_units_volume","style": 1,"valueSrnArray": ["unit_l","unit_gal_us","unit_gal_uk"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_units_consumption","style": 1,"valueSrnArray": ["unit_l_100_km","unit_kml","unit_mpg_us","unit_mpg_uk"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_power_consumption","style": 1,"valueSrnArray": ["unit_kWh_100km","unit_km_kwh"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_units_pressure","style": 1,"valueSrnArray": ["unit_kpa","unit_bar","unit_psi"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "chery_restore_default_settings_title",
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_factory_all_set","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "vm_golf7_vehicle_setup_driver_assitance","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "vm_golf7_vehicle_setup_parking_and_manoeuvring","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "Lights","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mirror_and_wipers","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "vm_golf7_vehicle_setup_opening_and_closing","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "vm_golf7_vehicle_setup_multifuction_display","style": 3,"confirmTis": "confirm_reset_alert_dialog"}
+        ]
+      },
+      {
+        "titleSrn": "airSetting",
+        "itemList": [
+          {"titleSrn": "vm_golf7_automatic_windscreen_heating","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_automatic_air_recirculation","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_wind_level_mode","style": 1,"valueSrnArray": ["low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "preliminary_model","style": 1,"valueSrnArray": ["mqb_air_auto","mqb_air_ac_max","mqb_air_max_front","manual"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "door_windows_open_state","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "reverse_video",
+        "itemList": [
+          {"titleSrn": "vm_golf7_reverse_video_birightness","style": 2,"max": 70,"min":30,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "vm_golf7_reverse_video_contrast","style": 2,"max": 70,"min":30,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "vm_golf7_reverse_video_saturation","style": 2,"max": 70,"min":30,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "camry_power_flow",
+        "itemList": [
+          {"titleSrn": "hybrid_driving_mode","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_hybrid_emode",
+            "camry_power_flow",
+            "battery_maintenance",
+            "battery_charging"
+            ],"selectIndex": 0,"value": ""}]
+      },
+      {
+        "titleSrn": "vm_golf7_conv_consumers",
+        "itemList": [
+          {"titleSrn": "load_fuel_consumption","style": 0,"value": "null_value"},
+          {"titleSrn": "load_fuel_consumption_percentage","style": 0,"value": "null_value","unit": "unit_percent"},
+          {"titleSrn": "consumption_unit","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "vm_golf7_language_setup",
+        "itemList": [
+          {"titleSrn": "vm_golf7_language_setup","style": 1,"valueSrnArray": [
+            "language_en",
+            "language_cn",
+            "language_de",
+            "language_it",
+            "language_fr",
+            "language_sv",
+            "language_es",
+            "language_ne",
+            "language_po",
+            "language_ja",
+            "language_sp",
+            "language_su",
+            "language_da",
+            "language_ru",
+            "language_alb",
+            "language_th"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "electric_drive_charging_settings",
+        "itemList": [
+          {"titleSrn": "maximum_charging_current","style": 1,"valueSrnArray": ["a5","a10","a13","max"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vehicle_tem_in","style": 1,"valueSrnArray": ["temp_low",
+            "temp_16",
+            "temp_17",
+            "temp_18",
+            "temp_19",
+            "temp_20",
+            "temp_21",
+            "temp_22",
+            "temp_23",
+            "temp_24",
+            "temp_25",
+            "temp_26",
+            "temp_27",
+            "temp_28",
+            "temp_29",
+            "temp_high"],",selectIndex": 0,"value": ""},
+          {"titleSrn": "battery_charge_lower_limit","style": 2,"max": 100,"progress": 0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "air_conditioning_is_powered_by_battery","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_206_new_function","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_206_new_function3",
+        "itemList": [
+          {"titleSrn": "_206_new_function4","style": 0 }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"vm_golf7_driving_data_distance_since_start",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_Conv_consumers_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "null_value"},
+          {"titleSrn": "driven_distance","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_travelling_time","defaultValueSrn": "null_value"},
+          {"titleSrn": "average_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "power_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "recharge_mileage","defaultValueSrn": "null_value"}
+        ]
+      },
+      {"headTitleSrn":"vm_golf7_driving_data_distance_Since_refueling",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_Conv_consumers_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "null_value"},
+          {"titleSrn": "driven_distance","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_travelling_time","defaultValueSrn": "null_value"},
+          {"titleSrn": "average_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "power_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "recharge_mileage","defaultValueSrn": "null_value"}
+        ]
+      },
+      {"headTitleSrn":"vm_golf7_driving_data_distance_long_term",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_Conv_consumers_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "null_value"},
+          {"titleSrn": "driven_distance","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_travelling_time","defaultValueSrn": "null_value"},
+          {"titleSrn": "average_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "power_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "recharge_mileage","defaultValueSrn": "null_value"}
+        ]
+      },
+      {"headTitleSrn":"driving_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_current_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "battery_voltage","defaultValueSrn": "null_value"},
+          {"titleSrn": "remaining_oil","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_oil_temperature","defaultValueSrn": "null_value"},
+          {"titleSrn": "water_temperature","defaultValueSrn": "null_value"},
+          {"titleSrn": "light_status_2","defaultValueSrn": "null_value"},
+          {"titleSrn": "light_status_1","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_service_vehicle_no","defaultValueSrn": "null_value"}
+
+        ]
+      },
+      {"headTitleSrn":"vm_golf7_vehicle_setup_service",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "distance_unit","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_service_volkswagen_inspection_days","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_service_volkswagen_inspection_distance","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_service_oil_change_service_days","defaultValueSrn": "null_value"},
+          {"titleSrn": "vm_golf7_vehicle_setup_service_oil_change_service_distance","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"type_status","value":"set_default"},{"title":"type_refer","value":"set_default"},{"title": "type_actual","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"type_status","value":"set_default"},{"title":"type_refer","value":"set_default"},{"title": "type_actual","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"type_status","value":"set_default"},{"title":"type_refer","value":"set_default"},{"title": "type_actual","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"type_status","value":"set_default"},{"title":"type_refer","value":"set_default"},{"title": "type_actual","value":"set_default"}]}
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isHaveLeftRightRadar":true,
+    "isShowPanoramic":true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "panoramic_parking_radar"},
+      {"style": 0,"titleSrn": "honda_set_angle_wide"},
+      {"style": 0,"titleSrn": "standard"},
+      {"style": 0,"titleSrn": "overlook"},
+      {"style": 0,"titleSrn": "sidewise"}
+    ]
+  }
+}

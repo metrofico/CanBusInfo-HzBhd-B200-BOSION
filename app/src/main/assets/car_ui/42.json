@@ -1,0 +1,34 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting", "original_car_device"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "compass",
+        "itemList": [
+          {"titleSrn": "compass_calibration_status","style": 0,"value": "null_value"},
+          {"titleSrn": "compass_zoom","style": 2,"max": 15,"min": 1,"progress": 1,"value": "1","unit": "null_value"},
+          {"titleSrn": "magnetic_field_angle","style": 0,"value": "null_value", "unit": "unit_degree"},
+          {"titleSrn": "compass_run_calibration","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    [],
+    "rowBottomBtnAction":
+    ["left","play","stop","right"],
+    "items": [
+      {"imageId": "music_file", "titleSrn": "current_file", "value": ""},
+      {"imageId": "music_list", "titleSrn": "total_file", "value": ""},
+      {"imageId": "music_list", "titleSrn": "current_song_list", "value": ""}
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true
+  }
+}

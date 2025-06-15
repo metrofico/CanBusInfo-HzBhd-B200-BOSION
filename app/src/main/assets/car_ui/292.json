@@ -1,0 +1,112 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting","on_start"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","dual","eco","ac_auto"],
+        ["in_out_cycle"],
+        ["aqs"],
+        ["rear_defog","ac","max_front","auto_wind_mode"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "in_out_cycle", "aqs"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowSeatHeat": true,
+      "isAllBtnCanClick": false,
+      "isCanSetLeftTemp": false,
+      "isCanSetRightTemp": false,
+      "windMaxLevel": 6,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_272_car_status_ill","defaultValueSrn": "set_default"},
+          {"titleSrn": "acc","defaultValueSrn": "set_default"},
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "window_right_front","defaultValueSrn": "set_default"},
+          {"titleSrn": "window_left_front","defaultValueSrn": "set_default"},
+          {"titleSrn": "window_right_rear","defaultValueSrn": "set_default"},
+          {"titleSrn": "window_left_rear","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "battery_voltage","defaultValueSrn": "set_default"},
+          {"titleSrn": "vehicle_tem_out","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_total_trip","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_291_foot_brake","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_body_center_control_1",
+        "itemList": [
+          {"titleSrn": "find_car_light_function","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lock_big_light_delay_set","style": 1,"valueSrnArray": ["close","second_30","minute_1","minute_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "prevent_open_door_auto_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "start_auto_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "stop_auto_unlock","style": 1,"valueSrnArray": ["close","driver_door","all_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "delay_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_control_unlock_light_feedback","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_control_unlock_light_or_horn_feedback","style": 1,"valueSrnArray": ["only_light","light_and_horn","only_horn","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_unlock_set","style": 1,"valueSrnArray": ["driver_door","all_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_292_drive_data1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_start_vehicle","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_body_center_control_2",
+        "itemList": [
+          {"titleSrn": "close_unlock_set","style": 1,"valueSrnArray": ["all_door","only_driver_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "key_forgot_remain","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "personalization_by_driver","style": 1,"valueSrnArray": ["english_off","english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_relock_doors","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_wiper","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "flank_blind_zone_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "leave_car_auto_lock","style": 1,"valueSrnArray": ["close","open","enable_when_the_horn_is_chirped"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "left_or_right_hand_traffic","style": 1,"valueSrnArray": ["left_hand_traffic","right_hand_traffic"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "adaptive_forward_lighting","style": 1,"valueSrnArray": ["corner_and_bend_lighting","intelligent_distribution"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_rear_view_mirror_fold","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "reverse_rear_view_mirror_help","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "driver_seat_auto_return","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "driver_seat_auto_identify","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "ramp_start_assist","style": 1,"valueSrnArray": ["advanced","standard"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_window_control","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_status_notify","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_prevent_ready","style": 1,"valueSrnArray": ["close","alarm","alarm_and_stop_car"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "other_set",
+        "itemList": [
+          {"titleSrn": "language_status","style": 1,"valueSrnArray": ["language_status_0","language_status_1","language_status_2","language_status_3","language_status_4","language_status_5","language_status_6","language_status_7","language_status_8","language_status_9","language_status_10","language_status_11","language_status_12","language_status_13","language_status_14","language_status_15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "warning_volume_set","style": 2,"max": 15,"min": 0,"progress": 1,"value": "1","unit": "null_value"},
+          {"titleSrn": "_143_0x76_d0_b6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "onStartPageUiSet": {
+    "btnAction": ["phone"]
+  }
+}

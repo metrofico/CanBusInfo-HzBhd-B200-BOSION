@@ -1,0 +1,102 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {"titleSrn": "_55_0x65_data1_bit0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x65_data1_bit21","style": 1,"valueSrnArray": ["thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit32","style": 1,"valueSrnArray": ["zero_second","fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit10","style": 1,"valueSrnArray": ["fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit20","style": 2,"max": 5,"min": -5,"progress": 1,"value": "0","unit": "null_value"},
+          {"titleSrn": "_209_32_1_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit65","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1","_55_0x69_data1_bit65_item2","_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x69_data1_bit43","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1","_55_0x69_data1_bit65_item2","_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x6E_0x05","style": 3,"confirmTis": "vm_golf7_vehicle_setup_mfd_reset_dialog_content"},
+          {"titleSrn": "_59_0x1b_item1","style": 3,"confirmTis": "_59_0x1b_zero_cleared"},
+          {"titleSrn": "_59_0x1b_item2","style": 3,"confirmTis": "_59_0x1b_zero_cleared"}
+        ]
+      },
+      {
+        "titleSrn": "_55_0xE8_title",
+        "itemList": [
+          {"titleSrn": "brightness","style": 2,"max": 255,"min": 0,"progress": 1,"value": "0","unit": "null_value"},
+          {"titleSrn": "contrast","style": 2,"max": 5,"min": -5,"progress": 1,"value": "0","unit": "null_value"},
+          {"titleSrn": "saturation","style": 2,"max": 5,"min": -5,"progress": 1,"value": "0","unit": "null_value"},
+          {"titleSrn": "_59_0xe8_item1","style": 1,"valueSrnArray": ["invalid","effective"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0xE8_data2","style": 3,"confirmTis": "_55_0xE8_data2"}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x4B",
+        "itemList": [
+          {"titleSrn": "compass_run_calibration", "style": 0, "value": ""},
+          {"titleSrn": "_55_0x4B_item0", "style": 0, "value": ""}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","rear_defog"],
+        [],[],
+        ["in_out_cycle","auto","sync"]
+      ],
+      "smallWindowStatusArray": ["ac", "sync", "auto", "in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data12","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_a","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data56","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"},
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "trip_a",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_55_0x17_first_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_second_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_third_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "honda_set_angle_wide"},
+      {"style": 0,"titleSrn": "standard"},
+      {"style": 0,"titleSrn": "overlook"}
+    ]
+  }
+}

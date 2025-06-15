@@ -1,0 +1,355 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "drive_data",
+      "tire_info",
+      "warning"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "blow_head",
+          "blow_head_foot",
+          "blow_foot",
+          "blow_window_foot",
+          "power",
+          "ac",
+          "ptc_heating",
+          "cycle"
+        ],
+        [],
+        [],
+        []
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "dual",
+        "auto",
+        "in_out_cycle"
+      ]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_304_atoms_lamp_setup",
+        "itemList": [
+          {
+            "titleSrn": "_304_atoms_lamp_r",
+            "style": 2,
+            "max": 255,
+            "min": 0,
+            "progress": 0,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_304_atoms_lamp_g",
+            "style": 2,
+            "max": 255,
+            "min": 0,
+            "progress": 0,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_304_atoms_lamp_b",
+            "style": 2,
+            "max": 255,
+            "min": 0,
+            "progress": 0,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_250_ambient_light_brightness",
+            "style": 2,
+            "max": 255,
+            "min": 0,
+            "progress": 0,
+            "value": "0",
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_304_atoms_lamp_control",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_304_radar_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_304_front_left_sensor",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_front_right_sensor",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_rear_left_sensor",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_rear_left_mid_sensor",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_rear_right_mid_sensor",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_rear_right_sensor",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_pdc_system",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_alarm_frequency",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_250_car_body_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_304_position_lamp",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_high_beam",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_low_beam",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_front_fog_lamp",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_rear_fog_lamp",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_left_trun_lamp",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_right_turn_lamp",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_daytime_running_lamp",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_hazard_lamp_active",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_left_turn_lamp_fault",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_right_turn_lamp_fault",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_brake_lamp_fault",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_vhicle_power_mode",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_304_power_system_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "gear_position",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_powertrain_ready",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_vehicle_system",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_motor",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_dcdc_charge",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_motor_drive",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_vacuum",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_304_high_volt_battery_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_304_high_volt_battery_status",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_high_volt_battery_isolation",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_charger_status",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_charging_status",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_real_soc",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_304_roof_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_304_roof_init",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_roof_status",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_roof_antipinch",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_roof_position",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_304_other_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_304_sas_calibrated",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_avm_system",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_304_airbag_status",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowCusPanoramicView": true,
+    "isShowTrack": true,
+    "isCusVideoSize": true,
+    "cusVideoStartX": 440,
+    "cusVideoStartY": 100,
+    "cusVideoWidth": 584,
+    "cusVideoHeight": 342
+  },
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {
+        "whichTire": 0,
+        "list": [
+          {
+            "title": "null_value",
+            "value": "null_value"
+          },
+          {
+            "title": "null_value",
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "whichTire": 1,
+        "list": [
+          {
+            "title": "null_value",
+            "value": "null_value"
+          },
+          {
+            "title": "null_value",
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "whichTire": 2,
+        "list": [
+          {
+            "title": "null_value",
+            "value": "null_value"
+          },
+          {
+            "title": "null_value",
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "whichTire": 3,
+        "list": [
+          {
+            "title": "null_value",
+            "value": "null_value"
+          },
+          {
+            "title": "null_value",
+            "value": "null_value"
+          }
+        ]
+      }
+    ]
+  }
+}

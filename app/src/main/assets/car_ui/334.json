@@ -1,0 +1,1214 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "tire_info",
+      "drive_data",
+      "setting",
+      "original_car_device",
+      "amplifier"
+    ]
+  },
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {
+        "whichTire": 0,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 1,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 2,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 3,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_334_update_time",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_334_year", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_month", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_day", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_hour", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_minute", "defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_334_fuel_info_1",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_334_fuel_info_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_7",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_8",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_334_fuel_info_9",
+        "spanCount": 2,
+        "itemList": [
+          {
+            "titleSrn": "_334_fuel_info_10",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_11",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_12",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_13",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_14",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_15",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_16",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_17",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_18",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_19",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_20",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_21",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_22",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_23",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_fuel_info_24",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_334_i_stop_information",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_334_i_stop_operation",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_readiness",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_battery_read",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_engine_read",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_air_conditioning_read",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_prompt_character",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_on_time",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_stop_time",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_percentage",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_total_travel",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_total_time",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_334_i_stop_average",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_334_amp_state",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_334_amp_state0", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_amp_state1", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_amp_state2", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_amp_state3", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_334_amp_state4", "defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_250_swith_3d"
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_334_next_service",
+        "itemList": [
+          {
+            "titleSrn": "_334_manual_auto",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_auto",
+              "_334_manual"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_next_service_year",
+            "style": 2,
+            "max": 2118,
+            "min": 2018,
+            "value": "",
+            "unit": "null_value",
+            "enable": "false"
+          },
+          {
+            "titleSrn": "_334_next_service_month",
+            "style": 2,
+            "max": 12,
+            "min": 1,
+            "value": "",
+            "unit": "null_value",
+            "enable": "false"
+          },
+          {
+            "titleSrn": "_334_next_service_day",
+            "style": 2,
+            "max": 31,
+            "min": 1,
+            "value": "",
+            "unit": "null_value",
+            "enable": "false"
+          },
+          {
+            "titleSrn": "_334_next_service_mileage",
+            "style": 2,
+            "max": 30000,
+            "min": 400,
+            "value": 400,
+            "unit": "_334_km",
+            "enable": "false"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_hud",
+        "itemList": [
+          {
+            "titleSrn": "_334_hud_height",
+            "style": 2,
+            "max": 15,
+            "min": -15,
+            "value": -15,
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_334_hud_brightness",
+            "style": 2,
+            "max": 20,
+            "min": -20,
+            "value": -20,
+            "unit": "null_value",
+            "enable": "false"
+          },
+          {
+            "titleSrn": "_334_hud_calibration",
+            "style": 2,
+            "max": 2,
+            "min": -2,
+            "value": -2,
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_334_hud_brightness_control",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_auto",
+              "_334_manual"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_hud_rotate",
+            "style": 2,
+            "max": 3,
+            "min": -3,
+            "value": -3,
+            "unit": "null_value"
+          },
+          {
+            "titleSrn": "_334_hud_active_display",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_hud_tilt",
+            "style": 2,
+            "max": 5,
+            "min": -5,
+            "value": -5,
+            "unit": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_door_lock",
+        "itemList": [
+          {
+            "titleSrn": "_334_auto_lock",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_lock_driving",
+              "_334_lock_driving_unlock_flameout",
+              "_334_lock_out_of_park",
+              "_334_lock_out_of_park_unlock_park"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_auto_re_lock",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_30_sec",
+              "_334_60_sec",
+              "_334_90_sec"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_unlock_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_unlock_once_all",
+              "_334_unlock_twice_all"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_volume_low",
+              "_334_volume_medium",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lock_leave_car",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_tail_door",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_lock_unlock",
+              "_334_only_unlock"
+            ],
+            "selectIndex": 1,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_turn",
+        "itemList": [
+          {
+            "titleSrn": "_334_turn_signal",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_turn_signal_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_volume_low",
+              "_334_volume_medium",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_lighting",
+        "itemList": [
+          {
+            "titleSrn": "_334_1_lights_off_automatically",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_10_minute",
+              "_334_30_minute",
+              "_334_60_minute"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_2_lights_off_automatically",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_7_5_sec",
+              "_334_15_sec",
+              "_334_30_sec",
+              "_334_60_sec"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lights_reminder",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_volume_low",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_adaptive_headlamp",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_headlamp_off_timer",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_30_sec",
+              "_334_60_sec",
+              "_334_90_sec",
+              "_334_120_sec"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_headlamp_on_auto",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_high_dark",
+              "_334_medium_dark",
+              "_334_medium",
+              "_334_medium_brightness",
+              "_334_high_brightness"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_other_1",
+        "itemList": [
+          {
+            "titleSrn": "_334_rain_sensor",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_language_state",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_english",
+              "_334_chinese"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_blind_area_prompt_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_volume_low",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_rear_window_demister",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_automatic_off",
+              "_334_continuity"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_automatic_lock_time",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_0_sec",
+              "_334_30_sec",
+              "_334_60_sec",
+              "_334_90_sec"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_other_2",
+        "itemList": [
+          {
+            "titleSrn": "_334_synchronized_1",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_rear_vision_mirror",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_notification_warning",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_volume_low",
+              "_334_volume_medium",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_Instrument_custom_display",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_type_1",
+              "_334_type_2",
+              "_334_close"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_other_3",
+        "itemList": [
+          {
+            "titleSrn": "_334_leaving_home_light",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_coming_home_light",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_30_sec",
+              "_334_60_sec",
+              "_334_90_sec",
+              "_334_120_sec"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_distance_unit",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_kilometre",
+              "_334_mile"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_temperature_unit",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_centigrade",
+              "_334_fahrenheit"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_high_beam_control",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_day_light",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_environmental_lighting_title",
+        "itemList": [
+          {
+            "titleSrn": "_334_environmental_lighting_item",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_environmental_lighting_dim",
+              "_334_environmental_lighting_medium",
+              "_334_environmental_lighting_bright"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_security_setting_status_info",
+        "itemList": [
+          {
+            "titleSrn": "_334_smart_city_brake",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_rear_vehicle_monitoring_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_volume_low",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_smart_city_brake_distance",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_far_away",
+              "_334_medium",
+              "_334_closer"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_smart_city_brake_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_volume_low",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_distance_recognition_display",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_distance_recognition_distance",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_far_away",
+              "_334_medium",
+              "_334_closer"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_sbs_display",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_sbs_distance",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_far_away",
+              "_334_medium",
+              "_334_closer"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_sbs_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_volume_low",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_blind_spot_monitoring",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_warning_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_volume_low",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lane_departure_warning_system_time",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_auto_adjustment",
+              "_334_early",
+              "_334_medium",
+              "_334_delay"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lane_departure_warning_system_warning",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_often",
+              "_334_medium",
+              "_334_seldom"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lane_departure_warning_system_voice",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_beep",
+              "_334_rumble",
+              "_334_lane_departure_warning_system_is_shock"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lane_departure_warning_system_rumble",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_volume_low",
+              "_334_rumble_beep_medium",
+              "_334_volume_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_speed_limit_display",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_speed_limit_warning",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_speed_limit_warning_vision",
+              "_334_speed_limit_warning_audio_vision"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_warning_threshold",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_0",
+              "_334_5",
+              "_334_10"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lane_departure_warning_system_intervene",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_lane_departure_warning_system",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_cruise_operation_tone",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_parking_sensor_display_guide",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_rear_parking_alarm_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_volume_high",
+              "_334_volume_medium",
+              "_334_volume_low"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_pedal_misuse_alarm",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_mazda_radar",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_rear_intersection_traffic_alert",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_bind_spot_monitoring",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_close",
+              "_334_vision",
+              "_334_vision_hearing"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_alarm_timing",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_advance",
+              "_334_standard",
+              "_334_late"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_alarm_type",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_hearing",
+              "_334_steering_vibration",
+              "_334_hearing_steering_vibration"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_auto_display_view",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_dynamic_route",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_front_camera_view",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_security_alert_lane_departure_warning",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_security_alert_intersection_traffic_ahead",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_front_parking_sensor_alarm_volume",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_volume_high",
+              "_334_volume_medium",
+              "_334_volume_low",
+              "_334_off"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_accident_avoidance_alarm_timing",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_advance",
+              "_334_standard",
+              "_334_late"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_active_safety_assistance",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_334_maintenance_info",
+        "itemList": [
+          {
+            "titleSrn": "_334_scheduled_maintenance_switch",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_scheduled_maintenance_time",
+            "style": 2,
+            "max": 36,
+            "min": 1,
+            "value": 1,
+            "unit": "_334_m",
+            "enable": "false"
+          },
+          {
+            "titleSrn": "_334_scheduled_maintenance_distance",
+            "style": 2,
+            "max": 60000,
+            "min": 1000,
+            "value": 1000,
+            "unit": "_334_km",
+            "enable": "false",
+            "progress": 2
+          },
+          {
+            "titleSrn": "_334_tire_rotation_switch",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_tire_rotation_distance",
+            "style": 2,
+            "max": 60000,
+            "min": 1000,
+            "value": 1000,
+            "unit": "_334_km",
+            "enable": "false",
+            "progress": 0
+          },
+          {
+            "titleSrn": "_334_oil_change_switch",
+            "style": 1,
+            "valueSrnArray": [
+              "_334_off",
+              "_334_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_334_oil_change_distance",
+            "style": 2,
+            "max": 60000,
+            "min": 1000,
+            "value": 1000,
+            "progress": 0,
+            "unit": "_334_km",
+            "enable": "false"
+          }
+        ]
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": []
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 12,
+    "bandRange": 6,
+    "isHaveBandMiddle": false,
+    "balanceRange": 16,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[],
+    "isHaveCustom2": false,
+    "custom2Title": "_334_auto_amplifier",
+    "seekBarMaxCustom2": 7
+  }
+}

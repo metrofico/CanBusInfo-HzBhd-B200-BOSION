@@ -1,0 +1,47 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "drive_data",
+      "setting"
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D314_Speed_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D314_Speed_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_340_cars_setting",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "_340_automatic_folding"
+          }
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

@@ -1,0 +1,134 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "drive_data", "setting","amplifier"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "in_out_cycle","dual"],
+        ["front_defog"], ["rear_defog"],
+        [ "power", "auto"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2"],
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_auto","rear_power"]
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isCanSetTemp": true,
+      "isShowRightWheel": false,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetRightTemp": false,
+      "isShowCenterWheel": true,
+      "isCanSetCenterTemp": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2"],
+      "isShowLeftWheel": false,
+      "isCanSetLeftTemp": false
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_181_driver_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_181_driver_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_181_driver_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_181_driver_4","defaultValueSrn": "set_default"},
+          {"titleSrn":"_143_setting_16" ,"defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_337_drive_car_info_tow",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_337_drive_car_info1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_337_drive_car_info2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_337_drive_car_info3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_337_drive_car_info4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_337_drive_car_info5","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_181_panoramic",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_181_panoramic","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_181_set_2",
+        "itemList": [
+          {"titleSrn": "_337_setting_0","style": 1,"valueSrnArray": ["_337_setting_time_1","_337_setting_time_2","_337_setting_time_3","_337_setting_time_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_1","style": 1,"valueSrnArray": ["_337_setting_time_4","_337_setting_time_5","_337_setting_time_6","_337_setting_time_7"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_2","style": 1,"valueSrnArray": ["_337_setting_time_8","_337_setting_time_9","_337_setting_time_10"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_4","style": 1,"valueSrnArray": ["_337_setting_4_0","_337_setting_4_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_6","style": 1,"valueSrnArray": ["_337_setting_6_0","_337_setting_6_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_7","style": 1,"valueSrnArray": ["_337_setting_7_0","_337_setting_7_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_8","style": 1,"valueSrnArray": ["_337_setting_8_0","_337_setting_8_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_9","style": 1,"valueSrnArray": ["_337_setting_6_0","_337_setting_6_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_10","style": 1,"valueSrnArray": ["_337_setting_8_0","_337_setting_time_8","_337_setting_time_9","_337_setting_time_10"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_11","style": 1,"valueSrnArray": ["_337_setting_11_0","_337_setting_11_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_12","style": 1,"valueSrnArray": ["_337_setting_8_0","_337_setting_8_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_13","style": 1,"valueSrnArray": ["_337_setting_8_0","_337_setting_8_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_14","style": 1,"valueSrnArray": ["_337_setting_8_0","_337_setting_8_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_15","style": 1,"valueSrnArray": ["_337_setting_8_0","_337_setting_8_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_16","style": 1,"valueSrnArray": ["_337_setting_8_0","_337_setting_8_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_drive_car_info5","style": 2,"max": 1000,"min": 0,"progress": 0,"value": "0","unit": "_347_setting_unit"},
+          {"titleSrn": "_337_setting_19","style": 1,"valueSrnArray": ["language_cn","language_en","_31_language4"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_181_set_1",
+        "itemList": [
+          {"titleSrn": "_181_set_1_0","style": 1,"valueSrnArray": ["close","BackLight_level1","BackLight_level2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_181_set_1_1","style":  1,"valueSrnArray": ["close","BackLight_level1","BackLight_level2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_181_set_1_2","style":  1,"valueSrnArray": ["close","BackLight_level1","BackLight_level2","BackLight_level3","BackLight_level4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_181_set_1_3","style": 1,"valueSrnArray": ["close","BackLight_level1","BackLight_level2","BackLight_level3","BackLight_level4"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 20,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  }
+}

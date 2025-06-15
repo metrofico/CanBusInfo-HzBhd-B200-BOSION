@@ -1,0 +1,48 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","power","ac_max"],
+        ["front_defog"],["rear_defog"],
+        ["dual","auto","in_out_auto_cycle"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isHaveLeftRightWindSpeed":true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_427_drive",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_427_drive1","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true
+  }
+
+}

@@ -1,0 +1,42 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [],
+        ["ac"],["power"],
+        ["in_out_cycle","rear_defog","max_front"]
+      ],
+      "smallWindowStatusArray": ["ac", "in_out_cycle", "rear_defog", "front_defog"],
+      "disableBtnArray": ["power"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set32","defaultValueSrn": "set_default"},
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

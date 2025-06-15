@@ -1,0 +1,93 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog"],
+        ["ac"],["power"],
+        ["auto","in_out_cycle"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "disableBtnArray": ["power"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set32","defaultValueSrn": "set_default"},
+          {"titleSrn": "park_help","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "driven_distance","defaultValueSrn": "set_default"},
+          {"titleSrn": "_273_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_average_speed","defaultValueSrn": "set_default"}
+        ]
+      }],
+    "isHaveBtn": true,
+    "leftPosition": 0,
+    "rightPosition": 1,
+    "buttonText": "_273_reset_fuel"
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"titleSrn": "park_help","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_273_reset_fuel","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "_107_car_language","style": 1,"valueSrnArray":
+          ["_107_lan_0",
+            "_107_lan_1",
+            "_107_lan_2",
+            "_107_lan_3",
+            "_107_lan_4",
+            "_107_lan_5",
+            "_107_lan_6",
+            "_107_lan_7",
+            "_107_lan_8",
+            "_107_lan_9",
+            "_107_lan_A",
+            "_107_lan_B",
+            "_107_lan_C",
+            "_107_lan_D",
+            "_107_lan_E",
+            "_107_lan_F",
+            "_107_lan_10",
+            "_107_lan_11",
+            "_107_lan_12",
+            "_107_lan_13",
+            "_107_lan_14",
+            "_107_lan_15",
+            "_107_lan_16"],
+            "selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"}
+    ]
+  }
+}

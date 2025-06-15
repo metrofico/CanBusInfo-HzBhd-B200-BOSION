@@ -1,0 +1,17 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"titleSrn": "gm_most_status","style": 0,"value": "null_value"},
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_status_0","language_status_1","language_status_2","language_status_3","language_status_4","language_status_5","language_status_6","language_status_7","language_status_8","language_status_9","language_status_10","language_status_11","language_status_12","language_status_13","language_status_14","language_status_15"],"selectIndex": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  }
+}

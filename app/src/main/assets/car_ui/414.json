@@ -1,0 +1,80 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","auto"],
+        ["front_defog"],["rear_defog"],
+        ["in_out_cycle","ac"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_414_drive_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_414_drive_data0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_414_drive_data1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_414_drive_data2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_414_drive_data4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_414_drive_data5","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_414_setting",
+        "itemList": [
+          {"titleSrn": "_414_setting0","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting1","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting2","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting3","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting4","style": 1,"valueSrnArray": ["_414_setting40","_414_setting41","_414_setting42","_414_setting43"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting5","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting6","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting7","style": 3,"confirmTis": "_414_setting7","value": ""},
+          {"titleSrn": "_414_setting8","style": 1,"valueSrnArray": ["_414_setting80","_414_setting81","_414_setting82","_414_setting83","_414_setting84","_414_setting85"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting9","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting10","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_414_setting11","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_414_panoramic",
+        "itemList": [
+          {"titleSrn": "_414_panoramic0","style": 1,"valueSrnArray": ["_414_off","_414_on"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_414_language",
+        "itemList": [
+          {"titleSrn": "_414_language","style": 1,"valueSrnArray": ["_414_language1","_414_language2"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_414_panoramic1"}
+    ]
+  }
+
+}

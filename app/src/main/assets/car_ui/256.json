@@ -1,0 +1,58 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","panel_key","amplifier"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog"],
+        ["in_out_cycle"],["eco"],
+        ["ac","auto"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "audio_plt","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "volume","style": 2,"max": 63,"progress": 0,"value":"0","unit": "null_value"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "min",
+      "hour",
+      "clock",
+      "panoramic"
+  ],
+  "count": 4
+},
+  "amplifierPageUiSet": {
+    "seekBarMax": 12,
+    "bandRange": 6,
+    "balanceRange": 16,
+    "lineBtnAction":[
+    ],
+    "isCanBalanceControl": false,
+    "isHaveBandMiddle": false,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0
+  }
+}

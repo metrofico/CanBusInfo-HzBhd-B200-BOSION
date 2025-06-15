@@ -1,0 +1,18 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["panel_key"]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "panel_btn_set",
+      "panel_btn_clock"
+    ],
+    "count": 2
+  },
+  "parkPageUiSet":{
+    "isShowTrack": false,
+    "isShowRadar": false,
+    "isShowRadarLocation": false,
+    "isShowCusPanoramicView": false
+  }
+}

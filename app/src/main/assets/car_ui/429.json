@@ -1,0 +1,37 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","drive_data"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["dual","ac_econ"],
+        ["front_defog"],["rear_defog"],
+        ["auto","in_out_auto_cycle"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_427_drive",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_427_drive1","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true
+  }
+}

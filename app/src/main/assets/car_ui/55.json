@@ -1,0 +1,697 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "drive_data",
+      "amplifier",
+      "hybird",
+      "original_car_device"
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "isHavePlayTimeSeekBar": false,
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": []
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S55_OriginalCarScreen_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S55_OriginalCarScreen_1",
+            "valueSrnArray": [
+              "S55_OriginalCarScreen_1_1",
+              "S55_OriginalCarScreen_1_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_2"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_OriginalCarScreen_3",
+            "valueSrnArray": [
+              "S55_OriginalCarScreen_3_1",
+              "S55_OriginalCarScreen_3_2",
+              "S55_OriginalCarScreen_3_3",
+              "S55_OriginalCarScreen_3_4"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_OriginalCarScreen_4",
+            "valueSrnArray": [
+              "S55_OriginalCarScreen_4_1",
+              "S55_OriginalCarScreen_4_2",
+              "S55_OriginalCarScreen_4_3",
+              "S55_OriginalCarScreen_4_4"
+            ]
+          },
+          {
+            "style": 0,
+            "titleSrn": "S55_OriginalCarScreen_5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_6"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_OriginalCarScreen_7",
+            "valueSrnArray": [
+              "S55_OriginalCarScreen_7_1",
+              "S55_OriginalCarScreen_7_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_8"
+          },
+          {
+            "style": 0,
+            "titleSrn": "S55_OriginalCarScreen_9"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_10"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_OriginalCarScreen_11",
+            "valueSrnArray": [
+              "S55_OriginalCarScreen_11_1",
+              "S55_OriginalCarScreen_11_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_12"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_OriginalCarScreen_13",
+            "valueSrnArray": [
+              "S55_OriginalCarScreen_13_1",
+              "S55_OriginalCarScreen_13_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_14"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_15"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_OriginalCarScreen_16"
+          },
+          {
+            "style": 0,
+            "titleSrn": "S55_OriginalCarScreen_17"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_Lighting_0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S55_Lighting_1"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_Lighting_2",
+            "valueSrnArray": [
+              "S55_Lighting_2_1",
+              "S55_Lighting_2_2",
+              "S55_Lighting_2_3",
+              "S55_Lighting_2_4",
+              "S55_Lighting_2_5"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_Lighting_3",
+            "valueSrnArray": [
+              "S55_Lighting_2_1",
+              "S55_Lighting_2_2",
+              "S55_Lighting_2_3",
+              "S55_Lighting_2_4",
+              "S55_Lighting_2_5"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_Lighting_4",
+            "valueSrnArray": [
+              "S55_Lighting_4_1",
+              "S55_Lighting_4_2",
+              "S55_Lighting_4_3",
+              "S55_Lighting_4_4"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_Lighting_5",
+            "valueSrnArray": [
+              "S55_Lighting_5_1",
+              "S55_Lighting_5_2",
+              "S55_Lighting_5_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_RemoteControl_0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S55_RemoteControl_1"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_RemoteControl_2"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_RemoteControl_3",
+            "valueSrnArray": [
+              "S55_RemoteControl_3_1",
+              "S55_RemoteControl_3_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_RemoteControl_4"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_Lock_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S55_Lock_1",
+            "valueSrnArray": [
+              "S55_Lock_1_1",
+              "S55_Lock_1_2",
+              "S55_Lock_1_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_Lock_2",
+            "valueSrnArray": [
+              "S55_Lock_1_1",
+              "S55_Lock_2_2",
+              "S55_Lock_2_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Lock_3"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_Lock_4",
+            "valueSrnArray": [
+              "S55_Lock_4_1",
+              "S55_Lock_4_2",
+              "S55_Lock_4_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Lock_5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Lock_6"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_DrivingAssistance_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S55_DrivingAssistance_1",
+            "valueSrnArray": [
+              "S55_DrivingAssistance_1_1",
+              "S55_DrivingAssistance_1_2",
+              "S55_DrivingAssistance_1_3",
+              "S55_DrivingAssistance_1_4"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_DrivingAssistance_2"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_DrivingAssistance_3",
+            "valueSrnArray": [
+              "S55_DrivingAssistance_3_1",
+              "S55_DrivingAssistance_3_2",
+              "S55_DrivingAssistance_3_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_DrivingAssistance_4",
+            "valueSrnArray": [
+              "S55_DrivingAssistance_4_1",
+              "S55_DrivingAssistance_4_2",
+              "S55_DrivingAssistance_4_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_DrivingAssistance_5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_DrivingAssistance_6"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_DrivingAssistance_7",
+            "valueSrnArray": [
+              "S55_DrivingAssistance_7_1",
+              "S55_DrivingAssistance_7_2",
+              "S55_DrivingAssistance_7_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_DrivingAssistance_8",
+            "valueSrnArray": [
+              "S55_DrivingAssistance_8_1",
+              "S55_DrivingAssistance_8_2"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_Other1_0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_1"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_2"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S55_Other1_3",
+            "valueSrnArray": [
+              "S55_Other1_3_1",
+              "S55_Other1_3_2",
+              "S55_Other1_3_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_4"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_6"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_7"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_8"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Other1_9"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Tire_1"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_Other2_0",
+        "itemList": [
+          {
+            "titleSrn": "S55_Other2_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_Other2_2",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_Other2_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_Other2_4",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_Other2_5",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_Other2_6",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_Other2_7",
+            "style": 1,
+            "valueSrnArray": [
+              "S55_Other2_7_1",
+              "S55_Other2_7_2",
+              "S55_Other2_7_3"
+            ]
+          },
+          {
+            "titleSrn": "S55_Other2_8",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_Other2_9",
+            "style": 1,
+            "valueSrnArray": [
+              "S55_Other2_9_0",
+              "S55_Other2_9_1",
+              "S55_Other2_9_2",
+              "S55_Other2_9_3"
+            ]
+          },
+          {
+            "titleSrn": "S55_Other2_10",
+            "style": 1,
+            "valueSrnArray": [
+              "S55_Other2_9_0",
+              "S55_Other2_9_1",
+              "S55_Other2_9_2",
+              "S55_Other2_9_3"
+            ]
+          },
+          {
+            "titleSrn": "S55_Other2_11",
+            "style": 2,
+            "min": -3,
+            "max": 3
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_ElectricDoor_0",
+        "itemList": [
+          {
+            "titleSrn": "S55_ElectricDoor_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_ElectricDoor_4",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_ElectricDoor_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S55_ElectricDoor_2",
+            "style": 1,
+            "valueSrnArray": [
+              "S55_ElectricDoor_2_1",
+              "S55_ElectricDoor_2_2"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_Amplifier_0",
+        "itemList": [
+          {
+            "titleSrn": "S55_Amplifier_1",
+            "style": 1,
+            "valueSrnArray": [
+              "S55_Amplifier_1_1",
+              "S55_Amplifier_1_2",
+              "S55_Amplifier_1_3",
+              "S55_Amplifier_1_4"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S55_Amplifier_2"
+          }
+        ]
+      },
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {
+            "titleSrn": "language_setup",
+            "style": 1,
+            "valueSrnArray": [
+              "_118_setting_value_26",
+              "language_cn_jian",
+              "language_cn_fan"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S18_Car_0",
+        "itemList": [
+          {
+            "titleSrn": "S18_Car_0",
+            "style": 1,
+            "valueSrnArray": [
+              "S55_Car_1",
+              "S55_Car_2",
+              "S55_Car_3",
+              "S55_Car_4",
+              "S55_Car_5",
+              "S55_Car_6",
+              "S55_Car_7",
+              "S55_Car_8",
+              "S55_Car_9",
+              "S55_Car_10",
+              "S55_Car_11",
+              "S55_Car_12",
+              "S55_Car_13",
+              "S55_Car_14",
+              "S55_Car_15",
+              "S55_Car_16",
+              "S55_Car_17",
+              "S55_Car_18",
+              "S55_Car_19",
+              "S55_Car_20",
+              "S55_Car_21",
+              "S55_Car_22",
+              "S55_Car_23"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "front_defog",
+          "ac",
+          "power"
+        ],
+        [
+          "auto"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "in_out_cycle",
+          "sync"
+        ]
+      ],
+      "disableBtnArray": [
+
+      ],
+      "smallWindowStatusArray": [
+        "sync",
+        "auto",
+        "in_out_cycle",
+        "rear_defog",
+        "front_defog"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 5
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S55_Speed_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_Speed_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S362_vehicleSpeedInfo_1",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S314_OilConsumption_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_OilConsumption_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_OilConsumption_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_OilConsumption_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_OilConsumption_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_OilConsumption_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_OilConsumption_6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_OilConsumption_7",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S55_DrivingInfoHistory_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_DrivingInfoHistory_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_DrivingInfoHistory_3",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "S55_DrivingInfoHistory_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_DrivingInfoHistory_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "S55_DrivingInfoHistory_6",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "S55_BackCamera_1"
+      },
+      {
+        "style": 0,
+        "titleSrn": "S55_BackCamera_2"
+      },
+      {
+        "style": 0,
+        "titleSrn": "S55_BackCamera_3"
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 12,
+    "bandRange": 6,
+    "balanceRange": 18,
+    "isCanBalanceControl": false,
+    "lineBtnAction": [],
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "isCanRateControl": false
+  }
+}

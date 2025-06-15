@@ -1,0 +1,180 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting", "drive_data", "original_car_device","amplifier"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","auto","eco","auto_manual"],
+        ["front_defog"],["rear_defog"],
+        ["ac_max","aqs","in_out_cycle","sync","rear"]
+      ],
+      "isAllBtnCanClick": true,
+      "disableBtnArray": ["eco", "aqs","rear","auto_manual"],
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "seatHeatSrnArray": ["close_seat_heat","low","high"]
+    }
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_status_1","language_status_0"],"selectIndex": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_370_Unit",
+        "itemList": [
+          {"titleSrn": "_370_Measure","style": 1,"valueSrnArray": ["_370_American_System","_370_Metric_System"],"selectIndex": 0,"value": "null_value"},
+          {"titleSrn": "_370_Fuel_consumption","style": 1,"valueSrnArray": ["_370_KML","_370_L100KM","_370_MPG_UK","_370_MPG_US"],"selectIndex": 0,"value": "null_value"},
+          {"titleSrn": "_370_Mileage","style": 1,"valueSrnArray": ["_370_KM","_370_MI"],"selectIndex": 0,"value": "null_value"},
+          {"titleSrn": "_370_Temp_Unit","style": 1,"valueSrnArray": ["_370_C","_370_F"],"selectIndex": 0,"value": "null_value"},
+          {"titleSrn": "_370_Air_Pressure","style": 1,"valueSrnArray": ["_370_Psi","_370_KPa","_370_bar"],"selectIndex": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "light_info",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0x62_data2_10","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_20","hiworld_jeep_123_item_21","hiworld_jeep_123_item_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data2_32","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_20","hiworld_jeep_123_item_21","hiworld_jeep_123_item_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data1_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_112_rear_mirror_dimmer","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data2_76","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_13","hiworld_jeep_123_item_14","hiworld_jeep_123_item_15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_765","style": 2,"max": 6,"min": 0,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "hiworld_jeep_123_0x60_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_4_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_65","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_23","hiworld_jeep_123_item_24"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_2","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_25","hiworld_jeep_123_item_26"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_370_Remote_Start","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_370_Remote_unlock","style": 1,"valueSrnArray": ["_370_All_Doors","_370_Driver_Doors"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_370_Engine_off",
+        "itemList": [
+          {"titleSrn": "_370_Engine_Off_Light_delay","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_20","hiworld_jeep_123_item_21","hiworld_jeep_123_item_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_370_Engine_Off_Power_delay","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_17","hiworld_jeep_123_item_18","hiworld_jeep_123_item_19"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_370_Driver_Seat_Convenient","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_370_Auto_Open_Comfortable_System",
+        "itemList": [
+          {"titleSrn": "_370_Start_Open_Heat","style": 1,"valueSrnArray": ["close","open","hiworld_jeep_123_item_11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_370_Remote_Start_Reminder","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "hiworld_jeep_123_0x43_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_76","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_0","hiworld_jeep_123_item_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_54","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_32","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_5","hiworld_jeep_123_item_3","hiworld_jeep_123_item_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_0","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_7","hiworld_jeep_123_item_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_10","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_9","hiworld_jeep_123_item_10"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_5","style": 3,"confirmTis": "hiworld_jeep_123_0x43_data5_5"},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_32","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_10","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "compass",
+        "itemList": [
+          {"titleSrn": "compass_direction","style": 1,"valueSrnArray": ["north","northeast","east","southeast","south","southwest","weat","northwest"],"selectIndex": 0,"value": "null_value"},
+          {"titleSrn": "compass_deviation","style": 2,"min":1,"max": 15,"progress": 0,"value": "1","unit": "null_value"},
+          {"titleSrn": "compass_run_calibration","style": 3,"confirmTis": "compass_run_calibration"}
+        ]
+      },
+      {
+        "titleSrn": "_370_Brake",
+        "itemList": [
+          {"titleSrn": "_370_Automatic_parking_brake","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_370_Sound_Settings",
+        "itemList": [
+          {"titleSrn": "_370_Speed_adjustment_volume","style": 1,"valueSrnArray": ["close","_18_level_1","_18_level_2","_18_level_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_370_Surround_Sound","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_370_Time","defaultValueSrn": "set_default"},
+          {"titleSrn": "_370_BackLight","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set77","defaultValueSrn": "set_default"},
+          {"titleSrn": "_370_Parking_service","defaultValueSrn": "set_default"}
+        ]
+
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["rpt","rdm"],
+    "rowBottomBtnAction":
+    ["left","play","pause","right"],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "total_file", "value": ""},
+      {"imageId": "music_list", "titleSrn": "current_song_list", "value": ""},
+      {"imageId": "music_music", "titleSrn": "song_name", "value": ""},
+      {"imageId": "music_artist", "titleSrn": "singer", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "disc_name", "value": ""}
+    ],
+    "isHaveSongList": true
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "volumeRange": 0,
+    "seekBarVolumeMax": 38,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  }
+}

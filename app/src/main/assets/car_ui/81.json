@@ -1,0 +1,341 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "air",
+      "drive_data",
+      "warning",
+      "sync"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac",
+          "in_out_cycle",
+          "ac_max",
+          "auto"
+        ],
+        [
+          "max_front"
+        ],
+        [
+          "dual"
+        ],
+        [
+          "blow_window",
+          "blow_head",
+          "blow_foot"
+        ]
+      ],
+      "smallWindowStatusArray": [
+        "ac",
+        "auto",
+        "in_out_cycle",
+        "dual"
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {
+            "titleSrn": "_81_traction_control_system",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_81_turn_signals_setup",
+            "style": 1,
+            "valueSrnArray": [
+              "ford_direction_indicators_flash_1_times",
+              "ford_direction_indicators_flash_3_times"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "ford_message_tone",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "ford_alert_tone",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_81_current_voice_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "_81_slow",
+              "_81_medium",
+              "_81_rush"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "ford_range_unit",
+            "style": 1,
+            "valueSrnArray": [
+              "unit_km",
+              "_96_range_unit_mile"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "brightness",
+            "style": 1,
+            "valueSrnArray": [
+              "manual",
+              "auto"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_81_tyre_monitor",
+            "style": 3,
+            "confirmTis": "_81_tyre_monitor"
+          },
+          {
+            "titleSrn": "_81_rain_sensor",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_81_interior_lighting",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_81_park_lock_ctrl",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_81_hill_start_assist",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "parking_assistance",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "language_setup",
+            "style": 1,
+            "valueSrnArray": [
+              "language_status_1",
+              "language_status_1_1",
+              "language_status_2",
+              "language_status_3",
+              "language_status_4",
+              "language_status_4_1",
+              "language_status_6",
+              "language_status_6_1",
+              "language_status_13",
+              "language_status_15",
+              "language_status_7",
+              "language_status_12",
+              "language_status_17",
+              "language_status_8",
+              "language_status_8_1",
+              "language_status_0_1",
+              "language_status_0_2"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_279_temperature_unit",
+            "style": 1,
+            "valueSrnArray": [
+              "celsius",
+              "fahrenheit"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_176_car_setting_title_21",
+            "style": 1,
+            "valueSrnArray": [
+              "ford_raise_color_ice_blue",
+              "_176_car_setting_value_orange",
+              "ford_raise_color_light_blue",
+              "_176_car_setting_value_red",
+              "_176_car_setting_value_green",
+              "_176_car_setting_value_blue",
+              "_176_car_setting_value_purple"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "car_speed",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_250_engine_speed",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_wheel_speed",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_my_key_vol_limit",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_my_key_mute_status",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_ford_driving_plan",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_ford_vehicle_speed",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_engine",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_81_engine_display",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_41_front_radar",
+            "defaultValueSrn": "null_value"
+          },
+          {
+            "titleSrn": "_41_rear_radar",
+            "defaultValueSrn": "null_value"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_81_video_restore"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_81_video_enlarge"
+      }
+    ]
+  },
+  "syncPageUiSet": {
+    "leftBtnActions": [
+      "media",
+      "phone",
+      "voice",
+      "keyboard"
+    ],
+    "keyboardActions": [
+      [
+        "null",
+        "up",
+        "null"
+      ],
+      [
+        "left",
+        "ok",
+        "right"
+      ],
+      [
+        "null",
+        "down",
+        "null"
+      ],
+      [
+        "info",
+        "menu",
+        "device"
+      ],
+      [
+        "prev",
+        "shuff",
+        "next"
+      ]
+    ]
+  }
+}

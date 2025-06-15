@@ -18,10 +18,14 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters.addAll(listOf("armeabi-v7a", "arm64-v8a", "x86", "x86_64"))
+        }
     }
     sourceSets {
         getByName("main") {
             aidl.setSrcDirs(listOf("src/main/java"))
+            jniLibs.srcDirs("src/main/jni")
         }
     }
     buildTypes {
@@ -46,6 +50,7 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("androidx.startup:startup-runtime:1.1.1")
     implementation("org.slf4j:slf4j-api:2.0.9")
     annotationProcessor("org.apache.logging.log4j:log4j-core:2.14.1")
     implementation("org.apache.logging.log4j:log4j-api:2.14.1")

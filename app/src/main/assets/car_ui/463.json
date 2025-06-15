@@ -1,0 +1,42 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["dual","ac","auto"],
+        ["front_defog"],["rear_defog"],
+        ["power","in_out_cycle","pollrn_removal","rear"]
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": false,
+      "seatColdSrnArray": [
+        "_386_seat_heat_negative0",
+        "_386_seat_heat_negative1",
+        "_386_seat_heat_negative2",
+        "_386_seat_heat_negative3"
+      ],
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true
+  }
+}

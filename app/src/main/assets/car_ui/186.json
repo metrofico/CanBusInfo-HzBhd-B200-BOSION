@@ -1,0 +1,181 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air", "drive_data","setting","amplifier", "original_car_device","tire_info"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac"],
+        ["front_defog"],["rear_defog"],
+        ["auto","cycle_in_out_close","dual"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_lock"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "vm_golf7_language_setup",
+        "itemList": [
+          {"titleSrn": "vm_golf7_language_setup","style": 1,"valueSrnArray": [
+            "language_status_0",
+            "language_status_1",
+            "language_status_6",
+            "language_status_4",
+            "language_status_7",
+            "language_status_2",
+            "language_status_3",
+            "language_status_8",
+            "language_status_15",
+            "language_status_13",
+            "language_status_21",
+            "language_status_27",
+            "language_status_12",
+            "language_status_25",
+            "language_status_14",
+            "language_status_11",
+            "language_status_5",
+            "language_status_10",
+            "language_status_9"
+          ],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_186_driving_aids",
+        "itemList": [
+          {"titleSrn": "_186_moving_object_detection","style": 4,"value": ""},
+          {"titleSrn": "_186_lane_departure_detection","style": 4,"value": ""},
+          {"titleSrn": "_186_blind_spot_detection","style": 4,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "support_panorama","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_39","hiworld_jeep_123_item_38"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0xE8_data4","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_186_asl","style": 2,"min": 0,"max": 5,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_186_bose_centerpoint","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_surround_volume","style": 2,"min": -5,"max": 5,"progress": 5,"value": "0","unit": "null_value"},
+          {"titleSrn": "_186_driver_sound_field","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_amplifier_settings","style": 1,"valueSrnArray": ["_279_low","_279_high"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_186_Original_car_settings",
+        "itemList": [
+          {"titleSrn": "_186_Unlock_and_turn_on_the_lights","style":4 ,"value": ""},
+          {"titleSrn": "_186_Auto_light_sensitivity","style": 1,"valueSrnArray": ["_186_sensitivity1","_186_sensitivity2","_186_sensitivity3","_186_sensitivity4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_Vehicle_speed_linkage_intermittent_wiper","style": 4 ,"value": ""},
+          {"titleSrn": "_186_Auto_light_off_time_setting","style": 1,"valueSrnArray": ["_186_Time1","_186_Time2","_186_Time3","_186_Time4","_186_Time5","_186_Time6","_186_Time7","_186_Time8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_186_Original_car_settings2",
+        "itemList": [
+          {"titleSrn": "_186_Smart_key_unlock","style": 4 ,"value": ""},
+          {"titleSrn": "_186_auto_retreat","style": 4 ,"value": ""},
+          {"titleSrn": "_186_switch_Unlock","style": 4 ,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_186_Rear_Entertainment_System",
+        "itemList": [
+          {"titleSrn": "_186_Rear_Entertainment_System_Interface","style": 4 ,"value": ""},
+          {"enable": false,"titleSrn": "_186_Left_monitor_power_supply","style": 4 ,"value": ""},
+          {"enable": false,"titleSrn": "_186_Left_speaker_output","style": 4 ,"value": ""},
+          {"enable": false,"titleSrn": "_186_Right_monitor_power_supply","style": 4 ,"value": ""},
+          {"enable": false,"titleSrn": "_186_Right_speaker_output","style": 4 ,"value": ""},
+          {"enable": false,"titleSrn": "_186_Automatically_power_on_the_monitor","style": 4 ,"value": ""}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 10,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "isCanRateControl": false,
+    "isCanBalanceControl": false,
+    "isHaveVolumeControl": true,
+    "isHaveBandMiddle": false
+  },
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_186_total_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_186_endurancee_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_186_time","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    [],
+    "rowBottomBtnAction":
+    [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "bubbleUiSet": {
+    "iconDrawable": "camera_icon"
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  }
+}

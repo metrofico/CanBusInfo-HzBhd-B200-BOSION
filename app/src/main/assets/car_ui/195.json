@@ -1,0 +1,605 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","auto"],
+        ["econ"],
+        ["dual"],
+        ["front_defog","rear_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "disableBtnArray": ["dual","econ"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": false,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1"]
+    }
+  },
+  "settingPageUiSet": {
+    "list":[
+      {
+        "titleSrn": "_194_lock_control",
+        "itemList": [
+          {
+            "titleSrn": "_194_driving_luosuo",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_speed_lock_off",
+              "_194_speed_lock_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_unlock",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_off_automatically_unlock",
+              "_194_open_automatically_unlock"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_unlock_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_all_doors",
+              "_194_only_the_drivers_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_smart_unlock_the_car_near",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_all_doors",
+              "_194_only_the_drivers_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_lighting_control",
+        "itemList": [
+          {
+            "titleSrn": "_194_i_came_home_with__reversing_lights",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_i_came_home_with__beam_lights",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_i_came_home_with__rear_fog",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_i_came_home_with_a_duration",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_30_seconds",
+              "_194_1_minute",
+              "_194_1_minute_30_seconds",
+              "_194_2_minutes",
+              "_194_2_minutes_and_30_seconds",
+              "_194_3_minutes",
+              "_194_3_minutes_and_30_seconds",
+              "_194_4_minutes",
+              "_194_4_minutes_30_seconds",
+              "_194_5_minutes"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_searching_cars_indication__reversing_lights",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_searching_cars_indication__near_light",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_searching_cars_indication__rear_fog",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_searching_cars_indicate_the_duration",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_30_seconds",
+              "_194_1_minute",
+              "_194_1_minute_30_seconds",
+              "_194_2_minutes",
+              "_194_2_minutes_and_30_seconds",
+              "_194_3_minutes",
+              "_194_3_minutes_and_30_seconds",
+              "_194_4_minutes",
+              "_194_4_minutes_30_seconds",
+              "_194_5_minutes"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_convenient_and_comfortable",
+        "itemList": [
+          {
+            "titleSrn": "_194_i_went_home_with",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_searching_cars_indication",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_only_light",
+              "_194_lights_and_horn"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_steering_wheel_feels",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_ordinary",
+              "_194_cozy",
+              "_194_motion"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_unlock_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_all_doors",
+              "_194_only_the_drivers_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_smart_unlock_the_car_near",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_all_doors",
+              "_194_only_the_drivers_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_driving_lock",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_a_foldable_outside_mirror_automatically",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_airconditioning_settings",
+        "itemList": [
+          {
+            "titleSrn": "_194_rear_window_demisting_demisting_linkage",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_automatic_mode_wind",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_low",
+              "_194_in",
+              "_194_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_partition_temperature_settings",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_the_default_single_zone",
+              "_194_dualzone_default",
+              "_194_last_default"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_driving_maintenance",
+        "itemList": [
+          {
+            "titleSrn": "_194_tire_pressure_reset",
+            "style": 0,
+            "value": "null_value"
+          },
+          {
+            "titleSrn": "_194_vehicle_stability_control",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_ecodriving",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_reset",
+        "itemList": [
+          {
+            "titleSrn": "_194_reset",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_driving_assistance",
+        "itemList": [
+          {
+            "titleSrn": "_194_pedestrian_warning_beep",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_instrument_brightness",
+        "itemList": [
+          {
+            "titleSrn": "_194_meter_brightness_level",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_grade_1",
+              "_194_level_2",
+              "_194_level_3",
+              "_194_level_4",
+              "_194_level_5",
+              "_194_level_6",
+              "_194_level_7",
+              "_194_level_8",
+              "_194_level_9",
+              "_194_level_10"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_advanced_driver_assistance",
+        "itemList": [
+          {
+            "titleSrn": "_194_speed_auxiliary",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_assist_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_receive_speed_limit",
+              "_194_speed_alarm",
+              "_194_smart_speed"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_lane_departure_warning",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_alarm_sensitivity",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_low",
+              "_194_in",
+              "_194_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_alarm_sound",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_forward_collision_auxiliary_systems",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_forward_collision_assist__assist_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_alarm",
+              "_194_alarm_and_automatic_braking"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_forward_collision_aid__alert_sensitivity",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_low",
+              "_194_in",
+              "_194_high"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_light_set",
+        "itemList": [
+          {
+            "titleSrn": "_194_welcome_light",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_welcome_lighting_time_of_the_lamp_holder",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_30_seconds",
+              "_194_60_seconds",
+              "_194_90_seconds"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_i_go_home_with_lit_to_keep_time",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_30_seconds",
+              "_194_60_seconds",
+              "_194_90_seconds"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_window",
+        "itemList": [
+          {
+            "titleSrn": "_194_skylights_state",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_shut_down",
+              "_194_grade_1",
+              "_194_level_2",
+              "_194_level_3",
+              "_194_level_4",
+              "_194_level_5",
+              "_194_level_6",
+              "_194_level_7",
+              "_194_level_8",
+              "_194_level_9",
+              "_194_full"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_comfortable_and_convenient_2",
+        "itemList": [
+          {
+            "titleSrn": "_194_i_went_home_with",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_turn_off",
+              "_194_open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_look_for_an_indication_lights",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_only_light",
+              "_194_lights_and_horn"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+
+          {
+            "titleSrn": "_194_unlock_mode",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_all_doors",
+              "_194_only_the_drivers_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "_194_smart_unlock_the_car_near",
+            "style": 1,
+            "valueSrnArray": [
+              "_194_all_doors",
+              "_194_only_the_drivers_door"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_driving_maintenance_2",
+        "itemList": [
+          {
+            "titleSrn": "_194_tire_pressure_reset",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_194_restore_factory_settings_2",
+        "itemList": [
+          {
+            "titleSrn": "_194_reset",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      },
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {
+            "titleSrn": "_278_radar_disp",
+            "style": 1,
+            "valueSrnArray": ["close","open"],
+            "selectIndex": 0,"value": ""},
+          {
+            "titleSrn": "str_250_0_4",
+            "style": 0,
+            "value": "null_value"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true
+  }
+}

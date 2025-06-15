@@ -1,0 +1,78 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog"],
+        ["power"],["auto_wind_mode"],
+        ["ac","auto","in_out_cycle"]
+      ],
+      "disableBtnArray": ["front_defog","rear_defog","power","auto_wind_mode","ac","auto","in_out_cycle"],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "back_home_with_me","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "keep_light_time_when_back_home","style": 1,"valueSrnArray": ["s_30","s_60","s_90"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_lock_feedback","style": 1,"valueSrnArray": ["whistle","flash_light_and_whistle","flash_light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_lock_when_drive","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_lock_when_stop_car","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "find_car_feedback","style": 1,"valueSrnArray": ["flash_light","flash_light_and_whistle"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "no_key_feedback","style": 1,"valueSrnArray": ["all_door","driver_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "key_unlock","style": 1,"valueSrnArray": ["all_door","driver_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "speeding_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "rear_view_mirro_automatically_folds","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "speeding_set","style": 2,"min":30,"max": 220,"progress": 0,"value":"0","unit": "unit_km_h"},
+          {"titleSrn": "park_help","style": 1,"valueSrnArray": ["car_go_on","low_speed_turn_light_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_236_Front_Collision_Assist_System","style": 4,"value": ""},
+          {"enable":false,"titleSrn": "_236_Forward_collision_assist_mode","style": 1,"valueSrnArray": ["_236_System_Mode_1","_236_System_Mode_2"],"selectIndex": 0,"value": ""},
+          {"enable":false,"titleSrn": "_236_Sensitivity","style": 1,"valueSrnArray": ["_236_Sensitivity_1","_236_Sensitivity_2","_236_Sensitivity_3"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+}

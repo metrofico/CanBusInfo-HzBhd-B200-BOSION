@@ -1,0 +1,83 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "drive_data"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "ac_max", "auto"],
+        ["dual", "front_defog"], ["rear_defog", "power"],
+        ["auto_wind_mode", "in_out_cycle"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "disableBtnArray": [
+        "ac_max",
+        "dual"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": false,
+    "rearArea": {
+      "lineBtnAction": [
+        ["rear_power", "rear_lock"],
+        [],
+        [],
+        ["rear_auto"]
+      ],
+      "isCanSetTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_342_setting_1_6",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_342_setting_1_6_0", "defaultValueSrn": "set_default"},
+          {"titleSrn": "_342_setting_1_6_0_0", "defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_342_setting_2",
+        "itemList": [
+          {"titleSrn": "_342_setting_2_0", "style": 4},
+          {"titleSrn": "_342_setting_2_1", "style": 4},
+          {"titleSrn": "_342_setting_2_2", "style": 4},
+          {"titleSrn": "_342_setting_2_3", "style": 4},
+          {"titleSrn": "_342_setting_2_4", "style": 4},
+          {"titleSrn": "_342_setting_2_5", "style": 4},
+          {"titleSrn": "_342_setting_2_6", "style": 4}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"titleSrn": "_342_setting_1_2", "style": 0},
+      {"titleSrn": "_342_setting_1_3", "style": 0},
+      {"titleSrn": "_342_setting_1_4", "style": 0},
+      {"titleSrn": "_342_setting_1_5", "style": 0},
+      {"titleSrn": "_342_setting_1_0", "style": 0}
+    ]
+  }
+}

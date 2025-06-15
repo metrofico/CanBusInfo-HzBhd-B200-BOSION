@@ -1,0 +1,56 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_5_parking_system",
+        "itemList": [
+          {"titleSrn": "_5_roadside_parking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_5_garage_parking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_5_radar_mute","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","in_out_auto_cycle","ac","ac_max"],
+        ["front_defog"],["rear_defog"],
+        ["dual","auto","auto_2","rear"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_current_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "remaining_oil","defaultValueSrn": "set_default"},
+          {"titleSrn": "battery_voltage","defaultValueSrn": "set_default"},
+          {"titleSrn": "driven_distance","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_341_drive_0_1","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarDistance": true,
+    "isHaveLeftRightRadar":true
+  }
+}

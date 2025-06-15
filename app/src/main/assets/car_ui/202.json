@@ -1,0 +1,56 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","drive_data"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "auto","in_out_cycle"],
+        ["front_defog"], ["rear_defog"],
+        ["max_front", "ac","dual"]
+      ],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_202_car_state",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_202_car_D0_bit5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_202_car_D0_bit4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_202_car_D0_bit3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_202_car_D0_bit2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_202_car_D0_bit1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_202_car_D0_bit0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_202_D1","defaultValueSrn": "set_default"}
+          ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data","original_car_device"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set2","style": 1,"valueSrnArray": ["close","mazda_binary_car_set2_2","mazda_binary_car_set2_3","mazda_binary_car_set2_1","mazda_binary_car_set2_0"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set3","style": 1,"valueSrnArray": ["close","high","middle","low"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set4","style": 1,"valueSrnArray": ["mazda_binary_car_set20_1","mazda_binary_car_set10_4","mazda_binary_car_set10_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set5","style": 1,"valueSrnArray": ["mazda_binary_car_set5_1","mazda_binary_car_set5_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set8","style": 1,"valueSrnArray": ["high","low"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set9","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_21","mazda_binary_car_set10_3","_270_setting_item1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set10","style": 1,"valueSrnArray": ["mazda_binary_car_set10_4","mazda_binary_car_set10_3","mazda_binary_car_set10_2","mazda_binary_car_set10_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set19","style": 1,"valueSrnArray": ["close","high","low"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"vm_golf7_vehicle_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set78","defaultValueSrn": "set_default"},
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "Lights","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["rpt_track","rdm_disc","exit_cd","select_cd"],
+    "rowBottomBtnAction":
+    ["left","play","right"],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "total_file", "value": ""},
+      {"imageId": "music_list", "titleSrn": "current_song_list", "value": ""},
+      {"imageId": "music_music", "titleSrn": "song_name", "value": ""},
+      {"imageId": "music_artist", "titleSrn": "singer", "value": ""}
+    ],
+    "isHavePlayTimeSeekBar": true,
+    "isHaveSongList": true
+  },
+  "parkPageUiSet":{
+    "isShowRadar": false,
+    "isShowTrack": true
+  }
+}

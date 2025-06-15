@@ -1,0 +1,304 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","tire_info", "drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["left_set_seat_heat","front_defog","ion","rear_defog","right_set_seat_heat"],
+        ["ac_max","eco"],["power"],
+        ["ac","auto","in_out_cycle","dual","aqs"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "isAllBtnCanClick":true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowPmValue": false,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_189_charging_state", "defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_189_maintenance", "defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "geely_speed_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_parking_unlock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_double_flash_tips_when_door_open","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_remote_lock_feedback","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_position_light_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set1",
+        "itemList": [
+          {"titleSrn": "geely_smart_cornering_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set2",
+        "itemList": [
+          {"titleSrn": "geely_electronic_assist_mode","style": 1,"valueSrnArray": ["geely_comfort","geely_sport"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_remote_lock_feedback","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_close_the_sunroof_after_locking","style":1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_daytime_running_lights","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_breath_model","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_emergency_brake_auto","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "front_collision_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_boyue_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_boyue_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_boyue_3","style": 1,"valueSrnArray": ["near","mid","far"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_boyue_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_position_light_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "language_status","style": 1,"valueSrnArray": ["language_status_0","language_status_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "voice_skylight","style": 1,"valueSrnArray": ["skylight","left_front_window","right_front_window","left_rear_window","right_rear_window","all_window"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set3",
+        "itemList": [
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set4",
+        "itemList": [
+          {"titleSrn": "geely_power_down_auo_unlock","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_remote_lock_tune","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "open_door_light_sign","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lock_auto_close_position_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_speed_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "esc","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set5",
+        "itemList": [
+          {"titleSrn": "geely_speed_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_boyue_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "open_door_light_sign","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_remote_lock_tune","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lock_auto_close_position_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "voice_skylight","style": 1,"valueSrnArray": ["skylight","left_front_window","right_front_window","left_rear_window","right_rear_window","all_window"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set6",
+        "itemList": [
+          {"titleSrn": "geely_daytime_running_lights","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_low_speed_cue","style": 1,"valueSrnArray": ["outlander_simple_car_set_111","outlander_simple_car_set_112","outlander_simple_car_set_113"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_theme_colors","style": 1,"valueSrnArray": ["geely_theme_colors_blue","geely_theme_colors_red","geely_theme_colors_other","geely_theme_colors_yellow"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_7","style": 1,"valueSrnArray": ["geely_title_10","geely_title_11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_8","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_9","style": 2,"max": 80,"min": 20,"progress": 0,"value": "20","unit": "unit_percent"},
+          {"titleSrn": "voice_skylight","style": 1,"valueSrnArray": ["skylight","left_front_window","right_front_window","left_rear_window","right_rear_window","all_window"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set7",
+        "itemList": [
+          {"titleSrn": "geely_speed_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_boyue_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "open_door_light_sign","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_remote_lock_tune","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lock_auto_close_position_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "esc","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set8",
+        "itemList": [
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set9",
+        "itemList": [
+          {"titleSrn": "geely_speed_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_parking_unlock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_remote_lock_feedback","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set10",
+        "itemList": [
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_7","style": 1,"valueSrnArray": ["geely_title_10","geely_title_11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_8","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set11",
+        "itemList": [
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["_189_car_setting_5","_189_car_setting_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "esc","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_2","style": 2,"max": 10,"min": 0,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "car_set12",
+        "itemList": [
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_theme_colors","style": 1,"valueSrnArray": ["geely_theme_colors_blue","geely_theme_colors_red","geely_theme_colors_other","geely_theme_colors_yellow"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_8","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_open_big_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_3","style": 1,"valueSrnArray": ["_189_car_setting_7","_189_car_setting_8","_189_car_setting_9"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set13",
+        "itemList": [
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_close_the_sunroof_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_daytime_running_lights","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_theme_colors","style": 1,"valueSrnArray": ["geely_theme_colors_blue","geely_theme_colors_red","geely_theme_colors_other","geely_theme_colors_yellow"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_2","style": 2,"max": 10,"min": 0,"progress": 0,"value": "0","unit": "_327_unit_level"}
+        ]
+      },
+      {
+        "titleSrn": "car_set14",
+        "itemList": [
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_daytime_running_lights","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_theme_colors","style": 1,"valueSrnArray": ["geely_theme_colors_blue","geely_theme_colors_red","geely_theme_colors_other","geely_theme_colors_yellow"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_open_big_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set15",
+        "itemList": [
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_low_speed_cue","style": 1,"valueSrnArray": ["outlander_simple_car_set_111","outlander_simple_car_set_112","outlander_simple_car_set_113"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set16",
+        "itemList": [
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_theme_colors","style": 1,"valueSrnArray": ["geely_theme_colors_blue","geely_theme_colors_red","geely_theme_colors_other","geely_theme_colors_yellow"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_open_big_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_A","style": 1,"valueSrnArray": ["Comfort","Eco","Sport"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_B","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set17",
+        "itemList": [
+          {"titleSrn": "geely_daytime_running_lights","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_7","style": 1,"valueSrnArray": ["geely_title_10","geely_title_11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_title_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_C","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set18",
+        "itemList": [
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["chery_lighting_and_horn","light"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_open_big_light","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_D","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_E","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "enter_panorama","style": 1,"valueSrnArray": ["open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_left_view","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_right_view","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_front_view","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_rear_view","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_3d_view","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_track_view","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_steering_view","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "static_trace","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "dynamic_trace","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "fisheye_correction","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "r_gear_position_exits_five_second_delay","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "single_reversing_image","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auxiliary_follow_up_steering","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_189_Temperature_status","value": "set_default"},{"title": "_189_Sensor_status","value": "set_default"},{"title": "_189_Pressure_status","value": "set_default"},{"title": "_189_Temperature_status2","value": "set_default"}]},
+      {"whichTire":1,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_189_Temperature_status","value": "set_default"},{"title": "_189_Sensor_status","value": "set_default"},{"title": "_189_Pressure_status","value": "set_default"},{"title": "_189_Temperature_status2","value": "set_default"}]},
+      {"whichTire":2,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_189_Temperature_status","value": "set_default"},{"title": "_189_Sensor_status","value": "set_default"},{"title": "_189_Pressure_status","value": "set_default"},{"title": "_189_Temperature_status2","value": "set_default"}]},
+      {"whichTire":3,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"},{"title": "_189_Temperature_status","value": "set_default"},{"title": "_189_Sensor_status","value": "set_default"},{"title": "_189_Pressure_status","value": "set_default"},{"title": "_189_Temperature_status2","value": "set_default"}]}
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

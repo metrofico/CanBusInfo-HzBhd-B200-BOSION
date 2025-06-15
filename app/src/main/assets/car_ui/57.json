@@ -1,0 +1,68 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_55_0xE8_title",
+        "itemList": [
+          {"id":3,"titleSrn": "_55_0xE8_data2","style": 3,"confirmTis": "_55_0xE8_data2"},
+          {"id":14,"titleSrn": "_55_0xf2_0x06","style": 3,"confirmTis": "delete_confirm"}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_270_setting_13","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data12","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_a","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data56","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "trip_a",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_55_0x17_first_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_second_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_third_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "honda_set_angle_wide"},
+      {"style": 0,"titleSrn": "standard"},
+      {"style": 0,"titleSrn": "overlook"}
+    ]
+  }
+}

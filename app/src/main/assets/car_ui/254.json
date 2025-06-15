@@ -1,0 +1,180 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data","original_car_device"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set2","style": 1,"valueSrnArray": ["close","mazda_binary_car_set2_0","mazda_binary_car_set2_1","mazda_binary_car_set2_2","mazda_binary_car_set2_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set3","style": 1,"valueSrnArray": ["close","low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set4","style": 1,"valueSrnArray": ["mazda_binary_car_set10_3","mazda_binary_car_set10_4","mazda_binary_car_set20_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set5","style": 1,"valueSrnArray": ["mazda_binary_car_set5_1","mazda_binary_car_set5_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set8","style": 1,"valueSrnArray": ["low","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set9","style": 1,"valueSrnArray": ["min_10","min_30","mazda_binary_car_set9_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set10","style": 1,"valueSrnArray": ["mazda_binary_car_set10_1","mazda_binary_car_set10_2","mazda_binary_car_set10_3","mazda_binary_car_set10_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set11","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set16","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set17","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set18","style": 1,"valueSrnArray": ["close","low","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set19","style": 1,"valueSrnArray": ["close","low","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set20","style": 1,"valueSrnArray": ["close","mazda_binary_car_set10_3","mazda_binary_car_set10_4","mazda_binary_car_set20_1","mazda_binary_car_set20_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set21","style": 1,"valueSrnArray": ["mazda_binary_car_set21_1","mazda_binary_car_set22_2","mazda_binary_car_set22_3","mazda_binary_car_set22_4","mazda_binary_car_set22_5"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "mazda_binary_car_set26",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set27","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set28","style": 1,"valueSrnArray": ["mazda_binary_car_set28_1","mazda_binary_car_set28_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set81","style": 1,"valueSrnArray": ["close","low","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set29","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set30","style": 1,"valueSrnArray": ["mazda_binary_car_set28_1","mazda_binary_car_set30_1","mazda_binary_car_set28_2"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "mazda_binary_car_set12",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set13","style": 1,"valueSrnArray": ["auto","manual"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set14","style": 1,"valueSrnArray": ["close","mazda_binary_car_set71_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set15","style": 1,"valueSrnArray": ["close","mazda_binary_car_set71_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set23","style": 2,"max": 26,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "mazda_binary_car_set24","style": 2,"max": 40,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "mazda_binary_car_set25","style": 2,"max": 4,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "mazda_binary_car_set31",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set60","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set61","style": 1,"valueSrnArray": ["close","mazda_binary_car_set10_3","mazda_binary_car_set10_4","mazda_binary_car_set20_1","mazda_binary_car_set20_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set62","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "mazda_binary_car_set63",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set64","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set65","style": 1,"valueSrnArray": ["mazda_binary_car_set65_1","mazda_binary_car_set65_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set66","style": 1,"valueSrnArray": ["low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set67","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set68","style": 1,"valueSrnArray": ["mazda_binary_car_set68_1","mazda_binary_car_set68_2","mazda_binary_car_set68_3","mazda_binary_car_set68_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set68_4","style": 1,"valueSrnArray": ["low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set58","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "mazda_binary_car_set69",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set70","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set71","style": 1,"valueSrnArray": ["mazda_binary_car_set71_1","mazda_binary_car_set71_2","mazda_binary_car_set71_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set73","style": 1,"valueSrnArray": ["mazda_binary_car_set73_1","mazda_binary_car_set73_2","mazda_binary_car_set73_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set74","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mazda_binary_car_set75","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"mazda_binary_car_set33",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set34","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set35","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set36","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set37","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set38","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set39","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set40","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set41","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"mazda_binary_car_set42",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set43","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set44","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set45","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set46","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set47","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set48","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set49","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set50","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set51","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set52","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set53","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set54","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set55","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set56","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set57","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"drive_data",
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set80","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set76","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set77","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set78","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set79","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set32","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+      ["rpt_off","rpt_track","rpt_fold","rdm_off","rdm_fold","rdm_disc","fold_sub","fold_add"],
+    "rowBottomBtnAction": [
+      "up",
+      "left",
+      "play",
+      "pause",
+      "right",
+      "down"
+    ],
+    "items": [
+      {
+        "imageId": "music_list",
+        "titleSrn": "total_file",
+        "value": ""
+      },
+      {
+        "imageId": "music_file",
+        "titleSrn": "current_file",
+        "value": ""
+      },
+      {
+        "imageId": "music_list",
+        "titleSrn": "current_song_list",
+        "value": ""
+      },
+      {
+        "imageId": "music_music",
+        "titleSrn": "song_name",
+        "value": ""
+      },
+      {
+        "imageId": "music_dvd",
+        "titleSrn": "disc_name",
+        "value": ""
+      },
+      {
+        "imageId": "music_artist",
+        "titleSrn": "singer",
+        "value": ""
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  }
+}

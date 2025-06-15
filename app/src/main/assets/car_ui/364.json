@@ -1,0 +1,188 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting",
+      "on_start"
+    ]
+  },
+
+  "airPageUiSet": {
+    "isHaveRearArea": true,
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac",
+          "aqs",
+          "in_out_auto_cycle",
+          "auto_defog",
+          "front_defog"
+        ],
+        [],
+        [],
+        []
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": false,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 18
+    },
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        []
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetTemp": true,
+      "isShowLeftWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 4
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S364_AIR_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_1",
+            "valueSrnArray": [
+              "S364_AIR_1_1",
+              "S364_AIR_1_2",
+              "S364_AIR_1_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_2",
+            "valueSrnArray": [
+              "S364_AIR_2_1",
+              "S364_AIR_2_2",
+              "S364_AIR_2_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_3",
+            "valueSrnArray": [
+              "S364_AIR_3_1",
+              "S364_AIR_3_2"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_4",
+            "valueSrnArray": [
+              "S364_AIR_4_1",
+              "S364_AIR_4_2",
+              "S364_AIR_4_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S364_AIR_5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S364_AIR_6"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S364_AIR_7"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S364_AIR_8"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_9",
+            "valueSrnArray": [
+              "S364_AIR_9_1",
+              "S364_AIR_9_2",
+              "S364_AIR_9_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S364_AIR_10"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_11",
+            "valueSrnArray": [
+              "S364_AIR_11_1",
+              "S364_AIR_11_2"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_12",
+            "valueSrnArray": [
+              "S364_AIR_11_1",
+              "S364_AIR_11_2"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S364_AIR_13",
+            "valueSrnArray": [
+              "S364_AIR_3_1",
+              "S364_AIR_3_2"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "_328_title_1a",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S314_Language_0",
+            "valueSrnArray": [
+              "S364_Language_1",
+              "S364_Language_2",
+              "S364_Language_3",
+              "S364_Language_4",
+              "S364_Language_5",
+              "S364_Language_6",
+              "S364_Language_7",
+              "S364_Language_8",
+              "S364_Language_9",
+              "S364_Language_10",
+              "S364_Language_11",
+              "S364_Language_12",
+              "S364_Language_13",
+              "S364_Language_14",
+              "S364_Language_15",
+              "S364_Language_16"
+            ]
+          },
+          {
+            "style": 0,
+            "titleSrn": "_396_setting54"
+          }
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+
+  "onStartPageUiSet": {
+    "btnAction": ["phone"]
+  }
+}

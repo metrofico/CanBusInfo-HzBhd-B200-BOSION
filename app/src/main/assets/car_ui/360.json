@@ -1,0 +1,45 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "drive_data"
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D360_d0",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D360_d1t2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D360_d3t4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D360_d5t6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D360_d7t8",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D360_d11b0t3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D360_d11b4",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  }
+}

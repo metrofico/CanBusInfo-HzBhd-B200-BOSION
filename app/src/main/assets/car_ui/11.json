@@ -1,0 +1,214 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","amplifier","air","drive_data","tire_info","hybird"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "light_settings",
+        "itemList": [
+          {"titleSrn": "light_ctrl_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "light_ctrl_4","style": 1,"valueSrnArray": ["_18_level_0","_18_level_1","_18_level_2","_18_level_3","_18_level_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_3_43","style": 1,"valueSrnArray": ["close","mazda_binary_car_set10_1","mazda_binary_car_set10_2","mazda_binary_car_set10_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0x67_data1_bit32","style": 1,"valueSrnArray": ["close","thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "lock_settings",
+        "itemList": [
+          {"titleSrn": "_55_0x65_data1_bit54_item1", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_1_2", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_1_3", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_2_6", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_65", "style": 2,"max": 7,"min": 0,"progress": 3,"value": "3","unit": "null_value"},
+          {"titleSrn": "_18_vehicle_setting_item_2_4", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_1_4", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_1_5", "style": 1, "valueSrnArray": ["all_door","driver_door"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_2_5", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_2_7", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_11_0x26_data2_bit20", "style": 1, "valueSrnArray": ["first_gear","second_gear","third_gear","fourth_gear","fifth_gear"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_55_0x65_data1_bit21", "style": 1, "valueSrnArray": ["close","thirty_second","sixty_second","mazda_binary_car_set20_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_11_0x26_data4_bit4", "style": 1, "valueSrnArray": ["close","by_driver_door"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_55_0x65_data1_bit76", "style": 1, "valueSrnArray": ["close","by_driver_door","_55_0x65_data1_bit76_item1"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_55_0x65_data1_bit54", "style": 1, "valueSrnArray": ["close","_55_0x65_data1_bit54_item2","_55_0x65_data1_bit54_item1"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "airSetting",
+        "itemList": [
+          {"titleSrn": "_18_vehicle_setting_item_1_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_18_vehicle_setting_item_1_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "other_set",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0xC1_data2","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_33","hiworld_jeep_123_item_32"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_11_0x26_data3_bit54","style": 1,"valueSrnArray": ["clear_blue","clear_turquoise","deep_orange","radiant_orange"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_11_0x26_data3_bit32","style": 1,"valueSrnArray": ["_11_0x26_data3_bit32_item0","_11_0x26_data3_bit32_item1","_11_0x26_data3_bit32_item2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_11_0x26_data4_bit65","style": 1,"valueSrnArray": ["close","_11_0x26_data4_bit65_item1","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "convenience_get_off_option", "style": 1, "valueSrnArray": ["close","partial","full"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "language_setup", "style": 1, "valueSrnArray": ["vm_golf7_language_setup_english_us","vm_golf7_language_setup_spanish","vm_golf7_language_setup_french","vm_golf7_language_setup_chinese","vm_golf7_language_setup_german","vm_golf7_language_setup_turkish","vm_golf7_language_setup_english_uk","vm_golf7_language_setup_russian"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "radar_settings",
+        "itemList": [
+          {"titleSrn": "radar_volume","style": 2,"max": 5,"min": 1,"progress": 0,"value": "1","unit": "null_value"},
+          {"titleSrn": "radar_display","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "radar_distance","style": 1,"valueSrnArray": ["near","far"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "radar_volume_switch","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_186_asl","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_18_surround","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "amplifier_switch","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x6A_0x04_0x01",
+        "itemList": [
+          {"titleSrn": "clear_data","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x6A_0x04_0x02",
+        "itemList": [
+          {"titleSrn": "update_data","style": 0,"confirmTis": "null_value"},
+          {"titleSrn": "clear_data","style": 0,"confirmTis": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_326_radar_info_1",
+        "itemList": [
+          {"titleSrn": "_326_radar_info_1","style": 4}
+        ]
+      }
+
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle"],
+        ["front_defog","rear_defog"],["blow_positive","blow_negative"],
+        ["auto","dual","auto_wind_mode"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "isShowSeatCold": false,
+      "isCanSetSeatCold": true,
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power","rear_auto"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_average_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_drive_time","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"},
+          {"titleSrn": "_186_total_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_186_endurancee_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_11_tripA","defaultValueSrn": "set_default"},
+          {"titleSrn": "_11_tripB","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_average_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_18_historical_fuel",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_trip1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_trip2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_trip3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_trip4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_trip5","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_18_minute_fuel",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_last_1min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_2min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_3min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_4min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_5min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_6min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_7min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_8min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_9min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_10min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_11min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_12min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_13min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_14min_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_last_15min_fuel","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": true,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":4,"list": [{"title": "tire_pressure_content","value":"set_default"}]}
+    ]
+  },
+
+  "hybirdPageUiSet": { }
+}

@@ -1,0 +1,44 @@
+{"mainPageUiSet": {
+  "btnAction": ["setting","drive_data","original_car_device"]
+},
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_352_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_352_car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_352_car_tire_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_352_panorama_right_light"},
+      {"style": 0,"titleSrn": "_352_panorama_right_camera"}
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_352_setting_zhi_nan",
+        "itemList": [
+          {"titleSrn": "_352_setting_zhi_nan1","style": 0},
+          {"titleSrn": "_352_setting_zhi_nan2","style": 2,"max":15,"min":1,"progress":1,"value": "1","unit": "_352_null"},
+          {"titleSrn": "_352_setting_zhi_nan3","style": 0}
+        ]
+      }
+    ]
+  }
+
+}

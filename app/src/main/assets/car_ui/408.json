@@ -1,0 +1,30 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "in_out_cycle",
+          "ac"
+        ],
+        [],
+        [],
+        []
+      ],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 9
+    }
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true
+  }
+}

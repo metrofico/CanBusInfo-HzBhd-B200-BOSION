@@ -1,0 +1,91 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","sync","auto","in_out_cycle"],
+        [],["power"],
+        ["front_defog","rear_defog"]
+      ],
+      "isAllBtnCanClick": false,
+      "isCanSetLeftTemp": false,
+      "isCanSetRightTemp": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power"]
+      ],
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": false,
+      "isShowRightWheel": false,
+      "isCanSetTemp": false,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_303_park","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_rev","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_ill","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_acc","defaultValueSrn": "set_default"},
+          {"titleSrn": "_307_title_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_307_title_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_307_title_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_dashboard_data2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"titleSrn": "_307_title_4","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_5","style": 1, "valueSrnArray": ["english_off", "_307_value_10","_307_value_11","_307_value_12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_6","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_7","style": 1, "valueSrnArray": ["english_off", "_307_value_13","_307_value_14"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_18","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_8","style": 1, "valueSrnArray": ["english_off", "_307_value_15","_307_value_16","_307_value_17","_307_value_18","_307_value_19","_307_value_20","_307_value_21"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_9","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_10","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_17","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_11","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_12","style": 1, "valueSrnArray": ["english_off", "_307_value_22","_307_value_23","_307_value_24","_307_value_25"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_13","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_14","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_15","style": 1, "valueSrnArray": ["vm_golf7_vehicle_setup_units_distance_km", "vm_golf7_vehicle_setup_units_distance_mi"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_307_title_16","style": 1, "valueSrnArray": ["cancel", "_307_value_26"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1, "valueSrnArray": ["language_55", "language_56","language_35","language_40","language_34","language_52","language_50","language_31","language_46","language_44","language_32","language_30","language_53","language_54","language_17","language_18","language_19","language_20","language_48","language_22","language_21","language_57","language_23","language_26","language_27","language_29","_307_value_27"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

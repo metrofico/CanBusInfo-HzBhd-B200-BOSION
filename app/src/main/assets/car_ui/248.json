@@ -1,0 +1,133 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog","dual"],
+        ["auto"],["power"],
+        ["ac","ion","in_out_auto_cycle","ac_max"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "disableBtnArray": ["ac_max"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "air_setting",
+        "itemList": [
+          {"titleSrn": "air_set_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "air_set_2","style": 1,"valueSrnArray": ["manual","auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "air_set_3","style": 1,"valueSrnArray": ["air_set_3_1","air_set_3_2","air_set_3_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "air_set_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "seat_set",
+        "itemList": [
+          {"titleSrn": "seat_set_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "seat_set_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "seat_set_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "seat_set_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "drive_assist",
+        "itemList": [
+          {"titleSrn": "drive_assist_1","style": 2,"max": 20,"progress": 0,"value": "0","unit": "unit_km_h"},
+          {"titleSrn": "drive_assist_2","style": 1,"valueSrnArray": ["low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "drive_assist_3","style": 2,"max": 30,"progress": 0,"value": "0","unit": "unit_minute"},
+          {"titleSrn": "drive_assist_4","style": 2,"max": 30,"progress": 0,"value": "0","unit": "unit_minute"},
+          {"titleSrn": "drive_assist_5","style": 1,"valueSrnArray": ["drive_assist_5_1","drive_assist_5_2","drive_assist_5_3"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_accessories",
+        "itemList": [
+          {"titleSrn": "car_accessories_1","style": 1,"valueSrnArray": ["car_accessories_1_1","car_accessories_1_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_accessories_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_accessories_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_accessories_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_accessories_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_accessories_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_accessories_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "light_ctrl",
+        "itemList": [
+          {"titleSrn": "light_ctrl_1","style": 1,"valueSrnArray": ["light_ctrl_1_1","light_ctrl_1_2","light_ctrl_1_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "light_ctrl_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "light_ctrl_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "light_ctrl_4","style": 1,"valueSrnArray": ["low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "light_ctrl_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "charging_set",
+        "itemList": [
+          {"titleSrn": "charging_set_1","style": 1,"valueSrnArray": ["charging_set_1_1","charging_set_1_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "charging_set_2","style": 2,"max": 23,"progress": 0,"value": "0","unit": "unit_hour"},
+          {"titleSrn": "charging_set_3","style": 2,"max": 59,"progress": 0,"value": "0","unit": "unit_minute"},
+          {"titleSrn": "charging_set_4","style": 2,"max": 23,"progress": 0,"value": "0","unit": "unit_hour"},
+          {"titleSrn": "charging_set_5","style": 2,"max": 59,"progress": 0,"value": "0","unit": "unit_minute"},
+          {"titleSrn": "charging_set_6","style": 1,"valueSrnArray": ["charging_set_6_2","charging_set_6_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "loop_set_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "loop_set_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "loop_set_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "loop_set_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "loop_set_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "loop_set_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "loop_set_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "energy_flow","style": 0,"valueSrnArray": ["energy_no_display","energy_drive"],"value": "null_value"}
+        ]
+      }, {
+        "titleSrn": "other_set",
+        "itemList": [
+          {"titleSrn": "language_status","style": 1,"valueSrnArray": ["language_status_0","language_status_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "sound_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "energy_recovery_setting",
+        "itemList": [
+          {"titleSrn": "energy_recovery_setting","style": 1,"valueSrnArray": ["close","low","high"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  }
+}

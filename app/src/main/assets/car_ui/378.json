@@ -1,0 +1,36 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "power", "auto"],
+        ["front_defog"], ["mono"],
+        ["blow_head","blow_window","blow_foot","in_out_cycle"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_377_big_item_1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_dashboard_data2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]},
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

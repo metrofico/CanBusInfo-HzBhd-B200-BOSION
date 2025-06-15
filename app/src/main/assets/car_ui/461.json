@@ -1,0 +1,74 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","drive_data","setting"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["auto", "power","in_out_cycle"],
+        ["ac"], ["ac_max"],
+        ["dual", "max_front"]
+      ],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_461_drive_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_461_drive_info_temp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_461_drive_info_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_461_drive_info_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_461_drive_info_fuel","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_461_setting_config",
+        "itemList": [
+          {"titleSrn": "_461_setting_config_language","style": 1,"valueSrnArray": ["_461_setting_config_language1","_461_setting_config_language2","_461_setting_config_language3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_config_fuel_unit","style": 1,"valueSrnArray": ["_461_setting_config_fuel_unit1","_461_setting_config_fuel_unit2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_config_temp_unit","style": 1,"valueSrnArray": ["_461_setting_config_temp_unit1","_461_setting_config_temp_unit2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_config_date","style": 1,"valueSrnArray": ["_461_setting_config_date1","_461_setting_config_date2","_461_setting_config_date3","_461_setting_config_date4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_config_time","style": 1,"valueSrnArray": ["_461_setting_config_time1","_461_setting_config_time2"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_461_setting_set",
+        "itemList": [
+          {"titleSrn": "_461_setting_set_speed","style": 2, "min": 0, "max": 255, "progress": 0, "isProgressDraggable": true, "value": "", "unit": "_461_unit_speed"},
+          {"titleSrn": "_461_setting_set_home_lighting","style": 2, "min": 0, "max": 240, "progress": 0, "isProgressDraggable": true, "value": "", "unit": "_461_unit_time"},
+          {"titleSrn": "_461_setting_set_three_lighting","style": 1,"valueSrnArray": ["_461_off","_461_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_set_running_lights","style": 1,"valueSrnArray": ["_461_off","_461_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_set_welcome_light","style": 1,"valueSrnArray": ["_461_off","_461_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_set_car_door_locks","style": 1,"valueSrnArray": ["_461_setting_set_car_door_locks1","_461_setting_set_car_door_locks2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_set_relock","style": 1,"valueSrnArray": ["_461_off","_461_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_set_interlock","style": 1,"valueSrnArray": ["_461_off","_461_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_461_setting_set_tire_reset","style": 0},
+          {"titleSrn": "_461_setting_set_measurement","style": 0}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air", "setting", "drive_data", "tire_info","amplifier"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "power", "auto"],
+        [ "front_defog"],
+        ["rear_defog"],
+        ["max_front","auto_wind_mode", "in_out_cycle","dual"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_353_setting_2",
+        "itemList": [
+          {"titleSrn": "_353_setting_2_0","style": 1,"valueSrnArray": ["_353_setting_2_0_0","_353_setting_2_0_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_status_0","language_status_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Rotating_Speed_report","style": 2,"max": 255,"min": 0,"progress": 1,"value": "1","unit": "_353_millisecond"},
+          {"titleSrn": "_330_car_Speed_report","style": 2,"max": 255,"min": 0,"progress": 1,"value": "1","unit": "_353_millisecond"}
+        ]
+      },
+      {
+        "titleSrn": "_353_setting_3",
+        "itemList": [
+          {"titleSrn": "_353_setting_2_6","style": 2,"max": 5,"min": 0,"progress": 0,"value": "0","unit": "_347_setting_unit"},
+          {"titleSrn": "_353_setting_2_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_353_setting_2_8","style": 2,"max": 5,"min": -5,"progress": 5,"value": "0","unit": "_347_setting_unit"},
+          {"titleSrn": "_353_setting_2_9","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_353_setting_1_0",
+        "itemList": [
+          {
+            "titleSrn": "_353_setting_1_0",
+            "style": 0
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_current_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "null_value"},
+          {"titleSrn": "Average_fuel_consumption","defaultValueSrn": "null_value"},
+          {"titleSrn": "total_mileage","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "Tire_pressure_effective_state","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "Tire_pressure_effective_state","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "Tire_pressure_effective_state","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "Tire_pressure_effective_state","value":"set_default"}]}
+    ]
+  },
+  "amplifierPageUiSet": {
+    "bandRange": 5,
+    "isHaveVolumeControl": true,
+    "balanceRange": 10,
+    "isHaveBandMiddle": false,
+    "isVolumeEnabled": false,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true
+  },
+  "warningPageUiSet": {}
+}

@@ -1,0 +1,36 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["auto","ac","in_out_cycle","rear"],
+        ["rest"],["power"],
+        ["front_defog","rear_defog","sync"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 9
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "drive_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true
+  }
+}

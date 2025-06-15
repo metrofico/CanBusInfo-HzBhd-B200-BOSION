@@ -1,0 +1,30 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","dual","eco"],
+        ["front_defog"],["rear_defog"],
+        ["in_out_cycle","auto","ac"]
+      ],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  }
+
+}

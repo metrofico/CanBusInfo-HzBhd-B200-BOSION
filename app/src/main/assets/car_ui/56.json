@@ -1,0 +1,182 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_55_0xE8_title",
+        "itemList": [
+          {"id":3,"titleSrn": "_55_0xE8_data2","style": 3,"confirmTis": "_55_0xE8_data2"},
+          {"id":14,"titleSrn": "_55_0xf2_0x06","style": 3,"confirmTis": "delete_confirm"}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x4B",
+        "itemList": [
+          {"id":1,"titleSrn": "compass_run_calibration", "style": 0, "value": ""},
+          {"id":0,"titleSrn": "_55_0x4B_item0", "style": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x67_title",
+        "itemList": [
+          {"id":4,"titleSrn": "_55_0x67_data0_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":3,"titleSrn": "_55_0x67_data0_bit20","style": 1,"valueSrnArray": ["lowest","lower","middle","higher","hightest"],"selectIndex": 0,"value": ""},
+          {"id":2,"titleSrn": "_55_0x67_data1_bit64","style": 1,"valueSrnArray": ["lowest","lower","middle","higher","hightest"],"selectIndex": 0,"value": ""},
+          {"id":1,"titleSrn": "_55_0x67_data1_bit32","style": 1,"valueSrnArray": ["zero_second","fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""},
+          {"id":0,"titleSrn": "_55_0x67_data1_bit10","style": 1,"valueSrnArray": ["fifteen_second","thirty_second","sixty_second"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x66_title",
+        "itemList": [
+          {"id":3,"titleSrn": "_55_0x66_data1_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":2,"titleSrn": "_55_0x66_data1_bit2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":1,"titleSrn": "_55_0x66_data1_bit1","style": 1,"valueSrnArray": ["small","big"],"selectIndex": 0,"value": ""},
+          {"id":0,"titleSrn": "_55_0x66_data1_bit0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x65_title",
+        "itemList": [
+          {"id":2,"titleSrn": "_55_0x65_data1_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":1,"titleSrn": "_55_0x65_data1_bit21","style": 1,"valueSrnArray": ["thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""},
+          {"id":0,"titleSrn": "_55_0x65_data1_bit0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x68_title",
+        "itemList": [
+          {"id":4,"titleSrn": "_55_0x68_data1_bit76","style": 1,"valueSrnArray": ["close","_55_0x68_data1_bit76_item1","_55_0x68_data1_bit76_item2"],"selectIndex": 0,"value": ""},
+          {"id":3,"titleSrn": "_55_0x68_data1_bit54","style": 1,"valueSrnArray": ["mid","_55_0x68_data1_bit54_item2","_55_0x68_data0_bit31_item3"],"selectIndex": 0,"value": ""},
+          {"id":2,"titleSrn": "_55_0x68_data1_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":1,"titleSrn": "_55_0x68_data1_bit2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":0,"titleSrn": "_55_0x68_data1_bit10","style": 1,"valueSrnArray": ["far","mid","near"],"selectIndex": 0,"value": ""},
+          {"id":7,"titleSrn": "_55_0x6E_0x05","style": 3,"confirmTis": "vm_golf7_vehicle_setup_mfd_reset_dialog_content"},
+          {"id":8,"titleSrn": "_55_0x6E_0x06","style": 3,"confirmTis": "confirm_reset_alert_dialog"}
+        ]
+      },
+      {
+        "titleSrn": "_55_0x69_title",
+        "itemList": [
+          {"id":7,"titleSrn": "_55_0x69_data0_bit5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":6,"titleSrn": "_55_0x69_data0_bit4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":5,"titleSrn": "_55_0x69_data0_bit3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":4,"titleSrn": "_55_0x69_data0_bit2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"id":3,"titleSrn": "_55_0x69_data0_bit10","style": 1,"valueSrnArray": ["higher","mid","lower"],"selectIndex": 0,"value": ""},
+          {"id":2,"titleSrn": "_55_0x69_data1_bit65","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1","_55_0x69_data1_bit65_item2","_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"id":1,"titleSrn": "_55_0x69_data1_bit43","style": 1,"valueSrnArray": ["_55_0x69_data1_bit65_item1","_55_0x69_data1_bit65_item2","_55_0x69_data1_bit65_item3"],"selectIndex": 0,"value": ""},
+          {"id":0,"titleSrn": "_55_0x69_data1_bit20","style": 1,"valueSrnArray": ["invalid",
+            "num_3",
+            "num_2",
+            "num_1",
+            "num0",
+            "num1",
+            "num2",
+            "num3"
+          ],"selectIndex": 0,"value": ""}
+        ]
+      }, {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_status","style": 1,"valueSrnArray": ["language_en","language_cn_jian","language_cn_fan"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac"],
+        ["front_defog"],["rear_defog"],
+        ["auto","in_out_cycle","sync"]
+      ],
+      "disableBtnArray": ["climate"],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        []
+      ],
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 5
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data12","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "trip_a","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x16_data56","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_average_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_drive_time","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "trip_a",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_55_0x17_first_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_second_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_third_record","defaultValueSrn": "null_value"},
+          {"titleSrn": "_55_0x17_data012","defaultValueSrn": "set_default"},
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "honda_set_angle_wide"},
+      {"style": 0,"titleSrn": "standard"},
+      {"style": 0,"titleSrn": "overlook"}
+    ]
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": true,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":4,"list": [{"title": "tire_pressure_content","value":"set_default"}]}
+    ]
+  }
+}

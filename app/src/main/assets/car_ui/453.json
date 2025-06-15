@@ -1,0 +1,64 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac","in_out_cycle"],
+        ["auto"], ["sync"],
+        ["front_defog", "eco", "rear_defog"]
+      ],
+      "disableBtnArray": ["power","sync"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_453_setting_modular_1",
+        "itemList": [
+          {"titleSrn": "_453_park_assist_tone","style": 1,"valueSrnArray": ["_453_park_assist_tone1","_453_park_assist_tone2","_453_park_assist_tone3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_park_assist_delay_timer","style": 1,"valueSrnArray": ["_453_park_assist_delay_timer_0s","_453_park_assist_delay_timer_5s","_453_park_assist_delay_timer_10s"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_park_assist","style": 1,"valueSrnArray": ["_453_park_assist_off","_453_park_assist_on"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_453_setting_modular_2",
+        "itemList": [
+          {"titleSrn": "_453_vehicle_auto_relock","style": 1,"valueSrnArray": ["_453_vehicle_auto_relock_off","_453_vehicle_auto_relock_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_door_unlocking","style": 1,"valueSrnArray": ["_453_door_unlocking_all_door","_453_door_unlocking_driver_door"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_453_setting_modular_3",
+        "itemList": [
+          {"titleSrn": "_453_exterior_litghts_approach_lamps","style": 1,"valueSrnArray": ["_453_exterior_litghts_approach_lamps_30s","_453_exterior_litghts_approach_lamps_60s","_453_exterior_litghts_approach_lamps_90s"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_mood_lighting_mode","style": 1,"valueSrnArray": ["_453_mood_lighting_mode_all","_453_mood_lighting_mode_off","_453_mood_lighting_mode_auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_mood_lighting_front","style": 1,"valueSrnArray": ["_453_mood_lighting_front_off","_453_mood_lighting_front_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_mood_lighting_rear","style": 1,"valueSrnArray": ["_453_mood_lighting_rear_off","_453_mood_lighting_rear_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_mood_lighting_color","style": 1,"valueSrnArray": ["_453_mood_lighting_color_white","_453_mood_lighting_color_red","_453_mood_lighting_color_blue","_453_mood_lighting_color_orange","_453_mood_lighting_color_purple","_453_mood_lighting_color_grey","_453_mood_lighting_color_greeen"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_mood_lighting_lumim","style": 1,"valueSrnArray": ["_453_mood_lighting_lumim_level0","_453_mood_lighting_lumim_level1","_453_mood_lighting_lumim_level2","_453_mood_lighting_lumim_level3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_453_drive_away_locking","style": 1,"valueSrnArray": ["_453_drive_away_locking_off","_453_drive_away_locking_on"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+}

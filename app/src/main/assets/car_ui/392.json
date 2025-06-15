@@ -1,0 +1,44 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data"]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_392_drive",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_392_drive1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_392_drive2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_392_setting",
+        "itemList": [
+          {"titleSrn": "_392_setting1","style": 1,"valueSrnArray": ["_392_setting10","_392_setting11","_392_setting12","_392_setting13","_392_setting14","_392_setting15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_392_setting2","style": 0},
+          {"titleSrn": "_392_setting3","style": 0},
+          {"titleSrn": "_392_setting4","style": 1,"valueSrnArray": ["_392_setting40","_392_setting41","_392_setting42"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_392_setting5","style": 1,"valueSrnArray": ["_392_setting50","_392_setting51","_392_setting52"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_392_car_type",
+        "itemList": [
+          {"titleSrn": "_392_car_type","style": 1,"valueSrnArray": ["_392_car_type1","_392_car_type2","_392_car_type3"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false
+  }
+}

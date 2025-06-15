@@ -1,0 +1,35 @@
+{"mainPageUiSet": {
+  "btnAction": ["air"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","ac_max","in_out_cycle"],
+        ["front_defog"], ["rear_defog"],
+        ["auto", "power", "rear"]
+      ],
+      "disableBtnArray": [],
+      "isCanSetRightTemp": false,
+      "isCanSetCenterTemp": true,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": false,
+      "isShowCenterWheel": true,
+      "isShowRightWheel": false,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": false,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2"
+      ]
+    }
+  },
+  "parkPageUiSet":{
+    "isShowCusPanoramicView": true,
+    "isShowCustomBaseLine": true,
+    "isShowCustomTrack": true
+  }
+}

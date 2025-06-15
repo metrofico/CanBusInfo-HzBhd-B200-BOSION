@@ -1,0 +1,63 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog"],
+        [],[],
+        ["ac","power","in_out_cycle"]
+      ],
+      "smallWindowStatusArray": ["ac", "in_out_cycle", "rear_defog", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        ["rear_power"]
+      ],
+      "isCanSetTemp": false,
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": false,
+      "isShowLeftWheel": false,
+      "isShowRightWheel": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"titleSrn": "rear_view_mirror_automatically_folded","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lock_flashing","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "unlock_flashing","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "single_door_unlock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_reLock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_accessories_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["invalid","language_en","language_cn"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vehicle_type_info","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

@@ -1,0 +1,36 @@
+{"mainPageUiSet": {
+  "btnAction": [ "drive_data", "setting","amplifier"]
+},
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_333_setting_carState_10","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_info","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_330_amplifier_info",
+        "itemList": [
+          {"titleSrn": "_330_amplifier_switch","style": 1,"valueSrnArray": ["_220_status1","_220_status2"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 38,
+    "volumeRange": 0,
+    "isCanBalanceControl": true,
+    "lineBtnAction":[]
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "tire_info",
+      "drive_data",
+      "setting",
+      "air"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac",
+          "auto",
+          "in_out_cycle",
+          "ac_max"
+        ],
+        [
+          "front_defog"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "sync"
+        ]
+      ],
+      "disableBtnArray": ["sync"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],
+        [],
+        [
+          "rear_power"
+        ]
+      ],
+      "isAllBtnCanClick": true
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S407_x87_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S407_x87_1",
+            "valueSrnArray": [
+              "S405_x87_1_1",
+              "S405_x87_1_2",
+              "S405_x87_1_3",
+              "S405_x87_1_4"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x87_2",
+            "valueSrnArray": [
+              "S405_x87_2_1",
+              "S405_x87_2_2",
+              "S405_x87_2_3",
+              "S405_x87_2_4",
+              "S405_x87_2_5"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_3"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_4"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x87_5",
+            "valueSrnArray": [
+              "S403_0x67_4_1",
+              "S403_0x67_4_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_6"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_7"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_8"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_9"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_10"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x87_11",
+            "valueSrnArray": [
+              "S407_x87_11_1",
+              "S407_x87_11_2",
+              "S407_x87_11_3",
+              "S407_x87_11_4"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x87_12",
+            "valueSrnArray": [
+              "S405_x87_2_1",
+              "S405_x87_2_2",
+              "S405_x87_2_3",
+              "S405_x87_2_4",
+              "S405_x87_2_5"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_13"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_14"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_15"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_16"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_17"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_18"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x87_19"
+          },
+          {
+            "style": 2,
+            "titleSrn": "S407_x87_20",
+            "min": 0,
+            "max": 6
+          },
+          {
+            "style": 2,
+            "titleSrn": "S407_x87_21",
+            "min": 0,
+            "max": 6
+          }
+        ]
+      },
+      {
+        "titleSrn": "S407_x78_0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S407_x78_1"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x78_2",
+            "valueSrnArray": [
+              "S407_x78_2_1",
+              "S407_x78_2_2",
+              "S407_x78_2_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x78_3",
+            "valueSrnArray": [
+              "S407_x78_3_1",
+              "S407_x78_3_2",
+              "S407_x78_3_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x78_4"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S407_x78_5"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x78_6",
+            "valueSrnArray": [
+              "S407_x78_6_1",
+              "S407_x78_6_2",
+              "S407_x78_6_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S407_x78_7",
+            "valueSrnArray": [
+              "S407_x78_6_1",
+              "S407_x78_6_2",
+              "S407_x78_6_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S407_xE9_0",
+        "itemList": [
+          {
+            "style": "4",
+            "titleSrn": "S407_xE9_1"
+          },
+          {
+            "style": "4",
+            "titleSrn": "S407_xE9_2"
+          },
+          {
+            "style": "1",
+            "titleSrn": "S407_xE9_3",
+            "valueSrnArray": [
+              "S407_xE9_3_1",
+              "S407_xE9_3_2",
+              "S407_xE9_3_3"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_computer_info",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D314_Speed_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D314_Speed_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {
+        "whichTire": 0,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          },
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 1,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          },
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 2,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          },
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 3,
+        "list": [
+          {
+            "title": "tire_pressure_content",
+            "value": "set_default"
+          },
+          {
+            "title": "temperature_content",
+            "value": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "P405_x45_1"
+      },
+      {
+        "style": 0,
+        "titleSrn": "P405_x45_2"
+      },
+      {
+        "style": 0,
+        "titleSrn": "P405_x45_3"
+      }
+    ]
+  }
+}

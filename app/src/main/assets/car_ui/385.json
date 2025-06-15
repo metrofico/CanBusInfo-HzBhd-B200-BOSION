@@ -1,0 +1,31 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["auto","power","ac"],
+        ["front_defog"],["rear_defog"],
+        ["dual","in_out_cycle"]
+      ],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "front_camera_setup",
+        "itemList": [
+          {"titleSrn": "_284_support_right_view","style": 1,"valueSrnArray": ["F_camera_0","F_camera_1"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","setting","drive_data"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "in_out_cycle"],
+        ["power"], ["auto"],
+        ["front_defog","rear_defog"]
+      ],
+      "disableBtnArray": ["ac", "in_out_cycle","auto","auto_wind","front_defog", "power", "rear_defog"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_336_car_1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_336_car_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_car_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_car_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_car_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_car_14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_car_17","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_336_air",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_336_air1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_air2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_air3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_air4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_air5","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_336_voice",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_336_voice1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_voice2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_voice3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_voice4","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_336_remote_control",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_336_remote_control1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_remote_control2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_remote_control3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_remote_control4","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_336_travel",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_336_travel1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_travel2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_336_travel3","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_336_car_settings",
+        "itemList": [
+          {"titleSrn": "_336_air1","style": 1,"valueSrnArray": ["_336_state10","_336_state11","_336_state12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_air2","style": 1,"valueSrnArray": ["_336_state13","_336_state14"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_air3","style": 1,"valueSrnArray": ["_336_state3","_336_state7","_336_state8","_336_state9"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_air4","style": 1,"valueSrnArray": ["_336_state3","_336_state4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_remote_control1","style": 1,"valueSrnArray": ["_336_state3","_336_state4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_remote_control2","style": 1,"valueSrnArray": ["_336_state3","_336_state4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_remote_control3","style": 1,"valueSrnArray": ["_336_state3","_336_state4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_remote_control4","style": 1,"valueSrnArray": ["_336_state3","_336_state4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_travel1","style": 1,"valueSrnArray": ["_336_state16","_336_state15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_travel2","style": 1,"valueSrnArray": ["_336_state18","_336_state17"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_travel3","style": 1,"valueSrnArray": ["_336_state20","_336_state19"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_336_car_settings4","style": 0}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_2_park_assist_1"},
+      {"style": 0,"titleSrn": "_2_park_assist_2"}
+    ]
+  }
+
+}

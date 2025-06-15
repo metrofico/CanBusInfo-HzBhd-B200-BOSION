@@ -1,0 +1,85 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","amplifier","drive_data","original_car_device"]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "mazda_binary_car_set78","defaultValueSrn": "null_value"},
+          {"titleSrn": "_323_carType_title","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["in_out_cycle","auto","max_front"],
+        ["power"],["ac"],
+        ["rear_defog","dual","aqs"]
+      ],
+      "disableBtnArray": ["max_front","aqs"],
+      "smallWindowStatusArray": ["ac", "auto", "dual", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "isShowSeatHeat": false,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "windMaxLevel": 7
+    }
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["fm1","fm2","am","cdc","rear_cdc","aux"],
+    "rowBottomBtnAction":
+    [],
+    "items": [
+    ],
+    "isTopBtnCanScroll": true,
+    "isHavePlayTimeSeekBar": true,
+    "isHaveSongList": true
+
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "settingPageUiSet": {
+  "list": [
+    {
+      "titleSrn": "amplifier_setting",
+      "itemList": [
+        {"titleSrn": "_323_amplifier_setting_1","style": 1,"valueSrnArray": ["_323_amplifier_setting_1_1","_323_amplifier_setting_1_2"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_323_amplifier_setting_2","style": 1,"valueSrnArray": ["_323_amplifier_setting_2_1","_323_amplifier_setting_2_2"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_323_amplifier_setting_3","style": 1,"valueSrnArray": ["_323_amplifier_setting_3_1","_323_amplifier_setting_3_2","_323_amplifier_setting_3_3","_323_amplifier_setting_3_4"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_323_amplifier_setting_4","style": 1,"valueSrnArray": ["_323_amplifier_setting_2_1","_323_amplifier_setting_2_2"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_323_amplifier_setting_5","style": 1,"valueSrnArray": ["_323_amplifier_setting_5_1","_323_amplifier_setting_5_2"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_323_amplifier_setting_6","style": 1,"valueSrnArray": ["_323_amplifier_setting_6_1","_323_amplifier_setting_6_2"],"selectIndex": 0,"value": ""}
+      ]
+    },
+    {
+      "titleSrn": "_323_setting_0x60_0",
+      "itemList": [
+        {"titleSrn": "_323_setting_0x60_1","style": 1,"valueSrnArray": ["_323_setting_0x60_1_2","_323_setting_0x60_1_3"],"selectIndex": 0,"value": ""}
+      ]
+    }
+  ]
+}
+}

@@ -1,0 +1,126 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["panel_key","setting","amplifier","air","drive_data","original_car_device"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","auto","dual","negative_ion","front_window_heat"],
+        ["max_front"],["rear"],
+        ["blow_head_foot","blow_window_foot","blow_window","blow_head","blow_foot","clean_air","swing"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "dual"],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["_324_seat_heat"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        ["rear_power","rear_ac","rear_auto","rear_lock"],
+        [],[],
+        ["rear_blow_head","rear_blow_head_foot","rear_blow_foot"]
+      ],
+      "disableBtnArray": ["rear_ac"],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["_324_seat_heat"]
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {"titleSrn": "amplifier_setting",
+        "itemList": [
+          {"style": 4, "titleSrn": "_186_asl"},
+          {"style": 1, "titleSrn": "_143_0xAD_setting7", "valueSrnArray": ["_283_door_title_3", "_143_0xAD_setting13", "outlander_simple_car_set_173", "outlander_simple_car_set_170", "_143_0xAD_setting16"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_143_0xAD_setting4", "valueSrnArray": ["_303_setting_answer_1", "_324_front", "_324_rear", "_304_left_front"], "selectIndex": 0, "value": ""},
+          {"style": 3,"titleSrn": "reset","confirmTis": "reset"}
+        ]
+      },
+      {"titleSrn": "driving_info",
+        "itemList": [
+          {"style": 3,"titleSrn": "_324_reset_mileage","confirmTis": "_324_reset_mileage"}
+        ]
+      },
+      {"titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {"style": 0, "titleSrn": "_94_cockpit_fresh_air", "value": "null_value"},
+          {"style": 1, "titleSrn": "_81_turn_signals_setup", "valueSrnArray": ["ford_direction_indicators_flash_1_times", "ford_direction_indicators_flash_3_times"], "selectIndex": 0, "value": ""},
+          {"style": 2, "titleSrn": "_270_setting_13", "min": 0, "max": 20, "progress": 0, "value": "0", "unit": "null_value"},
+          {"style": 3, "titleSrn": "_94_reset_all", "confirmTis": "_94_reset_all"},
+          {"style": 4, "titleSrn": "_81_traction_control_system"}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "isHaveBtn": true,
+    "leftPosition": 1,
+    "rightPosition": 0,
+    "buttonText": "reset",
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_324_mean_after_oil", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_available_mileage", "defaultValueSrn": "null_value"},
+          {"titleSrn": "a_average_speed", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_306_value_20", "defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false
+  },
+
+  "panelKeyPageUiSet": {
+    "list": [
+      "_309_panel_1","_309_panel_4","_309_panel_5","_309_panel_6",
+      "_309_panel_7","scan","_309_panel_2","_309_panel_3",
+      "_309_panel_8","_309_panel_9","_309_panel_11","_309_panel_12"
+    ],
+    "count": 4
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [
+
+    ],
+    "isHavePlayTimeSeekBar": false,
+    "isHaveSongList": true,
+    "isSongListShowIndex": false
+  }
+}

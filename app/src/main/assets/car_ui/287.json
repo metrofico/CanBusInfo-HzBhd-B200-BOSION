@@ -1,0 +1,23 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "support_panorama","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_39","hiworld_jeep_123_item_38"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0xE8_data4","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","amplifier"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_312_parking_safety_assistance",
+        "itemList": [
+          {"titleSrn": "_41_park_assist","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_rab","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "_312_interior_light","style": 1,"valueSrnArray": ["close","_278_10s","_278_20s","_278_30s"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_defogger","style": 1,"valueSrnArray": ["_312_15_minutes","_312_continuously"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_one_touch_lane_changer","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_hazard_warning_flasher","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_security_re_locking","style": 1,"valueSrnArray": ["close","_278_20s","_278_30s","_40_s","_50_s","mazda_binary_car_set10_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_auto_door_lock","style": 1,"valueSrnArray": ["close","_312_vehicle_speed","_312_shift_into_or_out_of_park"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_auto_door_unlock","style": 1,"valueSrnArray": ["close","_312_shift_into_or_out_of_park","_312_ignition_off","_312_driver_door_open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_312_wheel_control_type","style": 1,"valueSrnArray": ["_163_setting_item12","_163_setting_item13"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "amplifier_switch","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_setup_factory_setup","style": 3,"confirmTis": "vm_golf7_vehicle_setup_factory_setup"}
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle"],
+        ["front_defog"],["rear_defog"],
+        ["auto_1_2","sync","ac_max"]
+      ],
+      "smallWindowStatusArray": ["power", "ac", "sync", "in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "windMaxLevel": 7
+    }
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "isHaveVolumeControl": true
+  }
+}

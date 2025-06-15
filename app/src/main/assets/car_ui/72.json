@@ -1,0 +1,25 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "drive_data"
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "a_current_speed",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": false,
+    "isShowTrack": true
+  }
+}

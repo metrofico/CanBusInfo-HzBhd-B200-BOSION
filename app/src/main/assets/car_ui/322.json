@@ -1,0 +1,132 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting", "amplifier", "air", "drive_data","original_car_device"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","dual","auto","in_out_cycle"],
+        ["front_defog","front_window_heat"],["rear_defog"],
+        ["max_front","blow_head","blow_foot","ac_max","steering_wheel_heating"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "dual"],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "windMaxLevel": 8,
+      "isCanSetWindSpeed": true,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3","left_seat_heat_4"],
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3","left_seat_cold_4"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],[],[],["rear_power","rear_lock"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {"titleSrn": "car_set",
+        "itemList": [
+          {"style": 1, "titleSrn": "_94_temperature_unit", "valueSrnArray": ["str_temp_c_unit","str_temp_f_unit"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "ford_range_unit", "valueSrnArray": ["unit_km","_96_range_unit_mile"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "language_setup", "valueSrnArray": ["language_1","language_cn_jian"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_304_atoms_lamp_setup", "valueSrnArray": ["ford_raise_color_ice_blue","_250_orange","ford_raise_color_light_blue","ford_raise_color_light_red","ford_raise_color_light_green","_250_blue","ford_raise_color_light_purple"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "seat_set",
+        "itemList": [
+          {"style": 0, "titleSrn": "_94_driver", "value": "null_value"},
+          {"style": 0, "titleSrn": "_322_backrest_adjust", "value": "null_value"},
+          {"style": 2, "titleSrn": "_94_driver_high", "min": 1, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "", "unit": "null_value"},
+          {"style": 2, "titleSrn": "_94_driver_mid", "min": 1, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "", "unit": "null_value"},
+          {"style": 2, "titleSrn": "_94_driver_low", "min": 1, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "", "unit": "null_value"},
+          {"style": 0, "titleSrn": "_322_massage_level", "value": "null_value"},
+          {"style": 1, "titleSrn": "_94_driver_backrest", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_driver_cushion", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""},
+          {"style": 0, "titleSrn": "_94_passenger", "value": "null_value"},
+          {"style": 0, "titleSrn": "_322_backrest_adjust", "value": "null_value"},
+          {"style": 2, "titleSrn": "_94_passenger_high", "min": 1, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "", "unit": "null_value"},
+          {"style": 2, "titleSrn": "_94_passenger_mid", "min": 1, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "", "unit": "null_value"},
+          {"style": 2, "titleSrn": "_94_passenger_low", "min": 1, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "", "unit": "null_value"},
+          {"style": 0, "titleSrn": "_322_massage_level", "value": "null_value"},
+          {"style": 1, "titleSrn": "_94_passenger_backrest", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_passenger_cushion", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "amplifier_setting",
+        "itemList": [
+          {"style": 4, "titleSrn": "_197_amplifier_mute"},
+          {"style": 1, "titleSrn": "_279_sound", "valueSrnArray": ["close","stereo","surround_sound"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_118_setting_title_97", "valueSrnArray": ["close","low","mid","high"], "selectIndex": 0, "value": ""},
+          {"style": 3,"titleSrn": "_322_all_reset","confirmTis": "_322_all_reset"},
+          {"style": 3,"titleSrn": "_322_sound_reset","confirmTis": "_322_sound_reset"}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_283_meter_value_2", "defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isHaveLeftRightRadar":true,
+    "isShowCusPanoramicView": false,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0, "titleSrn": "_220_normal"},
+      {"style": 0, "titleSrn": "overlook"}
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 14,
+    "bandRange": 7,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": false
+  },
+
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""},
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""},
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""},
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""}
+    ],
+    "isHavePlayTimeSeekBar": false,
+    "isSongListShowIndex": false
+  }
+}

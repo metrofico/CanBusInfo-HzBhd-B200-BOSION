@@ -1,0 +1,211 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "drive_data",
+      "air"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","auto","dual"],
+        [],[],
+        ["front_defog","rear_defog"]
+      ],
+      "isAllBtnCanClick": true,
+      "disableBtnArray": ["dual"],
+      "isShowCenterWheel": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": false,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_computer_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "D369_Light_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_8","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_9","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_10","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Light_11","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "car_computer_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "D369_Oil_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Oil_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Oil_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Oil_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Oil_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Oil_6","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "car_computer_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "S362_vehicleSpeedInfo_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Data_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Data_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Data_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Data_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Data_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "D369_Data_7","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S364_AIR_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S369_Air_1",
+            "valueSrnArray": [
+              "_236_Sensitivity_1",
+              "_236_Sensitivity_2",
+              "_236_Sensitivity_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S369_Air_2",
+            "valueSrnArray": [
+              "S369_Air_2_1",
+              "S369_Air_2_2",
+              "S369_Air_2_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S369_Air_3"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_Lock_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S369_RemoteControl_1",
+            "valueSrnArray": [
+              "_333_setting_carState_21_0",
+              "_333_setting_carState_21_1"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S369_Door_1"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S369_Door_2"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S369_Door_3",
+            "valueSrnArray": [
+              "all_door_unlocked",
+              "driving_door_unlocked"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S55_Lighting_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S369_LightTime_1",
+            "valueSrnArray": [
+              "S369_LightTime_1_1",
+              "S369_LightTime_1_2",
+              "S369_LightTime_1_3",
+              "S369_LightTime_1_4",
+              "S369_LightTime_1_5",
+              "S369_LightTime_1_6",
+              "S369_LightTime_1_7",
+              "S369_LightTime_1_8",
+              "S369_LightTime_1_9",
+              "S369_LightTime_1_10"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S369_LightTime_2",
+            "valueSrnArray": [
+              "S369_LightTime_1_1",
+              "S369_LightTime_1_2",
+              "S369_LightTime_1_3",
+              "S369_LightTime_1_4",
+              "S369_LightTime_1_5",
+              "S369_LightTime_1_6",
+              "S369_LightTime_1_7",
+              "S369_LightTime_1_8",
+              "S369_LightTime_1_9",
+              "S369_LightTime_1_10"
+            ]
+          },
+          {
+            "titleSrn": "S369_Light_1",
+            "style": 4
+          },
+          {
+            "titleSrn": "S369_Light_2",
+            "style": 1,
+            "valueSrnArray": [
+              "S369_Light_2_1",
+              "S369_Light_2_2"
+            ]
+          },
+          {
+            "titleSrn": "S369_Light_3",
+            "style": 4
+          },
+          {
+            "titleSrn": "S369_Light_4",
+            "style": 4
+          },
+          {
+            "titleSrn": "S369_Light_5",
+            "style": 4
+          },
+          {
+            "titleSrn": "S369_Light_6",
+            "style": 4
+          },
+          {
+            "titleSrn": "S369_Light_7",
+            "style": 4
+          },
+          {
+            "titleSrn": "S369_Light_8",
+            "style": 4
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

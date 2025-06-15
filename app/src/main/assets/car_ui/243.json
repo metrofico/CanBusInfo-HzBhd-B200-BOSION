@@ -1,0 +1,24 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [],
+        ["max_cool"],
+        ["rear_defog"],
+        ["ac", "in_out_cycle"]
+      ],
+      "smallWindowStatusArray": ["ac", "in_out_cycle", "rear_defog"],
+      "isAllBtnDisable": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+
+  }
+}

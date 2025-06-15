@@ -1,0 +1,106 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting", "drive_data"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power"],
+        [], [],
+        ["in_out_cycle", "sync","ac"]
+      ],
+      "disableBtnArray": ["power", "in_out_cycle", "sync","ac"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "isHaveLeftRightWindSpeed":true,
+      "windMaxLevel": 12,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ],
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": false,
+      "seatColdSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_451_body_status",
+        "spanCount": 4,
+        "itemList": [
+          {"titleSrn": "_451_acc_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_451_gear_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_451_central_door_lock","defaultValueSrn": "set_default"},
+          {"titleSrn": "_451_hand_brake_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_451_current_oil_quantity","defaultValueSrn": "set_default"},
+          {"titleSrn": "_451_small_lamp_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_451_current_vehicle_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_451_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_451_resolving_power",
+        "itemList": [
+          {"titleSrn": "_451_reverse_flag","style": 1,"valueSrnArray": ["_451_reverse_flag1","_451_reverse_flag2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_451_benz_fbv","style": 1,"valueSrnArray":
+            ["_451_benz_1"
+            ,"_451_benz_2"
+            ,"_451_benz_3"
+            ,"_451_benz_4"
+            ,"_451_benz_5"
+            ,"_451_benz_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_451_bmw_fbv","style": 1,"valueSrnArray":
+            ["_451_bmw_1"
+            ,"_451_bmw_2"
+            ,"_451_bmw_3"
+            ,"_451_bmw_4"
+            ,"_451_bmw_5"
+            ,"_451_bmw_6"
+            ,"_451_bmw_7"
+            ,"_451_bmw_8"
+            ,"_451_bmw_9"
+            ,"_451_bmw_10"
+            ,"_451_bmw_11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_451_audi_fbv","style": 1,"valueSrnArray":
+            ["_451_audi_1"
+            ,"_451_audi_2"
+            ,"_451_audi_3"
+            ,"_451_audi_4"
+            ,"_451_audi_5"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_451_activation",
+        "itemList": [
+          {"titleSrn": "_451_activation_1","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_451_host_settings",
+        "itemList": [
+          {"titleSrn": "_451_host_settings_1","style": 1,"valueSrnArray": ["_451_host_settings_2","_451_host_settings_3"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

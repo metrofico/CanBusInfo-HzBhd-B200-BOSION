@@ -1,0 +1,259 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["warning", "panel_key","setting", "amplifier", "air", "drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","auto","dual","aqs"],
+        ["front_defog"],["rear_defog"],
+        ["ac_max","blow_window","blow_head","blow_foot","auto_wind_lv","rear"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "dual"],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {"titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn":"light_info","style": 2,"min": 0,"max": 15, "progress": 0, "value": "关闭", "unit": "null_value"},
+          {"style": 4, "titleSrn": "_161_rear_wiper"},
+          {"style": 4, "titleSrn": "_220_driving_assistance"},
+          {"style": 1, "titleSrn": "temperature_unit", "valueSrnArray": ["hiworld_jeep_123_item_30","hiworld_jeep_123_item_31"], "selectIndex": 0, "value": ""},
+          {"style": 0, "titleSrn": "_161_door_auto_lock", "value": "null_value"},
+          {"style": 4, "titleSrn": "parkingAssist"},
+          {"style": 0, "titleSrn": "_161_central_control_door_lock", "value": "null_value"},
+
+          {"style": 4, "titleSrn": "_283_car_setting_light_4"},
+          {"style": 4, "titleSrn": "_143_setting_20"},
+          {"style": 4, "titleSrn": "_143_setting_21"},
+          {"style": 1, "titleSrn": "fuel_unit", "valueSrnArray": ["unit_kml","unit_l_100_km","unit_mpg"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_161_emergency_braking", "valueSrnArray": ["close","near","standard","far"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_118_setting_title_13"},
+
+          {"style": 2, "titleSrn": "on_off_btn_txt_7", "min": 0, "max": 7, "progress": 0, "value": "关闭", "unit": "null_value"},
+          {"style": 4, "titleSrn": "_161_only_unlock_trunk"},
+          {"style": 4, "titleSrn": "_161_reversing_radar"},
+
+          {"style": 1, "titleSrn": "_143_0x76_d1_b01", "valueSrnArray": ["close","fifteen_second","thirty_second","sixty_second"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_143_0x76_d0_b45", "valueSrnArray": ["close","fifteen_second","thirty_second","sixty_second"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_161_rearview_mirror_adaptive"},
+          {"style": 1, "titleSrn": "outlander_simple_car_set_17", "valueSrnArray": ["_161_classic","_161_crystal","_161_city","_161_jungle"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_161_disable_rear_mirror"},
+
+          {"style": 4, "titleSrn": "_94_blind_spot_monitoring"},
+          {"style": 4, "titleSrn": "_161_start_stop_disabled"},
+          {"style": 4, "titleSrn": "_143_setting_5"},
+          {"style": 1, "titleSrn": "_161_door_opening_options", "valueSrnArray": ["only_driver_door","_283_door_title_4"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_220_language_settings", "valueSrnArray": ["language_status_1","language_cn_jian","language_status_4","language_status_6","language_status_8_1","language_status_2","language_status_3","language_status_8","language_status_7","language_status_21","language_status_12","language_status_13","language_status_15","vm_golf7_language_setup_czech","language_hrvatski","language_hungary","language_alb","language_status_11","language_bulgarian","language_status_28","language_status_10","language_status_9","language_status_23","language_srpski","language_status_5","language_status_24","language_status_26","language_cn_fan","language_status_18","language_status_16","language_ivrit","language_status_27"], "selectIndex": 0, "value": ""},
+
+          {"style": 4, "titleSrn": "_143_setting_7"},
+          {"style": 4, "titleSrn": "_81_traction_control_system"},
+          {"style": 1, "titleSrn": "geely_theme_colors", "valueSrnArray": ["_161_sapphire_blue","_161_agate_red","_161_jade_green","_161_crimson","_161_sky_blue","_161_bright_brown","_161_deerskin_brown"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_143_setting_8"},
+          {"style": 4, "titleSrn": "_283_car_setting_pa_5"},
+
+          {"style": 4, "titleSrn": "_284_setting_item_2B"},
+          {"style": 4, "titleSrn": "_161_anti_collision"},
+          {"style": 4, "titleSrn": "_118_setting_title_17"},
+          {"style": 4, "titleSrn": "_161_light_assist"},
+          {"style": 4, "titleSrn": "_161_decoder_voice"},
+
+          {"style": 3, "titleSrn": "_143_setting_3","confirmTis": "_143_setting_3"},
+          {"style": 1, "titleSrn": "_161_start_stop_status", "valueSrnArray": ["_161_permanently_controllable","_161_permanently_close"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "_161_speed_remember",
+        "itemList": [
+          {"style": 4, "titleSrn": "_161_speed_remember"},
+          {"style": 4, "titleSrn": "_161_speed_1_enable"},
+          {"style": 2, "titleSrn": "_161_speed_remember_1", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 4, "titleSrn": "_161_speed_2_enable"},
+          {"style": 2, "titleSrn": "_161_speed_remember_2", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 4, "titleSrn": "_161_speed_3_enable"},
+          {"style": 2, "titleSrn": "_161_speed_remember_3", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 4, "titleSrn": "_161_speed_4_enable"},
+          {"style": 2, "titleSrn": "_161_speed_remember_4", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 4, "titleSrn": "_161_speed_5_enable"},
+          {"style": 2, "titleSrn": "_161_speed_remember_5", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 3, "titleSrn": "_220_reset","confirmTis": "_220_reset"}
+        ]
+      },
+      {"titleSrn": "_161_speed_cruise",
+        "itemList": [
+          {"style": 2, "titleSrn": "_161_speed_cruise_1", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_cruise_2", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_cruise_3", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_cruise_4", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_cruise_5", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_cruise_6", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 3, "titleSrn": "_161_speed_cruise_reset","confirmTis": "_161_speed_cruise_reset"}
+        ]
+      },
+      {"titleSrn": "_161_speed_limit",
+        "itemList": [
+          {"style": 2, "titleSrn": "_161_speed_limit_1", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_limit_2", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_limit_3", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_limit_4", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_limit_5", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 2, "titleSrn": "_161_speed_limit_6", "min": 0, "max": 255, "progress": 0, "value": "", "unit": "unit_km_h"},
+          {"style": 3, "titleSrn": "_161_speed_limit_reset","confirmTis": "_161_speed_limit_reset"}
+        ]
+      },
+      {"titleSrn": "_143_setting_item_18",
+        "itemList": [
+          {"style": 1, "titleSrn": "_161_set_sche_mile", "valueSrnArray": ["car_set_null","_161_sche_mile"], "selectIndex": 0, "value": ""},
+          {"style": 3, "titleSrn": "_161_clear_page_1","confirmTis": "_161_clear_page_1"},
+          {"style": 3, "titleSrn": "_161_clear_page_2","confirmTis": "_161_clear_page_2"},
+          {"style": 1, "titleSrn": "_161_current_page", "valueSrnArray": ["_161_page_0","_161_page_1","_161_page_2"], "selectIndex": 0, "value": ""},
+          {"style": 2, "titleSrn": "_161_sche_mile", "min": 0, "max": 3000, "progress": 0, "value": "", "unit": "unit_km"}
+        ]
+      },
+      {"titleSrn": "_161_lcd_custom",
+        "itemList": [
+          {"style": 1, "titleSrn": "_29_left_side", "valueSrnArray": ["_118_setting_value_1","_143_setting_item_15","_161_tachometer","_161_trip_computer","_143_setting_item_19","_161_fatigue_monitoring"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_29_right_side", "valueSrnArray": ["_118_setting_value_1","_143_setting_item_15","_161_tachometer","_161_trip_computer","_143_setting_item_19","_161_fatigue_monitoring"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "_279_vehicle_config",
+        "itemList": [
+          {"style": 1, "titleSrn": "_279_vehicle_config", "valueSrnArray": ["low","middle","high"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "amplifier_setting",
+        "itemList": [
+          {"style": 4, "titleSrn": "_143_0xAD_setting5"},
+          {"style": 4, "titleSrn": "_143_0xAD_setting6"},
+          {"style": 1, "titleSrn": "_143_0xAD_setting7", "valueSrnArray": ["_324_user","_143_0xAD_setting13","_143_0xAD_setting15","_143_0xAD_setting12","_143_0xAD_setting16","_324_techo"], "selectIndex": 0, "value": ""},
+          {"style": 2, "titleSrn": "_324_centrik_speaker", "min": -3, "max": 3, "progress": 0, "value": "0", "unit": "null_value"},
+          {"style": 2, "titleSrn": "_55_0xa6_setting_1", "min": -3, "max": 3, "progress": 0, "value": "0", "unit": "null_value"}
+        ]
+      }
+    ,
+      {"titleSrn": "_161_hybird_Setting",
+        "itemList": [
+          { "titleSrn": "_161_Time_Interval","style": 1, "valueSrnArray": ["_161_Time_1","_161_Time_2","_161_Time_3"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_161_Delay_Charge","style": 0,  "value": "null_value"},
+          {"titleSrn": "_161_driveInfo_0_3_0","style": 1, "valueSrnArray": ["_161_driveInfo_0_3_0_0","_161_driveInfo_0_3_0_1"], "selectIndex": 0, "value": ""},
+          { "titleSrn": "_161_Power_Reserve","style": 1, "valueSrnArray": ["_161_Reserve1","_161_Reserve2","_161_Reserve3"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "_161_AcDateAndStatus",
+        "itemList": [
+          {"titleSrn": "_161_Preset","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Monday","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Tuesday","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Wednesday","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Thursday","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Friday","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Saturday","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Sunday","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_Time","style": 0,  "value": "null_value"}
+        ]
+      },
+      {"titleSrn": "_176_car_setting_title_44",
+        "itemList": [
+          {"titleSrn": "_161_driver_massage_switch","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_driver_massage_intensity","style": 1, "valueSrnArray": ["_161_driver_massage_intensity_level1","_161_driver_massage_intensity_level2","_161_driver_massage_intensity_level3"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_161_driver_massage_mode","style": 1, "valueSrnArray": ["_161_driver_cat_paw","_161_driver_wave","_161_driver_extend","_161_driver_waist","_161_driver_shoulder"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_161_passenger_massage_switch","style": 4,  "value": "null_value"},
+          {"titleSrn": "_161_passenger_massage_intensity","style": 1, "valueSrnArray": ["_161_passenger_massage_intensity_level1","_161_passenger_massage_intensity_level2","_161_passenger_massage_intensity_level3"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_161_passenger_massage_mode","style": 1, "valueSrnArray": ["_161_passenger_cat_paw","_161_passenger_wave","_161_passenger_extend","_161_passenger_waist","_161_passenger_shoulder"], "selectIndex": 0, "value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn": "car_computer_info_page0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "_186_endurancee_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "cat_set_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_start_stop_timing","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_CurrentSpeed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "car_computer_info_page1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_55_0x17_data34","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "accumulated_mileage","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "car_computer_info_page2",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_283_meter_value_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_283_meter_value_23","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_accumulated_mileage","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_161_driveInfo_0_0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_161_driveInfo_0_0_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_0_1_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_0_1_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_0_1_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_0_1_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_0_1_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_0_1_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_0_1_6","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_161_driveInfo_0_2",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_161_driveInfo_0_2_0","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_161_driveInfo_0_3",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_161_driveInfo_0_3_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_161_driveInfo_0_3_1","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "panelKeyPageUiSet": {
+    "list": [
+      "_161_panoramic"
+    ],
+    "count": 1
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18
+  }
+}

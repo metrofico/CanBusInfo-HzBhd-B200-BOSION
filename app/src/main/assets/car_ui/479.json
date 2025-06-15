@@ -1,0 +1,89 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data","tire_info","original_car_device"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac", "in_out_cycle","auto","dual"],
+        [], [],
+        ["front_defog", "rear_defog"]
+      ],
+      "disableBtnArray": ["power"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "_479_car_set_1","style": 1, "valueSrnArray": ["_479_car_set_1_1", "_479_car_set_1_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_479_car_set_2","style": 1, "valueSrnArray": ["_479_car_set_2_1", "_479_car_set_2_2"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_456_drive_0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_308_title_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "gear_p","defaultValueSrn": "set_default"},
+          {"titleSrn": "reverse_state","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"fuel_consumption_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "instaneous_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "driven_distance","defaultValueSrn": "set_default"},
+          {"titleSrn": "average_speed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_279_dashboard_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_279_dashboard_data2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_dashboard_data3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_dashboard_data4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_dashboard_data5","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"tire_pressure_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"tire_pressure_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"tire_pressure_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"tire_pressure_content","value":"set_default"}]}
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": ["rdm_disc","rdm","rpt_disc","rpt_track","rpt"],
+    "rowBottomBtnAction": ["prev_disc","up","left","play","pause","right","down","next_disc"],
+    "items": [
+      {"imageId": "music_dvd", "titleSrn": "_330_disc_1", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "_330_disc_2", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "_330_disc_3", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "_330_disc_4", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "_330_disc_5", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "_330_disc_6", "value": ""},
+      {"imageId": "_330_Current_track", "titleSrn": "_330_Current_track", "value": ""},
+      {"imageId": "music_music", "titleSrn": "_330_current_time", "value": ""}
+
+
+    ],
+    "isHavePlayTimeSeekBar": false
+  }
+}

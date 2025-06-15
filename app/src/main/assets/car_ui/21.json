@@ -1,0 +1,84 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": [
+            "language_status_0",
+            "language_status_1",
+            "language_status_2",
+            "language_status_4",
+            "language_status_6",
+            "language_status_3",
+            "language_status_7",
+            "language_status_8",
+            "language_status_13",
+            "language_status_15",
+            "language_status_24",
+            "language_status_11",
+            "language_status_5",
+            "language_status_10",
+            "language_status_9",
+            "language_status_12",
+            "language_status_25",
+            "language_22",
+            "language_21",
+            "language_status_21",
+            "language_status_16",
+            "language_status_18",
+            "language_cn_fan"
+          ],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "support_panorama","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_39","hiworld_jeep_123_item_38"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0xE8_data4","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","auto"],
+        ["front_defog"],["rear_defog"],
+        ["in_out_cycle","blow_positive","dual","front_window_heat"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false
+  }
+}

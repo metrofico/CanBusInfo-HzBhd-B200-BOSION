@@ -1,0 +1,92 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "panel_key"
+    ]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "K365_x2A_1",
+      "K365_x2A_2",
+      "K365_x2A_3",
+      "K365_x2A_4",
+      "K365_x2A_5",
+      "K365_x2A_6",
+      "K365_x2A_7",
+      "K365_x2A_8",
+      "K365_x2A_9",
+      "K365_x2A_10",
+      "K365_x2A_11",
+      "K365_x2A_12",
+      "K365_x2A_13",
+      "K365_x2A_14",
+      "K365_x2A_15",
+      "K365_x2A_16",
+      "K365_x2A_17",
+      "K365_x2A_18",
+      "K365_x2A_19",
+      "K365_x2A_20",
+      "K365_x2A_21",
+      "K365_x2A_22",
+      "K365_x2A_23",
+      "K365_x2A_24"
+    ],
+    "count": 4
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac",
+          "sync",
+          "auto",
+          "front_defog",
+          "rear_defog",
+          "in_out_auto_cycle"
+        ],
+        [],
+        [],
+        [
+          "aqs",
+          "ac_auto",
+          "auto_defog"
+        ]
+      ],
+      "isCanSetWindSpeed": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetSeatCold": true,
+      "windMaxLevel": 8,
+      "disableBtnArray": [
+        "aqs",
+        "ac_auto",
+        "auto_defog"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowSeatHeat": true,
+      "isShowSeatCold": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ],
+      "seatColdSrnArray": [
+        "close_seat_cold",
+        "left_seat_cold_1",
+        "left_seat_cold_2",
+        "left_seat_cold_3"
+      ]
+    }
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

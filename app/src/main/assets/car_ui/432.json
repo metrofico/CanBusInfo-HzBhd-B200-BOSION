@@ -1,0 +1,110 @@
+{"mainPageUiSet": {
+  "btnAction": ["air","sync","drive_data"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["in_out_cycle","power","auto","front_defog"],
+        ["ac"],["ac_max"],
+        ["max_front","steering_wheel_heating","dual","rear"]
+      ],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ],
+      "isShowSeatCold": true,
+      "seatColdSrnArray": [
+        "close_seat_cold",
+        "left_seat_cold_1",
+        "left_seat_cold_2",
+        "left_seat_cold_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [], [],
+        ["rear_power"]
+      ],
+      "isAllBtnCanClick": false,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": false,
+      "isCanSetLeftTemp": false,
+      "isCanSetRightTemp": false,
+      "isShowLeftWheel": false,
+      "isShowRightWheel": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_432_radio_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_432_radio_info1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_radio_info2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_radio_info3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_radio_info4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_radio_info5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_radio_info6","defaultValueSrn": "set_default"}
+        ]
+      },{
+        "headTitleSrn": "_432_CD_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_432_CD_info1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_CD_info2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_CD_info3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_CD_info4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_CD_info5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_CD_info6","defaultValueSrn": "set_default"}
+        ]
+      },{
+        "headTitleSrn": "_432_EQ_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_432_EQ_info0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_EQ_info1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_EQ_info2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_EQ_info3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_EQ_info4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_EQ_info5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_EQ_info6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_432_EQ_info7","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "syncPageUiSet": {
+    "leftBtnActions": ["media", "phone", "voice", "keyboard"],
+    "keyboardActions": [
+      ["null", "up", "null"],
+      ["left", "ok", "right"],
+      ["null", "down", "null"],
+      ["info", "menu", "device"],
+      ["prev", "shuff", "next"]
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true
+  }
+
+}

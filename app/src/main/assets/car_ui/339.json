@@ -1,0 +1,116 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting"
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "_339_reserve_mode_v"
+      },
+      {
+        "style": 0,
+        "titleSrn": "_339_reserve_mode_h"
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "in_out_cycle",
+          "front_defog",
+          "rear_defog",
+          "power"
+        ],
+        [
+        ],
+        [
+        ],
+        [
+          "auto",
+          "ac"
+        ]
+      ],
+      "disableBtnArray": [
+        "auto",
+        "ac",
+        "in_out_cycle",
+        "front_defog",
+        "rear_defog",
+        "power"
+      ],
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": false,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": false
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_339_radar",
+        "itemList": [
+          {
+            "titleSrn": "_339_radar_switch",
+            "style": 1,
+            "valueSrnArray": [
+              "_339_radar_off",
+              "_339_radar_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_339_reserve_mode",
+        "itemList": [
+          {
+            "titleSrn": "_339_reserve_mode_setting",
+            "style": 1,
+            "valueSrnArray": [
+              "_339_reserve_mode_v",
+              "_339_reserve_mode_h"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "_339_warning_sound",
+        "itemList": [
+          {
+            "titleSrn": "_339_warning_sound_setting",
+            "style": 1,
+            "valueSrnArray": [
+              "_339_warning_sound_off",
+              "_339_warning_sound_on"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      }
+    ]
+  }
+}

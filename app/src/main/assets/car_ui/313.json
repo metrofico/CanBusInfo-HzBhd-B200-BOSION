@@ -1,0 +1,39 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["drive_data","amplifier","panel_key"]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 12,
+    "bandRange": 6,
+    "balanceRange": 20,
+    "isHaveVolumeControl": false,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isHaveBandMiddle": false,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+
+  "panelKeyPageUiSet": {
+    "list": [
+      "_313_vol_dn",
+      "_313_vol_up"
+    ],
+    "count": 2
+  }
+
+}

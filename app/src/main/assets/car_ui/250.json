@@ -1,0 +1,216 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac"],
+        [],
+        [],
+        ["auto","in_out_cycle","rear_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "rear_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "windMaxLevel": 8
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_250_original_car_set",
+        "itemList": [
+          {"titleSrn": "_250_i_went_home_with", "style": 1, "valueSrnArray": ["_250_15_seconds", "_250_30_seconds", "_250_45_seconds", "_250_60_seconds"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_driving_automatically_locked","style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0,"value": ""},
+          {"titleSrn": "_250_automatic_emergency_braking", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"],"selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_before_the_collision_warning", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_hill_descent_start", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_blind_spot_monitoring", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"],"selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_rain_automatic_clearance_window", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_automatically_locked_away_from_the_car", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_pm25_purification", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_sideimpact_aid", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_voice_control_sunroof", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_language", "style": 1, "valueSrnArray": ["_250_chinese", "_250_english"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_tpms_reset", "style": 3, "confirmTis": "_250_tpms_reset"}
+        ]
+      },
+      {
+        "titleSrn": "_250_profiles",
+        "itemList": [
+          {"titleSrn": "_250_rapid_cooling_mode", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_a_key_warm", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_haze_mode", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_parking_mode", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_baby_care", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_smoking_mode", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_250_snow_mode", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_250_personalized_instrument_settings",
+        "itemList": [
+          { "titleSrn": "_250_left", "style": 1, "valueSrnArray": [ "_250_engine_speed", "_250_navigation", "_250_outside_temperature" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_right", "style": 1, "valueSrnArray": [ "_250_mobile_computer", "_250_navigation", "_250_outside_temperature" ], "selectIndex": 0, "value": "" }
+        ]
+      },
+      {
+        "titleSrn": "_250_and_ambient_lighting_brightness_meter",
+        "itemList": [
+          { "titleSrn": "_250_instrument_brightness", "style": 1, "valueSrnArray": [ "_250_grade_1", "_250_level_2", "_250_level_3", "_250_level_4", "_250_level_5", "_250_level_6" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_ambient_light_switch", "style": 1, "valueSrnArray": [ "_250_shut_down", "_250_turn_on" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_ambient_light_color", "style": 1, "valueSrnArray": [ "_250_red", "_250_pink", "_250_golden", "_250_orange", "_250_blue", "_250_white", "_250_green" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_ambient_light_brightness", "style": 1, "valueSrnArray": [ "_250_grade_1", "_250_level_2", "_250_level_3", "_250_level_4", "_250_level_5", "_250_level_6", "_250_level_7", "_250_level_8", "_250_level_9", "_250_level_10" ], "selectIndex": 0, "value": "" }
+        ]
+      },
+      {
+        "titleSrn": "_250_power_tailgate",
+        "itemList": [
+          { "titleSrn": "_250_electric_switch_tailgate", "style": 1, "valueSrnArray": [ "_250_shut_down", "_250_turn_on" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_automatically_locked_closed_power_tailgate", "style": 1, "valueSrnArray": [ "_250_shut_down", "_250_turn_on" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_kick_induction_power_tailgate", "style": 1, "valueSrnArray": [ "_250_shut_down", "_250_turn_on" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_power_tailgate_closing_delay_time", "style": 1, "valueSrnArray": [ "_250_10_seconds", "_250_15_seconds", "_250_20_seconds", "_250_30_seconds" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_auto_lock","style": 4,"value": "" }
+        ]
+      },
+      {
+        "titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          { "titleSrn": "_250_forward_collision_warning_level", "style": 1, "valueSrnArray": [ "_250_low", "_250_mid", "_250_high" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_automatic_folding_mirror", "style": 1, "valueSrnArray": [ "_250_shut_down", "_250_turn_on" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_auxiliary_line_image_360", "style": 1, "valueSrnArray": [ "_250_shut_down", "_250_turn_on" ], "selectIndex": 0, "value": "" },
+          { "titleSrn": "_250_welcome_light", "style": 1, "valueSrnArray": ["_250_shut_down", "_250_turn_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_278_radar_disp", "style": 1, "valueSrnArray": ["close","open"], "selectIndex": 0,"value": ""},
+          {"titleSrn": "str_250_0_4", "style": 0, "value": "null_value"},
+          {"titleSrn": "_250_theme_change", "style": 1, "valueSrnArray": ["_250_Technology_Blue","_250_Charm_gold","_250_Charm_orange"], "selectIndex": 0,"value": ""},
+          {"titleSrn": "_250_Language", "style": 1, "valueSrnArray": ["language_56","language_55","language_17","language_29"], "selectIndex": 0,"value": ""},
+          {"titleSrn": "_250_Combination_meter_style_settings", "style": 1, "valueSrnArray": ["_250_album","_250_purpleGold"], "selectIndex": 0,"value": ""}
+        ]
+      }
+    ,{
+        "titleSrn": "_250_Drive_assistance",
+        "itemList": [
+          { "titleSrn": "_250_Lane_Keeping_Assist_System","style": 4,"value": "" },
+          {"enable":false,"titleSrn": "_250_Lane_Keeping_Assist_System_Assist_Mode","style": 1,"valueSrnArray": ["_250_Assist_Mode_1","_250_Assist_Mode_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_250_Traffic_sign_recognition","style": 4,"value": ""}
+        ]
+      }
+    ,
+      {
+        "titleSrn": "car_setting",
+        "itemList": [
+          {"titleSrn": "str_250_0_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "str_250_0_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "str_250_0_4","style": 0,"value": "null_value"},
+          {"titleSrn": "_278_radar_disp","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_1168_comsup_and_range",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_total_trip","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"},
+          {"titleSrn": "_11_tripA","defaultValueSrn": "set_default"},
+          {"titleSrn": "_11_tripB","defaultValueSrn": "set_default"},
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","defaultValueSrn": "set_default"}
+
+        ]
+      },
+      {"headTitleSrn":"vm_golf7_vehicle_setup_units_speed",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_speed","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_250_car_body_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_frame_number","defaultValueSrn": "set_default"},
+          {"titleSrn": "water_temperature","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_enviroment_temp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_engine_oil_temp","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set78","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_voltage","defaultValueSrn": "set_default"},
+          {"titleSrn": "remaining_oil","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_250_wheel_speed_pulse_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_one_cicle_pulse_num","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_front_left_pulse","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_front_right_pulse","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_rear_left_pulse","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_rear_right_pulse","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn":"_250_Energy_Info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_Motor_Power","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_Other_system_power","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_Average_energy_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_Remaining_journey","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_battery_power","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_Last_charge_value","defaultValueSrn": "set_default"},
+          {"titleSrn": "_250_Driving_after_the_most_recent_charge_mileage","defaultValueSrn": "set_default"}
+        ]
+      },{
+        "headTitleSrn":"_250_Energy_saving_driving",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "numb_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_8","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_9","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_10","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_11","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_12","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_13","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_14","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_15","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_16","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_17","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_18","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_19","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_20","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_21","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_22","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_23","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_24","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_25","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_26","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_27","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_28","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_29","defaultValueSrn": "set_default"},
+          {"titleSrn": "numb_30","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data","amplifier"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","ac_max"],
+        [],[],
+        ["in_out_cycle","rear","front_defog","rear_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "front_defog", "rear_defog", "in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {"titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_278_vol_with_speed","style": 2,"max": 7,"min": 0,"progress": 1,"value": "1","unit": "null_value"}]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "backlight_adjustment","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set77","defaultValueSrn": "set_default"},
+          {"titleSrn": "_293_drive_data1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_293_drive_date6","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "radar_voice_state","defaultValueSrn": "set_default"},
+          {"titleSrn": "_41_park_assist_system_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "battery_voltage","defaultValueSrn": "set_default"},
+          {"titleSrn": "vehicle_tem_out","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_units_distance","defaultValueSrn": "set_default"},
+          {"titleSrn": "remaining_oil","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarDistance": true,
+    "isHaveLeftRightRadar":true
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction": [
+    ]
+}
+}

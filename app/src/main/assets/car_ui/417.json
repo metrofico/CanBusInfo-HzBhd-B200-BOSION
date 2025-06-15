@@ -1,0 +1,30 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_417_panoramic",
+        "itemList": [
+          {"titleSrn": "_417_panoramic_5","style": 1,"valueSrnArray": ["_417_off","_417_on"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_417_panoramic_0"},
+      {"style": 0,"titleSrn": "_417_panoramic_1"},
+      {"style": 0,"titleSrn": "_417_panoramic_2"},
+      {"style": 0,"titleSrn": "_417_panoramic_3"},
+      {"style": 0,"titleSrn": "_417_panoramic_4"}
+    ]
+  }
+
+}

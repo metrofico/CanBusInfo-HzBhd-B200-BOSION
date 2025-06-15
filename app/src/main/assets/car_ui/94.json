@@ -1,0 +1,314 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["panel_key","setting","hybird", "amplifier", "tire_info", "air", "drive_data", "sync"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","in_out_cycle","auto","dual","steering_wheel_heating"],
+        ["front_defog"],["rear_defog"],
+        ["blow_window","blow_head","blow_foot","auto_wind_lv","ac_max","max_front"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "dual"],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3","left_seat_heat_4"],
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3","left_seat_cold_4"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],[],[],["rear_power","rear_lock"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {"titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {"style": 4, "titleSrn": "_81_traction_control_system"},
+          {"style": 1, "titleSrn": "_81_turn_signals_setup", "valueSrnArray": ["ford_direction_indicators_flash_1_times", "ford_direction_indicators_flash_3_times"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "ford_message_tone"},
+          {"style": 4, "titleSrn": "ford_alert_tone"},
+          {"style": 4, "titleSrn": "parking_assistance"},
+          {"style": 4, "titleSrn": "_94_reversing_video_hold"},
+          {"style": 1, "titleSrn": "ford_range_unit", "valueSrnArray": ["unit_km", "_96_range_unit_mile"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_18_vehicle_setting_item_3_210", "valueSrnArray": ["_250_low","_250_mid","_250_high"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_94_intelligent_unlock_lock"},
+          {"style": 1, "titleSrn": "_94_welcome_lamp_duration", "valueSrnArray": ["hiworld_jeep_123_item_16","fifteen_second","thirty_second","sixty_second"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "remote_window_control"},
+          {"style": 4, "titleSrn": "_284_setting_item_49"},
+          {"style": 4, "titleSrn": "speed_lock"},
+          {"style": 1, "titleSrn": "_94_indoor_lamp_duration", "valueSrnArray": ["_278_5min","_278_10min","_94_fifteen_minute"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_mirror_fold_mode", "valueSrnArray": ["auto","manual"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_rear_defog_duration", "valueSrnArray": ["_278_5min","_278_10min"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_go_home_with_me_duration", "valueSrnArray": ["_278_30s","_278_1min","_278_2min","_278_3min"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_94_instrument_direction_key"},
+
+          {"style": 1, "titleSrn": "_94_charging_indicator", "valueSrnArray": ["close","open","_94_limited"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_81_hill_start_assist"},
+          {"style": 4, "titleSrn": "_218_setting_0_4"},
+          {"style": 4, "titleSrn": "_118_setting_title_49"},
+          {"style": 4, "titleSrn": "_81_rain_sensor"},
+          {"style": 1, "titleSrn": "language_setup", "valueSrnArray": ["vm_golf7_language_setup_english_uk", "vm_golf7_language_setup_english_us", "language_status_2", "language_status_3", "vm_golf7_language_setup_french", "vm_golf7_language_setup_french_ca", "language_status_6", "language_status_6_2", "language_status_13", "language_status_15", "language_status_7", "language_status_12", "vm_golf7_language_setup_czech", "language_status_5", "language_status_11", "language_status_9", "language_status_10", "language_status_8", "language_status_8_1", "language_status_1_2", "language_status_16", "language_cn_jian", "language_cn_fan", "language_alb", "language_phase_thai"], "selectIndex": 0, "value": ""},
+          {"style": 0, "titleSrn": "_94_tire_reset"},
+          {"style": 4, "titleSrn": "_94_ambient_light"},
+          {"style": 4, "titleSrn": "_94_active_city"},
+          {"style": 4, "titleSrn": "_94_powerfold_mirrors"}
+        ]
+      },
+      {"titleSrn": "drive_assist",
+        "itemList": [
+          {"style": 1, "titleSrn": "_94_lane_keeping_mode", "valueSrnArray": ["_61_alert","_94_auxiliary","_94_alert_auxiliary"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_warning_intensity", "valueSrnArray": ["low","standard","high"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_94_reverse_gear_incoming_car_warning"},
+          {"style": 4, "titleSrn": "_94_tsc_control"},
+          {"style": 1, "titleSrn": "_94_cruise_control", "valueSrnArray": ["_94_self_adaption","_2_setting_1_2_1"]},
+          {"style": 4, "titleSrn": "_94_automatic_engine_shutdown"},
+          {"style": 4, "titleSrn": "_94_esp_state"},
+          {"style": 4, "titleSrn": "_94_auto_hold"},
+          {"style": 4, "titleSrn": "_94_lane_centring"},
+          {"style": 4, "titleSrn": "_94_sensitivity_assist"},
+          {"style": 4, "titleSrn": "_94_pre_collision_assist_drive"},
+          {"style": 4, "titleSrn": "_94_evasive_steering_assist"},
+          {"style": 4, "titleSrn": "_94_reverse_brake_assist"},
+          {"style": 4, "titleSrn": "_94_parking_sensirs"}
+
+        ]
+      },
+      {"titleSrn": "_94_safety_warning",
+        "itemList": [
+          {"style": 4, "titleSrn": "_94_distance_prompt"},
+          {"style": 4, "titleSrn": "_94_active_braking"},
+          {"style": 1, "titleSrn": "_94_sensitivity", "valueSrnArray": ["low","standard","high"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_94_blind_spot_monitoring"},
+          {"style": 4, "titleSrn": "_94_fatigue_driving_warning"}
+        ]
+      },
+      {"titleSrn": "light_settings",
+        "itemList": [
+          {"style": 2, "titleSrn": "_94_atmosphere_lamp", "max": 100, "min": 0, "progress": 0, "value": 0, "unit": "null_value"},
+          {"style": 1, "titleSrn": "_94_headlight_delay", "valueSrnArray": ["zero_second","_270_setting_item1","_278_20s","mazda_binary_car_set20_2"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_94_automatic_high_beam"},
+          {"style": 4, "titleSrn": "_334_day_light"},
+          {"style": 1, "titleSrn": "_250_i_went_home_with", "valueSrnArray": ["_341_setting_1_0_1","second_30","minute_1","minute_2"]},
+          {"style": 1, "titleSrn": "_94_indoor_lamp", "valueSrnArray": ["_278_5min","_278_10min","_94_fifteen_minute"]},
+          {"style": 1, "titleSrn": "_94_welcome_lamp", "valueSrnArray": ["hiworld_jeep_123_item_16","fifteen_second","thirty_second"]},
+          {"style": 4, "titleSrn": "_94_fog_light_steering_assist"}
+        ]
+      },
+      {"titleSrn": "_94_electric_mirror_settings",
+        "itemList": [
+          {"style": 4, "titleSrn": "_94_automatic_folding"}
+        ]
+      },
+      {"titleSrn": "_94_key_lock",
+        "itemList": [
+          {"style": 4, "titleSrn": "_94_switch_prohibited"},
+          {"style": 4, "titleSrn": "_94_voice_feedback"},
+          {"style": 4, "titleSrn": "_94_false_lock_warning"},
+          {"style": 1, "titleSrn": "_94_remote_unlock", "valueSrnArray": ["_194_all_doors","only_driver_door"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_94_automatically_unlock"},
+          {"style": 4, "titleSrn": "_94_remote_control_on"},
+          {"style": 4, "titleSrn": "_94_remote_control_off"},
+          {"style": 4, "titleSrn": "_94_activate_remote_start"},
+          {"style": 1, "titleSrn": "_94_air_conditioning_control", "valueSrnArray": ["auto","_94_last_set"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_cycle", "valueSrnArray": ["_278_5min","_278_10min","_94_fifteen_minute"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_94_speed_lock"},
+          {"style": 4, "titleSrn": "_94_one_click"},
+          {"style": 4, "titleSrn": "_94_key_detection_alert"},
+          {"style": 4, "titleSrn": "_94_auto_lock"},
+          {"style": 4, "titleSrn": "_94_key_free"},
+          {"style": 4, "titleSrn": "_94_park_lock_control"}
+        ]
+      },
+      {"titleSrn": "_94_wiper",
+        "itemList": [
+          {"style": 4, "titleSrn": "_94_rain_sensing_wiper"},
+          {"style": 4, "titleSrn": "_94_repeat_wiper_once"},
+          {"style": 4, "titleSrn": "_94_rear_wiper"},
+          {"style": 4, "titleSrn": "_94_auto_wiper"},
+          {"style": 4, "titleSrn": "_94_automatic_maintenance"}
+        ]
+      },
+      {"titleSrn": "_94_general_settings",
+        "itemList": [
+          {"style": 1, "titleSrn": "_94_tire_pressure_unit", "valueSrnArray": ["_118_setting_value_38","_118_setting_value_37","_118_setting_value_36"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_measure_unit", "valueSrnArray": ["_94_mi_mpg","_94_km_l_100km","_94_km_km_l"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_temperature_unit", "valueSrnArray": ["str_temp_c_unit","str_temp_f_unit"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "airSetting",
+        "itemList": [
+          {"style": 0, "titleSrn": "_94_cockpit_fresh_air", "value": "null_value"},
+          {"style": 0, "titleSrn": "_94_pm_2_5_in_vehicle", "value": "null_value"}
+        ]
+      },
+      {"titleSrn": "_94_passengerSideSecureAirbag",
+        "itemList": [
+          {"style": 4, "titleSrn": "_94_passenger_airbag"}
+        ]
+      },
+      {"titleSrn": "_94_cross_country",
+        "itemList": [
+          {"style": 4, "titleSrn": "_94_hill_descent_control"},
+          {"style": 4, "titleSrn": "_94_rear_drive_acceleration_lock"}
+        ]
+      },
+      {"titleSrn": "_284_setting_item_47",
+        "itemList": [
+          {"style": 0, "titleSrn": "_94_self_adaption"},
+          {"style": 1, "titleSrn": "_270_setting_12", "valueSrnArray": ["ford_raise_color_ice_blue","_250_orange","ford_raise_color_light_blue","ford_raise_color_light_red","ford_raise_color_light_green","_250_blue","ford_raise_color_light_purple"], "selectIndex": 0, "value": ""},
+          {"style": 2, "titleSrn": "_270_setting_13", "min": 0, "max": 20, "progress": 0, "value": "0", "unit": "null_value"}
+        ]
+      },
+      {"titleSrn": "amplifier_setting",
+        "itemList": [
+          {"style": 1, "titleSrn": "speed_linkage_volume_adjustment", "valueSrnArray": ["close","low","middle","high"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_sound_effect_mode", "valueSrnArray": ["stereo","surround_sound"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_position", "valueSrnArray": ["_94_all","_94_backseat","_94_driver_seat"], "selectIndex": 0, "value": ""},
+          {"style": 3, "titleSrn": "_94_reset_all", "confirmTis": "_94_reset_all"}
+        ]
+      },
+      {"titleSrn": "other_set",
+        "itemList": [
+          {"style": 4, "titleSrn": "_94_electric_trunk"},
+          {"style": 4, "titleSrn": "_94_hands_free"}
+        ]
+      },
+      {"titleSrn": "seat_set",
+        "itemList": [
+          {"style": 1, "titleSrn": "_94_driver", "valueSrnArray": ["close","_94_adjustment","_94_massage"], "selectIndex": 0, "value": ""},
+          {"enable": false, "style": 2, "titleSrn": "_94_driver_high", "min": 0, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "close", "unit": "null_value"},
+          {"enable": false, "style": 2, "titleSrn": "_94_driver_mid", "min": 0, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "close", "unit": "null_value"},
+          {"enable": false, "style": 2, "titleSrn": "_94_driver_low", "min": 0, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "close", "unit": "null_value"},
+          {"enable": false, "style": 1, "titleSrn": "_94_driver_backrest", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""},
+          {"enable": false, "style": 1, "titleSrn": "_94_driver_cushion", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_94_passenger", "valueSrnArray": ["close","_94_adjustment","_94_massage"], "selectIndex": 0, "value": ""},
+          {"enable": false, "style": 2, "titleSrn": "_94_passenger_high", "min": 0, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "close", "unit": "null_value"},
+          {"enable": false, "style": 2, "titleSrn": "_94_passenger_mid", "min": 0, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "close", "unit": "null_value"},
+          {"enable": false, "style": 2, "titleSrn": "_94_passenger_low", "min": 0, "max": 10, "progress": 0, "isProgressDraggable": false, "value": "close", "unit": "null_value"},
+          {"enable": false, "style": 1, "titleSrn": "_94_passenger_backrest", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""},
+          {"enable": false, "style": 1, "titleSrn": "_94_passenger_cushion", "valueSrnArray": ["close","low","high"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "_61_vehicle_type_setup",
+        "itemList": [
+          {"style": 1, "titleSrn": "_279_vehicle_config", "valueSrnArray": ["low","middle","high"], "selectIndex": 0, "value": ""}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_306_value_20", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_306_value_21", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_283_meter_value_5", "defaultValueSrn": "null_value"},
+          {"titleSrn": "remaining_oil", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_94_oil_life", "defaultValueSrn": "null_value"},
+          {"titleSrn": "average_speed", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_94_maintenance_mileage", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_94_battery_capacity", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_94_battery_voltage", "defaultValueSrn": "null_value"}
+        ]
+      },
+      {
+        "headTitleSrn": "_94_park_assist",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_41_rear_radar", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_41_front_radar", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_94_radar_status", "defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isHaveLeftRightRadar":true,
+    "isShowCusPanoramicView": false,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0, "titleSrn": "_81_video_restore"},
+      {"style": 0, "titleSrn": "_81_video_enlarge"},
+      {"style": 0, "titleSrn": "_94_rear_view_split_screen"},
+      {"style": 0, "titleSrn": "_94_whole_car"},
+      {"style": 0, "titleSrn": "_94_front_panoramic"},
+      {"style": 0, "titleSrn": "_94_front_and_left"},
+      {"style": 0, "titleSrn": "_94_back_panoramic"},
+      {"style": 0, "titleSrn": "_94_back_dip"},
+      {"style": 0, "titleSrn": "_94_front_left"},
+      {"style": 0, "titleSrn": "_94_front"},
+      {"style": 0, "titleSrn": "_94_right_front"},
+      {"style": 0, "titleSrn": "_94_right_back"},
+      {"style": 0, "titleSrn": "_94_back"},
+      {"style": 0, "titleSrn": "_94_left_back"}
+    ]
+  },
+
+  "syncPageUiSet": {
+    "leftBtnActions": ["media", "phone", "voice", "keyboard"],
+    "keyboardActions": [
+      ["null", "up", "null"],
+      ["left", "ok", "right"],
+      ["null", "down", "null"],
+      ["info", "menu", "device"],
+      ["prev", "shuff", "next"]
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 14,
+    "bandRange": 7,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": false
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title": "tire_pressure_content","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "state","value": "set_default"}]},
+      {"whichTire":1,"list": [{"title": "tire_pressure_content","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "state","value": "set_default"}]},
+      {"whichTire":2,"list": [{"title": "tire_pressure_content","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "state","value": "set_default"}]},
+      {"whichTire":3,"list": [{"title": "tire_pressure_content","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "state","value": "set_default"}]}
+    ]
+  },
+
+  "panelKeyPageUiSet": {
+    "list": [
+      "close",
+      "_94_parallel_parking",
+      "_94_vertical_parking",
+      "_94_parallel_berth_out"
+    ],
+    "count": 4
+  }
+}

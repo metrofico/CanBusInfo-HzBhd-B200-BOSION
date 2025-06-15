@@ -1,0 +1,194 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "drive_data"
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_55_0x65_title",
+        "itemList": [
+          {
+            "titleSrn": "mazda_binary_car_set2",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "mazda_binary_car_set2_0",
+              "mazda_binary_car_set2_1",
+              "mazda_binary_car_set2_3",
+              "mazda_binary_car_set2_2"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set5",
+            "style": 1,
+            "valueSrnArray": [
+              "mazda_binary_car_set5_1",
+              "mazda_binary_car_set5_2"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set4",
+            "style": 1,
+            "valueSrnArray": [
+              "mazda_binary_car_set20_1",
+              "mazda_binary_car_set10_4",
+              "mazda_binary_car_set10_3"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set3",
+            "style": 1,
+            "valueSrnArray": [
+              "high",
+              "middle",
+              "low",
+              "close"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set6",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "car_light_set",
+        "itemList": [
+          {
+            "titleSrn": "mazda_binary_car_set9",
+            "style": 1,
+            "valueSrnArray": [
+              "mazda_binary_car_set9_1",
+              "_278_30min",
+              "min_10"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set10",
+            "style": 1,
+            "valueSrnArray": [
+              "mazda_binary_car_set10_4",
+              "mazda_binary_car_set10_3",
+              "mazda_binary_car_set10_2",
+              "mazda_binary_car_set10_1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set7",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set20",
+            "style": 1,
+            "valueSrnArray": [
+              "mazda_binary_car_set20_2",
+              "mazda_binary_car_set20_1",
+              "mazda_binary_car_set10_4",
+              "mazda_binary_car_set10_3",
+              "hiworld_jeep_123_item_16"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "mazda_binary_car_set21",
+            "style": 1,
+            "valueSrnArray": [
+              "mazda_binary_car_set22_5",
+              "mazda_binary_car_set22_4",
+              "mazda_binary_car_set22_3",
+              "mazda_binary_car_set22_2",
+              "mazda_binary_car_set21_1"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          }
+        ]
+      },
+      {
+        "titleSrn": "other_set",
+        "itemList": [
+          {
+            "titleSrn": "mazda_binary_car_set1",
+            "style": 1,
+            "valueSrnArray": [
+              "close",
+              "open"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "vm_golf7_language_setup",
+            "style": 1,
+            "valueSrnArray": [
+              "language_1",
+              "language_fr",
+              "language_es"
+            ],
+            "selectIndex": 0,
+            "value": ""
+          },
+          {
+            "titleSrn": "vm_golf7_vehicle_setup_factory_setup",
+            "style": 3,
+            "confirmTis": "confirm_reset_alert_dialog"
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_status",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "gear_position",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "light_status",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "park_help",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parkPageUiSet":{
+    "isShowCusPanoramicView": true,
+    "isShowCustomBaseLine": true,
+    "isShowCustomTrack": true
+  }
+}

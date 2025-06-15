@@ -1,0 +1,50 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data","warning"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "_218_setting_0_4","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_218_setting_0_3","style": 1,"valueSrnArray": ["unit_km", "_96_range_unit_mile"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_218_setting_0_2","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_218_setting_0_1","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_218_setting_0_0","style": 1,"valueSrnArray": ["ford_direction_indicators_flash_1_times", "ford_direction_indicators_flash_3_times"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac"],
+        [],[],
+        ["max_heat", "auto", "in_out_cycle"]
+      ],
+      "smallWindowStatusArray": ["power", "ac", "auto", "in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set80","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+  }
+}

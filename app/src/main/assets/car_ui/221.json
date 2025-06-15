@@ -1,0 +1,81 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data","warning","panel_key"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","auto","dual","front_defog","rear_defog"],
+        ["power"],["in_out_cycle"],
+        ["blow_foot","blow_window_foot","blow_head","blow_head_foot"]
+      ],
+      "disableBtnArray": ["auto","dual","rear_defog"],
+      "smallWindowStatusArray": ["ac", "auto", "dual", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_221_driver_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_221_driver_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_221_driver_3","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_207_title_1",
+        "itemList": [
+          {"titleSrn": "_207_setting_1","style": 1,"valueSrnArray": ["_207_setting_7","_207_setting_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_207_setting_2","style": 1,"valueSrnArray": ["_207_setting_9","_207_setting_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_207_setting_3","style": 1,"valueSrnArray": ["_207_setting_9","_207_setting_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_207_setting_4","style":2,"max": 23,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_5","style":2,"max": 59,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_10","style":2,"max": 23,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_11","style":2,"max": 59,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_12","style": 3,"confirmTis": "_207_setting_12"},
+          {"titleSrn": "_207_setting_13","style": 3,"confirmTis": "_207_setting_13"},
+          {"titleSrn": "_207_setting_112","style": 3,"confirmTis": "_207_setting_112"},
+          {"titleSrn": "_207_setting_113","style": 3,"confirmTis": "_207_setting_113"}
+        ]
+      },
+      {
+        "titleSrn": "_207_setting_16",
+        "itemList": [
+          {"titleSrn": "_207_setting_14","style": 3,"confirmTis": "_207_setting_14"},
+          {"titleSrn": "_207_setting_15","style": 3,"confirmTis": "_207_setting_15"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_221_panoramic_1"},
+      {"style": 0,"titleSrn": "_221_panoramic_2"},
+      {"style": 0,"titleSrn": "_221_panoramic_3"},
+      {"style": 0,"titleSrn": "_221_panel_btn_rear_camera_close"}
+      ]
+  },
+
+  "panelKeyPageUiSet": {
+    "list": ["_221_panel_btn_rear_camera_open"
+    ]
+  }
+
+
+}

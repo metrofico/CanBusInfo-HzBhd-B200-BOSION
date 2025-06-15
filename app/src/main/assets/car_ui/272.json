@@ -1,0 +1,77 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data","original_car_device","amplifier"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "mute","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_asl","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_272_pos","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_12","front_area","rear_area","driver"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_272_eq_key","style": 0,"value": "null_value","unit": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","cycle_in_out_close","dual","auto"],
+        ["blow_negative","blow_positive"],["front_defog","rear_defog"],
+        ["pollrn_removal","windshield_deicing","swing","clean_air","auto_cycle"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "front_defog"],
+      "disableBtnArray": ["auto_cycle"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vm_golf7_vehicle_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_units_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_272_car_status_ill","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["am","fm1","fm2","cdc","navi","usb_box","aux"],
+    "rowBottomBtnAction":
+    [],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "volume", "value": ""}
+    ],
+    "isHaveSongList": true,
+    "isHavePlayTimeSeekBar": false,
+    "isTopBtnCanScroll": true
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": false,
+    "isShowTrack": true
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 30,
+    "bandRange": 15,
+    "balanceRange": 30,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  }
+}

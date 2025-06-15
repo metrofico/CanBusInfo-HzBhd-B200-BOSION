@@ -1,0 +1,86 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac_max","auto","sync"],
+        ["ac","aqs"],["in_out_auto_cycle","dual"],
+        ["manual","clean_air","auto_defog","rear_defog","front_defog"]
+      ],
+      "disableBtnArray": ["aqs","auto_defog"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat":true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ],
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "seatColdSrnArray": [
+        "close_seat_cold",
+        "left_seat_cold_1",
+        "left_seat_cold_2",
+        "left_seat_cold_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power","rear_lock"]
+      ],
+      "isCanSetTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_412_drive",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_412_drive1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_412_drive2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic":true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_413_panoramic2"},
+      {"style": 0,"titleSrn": "_413_panoramic3"}
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_413_panoramic",
+        "itemList": [
+          {"titleSrn": "_413_panoramic1","style": 1,"valueSrnArray": ["_413_off","_413_on"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  }
+
+}

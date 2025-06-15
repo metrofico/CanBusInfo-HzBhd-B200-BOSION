@@ -1,0 +1,24 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["amplifier"]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "volumeRange":8,
+    "seekBarVolumeMax": 16,
+    "balanceRange": 18,
+    "isCanBalanceControl": true,
+    "isHaveVolumeControl": true,
+    "isCanSeekBarMinPlus": false,
+    "lineBtnAction":[
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowPanoramic":false,
+    "isShowRadarLocation": false,
+    "isShowRadarDistance": false
+  }
+}

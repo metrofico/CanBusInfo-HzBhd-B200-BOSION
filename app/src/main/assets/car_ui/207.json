@@ -1,0 +1,64 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data"]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_207_data_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_207_data_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_207_data_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_207_data_4","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_207_title_1",
+        "itemList": [
+          {"titleSrn": "_207_setting_1","style": 1,"valueSrnArray": ["_207_setting_7","_207_setting_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_207_setting_2","style": 0,"value": ""},
+          {"titleSrn": "_207_setting_3","style": 0,"value": ""},
+          {"titleSrn": "_207_setting_4","style":2,"max": 23,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_5","style":2,"max": 59,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_10","style":2,"max": 23,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_11","style":2,"max": 59,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_207_setting_12","style": 3,"confirmTis": "_207_setting_12"},
+          {"titleSrn": "_207_setting_13","style": 3,"confirmTis": "_207_setting_13"},
+          {"titleSrn": "_207_setting_112","style": 3,"confirmTis": "_207_setting_112"},
+          {"titleSrn": "_207_setting_113","style": 3,"confirmTis": "_207_setting_113"}
+        ]
+      },
+      {
+        "titleSrn": "_207_setting_16",
+        "itemList": [
+          {"titleSrn": "_207_setting_14","style": 3,"confirmTis": "_207_setting_14"},
+          {"titleSrn": "_207_setting_15","style": 3,"confirmTis": "_207_setting_15"},
+          {"titleSrn": "_2_setting_1_4","style": 0,"value": ""}
+        ]
+      },{
+        "titleSrn": "air_setting",
+        "itemList": [
+          {"titleSrn": "_207_Conv_trips_05","style": 0,"value": ""},
+          {"titleSrn": "_207_Conv_trips_04","style": 0,"value": ""}
+        ]
+      },{
+        "titleSrn": "other_set",
+        "itemList": [
+          {"titleSrn": "_220_Sunshade","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_Title26","style": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

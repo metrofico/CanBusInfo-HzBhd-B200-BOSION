@@ -1,0 +1,28 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog", "rear_defog","dual"],
+        ["auto"],
+        ["power"],
+        ["ac", "in_out_cycle","amb"]
+      ],
+      "isAllBtnCanClick": false,
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

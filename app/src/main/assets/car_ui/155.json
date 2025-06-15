@@ -1,0 +1,15 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["original_car_device"]
+  },
+
+
+  "originalCarDevicePageUiSet": {
+    "isHavePlayTimeSeekBar": false,
+    "rowBottomBtnAction":
+    ["left","play","stop","right"],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "_118_setting_title_104", "value": ""}
+    ]
+  }
+}

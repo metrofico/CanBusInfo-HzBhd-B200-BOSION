@@ -1,0 +1,135 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "setting"
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "ac",
+          "in_out_cycle"
+        ],
+        [],
+        [],
+        [
+          "rear_defog"
+        ]
+      ],
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {
+        "style": 0,
+        "titleSrn": "P405_x45_1"
+      },
+      {
+        "style": 0,
+        "titleSrn": "P405_x45_2"
+      },
+      {
+        "style": 0,
+        "titleSrn": "P405_x45_3"
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S405_x87_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S405_x87_1",
+            "valueSrnArray": [
+              "S405_x87_1_1",
+              "S405_x87_1_2",
+              "S405_x87_1_3",
+              "S405_x87_1_4"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S405_x87_2",
+            "valueSrnArray": [
+              "S405_x87_2_1",
+              "S405_x87_2_2",
+              "S405_x87_2_3",
+              "S405_x87_2_4",
+              "S405_x87_2_5"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S405_x87_3"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S405_x87_4"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S405_x87_5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S405_x87_6"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S405_x87_7",
+            "valueSrnArray": [
+              "S405_x87_7_1",
+              "S405_x87_7_2",
+              "S405_x87_7_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S405_x87_8"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S405_x87_9",
+            "valueSrnArray": [
+              "S405_x87_2_1",
+              "S405_x87_2_2",
+              "S405_x87_2_3",
+              "S405_x87_2_4",
+              "S405_x87_2_5"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S405_x87_10",
+            "valueSrnArray": [
+              "S405_x87_10_1",
+              "S405_x87_10_2",
+              "S405_x87_10_3"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S405_x87_11"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S405_x87_12"
+          }
+        ]
+      }
+    ]
+  }
+}

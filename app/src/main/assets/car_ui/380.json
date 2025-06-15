@@ -1,0 +1,18 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["panel_key"]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "_380_item_1",
+      "_380_item_2",
+      "_380_item_3",
+      "_380_item_4",
+      "_380_item_5"
+    ],
+    "count": 3
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true
+  }
+}

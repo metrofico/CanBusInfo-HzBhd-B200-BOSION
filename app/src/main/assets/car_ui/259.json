@@ -1,0 +1,73 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","ion","rear_defog","dual"],
+        ["ac_max"],["power"],
+        ["ac","auto","in_out_auto_cycle","blow_positive","blow_negative"]
+        ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "front_defog"],
+      "disableBtnArray": ["ac_max"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowPmValue": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "geely_fortification_prompt_type","style": 1,"valueSrnArray": ["light","chery_lighting_and_horn"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_electronic_assist_mode","style": 1,"valueSrnArray": ["geely_comfort","geely_sport"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_remote_lock_feedback","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_daytime_running_lights","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_auto_close_the_window_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_close_the_sunroof_after_locking","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_window_set",
+        "itemList": [
+          {"titleSrn": "window_left_front","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "window_right_front","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "window_left_rear","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "window_right_rear","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "skylight","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "rev","defaultValueSrn": "set_default"},
+          {"titleSrn": "acc","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set77_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set77_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set77_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "key_360","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

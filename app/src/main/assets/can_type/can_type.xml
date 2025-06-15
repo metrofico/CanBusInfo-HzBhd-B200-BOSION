@@ -1,0 +1,494 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?><!--除属性name(protocol name 是冗余属性, 可加可不加), id, baud_rate, pack_type外, 其他属性设有默认值,如is_app_handle_key="1"-->
+<root>
+    <protocol_company name="睿志诚 Raise">
+        <car_category name="丰田 Toyota"></car_category>
+        <car_category name="雷克萨斯 Lexus"></car_category>
+        <car_category name="东风 DFM">
+            <protocol name="睿志诚_东风风光和江西五十铃_串口通信协议V1.01.021（车型内部说明）"
+                baud_rate="0" id="251" pack_type="0">
+                <car_model name="360" years="2015" />
+                <car_model name="330s" years="2014-2018" />
+                <car_model name="580" years="2016-2018" />
+                <car_model name="370" years="2016-2017" />
+                <car_model name="S560" years="2018" />
+                <car_model name="580" years="2020" />
+                <car_model name="S560" car_id="16" years="2020-2021" />
+                <car_model name="580" car_id="17" years="2021" />
+                <car_model name="500" car_id="18" years="2021" />
+            </protocol>
+        </car_category>
+        <car_category name="五十铃 ISUZU">
+            <protocol name="睿志诚_东风风光和江西五十铃_串口通信协议V1.01.021（车型内部说明）"
+                baud_rate="0" id="251" pack_type="0">
+                <car_model name="瑞迈" years="2017" />
+                <car_model name="D-MAX" years="2017" />
+                <car_model name="瑞迈" car_id="9" years="2019" />
+                <car_model name="牧游侠 MU-X" car_id="12" years="2018/2020" />
+                <car_model name="铃拓" years="2020" />
+                <car_model name="庆铃" car_id="14" years="2018" />
+                <car_model name="庆铃-达咖" car_id="15" years="2021" />
+            </protocol>
+        </car_category>
+        <car_category name="江铃 JMC">
+            <protocol name="睿志诚_东风风光和江西五十铃_串口通信协议V1.01.021（车型内部说明）"
+                baud_rate="0" id="251" pack_type="0">
+                <car_model name="易至 EV3" years="2019" />
+                <car_model name="E400" years="2018" />
+            </protocol>
+        </car_category>
+        <car_category name="标致 Peugeot">
+            <protocol name="睿志诚_标雪保留原车显示屏_串口通信协议V1.00.010" baud_rate="2" id="219"
+                pack_type="3">
+                <car_model name="MPV Tepee" />
+                <car_model name="307" years="2004-2013" />
+                <car_model name="408" years="2010-2013" />
+                <car_model name="408SW" />
+                <car_model name="408CC" />
+                <car_model name="3008" years="2013-2019" />
+                <car_model name="508" />
+                <car_model name="RZC" />
+            </protocol>
+        </car_category>
+    </protocol_company>
+
+    <protocol_company name="比纳瑞 Binary">
+        <car_category name="丰田 Toyota">
+            <protocol name="比纳瑞科技_丰田皇冠串口通信协议V106" baud_rate="0" id="362"
+                pack_type="0">
+                <car_model name="皇冠 Crown 14" />
+            </protocol>
+        </car_category>
+    </protocol_company>
+
+    <protocol_company name="威驰 Hiworld">
+        <car_category name="北汽 BAIC">
+            <protocol name="BAP001_16,18北汽BJ20_V1.2_2018.05.21" baud_rate="38400" id="401"
+                pack_type="5">
+                <car_model name="BJ20" />
+            </protocol>
+            <protocol name="BAP002_17北汽威旺M50F,幻速S3L,16X35,16X55仿真工具_V1.6.1_2019.01.04"
+                baud_rate="38400" id="402" pack_type="5">
+                <car_model name="幻速 S3L" car_id="8" />
+                <car_model name="绅宝 X35" car_id="5" years="2016" />
+                <car_model name="M50F" car_id="6" />
+                <car_model name="绅宝 X35" car_id="7" years="2018" />
+            </protocol>
+            <protocol name="BAP003_16北汽幻速S6_V1.4_2016.12.21" baud_rate="0" id="403"
+                pack_type="5">
+                <car_model name="幻速 S6" />
+            </protocol>
+            <protocol name="BAP007_19款北汽智行_V1.1_2019.11.29" baud_rate="0" id="404"
+                pack_type="5">
+                <car_model name="智行" />
+            </protocol>
+        </car_category>
+        <car_category name="上汽 SAIC">
+            <protocol name="11-15荣威550名爵6通讯协议 _V1.0_2018.08" baud_rate="0" id="368"
+                pack_type="6">
+                <car_model name="荣威550" years="2011-2015" />
+                <car_model name="名爵 6" years="2011-2015" />
+            </protocol>
+            <protocol name="SAP003_2015名爵锐腾_V1.3_2017.11.27" baud_rate="0" id="369"
+                pack_type="5">
+                <car_model name="荣威 950" car_id="1" />
+                <car_model name="荣威 550" car_id="2" years="2011-2013" />
+                <car_model name="名爵 6" car_id="3" years="2011-2013" />
+                <car_model name="荣威 550" car_id="4" years="2013-至今" />
+                <car_model name="名爵 6" car_id="5" years="2013-至今" />
+                <car_model name="荣威 360" car_id="6" />
+                <car_model name="锐腾" car_id="7" />
+            </protocol>
+            <protocol name="SAP004_名爵ZS&amp;大通T60_V1.4.0_2019.11.25" baud_rate="0" id="387"
+                pack_type="5">
+                <car_model name="大通MAXUS T60" car_id="1" />
+                <car_model name="名爵MG ZS" car_id="2" />
+                <car_model name="大通MAXUS T60 海外" car_id="3" />
+            </protocol>
+            <protocol name="SAP005_2015荣威360_V1.0_2015.09.12" baud_rate="0" id="388"
+                pack_type="5">
+                <car_model name="荣威Roewe 360" />
+            </protocol>
+        </car_category>
+        <car_category name="大众 VW">
+            <protocol name="VWP003_大众全兼容_老奔驰兼容_V2.0_2021.07.16(72.73全带)" baud_rate="0"
+                id="5" pack_type="7">
+                <car_model name="全兼容 Fully Compatible" />
+            </protocol>
+        </car_category>
+        <car_category name="通用 GM">
+            <protocol name="GMP003_凯迪拉克全兼容_V2.1_2018.07.25" baud_rate="0" id="365"
+                pack_type="5">
+                <car_model name="SRX" car_id="21" />
+                <car_model name="ATS" car_id="43" />
+                <car_model name="XTS" car_id="44" />
+                <car_model name="君越" car_id="36" years="2013-2014" />
+            </protocol>
+            <protocol name="GMP005_19英朗加按键板通讯协议_V1.0_2020.05.25" baud_rate="0" id="366"
+                pack_type="5">
+                <car_model name="英朗 Excelle" years="2019" />
+            </protocol>
+        </car_category>
+        <car_category name="丰田 Toyota">
+            <protocol name="TYP001_丰田全兼容_V2.7.1_2021.11.03" baud_rate="0" id="18"
+                pack_type="5">
+                <car_model name="霸道 Prado" car_id="1" years="2010-2016" />
+                <car_model name="霸道 Prado" car_id="2" years="2018" />
+                <car_model name="锐志 Reiz" car_id="3" />
+                <car_model name="荣放 RAV 4" car_id="4" years="2016-2019" />
+                <car_model name="凯美瑞 Camry" car_id="5" years="2010-2016" />
+                <car_model name="凯美瑞 Camry" car_id="6" years="2018" />
+                <car_model name="卡罗拉 Corolla" car_id="6" years="2019" />
+                <car_model name="卡罗拉/雷凌 Corolla/Levin" car_id="7" />
+                <car_model name="汉兰达 Highlander" car_id="8" />
+                <car_model name="奔跑者 Fortuner" car_id="9" years="2020" />
+                <car_model name="荣放 RAV 4" car_id="10" years="2020" />
+                <car_model name="亚洲龙 Avalon" car_id="11" />
+                <car_model name="皇冠 Crown 14" car_id="12" />
+                <car_model name="雷克萨斯 Lexus" car_id="13" years="2018" />
+                <car_model name="雷克萨斯 Lexus" car_id="14" years="2009" />
+                <car_model name="塞纳 Sienna" car_id="15" years="2021" />
+                <car_model name="凌放 威飒Ling Fangwei Sa" car_id="16" years="2022" />
+                <car_model name="汉兰达 highlander" car_id="17" years="2022" />
+                <car_model name="陆放 Land release" car_id="18" years="2021" />
+                <car_model name="锐放 Ruifang" car_id="19" years="2022" />
+                <car_model name="锋兰达 Fenglanda" car_id="20" years="2022" />
+                <!--<car_model name="凯美瑞 Camry" years="2018"
+                    car_id="21"/>-->
+                <car_model name="雷克萨斯 ES 高配  Lexus HI" car_id="22" years="2009-2018" />
+                <car_model name="雷克萨斯 ES 低配 Lexus LOW" car_id="23" years="2009-2018" />
+                <car_model name="锐志（保留原车空调按键） Reiz" car_id="24" years="2006" />
+                <car_model name="锐志（改装空调按键） Reiz" car_id="25" years="2006" />
+                <car_model name="RAV4" car_id="26" years="2022" />
+                <car_model name="NOAH 澳门" car_id="27" years="2022" />
+                <car_model name="威驰 Vios（东南亚）" car_id="28" years="2022" />
+                <car_model name="威驰 Vios（东南亚）" car_id="29" years="2023" />
+                <car_model name="卡罗拉 CROSS（东南亚）" car_id="30" years="2023" />
+                <car_model name="卡罗拉 CROSS（中东）" car_id="31" years="2022" />
+                <car_model name="其他车 Other" car_id="32" years="无" />
+            </protocol>
+            <protocol name="TYP004_13代皇冠高配_V1.0.3_2021.07.14" baud_rate="0" id="281"
+                is_show_app="1" pack_type="5">
+                <car_model name="皇冠 Crown 13" />
+            </protocol>
+        </car_category>
+        <car_category name="英菲尼迪 Infiniti">
+            <protocol name="IFP001_英菲尼迪全兼容_17日产途乐、08~12天籁公爵_V1.4.6_2021.03.22"
+                baud_rate="0" id="314" pack_type="5">
+                <car_model name="QX50 -PORTRAIT" car_id="1" />
+                <car_model name="Q70 -Reserved Host -LANDSCAPE" car_id="2" years="2015" />
+                <car_model name="Q70 -Complete Disassembly" car_id="3" years="2015" />
+                <car_model name="QX60 -Reserved Host -LANDSCAPE" car_id="4" />
+                <car_model name="QX60 -Reserved Host -PORTRAIT" car_id="5" />
+                <car_model name="Q50L -Reserved Host -LANDSCAPE" car_id="6" years="2016" />
+                <car_model name="G37" car_id="7" years="2010" />
+                <car_model name="Q50L -PORTRAIT" car_id="8" years="2016" />
+                <car_model name="途乐 Patrol -Complete Disassembly -PORTRAIT -LOW" car_id="9"
+                    years="2017" />
+                <car_model name="FX35 - Reserved Host" car_id="10" years="2011" />
+                <car_model name="天籁公爵 Teana -Reserved Host" car_id="11" years="2008-2012" />
+                <car_model name="天籁公爵 Teana -Removed Host" car_id="12" years="2008-2012" />
+            </protocol>
+        </car_category>
+        <car_category name="雷诺 Renault">
+            <protocol name="LNP002_雷诺全兼容  V2.0.6_2021.11.17" baud_rate="0" id="163"
+                pack_type="4">
+                <car_model name="卡缤 Captur" />
+                <car_model name="科雷嘉 Kadjar" />
+                <car_model name="达斯特 Duster" />
+                <car_model name="Clio 4 -LOW" />
+                <car_model name="Duster" years="2018" />
+                <car_model name="梅甘娜 Megena 2" years="2004-2007" />
+                <car_model name="梅甘娜 Megena 3" />
+                <car_model name="梅甘娜 Megena 4 -PORTRAIT" />
+                <car_model name="Fluence" years="2012" />
+                <car_model name="Latitude" />
+                <car_model name="科雷缤 Captur" years="2019" />
+                <car_model name="科雷傲 Koleos -PORTRAIT" years="2017" />
+                <car_model name="Clio 5" />
+                <car_model name="Sandero" years="2021" />
+                <car_model name="华晨雷诺金杯观镜 -横屏" />
+            </protocol>
+        </car_category>
+        <car_category name="本田 Honda">
+            <protocol name="HDP004_本田全兼容_V5.0_2021.01.04" baud_rate="0" id="55" pack_type="5">
+                <car_model name="凌派 Crider" />
+                <car_model name="杰德 Jade" />
+                <car_model name="XR-V" />
+                <car_model name="缤智 Vezel" />
+                <car_model name="奥德赛 Odyssey" years="2015" />
+                <car_model name="飞度 Fit" years="2014" />
+                <car_model name="锋范 City" years="2015" />
+                <car_model name="哥瑞 Greiz" />
+                <car_model name="思域 Civic" years="2016" />
+                <!--                <car_model name="冠道" years="2017"/>-->
+                <car_model name="CRV" years="2017" />
+                <car_model name="CRV" years="2019" />
+                <car_model name="雅阁 Accord" years="2018" />
+                <car_model name="CRV" years="2012" />
+                <car_model name="思铂睿 Spirior" years="2015" />
+                <car_model name="凌派 Crider" years="2019" />
+                <car_model name="享域 Envix" years="2019" />
+                <car_model name="CRV" years="2012" />
+                <car_model name="CRV" years="2015" />
+                <car_model name="奥德赛 Odyssey -台湾 Taiwan" years="2015" />
+                <car_model name="奥德赛 Odyssey -台湾 Taiwan" years="2018" />
+            </protocol>
+            <protocol name="HDP001_本田04~08老奥赛德_V1.1_2017.06.19" baud_rate="0" id="376"
+                pack_type="5">
+                <car_model name="奥德赛 Odyssey" years="2004-2008" />
+            </protocol>
+            <protocol name="HDP002_本田12~15款艾力绅,09~14奥德赛_V1.3_2021.04.25" baud_rate="0"
+                id="377" pack_type="5">
+                <car_model name="艾力绅 Elysion" years="2012-2015" />
+                <car_model name="奥德赛 Odyssey" years="2009-2014" />
+            </protocol>
+        </car_category>
+        <car_category name="福特 Ford">
+            <protocol name="FDP007S_07~12蒙迪欧致胜竖屏_V1.0_2017.07.13" baud_rate="0" id="378"
+                pack_type="7">
+                <car_model name="蒙迪欧致胜 Mondeo" years="2007-2012" />
+            </protocol>
+            <protocol name="FDP008_18F150 V9.0_2020.12.26" baud_rate="0" id="379" pack_type="5">
+                <car_model name="F150" />
+                <car_model name="F250" />
+                <car_model name="F350" />
+                <car_model name="F450" />
+            </protocol>
+        </car_category>
+        <car_category name="别克 Buick">
+            <protocol name="GMP001_通用低速全兼容_GM_V2.21_2020.08.25" baud_rate="0" id="168"
+                pack_type="5">
+                <car_model name="昂科雷" car_id="0" years="2009 - 至今, Gen 2" />
+                <car_model name="凯越" car_id="0" years="2018 - 至今" />
+                <car_model name="GL8" car_id="2" years="2010 - 2013, Gen 2" />
+                <car_model name="GL8" car_id="8" years="2014 - 2016, Gen 2" />
+                <car_model name="昂科拉" car_id="5" years="2012 - 2015, Gen 1" />
+                <car_model name="昂科拉" car_id="5" years="2016 - 2019, Gen 2" />
+                <car_model name="君威" car_id="1" years="2009 - 2013, Gen 2" />
+                <car_model name="君越" car_id="2" years="2010 - 2013, Gen 2" />
+                <car_model name="君越" car_id="2" years="2018 - 至今, Gen 4" />
+                <car_model name="英朗 XT" car_id="1" years="2009 - 2014, Gen 2" />
+                <car_model name="英朗 GT" car_id="1" years="2009 - 2014, Gen 2" />
+                <car_model name="新君威" car_id="1" years="2014 - 至今, Gen 6" />
+                <car_model name="昂科威" car_id="0" years="2014 - 至今, Gen 1" />
+                <car_model name="君越" car_id="2" years="2014 - 2017, Gen 3" />
+                <car_model name="威朗" car_id="0" years="2015 - 至今, Gen 1" />
+                <car_model name="威朗 GS" car_id="0" years="2016 - 至今, Gen 1" />
+                <car_model name="GL8 25S" car_id="7" years="2017 - 至今, Gen 2" />
+                <car_model name="英朗" car_id="1" years="2019 - 至今" />
+                <car_model name="科鲁泽" car_id="0" years="2019 - 至今" />
+                <car_model name="阅朗" car_id="0" years="2018 - 至今, Gen 1" />
+                <car_model name="GL8 28T ES" car_id="2" years="2016 - 2019, Gen 3" />
+                <car_model name="GL8" car_id="9" years="2020 - 至今, Gen 4" />
+                <car_model name="GL6" car_id="0" years="2017 - 至今, Gen 1" />
+                <car_model name="英朗" car_id="0" years="2020 - 至今" />
+                <car_model name="君越" car_id="2" years="高配 2013 - 2015" />
+                <car_model name="昂科拉 GX" car_id="5" years="2020 - 至今, Gen 1" />
+                <car_model name="昂科拉" car_id="5" years="2020 - 至今, Gen 3" />
+                <!--                <car_model name="Sierra" years="2014 / 2018"/>-->
+            </protocol>
+            <protocol name="GMP002_通用昂科雷_V1.1_2020.06.08" baud_rate="0" id="364" pack_type="5">
+                <car_model name="昂科雷" />
+            </protocol>
+        </car_category>
+        <car_category name="雪佛兰 Chevrolet">
+            <protocol name="GMP001_通用低速全兼容_GM_V2.21_2020.08.25" baud_rate="0" id="168"
+                pack_type="5">
+                <car_model name="爱唯欧" car_id="1" years="2011 - 至今, Gen 2" />
+                <car_model name="奥兰多" years="2011 - 至今, Gen 1" />
+                <car_model name="创酷" years="2013 - 2018, Gen 1" />
+                <car_model name="科鲁兹" car_id="1" years="2008 - 2014, Gen 1" />
+                <car_model name="新科鲁兹" years="2014 - 至今, Gen 2" />
+                <car_model name="迈锐宝" car_id="1" years="2013 - 至今, Gen 8" />
+                <car_model name="Spin" years="2013 - 至今, Gen 1" />
+
+                <car_model name="迈锐宝 XL" car_id="6" years="2016 - 2018, Gen 9" />
+                <car_model name="迈锐宝 XL" car_id="6" years="2019 - 至今, Gen 9" />
+                <car_model name="探界者 (中低配)" years="2017 - 至今, Gen 1" />
+
+                <car_model name="赛欧 3" years="2015 - 至今, Gen 4" />
+                <car_model name="科沃兹" years="2016 - 至今, Gen 1" />
+                <car_model name="乐风 RV" years="2016-2018, Gen 1" />
+
+                <car_model name="沃兰多" years="低配 2018 - 至今, Gen 1" />
+                <car_model name="沃兰多" years="全系 2018 - 至今, Gen 1" />
+
+                <car_model name="创酷" years="2019 - 至今" />
+                <car_model name="创界" years="2019 - 至今" />
+                <car_model name="S-10" years="2012 - 至今" />
+
+                <car_model name="创界" years="2014 - 2018" />
+                <car_model name="Suburban" years="2015 - 至今" />
+                <car_model name="Tahoe" years="2016 / 2018" />
+                <car_model name="Colorado" years="2018 - 至今" />
+            </protocol>
+        </car_category>
+        <car_category name="欧宝 Opel">
+            <protocol name="GMP001_通用低速全兼容_GM_V2.21_2020.08.25" baud_rate="0" id="168"
+                pack_type="5">
+                <car_model name="雅特" years="2009 - 2015, Gen 4" />
+                <car_model name="雅特" years="2015 - 至今, Gen 5" />
+                <car_model name="Mokka" years="2012 - 2016, Gen 1" />
+                <car_model name="Mokka X" years="2017 - 至今, Gen 2" />
+                <car_model name="英速亚" years="2008 - 2013, Gen 2" />
+                <car_model name="新英速亚" years="2013 - 2016, Gen 3" />
+
+                <car_model name="Karl" years="2015 - 至今" />
+
+                <car_model name="Corsa E" years="2014 - 2019" />
+                <car_model name="Adam" years="2013 - 2019" />
+                <car_model name="新英速亚" years="2017 - 至今, Gen 3" />
+            </protocol>
+            <protocol name="OPP001_欧宝_V1.2_2021.6.19" baud_rate="0" id="380" pack_type="5">
+                <car_model name="雅特 Astra" years="2004-2009" />
+                <car_model name="赛飞利 Zafira" years="2005-2014" />
+                <car_model name="安德拉 Andra" years="2006-2015" />
+                <car_model name="威达 Vectra" years="2002-2008" />
+                <car_model name="可赛 Kesai" years="2006-2014" />
+                <car_model name="Meriva" years="2003-2010" />
+            </protocol>
+        </car_category>
+        <car_category name="哈弗 Haval">
+            <protocol name="CCP003_16~18哈佛H6酷派_V1.3.2_2021.01.04" baud_rate="0" id="204"
+                pack_type="5">
+                <car_model name="H2" car_id="1" />
+                <car_model name="H6" car_id="2" />
+                <car_model name="H6 Coupe" car_id="3" />
+                <car_model name="H6 Coupe" car_id="7" years="2018" />
+            </protocol>
+            <protocol name="CCP005_16长城哈佛H1_V1.0_2016.11.17" baud_rate="0" id="385"
+                pack_type="5">
+                <car_model name="H1" />
+            </protocol>
+            <protocol name="CCP005_15~17款哈佛H9竖屏,哈佛H8横屏仿真工具_V1.2.2_2021.8.25"
+                baud_rate="0" id="386" pack_type="5">
+                <car_model name="H9" car_id="1" years="2015-2017" />
+                <car_model name="H8" car_id="2" />
+            </protocol>
+        </car_category>
+        <car_category name="宝骏 BAOJUN">
+            <protocol name="BJF1_BJ全兼容仿真工具_V1.4.1_2018.03.09" baud_rate="0" id="363"
+                pack_type="5">
+                <car_model name="730" car_id="1" years="2014" />
+                <car_model name="730" car_id="2" years="2016" />
+                <car_model name="560" car_id="3" years="2015" />
+                <car_model name="510" car_id="4" years="2017" />
+                <car_model name="730" car_id="5" years="2017" />
+                <car_model name="530" car_id="6" years="2018" />
+            </protocol>
+        </car_category>
+        <car_category name="奔驰 Benz">
+            <protocol name="BZP001_奔驰B-C-GLK-E-GLA保留主机拆屏方案_V2.5_20170825" baud_rate="0"
+                id="367" pack_type="7">
+                <car_model name="B70" />
+            </protocol>
+            <protocol name="B.奔驰-BZP003-BZG5-G55-G350" baud_rate="0" id="389" pack_type="5">
+                <car_model name="奔驰Benz G350" />
+            </protocol>
+        </car_category>
+        <car_category name="海马HAIMA">
+            <protocol name="HMP002_16海马V70,爱尚,S5_V1.4_2021.8.11" baud_rate="0" id="397"
+                pack_type="5">
+                <car_model name="V70" car_id="1" years="2016" />
+                <car_model name="爱尚 AiShang" car_id="2" />
+                <car_model name="S5" car_id="3" />
+            </protocol>
+            <protocol name="HMP003_17海马福美来_V1.2_2016.11.16" baud_rate="0" id="398"
+                pack_type="5">
+                <car_model name="福美来 Familia" />
+            </protocol>
+        </car_category>
+        <car_category name="三菱 Mitsubishi">
+            <protocol name="MTP001_欧蓝德、劲畅 V1.4_2021.07.06" baud_rate="0" id="399"
+                pack_type="5">
+                <car_model name="欧蓝德 Outlander" />
+            </protocol>
+        </car_category>
+        <car_category name="猎豹 Cheetah">
+            <protocol name="LBP001_13猎豹黑金刚_V1.0_2012.09.10" baud_rate="0" id="400"
+                pack_type="7">
+                <car_model name="黑金刚 Black King Kong" />
+            </protocol>
+        </car_category>
+        <car_category name="依维柯Iveco">
+            <protocol name="IVP001_依维柯Daily_V1.0_2020.05.12" baud_rate="0" id="419"
+                pack_type="5">
+                <car_model name="Daily" />
+            </protocol>
+        </car_category>
+        <car_category name="众泰 Zotye">
+            <protocol name="ZTP002_众泰T600_V1.0_2016.06.23" baud_rate="0" id="420" pack_type="5">
+                <car_model name="T600" car_id="1" />
+                <car_model name="X5" car_id="2" />
+                <car_model name="SWMG01" car_id="3" />
+            </protocol>
+        </car_category>
+        <car_category name="长安 Changan">
+            <protocol name="CNP001_14~17CS75,18款逸动DT_V1.5_2018.10" baud_rate="0" id="421"
+                pack_type="5">
+                <car_model name="CS75" car_id="1" />
+                <car_model name="奔奔 Ben Ben" car_id="2" />
+                <car_model name="CX70" car_id="3" />
+                <car_model name="欧尚 Auchan" car_id="4" />
+                <car_model name="悦翔V7中高配" car_id="5" />
+                <car_model name="悦翔V7低配" car_id="6" />
+                <car_model name="18款逸动DT" car_id="7" />
+            </protocol>
+            <protocol name="CNP003_16欧尚,18欧尚X70A_V1.2_2018.03.17" baud_rate="0" id="405"
+                pack_type="5">
+                <car_model name="欧尚 CN041" car_id="4" />
+            </protocol>
+            <protocol name="CNP004_16长安悦翔V7&amp;13长安逸动DT低配_ V1.4_2021.11.17" baud_rate="0"
+                id="406" pack_type="5">
+                <car_model name="悦翔 V7 中高配" car_id="5" />
+                <car_model name="悦翔 V7 低配" car_id="6" />
+                <car_model name="逸动 DT 低配" car_id="7" />
+            </protocol>
+            <protocol
+                name="CNP005_长安科赛COS1&amp;欧尚A800&amp;CS55&amp;欧尚X7&amp;19CS35 PLUS V1.5_2020.06.04"
+                baud_rate="0" id="407" pack_type="5">
+                <car_model name="CS75" car_id="1" />
+                <car_model name="奔奔" car_id="2" />
+                <car_model name="CX70" car_id="3" />
+                <car_model name="欧尚" car_id="4" />
+                <car_model name="16 悦翔 V7 中高配" car_id="5" />
+                <car_model name="16 悦翔 V7 低配" car_id="6" />
+                <car_model name="18 逸动 DT" car_id="7" />
+                <car_model name="18X70A" car_id="8" />
+                <car_model name="19COS1 高配" car_id="9" />
+                <car_model name="19COS1 低配" car_id="10" />
+                <car_model name="19 欧尚 A800 中配" car_id="11" />
+                <car_model name="18 C55 中配" car_id="12" />
+                <car_model name="20 欧尚 X7 中配" car_id="13" />
+                <car_model name="20 欧尚 X7 高配" car_id="14" />
+                <car_model name="19 CS35PLUS" car_id="15" />
+            </protocol>
+        </car_category>
+        <car_category name="奔腾 Besturn">
+            <protocol name="FWP009_05~09奔腾B70_V1.1_2017.01.29" baud_rate="0" id="422"
+                pack_type="5">
+                <car_model name="B70" />
+            </protocol>
+        </car_category>
+        <car_category name="潍柴 WEICHAI">
+            <protocol name="JMP001_潍柴全兼容_V1.5_2020.04.13" baud_rate="0" id="423" pack_type="5">
+                <car_model name="D50/U60V高配" car_id="1" years="2018" />
+                <car_model name="U60V中配" car_id="2" />
+                <car_model name="U60V低配" car_id="3" />
+            </protocol>
+        </car_category>
+        <car_category name="卡威 Kawei">
+            <protocol name="KWP001_卡威K150_V1.1_2020.02.25" baud_rate="0" id="424" pack_type="5">
+                <car_model name="K150" />
+            </protocol>
+        </car_category>
+        <car_category name="力帆 Lifan">
+            <protocol name="LFP002_13力帆720_V1.1_20130603" baud_rate="0" id="408" pack_type="7">
+                <car_model name="720" />
+            </protocol>
+            <protocol name="LFP003_力帆20X70_V1.0_2020.04.22" baud_rate="0" id="409" pack_type="5">
+                <car_model name="20 X720" />
+            </protocol>
+        </car_category>
+    </protocol_company>
+</root>

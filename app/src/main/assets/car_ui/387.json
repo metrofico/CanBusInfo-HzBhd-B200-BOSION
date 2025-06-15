@@ -1,0 +1,64 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "power"],
+        ["front_defog"], ["rear_defog"],
+        [ "auto","in_out_cycle"]
+      ],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn":"_387_item_01","style": 1, "valueSrnArray": ["_387_item_01_1","_387_item_01_2","_387_item_01_3"]},
+          {"titleSrn":"_387_item_02","style": 1, "valueSrnArray": ["close","open"]},
+          {"titleSrn":"_387_item_03","style": 1, "valueSrnArray": ["close","open"]},
+          {"titleSrn":"_387_item_04","style": 1, "valueSrnArray": ["_387_item_04_1","_387_item_04_2","_387_item_04_3"]},
+          {"titleSrn":"_387_item_05","style": 1, "valueSrnArray": ["_387_item_05_1","_387_item_05_2"]},
+          {"titleSrn":"_387_item_06","style": 1, "valueSrnArray": ["close","open"]},
+          {"titleSrn":"_387_item_07","style": 1, "valueSrnArray": ["close","open"]},
+          {"titleSrn":"_387_item_08","style": 1, "valueSrnArray": ["close","open"]},
+          {"titleSrn":"_387_item_09","style": 1, "valueSrnArray": ["_387_item_09_1","_387_item_09_2","_387_item_09_3"]},
+          {"titleSrn":"_387_item_10","style": 1, "valueSrnArray": ["_387_item_10_1","_387_item_10_2"]},
+          {"titleSrn":"_387_item_11","style": 1, "valueSrnArray": ["_387_item_10_1","_387_item_10_2"]}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "total_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]},
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_185_Right_camera_status"},
+      {"style": 0,"titleSrn": "_185_Left_camera_status"},
+      {"style": 0,"titleSrn": "_185_Front_camera_status"},
+      {"style": 0,"titleSrn": "_185_Rear_camera_status"},
+      {"style": 0,"titleSrn": "_185_panorama_camera_status"}
+    ]
+  }
+}

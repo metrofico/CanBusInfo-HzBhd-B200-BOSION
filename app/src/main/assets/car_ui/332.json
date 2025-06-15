@@ -1,0 +1,191 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","tire_info","setting","drive_data"]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"},
+      {"style": 0,"titleSrn": "_332_3d"},
+      {"style": 0,"titleSrn": "_332_2d"},
+      {"style": 0,"titleSrn": "_332_Full_screen"},
+      {"style": 0,"titleSrn": "_332_Exit_360"}
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "in_out_cycle", "auto"],
+        [], [],
+        ["power", "rear_defog"]
+      ],
+      "disableBtnArray": ["ac", "in_out_cycle", "auto","power", "rear_defog"],
+      "isAllBtnCanClick": true,
+
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_332_setting_1",
+        "itemList": [
+          {"titleSrn": "_332_setting_2","style": 1,"valueSrnArray": ["_332_setting_state2","_332_setting_state1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_3","style": 1,"valueSrnArray": ["_332_setting_state2","_332_setting_state1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_4","style": 1,"valueSrnArray": ["_332_setting_state3","_332_setting_state4","_332_setting_state5"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_5","style": 1,"valueSrnArray": ["_332_setting_state6","_332_setting_state7","_332_setting_state8","_332_setting_state9","_332_setting_state10"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_6","style": 1,"valueSrnArray": ["_332_setting_state6","_332_setting_state11","_332_setting_state7","_332_setting_state12","_332_setting_state8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_7","style": 1,"valueSrnArray": ["_332_setting_state2","_332_setting_state13","_332_setting_state14"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_8","style": 1,"valueSrnArray": ["_332_setting_state2","_332_setting_state3","_332_setting_state15","_332_setting_state5"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_9","style": 1,"valueSrnArray": ["_332_setting_state2","_332_setting_state1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_10","style": 1,"valueSrnArray": ["_332_setting_state2","_332_setting_state1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_11","style": 2,"max":15,"min":1,"progress":1,"value": "1","unit": "_327_unit_level"},
+          {"titleSrn": "_332_setting_12","style": 1,"valueSrnArray": ["_332_setting_state16","_332_setting_state17"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_327_360_camera",
+        "itemList": [
+          {"titleSrn": "_332_open_360","style": 1,"valueSrnArray": ["_332_setting_state2","_332_setting_state1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_camera_state","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_332_charge",
+        "itemList": [
+          {"titleSrn": "_332_charge_setting","style": 1,"valueSrnArray": ["_332_charge_setting1","_332_charge_setting2","_332_charge_setting3","_332_charge_setting4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_charge_state1","style": 0},
+          {"titleSrn": "_332_charge_state2","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_332_Timed_charging_1",
+        "itemList": [
+          {"titleSrn": "_332_Timed_charging_8","style": 1,"valueSrnArray": ["_332_Timed_charging_9","_332_Timed_charging_10","_332_Timed_charging_11","_332_Timed_charging_12","_332_Timed_charging_13","_332_Timed_charging_14","_332_Timed_charging_15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_Timed_charging_4","style": 2,"max":23,"min":0,"progress":0,"value": "0","unit": "_332_Timed_charging_18"},
+          {"titleSrn": "_332_Timed_charging_5","style": 2,"max":59,"min":0,"progress":0,"value": "0","unit": "_332_Timed_charging_19"},
+          {"titleSrn": "_332_Timed_charging_16","style": 2,"max":100,"min":1,"progress":1,"value": "1","unit": "_332_Timed_charging_20"},
+          {"titleSrn": "_332_Timed_charging_21","style": 3,"confirmTis": "_332_Timed_charging_22"}
+        ]
+      },
+      {
+        "titleSrn": "_332_Timed_charging_2",
+        "itemList": [
+          {"titleSrn": "_332_Timed_charging_8","style": 1,"valueSrnArray": ["_332_Timed_charging_9","_332_Timed_charging_10","_332_Timed_charging_11","_332_Timed_charging_12","_332_Timed_charging_13","_332_Timed_charging_14","_332_Timed_charging_15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_Timed_charging_4","style": 2,"max":23,"min":0,"progress":0,"value": "0","unit": "_332_Timed_charging_18"},
+          {"titleSrn": "_332_Timed_charging_5","style": 2,"max":59,"min":0,"progress":0,"value": "0","unit": "_332_Timed_charging_19"},
+          {"titleSrn": "_332_Timed_charging_6","style": 2,"max":23,"min":0,"progress":0,"value": "0","unit": "_332_Timed_charging_18"},
+          {"titleSrn": "_332_Timed_charging_7","style": 2,"max":59,"min":0,"progress":0,"value": "0","unit": "_332_Timed_charging_19"},
+          {"titleSrn": "_332_Timed_charging_21","style": 3,"confirmTis": "_332_Timed_charging_22"}
+        ]
+      },
+      {
+        "titleSrn": "_332_Timed_charging_3",
+        "itemList": [
+          {"titleSrn": "_332_Timed_charging_17","style": 3,"confirmTis": "_332_Timed_charging_23"}
+        ]
+      },
+      {
+        "titleSrn": "_332_tachograph_settings_2",
+        "itemList": [
+          {"titleSrn": "_332_tachograph_settings_2_state_12_item","style": 1,"valueSrnArray": ["_332_tachograph_settings_2_state_1","_332_tachograph_settings_2_state_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_tachograph_settings_2_state_34_item","style": 1,"valueSrnArray": ["_332_tachograph_settings_2_state_3","_332_tachograph_settings_2_state_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_tachograph_settings_2_state_56_item","style": 1,"valueSrnArray": ["_332_tachograph_settings_2_state_5","_332_tachograph_settings_2_state_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_tachograph_settings_2_state_789_item","style": 1,"valueSrnArray": ["_332_tachograph_settings_2_state_7","_332_tachograph_settings_2_state_8","_332_tachograph_settings_2_state_9"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_tachograph_settings_2_state_10","style": 3,"confirmTis": "_332_tachograph_settings_2_state_10_dialog","value": ""},
+          {"titleSrn": "_332_tachograph_settings_2_state_1112_item","style": 1,"valueSrnArray": ["_332_tachograph_settings_2_state_11","_332_tachograph_settings_2_state_12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_tachograph_settings_2_state_1314_item","style": 1,"valueSrnArray": ["_332_tachograph_settings_2_state_13","_332_tachograph_settings_2_state_14"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_tachograph_settings_2_state_15","style": 3,"confirmTis": "_332_tachograph_settings_2_state_15_dialog","value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_332_tachograph_settings_3",
+        "itemList": [
+          {"titleSrn": "_332_camera_setting_2","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_332_tachograph_settings_4",
+        "itemList": [
+          {"titleSrn": "_332_playback_setting_1","style": 1,"valueSrnArray": ["_332_playback_setting_3","_332_playback_setting_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_playback_setting_4","style": 1,"valueSrnArray": ["_332_playback_setting_6","_332_playback_setting_5"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_playback_setting_7","style": 1,"valueSrnArray": ["_332_playback_setting_8","_332_playback_setting_9"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_playback_setting_10","style": 1,"valueSrnArray": ["_332_playback_setting_11","_332_playback_setting_12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_playback_setting_13","style": 1,"valueSrnArray": ["_332_playback_setting_14","_332_playback_setting_15"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_332_driverData_1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_332_driverData_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_driverData_3","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_332_Energy_information",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_332_Total_distance","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Reference_remaining_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Percentage_of_charge","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Energy_flow","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Average_energy_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Instantaneous_energy_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Energy_distribution_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Energy_distribution_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_Energy_distribution_3","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_332_tachograph",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_332_current_state","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_status_information_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_status_information_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_332_status_information_3","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  }
+}

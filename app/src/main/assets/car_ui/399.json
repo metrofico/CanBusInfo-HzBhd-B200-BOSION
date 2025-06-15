@@ -1,0 +1,57 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","auto","ac"],
+        ["front_defog"], ["rear_defog"],
+        ["in_out_cycle","dual"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_330_Information_reset",
+        "itemList": [
+          {"titleSrn": "_399_item_5","style": 3,"confirmTis": "_330_is_Reset","value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "isHaveBtn": true,
+    "buttonText": "_399_item_5",
+    "list": [
+      {"headTitleSrn":"vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "S18_CarBody_2","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"S97_Fuel_cons_mile_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_399_item_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_399_item_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_399_item_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_399_item_4","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false
+  }
+}

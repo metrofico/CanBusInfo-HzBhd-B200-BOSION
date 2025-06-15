@@ -1,0 +1,255 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["in_out_cycle","auto","ion","ac","ac_max"],
+        ["dual"],
+        ["rear"],
+        ["front_defog","rear_defog","three_zone"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isAllBtnCanClick": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "disableBtnArray": ["auto"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],[],[],["rear_auto"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_220_language_settings",
+        "itemList": [
+          {"titleSrn": "_220_language", "style": 1, "valueSrnArray": ["_220_chinese", "_220_english"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_220_airconditioning_settings",
+        "itemList": [
+          {"titleSrn": "_220_auto_when_the_compressor_status", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_auto_outer_loop_control", "style": 1, "valueSrnArray": ["_220_automatic", "_220_manually"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_airconditioned_comfort_curve_settings", "style": 1, "valueSrnArray": ["_220_slow", "_220_normal", "_220_fast"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_negative_ion_mode", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_air_quality_sensor", "style": 1, "valueSrnArray": ["_220_low_sensitivity", "_220_sensitivity", "_220_hi_sensitivity"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_automatic_mode_wind", "style": 1, "valueSrnArray": ["_220_low", "_220_in", "_220_high"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Unlock_the_ventilation", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Air_conditioning_self_drying", "style": 1, "valueSrnArray": ["_220_turn_off","_220_open"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_220_seat_set",
+        "itemList": [
+          {"titleSrn": "_220_automatic_driving_seat_heating", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_automatic_heating_passenger_seat", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_left_seat_heat", "style": 0, "value": "null_value"},
+          {"titleSrn": "_220_right_seat_heat", "style": 0, "value": "null_value"},
+          {"titleSrn": "_220_seat_welcome_light", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_smart_key_automatic_identification_seat", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_220_driving_assistance",
+        "itemList": [
+          {"titleSrn": "_220_speeding_alert", "style": 1, "valueSrnArray": [
+            "_220_0_km", "_220_10_km", "_220_20_km", "_220_30_km",
+            "_220_40_km", "_220_50_km", "_220_60_km", "_220_70_km",
+            "_220_80_km", "_220_90_km", "_220_100_km", "_220_110_km",
+            "_220_120_km", "_220_130_km", "_220_140_km", "_220_150_km",
+            "_220_160_km", "_220_170_km", "_220_180_km", "_220_190_km", "_220_200_km"
+          ], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_the_instrument_cluster_alarm_volume", "style": 1, "valueSrnArray": ["_220_low", "_220_in", "_220_high"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_remote_poweron_time", "style": 2, "max": 30, "min": 0, "progress": 0, "value": "0", "unit": "unit_minute"},
+          {"titleSrn": "_220_remote_start_time", "style": 2, "max": 30, "min": 0, "progress": 0, "value": "0", "unit": "unit_minute"},
+          {"titleSrn": "_220_steering_modes", "style": 1, "valueSrnArray": ["_220_motion", "_220_standard", "_220_cozy"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_and_the_right_auxiliary_line", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_and_left_auxiliary_line", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Active_brake_assist", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": "" },
+          {"titleSrn": "_220_Cruise_mode", "style": 1, "valueSrnArray": ["_220_Cruise_mode_1", "_220_Cruise_mode_2"], "selectIndex": 0, "value": "" },
+          {"titleSrn": "_220_Front_collision_warning", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Front_collision_warning_distance", "style": 1, "valueSrnArray": ["_220_distance1", "_220_distance2","_220_distance3"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Lane_assist_switch", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Lane_assist", "style": 1, "valueSrnArray": ["_220_Steering_assist", "_220_Warning","_220_Steering_assist_and_warning"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Memorize_the_current_driving_mode", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_220_body_and_accessories",
+        "itemList": [
+          {"titleSrn": "_220_remote_unlock", "style": 1, "valueSrnArray": ["_220_all_doors", "_220_only_the_left_front_door"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_speed_lock", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_auto_unlock", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_remote_left_front_window_and_skylight", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_front_wiper_maintenance_functions", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_rear_wiper_automatic_reverse_function", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_automatic_folding_exterior_rear_view_mirror", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_unlock_lock_tone", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_intelligent_active_lock", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_smart_unlock_initiative", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_manually_adjustable_exterior_mirror_angle", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_automatically_adjusting_the_angle_of_the_outer_mirror", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open", "_220_set_up", "_220_determine", "_220_cancel"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_open_trunk_induction", "style": 1, "valueSrnArray": ["_220_shut_down", "_220_only_open", "_220_beep_on"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Automatic_Wiper_Function", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Wireless_charging", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Key_forget_reminder", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Low_speed_beep", "style": 1, "valueSrnArray": ["_220_beep_1", "_220_beep_2","_220_beep_3"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Auto_Close_Windows", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Wiper_maintenance_mode", "style": 1, "valueSrnArray": ["_220_Wiper_mode1", "_220_Wiper_mode2"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_220_lighting_control",
+        "itemList": [
+          {"titleSrn": "_220_i_went_home_with", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_only_low_beam", "_220_low_beam_and_rear_fog_light"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_fog_lights_steering_assist", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_daytime_running_lights", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_auto_light_sensitivity", "style": 1, "valueSrnArray": ["_220_low", "_220_in", "_220_high"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_intelligent_welcome_light_function", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_ambient_light_control", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Ambient_light_brightness","style": 2,"max":8,"min":1,"progress":1,"value": "1","unit": "level"},
+          {"titleSrn": "_220_Ambient_light_Color","style": 2,"max":32,"min":1,"progress":1,"value": "1","unit": "_347_setting_unit"},
+          {"titleSrn": "_220_Intelligent_high_beam", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Delayed_headlight_off", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_220_reset",
+        "itemList": [
+          {
+            "titleSrn": "reset",
+            "style": 3,
+            "confirmTis": "confirm_reset_alert_dialog"
+          }
+        ]
+      },
+      {
+        "titleSrn": "_220_energy_set",
+        "itemList": [
+          {"titleSrn": "charging_set_2", "style": 2, "max": 23, "min": 0, "progress": 0, "value": "0", "unit": "unit_hour"},
+          {"titleSrn": "charging_set_3", "style": 2, "max": 59, "min": 0, "progress": 0, "value": "0", "unit": "unit_minute"},
+          {"titleSrn": "charging_set_4", "style": 2, "max": 23, "min": 0, "progress": 0, "value": "0", "unit": "unit_hour"},
+          {"titleSrn": "charging_set_5", "style": 2, "max": 59, "min": 0, "progress": 0, "value": "0", "unit": "unit_minute"},
+          {"titleSrn": "charging_set_6", "style": 1, "valueSrnArray": ["charging_set_6_1", "charging_set_6_2"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "loop_set_1", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "loop_set_2", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "loop_set_3", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "loop_set_4", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "loop_set_5", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "loop_set_6", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "loop_set_7", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_energy_charge_right_now", "style": 3, "confirmTis": "_220_energy_charge_right_now"},
+          {"titleSrn": "_220_from_the_last_charging_time", "style": 0, "value": "null_value"},
+          {"titleSrn": "_220_energy_lev", "style": 0, "value": "null_value"},
+          {"titleSrn": "_220_energy_flow", "style": 0, "value": "null_value"},
+          {"titleSrn": "_220_energy_recycle_lev", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_low", "_220_high"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_energy_recycle_i_pedal", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_driver_mode", "style": 1, "valueSrnArray": [ "_220_NORMAL","_220_ECO"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_220_Heat_Preservation", "style": 2, "max": 12, "min": 1, "progress": 0, "value": "0"}
+        ]
+      },
+      {
+        "titleSrn": "_220_cam_360",
+        "itemList": [
+          {"titleSrn": "_23_enter_panoramic", "style": 0, "value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_220_car_control",
+        "itemList": [
+                {"titleSrn": "_220_frontrightdoor", "style": 1, "valueSrnArray": ["_220_open","_220_turn_off","_220_Up","_220_Down"], "selectIndex": 0, "value": ""},
+                {"titleSrn": "_220_rearrightdoor", "style": 1, "valueSrnArray": ["_220_open","_220_turn_off","_220_Up","_220_Down"], "selectIndex": 0, "value": ""},
+                {"titleSrn": "_220_frontleftdoor", "style": 1, "valueSrnArray": ["_220_open","_220_turn_off","_220_Up","_220_Down"], "selectIndex": 0, "value": ""},
+                {"titleSrn": "_220_rearleftdoor", "style": 1, "valueSrnArray": ["_220_open","_220_turn_off","_220_Up","_220_Down"], "selectIndex": 0, "value": ""},
+                {"titleSrn": "_220_Skylight", "style": 1, "valueSrnArray": ["_220_Pause","_220_SkylightOn","_220_SkylightOff","_220_SkylightVentilation"], "selectIndex": 0, "value": ""},
+                {"titleSrn": "_220_Sunshade", "style": 1, "valueSrnArray": ["_220_SunshadeOn","_220_SunshadeOff","_220_SunshadeOn_ing","_220_SunshadeOff_ing"]},
+                {"titleSrn": "_220_ElectricTailgateFunction", "style": 1, "valueSrnArray": ["_220_open","_220_turn_off"], "selectIndex": 0, "value": ""},
+                {"titleSrn": "_220_ElectricTailgate", "style": 1, "valueSrnArray": ["_220_open","_220_turn_off"], "selectIndex": 0, "value": ""},
+                {"titleSrn": "_220_Electric_Tailgate_Open_Position", "style": 1, "valueSrnArray": ["_220_Memory_position","_220_Clear_position"], "selectIndex": 0, "value": ""}
+      ]},
+      {
+        "titleSrn":"_220_Intelligent_parking_assistance",
+        "itemList": [
+          {"titleSrn":"_220_P_mode_exit", "style": 1, "valueSrnArray": ["_220_exit_mode1", "_220_exit_mode2"], "selectIndex": 0, "value": "" },
+          {"titleSrn":"_220_Turn_signals_activate_panorama", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_220_Intelligent_Perception_System",
+        "itemList": [
+          {"titleSrn":"_220_Intelligent_Perception_System2", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn":"_220_Distraction_Reminder", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn":"_220_Fatigue_Testing", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn":"_220_Ventilate_While_Smoking", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn":"_220_Decrease_The_Volume_During_A_Call", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn":"_220_Sight_Bright_Screen", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn":"_220_Gestures_To_Cut_The_Song", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""},
+          {"titleSrn":"_220_Convenient_For_Car", "style": 1, "valueSrnArray": ["_220_turn_off", "_220_open"], "selectIndex": 0, "value": ""}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_194_front"},
+      {"style": 0,"titleSrn": "_194_rear"},
+      {"style": 0,"titleSrn": "_194_left"},
+      {"style": 0,"titleSrn": "_194_right"},
+      {"style": 0,"titleSrn": "_194_exit"}
+    ],
+    "isShowCusPanoramicView": true
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_220_add_function_page1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_220_add_function1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_add_function2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_add_function3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_add_function4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_add_function5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_add_function6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_add_function7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_add_function8","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn":"car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_220_frontrightdoor","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_rearrightdoor","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_frontleftdoor","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_rearleftdoor","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_Skylight","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_Sunshade","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_ElectricTailgate","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_ElectricTailgateFunction","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_Electric_Tailgate_Open_Position","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_Memory_Open_Position","defaultValueSrn": "set_default"},
+          {"titleSrn": "_220_Electric_Tailgate_Open_Position","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  }
+}

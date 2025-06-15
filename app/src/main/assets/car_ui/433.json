@@ -1,0 +1,27 @@
+{"mainPageUiSet": {
+  "btnAction": ["setting","original_car_device"]
+},
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_433_BT_Switch",
+        "itemList": [
+          {"titleSrn": "_433_BT_Switch1","style": 1,"valueSrnArray": ["_433_BT_Switch11","_433_BT_Switch12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_433_BT_Switch2","style": 1,"valueSrnArray": ["_433_BT_Switch21","_433_BT_Switch22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_433_BT_Switch3","style": 1,"valueSrnArray": ["_433_BT_Switch21","_433_BT_Switch22"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  }
+
+}

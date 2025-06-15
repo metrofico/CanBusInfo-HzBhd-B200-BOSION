@@ -1,0 +1,437 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "drive_data",
+      "setting",
+      "amplifier",
+      "air",
+      "tire_info"
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {
+        "whichTire": 0,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 1,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 2,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 3,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      },
+      {
+        "whichTire": 4,
+        "list": [
+          {
+            "title": "D362_tirePMSInfo_1",
+            "value": "set_default"
+          },
+          {
+            "title": "D362_tirePMSInfo_2",
+            "value": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D362_vehicleSpeedInfo_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D362_carSpeedInfo_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D362_fuelConsumptionPerMin_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D362_fuelConsumptionPerMin_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D362_fuelConsumptionPerMin_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D361_1_d1t2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D361_2_d1t2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D361_2_d3t4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D361_2_d5t6",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D361_2_d7t8",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D361_2_d9t10",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D361_2_d11t12",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "D360_title",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "D362_corneringLampInfo_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D362_corneringLampInfo_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      },
+      {
+        "headTitleSrn": "_350_d_3",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "_350_d_3_0",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_2",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_3",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_4",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_350_d_3_5",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D362_powerAmplifierInfo_1",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "D362_powerAmplifierInfo_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S361_title0",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S361_d0b7"
+          },
+          {
+            "style": 2,
+            "titleSrn": "S361_d0b6t4",
+            "max": 4,
+            "min": 0
+          },
+          {
+            "style": 1,
+            "titleSrn": "S361_d0b2t3",
+            "valueSrnArray": [
+              "_350_s_0_2_0",
+              "_350_s_0_2_1",
+              "_350_s_0_2_2",
+              "_350_s_0_2_3"
+            ]
+          },
+          {
+            "style": 1,
+            "titleSrn": "S361_d0b0t1",
+            "valueSrnArray": [
+              "_350_s_0_3_0",
+              "_350_s_0_3_1",
+              "_350_s_0_3_2",
+              "_350_s_0_3_3"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S361_title1",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S361_d1b7"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S361_d1b6"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S361_d1b5"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S361_d1b4"
+          },
+          {
+            "style": 2,
+            "titleSrn": "S361_d1b0t2",
+            "min": 0,
+            "max": 6
+          },
+          {
+            "style": 4,
+            "titleSrn": "S361_d2b7"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S361_d2b6"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S361_d2b5",
+            "valueSrnArray": [
+              "_350_s_2_2_0",
+              "_350_s_2_2_1"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S362_vehicleSettings_1"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S362_vehicleSettings_2"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S361_title2",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S362_vehicleSettings_3"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S362_vehicleSettings_4"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S361_title3",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S362_powerAmplifierInfo_1"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S362_title_1",
+        "itemList": [
+          {
+            "style": 2,
+            "titleSrn": "S362_vehicleSpeedInfo_1",
+            "min": 0,
+            "max": 10
+          },
+          {
+            "style": 2,
+            "titleSrn": "S362_carSpeedInfo_1",
+            "min": 0,
+            "max": 10
+          }
+        ]
+      },
+      {
+        "titleSrn": "S362_title_2",
+        "itemList": [
+          {
+            "style": 4,
+            "titleSrn": "S362_drivingModeAndAssistanceInfo_1"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S362_drivingModeAndAssistanceInfo_2",
+            "valueSrnArray": [
+              "S362_drivingModeAndAssistanceInfo_2_0",
+              "S362_drivingModeAndAssistanceInfo_2_1",
+              "S362_drivingModeAndAssistanceInfo_2_2"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S362_drivingModeAndAssistanceInfo_3"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S362_drivingModeAndAssistanceInfo_4"
+          },
+          {
+            "style": 4,
+            "titleSrn": "S362_drivingModeAndAssistanceInfo_5"
+          },
+          {
+            "style": 1,
+            "titleSrn": "S362_drivingModeAndAssistanceInfo_6",
+            "valueSrnArray": [
+              "S362_drivingModeAndAssistanceInfo_6_0",
+              "S362_drivingModeAndAssistanceInfo_6_1"
+            ]
+          },
+          {
+            "style": 4,
+            "titleSrn": "S362_drivingModeAndAssistanceInfo_7"
+          }
+        ]
+      },
+      {
+        "titleSrn": "S361_car_title",
+        "itemList": [
+          {
+            "style": 3,
+            "titleSrn": "S362_car_1",
+            "confirmTis": "S361_car_tips"
+          },
+          {
+            "style": 3,
+            "titleSrn": "S362_car_2",
+            "confirmTis": "S361_car_tips"
+          }
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "in_out_cycle",
+          "front_window_heat",
+          "negative_ion"
+        ],
+        [
+        ],
+        [
+        ],
+        [
+          "auto",
+          "max_front",
+          "ac"
+        ]
+      ],
+      "disableBtnArray": [
+          "negative_ion",
+          "max_front"
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2",
+        "left_seat_heat_3"
+      ]
+    }
+  }
+}

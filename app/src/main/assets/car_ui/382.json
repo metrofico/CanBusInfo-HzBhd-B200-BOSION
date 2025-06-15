@@ -1,0 +1,115 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["in_out_cycle","auto_wind_lv"],
+        ["steering_wheel_heating"],["front_defog"],
+        ["power"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_382_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_382_car_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_382_car_tyres",
+        "itemList": [
+          {"titleSrn": "_382_car_tyres1","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_car_tyres2","style": 2,"min": 0,"max": 100,"progress": 0,"value": "0","unit": "_382_car_tyres1_unit"}
+        ]
+      },
+      {
+        "titleSrn": "_382_car_auxiliary",
+        "itemList": [
+          {"titleSrn": "_382_car_auxiliary1","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_382_car_light",
+        "itemList": [
+          {"titleSrn": "_382_car_light1","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_car_light2","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_car_light3","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_car_light4","style": 1,"valueSrnArray": ["_382_time_10","_382_time_20","_382_time_30"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_car_light5","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_time_10","_382_time_20","_382_time_30"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_car_light6","style": 2,"min": 0,"max": 100,"progress": 0,"value": "0","unit": "_382_unit_2"},
+          {"titleSrn": "_382_car_light7","style": 2,"min": 0,"max": 100,"progress": 0,"value": "0","unit": "_382_unit_2"}
+        ]
+      },
+      {
+        "titleSrn": "_382_window",
+        "itemList": [
+          {"titleSrn": "_382_window1","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_window2","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_window3","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_window4","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_window5","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_window6","style": 1,"valueSrnArray": ["_382_window60","_382_window61"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_window7","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""}
+        ]
+      },{
+        "titleSrn": "_382_parking",
+        "itemList": [
+          {"titleSrn": "_382_parking1","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_parking2","style": 2,"min": 1,"max": 9,"progress": 0,"value": "1","unit": "_382_unit_3"},
+          {"titleSrn": "_382_parking3","style": 2,"min": 1,"max": 9,"progress": 0,"value": "1","unit": "_382_unit_3"},
+          {"titleSrn": "_382_parking4","style": 2,"min": 1,"max": 9,"progress": 0,"value": "1","unit": "_382_unit_3"},
+          {"titleSrn": "_382_parking5","style": 2,"min": 1,"max": 9,"progress": 0,"value": "1","unit": "_382_unit_3"}
+        ]
+      },
+      {
+        "titleSrn": "_382_unit_setting",
+        "itemList": [
+          {"titleSrn": "_382_unit_setting1","style": 1,"valueSrnArray": ["_382_unit_setting10","_382_unit_setting11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_unit_setting2","style": 1,"valueSrnArray": ["_382_unit_setting20","_382_unit_setting21"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_unit_setting3","style": 1,"valueSrnArray": ["_382_unit_setting30","_382_unit_setting31"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_unit_setting4","style": 1,"valueSrnArray": ["_382_unit_setting40","_382_unit_setting41","_382_unit_setting42"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_unit_setting5","style": 1,"valueSrnArray": ["_382_unit_setting50","_382_unit_setting51","_382_unit_setting52","_382_unit_setting53"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_unit_setting6","style": 1,"valueSrnArray": ["_382_unit_setting60","_382_unit_setting61","_382_unit_setting62"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_382_athor",
+        "itemList": [
+          {"titleSrn": "_382_athor1","style":0},
+          {"titleSrn": "_382_athor7","style": 0},
+          {"titleSrn": "_382_athor2","style": 0},
+          {"titleSrn": "_382_athor3","style": 0},
+          {"titleSrn": "_382_athor4","style": 0},
+          {"titleSrn": "_382_athor5","style": 0},
+          {"titleSrn": "_382_athor6","style": 1,"valueSrnArray": ["_382_car_tyres10","_382_car_tyres11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_382_athor8","style": 0},
+          {"titleSrn": "_382_athor9","style": 0},
+          {"titleSrn": "_382_athor10","style": 0}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarDistance": true,
+    "isHaveLeftRightRadar":true
+  }
+
+}

@@ -1,0 +1,299 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data","amplifier", "original_car_device"]
+  },
+
+  "airPageUiSet": {
+    "isHaveRearArea": true,
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog","in_out_auto_cycle","steering_wheel_heating"],
+        ["sync"],["power"],
+        ["left_set_seat_cold","left_set_seat_heat","ac","ac_max","auto","right_set_seat_heat","right_set_seat_cold"]
+      ],
+      "smallWindowStatusArray": ["ac", "sync", "auto", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowSeatHeat": true,
+      "isCanSetTemp": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "seatHeatSrnArray": ["_118_setting_value_85","_118_setting_value_4","_118_setting_value_5","_118_setting_value_6"],
+      "isShowSeatCold": true,
+      "seatColdSrnArray": ["_118_setting_value_85","_118_setting_value_4","_118_setting_value_6"],
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "rearArea": {
+      "lineBtnAction": [
+        ["rear_power","sync"],
+        [],
+        [],
+        ["rear_lock","rear_auto"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetCenterTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_118_setting_big_title_1",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_1","style": 1,"valueSrnArray": ["_118_setting_value_1","_118_setting_value_2","_118_setting_value_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_2","style": 1,"valueSrnArray": ["_118_setting_value_4","_118_setting_value_5","_118_setting_value_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_3","style": 1,"valueSrnArray": ["_118_setting_value_4","_118_setting_value_5","_118_setting_value_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_5","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_7","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_36","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_37","style": 1,"valueSrnArray": ["_118_setting_value_59"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_38","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_46","style": 1,"valueSrnArray": ["_118_setting_value_34","_118_setting_value_5","_118_setting_value_35"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_39","style": 1,"valueSrnArray": ["_118_setting_value_4","_118_setting_value_5","_118_setting_value_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_8","style": 1,"valueSrnArray": ["_118_setting_value_9","_118_setting_value_10","_118_setting_value_11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_40","style": 1,"valueSrnArray": ["_118_setting_value_30","_118_setting_value_31"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_61","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_34","style": 1,"valueSrnArray": ["_118_setting_value_9","_118_setting_value_28","_118_setting_value_29"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_35","style": 1,"valueSrnArray": ["_118_setting_value_30","_118_setting_value_5","_118_setting_value_31"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_33","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_47","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_2",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_9","style": 1,"valueSrnArray": ["_118_setting_value_12","_118_setting_value_13","_118_setting_value_14","_118_setting_value_15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_45","style": 1,"valueSrnArray": ["_118_setting_value_12","_118_setting_value_13","_118_setting_value_14","_118_setting_value_15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_10","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_11","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_12","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_41","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_13","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_53","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_58","style": 2,"max":6,"min":0,"progress":0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_118_setting_title_57","style": 2,"max":3,"min":1,"progress":1,"value": "1","unit": "null_value"},
+          {"titleSrn": "_118_setting_title_62","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_110","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_3",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_42","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_14","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_15","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_16","style": 1,"valueSrnArray": ["_118_setting_value_16","_118_setting_value_17"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_17","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_18","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_43","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_63","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_22","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_56","style": 1,"valueSrnArray": ["_118_setting_value_42","_118_setting_value_43","_118_setting_value_9"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_4",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_19","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_20","style": 1,"valueSrnArray": ["_118_setting_value_12","_118_setting_value_18","_118_setting_value_19","_118_setting_value_20"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_23","style": 1,"valueSrnArray": ["_118_setting_value_12","_118_setting_value_18","_118_setting_value_19","_118_setting_value_20"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_5",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_24","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_25","style": 1,"valueSrnArray": ["_118_setting_value_21","_118_setting_value_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_26","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_27","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_28","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_29","style": 1,"valueSrnArray": ["_118_setting_value_23","_118_setting_value_24","_118_setting_value_25"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_30","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_6",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_68","style": 1,"valueSrnArray": ["_2_set_language_2","_2_set_language_3","language_24","language_50","language_35","language_40","language_31","language_45","language_56","language_46","language_53","language_29","language_17","language_1","_118_setting_value_52_1"]},
+          {"titleSrn": "_118_setting_title_44","style": 1,"valueSrnArray": ["_118_setting_value_9","_118_setting_value_32","_118_setting_value_33"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_71","style": 3,"confirmTis": "_118_setting_title_71"},
+          {"titleSrn": "_118_setting_title_52","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_55","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_48","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_49","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_7",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_66","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_67","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_8",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_54","style": 1,"valueSrnArray": ["_118_setting_value_39","_118_setting_value_40"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_59","style": 1,"valueSrnArray": ["_118_setting_value_44","_118_setting_value_45"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_60","style": 1,"valueSrnArray": ["_118_setting_value_46","_118_setting_value_47","_118_setting_value_48","_118_setting_value_49"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_50","style": 1,"valueSrnArray": ["_118_setting_value_36","_118_setting_value_37","_118_setting_value_38"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_51","style": 1,"valueSrnArray": ["_370_C","_370_F"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_64","style": 1,"valueSrnArray": ["_118_setting_value_50","_118_setting_value_51"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_9",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_4","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_31","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_6","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_65","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_21","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_title_91",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_92","style": 0,"value": ""},
+          {"titleSrn": "compass_calibration_status","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_73","style": 2,"max":15,"min":1,"progress":0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_title_93",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_94","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_95","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_96","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_98","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_97","style": 2,"max":3,"min":0,"progress":0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_10",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_111","style": 1,"valueSrnArray": ["_118_setting_title_111_0","_118_setting_title_111_1","_118_setting_title_111_2","_118_setting_title_111_3","_118_setting_title_111_4","_118_setting_title_111_5"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_112","style": 1,"valueSrnArray": ["_118_setting_title_112_2","_118_setting_title_112_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_114","style": 1,"valueSrnArray": ["_118_setting_title_114_1","_118_setting_title_114_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_115","style": 1,"valueSrnArray": ["_118_setting_value_7","_118_setting_value_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_116","style": 1,"valueSrnArray": ["_118_setting_title_114_1","_118_setting_title_114_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_117","style": 1,"valueSrnArray": ["_118_setting_title_114_1","_118_setting_title_114_2","_118_setting_title_114_3"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_12",
+        "itemList": [
+          {"titleSrn": "_118_setting_Title19","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title20","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title21","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title22","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title23","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title24","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title25","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title26","style": 4,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_DriveInfo_HeadTitle_02",
+        "itemList": [
+          {"titleSrn": "_118_setting_Title01","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title14","style": 3,"confirmTis": "_118_setting_Title14"},
+          {"titleSrn": "_118_setting_Title15","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_Title12","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_Title13","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_Title023","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_Title04","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title056","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_Title078","style": 0,"value": ""},
+          {"titleSrn": "_118_setting_Title09","style": 4,"value": ""},
+          {"titleSrn": "_118_setting_Title1011","style": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_118_setting_big_title_11",
+        "itemList": [
+          {"titleSrn": "_118_setting_title_109","style": 1,"valueSrnArray": ["_118_setting_value_98","_118_setting_value_99"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"drive_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_118_setting_title_89","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "car_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "reverse_state","defaultValueSrn": "set_default"},
+          {"titleSrn": "hand_brake_status","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_118_drivingInfo_0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_118_drivingInfo_0_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_drivingInfo_0_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_drivingInfo_0_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_drivingInfo_0_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_setting_Title16","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_setting_Title17","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_setting_Title18","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_118_DriveInfo_HeadTitle_01",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_118_DriveInfo_Title02","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_DriveInfo_Title03","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "_118_setting_title_118",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_118_setting_title_114","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_setting_title_115","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_setting_title_116","defaultValueSrn": "set_default"},
+          {"titleSrn": "_118_setting_title_117","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "seekBarVolumeMax": 38,
+    "volumeRange": 0,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["rpt","rdm"],
+    "rowBottomBtnAction":
+    ["prev_disc","left","play","pause","right","next_disc"],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "_118_setting_title_101", "value": ""},
+      {"imageId": "music_list", "titleSrn": "_118_setting_title_102", "value": ""},
+      {"imageId": "music_music", "titleSrn": "_118_setting_title_105", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "_118_setting_title_106", "value": ""},
+      {"imageId": "music_artist", "titleSrn": "_118_setting_title_107", "value": ""}
+    ],
+    "isHaveSongList": true
+  }
+}

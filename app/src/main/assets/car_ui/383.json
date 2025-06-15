@@ -1,0 +1,105 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting","tire_info"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["dual","ac","ac_max"],
+        ["front_defog"],["rear_defog"],
+        ["auto","off","in_out_cycle"]
+      ],
+      "disableBtnArray": ["dual"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_306_value_19","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_value_20","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_value_21","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_value_22","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_value_23","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_value_24","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_value_25","defaultValueSrn": "set_default"},
+          {"titleSrn": "_306_title_4","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"titleSrn": "_306_value_1","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_value_2","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_value_3","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_value_4","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_value_5","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_value_6","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_value_7","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_value_8","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_title_2","style": 1, "valueSrnArray": ["_306_value_26", "_306_value_27", "_306_value_28"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_title_3","style": 1, "valueSrnArray": ["_306_value_29", "_306_value_30"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_306_360",
+        "itemList": [
+          {"titleSrn": "_306_360","style": 1, "valueSrnArray": ["_306_360_high", "_306_360_low"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_306_avm_switch","style": 1, "valueSrnArray": ["_306_avm_switch1", "_306_avm_switch2"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_306_voice_language",
+        "itemList": [
+          {"titleSrn": "_306_voice_language","style": 1, "valueSrnArray": ["_306_voice_language_zh", "_306_voice_language_en"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": false,
+    "isShowCusPanoramicView": true,
+    "isCusVideoSize": false,
+    "cusVideoStartX": 0,
+    "cusVideoStartY": 0,
+    "cusVideoWidth": 1024,
+    "cusVideoHeight": 600,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_306_value_12"},
+      {"style": 0,"titleSrn": "_306_value_13"},
+      {"style": 0,"titleSrn": "_306_value_14"},
+      {"style": 0,"titleSrn": "_306_value_15"},
+      {"style": 0,"titleSrn": "_306_value_16"},
+      {"style": 0,"titleSrn": "_306_value_17"},
+      {"style": 0,"titleSrn": "_306_value_18"}
+    ]
+  },
+
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title": "tire_pressure_content","value":"set_default"}]}
+    ]
+  }
+}

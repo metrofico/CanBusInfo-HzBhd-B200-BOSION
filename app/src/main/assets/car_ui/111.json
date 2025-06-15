@@ -1,0 +1,29 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","amplifier"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_1111_setting_amplifier",
+        "itemList": [
+          {"titleSrn": "_1111_setting_amplifier_switch","style": 4}
+
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 38,
+    "isCanBalanceControl": false
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

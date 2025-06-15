@@ -1,0 +1,40 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data"]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "water_temperature","defaultValueSrn": "null_value"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "null_value"},
+          {"titleSrn": "_306_value_21","defaultValueSrn": "null_value"},
+          {"titleSrn": "_279_dashboard_data5","defaultValueSrn": "null_value"},
+          {"titleSrn": "_283_meter_value_2","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "smallWindowStatusArray": ["ac", "auto",  "in_out_cycle"],
+      "lineBtnAction": [
+        ["auto","ac","in_out_cycle"],
+        ["front_defog"],["rear_defog"],
+        ["power","blow_head","blow_head_foot","blow_foot","blow_window_foot"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "windMaxLevel": 7,
+      "isCanSetWindSpeed": true
+    }
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

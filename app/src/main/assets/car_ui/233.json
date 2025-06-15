@@ -1,0 +1,84 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air"]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "engine_speed",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "mazda_binary_car_set79",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "_291_data_title_2",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "power",
+          "dual",
+          "in_out_auto_cycle",
+          "ac",
+          "ac_auto"
+        ],
+        [
+          "front_defog",
+          "rear_defog"
+        ],
+        [
+          "max_cool",
+          "auto"
+        ],
+        [
+          "blow_head",
+          "blow_foot",
+          "blow_head_foot",
+          "blow_window_foot",
+          "blow_positive"
+        ]
+      ],
+      "disableBtnArray": [
+        "ac_auto"
+      ],
+      "smallWindowStatusArray": [
+        "auto",
+        "dual",
+        "in_out_cycle",
+        "front_defog"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+}

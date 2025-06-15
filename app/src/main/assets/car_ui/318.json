@@ -1,0 +1,49 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","in_out_cycle"],
+        ["max_front"],["ac_max"],
+        ["power","rear"]
+      ],
+      "smallWindowStatusArray": ["power","ac", "in_out_cycle"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "pm_2_5_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "in_car_test_value","defaultValueSrn": "set_default"},
+          {"titleSrn": "_318_level","defaultValueSrn": "set_default"},
+          {"titleSrn": "air_quality_alarm","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"style": 0,"titleSrn": "air_purifier_switch"},
+          {"style": 1,"titleSrn": "detection_frequency_of_air_purification","valueSrnArray": ["normally_open", "one_minute_interval"],"selectIndex": 0,"value": ""},
+          {"style": 1,"titleSrn": "air_quality_alarm","valueSrnArray": ["mild", "moderate","severe","serious"],"selectIndex": 0,"value": ""},
+          {"style": 3,"titleSrn": "_118_setting_title_71","confirmTis": "_118_setting_title_71"}
+        ]
+      }
+    ]
+  }
+}

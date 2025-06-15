@@ -1,0 +1,21 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["open","close"],"selectIndex": 1,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  }
+}

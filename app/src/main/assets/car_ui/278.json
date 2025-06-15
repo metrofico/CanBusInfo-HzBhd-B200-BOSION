@@ -1,0 +1,144 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting","amplifier"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","auto"],
+        ["in_out_cycle"],
+        ["dual"],
+        ["front_defog","rear_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle"],
+      "disableBtnArray": ["front_defog","rear_defog"],
+      "isShowCenterWheel": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowSeatHeat": true,
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetSeatHeat": true,
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": false,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power","rear_auto"]
+      ],
+      "isCanSetTemp": true,
+      "isShowCenterWheel": true,
+      "isCanSetSeatHeat": true,
+      "isShowSeatHeat": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "seatHeatSrnArray": [
+        "close_seat_heat",
+        "left_seat_heat_1",
+        "left_seat_heat_2"
+      ]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_278_original_car_info_1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "ac_diagnostic_info_title_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_278_transmission_temp","defaultValueSrn": "set_default"},
+          {"titleSrn": "battery_voltage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_1168_atmospheric_pressure","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_278_original_car_info_2",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_278_slop","defaultValueSrn": "set_default"},
+          {"titleSrn": "_278_front_wheel_torque_ratio","defaultValueSrn": "set_default"},
+          {"titleSrn": "_278_dip_angle","defaultValueSrn": "set_default"},
+          {"titleSrn": "_278_trailer","defaultValueSrn": "set_default"},
+          {"titleSrn": "_278_altitude","defaultValueSrn": "set_default"}
+        ]
+      }]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": true
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "_278_top_light_delay","style": 1,"valueSrnArray": ["_278_3s","_278_10s","_278_20s","_278_30s"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_143_0x76_d1_b01","style": 1,"valueSrnArray": ["_278_30s","_278_1min","_278_2min","_278_3min","_278_60s","_278_90s"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "power_saving_time","style": 1,"valueSrnArray": ["_278_10min","_278_20min","_278_30min","_278_2min","_278_5min","_278_8min"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_rainfall_light_sensor","style": 1,"valueSrnArray": ["_278_asia_standard","_278_europe_standard"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_als","style": 1,"valueSrnArray": ["_278_left","_278_right"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "baojun_car_set","style": 1,"valueSrnArray": ["manual","auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_status_Start_stop","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_head_light_mode","style": 1,"valueSrnArray": ["_278_temp_mode","_278_normal_mode"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_seat_memory","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_guard_against","style": 1,"valueSrnArray": ["close","_278_10min","_278_20min","_278_30min"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf_parking","style": 1,"valueSrnArray": ["manual","auto"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_door_contrl","style": 1,"valueSrnArray": ["all_door_unlocked","driving_door_unlocked"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_elec_slide_sytem","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_car_roof_mode","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_all_terrain","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "front_collision_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "geely_emergency_brake_auto","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "vm_golf7_vehicle_status_start_stop_prompt_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "language_status","style": 1,"valueSrnArray":
+             [ "language_status_0",
+               "language_status_1"
+                ],"selectIndex": 0,"value": ""},
+
+          {"titleSrn": "_278_enter_rear_cam","style": 0,"value": "null_value"},
+          {"titleSrn": "_278_radar_disp","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "outlander_simple_car_set_13",
+        "itemList": [
+          {"titleSrn": "outlander_simple_car_set_8","style": 1,"valueSrnArray": ["stereo","surround_sound"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_278_vol_with_speed","style": 1,"valueSrnArray": ["close","open","low","middle","high"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_278_seat_set",
+        "itemList": [
+          {"titleSrn": "_278_seat_chirapsia_driver","style": 0,"value": "_278_lev0"},
+          {"titleSrn": "_278_seat_chirapsia_copilot","style": 0,"value": "_278_lev0"},
+          {"titleSrn": "_278_lumbar_support_driver","style": 0,"value": "_278_lev0"},
+          {"titleSrn": "_278_lumbar_support_copilot","style": 0,"value": "_278_lev0"}
+        ]
+      }
+
+
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "volumeRange":40,
+    "seekBarVolumeMax": 16,
+    "balanceRange": 20,
+    "isCanBalanceControl": false,
+    "isHaveVolumeControl": false,
+    "isCanSeekBarMinPlus": true,
+    "lineBtnAction":[
+    ]
+  }
+}

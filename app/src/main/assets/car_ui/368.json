@@ -1,0 +1,52 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "setting",
+      "drive_data"
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "S362_vehicleSpeedInfo_1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "S362_vehicleSpeedInfo_1","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "S367_Car_0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S367_Car_0",
+            "valueSrnArray": [
+              "set_default",
+              "S368_Car1",
+              "S368_Car2"
+            ]
+          }
+        ]
+      },
+      {
+        "titleSrn": "S368_Color0",
+        "itemList": [
+          {
+            "style": 1,
+            "titleSrn": "S368_Color0",
+            "valueSrnArray": [
+              "set_default",
+              "S368_Color1",
+              "S368_Color2",
+              "S368_Color3"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

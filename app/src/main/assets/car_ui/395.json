@@ -1,0 +1,67 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "in_out_cycle"],
+        ["front_defog"], ["rear_defog"],
+        ["power"]
+      ],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_394_seting",
+        "itemList": [
+          {"titleSrn":"_394_seting1","style": 1, "valueSrnArray": ["_394_seting10","_394_seting11"]},
+          {"titleSrn":"_394_seting2","style": 1, "valueSrnArray": ["_394_seting20","_394_seting21"]},
+          {"titleSrn":"_394_seting3","style": 1, "valueSrnArray": ["_394_seting30","_394_seting31"]},
+          {"titleSrn":"_394_seting4","style": 1, "valueSrnArray": ["_394_seting40","_394_seting41"]},
+          {"titleSrn":"_394_seting5","style": 0 },
+          {"titleSrn":"_394_seting6","style": 1, "valueSrnArray": ["_394_seting60","_394_seting61"]},
+          {"titleSrn":"_394_seting7","style": 1, "valueSrnArray": ["_394_seting70","_394_seting71"]},
+          {"titleSrn":"_394_seting8","style": 0 }
+        ]
+      },
+      {
+        "titleSrn": "_394_language",
+        "itemList": [
+          {"titleSrn":"_394_language","style": 1, "valueSrnArray": ["_394_language1","_394_language2"]}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_394_drive_v","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]},
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_185_Right_camera_status"},
+      {"style": 0,"titleSrn": "_185_Left_camera_status"},
+      {"style": 0,"titleSrn": "_185_Front_camera_status"},
+      {"style": 0,"titleSrn": "_185_Rear_camera_status"},
+      {"style": 0,"titleSrn": "_185_panorama_camera_status"}
+    ]
+  }
+}

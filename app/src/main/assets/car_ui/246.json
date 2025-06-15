@@ -1,0 +1,112 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting", "drive_data","amplifier"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac", "ac_max","in_out_cycle"],
+        ["auto"], ["auto_2"],
+        ["dual", "aqs", "max_front", "rear"]
+      ],
+      "disableBtnArray": ["power", "ac", "ac_max","in_out_cycle","auto","auto_2","dual", "aqs", "max_front", "rear"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_246_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_246_car_info1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info10","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info13","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info15","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info16","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info17","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_246_paring_info",
+        "itemList": [
+          {"titleSrn": "_246_paring_info1","style": 0},
+          {"titleSrn": "_246_paring_info2","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_246_setting_time_info",
+        "itemList": [
+          {"titleSrn": "_246_setting_time_info1","style": 2,"max":2099,"min":2000,"progress":0,"value": "2000","unit": "_246_setting_time_info8"},
+          {"titleSrn": "_246_setting_time_info2","style": 2,"max":12,"min":1,"progress":1,"value": "1","unit": "_246_setting_time_info8"},
+          {"titleSrn": "_246_setting_time_info3","style": 2,"max":31,"min":1,"progress":1,"value": "1","unit": "_246_setting_time_info8"},
+          {"titleSrn": "_246_setting_time_info4","style": 2,"max":23,"min":0,"progress":0,"value": "0","unit": "_246_setting_time_info8"},
+          {"titleSrn": "_246_setting_time_info5","style": 2,"max":59,"min":0,"progress":0,"value": "0","unit": "_246_setting_time_info8"},
+          {"titleSrn": "_246_setting_time_info6","style": 2,"max":59,"min":0,"progress":0,"value": "0","unit": "_246_setting_time_info8"},
+          {"titleSrn": "_246_setting_time_info7","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_246_setting_car_info",
+        "itemList": [
+          {"titleSrn": "_246_setting_car_info1","style": 1,"valueSrnArray": ["_246_setting_car_info10","_246_setting_car_info11","_246_setting_car_info20","_246_setting_car_info21"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_setting_car_info2","style": 1,"valueSrnArray": ["_246_setting_car_info6","_246_setting_car_info7"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_setting_car_info3","style": 1,"valueSrnArray": ["_246_setting_car_info12","_246_setting_car_info13"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_setting_car_info4","style": 1,"valueSrnArray": ["_246_setting_car_info8","_246_setting_car_info9"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_setting_car_info5","style": 1,"valueSrnArray": ["_246_setting_car_info14","_246_setting_car_info15","_246_setting_car_info16","_246_setting_car_info17","_246_setting_car_info18","_246_setting_car_info19"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_246_setting_car_info32",
+        "itemList": [
+          {"titleSrn": "_246_setting_car_info22","style": 1,"valueSrnArray": ["_246_setting_car_info23","_246_setting_car_info24"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_setting_car_info25","style": 1,"valueSrnArray": ["_246_setting_car_info26","_246_setting_car_info27"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_setting_car_info28","style": 1,"valueSrnArray": ["_246_setting_car_info29","_246_setting_car_info30","_246_setting_car_info31"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 30,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  }
+}

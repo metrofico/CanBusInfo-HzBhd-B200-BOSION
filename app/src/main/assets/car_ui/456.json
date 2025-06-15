@@ -1,0 +1,54 @@
+{"mainPageUiSet": {
+  "btnAction": [ "setting","drive_data"]
+},
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "_456_settings_0","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_1","style": 2,"max": 250,"min": 16,"progress": 3,"value": "3","unit": "unit_km_h"},
+          {"titleSrn": "_456_settings_2","style": 1,"valueSrnArray": ["_456_settings_20","_456_settings_21"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_3","style": 1,"valueSrnArray": ["_456_settings_30","_456_settings_31","_456_settings_32"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_4","style": 1,"valueSrnArray": ["_456_settings_40","_456_settings_41"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_5","style": 1,"valueSrnArray": ["_456_settings_50","_456_settings_51","_456_settings_52","_456_settings_53","_456_settings_54","_456_settings_55","_456_settings_56","_456_settings_57","_456_settings_58","_456_settings_59","_456_settings_5A","_456_settings_5B"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_60","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_61","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_62","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_63","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_64","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_65","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_456_settings_66","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_456_drive_0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_456_drive_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_8","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_9","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_10","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_11","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_12","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_13","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_456_drive_15","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

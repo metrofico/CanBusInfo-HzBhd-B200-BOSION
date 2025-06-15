@@ -1,0 +1,67 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","amplifier","original_car_device"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","in_out_cycle","ac"],
+        ["auto"],["rear_defog"],
+        ["dual","front_defog","blow_positive"]
+      ],
+      "smallWindowStatusArray": ["ac", "dual", "auto", "in_out_cycle","power"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 5
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_186_asl","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_288_0x31_setting1","style": 0,"value": "null_value","unit": "null_value"},
+          {"titleSrn": "_288_0x31_setting2","style": 1,"valueSrnArray": ["_288_0x31_setting3","_288_0x31_setting4","_288_0x31_setting5","_288_0x31_setting6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "amplifier_switch","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "mute","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_96","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["fm1","fm2","am","cdc","rear_cdc","aux"],
+    "rowBottomBtnAction":
+    [],
+    "items": [],
+    "isHaveSongList": false,
+    "isHavePlayTimeSeekBar": false,
+    "isTopBtnCanScroll": true
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": false,
+    "isShowTrack": false,
+    "isShowRadarDistance": false
+  }
+}

@@ -1,0 +1,61 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "drive_data","panel_key"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["auto"],
+        [], [],
+        ["ac", "ac_max"]
+      ],
+      "disableBtnArray": ["auto", "ac", "ac_max"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_246_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_246_car_info13","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info16","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Left_turn","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Right_turn","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "_157_backlight_mode",
+      "_468_panel_2",
+      "_468_panel_8",
+      "_468_panel_4",
+      "_468_panel_3",
+      "_468_panel_10",
+      "_468_panel_12",
+      "_468_panel_11",
+      "_468_panel_7",
+      "_345_function_17",
+      "_468_panel_9",
+      "_345_function_18",
+      "_468_panel_5",
+      "_468_panel_6",
+      "_468_panel_13",
+      "_468_panel_13"
+    ],
+    "count": 4
+  }
+}

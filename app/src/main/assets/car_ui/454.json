@@ -1,0 +1,99 @@
+{"mainPageUiSet": {
+  "btnAction": ["drive_data","setting","tire_info"]
+},
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_454_drive_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_454_drive_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_0il_quantity","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_light_level","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Airbag_yellow","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Airbag_red","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Tire_pressure_yellow","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Tire_pressure_red","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Front_fog_lamp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Rear_fog_lamp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Left_turn","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_Right_turn","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_safety_belt","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_ESP","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_cruise_control","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_engine_green","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_engine_yellow","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_454_drive_computer",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_454_drive_computer0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_computer1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_computer2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_computer3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive_computer4","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_454_drive2",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_454_drive2_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive2_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_454_drive2_2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_454_setting",
+        "itemList": [
+          {"titleSrn": "_454_setting0","style": 1,"valueSrnArray": ["_454_setting_off","_454_setting_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting1","style": 1,"valueSrnArray": ["_454_setting_off","_454_setting_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting2","style": 1,"valueSrnArray": ["_454_setting_door_all","_454_setting_door_drive"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting3","style": 1,"valueSrnArray": ["_454_setting_off","_454_setting_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting4","style": 1,"valueSrnArray": ["_454_setting_off","_454_setting_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting5","style": 1,"valueSrnArray": ["_454_setting_off","_454_setting_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting6","style": 1,"valueSrnArray": ["_454_setting60","_454_setting61"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting7","style": 1,"valueSrnArray": ["_454_setting70","_454_setting71"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting8","style": 1,"valueSrnArray": ["_454_setting80","_454_setting81"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting9","style": 1,"valueSrnArray": ["_454_setting90","_454_setting91","_454_setting92","_454_setting93"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_454_setting10","style": 2,"min": 0,"max": 240,"progress": 0,"value": "0","unit": "_454_setting10_0"},
+          {"titleSrn": "_454_setting11","style": 2,"min": 6,"max": 335,"progress": 6,"value": "0","unit": "_454_setting11_0"},
+          {"titleSrn": "_454_setting12","style": 1,"valueSrnArray": ["_454_setting12_0","_454_setting12_1","_454_setting12_2","_454_setting12_3","_454_setting12_4","_454_setting12_5","_454_setting12_6","_454_setting12_7"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_454_reset",
+        "itemList": [
+          {"titleSrn": "_454_reset0","style": 0},
+          {"titleSrn": "_454_reset1","style": 0},
+          {"titleSrn": "_454_reset2","style": 0},
+          {"titleSrn": "_454_reset3","style": 0}
+        ]
+      }
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

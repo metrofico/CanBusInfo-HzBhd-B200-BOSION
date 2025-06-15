@@ -1,0 +1,150 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting", "drive_data","amplifier"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac","steering_wheel_heating"],
+        ["rear"], ["auto"],
+        ["sync","in_out_cycle"]
+      ],
+      "disableBtnArray": ["rear"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "_373_air_heat_data0",
+        "_373_air_heat_data1",
+        "_373_air_heat_data2"
+      ],
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": true,
+      "seatColdSrnArray": [
+        "_373_air_cool_data0",
+        "_373_air_cool_data1",
+        "_373_air_cool_data2"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power","rear_auto","rear_lock"]
+      ],
+      "isAllBtnCanClick": true,
+      "disableBtnArray": [],
+
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+
+      "isCanSetTemp": true,
+
+      "isShowCenterWheel": true,
+      "isCanSetCenterTemp": true,
+
+      "isShowRightWheel": false,
+      "isCanSetRightTemp": false,
+
+      "isShowLeftWheel": false,
+      "isCanSetLeftTemp": false,
+
+      "isShowSeatCold": false,
+      "isCanSetSeatCold": false,
+      "seatColdSrnArray": [
+        "_330_seat_cold_off",
+        "_330_seat_heat_negative1",
+        "_330_seat_heat_negative2",
+        "_330_seat_heat_negative3"
+      ],
+      "isShowSeatHeat": false,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_373_setting_car_control",
+        "itemList": [
+          {"titleSrn": "_373_setting_car_control1","style": 1,"valueSrnArray": ["_373_setting_car_control1_0","_373_setting_car_control1_1","_373_setting_car_control1_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control2","style": 1,"valueSrnArray": ["_373_setting_car_control2_0","_373_setting_car_control2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control_add_function","style": 1,"valueSrnArray": ["_373_setting_car_time0","_373_setting_car_time1","_373_setting_car_time2","_373_setting_car_time3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control3","style": 1,"valueSrnArray": ["_373_setting_car_time0","_373_setting_car_time1","_373_setting_car_time2","_373_setting_car_time3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control4","style": 1,"valueSrnArray": ["_373_setting_car_control2_0","_373_setting_car_control2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control5","style": 1,"valueSrnArray": ["_373_setting_car_control2_0","_373_setting_car_control2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control6","style": 1,"valueSrnArray": ["_373_setting_car_control2_0","_373_setting_car_control2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control7","style": 1,"valueSrnArray": ["_373_setting_car_control7_0","_373_setting_car_control7_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control8","style": 1,"valueSrnArray": ["_373_setting_car_control2_0","_373_setting_car_control2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_setting_car_control9","style": 1,"valueSrnArray": ["_373_setting_car_control90","_373_setting_car_control91","_373_setting_car_control92","_373_setting_car_control93"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_373_other_seting",
+        "itemList": [
+          {"titleSrn": "_373_amp_seting1","style": 1,"valueSrnArray": ["_373_amp_seting10","_373_amp_seting11","_373_amp_seting12","_373_amp_seting13"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_amp_seting2","style": 1,"valueSrnArray": ["_373_amp_seting20","_373_amp_seting21"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_373_amp_seting3","style": 1,"valueSrnArray": ["_373_amp_seting31","_373_amp_seting32","_373_amp_seting33","_373_amp_seting34","_373_amp_seting35","_373_amp_seting36","_373_amp_seting37","_373_amp_seting38"],"selectIndex": 0,"value": ""}
+         ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_373_drive_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_373_drive_data1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_373_drive_data2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_373_drive_data3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_373_drive_data4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_373_drive_data5","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_373_compass",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_373_compass1","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 38,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  }
+
+}

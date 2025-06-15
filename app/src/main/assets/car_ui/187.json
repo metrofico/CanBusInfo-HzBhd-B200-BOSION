@@ -1,0 +1,35 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting", "amplifier"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_186_asl","style": 2,"min": 0,"max": 5,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_186_bose_centerpoint","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_186_surround_volume","style": 2,"min": -5,"max": 5,"progress": 5,"value": "0","unit": "null_value"},
+          {"titleSrn": "_186_driver_sound_field","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 10,
+    "seekBarVolumeMax": 40,
+    "volumeRange": 0,
+    "isCanRateControl": false,
+    "isCanBalanceControl": false,
+    "isHaveVolumeControl": true,
+    "isHaveBandMiddle": false
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true
+  }
+}

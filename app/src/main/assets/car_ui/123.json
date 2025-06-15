@@ -1,0 +1,211 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting", "drive_data", "original_car_device","amplifier"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","front_defog","rear_defog"],
+        ["sync"],["ac"],
+        ["ac_max","auto","in_out_cycle"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],[],[],["rear_auto","rear_power","rear_lock"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "hiworld_jeep_123_0x43_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0x43_data2_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_76","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_0","hiworld_jeep_123_item_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_76s","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_0","hiworld_jeep_123_item_1","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_54","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_32","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_5","hiworld_jeep_123_item_3","hiworld_jeep_123_item_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data3_0","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_7","hiworld_jeep_123_item_8"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data4_10","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_9","hiworld_jeep_123_item_10"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_76","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_11","hiworld_jeep_123_item_12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_5","style": 3,"confirmTis": "hiworld_jeep_123_0x43_data5_5"},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_32","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x43_data5_10","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_118_setting_title_61","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "hiworld_jeep_123_0x62_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0x62_data1_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data2_76","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_13","hiworld_jeep_123_item_14","hiworld_jeep_123_item_15"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data2_54","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_16","hiworld_jeep_123_item_17","hiworld_jeep_123_item_18","hiworld_jeep_123_item_19"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data2_32","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_16","hiworld_jeep_123_item_20","hiworld_jeep_123_item_21","hiworld_jeep_123_item_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data2_10","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_16","hiworld_jeep_123_item_20","hiworld_jeep_123_item_21","hiworld_jeep_123_item_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_765","style": 2,"max": 6,"min": 0,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data3_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data1_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x62_data1_67","style": 1,"valueSrnArray": ["zero_second","thirty_second","sixty_second","ninety_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_123_rear_mirror","style": 0 }
+        ]
+      },
+      {
+        "titleSrn": "hiworld_jeep_123_0x60_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_65","style": 1,"valueSrnArray": ["close","hiworld_jeep_123_item_23","hiworld_jeep_123_item_24"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_2","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_25","hiworld_jeep_123_item_26"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0x60_data1_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "hiworld_jeep_123_0xC1_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0xC1_data0","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_27","hiworld_jeep_123_item_28","hiworld_jeep_123_item_29"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0xC1_data1","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_30","hiworld_jeep_123_item_31"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0xC1_data2","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_32","hiworld_jeep_123_item_33","hiworld_jeep_123_item_41","hiworld_jeep_123_item_42"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0xC1_data3","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_34","hiworld_jeep_123_item_35","hiworld_jeep_123_item_45"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0xCA_0X01","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_36","hiworld_jeep_123_item_37"],"selectIndex": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_status_1","language_status_0","language_3","language_4","language_5","language_7","language_8","language_9","language_16","language_20"],"selectIndex": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "compass",
+        "itemList": [
+          {"titleSrn": "compass_direction","style": 1,"valueSrnArray": ["north","northeast","east","southeast","south","southwest","weat","northwest"],"selectIndex": 0,"value": "null_value"},
+          {"titleSrn": "compass_deviation","style": 2,"min":1,"max": 15,"progress": 0,"value": "1","unit": "null_value"},
+          {"titleSrn": "compass_run_calibration","style": 3,"confirmTis": "compass_run_calibration"}
+        ]
+      },
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "_186_asl","style": 1,"valueSrnArray": ["close","_18_level_1","_18_level_2","_18_level_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_18_surround","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "vehicle_type_info",
+        "itemList": [
+          {"titleSrn": "vehicle_series","style": 0,"value": "null_value"},
+          {"titleSrn": "vehicle_type","style": 0,"value": "null_value"}
+        ]
+      },{
+        "titleSrn": "hiworld_jeep_123_item_53",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_item_46","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_46_1","hiworld_jeep_123_item_46_2","hiworld_jeep_123_item_46_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_item_47","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_47_1","hiworld_jeep_123_item_47_2","hiworld_jeep_123_item_47_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_item_48","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_46_1","hiworld_jeep_123_item_48_1","hiworld_jeep_123_item_48_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_item_49","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_49_1","hiworld_jeep_123_item_47_2","hiworld_jeep_123_item_49_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_item_50","style": 4,"value": "null_value"},
+          {"titleSrn": "hiworld_jeep_123_item_51","style": 4,"value": "null_value"},
+          {"titleSrn": "hiworld_jeep_123_item_52","style": 4,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x32_data6","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x32_data8","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x32_data9","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x32_data1011","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x32_data12","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x32_data13","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "hiworld_jeep_123_0x34",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0x34_data01","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data23","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data11","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data12","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data13","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data14","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data19","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data20","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data21","defaultValueSrn": "set_default"},
+          {"titleSrn": "hiworld_jeep_123_0x34_data22","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction":
+    ["rpt","rdm"],
+    "rowBottomBtnAction":
+    ["left","play","pause","right"],
+    "items": [
+      {"imageId": "music_list", "titleSrn": "total_file", "value": ""},
+      {"imageId": "music_list", "titleSrn": "current_song_list", "value": ""},
+      {"imageId": "music_music", "titleSrn": "song_name", "value": ""},
+      {"imageId": "music_artist", "titleSrn": "singer", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "disc_name", "value": ""}
+    ],
+    "isHaveSongList": true
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "volumeRange": 0,
+    "seekBarVolumeMax": 38,
+    "isHaveVolumeControl": true,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[
+    ]
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","hybird","on_start","tire_info","drive_data","panel_key"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction":[
+        [ "sync", "auto","in_out_cycle","dual"],
+        ["power","ac"],["front_defog","rear_defog"],
+        ["blow_head","blow_head_foot","blow_window_foot","blow_foot","blow_window"]
+      ],
+      "smallWindowStatusArray": ["ac", "rear_defog", "auto", "in_out_cycle"],
+      "disableBtnArray": ["sync"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"],
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "seatColdSrnArray": ["close_seat_cold","left_seat_cold_1","left_seat_cold_2","left_seat_cold_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        ["blow_head","blow_foot"],
+        [],[],
+        ["rear_power", "rear_lock", "rear_auto"]
+      ],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "isCanSetTemp": true,
+      "windMaxLevel": 6,
+      "isCanSetWindSpeed": true
+
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_air_control",
+        "itemList": [
+          {"titleSrn": "auto_mode_wind_set","style": 1,"valueSrnArray": ["low","middle","high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "air_quality_sensor_set","style": 1,"valueSrnArray": ["close","low_sensor","high_sensor"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "air_partition_temperature","style": 1,"valueSrnArray": ["set_unite","set_partition","set_by_last"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "back_windows_auto_defog","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "front_windows_auto_defog","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "seat_auto_heat","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_control_seat_auto_heat","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "air_launcher_mode","style": 1,"valueSrnArray": ["close","open","set_by_last"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_start_seat_heat","style": 1,"valueSrnArray": ["close","open_one","open_two"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_start_seat_cold","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_start_air","style": 1,"valueSrnArray": ["auto","last_set"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_start_rear_air","style": 1,"valueSrnArray": ["rear_close","rear_and_front_same","rear_and_front_set"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_Pollution_control","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_lianaidexiniu","style": 0,"enable": false,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_body_center_control_1",
+        "itemList": [
+          {"titleSrn": "find_car_light_function","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lock_big_light_delay_set","style": 1,"valueSrnArray": ["close","second_30","minute_1","minute_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "prevent_open_door_auto_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "start_auto_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "stop_auto_unlock","style": 1,"valueSrnArray": ["close","driver_door","all_door"],"selectIndex": 0,"value": ""},
+          {"enable":false,"titleSrn": "delay_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_control_unlock_light_feedback","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_control_unlock_light_or_horn_feedback","style": 1,"valueSrnArray": ["only_light","light_and_horn","only_horn","close"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_unlock_set","style": 1,"valueSrnArray": ["driver_door","all_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "revers_back_wiper_auto_launcher","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_lock_again","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_launcher_car","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_body_operation_position","style": 0},
+          {"titleSrn": "ramp_start_assist","style": 1,"valueSrnArray": ["standard","advanced"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "adaptive_cruise_start_reminder","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "rear_seat_tis","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_add7","style": 1,"valueSrnArray": ["_68_add21",
+            "_68_add711","_68_add712","_68_add713","_68_add714","_68_add715","_68_add716",
+            "_68_add721","_68_add722","_68_add723","_68_add724","_68_add725","_68_add726",
+            "_68_add731","_68_add732","_68_add733","_68_add734","_68_add735","_68_add736"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_body_center_control_2",
+        "itemList": [
+          {"titleSrn": "close_unlock_set","style": 1,"valueSrnArray": ["all_door","only_driver_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "key_forgot_remain","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "personalization_by_driver","style": 1,"valueSrnArray": ["english_off","english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_re_lock_doors","style": 1,"valueSrnArray": ["english_off","english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "flank_blind_zone_warning","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "leave_car_auto_lock","style": 1,"valueSrnArray": ["close","open","enable_when_the_horn_is_chirped"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_prevent_ready","style": 1,"valueSrnArray": ["close","alarm","alarm_and_stop_car"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_status_notify","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_wiper","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "remote_window_control","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "collision_or_check_tis_type","style": 1,"valueSrnArray": ["alarm_sounds","save_seat"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "front_work_man_check","style": 1,"valueSrnArray": ["close","alarm","alarm_and_stop_car"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "back_car_pass_tis","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "lane_change_tis","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "call_memory_position","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "convenience_get_off_option","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "reverse_rear_view_mirror_auto_tilt","style": 1,"valueSrnArray": ["close","driver_and_passenger","driver","passenger"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "auto_rear_view_mirror_fold","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "car_auto_keep","style": 1,"valueSrnArray": ["long_auto_stop_car_brake","short_auto_stop_car_brake"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "reverse_rear_view_mirror_help","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "driver_seat_auto_return","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "driver_seat_auto_identify","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "sport_turn","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "adapter_front_light","style": 1,"valueSrnArray": ["close","corner_and_curved_light","ai_light_allocation"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "charging_limit","style": 1,"valueSrnArray": ["max","__6amp"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_Automatically_unlock_near_car","style": 1,"valueSrnArray": ["close","all_door","driver_door"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_add2","style": 1,"valueSrnArray": ["_68_add21","_68_add22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_add3","style": 1,"valueSrnArray": ["_68_add21","_68_add22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_add4","style": 1,"valueSrnArray": ["_68_add21","_68_add22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_add5","style": 1,"valueSrnArray": ["_68_add21","_68_add22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_68_add6","style": 1,"valueSrnArray": ["_68_add21","_68_add22"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "other_set",
+        "itemList": [
+          {"titleSrn": "car_speed_signal","style": 0,"valueSrnArray": [],"selectIndex": 0,"value": "set_default"},
+          {"titleSrn": "language_status","style": 1,"valueSrnArray": ["language_status_0","language_status_1","language_status_2","language_status_3","language_status_4","language_status_5","language_status_6","language_status_7","language_status_8","language_status_9","language_status_10","language_status_11","language_status_12","language_status_13","language_status_14","language_status_15","language_status_16"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "warning_volume_set","style": 2,"max": 15,"min": 0,"progress": 0,"value": "0","unit": "ford_park_assist_0x00"},
+          {"titleSrn": "_61_radar_switch", "style": 1, "valueSrnArray": ["close", "open"], "selectIndex": 0, "value": ""},
+          {"titleSrn": "_68_panorama_on", "style": 0}
+        ]
+      }
+    ]
+  },
+  "onStartPageUiSet": {
+    "btnAction": ["phone","wireless"]
+  },
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]}
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "_41_fuel_mileage_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_55_0x16_data56","defaultValueSrn": "null_value"},
+          {"titleSrn": "_186_endurancee_mileage","defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic":true,
+    "isShowCusPanoramicView":true,
+    "isShowRadarLocation": true,
+    "isShowRadarDistance": true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_68_panorama_off"}
+    ]
+  },
+  "panelKeyPageUiSet": {
+    "list": [
+      "OPEL_KEY_OK",
+      "OPEL_KEY_SETTING",
+      "OPEL_KEY_BC",
+      "OPEL_KEY_LEFT",
+      "OPEL_KEY_RIGH",
+      "OPEL_KEY_FM_AM",
+      "OPEL_KEY_CD_MP3",
+      "OPEL_KEY_1",
+      "OPEL_KEY_2",
+      "OPEL_KEY_3",
+      "OPEL_KEY_4",
+      "OPEL_KEY_5",
+      "OPEL_KEY_6",
+      "OPEL_KEY_7",
+      "OPEL_KEY_8",
+      "OPEL_KEY_9"
+    ],
+    "count": 4
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air", "setting","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","auto","dual"],
+        ["power"],["in_out_auto_cycle"],
+        ["max_front","ac_max","front_defog","rear_defog"]
+      ],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": false,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic":true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_253_front_view"},
+      {"style": 0,"titleSrn": "_253_rear_view"},
+      {"style": 0,"titleSrn": "_253_left_view"},
+      {"style": 0,"titleSrn": "_253_right_view"},
+      {"style": 0,"titleSrn": "_253_exit_panoramic"}
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_1193_setting_1",
+        "itemList": [
+          {"titleSrn": "_1193_setting_1_0","style": 1,"valueSrnArray": ["_1193_setting_1_0_0","_1193_setting_1_0_1","_1193_setting_1_0_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_8","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_9","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_A","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_B","style": 1,"valueSrnArray": ["_1193_setting_1_B_0","_1193_setting_1_B_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_C","style": 2,"max":100,"min":50,"progress":0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "_1193_setting_1_D","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_E","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_1_F","style": 2,"max":7,"min":1,"progress":1,"value": "0","unit": "level"}
+        ]},
+      {
+        "titleSrn": "_1193_setting_2",
+        "itemList": [
+          {"titleSrn": "_1193_setting_2_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_2_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_2_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_2_3","style": 1,"valueSrnArray": ["close","_1193_setting_2_3_0","_1193_setting_2_3_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_2_4","style": 1,"valueSrnArray": ["close","_1193_setting_2_4_0","_1193_setting_2_4_1","_1193_setting_2_4_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_2_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]},
+      {
+        "titleSrn": "_1193_setting_3",
+        "itemList": [
+          {"titleSrn": "_1193_setting_3_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_3_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_3_2","style": 1,"valueSrnArray": ["close","_1193_setting_3_2_0","_1193_setting_3_2_1"],"selectIndex": 0,"value": ""}
+        ]},
+      {
+        "titleSrn": "_1193_setting_4",
+        "itemList": [
+          {"titleSrn": "_1193_setting_0_0","style": 1,"valueSrnArray": ["language_cn","language_en"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_4_0","style": 1,"valueSrnArray": ["close","_1193_setting_4_0_0","_1193_setting_4_0_0_0","_1193_setting_4_0_1","_1193_setting_4_0_1_0","_1193_setting_4_0_2","_1193_setting_4_0_2_0","_1193_setting_4_0_3","_1193_setting_4_0_3_0","_1193_setting_4_0_4","_1193_setting_4_0_4_0","_1193_setting_4_0_5","_1193_setting_4_0_5_0","_1193_setting_4_0_6","_1193_setting_4_0_6_0","_1193_setting_4_0_7","_1193_setting_4_0_7_0","_1193_setting_4_0_8","_1193_setting_4_0_8_0","_1193_setting_4_0_9","_1193_setting_4_0_9_0","_1193_setting_4_0_A"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_4_1","style": 2,"max":9,"min":1,"progress":0,"value": "1","unit": "_327_unit_level"},
+          {"titleSrn": "_1193_setting_4_2","style": 1,"valueSrnArray": ["_1193_setting_4_2_0","_1193_setting_4_2_1","_1193_setting_4_2_2","_1193_setting_4_2_3","_1193_setting_4_2_4","_1193_setting_4_2_5","_1193_setting_4_2_6"]}
+        ]},
+      {
+        "titleSrn": "_1193_setting_5",
+        "itemList": [
+          {"titleSrn": "_1193_setting_5_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_5_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_5_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_5_3","style": 2,"max":5,"min":1,"progress":1,"value": "1","unit": "_327_unit_level"},
+          {"titleSrn": "_1193_setting_5_4","style": 1,"valueSrnArray": ["_1193_setting_5_4_0","_1193_setting_5_4_1","_1193_setting_5_4_2","_1193_setting_5_4_3","_1193_setting_5_4_4","_1193_setting_5_4_5","_1193_setting_5_4_6"],"selectIndex": 0,"value": ""}
+        ]},
+      {
+        "titleSrn": "_1193_setting_6",
+        "itemList": [
+          {"titleSrn": "_1193_setting_6_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_6_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_6_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_6_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_6_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_6_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]},
+      {
+        "titleSrn": "_1193_setting_7",
+        "itemList": [
+          {"titleSrn": "_1193_setting_7_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_7_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_7_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]},
+      {
+        "titleSrn": "_1193_setting_8",
+        "itemList": [
+          {"titleSrn": "_1193_setting_8_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_8_1","style": 1,"valueSrnArray": ["_1193_setting_1_B_0","_1193_setting_1_B_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_8_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_8_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_8_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_8_5","style": 1,"valueSrnArray": ["_1193_setting_8_5_0","_1193_setting_8_5_1","_1193_setting_8_5_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_8_5_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "enter_panorama",
+        "itemList": [
+          {"titleSrn": "_253_click_into_the_panorama","style": 0,"value": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "_1193_setting_9",
+        "itemList": [
+          {"titleSrn": "_1193_setting_9","style": 3,"confirmTis": "_1193_setting_9"}
+        ]
+      },
+      {
+        "titleSrn": "_1193_setting_10",
+        "itemList": [
+          {"titleSrn": "_1193_setting_10_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_1193_setting_10_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "seatDriveProfile","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"},
+          {"titleSrn": "_16_min_value_1","defaultValueSrn": "set_default"}
+        ]
+      }]
+  }
+}

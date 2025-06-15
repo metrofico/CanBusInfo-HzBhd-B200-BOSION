@@ -1,0 +1,45 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","tire_info"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog"],
+        ["ac_max"],["power"],
+        ["ac","auto","in_out_cycle","sync"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "temperature_unit","style": 1,"valueSrnArray": ["celsius","fahrenheit"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "tirePageUiSet": {
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"warm_content","value":"set_default"},{"title":"tire_pressure_content","value":"set_default"},{"title": "temperature_content","value":"set_default"}]}
+    ]
+  }
+
+}

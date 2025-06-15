@@ -1,0 +1,70 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","in_out_cycle","auto_wind_mode"],
+        ["front_defog"],["rear_defog"],
+        ["auto","dual","ac","ac_auto"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"ac_diagnostic_info_title",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "ac_diagnostic_info_title_0_01","defaultValueSrn": "null_value"},
+          {"titleSrn": "ac_diagnostic_info_title_0_23","defaultValueSrn": "null_value"},
+          {"titleSrn": "ac_diagnostic_info_title_0_45","defaultValueSrn": "null_value"},
+          {"titleSrn": "ac_diagnostic_info_title_0_67","defaultValueSrn": "null_value"},
+          {"titleSrn": "ac_diagnostic_info_title_1_01","defaultValueSrn": "null_value"},
+          {"titleSrn": "ac_diagnostic_info_title_1_23","defaultValueSrn": "null_value"},
+          {"titleSrn": "ac_diagnostic_info_title_1_45","defaultValueSrn": "null_value"},
+          {"titleSrn": "ac_diagnostic_info_title_1_67","defaultValueSrn": "null_value"}
+        ]
+      },
+      {"headTitleSrn":"ac_data_info_title",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "ac_diagnostic_info_title_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "ac_diagnostic_info_title_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "ac_diagnostic_info_title_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "ac_diagnostic_info_title_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "ac_diagnostic_info_title_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "ac_diagnostic_info_title_7","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "mazda_binary_car_set78","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set79","defaultValueSrn": "set_default"}
+        ]
+
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"ac_config",
+        "itemList": [
+          {"titleSrn": "ac_config","style": 1,"valueSrnArray": ["ac_config_item_1","ac_config_item_2"],"selectIndex": 0,"value": "set_default"}
+        ]
+      }
+    ]
+  }
+}

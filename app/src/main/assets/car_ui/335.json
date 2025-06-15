@@ -1,0 +1,117 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "drive_data", "setting","original_car_device","amplifier"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "in_out_cycle", "auto","rear_defog"],
+        ["max_front"], ["auto_wind_mode"],
+        ["dual", "power", "aqs"]
+      ],
+      "disableBtnArray": ["aqs","max_front","auto_wind_mode"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_330_Multimedia_global_state",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_330_currently_selected_disc","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_6","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_330_amplifier_info",
+        "itemList": [
+          {"titleSrn": "_330_amplifier_switch","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Power_amplifier_mute","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Original_power_amplifier_node","style": 0},
+          {"titleSrn": "_330_asl","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Vehicle_volume_follows_ASL","style": 0},
+          {"titleSrn": "_330_p_sel","style": 1,"valueSrnArray": ["_330_POS_ALL","_330_POS_FRONT","_330_POS_REAR","_330_POS_DRIVER"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_335_setting_data_speed",
+        "itemList": [
+          {"titleSrn": "_335_setting_data_speed1","style": 0},
+          {"titleSrn": "_335_setting_data_speed2","style": 2,"max":25500,"min":100,"progress":100,"value": "100","unit": "_335_setting_data_speed7"},
+          {"titleSrn": "_335_setting_data_speed3","style": 0},
+          {"titleSrn": "_335_setting_data_speed4","style": 2,"max":25500,"min":100,"progress":100,"value": "100","unit": "_335_setting_data_speed7"}
+        ]
+      },
+      {
+        "titleSrn": "_330_Mode_selection",
+        "itemList": [
+          {"titleSrn": "_330_Steering_wheel_control_mode","style": 1,"valueSrnArray": ["_330_Rear_mounted_host","_330_Front_mounted_host"],"selectIndex": 1,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_335_setting_car_data0",
+        "itemList": [
+          {"titleSrn": "_330_setting_cat_type","style": 1,"valueSrnArray": ["_330_car_1","_330_car_2","_330_car_3","_330_car_4","_330_car_7","_330_car_8"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_335_setting_vol_data0",
+        "itemList": [
+          {"titleSrn": "_335_setting_vol_data0","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_335_cd_data",
+        "itemList": [
+          {"titleSrn": "_335_cd_data0","style": 0},
+          {"titleSrn": "_335_cd_data1","style": 0}
+        ]
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  }
+
+}

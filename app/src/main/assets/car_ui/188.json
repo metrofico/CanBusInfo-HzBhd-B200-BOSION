@@ -1,0 +1,75 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "vm_golf7_language_setup",
+        "itemList": [
+          {"titleSrn": "vm_golf7_language_setup","style": 1,"valueSrnArray": ["language_status_0","language_status_1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_186_driving_aids",
+        "itemList": [
+          {"titleSrn": "_186_moving_object_detection","style": 3,"confirmTis": "_186_moving_object_detection"},
+          {"titleSrn": "_186_lane_departure_detection","style": 3,"confirmTis": "_186_lane_departure_detection"},
+          {"titleSrn": "_186_blind_spot_detection","style": 3,"confirmTis": "_186_blind_spot_detection"}
+        ]
+      },
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "support_panorama","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_39","hiworld_jeep_123_item_38"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0xE8_data4","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "cycle_in_out_close",
+          "power"
+        ],
+        [
+          "front_defog"
+        ],
+        [
+          "rear_defog"
+        ],
+        [
+          "ac",
+          "dual",
+          "auto"
+        ]
+      ],
+      "disableBtnArray": [
+        "cycle_in_out_close",
+        "auto"
+      ],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": false,
+      "isCanSetLeftTemp": false,
+      "isShowRightWheel": false,
+      "isCanSetRightTemp": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": false
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+
+  "bubbleUiSet": {
+    "iconDrawable": "camera_icon"
+  }
+}

@@ -1,0 +1,245 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["amplifier","setting","air","drive_data","original_car_device"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","ac","sync","auto","in_out_cycle"],
+        ["front_defog"],["rear_defog"],
+        ["ac_max","blow_head","blow_head_foot","blow_foot","blow_window_foot","steering_wheel_heating"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "sync"],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "windMaxLevel": 7,
+      "isCanSetWindSpeed": true,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","_112_seat_heat_low","_112_seat_heat_high","_112_seat_heat_mid"],
+      "isCanSetSeatCold": true,
+      "isShowSeatCold": true,
+      "seatColdSrnArray": ["close_seat_cold","_112_seat_cold_low","_112_seat_cold_high","_112_seat_cold_mid"]
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {"titleSrn": "amplifier_setting",
+        "itemList": [
+          {"style": 4, "titleSrn": "amplifier_switch"},
+          {"style": 4, "titleSrn": "_118_setting_title_96"},
+          {"style": 2, "titleSrn": "speed_linkage_volume_adjustment", "min": 0, "max": 3, "progress": 1, "value": "1", "unit": "null_value"},
+          {"style": 3,"titleSrn": "vm_golf7_vehicle_setup_factory_setup","confirmTis": "vm_golf7_vehicle_setup_factory_setup"}
+        ]
+      },
+      {"titleSrn": "_112_display_settings",
+        "itemList": [
+          {"style": 1, "titleSrn": "language_setup", "valueSrnArray": ["vm_golf7_language_setup_english_us","language_status_4","language_status_2","language_status_6","language_status_3","language_status_7","language_status_12","language_status_8","language_status_13","language_cn_jian","vm_golf7_language_setup_english_uk","language_status_8_1","language_status_15"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0xC1_data3", "valueSrnArray": ["_276_unit_setup_1","_276_unit_setup_2"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0xC1_data2", "valueSrnArray": ["hiworld_jeep_123_item_32","hiworld_jeep_123_item_33","_118_setting_value_46","_118_setting_value_47"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0xCA_0X01", "valueSrnArray": ["unit_km","_96_range_unit_mile"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0xC1_data1", "valueSrnArray": ["hiworld_jeep_123_item_30","hiworld_jeep_123_item_31"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0xCA_0X08", "valueSrnArray": ["hiworld_jeep_123_item_27","hiworld_jeep_123_item_28", "hiworld_jeep_123_item_29"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_118_setting_title_81", "valueSrnArray": ["unit_kmh","vm_golf7_vehicle_setup_units_speed_mph"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_276_setting_0"},
+          {"style": 3,"titleSrn": "_112_reset_trip_a","confirmTis": "_112_reset_trip_a"},
+          {"style": 3,"titleSrn": "_112_reset_trip_b","confirmTis": "_112_reset_trip_b"}
+
+        ]
+      },
+      {"titleSrn": "light_settings",
+        "itemList": [
+          {"style": 4, "titleSrn": "_112_adaptive_high_beam"},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x62_data2_10", "valueSrnArray": ["zero_second","_278_30s","_278_60s","_278_90s"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x62_data3_4"},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x62_data2_32", "valueSrnArray": ["zero_second","_278_30s","_278_60s","_278_90s"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x62_data3_3"},
+          {"style": 4, "titleSrn": "_112_cornering_lights"},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x62_data3_0"},
+          {"style": 4, "titleSrn": "_112_rear_mirror_dimmer"},
+          {"style": 4, "titleSrn": "_112_auto_anti_glare"},
+          {"style": 2, "titleSrn": "hiworld_jeep_123_0x62_data2_76", "min": 1, "max": 3, "progress": 0, "value": "", "unit": "null_value"},
+          {"style": 4, "titleSrn": "_250_welcome_light"},
+          {"style": 2, "titleSrn": "hiworld_jeep_123_0x62_data3_765", "min": 0, "max": 6, "progress": 0, "value": "", "unit": "null_value"}
+        ]
+      },
+      {"titleSrn": "hiworld_jeep_123_0x60_title",
+        "itemList": [
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x60_data1_0"},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x60_data1_1"},
+          {"style": 4, "titleSrn": "_118_setting_title_74"},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x60_data1_65", "valueSrnArray": ["close","hiworld_jeep_123_item_23","hiworld_jeep_123_item_24"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_118_setting_title_18"},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x60_data1_4"},
+          {"style": 1, "titleSrn": "_118_setting_title_16", "valueSrnArray": ["hiworld_jeep_123_item_26","hiworld_jeep_123_item_25"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_213_car_set14_2_0"},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x60_data1_3"},
+          {"style": 4, "titleSrn": "_112_horn_remote_start"},
+          {"style": 1, "titleSrn": "remote_door_unlock", "valueSrnArray": ["hiworld_jeep_123_item_26","hiworld_jeep_123_item_25"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "_118_setting_big_title_4",
+        "itemList": [
+          {"style": 1, "titleSrn": "_118_setting_title_9", "valueSrnArray": ["zero_second","_278_30s","_278_60s","_278_90s"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x62_data2_54", "valueSrnArray": ["zero_second","hiworld_jeep_123_item_17","hiworld_jeep_123_item_18","hiworld_jeep_123_item_19"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_118_setting_title_19"},
+          {"style": 1, "titleSrn": "_112_headunit_power_off_mode", "valueSrnArray": ["_112_acc_door","_112_acc"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "_112_aux_switches",
+        "itemList": [
+          {"style": 0, "titleSrn": "_112_aux1"},
+          {"style": 1, "titleSrn": "_112_aux1_type", "valueSrnArray": ["_112_latching","_112_momentary"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_112_aux1_power", "valueSrnArray": ["_112_battery","_112_ignition"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_112_aux1_recalled"},
+          {"style": 0, "titleSrn": "_112_aux2"},
+          {"style": 1, "titleSrn": "_112_aux2_type", "valueSrnArray": ["_112_latching","_112_momentary"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_112_aux2_power", "valueSrnArray": ["_112_battery","_112_ignition"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_112_aux2_recalled"},
+          {"style": 0, "titleSrn": "_112_aux3"},
+          {"style": 1, "titleSrn": "_112_aux3_type", "valueSrnArray": ["_112_latching","_112_momentary"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_112_aux3_power", "valueSrnArray": ["_112_battery","_112_ignition"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_112_aux3_recalled"},
+          {"style": 0, "titleSrn": "_112_aux4"},
+          {"style": 1, "titleSrn": "_112_aux4_type", "valueSrnArray": ["_112_latching","_112_momentary"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_112_aux4_power", "valueSrnArray": ["_112_battery","_112_ignition"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_112_aux4_recalled"}
+        ]
+      },
+      {"titleSrn": "hiworld_jeep_123_0x43_data5_76",
+        "itemList": [
+          {"style": 1, "titleSrn": "seat_auto_heat", "valueSrnArray": ["close","_118_setting_value_32","_112_all_starts"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "hiworld_jeep_123_0x43_title",
+        "itemList": [
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x43_data3_76", "valueSrnArray": ["hiworld_jeep_123_item_0","hiworld_jeep_123_item_1"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x43_data5_4"},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x43_data4_3"},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x43_data4_2"},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x43_data4_6"},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x43_data4_10", "valueSrnArray": ["close","hiworld_jeep_123_item_9","hiworld_jeep_123_item_10"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x43_data5_10", "valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x43_data5_32", "valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x43_data3_0", "valueSrnArray": ["hiworld_jeep_123_item_7","hiworld_jeep_123_item_8"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x43_data3_1", "valueSrnArray": ["close","_112_warn","_118_setting_big_title_7","_112_warn_brake"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_118_setting_title_4"},
+          {"style": 1, "titleSrn": "hiworld_jeep_123_0x43_data3_54", "valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "hiworld_jeep_123_0x43_data4_5"},
+          {"style": 4, "titleSrn": "_112_rear_park_assist"},
+          {"style": 4, "titleSrn": "_112_auto_park_assist"},
+          {"style": 4, "titleSrn": "_118_setting_title_65"},
+          {"style": 1, "titleSrn": "_176_car_setting_title_22", "valueSrnArray": ["hiworld_jeep_123_item_5","hiworld_jeep_123_item_3","hiworld_jeep_123_item_6"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_118_setting_title_34", "valueSrnArray": ["hiworld_jeep_123_item_7","hiworld_jeep_123_item_8","hiworld_jeep_123_item_3"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_118_setting_title_30"},
+          {"style": 1, "titleSrn": "_118_setting_title_29", "valueSrnArray": ["_118_setting_value_23","_118_setting_value_24","_118_setting_value_25"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_112_offset_dist_alarm", "valueSrnArray": ["close","hiworld_jeep_123_item_0","hiworld_jeep_123_item_1"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_112_offset_dist_alarm_vol", "valueSrnArray": ["hiworld_jeep_123_item_2","hiworld_jeep_123_item_3","hiworld_jeep_123_item_4"], "selectIndex": 0, "value": ""}
+        ]
+      },
+      {"titleSrn": "_118_setting_big_title_7",
+        "itemList": [
+          {"style": 4, "titleSrn": "_118_setting_title_37"},
+          {"style": 4, "titleSrn": "_118_setting_title_38"}
+        ]
+      },
+      {"titleSrn": "_118_setting_big_title_5",
+        "itemList": [
+          {"style": 4, "titleSrn": "_118_setting_title_24"},
+          {"style": 4, "titleSrn": "_118_setting_title_26"},
+          {"style": 4, "titleSrn": "_118_setting_title_27"},
+          {"style": 4, "titleSrn": "_118_setting_title_28"},
+          {"style": 1, "titleSrn": "_118_setting_title_25", "valueSrnArray": ["hyundai_rear_mode_all","_31_tire_date3"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_112_auto_suspension"}
+        ]
+      },
+      {
+        "titleSrn": "car_type",
+        "itemList": [
+          {
+            "style": 0,
+            "titleSrn": "low_config"
+          },
+          {
+            "style": 0,
+            "titleSrn": "high_config"
+          },
+          {
+            "style": 0,
+            "titleSrn": "_112_xCA"
+          }
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_303_speed", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_308_title_7", "defaultValueSrn": "null_value"}
+        ]
+      },
+      {
+        "headTitleSrn": "fuel_consumption_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_112_available_mileage", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_283_car_setting_combination_title_1", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_a_ave_fuel_cons", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_a_ave_spe", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_a_trav_dist_", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_a_driv_time", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_b_ave_fuel_cons", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_b_ave_spe", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_b_trav_dist_", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_112_trip_b_driv_time", "defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowCusPanoramicView": false,
+    "isShowPanoramic": true,
+    "panoramicBtnList": [
+      {"style": 0, "titleSrn": "_220_normal"},
+      {"style": 0, "titleSrn": "overlook"}
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 18,
+    "bandRange": 9,
+    "balanceRange": 18,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 38,
+    "volumeRange": 0,
+    "isCanBalanceControl": false
+  },
+
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": ["rdm","rpt"],
+    "rowBottomBtnAction": ["up","left","play","pause","right","down"],
+    "items": [
+      {"imageId": "music_music", "titleSrn": "_118_setting_title_105", "value": ""},
+      {"imageId": "music_dvd", "titleSrn": "_118_setting_title_106", "value": ""},
+      {"imageId": "music_artist", "titleSrn": "_118_setting_title_107", "value": ""},
+      {"imageId": "music_list", "titleSrn": "_309_title_6", "value": ""}
+    ],
+    "isHaveSongList": true
+  }
+}

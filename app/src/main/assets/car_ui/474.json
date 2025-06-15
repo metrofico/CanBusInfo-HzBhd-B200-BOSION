@@ -1,0 +1,91 @@
+{
+  "mainPageUiSet": {
+  "btnAction": ["setting","air","drive_data"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac", "in_out_cycle","mono","rear"],
+        ["auto"], ["auto_2"],
+        ["front_defog", "blow_head", "blow_foot", "blow_window", "auto_cycle", "rear_defog"]
+      ],
+      "disableBtnArray": ["power"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+  "list": [
+    {
+      "titleSrn": "car_set",
+      "itemList": [
+        {"titleSrn": "_456_settings_0","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_456_settings_1","style": 2,"max": 250,"min": 16,"progress": 5,"value": "3","unit": "unit_km_h"},
+        {"titleSrn": "_456_settings_2","style": 1,"valueSrnArray": ["_456_settings_20","_456_settings_21"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_456_settings_3","style": 1,"valueSrnArray": ["_456_settings_30","unit_mpg_uk","_456_settings_32", "unit_mpg_us"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_456_settings_4","style": 1,"valueSrnArray": ["_456_settings_40","_456_settings_41"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_474_buzzer_volume","style": 2,"max": 7,"min": 0,"progress": 5,"value": "0"},
+        {"titleSrn": "_474_automatic_door_lock","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_474_independent_unlocking_of_driver_door","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_474_independent_trunk_lid_unlocking","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_61_radar_switch","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_143_setting_5","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "light_ctrl_3","style": 1,"valueSrnArray": ["_456_settings_00","_456_settings_01"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_474_photosensitivity","style": 2,"max": 3,"min": 1,"progress": 0,"value": "1"},
+        {"titleSrn": "_456_settings_5","style": 1,"valueSrnArray": ["_456_settings_50","_456_settings_51","_456_settings_52","_456_settings_53","_456_settings_54","_456_settings_55","_456_settings_56"],"selectIndex": 0,"value": ""},
+        {"titleSrn": "_474_trip_reset","style": 1,"valueSrnArray": ["_474_trip_a_reset","_474_trip_b_reset"],"selectIndex": 0,"value": ""}
+      ]
+    }
+  ]
+},
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_456_drive_0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_304_front_fog_lamp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_304_low_beam","defaultValueSrn": "set_default"},
+          {"titleSrn": "_304_high_beam","defaultValueSrn": "set_default"},
+          {"titleSrn": "_304_rear_fog_lamp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_304_left_trun_lamp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_304_right_turn_lamp","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_112_available_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_car_info13","defaultValueSrn": "set_default"},
+          {"titleSrn": "show_outdoor_temperature","defaultValueSrn": "set_default"},
+          {"titleSrn": "total_mileage","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"S97_Fuel_cons_mile_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_474_a_driving_time","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_a_average","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_a_distance_traveled","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_a_average_fuel_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_b_driving_time","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_b_average","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_b_distance_traveled","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_b_average_fuel_consumption","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_189_maintenance",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_94_maintenance_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "_474_maintenance_days","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

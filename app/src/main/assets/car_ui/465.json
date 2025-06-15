@@ -1,0 +1,35 @@
+{"mainPageUiSet": {
+  "btnAction": ["drive_data"]
+},
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_465_drive_data",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_465_drive_data1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data8","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data9","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data10","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data11","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data13","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data14","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data15","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data16","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data17","defaultValueSrn": "set_default"},
+          {"titleSrn": "_465_drive_data18","defaultValueSrn": "set_default"},
+          {"titleSrn": "_279_outdoor_temperature","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": false,
+    "isShowRadar": false
+  }
+}

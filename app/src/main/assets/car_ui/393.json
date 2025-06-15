@@ -1,0 +1,76 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","original_car_device", "setting","amplifier"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["auto", "power", "ac"],
+        ["front_defog"], ["rear_defog"],
+        ["in_out_cycle", "dual"]
+      ],
+      "disableBtnArray": [],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_393_apm",
+        "itemList": [
+          {"titleSrn": "_393_apm1","style": 0},
+          {"titleSrn": "_393_apm2","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_393_media",
+        "itemList": [
+          {"titleSrn": "_393_media1","style": 0},
+          {"titleSrn": "_393_media2","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_393_car",
+        "itemList": [
+          {"titleSrn": "_393_car","style": 1,"valueSrnArray": ["_393_car1","_393_car2"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 10,
+    "isHaveBandMiddle": false,
+    "isHaveVolumeControl": true,
+    "isCanSeekBarMinPlus": false,
+    "isCanRateControl": false,
+    "isCanBalanceControl": false,
+    "isRlControl": false,
+    "seekBarVolumeMax": 49,
+    "volumeRange": 0,
+    "lineBtnAction":[]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false
+  }
+
+}

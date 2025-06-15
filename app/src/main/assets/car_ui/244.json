@@ -1,0 +1,47 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting"]
+  },
+
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "isShowRadarLocation": true,
+    "isShowRadarDistance": true
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["front_defog","rear_defog"],
+        ["auto"],["power"],
+        ["ac","in_out_cycle","sync"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_light_set",
+        "itemList": [
+          {"titleSrn": "ceiling_light_delay","style": 1,"valueSrnArray": ["car_set_null","s_10","s_20","s_30"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "power_saving_time","style": 1,"valueSrnArray": ["min_10","min_20","min_30"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_lock_set",
+        "itemList": [
+          {"titleSrn": "speed_lock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "automatic_relock","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  }
+}

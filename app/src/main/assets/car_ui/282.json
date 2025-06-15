@@ -1,0 +1,137 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","air","drive_data"]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_282_07_title",
+        "itemList": [
+          {"titleSrn": "_282_07_0_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_07_0_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_07_0_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_07_0_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_282_14_title",
+        "itemList": [
+          {"titleSrn": "_282_14_0_7","style": 3,"confirmTis": "_282_14_0_7"},
+          {"titleSrn": "_282_14_0_6","style": 0,"value": "null_value"},
+          {"titleSrn": "_282_14_0_5","style": 3,"confirmTis": "_282_14_0_5"},
+          {"titleSrn": "_282_14_0_4","style": 3,"confirmTis": "_282_14_0_4"},
+          {"titleSrn": "_282_14_0_32","style": 0,"value": "null_value"},
+          {"titleSrn": "_282_14_0_10","style": 0,"value": "null_value"},
+          {"titleSrn": "_282_74_1","style": 3,"confirmTis": "_282_74_1"},
+          {"titleSrn": "_282_74_2","style": 3,"confirmTis": "_282_74_2"}
+        ]
+      },
+      {
+        "titleSrn": "_282_19_title",
+        "itemList": [
+          {"titleSrn": "_282_19_0_01","style": 1,"valueSrnArray": ["_250_invalid","drive_assist_5_3","drive_assist_5_2","drive_assist_5_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_19_0_2","style": 1,"valueSrnArray": ["_282_19_0_2_0","_282_19_0_2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_19_0_3","style": 1,"valueSrnArray": ["_282_19_0_3_0","_282_19_0_3_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_19_1","style": 2,"max": 70,"min": 15,"progress": 10,"value": "25","unit": "unit_percent"}
+        ]
+      },
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "_282_27_0","style": 1,"valueSrnArray": ["close","_278_10s","_278_20s","_278_30s","_40_s","_50_s","sixty_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_1","style": 1,"valueSrnArray": ["close","_278_10s","_278_20s","_278_30s","_40_s","_50_s","sixty_second"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_3","style": 1,"valueSrnArray": ["_282_27_3_0","_282_27_3_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_4","style": 1,"valueSrnArray": ["_282_27_4_0","_282_27_4_1","_282_27_4_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_7","style": 1,"valueSrnArray": ["small","_250_mid","big"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_8","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_9","style": 1,"valueSrnArray": ["stereo","_282_27_9_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_10","style": 2,"max": 32,"min": 0,"progress": 16,"value": "16","unit": "null_value"},
+          {"titleSrn": "_282_27_11","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_12","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_282_27_13","style": 2,"max": 8,"min": 0,"progress": 0,"value": "0","unit": "unit_degree"},
+          {"titleSrn": "_282_27_14","style": 2,"max": 8,"min": 0,"progress": 0,"value": "0","unit": "unit_degree"}
+        ]
+      },
+      {
+        "titleSrn": "radar_settings",
+        "itemList": [
+          {"titleSrn": "radar_volume","style": 0,"value": "null_value"},
+          {"titleSrn": "radar_display","style": 0,"value": "null_value"},
+          {"titleSrn": "radar_distance","style": 0,"value": "null_value"},
+          {"titleSrn": "radar_volume_switch","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","in_out_cycle","ac_max","auto","auto_f"],
+        ["ac"],["dual"],
+        ["front_defog","blow_negative","blow_positive","rear_defog"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle","front_defog"],
+      "disableBtnArray": ["auto_f"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power","rear_lock","rear_auto"]
+      ],
+      "disableBtnArray": ["rear_power","rear_lock","rear_auto"],
+      "isAllBtnCanClick": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "pm_2_5",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_282_14_12","defaultValueSrn": "set_default"},
+          {"titleSrn": "_282_14_4_20","defaultValueSrn": "set_default"},
+          {"titleSrn": "_282_14_23","defaultValueSrn": "set_default"},
+          {"titleSrn": "_282_14_4_53","defaultValueSrn": "set_default"}
+        ]
+      },
+      {
+        "headTitleSrn": "pm_2_5",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_282_15_0_03_2"},
+      {"style": 0,"titleSrn": "_282_15_0_03_3"},
+      {"style": 0,"titleSrn": "_282_15_0_03_4"},
+      {"style": 0,"titleSrn": "_282_15_0_03_5"}
+    ]
+  }
+}

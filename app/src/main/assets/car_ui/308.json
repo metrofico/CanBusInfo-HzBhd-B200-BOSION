@@ -1,0 +1,100 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting","amplifier", "original_car_device"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","dual"],
+        ["front_defog","rear_defog"],["blow_positive","power"],
+        ["auto","in_out_cycle","rear"]
+      ],
+      "disableBtnArray": ["rear"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_308_title_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_308_title_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_308_title_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_308_title_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_308_title_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_308_title_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_308_title_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_308_title_8","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"titleSrn": "_308_title_13","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_308_title_14","style": 2,"max":3,"min":0,"progress":0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_308_title_15","style": 1, "valueSrnArray": ["_308_value_5", "_308_value_6","_308_value_7","_308_value_8","_308_value_9","_308_value_10","_308_value_11","_308_value_12"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_308_title_16","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_308_title_17","style": 1, "valueSrnArray": ["english_off", "english_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_308_title_18","style": 3,"confirmTis": "confirm_reset_alert_dialog"}
+        ]
+      },
+      {
+        "titleSrn":"_308_title_9",
+        "itemList": [
+          {"titleSrn": "_308_title_12","style": 2,"max":5,"min":0,"progress":0,"value": "0","unit": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowRadarLocation": true
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 10,
+    "seekBarVolumeMax": 16,
+    "volumeRange": 0,
+    "isCanRateControl": true,
+    "isCanBalanceControl": false,
+    "isHaveVolumeControl": true,
+    "isHaveBandMiddle": false,
+    "isVolumeEnabled": false,
+    "isHighEnabled": false,
+    "isMiddleEnabled": false,
+    "isLowEnabled": false,
+    "lineBtnAction":["bose_center"],
+    "customTitle": "_308_title_10",
+    "isHaveCustom": true,
+    "isCustomEnabled": false,
+
+    "custom2Title": "_308_title_12",
+    "isHaveCustom2": false,
+    "isCustom2Enabled": false,
+    "seekBarMaxCustom2": 5
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": ["up", "play", "pause", "stop", "down"],
+    "items": [
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""},
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""}
+    ],
+    "isHavePlayTimeSeekBar": false
+  }
+}

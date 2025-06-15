@@ -1,0 +1,102 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting","drive_data"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"hiworld_jeep_123_0xC1_title",
+        "itemList": [
+          {"titleSrn": "hiworld_jeep_123_0xCA_0X01","style": 1,"valueSrnArray": ["unit_m","unit_km"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0xC1_data1","style": 1,"valueSrnArray": ["unit_f","unit_degc"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "hiworld_jeep_123_0xC1_data2","style": 1,"valueSrnArray": ["unit_l_100_km", "unit_kml", "unit_mpg_us", "unit_mpg_uk"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_unit_setup_0","style": 1,"valueSrnArray": ["_276_unit_setup_1", "_276_unit_setup_2", "_276_unit_setup_3"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"vm_golf7_language_setup",
+        "itemList": [
+          {"titleSrn": "vm_golf7_language_setup","style": 1,"valueSrnArray": [
+            "language_1",
+            "language_3",
+            "language_4",
+            "language_5",
+            "language_7",
+            "language_8",
+            "language_9",
+            "language_16",
+            "_276_language_0x15"
+          ],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"car_set",
+        "itemList": [
+          {"titleSrn": "_143_0x76_d1_b5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "light_ctrl_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_0","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "park_help","style": 1,"valueSrnArray": ["_276_setting_option_0", "_276_setting_option_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_1","style": 1,"valueSrnArray": ["low", "middle", "high"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_2","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_6","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_16", "hiworld_jeep_123_item_20", "hiworld_jeep_123_item_21","hiworld_jeep_123_item_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_7","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_8","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_16", "hiworld_jeep_123_item_20", "hiworld_jeep_123_item_21","hiworld_jeep_123_item_22"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_9","style": 1,"valueSrnArray": ["_276_setting_data_1", "_276_setting_data_2", "_276_setting_data_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_276_setting_10","style": 1,"valueSrnArray": ["close", "open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"car_computer_info",
+        "itemList": [
+          {"titleSrn": "_276_clean_page_1","style": 0,"value": "null_value"},
+          {"titleSrn": "_276_clean_page_2","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn": "car_computer_info_page0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_18_current_fuel","defaultValueSrn": "set_default"},
+          {"titleSrn": "nissan_raise_mileage_title","defaultValueSrn": "set_default"},
+          {"titleSrn": "mazda_binary_car_set80","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "car_computer_info_page1",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "accumulated_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "driving_time","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn": "car_computer_info_page2",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_consumption","defaultValueSrn": "set_default"},
+          {"titleSrn": "vm_golf7_vehicle_setup_mfd_avg_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "accumulated_mileage","defaultValueSrn": "set_default"},
+          {"titleSrn": "driving_time","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  },
+  "panelKeyPageUiSet": {
+    "list": ["panel_btn_menu","panel_btn_up","panel_btn_mode","`panel_btn_left`",
+      "panel_btn_ok", "panel_btn_right","panel_btn_esc",
+      "panel_btn_down","panel_btn_dark"
+    ]
+  }
+}

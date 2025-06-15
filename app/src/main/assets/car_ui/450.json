@@ -1,0 +1,120 @@
+{"mainPageUiSet": {
+  "btnAction": ["setting", "drive_data","tire_info"]
+},
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_450_bmw_car_0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_450_bmw_car_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_8","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_9","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_10","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_11","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_60","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_61","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_62","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_63","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_64","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_65","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_66","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_450_bmw_car_40",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_450_bmw_car_37","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_38","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_39","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_450_bmw_car_49",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_450_bmw_car_42","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_45","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_48_888","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_49","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_450_bmw_car_57",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_450_bmw_car_50","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_51","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_52","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_53","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_54_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_54_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_54_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_55","defaultValueSrn": "set_default"},
+          {"titleSrn": "_450_bmw_car_56","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_450_bmw_car_10_left1",
+        "itemList": [
+          {"titleSrn": "_450_bmw_car_11","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_12","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_13","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_14","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_15","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_450_bmw_car_18_left2",
+        "itemList": [
+          {"titleSrn": "_450_bmw_car_19","style": 1,"valueSrnArray": ["_450_bmw_car_19_0","_450_bmw_car_19_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_20","style": 1,"valueSrnArray": ["_450_bmw_car_20_0","_450_bmw_car_20_1","_450_bmw_car_20_2","_450_bmw_car_20_3"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_21","style": 1,"valueSrnArray": ["_450_bmw_car_21_0","_450_bmw_car_21_1","_450_bmw_car_21_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_22","style": 1,"valueSrnArray": ["_450_bmw_car_22_0","_450_bmw_car_22_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_23","style": 1,"valueSrnArray": ["_450_bmw_car_23_0","_450_bmw_car_23_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_24","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_25","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_26","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_27","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_28","style": 2,"min": 0,"max": 240,"progress": 0,"value": "0","unit": "_454_setting10_0"},
+          {"titleSrn": "_450_bmw_car_29","style": 1,"valueSrnArray": ["_450_bmw_car_29_0","_450_bmw_car_29_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_30","style": 1,"valueSrnArray": ["_450_bmw_car_30_0","_450_bmw_car_30_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_31","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_32","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_33","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_34","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_35","style": 1,"valueSrnArray": ["_450_bmw_car_16_off","_450_bmw_car_17_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_450_bmw_car_36","style": 2,"min": 0,"max": 4080,"progress": 0,"value": "0","unit": "_450_bmw_car_36_unit"}
+        ]
+      }
+    ]
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

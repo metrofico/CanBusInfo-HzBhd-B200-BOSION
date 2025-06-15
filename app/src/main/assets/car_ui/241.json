@@ -1,0 +1,16 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["setting"]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "car_set",
+        "itemList": [
+          {"titleSrn": "radar_warning_voice","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  }
+}

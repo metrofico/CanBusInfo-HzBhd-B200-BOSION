@@ -1,0 +1,26 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["drive_data","original_car_device"]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true
+  },
+  "driverDataPageUiSet": {
+    "list": [
+
+      {"headTitleSrn": "vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"}
+        ]
+
+      }
+    ]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowBottomBtnAction":
+    [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  }
+}

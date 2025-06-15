@@ -1,0 +1,213 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "setting","tire_info", "drive_data"]
+},
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "ac_max"],
+        ["auto"], ["in_out_cycle"],
+        ["rear_defog","power","rear"]
+      ],
+      "disableBtnArray": ["aqs","max_front","auto_wind_mode"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_375_auto_park",
+        "itemList": [
+          {"titleSrn": "_375_auto_park_setting","style": 1,"valueSrnArray": ["_375_auto_park_setting0","_375_auto_park_setting1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_375_reservation_charging",
+        "itemList": [
+          {"titleSrn": "_375_reservation_charging_start","style": 0},
+          {"titleSrn": "_375_reservation_charging_end","style": 0},
+          {"titleSrn": "_375_reservation_setting1","style": 1,"valueSrnArray": ["_375_reservation_setting10","_375_reservation_setting11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_reservation_setting2","style": 1,"valueSrnArray": ["_375_reservation_setting20","_375_reservation_setting21"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_reservation_setting3","style": 1,"valueSrnArray": ["_375_reservation_setting30","_375_reservation_setting31"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_reservation_setting4","style": 1,"valueSrnArray": ["_375_reservation_setting40","_375_reservation_setting41","_375_reservation_setting42","_375_reservation_setting43"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_reservation_setting_xuhang","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_375_car_select",
+        "itemList": [
+          {"titleSrn": "_375_car_select","style": 1,"valueSrnArray": [
+            "_375_car_1",
+            "_375_car_2",
+            "_375_car_3",
+            "_375_car_4",
+            "_375_car_5",
+            "_375_car_6",
+            "_375_car_7",
+            "_375_car_8",
+            "_375_car_9",
+            "_375_car_10",
+            "_375_car_11",
+            "_375_car_12",
+            "_375_car_13",
+            "_375_car_14",
+            "_375_car_15"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_375_car_setting",
+        "itemList": [
+          {"titleSrn": "_375_car_setting1","style": 0},
+          {"titleSrn": "_375_car_setting2","style": 1,"valueSrnArray": ["_375_car_setting2_0","_375_car_setting2_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting3","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting4","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting5","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting6","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting7","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting8","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting9","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting10","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting11","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting12","style": 1,"valueSrnArray": ["_375_car_setting120","_375_car_setting121","_375_car_setting122","_375_car_setting123","_375_car_setting124"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting13","style": 1,"valueSrnArray": ["_375_car_setting130","_375_car_setting131","_375_car_setting132","_375_car_setting133"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting14","style": 0},
+          {"titleSrn": "_375_car_setting15","style": 1,"valueSrnArray": ["_375_car_setting151","_375_car_setting152","_375_car_setting153"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting16","style": 1,"valueSrnArray": ["_375_car_setting151","_375_car_setting152","_375_car_setting153"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting17","style": 1,"valueSrnArray": ["_375_car_setting151","_375_car_setting152","_375_car_setting153"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting18","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting180","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting19","style": 1,"valueSrnArray": ["_375_car_setting120","_375_car_setting121","_375_car_setting122","_375_car_setting123","_375_car_setting124"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting20","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting21","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting22","style": 1,"valueSrnArray": ["_375_car_setting221","_375_car_setting222","_375_car_setting223","_375_car_setting224"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting23","style": 1,"valueSrnArray": ["_375_car_setting231","_375_car_setting232","_375_car_setting233"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting24","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting25","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting26","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting27","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting28","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting29","style": 1,"valueSrnArray": ["_375_car_setting290","_375_car_setting291","_375_car_setting292","_375_car_setting293"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting30","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting31","style": 1,"valueSrnArray": ["_375_car_setting310","_375_car_setting311","_375_car_setting312"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting32","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting33","style": 1,"valueSrnArray": ["_375_car_setting310","_375_car_setting312"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting34","style": 1,"valueSrnArray": ["_375_car_setting341","_375_car_setting342","_375_car_setting343","_375_car_setting344"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting35","style": 1,"valueSrnArray": ["_375_car_setting351","_375_car_setting352","_375_car_setting353"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting36","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting37","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting370","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting371","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting372","style": 1,"valueSrnArray": ["_375_car_setting3720","_375_car_setting3721","_375_car_setting3722","_375_car_setting3723","_375_car_setting3724","_375_car_setting3725","_375_car_setting3726"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting373","style": 1,"valueSrnArray": ["_375_car_setting310","_375_car_setting311","_375_car_setting312"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting374","style": 2,"max":10,"min":-10,"progress":0,"value": "0","unit": "_375_car_setting374_unit"},
+          {"titleSrn": "_375_car_setting375","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting38","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting39","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting40","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting41","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting42","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting43","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting44","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting45","style": 1,"valueSrnArray": ["_375_car_setting451","_375_car_setting452","_375_car_setting453","_375_car_setting454","_375_car_setting455","_375_car_setting456","_375_car_setting457"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting46","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting47","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting48","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting49","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting50","style": 1,"valueSrnArray": ["_375_car_setting50_0","_375_car_setting50_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting51","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting53","style": 1,"valueSrnArray": ["_375_car_setting531","_375_car_setting532"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting54","style": 1,"valueSrnArray": ["_375_car_setting541","_375_car_setting542","_375_car_setting543","_375_car_setting544"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting55","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting56","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting57","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting58","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting59","style": 1,"valueSrnArray": ["_375_car_setting591","_375_car_setting592","_375_car_setting593"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting60","style": 1,"valueSrnArray": ["_375_car_setting591","_375_car_setting592","_375_car_setting593"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting61","style": 1,"valueSrnArray": ["_375_car_setting611","_375_car_setting612","_375_car_setting613"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting62","style": 1,"valueSrnArray": ["_375_car_setting591","_375_car_setting592","_375_car_setting593","_375_car_setting624"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting63","style": 1,"valueSrnArray": ["_375_car_setting631","_375_car_setting632","_375_car_setting633"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting64","style": 1,"valueSrnArray": ["_375_time1","_375_time2","_375_time3","_375_time4","_375_time5","_375_time6","_375_time7","_375_time8","_375_time9","_375_timeA","_375_timeB","_375_timeC"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting65","style": 1,"valueSrnArray": ["_375_time1_zw","_375_time2_zw","_375_time3_zw","_375_time4_zw","_375_time5_zw","_375_time6_zw","_375_time7_zw","_375_time8_zw","_375_time9_zw","_375_timeA_zw","_375_timeB_zw","_375_timeC_zw","_375_timeD_zw"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting66","style": 1,"valueSrnArray": ["_375_time1_ws","_375_time2_ws","_375_time3_ws","_375_time4_ws","_375_time5_ws","_375_time6_ws","_375_time7_ws","_375_time8_ws"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting67","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting68","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting69","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_car_setting70","style": 1,"valueSrnArray": ["_375_off","_375_on"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_375_other_setting",
+        "itemList": [
+          {"titleSrn": "_375_parking_trajectory","style": 1,"valueSrnArray": ["_375_parking_trajectory1","_375_parking_trajectory2","_375_parking_trajectory3","_375_parking_trajectory4"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_panoramic_trigger1","style": 1,"valueSrnArray": ["_375_panoramic_trigger10","_375_panoramic_trigger11"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_375_panoramic_trigger2","style": 0},
+          {"titleSrn": "_375_panoramic_trigger3","style": 0}
+        ]
+      }
+
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_375_panoramic_front0"},
+      {"style": 0,"titleSrn": "_375_panoramic_front1"},
+      {"style": 0,"titleSrn": "_375_panoramic_front2"},
+      {"style": 0,"titleSrn": "_375_panoramic_front3"},
+      {"style": 0,"titleSrn": "_375_panoramic_front4"},
+      {"style": 0,"titleSrn": "_375_panoramic_front5"},
+      {"style": 0,"titleSrn": "_375_panoramic_front6"},
+      {"style": 0,"titleSrn": "_375_panoramic_front7"},
+      {"style": 0,"titleSrn": "_375_panoramic_front8"},
+      {"style": 0,"titleSrn": "_375_panoramic_front9"}
+    ]
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":1,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":2,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]},
+      {"whichTire":3,"list": [
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"},
+        {"title":"_327_null","value":"_327_null"}
+      ]}
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_375_car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_375_tire_door_info","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  }
+
+}

@@ -1,0 +1,64 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","amplifier"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "ac",
+          "dual",
+          "blow_positive",
+          "blow_negative"
+        ],
+        [
+          "in_out_cycle"
+        ],
+        [
+          "power"
+        ],
+        [
+          "auto",
+          "front_defog",
+          "rear_defog"
+        ]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "Lights","defaultValueSrn": "set_default"},
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "car_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 20,
+    "lineBtnAction":[
+    ],
+    "isCanBalanceControl": false,
+    "isCanSeekBarMinPlus": false
+  },
+  "parkPageUiSet": {
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+}

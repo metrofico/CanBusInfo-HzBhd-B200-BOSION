@@ -1,0 +1,37 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","tire_info"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","auto","ac"],
+        ["front_defog"], ["rear_defog"],
+        ["in_out_cycle"]
+      ],
+      "disableBtnArray": ["rear_defog"],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetCenterTemp": false,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8
+    }
+  },
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_424_Item_5","value":"set_default"},{"title": "_424_Item_1","value":"set_default"},{"title": "_424_Item_2","value":"set_default"},{"title": "_424_Item_3","value":"set_default"},{"title": "_424_Item_4","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_424_Item_5","value":"set_default"},{"title": "_424_Item_1","value":"set_default"},{"title": "_424_Item_2","value":"set_default"},{"title": "_424_Item_3","value":"set_default"},{"title": "_424_Item_4","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_424_Item_5","value":"set_default"},{"title": "_424_Item_1","value":"set_default"},{"title": "_424_Item_2","value":"set_default"},{"title": "_424_Item_3","value":"set_default"},{"title": "_424_Item_4","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"tire_pressure_content","value":"set_default"},{"title": "_30_Tiretemp","value":"set_default"},{"title": "_424_Item_5","value":"set_default"},{"title": "_424_Item_1","value":"set_default"},{"title": "_424_Item_2","value":"set_default"},{"title": "_424_Item_3","value":"set_default"},{"title": "_424_Item_4","value":"set_default"}]}
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

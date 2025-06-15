@@ -1,0 +1,44 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","warning","tire_info"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power","front_defog","rear_defog"],
+        [],[],
+        ["ac","in_out_cycle"]
+      ],
+      "smallWindowStatusArray": ["ac", "in_out_cycle", "rear_defog", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": true,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"type_status","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"type_status","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"type_status","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"type_status","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":4,"list": [{"title":"type_status","value":"set_default"},{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]}
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowPanoramic":true,
+    "panoramicBtnList": [
+      {"style": 0,"titleSrn": "_55_0xE8_data4"},
+      {"style": 0,"titleSrn": "_253_exit_panoramic"},
+      {"style": 0,"titleSrn": "_253_front_view"},
+      {"style": 0,"titleSrn": "_253_rear_view"},
+      {"style": 0,"titleSrn": "_253_left_view"},
+      {"style": 0,"titleSrn": "_253_right_view"}
+    ]
+  }
+}

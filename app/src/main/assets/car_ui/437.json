@@ -1,0 +1,54 @@
+{"mainPageUiSet": {
+  "btnAction": ["air", "drive_data"]
+},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac","in_out_cycle"],
+        ["ac_max"], ["auto"],
+        ["dual","max_front", "rear"]
+      ],
+      "disableBtnArray": ["power", "ac", "ac_max","in_out_cycle","auto","auto_2","dual", "aqs", "max_front", "rear"],
+      "isCanSetRightTemp": false,
+      "isCanSetLeftTemp": false,
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_437_function_0",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_437_function_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_437_function_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_437_function_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_437_function_4","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{"mainPageUiSet": {
+  "btnAction": ["setting","drive_data"]
+},
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_371_ads4_title",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_371_ads4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_371_ads4_0","defaultValueSrn": "set_default"},
+          {"titleSrn": "_371_ads4_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_371_ads4_2","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_371_ads",
+        "itemList": [
+          {"titleSrn": "_371_ads1","style": 0},
+          {"titleSrn": "_371_ads2","style": 0},
+          {"titleSrn": "_371_ads3","style": 1,"valueSrnArray": ["_371_ads3_0","_371_ads3_1"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_371_ads5",
+        "itemList": [
+          {"titleSrn": "_371_ads5_7","style": 0},
+          {"titleSrn": "_371_ads5_6","style": 0},
+          {"titleSrn": "_371_ads5_5","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_371_ads6",
+        "itemList": [
+          {"titleSrn": "_371_ads6_0","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_371_ads7",
+        "itemList": [
+          {"titleSrn": "_371_ads77","style": 0},
+          {"titleSrn": "_371_ads73_0","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_371_ads8",
+        "itemList": [
+          {"titleSrn": "_371_ads87","style": 0},
+          {"titleSrn": "_371_ads85","style": 0},
+          {"titleSrn": "_371_ads82","style": 0}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": false,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_327_360_camera"},
+      {"style": 0,"titleSrn": "_327_front_camera"},
+      {"style": 0,"titleSrn": "_327_rear_camera"},
+      {"style": 0,"titleSrn": "_327_left_camera"},
+      {"style": 0,"titleSrn": "_327_right_camera"}
+    ]
+  }
+
+}

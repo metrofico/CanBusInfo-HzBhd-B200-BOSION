@@ -1,0 +1,54 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "drive_data"
+    ]
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "isShowRadarLocation": true
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["power", "ac", "in_out_cycle","auto"],
+        ["front_defog"],
+        ["rear_defog"],
+        ["sync", "rear", "rest"]
+      ],
+      "smallWindowStatusArray": [
+        "auto",
+        "sync",
+        "in_out_cycle",
+        "front_defog"
+      ],
+      "isAllBtnCanClick": false,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetLeftTemp": false,
+      "isCanSetRightTemp": false,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 9
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "vm_golf7_driving_data",
+        "spanCount": 1,
+        "itemList": [
+          {
+            "titleSrn": "mazda_binary_car_set79",
+            "defaultValueSrn": "set_default"
+          },
+          {
+            "titleSrn": "engine_speed",
+            "defaultValueSrn": "set_default"
+          }
+        ]
+      }
+    ]
+  }
+}

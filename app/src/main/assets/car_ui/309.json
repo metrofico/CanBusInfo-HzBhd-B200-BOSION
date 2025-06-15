@@ -1,0 +1,104 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","panel_key", "original_car_device","amplifier"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["dual","in_out_cycle"],
+        ["front_defog","rear_defog"],["blow_positive","power"],
+        ["auto","ac"]
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatHeat": false,
+      "isCanSetSeatHeat": false,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "reverse_state","defaultValueSrn": "set_default"},
+          {"titleSrn": "_309_title_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_info","defaultValueSrn": "set_default"},
+          {"titleSrn": "_309_title_8","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": false,
+    "isShowRadarLocation": true
+  },
+
+  "panelKeyPageUiSet": {
+    "list": [
+      "_309_panel_0",
+      "_309_panel_1",
+      "_309_panel_2",
+      "_309_panel_3",
+      "_309_panel_4",
+      "_309_panel_5",
+      "_309_panel_6",
+      "_309_panel_7",
+      "_309_panel_8",
+      "_309_panel_9",
+      "_309_panel_10",
+      "_309_panel_11",
+      "_309_panel_12",
+      "_309_panel_13",
+      "_309_panel_14",
+      "_309_panel_15",
+      "_309_panel_16",
+      "_309_panel_17",
+      "_309_panel_18",
+      "_309_panel_19",
+      "_309_panel_20",
+      "_309_panel_21",
+      "_309_panel_22",
+      "_309_panel_23"
+    ],
+    "count": 5
+  },
+
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""},
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""},
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""},
+      {"imageId": "default_image", "titleSrn": "null_value", "value": ""}
+    ],
+    "isHavePlayTimeSeekBar": false
+  },
+
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanRateControl": true,
+    "isCanBalanceControl": false,
+    "isCanSeekBarMinPlus": false,
+    "isRlControl": false,
+    "isHaveVolumeControl": true,
+    "isHaveBandMiddle": false,
+    "isVolumeEnabled": false,
+    "isHighEnabled": false,
+    "isMiddleEnabled": false,
+    "isLowEnabled": false,
+    "lineBtnAction":[]
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["warning","setting", "tire_info", "air", "drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","auto","in_out_cycle"],
+        ["front_defog"],["rear_defog"],
+        ["power","blow_positive","blow_negative","dual"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "dual"],
+      "disableBtnArray": [],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 8,
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3","left_seat_heat_4"]
+    }
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {"titleSrn": "_250_vehicle_settings",
+        "itemList": [
+          {"style": 1, "titleSrn": "_329_setting_1", "valueSrnArray": ["hiworld_jeep_123_item_16","hiworld_jeep_123_item_20","hiworld_jeep_123_item_21","mazda_binary_car_set20_1","mazda_binary_car_set20_2"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_329_setting_2", "valueSrnArray": ["hiworld_jeep_123_item_16","fifteen_second","thirty_second","sixty_second"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_329_setting_3", "valueSrnArray": ["_329_setting_3_0","_329_setting_3_1","close"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_329_setting_4"},
+          {"style": 1, "titleSrn": "_329_setting_5", "valueSrnArray": ["Normal","_250_high","_250_low"], "selectIndex": 0, "value": ""},
+          {"style": 4, "titleSrn": "_329_setting_6"},
+          {"style": 4, "titleSrn": "_329_setting_7"},
+          {"style": 4, "titleSrn": "_329_setting_8"},
+          {"style": 1, "titleSrn": "_329_setting_9", "valueSrnArray": ["_329_setting_9_1","_329_setting_9_2"], "selectIndex": 0, "value": ""},
+          {"style": 1, "titleSrn": "_329_setting_10", "valueSrnArray": ["_250_low","_250_high"], "selectIndex": 0, "value": ""},
+          {"style": 2, "titleSrn": "_329_setting_11", "min": 1, "max": 5, "progress": 0, "value": "1", "unit": "null_value"},
+          {"style": 2, "titleSrn": "_329_setting_12", "min": 1, "max": 5, "progress": 0, "value": "1", "unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn": "panorama_setting",
+        "itemList": [
+          {"titleSrn": "support_panorama","style": 1,"valueSrnArray": ["hiworld_jeep_123_item_39","hiworld_jeep_123_item_38"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_55_0xE8_data4","style": 0,"value": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {
+        "headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_250_engine_speed", "defaultValueSrn": "null_value"},
+          {"titleSrn": "_303_speed", "defaultValueSrn": "null_value"}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet": {
+    "isShowRadar": true,
+    "isShowTrack": true,
+    "panoramicBtnList": [
+      {"style": 0, "titleSrn": "_194_left"},
+      {"style": 0, "titleSrn": "_194_front"},
+      {"style": 0, "titleSrn": "_194_right"},
+      {"style": 0, "titleSrn": "_194_rear"},
+      {"style": 0, "titleSrn": "_194_2d"},
+      {"style": 0, "titleSrn": "_194_3d"},
+      {"style": 0, "titleSrn": "_194_exit"}
+    ]
+  },
+
+  "tirePageUiSet": {
+    "isHaveSpareTire": false,
+    "tireInfoStrList": [
+      {"whichTire":0,"list": [{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":1,"list": [{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":2,"list": [{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]},
+      {"whichTire":3,"list": [{"title":"temperature_content","value":"set_default"},{"title": "tire_pressure_content","value":"set_default"}]}
+    ]
+  },
+
+  "bubbleUiSet": {
+    "iconDrawable": "camera_icon"
+  }
+}

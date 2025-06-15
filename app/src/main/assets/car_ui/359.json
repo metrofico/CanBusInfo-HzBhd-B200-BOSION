@@ -1,0 +1,92 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["drive_data","air","setting","amplifier","original_car_device"]
+  },
+  "driverDataPageUiSet": {
+    "isHaveBtn": false,
+    "buttonText": "_330_Reset_of_driving_info",
+    "list": [
+      {"headTitleSrn":"_330_Multimedia_global_state",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_330_currently_selected_disc","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_status","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Subtitle_language","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Voice_language","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_dvd_language","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_disc_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_330_Disc_type_6","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac", "power","auto"],
+        [ "rear_defog"], [ "auto_wind_mode"],
+        ["dual", "aqs","max_front", "in_out_cycle"]
+      ],
+      "disableBtnArray": ["max_front","aqs"],
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isCanSetLeftTemp": true,
+      "isShowRightWheel": true,
+      "isCanSetRightTemp": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_330_amplifier_info",
+        "itemList": [
+          {"titleSrn": "_330_amplifier_switch","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Power_amplifier_mute","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Original_power_amplifier_node","style": 0},
+          {"titleSrn": "_330_asl","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_330_Vehicle_volume_follows_ASL","style": 0}
+        ]
+      },
+      {
+        "titleSrn": "_330_Mode_selection",
+        "itemList": [
+          {"titleSrn": "_330_Steering_wheel_control_mode","style": 1,"valueSrnArray": ["_330_Rear_mounted_host","_330_Front_mounted_host"],"selectIndex": 1,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_330_setting_info",
+        "itemList": [
+          {"titleSrn": "_330_setting_cat_type","style": 1,"valueSrnArray": ["_359_Car_1","_359_Car_2"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 10,
+    "bandRange": 5,
+    "balanceRange": 14,
+    "isHaveVolumeControl": true,
+    "seekBarVolumeMax": 63,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "originalCarDevicePageUiSet": {
+    "rowTopBtnAction": [],
+    "rowBottomBtnAction": [],
+    "items": [],
+    "isHavePlayTimeSeekBar": false
+  }
+}

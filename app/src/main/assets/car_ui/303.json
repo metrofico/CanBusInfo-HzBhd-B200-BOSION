@@ -1,0 +1,142 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","drive_data","setting"]
+  },
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [],
+        ["auto_wind_lv"],["power"],
+        ["auto_cycle"]
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetLeftTemp": true,
+      "isCanSetRightTemp": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+    }
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_250_car_body_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_303_radar","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_Key_in","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_park","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_rev","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_ill","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_acc","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_key_light","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_show_light","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_39","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"_303_setting_title_7",
+        "spanCount": 2,
+        "itemList": [
+          {"titleSrn": "_303_setting_content_31","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_32","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_33","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_33","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_34","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_35","defaultValueSrn": "set_default"},
+          {"titleSrn": "_303_setting_content_36","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn":"_55_0x6E_0x05",
+        "itemList": [
+          {"titleSrn": "_55_0x6E_0x05","style": 3,"confirmTis": "confirm_reset_alert_dialog"}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_1",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_1","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_2","style": 2,"max": 250,"min": 0,"progress": 0,"value": "0","unit": "unit_km_h"},
+          {"titleSrn": "_303_setting_content_37","style": 1,"valueSrnArray": ["_303_setting_answer_5","_303_setting_answer_6"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_38","style": 2,"max": 8,"min": 0,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_2",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_3","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_3",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_4","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_5","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_6","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_7","style": 2,"max": 100,"min": 0,"progress": 0,"value": "0","unit": "unit_percent"},
+          {"titleSrn": "_303_setting_content_8","style": 1,"valueSrnArray": ["close","_303_setting_num_10","_303_setting_num_20","_303_setting_num_30"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_9","style": 1,"valueSrnArray": ["close","_303_setting_num_10","_303_setting_num_20","_303_setting_num_30"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_10","style": 2,"max": 100,"min": 0,"progress": 0,"value": "0","unit": "unit_percent"}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_4",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_11","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_12","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_13","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_14","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_15","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_16","style": 1,"valueSrnArray": ["_303_setting_answer_2","_303_setting_answer_1"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_17","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_5",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_22","style": 1,"valueSrnArray": ["close","open"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_18","style": 2,"max": 9,"min": 1,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_303_setting_content_19","style": 2,"max": 9,"min": 1,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_303_setting_content_20","style": 2,"max": 9,"min": 1,"progress": 0,"value": "0","unit": "null_value"},
+          {"titleSrn": "_303_setting_content_21","style": 2,"max": 9,"min": 1,"progress": 0,"value": "0","unit": "null_value"}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_6",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_23","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_distance_km","vm_golf7_vehicle_setup_units_distance_mi_hw"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_24","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_speed_kmh","vm_golf7_vehicle_setup_units_speed_mph_hw"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_25","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_temperature_c","vm_golf7_vehicle_setup_units_temperature_f"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_26","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_volume_l","vm_golf7_vehicle_setup_units_volume_gal_us","vm_golf7_vehicle_setup_units_volume_gal_uk"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_27","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_consumption_l100km","vm_golf7_vehicle_setup_units_consumption_kml","vm_golf7_vehicle_setup_units_consumption_mpg_us","vm_golf7_vehicle_setup_units_consumption_mpg_uk"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_303_setting_content_28","style": 1,"valueSrnArray": ["vm_golf7_vehicle_setup_units_pressure_kpa","vm_golf7_vehicle_setup_units_pressure_bar","vm_golf7_vehicle_setup_units_pressure_psi"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"_303_setting_title_7",
+        "itemList": [
+          {"titleSrn": "_303_setting_content_29","style": 3,"confirmTis": "confirm_reset_alert_dialog"},
+          {"titleSrn": "_303_setting_content_30","style": 1,"valueSrnArray": ["_303_setting_answer_3","_303_setting_answer_4"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn":"language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_1","language_2","language_3","language_4","language_5","language_6","language_7","language_8","language_9","language_10","language_11","language_12","language_14","language_15","language_16"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "mainPageUiSet": {
+    "btnAction": [
+      "air",
+      "drive_data"
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn": "car_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        [
+          "ac",
+          "auto"
+        ],
+        [
+          "in_out_cycle"
+        ],
+        [
+
+          "power"
+        ],
+        [
+         "dual",
+        "max_front",
+        "ac_max"
+
+        ]
+      ],
+
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7
+
+    }
+  },
+  "parkPageUiSet":{
+    "isShowRadar": true
+  }
+}

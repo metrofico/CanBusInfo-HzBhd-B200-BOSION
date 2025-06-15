@@ -1,0 +1,151 @@
+{
+  "mainPageUiSet": {"btnAction": ["air","setting","drive_data","amplifier"]},
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["ac","power", "auto"],
+        ["rear_defog"], ["front_defog"],
+        ["dual","in_out_cycle"]
+      ],
+      "isCanSetRightTemp": true,
+      "isCanSetLeftTemp": true,
+      "isAllBtnCanClick": true,
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 7,
+      "isShowSeatCold": true,
+      "isCanSetSeatCold": true,
+      "seatColdSrnArray": [
+        "_386_seat_heat_negative0",
+        "_386_seat_heat_negative1",
+        "_386_seat_heat_negative2",
+        "_386_seat_heat_negative3"
+      ],
+      "isShowSeatHeat": true,
+      "isCanSetSeatHeat": true,
+      "seatHeatSrnArray": [
+        "_330_seat_heat_off",
+        "_330_seat_heat_1",
+        "_330_seat_heat_2",
+        "_330_seat_heat_3"
+      ]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [], [],
+        ["rear_auto", "rear_power"]
+      ],
+      "isAllBtnCanClick": true,
+      "isCanSetTemp": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": true,
+      "windMaxLevel": 5
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "amplifier_setting",
+        "itemList": [
+          {"titleSrn": "speed_linkage_volume_adjustment","style": 1,"valueSrnArray": ["close","_375_car_setting511","_375_car_setting512","_375_car_setting513"]},
+          {"titleSrn": "surround_sound","style": 1,"valueSrnArray": ["surround_sound","stereo"]}
+        ]
+      },
+      {
+        "titleSrn": "language_setup",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["language_en_uk","language_cn_jian"]}
+        ]
+      },
+      {
+        "titleSrn": "air_setting",
+        "itemList": [
+          {"titleSrn": "_386_seat_chirapsia_driver","style": 2,"max":2,"min":0,"progress":0,"value": ""},
+          {"titleSrn": "_386_lumbar_support_driver","style": 2,"max":5,"min":0,"progress":0,"value": ""},
+          {"titleSrn": "_386_seat_chirapsia_copilot","style": 2,"max":2,"min":0,"progress":0,"value": ""},
+          {"titleSrn": "_386_lumbar_support_copilot","style": 2,"max":5,"min":0,"progress":0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_386_item_28",
+        "itemList": [
+          {"titleSrn": "_386_item_14","style": 1,"valueSrnArray": ["_278_3s","_278_10s","_278_20s","_278_30s"]},
+          {"titleSrn": "_386_item_15","style": 1,"valueSrnArray": ["_278_30s","_278_1min","_278_2min","_278_3min"]},
+          {"titleSrn": "_386_item_16","style": 1,"valueSrnArray": ["_278_10min","_278_20min","_278_30min"]},
+          {"titleSrn": "_386_item_17","style": 1,"valueSrnArray": ["_278_asia_standard","_278_europe_standard"]},
+          {"titleSrn": "_386_item_18","style": 1,"valueSrnArray": ["_278_normal_mode","_278_temp_mode"]}
+        ]
+      },
+      {
+        "titleSrn": "_386_item_29",
+        "itemList": [
+          {"titleSrn": "_386_item_19","style": 1,"valueSrnArray": ["_386_item_30","_386_item_31"]},
+          {"titleSrn": "_386_item_20","style": 1,"valueSrnArray": ["close","_278_10min","_278_20min","_278_30min"]},
+          {"titleSrn": "_386_item_21","style": 1,"valueSrnArray": ["_386_item_32","_386_item_33"]},
+          {"titleSrn": "_386_item_22","style": 1,"valueSrnArray": ["_386_item_34","_386_item_35"]},
+          {"titleSrn": "_386_item_23","style": 1,"valueSrnArray": ["open","close"]}
+        ]
+      },
+      {
+        "titleSrn": "_386_item_24",
+        "itemList":[
+          {"titleSrn": "_386_item_25","style": 1,"valueSrnArray": ["close","open"]},
+          {"titleSrn": "_386_item_26","style": 1,"valueSrnArray": ["close","open"],"enable": false},
+          {"titleSrn": "_386_item_27","style": 1,"valueSrnArray": ["close","open"],"enable": false}
+        ]
+      },
+      {
+        "titleSrn": "_386_item_37",
+        "itemList":[
+          {"titleSrn": "_386_item_38","style": 1,"valueSrnArray": ["_386_item_39","_386_item_40","_386_item_41"]}
+        ]
+      }
+    ]
+  },
+
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"vehicle_info",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_386_item_1","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_2","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_3","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_4","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_5","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_6","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_7","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_8","defaultValueSrn": "set_default"},
+          {"titleSrn": "_386_item_9","defaultValueSrn": "set_default"}
+        ]
+      }
+    ]
+  },
+  "amplifierPageUiSet": {
+    "seekBarMax": 20,
+    "bandRange": 10,
+    "balanceRange": 20,
+    "isHaveVolumeControl": true,
+    "isVolumeEnabled": false,
+    "seekBarVolumeMax": 39,
+    "volumeRange": 0,
+    "isCanBalanceControl": false,
+    "lineBtnAction":[]
+  },
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowPanoramic": true,
+    "panoramicBtnList":[
+      {"style": 0,"titleSrn": "_185_Right_camera_status"},
+      {"style": 0,"titleSrn": "_185_panorama_camera_status"},
+      {"style": 0,"titleSrn": "_185_Left_camera_status"},
+      {"style": 0,"titleSrn": "_185_Front_camera_status"},
+      {"style": 0,"titleSrn": "_185_Rear_camera_status"},
+      {"style": 0,"titleSrn": "_386_item_36"}
+    ]
+  }
+}

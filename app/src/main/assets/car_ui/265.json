@@ -1,0 +1,93 @@
+{
+  "mainPageUiSet": {
+    "btnAction": ["air","setting","drive_data"]
+  },
+
+  "airPageUiSet": {
+    "frontArea": {
+      "lineBtnAction": [
+        ["max_front","rear_defog","dual"],
+        ["auto"],["power"],
+        ["ac","in_out_cycle"]
+      ],
+      "smallWindowStatusArray": ["ac", "auto", "in_out_cycle", "front_defog"],
+      "isShowLeftWheel": true,
+      "isShowRightWheel": true,
+      "isShowSeatHeat": true,
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7,
+      "seatHeatSrnArray": ["close_seat_heat","left_seat_heat_1","left_seat_heat_2","left_seat_heat_3"]
+    },
+    "isHaveRearArea": true,
+    "rearArea": {
+      "lineBtnAction": [
+        [],
+        [],[],
+        ["rear_power"]
+      ],
+      "isShowCenterWheel": true,
+      "isCanSetWindSpeed": false,
+      "windMaxLevel": 7
+    }
+  },
+  "settingPageUiSet": {
+    "list": [
+      {
+        "titleSrn": "_246_setting_car_info32",
+        "itemList": [
+          {"titleSrn": "language_setup","style": 1,"valueSrnArray": ["_283_language_chinese","_283_language_english"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_9","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_6","style": 1,"valueSrnArray": ["_330_OFF","_334_15_sec","_334_30_sec","hiworld_jeep_123_item_17","_334_60_sec"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_332_setting_5","style": 1,"valueSrnArray": ["_330_OFF","_334_15_sec","_334_30_sec","hiworld_jeep_123_item_17","_334_60_sec"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_337_setting_42","style": 1,"valueSrnArray": ["_194_motion","_194_cozy"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_189_car_setting_A","style": 1,"valueSrnArray": ["_194_motion","_194_cozy"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "car_set1",
+        "itemList": [
+          {"titleSrn": "_246_setting_car_info28","style": 1,"valueSrnArray": ["_246_setting_car_info29","_347_setting_0_3_1","_246_setting_car_info31"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_246_paring_info2","style": 1,"valueSrnArray": ["_330_OFF","_330_ON"],"selectIndex": 0,"value": ""}
+        ]
+      },
+      {
+        "titleSrn": "_265_oreginal_camera_setting",
+        "itemList": [
+          {"titleSrn": "_265_oreginal_camera_setting1","style": 1,"valueSrnArray": ["_265_oreginal_camera_setting1_1","_265_oreginal_camera_setting1_2"],"selectIndex": 0,"value": ""},
+          {"titleSrn": "_265_oreginal_camera_setting2","style": 1,"valueSrnArray": ["_265_oreginal_camera_setting2_1","_265_oreginal_camera_setting2_2"],"selectIndex": 0,"value": ""}
+        ]
+      }
+    ]
+  },
+  "driverDataPageUiSet": {
+    "list": [
+      {"headTitleSrn":"_333_setting_carState",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "keyboard_backlight_adjustment","defaultValueSrn": "set_default"},
+          {"titleSrn": "light_info","defaultValueSrn": "set_default"},
+          {"titleSrn": "gear_position","defaultValueSrn": "set_default"},
+          {"titleSrn": "reverse_state","defaultValueSrn": "set_default"},
+          {"titleSrn": "_246_setting_car_info22","defaultValueSrn": "set_default"},
+          {"titleSrn": "_370_Time","defaultValueSrn": "set_default"},
+          {"titleSrn": "_41_park_assist_system_status","defaultValueSrn": "set_default"}
+        ]
+      },
+      {"headTitleSrn":"car_status",
+        "spanCount": 1,
+        "itemList": [
+          {"titleSrn": "_246_car_info16","defaultValueSrn": "set_default"},
+          {"titleSrn": "a_current_speed","defaultValueSrn": "set_default"},
+          {"titleSrn": "engine_speed","defaultValueSrn": "set_default"}
+        ]
+      }]
+  },
+
+  "parkPageUiSet":{
+    "isShowTrack": true,
+    "isShowRadar": true,
+    "isShowRadarLocation": true
+  }
+
+}
