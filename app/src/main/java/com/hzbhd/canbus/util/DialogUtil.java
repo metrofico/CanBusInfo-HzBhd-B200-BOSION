@@ -11,6 +11,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.interfaces.OnConfirmDialogListener;
 
@@ -120,14 +121,13 @@ public class DialogUtil {
         viewInflate.findViewById(R.id.ib_incs).setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.util.DialogUtil$$ExternalSyntheticLambda1
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                SeekBar seekBar2 = seekBar;
-                seekBar2.setProgress(seekBar2.getProgress() + 1);
+                seekBar.setProgress(seekBar.getProgress() + 1);
             }
         });
         viewInflate.findViewById(R.id.ib_decs).setOnClickListener(new View.OnClickListener() { // from class: com.hzbhd.canbus.util.DialogUtil$$ExternalSyntheticLambda2
             @Override // android.view.View.OnClickListener
             public final void onClick(View view) {
-                seekBar.setProgress(r0.getProgress() - 1);
+                seekBar.setProgress(seekBar.getProgress() - 1);
             }
         });
         AlertDialog.Builder builder = new AlertDialog.Builder(context, R.style.DialogTheme);
@@ -135,7 +135,9 @@ public class DialogUtil {
         builder.setPositiveButton(R.string.confirm, new DialogInterface.OnClickListener() { // from class: com.hzbhd.canbus.util.DialogUtil$$ExternalSyntheticLambda3
             @Override // android.content.DialogInterface.OnClickListener
             public final void onClick(DialogInterface dialogInterface, int i4) {
-                DialogUtil.lambda$showSeekDialog$3(seekbarDialogCallBak, seekBar, i, dialogInterface, i4);
+                if (seekbarDialogCallBak != null) {
+                    seekbarDialogCallBak.callBack(seekBar.getProgress() + i);
+                }
             }
         });
         AlertDialog alertDialogCreate = builder.create();
@@ -143,9 +145,4 @@ public class DialogUtil {
         alertDialogCreate.show();
     }
 
-    static /* synthetic */ void lambda$showSeekDialog$3(SeekbarDialogCallBak seekbarDialogCallBak, SeekBar seekBar, int i, DialogInterface dialogInterface, int i2) {
-        if (seekbarDialogCallBak != null) {
-            seekbarDialogCallBak.callBack(seekBar.getProgress() + i);
-        }
-    }
 }

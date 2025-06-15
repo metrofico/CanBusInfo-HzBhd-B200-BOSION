@@ -1,18 +1,20 @@
 package com.hzbhd.setting.proxy;
 
 import android.os.RemoteException;
+
 import com.hzbhd.common.settings.constant.BodaSysContant;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.setting.proxy.aidl.IModuleCallBack;
 import com.hzbhd.setting.proxy.aidl.ISettingServiceManager;
+
 import java.util.HashMap;
 
 /* loaded from: classes2.dex */
 public class ModuleManager {
     private static final String TAG = "ModuleManager";
     private static ModuleManager mModuleManager;
-    private HashMap<Integer, IModuleListener> mModuleListeners = new HashMap<>();
-    private HashMap<Integer, IModuleCallBack> mIModuleCallBacks = new HashMap<>();
+    private final HashMap<Integer, IModuleListener> mModuleListeners = new HashMap<>();
+    private final HashMap<Integer, IModuleCallBack> mIModuleCallBacks = new HashMap<>();
 
     public static synchronized ModuleManager getInstance() {
         synchronized (ModuleManager.class) {
@@ -20,7 +22,6 @@ public class ModuleManager {
                 mModuleManager = new ModuleManager();
             }
         }
-        return mModuleManager;
         return mModuleManager;
     }
 
@@ -74,7 +75,7 @@ public class ModuleManager {
     }
 
     private class MyIModuleCallBack extends IModuleCallBack.Stub {
-        private int mKey;
+        private final int mKey;
 
         private MyIModuleCallBack(int i) {
             this.mKey = i;
@@ -85,7 +86,7 @@ public class ModuleManager {
             if (ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)) == null) {
                 return;
             }
-            ((IModuleListener) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey))).onReceived(i, i2, Integer.valueOf(i3));
+            ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)).onReceived(i, i2, Integer.valueOf(i3));
         }
 
         @Override // com.hzbhd.setting.proxy.aidl.IModuleCallBack
@@ -93,7 +94,7 @@ public class ModuleManager {
             if (ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)) == null) {
                 return;
             }
-            ((IModuleListener) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey))).onReceived(i, i2, bArr);
+            ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)).onReceived(i, i2, bArr);
         }
 
         @Override // com.hzbhd.setting.proxy.aidl.IModuleCallBack
@@ -101,7 +102,7 @@ public class ModuleManager {
             if (ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)) == null) {
                 return;
             }
-            ((IModuleListener) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey))).onReceived(i, i2, str);
+            ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)).onReceived(i, i2, str);
         }
 
         @Override // com.hzbhd.setting.proxy.aidl.IModuleCallBack
@@ -109,12 +110,12 @@ public class ModuleManager {
             if (ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)) == null) {
                 return -1;
             }
-            return ((Integer) ((IModuleListener) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey))).getData(i, i2)).intValue();
+            return ((Integer) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)).getData(i, i2)).intValue();
         }
 
         @Override // com.hzbhd.setting.proxy.aidl.IModuleCallBack
         public byte[] getModuleBytes(int i, int i2) throws RemoteException {
-            return ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)) == null ? new byte[0] : (byte[]) ((IModuleListener) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey))).getData(i, i2);
+            return ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)) == null ? new byte[0] : (byte[]) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)).getData(i, i2);
         }
 
         @Override // com.hzbhd.setting.proxy.aidl.IModuleCallBack
@@ -122,7 +123,7 @@ public class ModuleManager {
             if (ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)) == null) {
                 return null;
             }
-            return (String) ((IModuleListener) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey))).getData(i, i2);
+            return (String) ModuleManager.this.mModuleListeners.get(Integer.valueOf(this.mKey)).getData(i, i2);
         }
     }
 

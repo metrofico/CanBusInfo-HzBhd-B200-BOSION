@@ -2,11 +2,9 @@ package com.hzbhd.commontools.utils;
 
 import android.util.JsonReader;
 
-import com.hzbhd.canbus.car_cus._436.data.GeneralDvrFile;
 import com.hzbhd.util.LogUtil;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
@@ -163,16 +161,20 @@ public class bhdJsonUtils {
     }
 
     // Put the object into the main JSONObject
-    public void putObject(String key, Object value) throws JSONException {
+    public void putObject(String key, Object value) {
         if (checkMainJson()) {
-            mJsonObject.put(key, value);
+            try {
+                mJsonObject.put(key, value);
+            } catch (Throwable w) {
+                LogUtil.e("putObject: " + w.getLocalizedMessage());
+            }
         } else {
             LogUtil.d("putObject: mJsonObject=NULL");
         }
     }
 
     // Convert the JSONObject to string
-    public String objectToString() {
+    public String ObjectToString() {
         if (checkMainJson()) {
             return mJsonObject.toString();
         }

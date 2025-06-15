@@ -4,8 +4,10 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
 import android.os.RemoteException;
+
 import com.hzbhd.canbus.adapter.util.HzbhdLog;
 import com.hzbhd.canbus.smartpower.ISurgingPowerCallback;
+
 import java.util.HashMap;
 
 /* loaded from: classes2.dex */

@@ -2,7 +2,6 @@ package com.hzbhd.canbus.util.amap;
 
 import java.util.Objects;
 
-/* loaded from: classes2.dex */
 public class AMapEntity {
     private final int allDistance;
     private final int carDirection;

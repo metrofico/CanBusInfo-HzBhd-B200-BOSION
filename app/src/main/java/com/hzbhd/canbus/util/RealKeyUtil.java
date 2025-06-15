@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+
 import com.hzbhd.canbus.activity.SwcActivity;
 import com.hzbhd.canbus.adapter.util.Util;
 import com.hzbhd.canbus.config.CanIdSpecialConfig;
@@ -12,19 +13,16 @@ import com.hzbhd.canbus.config.CanbusConfig;
 import com.hzbhd.canbus.config.CustomKeyConfig;
 import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.msg_mgr.MsgMgrInterfaceUtil;
-import com.hzbhd.canbus.util.MediaShareData;
-import com.hzbhd.canbus.util.RealKeyUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.commontools.utils.ConfigUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;
 import com.hzbhd.ui.util.BaseUtil;
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Objects;
 import java.util.TimerTask;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function0;
 
 /* loaded from: classes2.dex */
 public class RealKeyUtil {
@@ -333,7 +331,7 @@ public class RealKeyUtil {
     public static void keyTime(Context context) {
         Intent intent = new Intent("android.intent.action.QUICK_CLOCK");
         mIntent = intent;
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(mIntent);
     }
 
@@ -361,7 +359,21 @@ public class RealKeyUtil {
                 Runnable runnable = new Runnable() { // from class: com.hzbhd.canbus.util.RealKeyUtil$LongClickHelper$$ExternalSyntheticLambda0
                     @Override // java.lang.Runnable
                     public final void run() {
-                        this.f$0.m1177xdf76182a(context, i);
+                        if (com.hzbhd.util.LogUtil.log5()) {
+                            com.hzbhd.util.LogUtil.d("startLongClick: " + i);
+                        }
+                        mLongClickFlag = true;
+                        int shortKey = CustomKeyConfig.INSTANCE.getShortKey(i);
+                        if (((MsgMgrInterfaceUtil) Objects.requireNonNull(MsgMgrFactory.getCanMsgMgrUtil(context))).customLongClick(context, shortKey)) {
+                            return;
+                        }
+                        if (shortKey == 7 || shortKey == 8 || shortKey == 22 || shortKey == 23 || shortKey == 47 || shortKey == 48) {
+                            runKey(context, shortKey);
+                            return;
+                        }
+                        int longKey = CustomKeyConfig.INSTANCE.getLongKey(i);
+                        RealKeyUtil.realKeyClick(context, longKey);
+                        mLongClickFlag = longKey != 0;
                     }
                 };
                 this.mRunnable = runnable;
@@ -381,37 +393,14 @@ public class RealKeyUtil {
                 this.mLongClickFlag = false;
                 return;
             }
-            BaseUtil.INSTANCE.runUi(new Function0() { // from class: com.hzbhd.canbus.util.RealKeyUtil$LongClickHelper$$ExternalSyntheticLambda1
-                @Override // kotlin.jvm.functions.Function0
-                public final Object invoke() {
-                    return RealKeyUtil.LongClickHelper.lambda$keyUp$1(i);
+            BaseUtil.INSTANCE.runUi(new Runnable() {
+                @Override
+                public void run() {
+                    RealKeyUtil.mSwcActivity.learnKey(i);
                 }
             });
         }
 
-        static /* synthetic */ Unit lambda$keyUp$1(int i) {
-            RealKeyUtil.mSwcActivity.learnKey(i);
-            return null;
-        }
-
-        /* renamed from: startLongClick, reason: merged with bridge method [inline-methods] */
-        public void m1177xdf76182a(Context context, int i) {
-            if (com.hzbhd.util.LogUtil.log5()) {
-                com.hzbhd.util.LogUtil.d("startLongClick: " + i);
-            }
-            this.mLongClickFlag = true;
-            int shortKey = CustomKeyConfig.INSTANCE.getShortKey(i);
-            if (((MsgMgrInterfaceUtil) Objects.requireNonNull(MsgMgrFactory.getCanMsgMgrUtil(context))).customLongClick(context, shortKey)) {
-                return;
-            }
-            if (shortKey == 7 || shortKey == 8 || shortKey == 22 || shortKey == 23 || shortKey == 47 || shortKey == 48) {
-                runKey(context, shortKey);
-                return;
-            }
-            int longKey = CustomKeyConfig.INSTANCE.getLongKey(i);
-            RealKeyUtil.realKeyClick(context, longKey);
-            this.mLongClickFlag = longKey != 0;
-        }
 
         private void runKey(final Context context, final int i) {
             Log.i(RealKeyUtil.TAG, "runKey: in");

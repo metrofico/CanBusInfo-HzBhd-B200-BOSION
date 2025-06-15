@@ -5,9 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+
 import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.msg_mgr.MsgMgrInterfaceUtil;
 import com.hzbhd.util.LogUtil;
+
 import java.util.Objects;
 import java.util.regex.Pattern;
 

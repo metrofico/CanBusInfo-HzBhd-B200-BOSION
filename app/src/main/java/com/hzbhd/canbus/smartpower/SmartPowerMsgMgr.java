@@ -2,10 +2,10 @@ package com.hzbhd.canbus.smartpower;
 
 import android.content.Context;
 import android.content.Intent;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.commontools.utils.ConfigUtil;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 /* loaded from: classes2.dex */
 public class SmartPowerMsgMgr {
@@ -98,7 +98,7 @@ public class SmartPowerMsgMgr {
         int[] iArr = new int[bArr.length];
         for (int i = 0; i < bArr.length; i++) {
             byte b = bArr[i];
-            if ((b & ByteCompanionObject.MIN_VALUE) == 0) {
+            if ((b & Byte.MIN_VALUE) == 0) {
                 iArr[i] = b;
             } else {
                 iArr[i] = b & 255;

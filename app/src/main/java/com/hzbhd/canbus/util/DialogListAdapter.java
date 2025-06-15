@@ -6,13 +6,14 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
 public class DialogListAdapter extends BaseAdapter {
-    private Context mContext;
+    private final Context mContext;
     private int mSelectIndex;
-    private String[] mStrArray;
+    private final String[] mStrArray;
 
     @Override // android.widget.Adapter
     public Object getItem(int i) {
@@ -40,16 +41,16 @@ public class DialogListAdapter extends BaseAdapter {
         if (view == null) {
             view = View.inflate(this.mContext, R.layout.layout_dialog_list_item, null);
             viewHolder = new ViewHolder();
-            viewHolder.textView = (TextView) view.findViewById(R.id.tv);
-            viewHolder.imageView = (ImageView) view.findViewById(R.id.iv_select);
+            viewHolder.textView = view.findViewById(R.id.tv);
+            viewHolder.imageView = view.findViewById(R.id.iv_select);
             view.setTag(viewHolder);
         } else {
             viewHolder = (ViewHolder) view.getTag();
         }
         if (this.mSelectIndex == i) {
-            viewHolder.imageView.setVisibility(0);
+            viewHolder.imageView.setVisibility(View.VISIBLE);
         } else {
-            viewHolder.imageView.setVisibility(8);
+            viewHolder.imageView.setVisibility(View.GONE);
         }
         viewHolder.textView.setText(this.mStrArray[i]);
         return view;

@@ -4,22 +4,22 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
 public class PKeyRadarView extends RelativeLayout {
-    private ImageView back_radar_left;
-    private ImageView back_radar_left_mid;
-    private ImageView back_radar_right;
-    private ImageView back_radar_right_mid;
-    private ImageView front_radar_left;
-    private ImageView front_radar_left_mid;
-    private ImageView front_radar_right;
-    private ImageView front_radar_right_mid;
-    private View view;
+    private final ImageView back_radar_left;
+    private final ImageView back_radar_left_mid;
+    private final ImageView back_radar_right;
+    private final ImageView back_radar_right_mid;
+    private final ImageView front_radar_left;
+    private final ImageView front_radar_left_mid;
+    private final ImageView front_radar_right;
+    private final ImageView front_radar_right_mid;
+    private final View view;
 
     public PKeyRadarView(Context context) {
         this(context, null);
@@ -31,19 +31,77 @@ public class PKeyRadarView extends RelativeLayout {
 
     public PKeyRadarView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_p_key_radar, (ViewGroup) this, true);
+        View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_p_key_radar, this, true);
         this.view = viewInflate;
-        this.front_radar_right = (ImageView) viewInflate.findViewById(R.id.front_radar_right);
-        this.front_radar_right_mid = (ImageView) this.view.findViewById(R.id.front_radar_right_mid);
-        this.front_radar_left_mid = (ImageView) this.view.findViewById(R.id.front_radar_left_mid);
-        this.front_radar_left = (ImageView) this.view.findViewById(R.id.front_radar_left);
-        this.back_radar_right = (ImageView) this.view.findViewById(R.id.back_radar_right);
-        this.back_radar_right_mid = (ImageView) this.view.findViewById(R.id.back_radar_right_mid);
-        this.back_radar_left_mid = (ImageView) this.view.findViewById(R.id.back_radar_left_mid);
-        this.back_radar_left = (ImageView) this.view.findViewById(R.id.back_radar_left);
+        this.front_radar_right = viewInflate.findViewById(R.id.front_radar_right);
+        this.front_radar_right_mid = this.view.findViewById(R.id.front_radar_right_mid);
+        this.front_radar_left_mid = this.view.findViewById(R.id.front_radar_left_mid);
+        this.front_radar_left = this.view.findViewById(R.id.front_radar_left);
+        this.back_radar_right = this.view.findViewById(R.id.back_radar_right);
+        this.back_radar_right_mid = this.view.findViewById(R.id.back_radar_right_mid);
+        this.back_radar_left_mid = this.view.findViewById(R.id.back_radar_left_mid);
+        this.back_radar_left = this.view.findViewById(R.id.back_radar_left);
     }
 
     public void refreshFrontRadar(int i, int i2, int i3, int i4, int i5) {
+        if (i < 10) {
+            switch (i) {
+                case 3:
+                case 4:
+                    setFrontLeftData(i2 * 3);
+                    setFrontLeftMidData(i3 * 3);
+                    setFrontRightMidData(i4 * 3);
+                    setFrontRightData(i5 * 3);
+                    return;
+                case 5:
+                    setFrontLeftData(i2 * 2);
+                    setFrontLeftMidData(i3 * 2);
+                    setFrontRightMidData(i4 * 2);
+                    setFrontRightData(i5 * 2);
+                    return;
+                case 6:
+                    setFrontLeftData(10);
+                    setFrontLeftMidData(10);
+                    setFrontRightMidData(10);
+                    setFrontRightData(10);
+                    return;
+                case 7:
+                    setFrontLeftData(10);
+                    setFrontLeftMidData(10);
+                    setFrontRightMidData(10);
+                    setFrontRightData(10);
+                    return;
+                default:
+                    setFrontLeftData(i2);
+                    setFrontLeftMidData(i3);
+                    setFrontRightMidData(i4);
+                    setFrontRightData(i5);
+                    return;
+            }
+        }
+
+        // Lógica cuando i >= 10
+        double factor = i / 10.0;
+        double[] thresholds = new double[11];
+        for (int j = 1; j <= 10; j++) {
+            thresholds[j] = j * factor;
+        }
+
+        setFrontLeftData(calculateRadarLevel(i2, thresholds));
+        setFrontLeftMidData(calculateRadarLevel(i3, thresholds));
+        setFrontRightMidData(calculateRadarLevel(i4, thresholds));
+        setFrontRightData(calculateRadarLevel(i5, thresholds));
+    }
+
+    private int calculateRadarLevel(int value, double[] thresholds) {
+        if (value <= 0) return 0;
+        for (int j = 1; j < thresholds.length; j++) {
+            if (value <= thresholds[j]) return j;
+        }
+        return 10;
+    }
+
+   /* public void refreshFrontRadar(int i, int i2, int i3, int i4, int i5) {
         if (i <= 10) {
             if (i >= 10) {
                 setFrontLeftData(i2);
@@ -304,7 +362,7 @@ public class PKeyRadarView extends RelativeLayout {
             }
             setFrontRightData(10);
         }
-    }
+    }*/
 
     private void setFrontRightData(int i) {
         if (i == 1) {

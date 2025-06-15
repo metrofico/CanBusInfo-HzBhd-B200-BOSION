@@ -4,14 +4,17 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.activity.OnStarActivity;
 import com.hzbhd.canbus.adapter.OnStartLvAdapter;
 import com.hzbhd.canbus.entity.OnStartListEntity;
 import com.hzbhd.canbus.ui_set.OnStartPageUiSet;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,23 +42,23 @@ public class OnStartMainFragment extends BaseFragment implements OnStartLvAdapte
     }
 
     private void findViews() {
-        this.mRecyclerView = (RecyclerView) this.mView.findViewById(R.id.rv_list);
+        this.mRecyclerView = this.mView.findViewById(R.id.rv_list);
     }
 
     private void initViews() {
         OnStarActivity onStarActivity = (OnStarActivity) getActivity();
         this.mActivity = onStarActivity;
         this.mOnStartPageUiSet = onStarActivity.getUiMgrInterface(getActivity()).getPageUiSet(getActivity()).getOnStartPageUiSet();
-        this.mList = new ArrayList();
+        this.mList = new ArrayList<>();
         this.mOnStartLvAdapter = new OnStartLvAdapter(this.mList, this);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
-        linearLayoutManager.setOrientation(1);
+        linearLayoutManager.setOrientation(RecyclerView.VERTICAL);
         DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getActivity(), 1);
         dividerItemDecoration.setDrawable(getResources().getDrawable(R.drawable.setting_divider));
         this.mRecyclerView.addItemDecoration(dividerItemDecoration);
         this.mRecyclerView.setLayoutManager(linearLayoutManager);
         this.mRecyclerView.setAdapter(this.mOnStartLvAdapter);
-        ArrayList arrayList = new ArrayList();
+        ArrayList<OnStartListEntity> arrayList = new ArrayList<>();
         for (String str : this.mActivity.getUiMgrInterface(getActivity()).getPageUiSet(getActivity()).getOnStartPageUiSet().getBtnAction()) {
             arrayList.add(new OnStartListEntity(str));
         }
@@ -66,7 +69,6 @@ public class OnStartMainFragment extends BaseFragment implements OnStartLvAdapte
     @Override // com.hzbhd.canbus.adapter.OnStartLvAdapter.ItemClickInterface
     public void onItemClick(int i) {
         String action = this.mList.get(i).getAction();
-        action.hashCode();
         switch (action) {
             case "phone_more_info":
                 this.mActivity.showFragment(OnStartPhoneMoreInfoFragment.class);

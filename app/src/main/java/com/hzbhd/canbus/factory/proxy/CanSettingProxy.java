@@ -3,11 +3,11 @@ package com.hzbhd.canbus.factory.proxy;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.hzbhd.canbus.control.CanbusInfoChangeListener;
 import com.hzbhd.commontools.utils.DocumentTool;
 import com.hzbhd.commontools.utils.bhdJsonUtils;
 import com.hzbhd.config.use.CanBusDefault;
-import java.io.IOException;
 
 /* loaded from: classes2.dex */
 public class CanSettingProxy {
@@ -51,45 +51,45 @@ public class CanSettingProxy {
     }
 
     public boolean getRadarDispCheck() {
-        return this.mUtils.optBoolean("radar_display", false);
+        return this.mUtils.optBoolean(RADAR_DISPLAY, false);
     }
 
     public void setRadarDispCheck(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("radar_display", Boolean.valueOf(z));
+            this.mUtils.putObject(RADAR_DISPLAY, z);
             save();
         }
     }
 
     public boolean getBackTrajectiryDispCheck() {
-        return this.mUtils.optBoolean("back_trajectiry_reversal", false);
+        return this.mUtils.optBoolean(BACK_TRAJECTORY_REVERSAL, false);
     }
 
     public void setBackTrajectiryDispCheck(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("back_trajectiry_reversal", Boolean.valueOf(z));
+            this.mUtils.putObject(BACK_TRAJECTORY_REVERSAL, z);
             save();
         }
     }
 
     public boolean getSwitchAcTemperature() {
-        return this.mUtils.optBoolean("air_switch_temperature", false);
+        return this.mUtils.optBoolean(AIR_SWITCH_TEMPERATURE, false);
     }
 
     public void setSwitchAcTemperature(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("air_switch_temperature", Boolean.valueOf(z));
+            this.mUtils.putObject(AIR_SWITCH_TEMPERATURE, z);
             save();
         }
     }
 
     public int getAirDisplaySetup() {
-        return this.mUtils.optInt("air_display_setup", 0);
+        return this.mUtils.optInt(AIR_DISPLAY_SETUP, 0);
     }
 
     public void setAirDisplaySetup(int i) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("air_display_setup", Integer.valueOf(i));
+            this.mUtils.putObject(AIR_DISPLAY_SETUP, i);
             save();
         }
     }
@@ -100,7 +100,7 @@ public class CanSettingProxy {
 
     public void setSwitchKeyUpDn(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("key_switch_up_dn", Boolean.valueOf(z));
+            this.mUtils.putObject("key_switch_up_dn", z);
             save();
         }
     }
@@ -111,7 +111,7 @@ public class CanSettingProxy {
 
     public void setSwitchKeyRightLeft(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("key_switch_right_left", Boolean.valueOf(z));
+            this.mUtils.putObject("key_switch_right_left", z);
             save();
         }
     }
@@ -122,7 +122,7 @@ public class CanSettingProxy {
 
     public void setShowOutdoorTemperature(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("air_outdoor_temperature_display", Boolean.valueOf(z));
+            this.mUtils.putObject("air_outdoor_temperature_display", z);
             save();
             CanbusInfoChangeListener.getInstance().setOutdoorTemperatureVisible(z);
         }
@@ -134,7 +134,7 @@ public class CanSettingProxy {
 
     public void setTemperatureUnit(int i) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("air_temperature_unit", Integer.valueOf(i));
+            this.mUtils.putObject("air_temperature_unit", i);
             save();
             if (getShowOutdoorTemperature()) {
                 CanbusInfoChangeListener.getInstance().reportOutdoorTemperature();
@@ -148,7 +148,7 @@ public class CanSettingProxy {
 
     public void setShowDoorInfo(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("door_show_info", Boolean.valueOf(z));
+            this.mUtils.putObject("door_show_info", z);
             save();
         }
     }
@@ -159,7 +159,7 @@ public class CanSettingProxy {
 
     public void setDoorSwapFront(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("door_front_swap", Boolean.valueOf(z));
+            this.mUtils.putObject("door_front_swap", z);
             save();
         }
     }
@@ -170,7 +170,7 @@ public class CanSettingProxy {
 
     public void setDoorSwapRear(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("door_rear_swap", Boolean.valueOf(z));
+            this.mUtils.putObject("door_rear_swap", z);
             save();
         }
     }
@@ -181,7 +181,7 @@ public class CanSettingProxy {
 
     public void setDoorCountDownTimerState(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("count_down_timer_remove_door_view_switch", Boolean.valueOf(z));
+            this.mUtils.putObject("count_down_timer_remove_door_view_switch", z);
             save();
         }
     }
@@ -192,7 +192,7 @@ public class CanSettingProxy {
 
     public void setShowHood(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("door_show_the_hood", Boolean.valueOf(z));
+            this.mUtils.putObject("door_show_the_hood", z);
             save();
         }
     }
@@ -203,12 +203,12 @@ public class CanSettingProxy {
 
     public void setShowTrunk(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("door_show_the_trunk", Boolean.valueOf(z));
+            this.mUtils.putObject("door_show_the_trunk", z);
             save();
         }
     }
 
-    private void save() throws IOException {
+    private void save() {
         if (this.mUtils.checkMainJson()) {
             DocumentTool.writeData("/bhd/appconfig/CanBus/can_settings.json", this.mUtils.ObjectToString());
         }
@@ -220,7 +220,7 @@ public class CanSettingProxy {
 
     public void setPKeyRadarDispCheck(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("p.key.radar.display", Boolean.valueOf(z));
+            this.mUtils.putObject("p.key.radar.display", z);
             save();
         }
     }
@@ -231,7 +231,7 @@ public class CanSettingProxy {
 
     public void setCanDataLogSwith(boolean z) {
         synchronized (CanSettingProxy.class) {
-            this.mUtils.putObject("open.can.data.log", Boolean.valueOf(z));
+            this.mUtils.putObject("open.can.data.log", z);
             save();
         }
     }

@@ -105,7 +105,7 @@ public class CommUtil {
         return identifier == 0 ? R.drawable.music_photo_null : identifier;
     }
 
-    public static String getAssetsString(Context context, String str) throws IOException {
+    public static String getAssetsString(Context context, String str) {
         try {
             InputStream inputStreamOpen = context.getResources().getAssets().open(str);
             InputStreamReader inputStreamReader = new InputStreamReader(inputStreamOpen, "UTF-8");

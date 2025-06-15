@@ -2,7 +2,7 @@ package com.hzbhd.canbus.control.air_control;
 
 import com.hzbhd.canbus.interfaces.AirControlInterface;
 
-/* loaded from: classes2.dex */
+
 public class AbstractAirControl implements AirControlInterface {
     @Override // com.hzbhd.canbus.interfaces.AirControlInterface
     public void action(String str) {

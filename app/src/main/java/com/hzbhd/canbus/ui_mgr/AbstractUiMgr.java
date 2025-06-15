@@ -4,6 +4,7 @@ import android.content.Context;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
@@ -26,6 +27,7 @@ import com.hzbhd.canbus.ui_set.TirePageUiSet;
 import com.hzbhd.canbus.ui_set.WarningPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.SelectCanTypeUtil;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -141,7 +143,7 @@ public abstract class AbstractUiMgr implements UiMgrInterface {
     }
 
     protected void showToast(int i) {
-        Toast.makeText(this.mContext, i, 0).show();
+        Toast.makeText(this.mContext, i, Toast.LENGTH_SHORT).show();
     }
 
     protected void disableThisApp(Context context) {

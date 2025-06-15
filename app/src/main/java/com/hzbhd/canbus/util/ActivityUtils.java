@@ -5,6 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
+
 import com.hzbhd.canbus.car_cus._283.MainActivity;
 import com.hzbhd.canbus.config.CanbusConfig;
 
@@ -41,13 +42,13 @@ public class ActivityUtils {
     }
 
     public static ComponentName getTopActivityInfo(Context context) {
-        return ((ActivityManager) context.getSystemService("activity")).getRunningTasks(1).get(0).topActivity;
+        return ((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE)).getRunningTasks(1).get(0).topActivity;
     }
 
     public static Intent newIntent(Context context, Class cls) {
         Intent intent = new Intent(context, (Class<?>) cls);
         intent.putExtra("temp_show_10_000_ms", true);
-        intent.addFlags(268435456);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         return intent;
     }
 
@@ -62,7 +63,7 @@ public class ActivityUtils {
             cls = com.hzbhd.canbus.activity.MainActivity.class;
         }
         Intent intent = new Intent(context, (Class<?>) cls);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 }

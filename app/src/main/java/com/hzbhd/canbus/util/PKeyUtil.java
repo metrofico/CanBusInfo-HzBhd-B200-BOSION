@@ -1,10 +1,11 @@
 package com.hzbhd.canbus.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.WindowManager;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.park.radar.PKeyRadarView;
 
@@ -12,11 +13,11 @@ import com.hzbhd.canbus.park.radar.PKeyRadarView;
 public class PKeyUtil {
     private static PKeyUtil pKeyUtil;
     private boolean addTag = false;
-    private WindowManager.LayoutParams layoutParams;
-    private Context mContext;
-    private WindowManager mWindowManager;
-    private PKeyRadarView pKeyRadarView;
-    private View view;
+    private final WindowManager.LayoutParams layoutParams;
+    private final Context mContext;
+    private final WindowManager mWindowManager;
+    private final PKeyRadarView pKeyRadarView;
+    private final View view;
 
     public static PKeyUtil getInstance(Context context) {
         if (pKeyUtil == null) {
@@ -25,6 +26,7 @@ public class PKeyUtil {
         return pKeyUtil;
     }
 
+    @SuppressLint("WrongConstant")
     private PKeyUtil(Context context) {
         this.mContext = context;
         this.mWindowManager = (WindowManager) context.getSystemService("window");
@@ -38,9 +40,9 @@ public class PKeyUtil {
         this.layoutParams.y = 0;
         this.layoutParams.width = -1;
         this.layoutParams.height = -1;
-        View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_p_key_util, (ViewGroup) null);
+        View viewInflate = LayoutInflater.from(context).inflate(R.layout.view_p_key_util, null);
         this.view = viewInflate;
-        this.pKeyRadarView = (PKeyRadarView) viewInflate.findViewById(R.id.p_key_radar);
+        this.pKeyRadarView = viewInflate.findViewById(R.id.p_key_radar);
     }
 
     public void show() {

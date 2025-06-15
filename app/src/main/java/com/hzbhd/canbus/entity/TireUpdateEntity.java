@@ -1,6 +1,5 @@
 package com.hzbhd.canbus.entity;
 
-import com.android.internal.util.ArrayUtils;
 import java.util.Arrays;
 import java.util.List;
 
@@ -18,7 +17,7 @@ public class TireUpdateEntity {
     public TireUpdateEntity(int i, int i2, String[] strArr) {
         this.whichTire = i;
         this.tireStatus = i2;
-        if (ArrayUtils.isEmpty(strArr)) {
+        if (strArr.length == 0) {
             return;
         }
         this.list = Arrays.asList(strArr);

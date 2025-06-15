@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.LinearLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.canCustom.canBaseUtil.StatusUtil;
@@ -28,7 +30,8 @@ public class Aux2Activity extends AppCompatActivity {
         }
     };
 
-    @Override // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
+    @Override
+    // androidx.fragment.app.FragmentActivity, androidx.activity.ComponentActivity, androidx.core.app.ComponentActivity, android.app.Activity
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         StatusUtil.fullScreen(this, true);
@@ -44,7 +47,8 @@ public class Aux2Activity extends AppCompatActivity {
         CanbusMsgSender.sendMsg(new byte[]{22, -110, 1, 0});
     }
 
-    @Override // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
+    @Override
+    // androidx.appcompat.app.AppCompatActivity, androidx.fragment.app.FragmentActivity, android.app.Activity
     protected void onDestroy() {
         super.onDestroy();
         close();
@@ -62,7 +66,7 @@ public class Aux2Activity extends AppCompatActivity {
     }
 
     private void initView(int i, int i2) {
-        Aux2CameraSurfaceView aux2CameraSurfaceView = (Aux2CameraSurfaceView) findViewById(R.id.video_sur);
+        Aux2CameraSurfaceView aux2CameraSurfaceView = findViewById(R.id.video_sur);
         int i3 = Resources.getSystem().getDisplayMetrics().heightPixels;
         int i4 = Resources.getSystem().getDisplayMetrics().widthPixels;
         float f = i * 0.1f;

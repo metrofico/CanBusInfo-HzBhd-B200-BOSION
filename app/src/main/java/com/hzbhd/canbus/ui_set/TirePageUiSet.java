@@ -1,10 +1,10 @@
 package com.hzbhd.canbus.ui_set;
 
 import com.hzbhd.canbus.interfaces.OnTirePageStatusListener;
+
 import java.util.Arrays;
 import java.util.List;
 
-/* loaded from: classes2.dex */
 public class TirePageUiSet {
     private boolean isHaveSpareTire = true;
     private boolean isInitResToString;

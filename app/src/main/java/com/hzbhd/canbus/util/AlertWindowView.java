@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.util;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +8,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -19,9 +21,10 @@ public class AlertWindowView {
     private WindowManager mWindowManager;
     private View view;
 
+    @SuppressLint("WrongConstant")
     public void initWindow(Context context) {
         this.mContext = context;
-        this.mWindowManager = (WindowManager) context.getSystemService("window");
+        this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         this.layoutParams = layoutParams;
         layoutParams.gravity = 80;

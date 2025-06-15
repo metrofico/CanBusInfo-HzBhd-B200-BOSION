@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.msg_mgr;
 
+import android.annotation.SuppressLint;
 import android.app.ActivityManager;
 import android.app.Instrumentation;
 import android.content.ComponentName;
@@ -18,8 +19,9 @@ import android.text.TextUtils;
 import android.util.Base64;
 import android.util.Log;
 import android.util.SparseArray;
-import com.hzbhd.canbus.CanbusMsgSender;
+
 import com.hzbhd.R;
+import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.activity.AmplifierActivity;
@@ -81,12 +83,12 @@ import com.hzbhd.proxy.keydispatcher.SendKeyManager;
 import com.hzbhd.proxy.share.ShareDataManager;
 import com.hzbhd.proxy.share.impl.ShareDataServiceImpl;
 import com.hzbhd.proxy.share.interfaces.IShareIntListener;
+
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import kotlin.jvm.internal.ByteCompanionObject;
 
 /* loaded from: classes2.dex */
 public abstract class AbstractMsgMgr implements MsgMgrInterface {
@@ -114,7 +116,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     private String mTempUnitC;
     private String mTempUnitF;
     public final int DATA_TYPE = 1;
-    private DecimalFormat df = new DecimalFormat("00");
+    private final DecimalFormat df = new DecimalFormat("00");
     private final SparseArray<int[]> mCanbusDataArray = new SparseArray<>();
     private boolean isReverse = false;
     int nowLightLevel = 5;
@@ -373,19 +375,13 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
             @Override // com.hzbhd.proxy.share.interfaces.IShareIntListener
             public void onInt(int i) {
                 AbstractMsgMgr abstractMsgMgr = AbstractMsgMgr.this;
-                boolean z = true;
-                if (i != 1 && i != 2) {
-                    z = false;
-                }
+                boolean z = i == 1 || i == 2;
                 abstractMsgMgr.isReverse = z;
                 AbstractMsgMgr abstractMsgMgr2 = AbstractMsgMgr.this;
                 abstractMsgMgr2.reverseStateChange(abstractMsgMgr2.isReverse);
             }
         });
-        boolean z = true;
-        if (iRegisterShareIntListener != 1 && iRegisterShareIntListener != 2) {
-            z = false;
-        }
+        boolean z = iRegisterShareIntListener == 1 || iRegisterShareIntListener == 2;
         this.isReverse = z;
     }
 
@@ -394,7 +390,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     }
 
     protected void updatePKeyRadar() {
-        if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getPKeyRadarDispCheck()) {
+        if (Dependency.get(CanSettingProxy.class).getPKeyRadarDispCheck()) {
             if (GeneralParkData.pKeyRadarState) {
                 PKeyUtil.getInstance(ContextUtil.getInstance().getContext()).show();
             } else {
@@ -475,7 +471,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     /* JADX INFO: Access modifiers changed from: protected */
     public void enterAuxIn2(Context context, ComponentName componentName) {
         Intent intent = new Intent();
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setComponent(componentName);
         context.startActivity(intent);
     }
@@ -601,15 +597,15 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
         }
         Intent intent = new Intent();
         intent.setComponent(HzbhdComponentName.NewCanBusMainActivity);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void startSettingActivity(Context context, int i, int i2) {
-        Intent intent = new Intent(context, (Class<?>) SettingActivity.class);
+        Intent intent = new Intent(context, SettingActivity.class);
         intent.setAction(Constant.SETTING_OPEN_TARGET_PAGE);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(Constant.LEFT_INDEX, i);
         intent.putExtra(Constant.RIGHT_INDEX, i2);
         context.startActivity(intent);
@@ -628,22 +624,22 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     public void startOtherActivity(Context context, ComponentName componentName) {
         Intent intent = new Intent();
         intent.setComponent(componentName);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
     /* JADX INFO: Access modifiers changed from: protected */
     public void startDrivingDataActivity(Context context, int i) {
-        Intent intent = new Intent(context, (Class<?>) DriveDataActivity.class);
+        Intent intent = new Intent(context, DriveDataActivity.class);
         intent.setAction(Constant.DRIVE_DATA_OPEN_TARGET_PAGE);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(Constant.CURRENT_ITEM, i);
         context.startActivity(intent);
     }
 
     protected void startWarningActivity(Context context) {
-        Intent intent = new Intent(context, (Class<?>) WarningActivity.class);
-        intent.setFlags(268435456);
+        Intent intent = new Intent(context, WarningActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
 
@@ -666,13 +662,13 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
             try {
                 if (z) {
                     Intent intent = new Intent();
-                    intent.addFlags(268435456);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     intent.setComponent(Constant.FCameraActivity);
                     context.startActivity(intent);
                 } else if (SystemUtils.isForeground(context, Constant.FCameraActivity.getClassName())) {
                     new Thread(new Runnable() { // from class: com.hzbhd.canbus.msg_mgr.AbstractMsgMgr$$ExternalSyntheticLambda0
                         @Override // java.lang.Runnable
-                        public final void run() {
+                        public void run() {
                             new Instrumentation().sendKeyDownUpSync(4);
                         }
                     }).start();
@@ -801,7 +797,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
                     try {
                         AbstractMsgMgr.this.mActivity.refreshUi(bundle);
                     } catch (Exception e) {
-                        LogUtil.showLog("updateActivity:" + e.toString());
+                        LogUtil.showLog("updateActivity:" + e);
                     }
                 }
             });
@@ -812,33 +808,26 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     public void updateAirActivity(final Context context, int i) {
         Bundle bundle = new Bundle();
         bundle.putInt("bundle_air_what", i);
-        if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getAirDisplaySetup() == 1) {
-            runOnUi(new CallBackInterface() { // from class: com.hzbhd.canbus.msg_mgr.AbstractMsgMgr$$ExternalSyntheticLambda1
-                @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr.CallBackInterface
-                public final void callback() {
-                    this.f$0.m1149xfb98d8f8(context);
+        if (Dependency.get(CanSettingProxy.class).getAirDisplaySetup() == 1) {
+            runOnUi(() -> {
+                if (SystemUtil.isForeground(context, AirActivity.class.getName())) {
+                    return;
                 }
+                if (AbstractMsgMgr.this.mAirSmallView == null) {
+                    AbstractMsgMgr.this.mAirSmallView = new AirSmallView(context);
+                }
+                AbstractMsgMgr.this.mAirSmallView.refreshUi();
             });
-        } else if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getAirDisplaySetup() == 0 && !((ActivityManager) context.getSystemService("activity")).getRunningTasks(1).get(0).topActivity.getClassName().equals("com.hzbhd.canbus.activity.AirActivity") && !getReverseState()) {
+        } else if (Dependency.get(CanSettingProxy.class).getAirDisplaySetup() == 0 && !((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE)).getRunningTasks(1).get(0).topActivity.getClassName().equals("com.hzbhd.canbus.activity.AirActivity") && !getReverseState()) {
             AirPageWindowView.getInstance(context).show(bundle);
         }
         AbstractBaseActivity abstractBaseActivity = this.mActivity;
-        if (abstractBaseActivity != null && (abstractBaseActivity instanceof AirActivity)) {
+        if ((abstractBaseActivity instanceof AirActivity)) {
             updateActivity(bundle);
         }
         CanbusInfoChangeListener.getInstance().reportAirInfo(context);
     }
 
-    /* renamed from: lambda$updateAirActivity$1$com-hzbhd-canbus-msg_mgr-AbstractMsgMgr, reason: not valid java name */
-    /* synthetic */ void m1149xfb98d8f8(Context context) {
-        if (SystemUtil.isForeground(context, AirActivity.class.getName())) {
-            return;
-        }
-        if (this.mAirSmallView == null) {
-            this.mAirSmallView = new AirSmallView(context);
-        }
-        this.mAirSmallView.refreshUi();
-    }
 
     public void updateSettingActivity(Bundle bundle) {
         LogUtil.showLog("updateSettingActivity");
@@ -945,7 +934,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     /* JADX INFO: Access modifiers changed from: protected */
     public void updateOutDoorTemp(Context context, String str) {
         GeneralAirData.outdoorTemperature = str;
-        if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getShowOutdoorTemperature()) {
+        if (Dependency.get(CanSettingProxy.class).getShowOutdoorTemperature()) {
             CanbusInfoChangeListener.getInstance().reportOutdoorTemperature();
         }
     }
@@ -981,7 +970,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     }
 
     protected void updateTrack() {
-        if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getBackTrajectiryDispCheck()) {
+        if (Dependency.get(CanSettingProxy.class).getBackTrajectiryDispCheck()) {
             if (GeneralParkData.trackAngleRecord != GeneralParkData.trackAngle) {
                 GeneralParkData.trackAngleRecord = GeneralParkData.trackAngle;
                 ShareDataServiceImpl.setInt(ShareConstants.SHARE_CANBUS_ANGLE, -GeneralParkData.trackAngle);
@@ -1009,7 +998,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void bindBackCameraUiService(final Context context) {
-        context.bindService(new Intent(context, (Class<?>) BackCameraUiService.class), new ServiceConnection() { // from class: com.hzbhd.canbus.msg_mgr.AbstractMsgMgr.6
+        context.bindService(new Intent(context, BackCameraUiService.class), new ServiceConnection() { // from class: com.hzbhd.canbus.msg_mgr.AbstractMsgMgr.6
             @Override // android.content.ServiceConnection
             public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
                 if (componentName != null && iBinder != null) {
@@ -1031,7 +1020,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
         if (Arrays.equals(this.mCanbusDataArray.get(iArr[1]), iArr)) {
             return false;
         }
-        this.mCanbusDataArray.append(iArr[1], (int[]) iArr.clone());
+        this.mCanbusDataArray.append(iArr[1], iArr.clone());
         return true;
     }
 
@@ -1076,9 +1065,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
         CommUtil.printHexString("getVersionStr: ", bArr);
         int length = bArr.length - 2;
         byte[] bArr2 = new byte[length];
-        for (int i = 0; i < length; i++) {
-            bArr2[i] = bArr[i + 2];
-        }
+        System.arraycopy(bArr, 2, bArr2, 0, length);
         return new String(bArr2);
     }
 
@@ -1086,7 +1073,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
         int[] iArr = new int[bArr.length];
         for (int i = 0; i < bArr.length; i++) {
             byte b = bArr[i];
-            if ((b & ByteCompanionObject.MIN_VALUE) == 0) {
+            if ((b & Byte.MIN_VALUE) == 0) {
                 iArr[i] = b;
             } else {
                 iArr[i] = b & 255;
@@ -1170,6 +1157,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
         }
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     public void registerAMap(Context context) {
         if (this.mAMapBroadcastReceiver == null) {
             Log.d(TAG, "-------->高德地图开启广播监听");

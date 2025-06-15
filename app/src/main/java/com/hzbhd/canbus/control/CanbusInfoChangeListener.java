@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.util.Log;
+
 import com.hzbhd.canbus.factory.Dependency;
 import com.hzbhd.canbus.factory.proxy.CanSettingProxy;
 import com.hzbhd.canbus.interfaces.ActionDo;
@@ -12,6 +13,7 @@ import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_datas.GeneralAllDataShare;
 import com.hzbhd.canbus.ui_datas.GeneralData;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
+import com.hzbhd.canbus.ui_datas.GeneralParkData;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.RadarInfoUtil;
@@ -22,6 +24,7 @@ import com.hzbhd.constant.share.canbus.CanbusAirShare;
 import com.hzbhd.constant.share.canbus.CanbusDoorShare;
 import com.hzbhd.proxy.share.impl.ShareDataServiceImpl;
 import com.hzbhd.util.LogUtil;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */
@@ -56,101 +59,47 @@ public class CanbusInfoChangeListener {
 
     private void registerSetShareListener() {
         ShareDataServiceImpl.init(SourceConstantsDef.MODULE_ID.CANBUS);
-        ShareDataServiceImpl.addShareListeners(new ShareDataServiceImpl.ShareListeners() { // from class: com.hzbhd.canbus.control.CanbusInfoChangeListener.1
-            /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-            /* JADX WARN: Removed duplicated region for block: B:4:0x000b  */
-            @Override // com.hzbhd.proxy.share.impl.ShareDataServiceImpl.ShareListeners, com.hzbhd.proxy.share.impl.ShareDataServiceImpl.ShareListener
-            /*
-                Code decompiled incorrectly, please refer to instructions dump.
-                To view partially-correct code enable 'Show inconsistent code' option in preferences
-            */
-            public int getInt(java.lang.String r3) {
-                /*
-                    r2 = this;
-                    r3.hashCode()
-                    int r0 = r3.hashCode()
-                    r1 = -1
-                    switch(r0) {
-                        case -2119839599: goto L23;
-                        case -1925922345: goto L18;
-                        case -1380426251: goto Ld;
-                        default: goto Lb;
-                    }
-                Lb:
-                    r3 = r1
-                    goto L2d
-                Ld:
-                    java.lang.String r0 = "canbus.Angle"
-                    boolean r3 = r3.equals(r0)
-                    if (r3 != 0) goto L16
-                    goto Lb
-                L16:
-                    r3 = 2
-                    goto L2d
-                L18:
-                    java.lang.String r0 = "canbus.speedInfo"
-                    boolean r3 = r3.equals(r0)
-                    if (r3 != 0) goto L21
-                    goto Lb
-                L21:
-                    r3 = 1
-                    goto L2d
-                L23:
-                    java.lang.String r0 = "canbus.lamp.turn.left.right.state"
-                    boolean r3 = r3.equals(r0)
-                    if (r3 != 0) goto L2c
-                    goto Lb
-                L2c:
-                    r3 = 0
-                L2d:
-                    switch(r3) {
-                        case 0: goto L39;
-                        case 1: goto L34;
-                        case 2: goto L31;
-                        default: goto L30;
-                    }
-                L30:
-                    return r1
-                L31:
-                    int r3 = com.hzbhd.canbus.ui_datas.GeneralParkData.trackAngle
-                    return r3
-                L34:
-                    int r3 = com.hzbhd.canbus.control.CanbusInfoChangeListener.access$000()
-                    return r3
-                L39:
-                    int r3 = com.hzbhd.canbus.control.CanbusInfoChangeListener.access$100()
-                    return r3
-                */
-                throw new UnsupportedOperationException("Method not decompiled: com.hzbhd.canbus.control.CanbusInfoChangeListener.AnonymousClass1.getInt(java.lang.String):int");
+        ShareDataServiceImpl.addShareListeners(new ShareDataServiceImpl.ShareListeners() {
+            @Override
+            public int getInt(String key) {
+                switch (key) {
+                    case ShareConstants.SHARE_CANBUS_LAMP_TURN_LEFT_RIGHT:
+                        return CanbusInfoChangeListener.nowLeftRightLampState;
+                    case ShareConstants.SHARE_CANBUS_SPEED_INFO:
+                        return CanbusInfoChangeListener.nowCarSpeed;
+                    case ShareConstants.SHARE_CANBUS_ANGLE:
+                        return GeneralParkData.trackAngle;
+                    default:
+                        return -1;
+                }
             }
 
-            @Override // com.hzbhd.proxy.share.impl.ShareDataServiceImpl.ShareListeners, com.hzbhd.proxy.share.impl.ShareDataServiceImpl.ShareListener
-            public String getString(String str) {
-                str.hashCode();
-                switch (str) {
-                    case "canbus.radarLeft":
+            @Override
+            public String getString(String key) {
+                switch (key) {
+                    case ShareConstants.SHARE_CANBUS_RADAR_LEFT:
                         return RadarInfoUtil.getRadarLeftShareInfo();
-                    case "canbus.ms.basic.json.string":
+                    case ShareConstants.SHARE_CANBUS_MS_BISIC_JSON:
                         return CanbusInfoChangeListener.this.nowMsBasicInfoStrJson;
-                    case "canbus.canVersion":
+                    case ShareConstants.SHARE_CANBUS_CAN_VERSION:
                         return GeneralData.INSTANCE.getCanVersion();
-                    case "canbus.RadarFront":
+                    case ShareConstants.SHARE_CANBUS_RADAR_FRONT:
                         return RadarInfoUtil.getRadarFrontShareInfo();
-                    case "can.request.data.share":
+                    case ShareConstants.SHARE_REQUEST_ALL_DATA:
                         return "[]";
-                    case "canbus.AirInfo":
+                    case ShareConstants.SHARE_CANBUS_AIR_INFO:
                         return bhdGsonUtils.toJson(CanbusInfoChangeListener.this.mCanbusAirShare);
-                    case "canbus.VoiceBroadcast":
+                    case ShareConstants.SHARE_CANBUS_VOICE_BROADCAST:
                         return CanbusInfoChangeListener.this.mVoiceBroadcastInfo;
-                    case "canbus.RadarRear":
+                    case ShareConstants.SHARE_CANBUS_RADAR_REAR:
                         return RadarInfoUtil.getRadarRearShareInfo();
-                    case "can.bus.all.data.share":
+                    case ShareConstants.SHARE_CAN_BUS_ALL_DATA:
                         return GeneralAllDataShare.canJsonData;
-                    case "canbus.radarRight":
+                    case ShareConstants.SHARE_CANBUS_RADAR_RIGHT:
                         return RadarInfoUtil.getRadarRightShareInfo();
-                    case "canbus.outdoorTemperature":
+                    case ShareConstants.SHARE_CANBUS_OUTDOOR_TEMPERATURE:
                         return GeneralAirData.outdoorTemperature;
-                    case "canbus.DoorInfo":
+                    case ShareConstants.SHARE_CANBUS_DOOR_INFO:
                         return bhdGsonUtils.toJson(CanbusInfoChangeListener.this.mCanbusDoorShare);
                     default:
                         return null;

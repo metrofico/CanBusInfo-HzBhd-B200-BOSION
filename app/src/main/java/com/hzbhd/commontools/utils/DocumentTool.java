@@ -3,7 +3,9 @@ package com.hzbhd.commontools.utils;
 import android.content.Context;
 import android.text.TextUtils;
 import android.util.Log;
+
 import com.hzbhd.util.LogUtil;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
@@ -133,9 +135,9 @@ public class DocumentTool {
         }
     }
 
-    public static void writeData(String str, String str2) throws IOException {
+    public static void writeData(String str, String str2) {
         try {
-            FileOutputStream fileOutputStream = new FileOutputStream(new File(str), false);
+            FileOutputStream fileOutputStream = new FileOutputStream(str, false);
             fileOutputStream.write(str2.getBytes("UTF-8"));
             if (LogUtil.log5()) {
                 LogUtil.d("将数据写入到文件中：" + str2);
@@ -151,7 +153,7 @@ public class DocumentTool {
         }
     }
 
-    public static void writeData(String str, String str2, boolean z) throws IOException {
+    public static void writeData(String str, String str2, boolean z) {
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(new File(str), z);
             fileOutputStream.write(str2.getBytes("UTF-8"));
@@ -169,7 +171,7 @@ public class DocumentTool {
         }
     }
 
-    public static void writtenFileData(String str, String str2) throws IOException {
+    public static void writtenFileData(String str, String str2) {
         try {
             File file = new File(str);
             RandomAccessFile randomAccessFile = new RandomAccessFile(file, "rw");
@@ -188,7 +190,7 @@ public class DocumentTool {
         }
     }
 
-    public static String readFileContent(String str) throws IOException {
+    public static String readFileContent(String str) {
         try {
             File file = new File(str);
             byte[] bArr = new byte[32768];

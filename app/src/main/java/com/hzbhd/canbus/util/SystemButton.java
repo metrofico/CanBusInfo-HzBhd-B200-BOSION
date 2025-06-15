@@ -1,6 +1,8 @@
 package com.hzbhd.canbus.util;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -8,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -46,6 +49,7 @@ public class SystemButton extends RelativeLayout {
         return i <= 320 ? 96 : 108;
     }
 
+    @SuppressLint("WrongConstant")
     public SystemButton(Activity activity, String str, final PanoramaListener panoramaListener) {
         super(activity);
         View viewInflate = LayoutInflater.from(activity).inflate(R.layout._panorama_button_view, this);
@@ -59,7 +63,7 @@ public class SystemButton extends RelativeLayout {
                 panoramaListener.clickEvent();
             }
         });
-        this.wm = (WindowManager) activity.getSystemService("window");
+        this.wm = (WindowManager) activity.getSystemService(Context.WINDOW_SERVICE);
         DisplayMetrics displayMetrics = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         this.dpi = dpi(displayMetrics.densityDpi);
@@ -67,7 +71,7 @@ public class SystemButton extends RelativeLayout {
         this.screenHeight = this.wm.getDefaultDisplay().getHeight();
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         this.wmParams = layoutParams;
-        layoutParams.type = 2003;
+        layoutParams.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
         this.wmParams.format = 1;
         this.wmParams.gravity = 51;
         this.wmParams.flags = 8;
@@ -82,11 +86,11 @@ public class SystemButton extends RelativeLayout {
         if (isShown()) {
             return;
         }
-        setVisibility(0);
+        setVisibility(View.VISIBLE);
     }
 
     public void hide() {
-        setVisibility(8);
+        setVisibility(View.GONE);
     }
 
     public void destory() {

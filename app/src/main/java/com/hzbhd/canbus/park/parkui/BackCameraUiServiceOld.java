@@ -1,13 +1,13 @@
 package com.hzbhd.canbus.park.parkui;
 
-import android.R;
+import android.annotation.SuppressLint;
 import android.app.Service;
+import android.content.Context;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
-import android.os.SystemProperties;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -16,6 +16,8 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.externel360camera.VZ360Constance;
 import com.hzbhd.canbus.adapter.externel360camera.view.IrCam360VZLayout;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
@@ -34,19 +36,20 @@ import com.hzbhd.canbus.park.external360cam.External360CamCmds;
 import com.hzbhd.canbus.park.external360cam.IrCam360MaylasiaView;
 import com.hzbhd.canbus.park.panoramic.PanoramicView;
 import com.hzbhd.canbus.park.panoramic.ParkPanoramic;
-import com.hzbhd.canbus.park.parkui.BackCameraUiServiceOld;
 import com.hzbhd.canbus.park.radar.RadarView;
 import com.hzbhd.canbus.ui_datas.GeneralParkData;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.util.LogUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
+import com.hzbhd.commontools.utils.SystemPropertiesUtils;
 import com.hzbhd.config.use.CanBusDefault;
 import com.hzbhd.constant.share.ShareConstants;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;
 import com.hzbhd.proxy.share.ShareDataManager;
 import com.hzbhd.proxy.share.interfaces.IShareIntListener;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */
@@ -60,7 +63,7 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
     private ParkPageUiSet mParkPageUiSet;
     private ParkPanoramic mParkPanoramic;
     private RadarView mRadarView;
-    private Service mService;
+    private final Service mService;
     private View mTouchListenerView;
     private View mView;
     private WindowManager.LayoutParams mViewParams;
@@ -117,27 +120,19 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
     @Override // com.hzbhd.canbus.park.parkui.BackCameraUiServiceBase
     public void onCreate() {
         ScreenLogic.setOrientation(this.mService.getApplicationContext().getResources().getConfiguration().orientation);
-        this.mService.setTheme(R.style.Theme.Holo.Light.NoActionBar);
-        this.mView = LayoutInflater.from(this.mService).inflate(com.hzbhd.canbus.R.layout.layout_park, (ViewGroup) null);
+        this.mService.setTheme(R.style.Theme_AppCompat_NoActionBar);
+        this.mView = LayoutInflater.from(this.mService).inflate(R.layout.layout_park, null);
         this.mExternal360CamType = FutureUtil.instance.is360External();
         HzbhdLog.d(TAG, "BackCameraUiService onCreate");
         try {
-            setReverseState(ShareDataManager.getInstance().registerShareIntListener(ShareConstants.SHARE_MISC_REVERSE, new IShareIntListener() { // from class: com.hzbhd.canbus.park.parkui.BackCameraUiServiceOld$$ExternalSyntheticLambda0
-                @Override // com.hzbhd.proxy.share.interfaces.IShareIntListener
-                public final void onInt(int i) {
-                    this.f$0.m1150x85645fee(i);
-                }
-            }));
+            // from class: com.hzbhd.canbus.park.parkui.BackCameraUiServiceOld$$ExternalSyntheticLambda0
+// com.hzbhd.proxy.share.interfaces.IShareIntListener
+            setReverseState(ShareDataManager.getInstance().registerShareIntListener(ShareConstants.SHARE_MISC_REVERSE, this::setReverseState));
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 
-    /* renamed from: lambda$onCreate$0$com-hzbhd-canbus-park-parkui-BackCameraUiServiceOld, reason: not valid java name */
-    /* synthetic */ void m1150x85645fee(int i) {
-        Log.d(TAG, "REVERSE <onChanged> " + i);
-        setReverseState(i);
-    }
 
     @Override // com.hzbhd.canbus.park.parkui.BackCameraUiServiceBase
     public void onConfigurationChanged(Configuration configuration) {
@@ -146,7 +141,7 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
             this.mWindowManager.removeView(this.mView);
         } catch (Exception unused) {
         }
-        this.mView = LayoutInflater.from(this.mService).inflate(com.hzbhd.canbus.R.layout.layout_park, (ViewGroup) null);
+        this.mView = LayoutInflater.from(this.mService).inflate(R.layout.layout_park, null);
         if (ScreenLogic.isScreenOreitaionChanged(configuration) && this.mHasAddViewToWindow) {
             LogUtil.showLog(TAG, "onConfigurationChanged 22");
             addViewToWindow(false);
@@ -164,14 +159,14 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
         if (this.mIsShowRadarLayout != this.mParkPageUiSet.isIsShowRadar()) {
             this.mIsShowRadarLayout = this.mParkPageUiSet.isIsShowRadar();
             if (this.mParkPageUiSet.isIsShowRadar()) {
-                this.mRadarView.setVisibility(0);
+                this.mRadarView.setVisibility(View.VISIBLE);
                 if (SharePreUtil.getBoolValue(this.mService, BackCameraUiService.SHARE_IS_SHOW_RADAR, true)) {
                     this.mRadarView.showRadarView();
                 } else {
                     this.mRadarView.hideRadarView();
                 }
             } else {
-                this.mRadarView.setVisibility(8);
+                this.mRadarView.setVisibility(android.view.View.GONE);
             }
         }
         if (this.mParkPageUiSet.isIsShowRadar()) {
@@ -196,7 +191,7 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
             this.mPanoramicView.getAdapter().notifyDataSetChanged();
         }
         if (this.mParkPageUiSet.isShowCusPanoramicView()) {
-            this.mCusPanoramicContainerView.setVisibility(0);
+            this.mCusPanoramicContainerView.setVisibility(View.VISIBLE);
             View cusPanoramicView = UiMgrFactory.getCanUiMgr(this.mService).getCusPanoramicView(this.mService);
             if (cusPanoramicView == null || this.mCusPanoramicContainerView.getChildCount() != 0) {
                 return;
@@ -204,7 +199,7 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
             this.mCusPanoramicContainerView.addView(cusPanoramicView);
             return;
         }
-        this.mCusPanoramicContainerView.setVisibility(8);
+        this.mCusPanoramicContainerView.setVisibility(View.GONE);
     }
 
     @Override // com.hzbhd.canbus.park.parkui.BackCameraUiServiceBase
@@ -224,17 +219,17 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
     public void addViewToWindow(boolean z) {
         initWindowParam();
         HzbhdLog.d(TAG, "addViewToWindow");
-        this.mRadarView = (RadarView) this.mView.findViewById(com.hzbhd.canbus.R.id.view_radar);
-        this.mPanoramicView = (PanoramicView) this.mView.findViewById(com.hzbhd.canbus.R.id.view_panoramic);
-        this.mCusPanoramicContainerView = (RelativeLayout) this.mView.findViewById(com.hzbhd.canbus.R.id.view_cus_panoramic);
-        this.mTouchListenerView = this.mView.findViewById(com.hzbhd.canbus.R.id.cameraView);
-        this.mIrCam360MaylasiaView = (IrCam360MaylasiaView) this.mView.findViewById(com.hzbhd.canbus.R.id.view_external_360_cam_my);
-        this.mCameraTisTv = (TextView) this.mView.findViewById(com.hzbhd.canbus.R.id.tv_camera_tis);
+        this.mRadarView = this.mView.findViewById(R.id.view_radar);
+        this.mPanoramicView = this.mView.findViewById(R.id.view_panoramic);
+        this.mCusPanoramicContainerView = this.mView.findViewById(R.id.view_cus_panoramic);
+        this.mTouchListenerView = this.mView.findViewById(R.id.cameraView);
+        this.mIrCam360MaylasiaView = this.mView.findViewById(R.id.view_external_360_cam_my);
+        this.mCameraTisTv = this.mView.findViewById(R.id.tv_camera_tis);
         this.mRadarView.refreshText();
         if (FutureUtil.instance.isShowBackCameraTips()) {
-            this.mCameraTisTv.setVisibility(0);
+            this.mCameraTisTv.setVisibility(View.VISIBLE);
         }
-        SystemProperties.set("BackCameraUI", "true");
+        SystemPropertiesUtils.set("BackCameraUI", "true");
         if (UiMgrFactory.getCanUiMgr(this.mService) != null) {
             this.mParkPageUiSet = UiMgrFactory.getCanUiMgr(this.mService).getParkPageUiSet(this.mService);
         }
@@ -244,10 +239,10 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
             if (onBackCameraStatusListener != null) {
                 onBackCameraStatusListener.addViewToWindows();
             }
-            boolean radarDispCheck = ((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getRadarDispCheck();
+            boolean radarDispCheck = Dependency.get(CanSettingProxy.class).getRadarDispCheck();
             LogUtil.showLog(TAG, "IsShowRadar:" + this.mParkPageUiSet.isIsShowRadar() + ", showRadarFromSetting:" + radarDispCheck);
             if ((radarDispCheck && this.mParkPageUiSet.isIsShowRadar()) || this.mService.getResources().getConfiguration().orientation == 1) {
-                this.mRadarView.setVisibility(0);
+                this.mRadarView.setVisibility(View.VISIBLE);
                 if (SharePreUtil.getBoolValue(this.mService, BackCameraUiService.SHARE_IS_SHOW_RADAR, true) || this.mService.getResources().getConfiguration().orientation == 1) {
                     this.mRadarView.showRadarView();
                 } else {
@@ -257,18 +252,18 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
                     this.mRadarView.setSmallRadarViewWidth();
                 }
             } else {
-                this.mRadarView.setVisibility(8);
+                this.mRadarView.setVisibility(View.GONE);
             }
             LogUtil.showLog(TAG, "IsShowPanoramic:" + this.mParkPageUiSet.isShowPanoramic());
             if (this.mParkPageUiSet.isShowPanoramic()) {
                 this.mPanoramicView.setBtnList(this.mParkPageUiSet.getPanoramicBtnList(), this.mParkPageUiSet.getOnPanoramicItemClickListener());
-                this.mPanoramicView.setVisibility(0);
+                this.mPanoramicView.setVisibility(View.VISIBLE);
             } else {
-                this.mPanoramicView.setVisibility(8);
+                this.mPanoramicView.setVisibility(View.GONE);
             }
             LogUtil.showLog(TAG, "isShowCusPanoramic:" + this.mParkPageUiSet.isShowCusPanoramicView());
             if (this.mParkPageUiSet.isShowCusPanoramicView()) {
-                this.mCusPanoramicContainerView.setVisibility(0);
+                this.mCusPanoramicContainerView.setVisibility(View.VISIBLE);
                 View cusPanoramicView = UiMgrFactory.getCanUiMgr(this.mService).getCusPanoramicView(this.mService);
                 if (cusPanoramicView != null && this.mCusPanoramicContainerView.getChildCount() == 0) {
                     if (cusPanoramicView.getParent() != null) {
@@ -277,12 +272,12 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
                     this.mCusPanoramicContainerView.addView(cusPanoramicView);
                 }
             } else {
-                this.mCusPanoramicContainerView.setVisibility(8);
+                this.mCusPanoramicContainerView.setVisibility(View.GONE);
             }
         } else {
             LogUtil.showLog(TAG, "mParkPageUiSet==null");
             if (this.mService.getResources().getConfiguration().orientation == 2) {
-                this.mRadarView.setVisibility(8);
+                this.mRadarView.setVisibility(View.GONE);
             }
         }
         if (ParkPanoramic.isEnableParkPanoramic()) {
@@ -293,13 +288,13 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
             this.mParkPanoramic.constructParkPanoramic();
         }
         if (this.mExternal360CamType == 2) {
-            this.mIrCam360MaylasiaView.setVisibility(0);
+            this.mIrCam360MaylasiaView.setVisibility(View.VISIBLE);
         }
         intIrCam360VZView();
         this.mTouchListenerView.setOnTouchListener(new AnonymousClass3());
-        this.radar_all_page = (RelativeLayout) this.mView.findViewById(com.hzbhd.canbus.R.id.radar_all_page);
+        this.radar_all_page = this.mView.findViewById(R.id.radar_all_page);
         if (CanIdSpecialConfig.hideRadarLayoutCanID(CanbusConfig.INSTANCE.getCanType())) {
-            this.radar_all_page.setVisibility(8);
+            this.radar_all_page.setVisibility(View.GONE);
         }
         this.mWindowManager.addView(this.mView, this.mViewParams);
     }
@@ -310,20 +305,14 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
         private float downY = 0.0f;
         private final Runnable runnable = new Runnable() { // from class: com.hzbhd.canbus.park.parkui.BackCameraUiServiceOld$3$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
-            public final void run() {
-                BackCameraUiServiceOld.AnonymousClass3.lambda$$0();
+            public void run() {
+                if (CanBusDefault.INSTANCE.getLongClick()) {
+                    LogUtil.showLog(BackCameraUiServiceOld.TAG, "onLongClick");
+                    SendKeyManager.getInstance().setKeyEvent(HotKeyConstant.K_REVERSE_SETUP, 0, 0);
+                }
             }
         };
 
-        AnonymousClass3() {
-        }
-
-        static /* synthetic */ void lambda$$0() {
-            if (CanBusDefault.INSTANCE.getLongClick()) {
-                LogUtil.showLog(BackCameraUiServiceOld.TAG, "onLongClick");
-                SendKeyManager.getInstance().setKeyEvent(HotKeyConstant.K_REVERSE_SETUP, 0, 0);
-            }
-        }
 
         @Override // android.view.View.OnTouchListener
         public boolean onTouch(View view, MotionEvent motionEvent) {
@@ -362,17 +351,17 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
         try {
             this.mWindowManager.removeView(this.mView);
         } catch (Exception e) {
-            LogUtil.showLog(TAG, "e:" + e.toString());
+            LogUtil.showLog(TAG, "e:" + e);
         }
     }
 
+    @SuppressLint("WrongConstant")
     private void initWindowParam() {
         LogUtil.showLog(TAG, "initWindowParam");
-        this.mWindowManager = (WindowManager) this.mService.getSystemService("window");
+        this.mWindowManager = (WindowManager) this.mService.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         this.mViewParams = layoutParams;
         layoutParams.type = 2024;
-        this.mViewParams.format = 1;
         this.mViewParams.flags = 16777512;
         this.mViewParams.x = 0;
         this.mViewParams.y = 0;
@@ -382,13 +371,14 @@ public class BackCameraUiServiceOld implements AnalogColorSettingInterface, Vide
         this.mViewParams.setTitle("ReverseWindow");
     }
 
+
     @Override // com.hzbhd.canbus.interfaces.AnalogColorSettingInterface
     public void setAnalogColorUiChange(int i, int i2, int i3) {
         Log.d(TAG, "setAnalogColorUiChange ");
     }
 
     private void intIrCam360VZView() {
-        if (VZ360Constance.isVZ360Camera().booleanValue()) {
+        if (VZ360Constance.isVZ360Camera()) {
             IrCam360VZLayout.addVIew(this.mService.getBaseContext(), this.mView);
         }
     }

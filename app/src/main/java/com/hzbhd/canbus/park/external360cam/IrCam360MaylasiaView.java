@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+
 import com.hzbhd.R;
 
 /* loaded from: classes2.dex */
@@ -58,7 +59,7 @@ public class IrCam360MaylasiaView extends RelativeLayout implements View.OnClick
     }
 
     private ImageButton setOnclickAll(int i) {
-        ImageButton imageButton = (ImageButton) this.view.findViewById(i);
+        ImageButton imageButton = this.view.findViewById(i);
         if (imageButton != null) {
             imageButton.setOnClickListener(this);
         }
@@ -66,13 +67,13 @@ public class IrCam360MaylasiaView extends RelativeLayout implements View.OnClick
     }
 
     private void setVisual(LinearLayout linearLayout, boolean z) {
-        if (linearLayout.getVisibility() == 0 && z) {
-            linearLayout.setVisibility(8);
+        if (linearLayout.getVisibility() == View.VISIBLE && z) {
+            linearLayout.setVisibility(View.GONE);
         }
-        if (linearLayout.getVisibility() != 8 || z) {
+        if (linearLayout.getVisibility() != View.GONE || z) {
             return;
         }
-        linearLayout.setVisibility(0);
+        linearLayout.setVisibility(View.VISIBLE);
     }
 
     public void setImgBtnsGone() {
@@ -102,17 +103,17 @@ public class IrCam360MaylasiaView extends RelativeLayout implements View.OnClick
         this.left_right_front_all = setOnclickAll(R.id.left_right_front_all);
         this.four_region = setOnclickAll(R.id.four_region);
         this.left_right_rear_all = setOnclickAll(R.id.left_right_rear_all);
-        this.cam_360_pull_btn = (ImageButton) this.view.findViewById(R.id.cam_360_pull_btn);
-        this.btn_next = (ImageButton) this.view.findViewById(R.id.btn_next);
-        this.btn_exit = (ImageButton) this.view.findViewById(R.id.btn_exit);
+        this.cam_360_pull_btn = this.view.findViewById(R.id.cam_360_pull_btn);
+        this.btn_next = this.view.findViewById(R.id.btn_next);
+        this.btn_exit = this.view.findViewById(R.id.btn_exit);
         this.cam_360_pull_btn.setOnClickListener(this);
         this.btn_next.setOnClickListener(this);
         this.btn_exit.setOnClickListener(this);
-        this.lo_cam_btn_part_1 = (LinearLayout) this.view.findViewById(R.id.lo_cam_btn_part_1);
-        this.lo_cam_btn_part_2 = (LinearLayout) this.view.findViewById(R.id.lo_cam_btn_part_2);
-        this.lo_cam_btn_part_3 = (LinearLayout) this.view.findViewById(R.id.lo_cam_btn_part_3);
-        this.lo_360_main_btns = (LinearLayout) this.view.findViewById(R.id.lo_360_main_btns);
-        this.lo_cam_btn_part_4 = (LinearLayout) this.view.findViewById(R.id.lo_cam_btn_part_4);
+        this.lo_cam_btn_part_1 = this.view.findViewById(R.id.lo_cam_btn_part_1);
+        this.lo_cam_btn_part_2 = this.view.findViewById(R.id.lo_cam_btn_part_2);
+        this.lo_cam_btn_part_3 = this.view.findViewById(R.id.lo_cam_btn_part_3);
+        this.lo_360_main_btns = this.view.findViewById(R.id.lo_360_main_btns);
+        this.lo_cam_btn_part_4 = this.view.findViewById(R.id.lo_cam_btn_part_4);
         this.currentPage = (byte) 0;
     }
 
@@ -144,52 +145,37 @@ public class IrCam360MaylasiaView extends RelativeLayout implements View.OnClick
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_exit /* 2131362022 */:
-                External360CamCmds.getInstance().getCmds().exit();
-                break;
-            case R.id.btn_next /* 2131362034 */:
-                if (this.isBtnsShow) {
-                    changeBtnPage();
-                    break;
-                }
-                break;
-            case R.id.cam_360_pull_btn /* 2131362082 */:
-                setImgBtnsGone();
-                break;
-            case R.id.four_region /* 2131362262 */:
-                External360CamCmds.getInstance().getCmds().fourRegion();
-                break;
-            case R.id.front_all /* 2131362266 */:
-                External360CamCmds.getInstance().getCmds().frontAll();
-                break;
-            case R.id.front_only /* 2131362272 */:
-                External360CamCmds.getInstance().getCmds().frontOnly();
-                break;
-            case R.id.left_all /* 2131362726 */:
-                External360CamCmds.getInstance().getCmds().leftAll();
-                break;
-            case R.id.left_only /* 2131362729 */:
-                External360CamCmds.getInstance().getCmds().leftOnly();
-                break;
-            case R.id.left_right_front_all /* 2131362746 */:
-                External360CamCmds.getInstance().getCmds().allFrontLeftRight();
-                break;
-            case R.id.left_right_rear_all /* 2131362747 */:
-                External360CamCmds.getInstance().getCmds().allRearLeftRight();
-                break;
-            case R.id.rear_all /* 2131363044 */:
-                External360CamCmds.getInstance().getCmds().rearAll();
-                break;
-            case R.id.rear_only /* 2131363056 */:
-                External360CamCmds.getInstance().getCmds().rearOnly();
-                break;
-            case R.id.right_all /* 2131363154 */:
-                External360CamCmds.getInstance().getCmds().rightAll();
-                break;
-            case R.id.right_only /* 2131363158 */:
-                External360CamCmds.getInstance().getCmds().rightOnly();
-                break;
+        if (view.getId() == R.id.btn_exit) {
+            External360CamCmds.getInstance().getCmds().exit();
+        } else if (view.getId() == R.id.btn_next) {
+            if (this.isBtnsShow) {
+                changeBtnPage();
+            }
+        } else if (view.getId() == R.id.cam_360_pull_btn) {
+            setImgBtnsGone();
+        } else if (view.getId() == R.id.four_region) {
+            External360CamCmds.getInstance().getCmds().fourRegion();
+        } else if (view.getId() == R.id.front_all) {
+            External360CamCmds.getInstance().getCmds().frontAll();
+        } else if (view.getId() == R.id.front_only) {
+            External360CamCmds.getInstance().getCmds().frontOnly();
+        } else if (view.getId() == R.id.left_all) {
+            External360CamCmds.getInstance().getCmds().leftAll();
+        } else if (view.getId() == R.id.left_only) {
+            External360CamCmds.getInstance().getCmds().leftOnly();
+        } else if (view.getId() == R.id.left_right_front_all) {
+            External360CamCmds.getInstance().getCmds().allFrontLeftRight();
+        } else if (view.getId() == R.id.left_right_rear_all) {
+            External360CamCmds.getInstance().getCmds().allRearLeftRight();
+        } else if (view.getId() == R.id.rear_all) {
+            External360CamCmds.getInstance().getCmds().rearAll();
+        } else if (view.getId() == R.id.rear_only) {
+            External360CamCmds.getInstance().getCmds().rearOnly();
+        } else if (view.getId() == R.id.right_all) {
+            External360CamCmds.getInstance().getCmds().rightAll();
+        } else if (view.getId() == R.id.right_only) {
+            External360CamCmds.getInstance().getCmds().rightOnly();
         }
     }
+
 }

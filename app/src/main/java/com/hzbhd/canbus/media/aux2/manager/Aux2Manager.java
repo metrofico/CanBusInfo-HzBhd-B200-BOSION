@@ -2,6 +2,7 @@ package com.hzbhd.canbus.media.aux2.manager;
 
 import android.content.Context;
 import android.content.Intent;
+
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
 import com.hzbhd.canbus.media.aux2.action.ActionCallback;
 import com.hzbhd.canbus.media.aux2.action.ActionTag;
@@ -38,7 +39,7 @@ public class Aux2Manager {
     public void openAux2(Context context, int i, int i2) {
         Intent intent = new Intent();
         intent.setComponent(HzbhdComponentName.Aux2Activity);
-        intent.setFlags(268435456);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.putExtra(Aux2Activity.SCALE_X_TAG, i);
         intent.putExtra(Aux2Activity.SCALE_Y_TAG, i2);
         context.startActivity(intent);

@@ -8,8 +8,10 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.CrashReportUtils;
+
 import kotlinx.coroutines.DebugKt;
 
 /* loaded from: classes2.dex */
@@ -27,14 +29,14 @@ public class OpenCanBusBuglyView {
             public void onClick(View view) {
                 if (((EditText) viewInflate.findViewById(R.id.pass_word)).getText().toString().trim().equals(DebugKt.DEBUG_PROPERTY_VALUE_ON)) {
                     CrashReportUtils.openCanBusBugly(context, true);
-                    Toast.makeText(context, R.string._open_bugly_success, 1).show();
+                    Toast.makeText(context, R.string._open_bugly_success, Toast.LENGTH_LONG).show();
                     alertDialogCreate.dismiss();
                 } else if (((EditText) viewInflate.findViewById(R.id.pass_word)).getText().toString().trim().equals("off")) {
                     CrashReportUtils.openCanBusBugly(context, false);
-                    Toast.makeText(context, R.string._open_bugly_off_success, 1).show();
+                    Toast.makeText(context, R.string._open_bugly_off_success, Toast.LENGTH_LONG).show();
                     alertDialogCreate.dismiss();
                 } else {
-                    Toast.makeText(context, R.string._open_bugly_password, 0).show();
+                    Toast.makeText(context, R.string._open_bugly_password, Toast.LENGTH_SHORT).show();
                     ((EditText) viewInflate.findViewById(R.id.pass_word)).setText("");
                 }
             }

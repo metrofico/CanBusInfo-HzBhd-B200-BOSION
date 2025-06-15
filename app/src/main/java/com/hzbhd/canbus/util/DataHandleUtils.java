@@ -3,17 +3,22 @@ package com.hzbhd.canbus.util;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.text.TextUtils;
+
 import androidx.core.view.InputDeviceCompat;
 import androidx.core.view.MotionEventCompat;
+
 import com.hzbhd.canbus.car._464.MsgMgr;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
 import java.io.UnsupportedEncodingException;
 import java.util.Arrays;
 import java.util.List;
-import kotlinx.coroutines.scheduling.WorkQueueKt;
 
 /* loaded from: classes2.dex */
 public class DataHandleUtils {
+
+    public static final int MASK = 0x7F;           // 127
+
     public static boolean getBoolBit0(int i) {
         return (i & 1) != 0;
     }
@@ -78,7 +83,7 @@ public class DataHandleUtils {
     }
 
     public static int setIntByteWithBit(int i, int i2, boolean z) {
-        return z ? i2 == 0 ? i | 1 : 1 == i2 ? i | 2 : 2 == i2 ? i | 4 : 3 == i2 ? i | 8 : 4 == i2 ? i | 16 : 5 == i2 ? i | 32 : 6 == i2 ? i | 64 : 7 == i2 ? i | 128 : i : i2 == 0 ? i & MsgMgr.DVD_MODE : 1 == i2 ? i & 253 : 2 == i2 ? i & MsgMgr.RADIO_MODE : 3 == i2 ? i & 247 : 4 == i2 ? i & 239 : 5 == i2 ? i & HotKeyConstant.K_DARK_MODE : 6 == i2 ? i & 191 : 7 == i2 ? i & WorkQueueKt.MASK : i;
+        return z ? i2 == 0 ? i | 1 : 1 == i2 ? i | 2 : 2 == i2 ? i | 4 : 3 == i2 ? i | 8 : 4 == i2 ? i | 16 : 5 == i2 ? i | 32 : 6 == i2 ? i | 64 : 7 == i2 ? i | 128 : i : i2 == 0 ? i & MsgMgr.DVD_MODE : 1 == i2 ? i & 253 : 2 == i2 ? i & MsgMgr.RADIO_MODE : 3 == i2 ? i & 247 : 4 == i2 ? i & 239 : 5 == i2 ? i & HotKeyConstant.K_DARK_MODE : 6 == i2 ? i & 191 : 7 == i2 ? i & MASK : i;
     }
 
     public static int setIntFromByteWithBit(int i, int i2, int i3, int i4) {
@@ -161,7 +166,6 @@ public class DataHandleUtils {
                 if (c != 11) {
                     if (c != 15) {
                         break;
-                        break;
                     }
                     break;
                 }
@@ -222,7 +226,7 @@ public class DataHandleUtils {
         if (context == null || TextUtils.isEmpty(str)) {
             return false;
         }
-        List<ActivityManager.RunningTaskInfo> runningTasks = ((ActivityManager) context.getSystemService("activity")).getRunningTasks(1);
+        List<ActivityManager.RunningTaskInfo> runningTasks = ((ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE)).getRunningTasks(1);
         return runningTasks == null || runningTasks.size() <= 0 || !str.equals(runningTasks.get(0).topActivity.getClassName());
     }
 
@@ -298,8 +302,9 @@ public class DataHandleUtils {
         return iArr3;
     }
 
-    public static float getRound(float f, int i) {
-        return (float) (Math.round(f * r0) / Math.pow(10.0d, i));
+    public static float getRound(float var0, int var1) {
+        double var2 = Math.pow(10.0, var1);
+        return (float) ((double) Math.round((double) var0 * var2) / var2);
     }
 
     public static byte[] getBytesEndWithAssign(byte[] bArr, int i, byte b) {

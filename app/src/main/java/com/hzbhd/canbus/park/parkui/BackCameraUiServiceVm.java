@@ -1,6 +1,5 @@
 package com.hzbhd.canbus.park.parkui;
 
-import android.R;
 import android.app.Service;
 import android.content.res.Configuration;
 import android.os.Bundle;
@@ -10,6 +9,8 @@ import android.os.Message;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
+import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.adapter.util.HzbhdLog;
 import com.hzbhd.canbus.adapter.util.ScreenLogic;
@@ -22,7 +23,6 @@ import com.hzbhd.canbus.interfaces.OnBackCameraStatusListener;
 import com.hzbhd.canbus.park.BackCameraUiService;
 import com.hzbhd.canbus.park.external360cam.External360CamCmds;
 import com.hzbhd.canbus.park.panoramic.ParkPanoramic;
-import com.hzbhd.canbus.park.parkui.BackCameraUiServiceVm;
 import com.hzbhd.canbus.ui_datas.GeneralParkData;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
@@ -32,9 +32,8 @@ import com.hzbhd.canbus.vm.Vm;
 import com.hzbhd.config.use.CanBusDefault;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;
+
 import java.util.List;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function0;
 
 /* loaded from: classes2.dex */
 public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
@@ -71,25 +70,20 @@ public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
     public void onCreate() {
         Vm.INSTANCE.getVm().getAction().getMain().init();
         ScreenLogic.setOrientation(this.mService.getApplicationContext().getResources().getConfiguration().orientation);
-        this.mService.setTheme(R.style.Theme.Holo.Light.NoActionBar);
+        this.mService.setTheme(R.style.Theme_AppCompat_NoActionBar);
         this.mExternal360CamType = FutureUtil.instance.is360External();
         HzbhdLog.d(TAG, "BackCameraUiService onCreate" + Vm.INSTANCE.getVm().getReverseListener().isReversing());
         if (Vm.INSTANCE.getVm().getReverseListener().isReversing()) {
             addViewToWindow();
         }
-        Vm.INSTANCE.getVm().getReverseListener().setActionBefortViewInit(new Function0() { // from class: com.hzbhd.canbus.park.parkui.BackCameraUiServiceVm$$ExternalSyntheticLambda0
-            @Override // kotlin.jvm.functions.Function0
-            public final Object invoke() {
-                return this.f$0.m1151x802c8810();
+        Vm.INSTANCE.getVm().getReverseListener().setActionBefortViewInit(new Runnable() {
+            @Override
+            public void run() {
+                addViewToWindow();
             }
         });
     }
 
-    /* renamed from: lambda$onCreate$0$com-hzbhd-canbus-park-parkui-BackCameraUiServiceVm, reason: not valid java name */
-    /* synthetic */ Unit m1151x802c8810() {
-        addViewToWindow();
-        return null;
-    }
 
     @Override // com.hzbhd.canbus.park.parkui.BackCameraUiServiceBase
     public void onConfigurationChanged(Configuration configuration) {
@@ -205,19 +199,13 @@ public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
         private final Runnable runnable = new Runnable() { // from class: com.hzbhd.canbus.park.parkui.BackCameraUiServiceVm$2$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
             public final void run() {
-                BackCameraUiServiceVm.AnonymousClass2.lambda$$0();
+                if (CanBusDefault.INSTANCE.getLongClick()) {
+                    LogUtil.showLog(BackCameraUiServiceVm.TAG, "onLongClick");
+                    SendKeyManager.getInstance().setKeyEvent(HotKeyConstant.K_REVERSE_SETUP, 0, 0);
+                }
             }
         };
 
-        AnonymousClass2() {
-        }
-
-        static /* synthetic */ void lambda$$0() {
-            if (CanBusDefault.INSTANCE.getLongClick()) {
-                LogUtil.showLog(BackCameraUiServiceVm.TAG, "onLongClick");
-                SendKeyManager.getInstance().setKeyEvent(HotKeyConstant.K_REVERSE_SETUP, 0, 0);
-            }
-        }
 
         @Override // android.view.View.OnTouchListener
         public boolean onTouch(View view, MotionEvent motionEvent) {

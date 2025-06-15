@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.park.panoramic;
 
 import android.view.MotionEvent;
+
 import com.hzbhd.canbus.adapter.park.ParkManager;
 
 /* loaded from: classes2.dex */
@@ -15,12 +16,12 @@ public class ParkPanoramic {
     public void constructParkPanoramic() {
         ParkManager atvManager = ParkManager.getAtvManager();
         this.mParkManager = atvManager;
-        atvManager.sendPanoramicParkOn(true);
+        atvManager.sendPanoramicParkOn(ENABLE_PARK_PANORAMIC);
         this.mParkManager.sendPanoramicParkWH(800, 480);
     }
 
     public void destroyParkPanoramic() {
-        this.mParkManager.sendPanoramicParkOn(false);
+        this.mParkManager.sendPanoramicParkOn(!ENABLE_PARK_PANORAMIC);
     }
 
     public void sendTouch(MotionEvent motionEvent) {

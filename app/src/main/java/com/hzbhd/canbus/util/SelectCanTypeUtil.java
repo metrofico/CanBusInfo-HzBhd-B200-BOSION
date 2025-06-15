@@ -7,6 +7,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.provider.Settings;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,6 +19,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.hzbhd.canbus.CanbusMsgService;
 import com.hzbhd.R;
 import com.hzbhd.canbus.activity.UPDProgressActivity;
@@ -33,10 +35,11 @@ import com.hzbhd.canbus.park.BackCameraUiService;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.cantype.CanTypeUtil;
 import com.hzbhd.common.settings.constant.BodaSysContant;
+import com.hzbhd.commontools.utils.bhdGsonUtils;
 import com.hzbhd.config.use.CanBus;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import com.hzbhd.proxy.keydispatcher.SendKeyManager;
-import com.softwinner.SystemMix;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -100,7 +103,7 @@ public class SelectCanTypeUtil {
                     if (com.hzbhd.util.LogUtil.log5()) {
                         com.hzbhd.util.LogUtil.d("can type id equal");
                     }
-                    Toast.makeText(activity, R.string.have_update, 1).show();
+                    Toast.makeText(activity, R.string.have_update, Toast.LENGTH_LONG).show();
                     System.exit(0);
                     return;
                 }
@@ -118,13 +121,13 @@ public class SelectCanTypeUtil {
                     CanbusConfig.INSTANCE.setCanType(canTypeAllEntity.getCan_type_id());
                     McuVehicleConfig.INSTANCE.setMcu();
                     SelectCanTypeUtil.setSpecifyCanTypeIdAndRestMpu(canTypeAllEntity.getCan_type_id());
-                    Toast.makeText(activity, R.string.reboot_tips, 1).show();
+                    Toast.makeText(activity, R.string.reboot_tips, Toast.LENGTH_LONG).show();
                     return;
                 }
                 if (com.hzbhd.util.LogUtil.log5()) {
                     com.hzbhd.util.LogUtil.d("<confirm> " + canTypeAllEntity.getCan_type_id());
                 }
-                Toast.makeText(activity, "Unsupported ID", 0).show();
+                Toast.makeText(activity, "Unsupported ID", Toast.LENGTH_SHORT).show();
             }
         }).setView(viewInflate).create().show();
     }
@@ -146,7 +149,8 @@ public class SelectCanTypeUtil {
     public static void setSpecifyCanTypeIdAndRestMpu(int i) {
         LogUtil.showLog("切换can重启");
         if (setFactoryCanType(i)) {
-            SystemMix.bhd_sync();
+            //SystemMix.bhd_sync();
+            bhdGsonUtils.callBhdSyncUsingReflection();
             SendKeyManager.getInstance().resetMpu(HotKeyConstant.RESET_MODE.NORMAL, 1);
         }
     }
@@ -186,7 +190,7 @@ public class SelectCanTypeUtil {
     public static void disableApp(Context context, ComponentName componentName) {
         Log.i("CanbusInfo", "CANBUS unShow disableApp: " + componentName);
         try {
-            context.getPackageManager().setComponentEnabledSetting(componentName, 2, 1);
+            context.getPackageManager().setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -195,7 +199,7 @@ public class SelectCanTypeUtil {
     public static void enableApp(Context context, ComponentName componentName) {
         Log.i("CanbusInfo", "CANBUS show enableApp: " + componentName);
         try {
-            context.getPackageManager().setComponentEnabledSetting(componentName, 1, 1);
+            context.getPackageManager().setComponentEnabledSetting(componentName, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP);
         } catch (Exception e) {
             e.printStackTrace();
         }

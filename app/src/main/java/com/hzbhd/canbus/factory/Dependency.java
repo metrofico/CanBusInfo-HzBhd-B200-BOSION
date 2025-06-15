@@ -3,8 +3,9 @@ package com.hzbhd.canbus.factory;
 import android.content.Context;
 import android.util.ArrayMap;
 import android.util.Log;
-import com.android.internal.util.Preconditions;
+
 import com.hzbhd.canbus.factory.proxy.CanSettingProxy;
+
 import java.util.function.Consumer;
 
 /* loaded from: classes2.dex */
@@ -23,18 +24,11 @@ public class Dependency {
         this.mContext = context;
     }
 
-    /* renamed from: lambda$start$0$com-hzbhd-canbus-factory-Dependency, reason: not valid java name */
-    /* synthetic */ Object m1148lambda$start$0$comhzbhdcanbusfactoryDependency() {
-        return new CanSettingProxy(this.mContext);
-    }
 
     public void start() {
-        this.mProviders.put(CanSettingProxy.class, new DependencyProvider() { // from class: com.hzbhd.canbus.factory.Dependency$$ExternalSyntheticLambda0
-            @Override // com.hzbhd.canbus.factory.Dependency.DependencyProvider
-            public final Object createDependency() {
-                return this.f$0.m1148lambda$start$0$comhzbhdcanbusfactoryDependency();
-            }
-        });
+        // from class: com.hzbhd.canbus.factory.Dependency$$ExternalSyntheticLambda0
+// com.hzbhd.canbus.factory.Dependency.DependencyProvider
+        this.mProviders.put(CanSettingProxy.class, () -> new CanSettingProxy(mContext));
         sDependency = this;
     }
 
@@ -61,7 +55,7 @@ public class Dependency {
     }
 
     protected <T> T createDependency(Object obj) {
-        Preconditions.checkArgument((obj instanceof DependencyKey) || (obj instanceof Class));
+        checkArgument((obj instanceof DependencyKey) || (obj instanceof Class));
         DependencyProvider dependencyProvider = this.mProviders.get(obj);
         if (dependencyProvider == null) {
             throw new IllegalArgumentException("Unsupported dependency " + obj + ". " + this.mProviders.size() + " providers known.");
@@ -69,13 +63,19 @@ public class Dependency {
         return (T) dependencyProvider.createDependency();
     }
 
+    private void checkArgument(boolean condition) {
+        if (!condition) {
+            throw new IllegalArgumentException("obj debe ser una instancia de DependencyKey o Class");
+        }
+    }
+
     /* JADX WARN: Multi-variable type inference failed */
     private <T> void destroyDependency(Class<T> cls, Consumer<T> consumer) {
-        Object objRemove = this.mDependencies.remove(cls);
-        if (objRemove == null || consumer == 0) {
+        Object remove = this.mDependencies.remove(cls);
+        if (remove == null || consumer == null) {
             return;
         }
-        consumer.accept(objRemove);
+        consumer.accept((T) remove);
     }
 
     public static void clearDependencies() {

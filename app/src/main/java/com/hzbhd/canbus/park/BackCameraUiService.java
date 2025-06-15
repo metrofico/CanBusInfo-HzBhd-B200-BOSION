@@ -6,12 +6,12 @@ import android.content.res.Configuration;
 import android.os.Binder;
 import android.os.Handler;
 import android.os.IBinder;
+
 import com.hzbhd.canbus.interfaces.AnalogColorSettingInterface;
 import com.hzbhd.canbus.interfaces.VideoTypeUiChangeInterface;
 import com.hzbhd.canbus.park.parkui.BackCameraUiServiceBase;
 import com.hzbhd.canbus.park.parkui.BackCameraUiServiceVm;
 
-/* loaded from: classes2.dex */
 public class BackCameraUiService extends Service implements AnalogColorSettingInterface, VideoTypeUiChangeInterface {
     public static final int MSG_CHECK_BACKCAMERA_STATE = 0;
     public static final int MSG_REFRESH_UI = 1;

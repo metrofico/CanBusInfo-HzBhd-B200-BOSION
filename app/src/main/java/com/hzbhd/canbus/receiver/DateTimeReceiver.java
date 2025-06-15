@@ -4,9 +4,11 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
+
 import com.hzbhd.canbus.interfaces.MsgMgrInterface;
 import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.util.SystemUtil;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -64,17 +66,17 @@ public class DateTimeReceiver extends BroadcastReceiver {
         String str3 = android.text.format.DateFormat.getTimeFormat(context).format(calendar.getTime());
         GregorianCalendar gregorianCalendar = new GregorianCalendar();
         calendar.setTime(date);
-        this.bYearTotal = Integer.valueOf(strReplace.substring(0, 4)).intValue();
-        this.bYear2Dig = Integer.valueOf(strReplace.substring(2, 4)).intValue();
-        this.bMonth = Integer.valueOf(strReplace.substring(4, 6)).intValue();
-        this.bDay = Integer.valueOf(strReplace.substring(6, 8)).intValue();
-        int iIntValue = Integer.valueOf(str2).intValue() / 100;
+        this.bYearTotal = Integer.parseInt(strReplace.substring(0, 4));
+        this.bYear2Dig = Integer.parseInt(strReplace.substring(2, 4));
+        this.bMonth = Integer.parseInt(strReplace.substring(4, 6));
+        this.bDay = Integer.parseInt(strReplace.substring(6, 8));
+        int iIntValue = Integer.parseInt(str2) / 100;
         this.bHours = iIntValue;
         this.bHours24H = iIntValue;
-        this.bMins = Integer.valueOf(str2).intValue() % 100;
+        this.bMins = Integer.parseInt(str2) % 100;
         this.bSecond = calendar.get(13);
         this.isFormat24H = android.text.format.DateFormat.is24HourFormat(context);
-        this.isFormatPm = gregorianCalendar.get(9) == 1;
+        this.isFormatPm = gregorianCalendar.get(9) == Calendar.PM;
         this.isGpsTime = Settings.System.getInt(context.getContentResolver(), "auto_gps_time", 0) == 1;
         this.systemDateFormat = getSystemDateFormat(context, date);
         this.mDayOfWeek = calendar.get(7);

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_datas.GeneralOnStartData;
 
@@ -49,19 +50,19 @@ public class OnStartWirelessFragment extends BaseFragment {
 
     public void refreshUi(Bundle bundle) {
         if (TextUtils.isEmpty(GeneralOnStartData.mOnStarWirelessInfo)) {
-            this.mInfoRl.setVisibility(8);
+            this.mInfoRl.setVisibility(View.GONE);
         } else {
-            this.mInfoRl.setVisibility(0);
+            this.mInfoRl.setVisibility(View.VISIBLE);
         }
         if (TextUtils.isEmpty(GeneralOnStartData.mOnStarWirelessPoint)) {
-            this.mPointRl.setVisibility(8);
+            this.mPointRl.setVisibility(View.GONE);
         } else {
-            this.mPointRl.setVisibility(0);
+            this.mPointRl.setVisibility(View.VISIBLE);
         }
         if (TextUtils.isEmpty(GeneralOnStartData.mOnStarWirelessPassword)) {
-            this.mPasswordRl.setVisibility(8);
+            this.mPasswordRl.setVisibility(View.GONE);
         } else {
-            this.mPasswordRl.setVisibility(0);
+            this.mPasswordRl.setVisibility(View.VISIBLE);
         }
         this.mInfoTv.setText(GeneralOnStartData.mOnStarWirelessInfo);
         this.mPointTv.setText(GeneralOnStartData.mOnStarWirelessPoint);

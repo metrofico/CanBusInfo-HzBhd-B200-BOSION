@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.PanoramiceBtnLvAdapter;
 import com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
+
 import java.util.List;
 
 /* loaded from: classes2.dex */
@@ -19,7 +22,7 @@ public class PanoramicView extends RelativeLayout {
     private PanoramiceBtnLvAdapter mAdapter;
     private RecyclerView mBtnListRv;
     private Context mContext;
-    private View.OnClickListener mRightBtnOnClickListener;
+    private final View.OnClickListener mRightBtnOnClickListener;
     private ImageButton mRightHideBtn;
     private ImageButton mRightPullBtn;
     private View mView;
@@ -76,9 +79,9 @@ public class PanoramicView extends RelativeLayout {
     }
 
     private void initRightSmallView() {
-        this.mRightPullBtn = (ImageButton) this.mView.findViewById(R.id.right_pull_btn);
-        this.mRightHideBtn = (ImageButton) this.mView.findViewById(R.id.right_hide_btn);
-        this.mBtnListRv = (RecyclerView) this.mView.findViewById(R.id.rv_btn_list);
+        this.mRightPullBtn = this.mView.findViewById(R.id.right_pull_btn);
+        this.mRightHideBtn = this.mView.findViewById(R.id.right_hide_btn);
+        this.mBtnListRv = this.mView.findViewById(R.id.rv_btn_list);
         this.mRightPullBtn.setOnClickListener(this.mRightBtnOnClickListener);
         this.mRightHideBtn.setOnClickListener(this.mRightBtnOnClickListener);
     }

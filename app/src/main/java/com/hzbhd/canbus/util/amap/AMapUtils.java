@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.util.amap;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.IntentFilter;
 
@@ -19,6 +20,7 @@ public class AMapUtils {
     private AMapUtils() {
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     public void startAMap(Context context) {
         if (this.mAMapBroadcast == null) {
             this.mAMapBroadcast = new AMapBroadcast();

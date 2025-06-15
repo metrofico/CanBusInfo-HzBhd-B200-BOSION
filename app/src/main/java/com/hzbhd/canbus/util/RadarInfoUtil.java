@@ -6,11 +6,11 @@ import com.hzbhd.canbus.ui_set.AirBtnAction;
 import com.hzbhd.constant.share.ShareConstants;
 import com.hzbhd.proxy.share.impl.ShareDataServiceImpl;
 import com.hzbhd.ui.util.BaseUtil;
-import java.util.HashMap;
-import kotlin.Unit;
-import kotlin.jvm.functions.Function0;
+
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
 
 /* loaded from: classes2.dex */
 public class RadarInfoUtil {
@@ -60,10 +60,10 @@ public class RadarInfoUtil {
     }
 
     public static void setRightRadarDistanceData(int i, int i2, int i3, int i4) {
-        mDistanceMap.put(Constant.RadarLocation.RIGHT_FRONT, Integer.valueOf(i));
-        mDistanceMap.put(Constant.RadarLocation.RIGHT_MID_FRONT, Integer.valueOf(i2));
-        mDistanceMap.put(Constant.RadarLocation.RIGHT_MID_REAR, Integer.valueOf(i3));
-        mDistanceMap.put(Constant.RadarLocation.RIGHT_REAR, Integer.valueOf(i4));
+        mDistanceMap.put(Constant.RadarLocation.RIGHT_FRONT, i);
+        mDistanceMap.put(Constant.RadarLocation.RIGHT_MID_FRONT, i2);
+        mDistanceMap.put(Constant.RadarLocation.RIGHT_MID_REAR, i3);
+        mDistanceMap.put(Constant.RadarLocation.RIGHT_REAR, i4);
     }
 
     public static void setLeftRadarDistanceData(int i, int i2, int i3, int i4) {
@@ -84,13 +84,13 @@ public class RadarInfoUtil {
             e.printStackTrace();
         }
         if (GeneralParkData.pKeyRadarState) {
-            BaseUtil.INSTANCE.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.util.RadarInfoUtil.1
-                @Override // kotlin.jvm.functions.Function0
-                public Unit invoke() {
+            BaseUtil.INSTANCE.runUi(new Runnable() {
+                @Override
+                public void run() {
                     PKeyUtil.getInstance(ContextUtil.getInstance().getContext()).refreshRearRadar(i, i2, i3, i4, i5);
-                    return null;
                 }
             });
+
         }
     }
 
@@ -105,11 +105,10 @@ public class RadarInfoUtil {
             e.printStackTrace();
         }
         if (GeneralParkData.pKeyRadarState) {
-            BaseUtil.INSTANCE.runUi(new Function0<Unit>() { // from class: com.hzbhd.canbus.util.RadarInfoUtil.2
-                @Override // kotlin.jvm.functions.Function0
-                public Unit invoke() {
+            BaseUtil.INSTANCE.runUi(new Runnable() {
+                @Override
+                public void run() {
                     PKeyUtil.getInstance(ContextUtil.getInstance().getContext()).refreshFrontRadar(i, i2, i3, i4, i5);
-                    return null;
                 }
             });
         }
