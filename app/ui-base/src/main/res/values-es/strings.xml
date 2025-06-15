@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="Factory_activity_open_camera">Configuración de la cámara frontal</string>
-    <string name="Factory_f_camera_str1">F.Camera</string>
-    <string name="Factory_f_camera_str2">☑</string>
-    <string name="Factory_f_camera_str3">□ APAGADO</string>
-    <string name="Factory_f_camera_str4">Instrucciones: \n N* 1. Algunos modelos tienen su propia cámara derecha, cámara izquierda o cámara frontal. Puedes encenderlo solo。 \n* 2. Cuando se enciende este interruptor, el host cambiará automáticamente a la cámara F. después de recibir el comando, como operar la señal de giro a la izquierda, la señal de giro a la derecha, etc.</string>
-</resources>

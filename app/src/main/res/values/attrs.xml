@@ -26,7 +26,6 @@
         <attr name="progressdrawable_p" format="reference" />
         <attr name="progressdrawable_p1" format="reference" />
         <attr name="background_n" format="reference" />
-        <attr name="background_n1" format="reference" />
     </declare-styleable>
     <declare-styleable name="color_attr">
         <attr name="focusFg" format="reference" />
@@ -148,8 +147,6 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
-    <attr name="background_n" format="reference" />
-    <attr name="background_n1" format="reference" />
     <attr name="barLength" format="dimension" />
     <attr name="barrierAllowsGoneWidgets" format="boolean" />
     <attr name="barrierDirection">
@@ -319,24 +316,7 @@
     <attr name="current_ui_style" format="integer" />
     <attr name="current_ui_styles" format="string" />
     <attr name="customNavigationLayout" format="reference" />
-    <attr name="d" format="reference" />
-    <attr name="d1" format="reference" />
-    <attr name="d2" format="reference" />
-    <attr name="d3" format="reference" />
-    <attr name="d4" format="reference" />
     <attr name="defaultQueryHint" format="string" />
-    <attr name="default_item_height" format="dimension">
-        <enum name="fill_parent" value="-1" />
-        <enum name="match_parent" value="-1" />
-        <enum name="wrap_content" value="-2" />
-    </attr>
-    <attr name="default_item_layout" format="reference" />
-    <attr name="default_item_layout_child" format="reference" />
-    <attr name="default_item_width" format="dimension">
-        <enum name="fill_parent" value="-1" />
-        <enum name="match_parent" value="-1" />
-        <enum name="wrap_content" value="-2" />
-    </attr>
     <attr name="dialogCornerRadius" format="dimension" />
     <attr name="dialogPreferredPadding" format="dimension" />
     <attr name="dialogTheme" format="reference" />
@@ -470,10 +450,8 @@
     <attr name="fastScrollVerticalThumbDrawable" format="reference" />
     <attr name="fastScrollVerticalTrackDrawable" format="reference" />
     <attr name="firstBaselineToTopHeight" format="dimension" />
-    <attr name="first_item_layout" format="reference" />
     <attr name="floatingActionButtonStyle" format="reference|string|integer|boolean|color|float|dimension|fraction" />
-    <attr name="focusFg" format="reference" />
-    <attr name="focusid" format="integer" />
+
     <attr name="font" format="reference" />
     <attr name="fontFamily" format="string" />
     <attr name="fontProviderAuthority" format="string" />
@@ -496,10 +474,6 @@
     <attr name="fontWeight" format="integer" />
     <attr name="font_path" format="string" />
     <attr name="foregroundInsidePadding" format="boolean" />
-    <attr name="full_bg" format="reference" />
-    <attr name="full_bg_p" format="reference" />
-    <attr name="full_fg" format="reference" />
-    <attr name="full_fg_p" format="reference" />
     <attr name="gapBetweenBars" format="dimension" />
     <attr name="goIcon" format="reference" />
     <attr name="gradient_endColor" format="color" />
@@ -566,7 +540,6 @@
         <enum name="unlabeled" value="2" />
     </attr>
     <attr name="lastBaselineToBottomHeight" format="dimension" />
-    <attr name="last_item_layout" format="reference" />
     <attr name="layout" format="reference" />
     <attr name="layoutManager" format="string" />
     <attr name="layout_anchor" format="reference" />
@@ -759,25 +732,8 @@
     <attr name="mcs_p_enable" format="boolean" />
     <attr name="measureWithLargestChild" format="boolean" />
     <attr name="menu" format="reference" />
-    <attr name="min_bg" format="reference" />
-    <attr name="min_bg_h" format="dimension" />
-    <attr name="min_bg_l" format="dimension" />
-    <attr name="min_bg_p" format="reference" />
-    <attr name="min_bg_t" format="dimension" />
-    <attr name="min_bg_w" format="dimension" />
-    <attr name="min_fg" format="reference" />
-    <attr name="min_fg_h" format="dimension" />
-    <attr name="min_fg_l" format="dimension" />
-    <attr name="min_fg_p" format="reference" />
-    <attr name="min_fg_t" format="dimension" />
-    <attr name="min_fg_w" format="dimension" />
     <attr name="mix_type" format="integer" />
     <attr name="multiChoiceItemLayout" format="reference" />
-    <attr name="n" format="reference" />
-    <attr name="n1" format="reference" />
-    <attr name="n2" format="reference" />
-    <attr name="n3" format="reference" />
-    <attr name="n4" format="reference" />
     <attr name="n54_ui_portrate" format="boolean" />
     <attr name="n_mix_color" format="integer" />
     <attr name="navigationContentDescription" format="string" />
@@ -799,11 +755,6 @@
         <flag name="FUNCTION" value="0x8" />
     </attr>
     <attr name="overlapAnchor" format="boolean" />
-    <attr name="p" format="reference" />
-    <attr name="p1" format="reference" />
-    <attr name="p2" format="reference" />
-    <attr name="p3" format="reference" />
-    <attr name="p4" format="reference" />
     <attr name="p_mix_color" format="integer" />
     <attr name="paddingBottomNoButtons" format="dimension" />
     <attr name="paddingEnd" format="dimension" />
@@ -832,10 +783,6 @@
     <attr name="pressedTranslationZ" format="dimension" />
     <attr name="progressBarPadding" format="dimension" />
     <attr name="progressBarStyle" format="reference" />
-    <attr name="progressdrawable_n" format="reference" />
-    <attr name="progressdrawable_n1" format="reference" />
-    <attr name="progressdrawable_p" format="reference" />
-    <attr name="progressdrawable_p1" format="reference" />
     <attr name="queryBackground" format="reference" />
     <attr name="queryHint" format="string" />
     <attr name="queryPatterns" format="reference" />
@@ -846,23 +793,15 @@
     <attr name="ratingBarStyleIndicator" format="reference" />
     <attr name="ratingBarStyleSmall" format="reference" />
     <attr name="recyclerViewStyle" format="reference" />
-    <attr name="recyclerview_style" format="reference" />
     <attr name="reverseLayout" format="boolean" />
     <attr name="rippleColor" format="color" />
     <attr name="rotate_screen" format="boolean" />
-    <attr name="s" format="reference" />
-    <attr name="s1" format="reference" />
-    <attr name="s2" format="reference" />
-    <attr name="s3" format="reference" />
-    <attr name="s4" format="reference" />
     <attr name="scrimAnimationDuration" format="integer" />
     <attr name="scrimBackground" format="reference|color" />
     <attr name="scrimVisibleHeightTrigger" format="dimension" />
-    <attr name="scroll_style" format="reference" />
     <attr name="searchHintIcon" format="reference" />
     <attr name="searchIcon" format="reference" />
     <attr name="searchViewStyle" format="reference" />
-    <attr name="seek_bar_title" format="string" />
     <attr name="select_ic" format="integer" />
     <attr name="selectableItemBackground" format="reference" />
     <attr name="selectableItemBackgroundBorderless" format="reference" />
@@ -1026,10 +965,6 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
-    <attr name="thumb_n" format="reference" />
-    <attr name="thumb_n1" format="reference" />
-    <attr name="thumb_p" format="reference" />
-    <attr name="thumb_p1" format="reference" />
     <attr name="tickMark" format="reference" />
     <attr name="tickMarkTint" format="color" />
     <attr name="tickMarkTintMode">
@@ -1049,7 +984,6 @@
         <enum name="screen" value="15" />
         <enum name="add" value="16" />
     </attr>
-    <attr name="title" format="string" />
     <attr name="titleEnabled" format="boolean" />
     <attr name="titleMargin" format="dimension" />
     <attr name="titleMarginBottom" format="dimension" />
