@@ -30,7 +30,7 @@ import java.util.ArrayList;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.net.SyslogAppender;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int FreqInt;
     private int eachId;

@@ -125,9 +125,9 @@ public final class SwcActivity extends Activity {
         setContentView(R.layout.activity_swc);
         StringBuilder sbAppend = new StringBuilder().append("onCreate: ");
         Object[] array = this.keyLearnList.toArray(new CustomKeyConfig.KeyMap[0]);
-        Intrinsics.checkNotNull(array, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>");
+
         String string = Arrays.toString(array);
-        Intrinsics.checkNotNullExpressionValue(string, "toString(this)");
+
         Log.i(TAG, sbAppend.append(string).toString());
         initView();
     }
@@ -272,7 +272,7 @@ public final class SwcActivity extends Activity {
         }
         RecyclerView recyclerView2 = this.rvKeys;
         if (recyclerView2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("rvKeys");
+
         } else {
             recyclerView = recyclerView2;
         }
@@ -304,17 +304,17 @@ public final class SwcActivity extends Activity {
         RecyclerView recyclerView = this.rvKeys;
         RecyclerView recyclerView2 = null;
         if (recyclerView == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("rvKeys");
+
             recyclerView = null;
         }
         RecyclerView.Adapter adapter = recyclerView.getAdapter();
-        Intrinsics.checkNotNull(adapter, "null cannot be cast to non-null type com.hzbhd.canbus.adapter.SwcKeyAdapter");
+
         ((SwcKeyAdapter) adapter).setSelected(0);
         this.learningPosition = 0;
         updateCurrentKey();
         RecyclerView recyclerView3 = this.rvKeys;
         if (recyclerView3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("rvKeys");
+
         } else {
             recyclerView2 = recyclerView3;
         }

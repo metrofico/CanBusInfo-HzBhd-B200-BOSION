@@ -25,7 +25,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.constant.disc.MpegConstantsDef;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     AirPageUiSet airPageUiSet;
     AmplifierPageUiSet amplifierPageUiSet;

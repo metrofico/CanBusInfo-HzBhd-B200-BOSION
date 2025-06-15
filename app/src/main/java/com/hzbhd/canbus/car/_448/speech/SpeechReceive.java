@@ -22,9 +22,9 @@ import kotlin.jvm.internal.Intrinsics;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.net.SyslogAppender;
 
-/* compiled from: SpeechReceive.kt */
-@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0016\u0018\u0000 \u000e2\u00020\u0001:\u0001\u000eB\u0007\b\u0016¢\u0006\u0002\u0010\u0002J\u000e\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\rR\u000e\u0010\u0003\u001a\u00020\u0004X\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0004X\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0004X\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082D¢\u0006\u0002\n\u0000¨\u0006\u000f"}, d2 = {"Lcom/hzbhd/canbus/car/_448/speech/SpeechReceive;", "", "()V", "TAG", "", "speech_rx_can", "speech_to_can", "tx_action", "type", "value", "register", "", "context", "Landroid/content/Context;", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public class SpeechReceive {
 
     /* renamed from: Companion, reason: from kotlin metadata */
@@ -45,7 +45,7 @@ public class SpeechReceive {
     private final String value = "value";
 
     /* compiled from: SpeechReceive.kt */
-    @Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0002\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\u000b\u001a\u00020\u0004R\u001b\u0010\u0003\u001a\u00020\u00048BX\u0082\u0084\u0002¢\u0006\f\n\u0004\b\u0007\u0010\b\u001a\u0004\b\u0005\u0010\u0006R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\f"}, d2 = {"Lcom/hzbhd/canbus/car/_448/speech/SpeechReceive$Companion;", "", "()V", "instance", "Lcom/hzbhd/canbus/car/_448/speech/SpeechReceive;", "getInstance", "()Lcom/hzbhd/canbus/car/_448/speech/SpeechReceive;", "instance$delegate", "Lkotlin/Lazy;", "intentFilter", "Landroid/content/IntentFilter;", "get", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
@@ -68,7 +68,7 @@ public class SpeechReceive {
     }
 
     public final void register(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         Log.d(this.TAG, "register: ");
         context.registerReceiver(new BroadcastReceiver() { // from class: com.hzbhd.canbus.car._448.speech.SpeechReceive.register.1
             /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
@@ -132,7 +132,7 @@ public class SpeechReceive {
                                 int i = stringExtra2 != null ? Integer.parseInt(stringExtra2) : -1;
                                 String str = typeValue;
                                 if (!(str == null || str.length() == 0) && i != -1) {
-                                    Intrinsics.checkNotNullExpressionValue(typeValue, "typeValue");
+
                                     if (!Intrinsics.areEqual(typeValue, SpeechAction.TypeEnum.left.getValue())) {
                                         if (!Intrinsics.areEqual(typeValue, SpeechAction.TypeEnum.right.getValue())) {
                                             if (Intrinsics.areEqual(typeValue, SpeechAction.TypeEnum.empty.getValue())) {
@@ -172,7 +172,7 @@ public class SpeechReceive {
                                 int i5 = stringExtra3 != null ? Integer.parseInt(stringExtra3) : -1;
                                 String str2 = typeValue2;
                                 if (!(str2 == null || str2.length() == 0) && i5 != -1) {
-                                    Intrinsics.checkNotNullExpressionValue(typeValue2, "typeValue");
+
                                     if (!Intrinsics.areEqual(typeValue2, SpeechAction.TypeEnum.left.getValue())) {
                                         if (!Intrinsics.areEqual(typeValue2, SpeechAction.TypeEnum.right.getValue())) {
                                             if (Intrinsics.areEqual(typeValue2, SpeechAction.TypeEnum.empty.getValue())) {
@@ -204,7 +204,7 @@ public class SpeechReceive {
                                     z = false;
                                 }
                                 if (!z) {
-                                    Intrinsics.checkNotNullExpressionValue(typeValue3, "typeValue");
+
                                     if (!Intrinsics.areEqual(typeValue3, SpeechAction.WindValueEnum.face.getValue())) {
                                         if (!Intrinsics.areEqual(typeValue3, SpeechAction.WindValueEnum.foot.getValue())) {
                                             if (!Intrinsics.areEqual(typeValue3, SpeechAction.WindValueEnum.facefoot.getValue())) {
@@ -534,7 +534,7 @@ public class SpeechReceive {
                                 int i15 = stringExtra6 != null ? Integer.parseInt(stringExtra6) : -1;
                                 String str5 = typeValue4;
                                 if (!(str5 == null || str5.length() == 0) && i15 != -1) {
-                                    Intrinsics.checkNotNullExpressionValue(typeValue4, "typeValue");
+
                                     if (!Intrinsics.areEqual(typeValue4, SpeechAction.TypeEnum.left.getValue())) {
                                         if (!Intrinsics.areEqual(typeValue4, SpeechAction.TypeEnum.right.getValue())) {
                                             if (Intrinsics.areEqual(typeValue4, SpeechAction.TypeEnum.empty.getValue())) {

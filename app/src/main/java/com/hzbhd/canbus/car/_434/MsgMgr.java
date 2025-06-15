@@ -22,7 +22,7 @@ import com.hzbhd.constant.share.ShareConstants;
 import java.util.Arrays;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends MsAbstractMsgMgr {
     private static SysToSpeechReceiver.AcCtrl sa;
     private static SysToSpeechReceiver.CarCtrl sc;

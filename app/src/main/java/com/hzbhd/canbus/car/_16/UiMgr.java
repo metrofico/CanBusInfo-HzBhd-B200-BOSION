@@ -40,7 +40,7 @@ import java.util.List;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private int can_different_id;
     private int each_can_id;

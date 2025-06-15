@@ -8,7 +8,7 @@ import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int data0 = 0;
     int data1 = 0;

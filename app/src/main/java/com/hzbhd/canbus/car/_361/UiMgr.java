@@ -27,22 +27,22 @@ import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000 \n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u000b\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0018\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\bH\u0002J\u0010\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\bH\u0002J\u0010\u0010\f\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\bH\u0002J\u0010\u0010\r\u001a\u00020\u00062\u0006\u0010\u000e\u001a\u00020\bH\u0002J\u0018\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\bH\u0002J\u0018\u0010\u0010\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\b2\u0006\u0010\u0011\u001a\u00020\bH\u0002J\u0012\u0010\u0012\u001a\u00020\u00062\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003H\u0016¨\u0006\u0013"}, d2 = {"Lcom/hzbhd/canbus/car/_361/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "sendAFrame", "", "d0", "", "d1", "sendAirConditionData", "data0", "sendAnotherAirConditionData", "sendCarFrame", "i", "sendSFrame", "sendSettingsData", "data1", "updateUiByDifferentCar", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     public UiMgr(final Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         AmplifierPageUiSet amplifierPageUiSet = getAmplifierPageUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(amplifierPageUiSet, "getAmplifierPageUiSet(context)");
+
         final SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "getSettingUiSet(context)");
+
         AirPageUiSet airUiSet = getAirUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(airUiSet, "getAirUiSet(context)");
+
         amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._361.UiMgr.1
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             /* renamed from: com.hzbhd.canbus.car._361.UiMgr$1$WhenMappings */
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
@@ -57,7 +57,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
             public void position(AmplifierActivity.AmplifierPosition amplifierPosition, int value) {
-                Intrinsics.checkNotNullParameter(amplifierPosition, "amplifierPosition");
+
                 int iRangeNumber = DataHandleUtils.rangeNumber(value + 7, 0, 14);
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierPosition.ordinal()];
                 if (i == 1) {
@@ -73,7 +73,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._361.UiMgr.2
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             /* renamed from: com.hzbhd.canbus.car._361.UiMgr$2$WhenMappings */
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
@@ -90,7 +90,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public void progress(AmplifierActivity.AmplifierBand amplifierBand, int progress) {
-                Intrinsics.checkNotNullParameter(amplifierBand, "amplifierBand");
+
                 int iRangeNumber = DataHandleUtils.rangeNumber(progress + 2, 2, 12);
                 int iRangeNumber2 = DataHandleUtils.rangeNumber(progress, 0, 63);
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierBand.ordinal()];
@@ -259,8 +259,8 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: _init_$lambda-0, reason: not valid java name */
     public static final void m766_init_$lambda0(SettingPageUiSet settingPageUiSet, UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(settingPageUiSet, "$settingPageUiSet");
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             switch (titleSrn.hashCode()) {
@@ -368,8 +368,8 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: _init_$lambda-1, reason: not valid java name */
     public static final void m767_init_$lambda1(SettingPageUiSet settingPageUiSet, UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(settingPageUiSet, "$settingPageUiSet");
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             switch (titleSrn.hashCode()) {
@@ -416,8 +416,8 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: _init_$lambda-2, reason: not valid java name */
     public static final void m768_init_$lambda2(SettingPageUiSet settingPageUiSet, UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(settingPageUiSet, "$settingPageUiSet");
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (Intrinsics.areEqual(titleSrn, "S361_d1b0t2")) {
             this$0.sendSFrame(5, i3);
@@ -436,9 +436,9 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: _init_$lambda-3, reason: not valid java name */
     public static final void m769_init_$lambda3(SettingPageUiSet settingPageUiSet, UiMgr this$0, Context context, int i, int i2) {
-        Intrinsics.checkNotNullParameter(settingPageUiSet, "$settingPageUiSet");
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
+
+
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             int iHashCode = titleSrn.hashCode();
@@ -540,14 +540,14 @@ public final class UiMgr extends AbstractUiMgr {
         }
         this$0.removeSettingLeftItemByNameList(context, new String[]{"S361_car_title"});
         MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(context);
-        Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._361.MsgMgr");
+
         ((MsgMgr) canMsgMgr).returnClick();
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: _init_$lambda-4, reason: not valid java name */
     public static final void m770_init_$lambda4(UiMgr this$0, int i) throws InterruptedException {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             this$0.sendAirConditionData(4);
         } else if (i == 1) {
@@ -563,7 +563,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: _init_$lambda-5, reason: not valid java name */
     public static final void m771_init_$lambda5(UiMgr this$0, int i) throws InterruptedException {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 1) {
             this$0.sendAirConditionData(23);
         } else {

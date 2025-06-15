@@ -55,7 +55,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String ORIGINAL_RADIO_CD = "original_radio_cd";
     static final String Temp_Unit = "Temp_Unit";

@@ -28,7 +28,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static boolean isAirFirst = true;
     private static boolean isDoorFirst = true;

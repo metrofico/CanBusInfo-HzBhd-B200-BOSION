@@ -21,7 +21,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int FreqInt;
     private byte freqHi;

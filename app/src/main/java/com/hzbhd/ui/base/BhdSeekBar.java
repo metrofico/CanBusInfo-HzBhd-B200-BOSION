@@ -41,14 +41,14 @@ public class BhdSeekBar extends SeekBar implements BhdViewUtil.ViewUtilListener 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BhdSeekBar(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.focusId = -1;
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BhdSeekBar(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.focusId = -1;
         if (attributeSet == null) {
             return;
@@ -59,7 +59,7 @@ public class BhdSeekBar extends SeekBar implements BhdViewUtil.ViewUtilListener 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BhdSeekBar(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.focusId = -1;
         if (attributeSet == null) {
             return;
@@ -89,7 +89,7 @@ public class BhdSeekBar extends SeekBar implements BhdViewUtil.ViewUtilListener 
                 setThumb(getContext().getDrawable(this.thumb_n1));
             }
             if (LogUtil.log5()) {
-                LogUtil.d(Intrinsics.stringPlus("updateView(): ", this.progressdrawable_n1));
+
             }
             if (this.progressdrawable_n1 != 0) {
                 setProgressDrawableTiled(getContext().getDrawable(this.progressdrawable_n1));

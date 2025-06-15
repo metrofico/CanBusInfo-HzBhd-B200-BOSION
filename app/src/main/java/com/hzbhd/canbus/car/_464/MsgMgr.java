@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static final int AUX_MODE = 252;
     public static final int CD_DVD_PLAY_MODE = 250;

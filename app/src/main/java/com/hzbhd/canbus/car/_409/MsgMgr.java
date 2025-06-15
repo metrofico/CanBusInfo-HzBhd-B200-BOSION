@@ -16,9 +16,9 @@ import java.util.Arrays;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u00002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0018\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u000f\u001a\u00020\u00102\b\u0010\u0011\u001a\u0004\u0018\u00010\u0012H\u0016J\u001c\u0010\u0013\u001a\u00020\u00102\b\u0010\u0011\u001a\u0004\u0018\u00010\u00122\b\u0010\u0014\u001a\u0004\u0018\u00010\u0015H\u0016J\b\u0010\u0016\u001a\u00020\u0010H\u0002J\b\u0010\u0017\u001a\u00020\u0010H\u0002J\u0010\u0010\u0018\u001a\u00020\u00102\u0006\u0010\u0019\u001a\u00020\u0015H\u0002R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000e¨\u0006\u001a"}, d2 = {"Lcom/hzbhd/canbus/car/_409/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "array", "", "getArray", "()[Z", "setArray", "([Z)V", "frame", "", "getFrame", "()[I", "setFrame", "([I)V", "afterServiceNormalSetting", "", "context", "Landroid/content/Context;", "canbusInfoChange", "canbusInfo", "", "set0x11Data", "set0x1AData", "set0xF0Data", "bytes", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     private boolean[] array = {GeneralDoorData.isLeftFrontDoorOpen, GeneralDoorData.isRightFrontDoorOpen, GeneralDoorData.isLeftRearDoorOpen, GeneralDoorData.isRightRearDoorOpen, GeneralDoorData.isBackOpen, GeneralDoorData.isFrontOpen};
     public int[] frame;
@@ -28,28 +28,28 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("frame");
+
         return null;
     }
 
     public final void setFrame(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.frame = iArr;
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._409.UiMgr");
+
         InitUtilsKt.initDrivingItemsIndexHashMap$default(context, (UiMgr) canUiMgr, null, 4, null);
         CanbusMsgSender.sendMsg(new byte[]{22, 36, 1, 18});
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNull(canbusInfo);
+
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo!!)");
+
         setFrame(byteArrayToIntArray);
         int i = getFrame()[1];
         if (i == 17) {
@@ -73,7 +73,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setArray(boolean[] zArr) {
-        Intrinsics.checkNotNullParameter(zArr, "<set-?>");
+
         this.array = zArr;
     }
 

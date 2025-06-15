@@ -13,53 +13,53 @@ public abstract class OneTexturePlayView extends PlayView {
     private TextureView textureView;
 
     public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
     }
 
     public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         return false;
     }
 
     public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
     }
 
     public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OneTexturePlayView(Context context, PlayView.ScalePlayViewInterface scalePlayViewInterface) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(scalePlayViewInterface, "scalePlayViewInterface");
+
+
         setScalePlayViewInterface(scalePlayViewInterface);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OneTexturePlayView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OneTexturePlayView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OneTexturePlayView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public OneTexturePlayView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     public final TextureView getTextureView() {
@@ -76,7 +76,7 @@ public abstract class OneTexturePlayView extends PlayView {
             this.textureView = new TextureView(getContext());
         }
         TextureView textureView = this.textureView;
-        Intrinsics.checkNotNull(textureView);
+
         return textureView;
     }
 
@@ -86,25 +86,25 @@ public abstract class OneTexturePlayView extends PlayView {
         getTexureView().setSurfaceTextureListener(new TextureView.SurfaceTextureListener() { // from class: com.hzbhd.ui.view.playview.OneTexturePlayView.initSurfaceView.1
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 OneTexturePlayView.this.onSurfaceTextureAvailable(surface, width, height);
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 OneTexturePlayView.this.onSurfaceTextureSizeChanged(surface, width, height);
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 return OneTexturePlayView.this.onSurfaceTextureDestroyed(surface);
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 OneTexturePlayView.this.onSurfaceTextureUpdated(surface);
             }
         });

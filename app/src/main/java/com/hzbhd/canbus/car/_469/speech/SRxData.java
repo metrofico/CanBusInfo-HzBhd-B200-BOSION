@@ -1,6 +1,6 @@
 package com.hzbhd.canbus.car._469.speech;
 
-/* loaded from: classes2.dex */
+
 public class SRxData {
     public static final String RxAction = "com.hzbhd.sys.to.speech";
     public static final String RxType = "rx_type";

@@ -27,9 +27,9 @@ import kotlinx.coroutines.BuildersKt__Builders_commonKt;
 import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.GlobalScope;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0005\n\u0002\b\n\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b\u001a\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\t\u001a\u00020\n2\b\u0010\u000b\u001a\u0004\u0018\u00010\fH\u0016J\b\u0010\r\u001a\u00020\nH\u0016J\b\u0010\u000e\u001a\u00020\nH\u0016JT\u0010\u000f\u001a\u00020\n2\u0006\u0010\u0010\u001a\u00020\u00112\b\u0010\u0012\u001a\u0004\u0018\u00010\u00132\u0006\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u00152\u0006\u0010\u0018\u001a\u00020\u00152\u0006\u0010\u0019\u001a\u00020\u00112\u0006\u0010\u001a\u001a\u00020\u00112\b\u0010\u001b\u001a\u0004\u0018\u00010\u001cH\u0016J\u001c\u0010\u001d\u001a\u00020\n2\b\u0010\u000b\u001a\u0004\u0018\u00010\f2\b\u0010\u001e\u001a\u0004\u0018\u00010\u0013H\u0016JÄ\u0001\u0010\u001f\u001a\u00020\n2\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020!2\u0006\u0010#\u001a\u00020\u00112\u0006\u0010$\u001a\u00020\u00112\u0006\u0010%\u001a\u00020!2\u0006\u0010&\u001a\u00020!2\u0006\u0010'\u001a\u00020!2\u0006\u0010(\u001a\u00020!2\u0006\u0010)\u001a\u00020!2\u0006\u0010*\u001a\u00020!2\b\u0010+\u001a\u0004\u0018\u00010,2\b\u0010-\u001a\u0004\u0018\u00010,2\b\u0010.\u001a\u0004\u0018\u00010,2\u0006\u0010/\u001a\u0002002\u0006\u00101\u001a\u00020!2\u0006\u00102\u001a\u00020\u00112\u0006\u00103\u001a\u00020\u00152\u0006\u00104\u001a\u0002002\b\u00105\u001a\u0004\u0018\u00010,2\b\u00106\u001a\u0004\u0018\u00010,2\b\u00107\u001a\u0004\u0018\u00010,2\u0006\u00108\u001a\u00020\u0015H\u0016J6\u00109\u001a\u00020\n2\u0006\u0010:\u001a\u00020\u00112\b\u0010;\u001a\u0004\u0018\u00010,2\b\u0010<\u001a\u0004\u0018\u00010,2\b\u0010=\u001a\u0004\u0018\u00010,2\u0006\u0010>\u001a\u00020\u0011H\u0016J\u0010\u0010?\u001a\u00020\n2\u0006\u0010@\u001a\u00020\u0011H\u0002J\b\u0010A\u001a\u00020\nH\u0002J\b\u0010B\u001a\u00020\nH\u0002J\b\u0010C\u001a\u00020\nH\u0002J\b\u0010D\u001a\u00020\nH\u0002J\b\u0010E\u001a\u00020\nH\u0002J\u0010\u0010F\u001a\u00020\n2\u0006\u0010G\u001a\u00020\u0013H\u0002J\u0010\u0010H\u001a\u00020\n2\u0006\u0010I\u001a\u00020\u0015H\u0016R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\b¨\u0006J"}, d2 = {"Lcom/hzbhd/canbus/car/_367/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "frame", "", "getFrame", "()[I", "setFrame", "([I)V", "afterServiceNormalSetting", "", "context", "Landroid/content/Context;", "auxInInfoChange", "btMusicInfoChange", "btPhoneStatusInfoChange", "callStatus", "", "phoneNumber", "", "isHfpConnected", "", "isCallingFlag", "isMicMute", "isAudioTransferTowardsAG", "batteryStatus", "signalValue", "bundle", "Landroid/os/Bundle;", "canbusInfoChange", "canbusInfo", "musicInfoChange", "stoagePath", "", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playModel", "playIndex", "isPlaying", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "sendSourceData", "d0", "set0x72Data", "set0x73Data", "set0x74Data", "set0x75Data", "set0x76Data", "set0xF0Data", "bytes", "sourceSwitchNoMediaInfoChange", "isPowerOff", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public int[] frame;
 
@@ -41,27 +41,27 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("frame");
+
         return null;
     }
 
     public final void setFrame(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.frame = iArr;
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
-        Intrinsics.checkNotNull(context);
+
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._367.UiMgr");
+
         InitUtilsKt.initSettingItemsIndexHashMap$default(context, (UiMgr) canUiMgr, null, 4, null);
         BuildersKt__Builders_commonKt.launch$default(GlobalScope.INSTANCE, null, null, new AnonymousClass1(null), 3, null);
         SelectCanTypeUtil.enableApp(context, Constant.OriginalDeviceActivity);
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u008a@"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {1, 7, 1}, xi = 48)
+    
     @DebugMetadata(c = "com.hzbhd.canbus.car._367.MsgMgr$afterServiceNormalSetting$1", f = "MsgMgr.kt", i = {}, l = {34}, m = "invokeSuspend", n = {}, s = {})
     /* renamed from: com.hzbhd.canbus.car._367.MsgMgr$afterServiceNormalSetting$1, reason: invalid class name */
     static final class AnonymousClass1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
@@ -221,9 +221,9 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNull(canbusInfo);
+
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         setFrame(byteArrayToIntArray);
         int i = getFrame()[1];
         if (i != 240) {

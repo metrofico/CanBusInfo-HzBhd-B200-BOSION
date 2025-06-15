@@ -8,7 +8,7 @@ import com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
 

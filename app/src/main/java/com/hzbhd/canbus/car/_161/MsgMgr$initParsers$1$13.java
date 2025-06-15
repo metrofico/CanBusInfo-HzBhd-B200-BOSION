@@ -13,9 +13,9 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000K\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0015\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002*\u0001\u0000\b\n\u0018\u00002\u00060\u0001R\u00020\u0002J\b\u0010\u0012\u001a\u00020\u0006H\u0002J\b\u0010\u0013\u001a\u00020\u0006H\u0002J\u0010\u0010\u0014\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u0004H\u0016J\u0015\u0010\u0017\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00190\u0018H\u0016¢\u0006\u0002\u0010\u001aR\u000e\u0010\u0003\u001a\u00020\u0004X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R*\u0010\u000b\u001a\u001e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u000e0\r0\fj\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u000e0\r`\u000fX\u0082\u0004¢\u0006\u0002\n\u0000R\u0010\u0010\u0010\u001a\u0004\u0018\u00010\u0011X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u001b"}, d2 = {"com/hzbhd/canbus/car/_161/MsgMgr$initParsers$1$13", "Lcom/hzbhd/canbus/car/_161/MsgMgr$Parser;", "Lcom/hzbhd/canbus/car/_161/MsgMgr;", "displayPage", "", "isBackOpen", "", "isLeftFrontDoorOpen", "isLeftRearDoorOpen", "isRightFrontDoorOpen", "isRightRearDoorOpen", "list", "Ljava/util/ArrayList;", "Lcom/hzbhd/canbus/entity/SettingUpdateEntity;", "", "Lkotlin/collections/ArrayList;", "settingsData", "", "isDoorStatusChange", "isSettingsDataChange", "parse", "", "dataLength", "setOnParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     final /* synthetic */ Context $context;
     private int displayPage;
@@ -92,7 +92,7 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-1, reason: not valid java name */
     public static final void m144setOnParseListeners$lambda1(MsgMgr this$0) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         int i = this$0.mCanbusInfoInt[2];
         GeneralDoorData.isLeftFrontDoorOpen = ((i >> 7) & 1) == 1;
         GeneralDoorData.isRightFrontDoorOpen = ((i >> 6) & 1) == 1;
@@ -104,8 +104,8 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-11, reason: not valid java name */
     public static final void m145setOnParseListeners$lambda11(MsgMgr this$0, MsgMgr$initParsers$1$13 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         int i = this$0.mCanbusInfoInt[3];
         ArrayList<SettingUpdateEntity<Object>> arrayList = this$1.list;
         HashMap map = this$0.mSettingItemIndexHashMap;
@@ -142,8 +142,8 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-21, reason: not valid java name */
     public static final void m146setOnParseListeners$lambda21(MsgMgr this$0, MsgMgr$initParsers$1$13 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         int i = this$0.mCanbusInfoInt[4];
         ArrayList<SettingUpdateEntity<Object>> arrayList = this$1.list;
         HashMap map = this$0.mSettingItemIndexHashMap;
@@ -176,8 +176,8 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-28, reason: not valid java name */
     public static final void m147setOnParseListeners$lambda28(MsgMgr this$0, MsgMgr$initParsers$1$13 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         int i = this$0.mCanbusInfoInt[5];
         ArrayList<SettingUpdateEntity<Object>> arrayList = this$1.list;
         HashMap map = this$0.mSettingItemIndexHashMap;
@@ -185,7 +185,7 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
         if (settingUpdateEntity != null) {
             SettingUpdateEntity value = settingUpdateEntity.setValue(Integer.valueOf((i >> 5) & 7));
             Object value2 = settingUpdateEntity.getValue();
-            Intrinsics.checkNotNull(value2, "null cannot be cast to non-null type kotlin.Int");
+
             arrayList.add(value.setProgress(((Integer) value2).intValue()));
         }
         SettingUpdateEntity settingUpdateEntity2 = (SettingUpdateEntity) map.get("_161_only_unlock_trunk");
@@ -201,8 +201,8 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-37, reason: not valid java name */
     public static final void m148setOnParseListeners$lambda37(MsgMgr this$0, MsgMgr$initParsers$1$13 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         int i = this$0.mCanbusInfoInt[6];
         ArrayList<SettingUpdateEntity<Object>> arrayList = this$1.list;
         HashMap map = this$0.mSettingItemIndexHashMap;
@@ -231,8 +231,8 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-46, reason: not valid java name */
     public static final void m149setOnParseListeners$lambda46(MsgMgr this$0, MsgMgr$initParsers$1$13 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         int i = this$0.mCanbusInfoInt[8];
         ArrayList<SettingUpdateEntity<Object>> arrayList = this$1.list;
         HashMap map = this$0.mSettingItemIndexHashMap;
@@ -280,8 +280,8 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-54, reason: not valid java name */
     public static final void m150setOnParseListeners$lambda54(MsgMgr this$0, MsgMgr$initParsers$1$13 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         int i = this$0.mCanbusInfoInt[7];
         ArrayList<SettingUpdateEntity<Object>> arrayList = this$1.list;
         HashMap map = this$0.mSettingItemIndexHashMap;
@@ -306,8 +306,8 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-59, reason: not valid java name */
     public static final void m151setOnParseListeners$lambda59(MsgMgr this$0, MsgMgr$initParsers$1$13 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         int i = this$0.mCanbusInfoInt[10];
         ArrayList<SettingUpdateEntity<Object>> arrayList = this$1.list;
         SettingUpdateEntity settingUpdateEntity = (SettingUpdateEntity) this$0.mSettingItemIndexHashMap.get("_161_start_stop_status");
@@ -353,7 +353,7 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
     private final boolean isSettingsDataChange() {
         int[] iArr = this.this$0.mCanbusInfoInt;
         int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length);
-        Intrinsics.checkNotNullExpressionValue(iArrCopyOf, "copyOf(this, size)");
+
         iArrCopyOf[2] = 0;
         iArrCopyOf[3] = iArrCopyOf[3] & 252;
         iArrCopyOf[5] = iArrCopyOf[5] & 248;
@@ -362,7 +362,7 @@ public final class MsgMgr$initParsers$1$13 extends MsgMgr.Parser {
             return false;
         }
         int[] iArrCopyOf2 = Arrays.copyOf(iArrCopyOf, iArrCopyOf.length);
-        Intrinsics.checkNotNullExpressionValue(iArrCopyOf2, "copyOf(this, size)");
+
         this.settingsData = iArrCopyOf2;
         return true;
     }

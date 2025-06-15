@@ -53,7 +53,7 @@ import kotlin.jvm.functions.Function0;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] mAirData;
     int[] mCanBusInfoInt;

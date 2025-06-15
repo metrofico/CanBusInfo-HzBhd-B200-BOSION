@@ -1,6 +1,6 @@
 package com.hzbhd.canbus.car._29;
 
-/* loaded from: classes2.dex */
+
 public class CarState {
     private static boolean ACCState = false;
     private static boolean ILLState = false;

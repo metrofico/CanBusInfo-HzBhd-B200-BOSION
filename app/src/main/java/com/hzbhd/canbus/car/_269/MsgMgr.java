@@ -32,7 +32,7 @@ import java.util.TimerTask;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     protected static final byte AMP_BAL_OFFSET = 10;
     protected static final byte AMP_DEFAULT_BAL_BAND = 9;

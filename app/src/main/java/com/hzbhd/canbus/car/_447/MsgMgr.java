@@ -8,7 +8,7 @@ import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.commontools.utils.FgeString;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr implements RadarUartDevice.IUartDataReport {
     private Context mContext;
     int[] mFrontRadarData;

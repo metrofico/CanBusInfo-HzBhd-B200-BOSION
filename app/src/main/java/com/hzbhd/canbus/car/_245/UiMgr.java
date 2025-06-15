@@ -18,7 +18,7 @@ import java.util.Map;
 import kotlin.jvm.internal.ByteCompanionObject;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final /* synthetic */ boolean $assertionsDisabled = false;
     private MsgMgr msgMgr;

@@ -12,7 +12,7 @@ import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     int nowModel = 0;
     OnAirSeatClickListener onAirSeatClickListener = new OnAirSeatClickListener() { // from class: com.hzbhd.canbus.car._429.UiMgr.1

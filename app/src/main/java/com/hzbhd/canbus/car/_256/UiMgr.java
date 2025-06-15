@@ -17,7 +17,7 @@ import com.hzbhd.canbus.ui_set.PanelKeyPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.LogUtil;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static byte m0x06Byte;
 

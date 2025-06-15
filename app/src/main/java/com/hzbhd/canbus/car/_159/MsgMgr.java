@@ -16,7 +16,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private byte[] mCanBusInfoByte;
     private int[] mCanBusInfoInt;

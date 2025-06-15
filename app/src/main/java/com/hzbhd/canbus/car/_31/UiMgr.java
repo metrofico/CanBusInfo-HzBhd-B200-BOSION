@@ -19,7 +19,7 @@ import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String _31_SAVE_LANGUAGE = "_31_SAVE_LANGUAGE";
     private MsgMgr mMsgMgr;

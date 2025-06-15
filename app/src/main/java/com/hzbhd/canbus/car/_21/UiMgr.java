@@ -21,7 +21,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_21_IS_SUPPORT_PANORAMIC = "share_21_is_support_panoramic";
     private static final String SHARE_21_LANGUAGE = "share_21_language";

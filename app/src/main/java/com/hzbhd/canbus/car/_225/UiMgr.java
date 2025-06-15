@@ -12,7 +12,7 @@ import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     OnAirBtnClickListener onAirBtnClickListenerTop = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._225.UiMgr.5

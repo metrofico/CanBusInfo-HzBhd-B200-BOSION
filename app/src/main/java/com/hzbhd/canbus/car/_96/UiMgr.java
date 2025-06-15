@@ -47,7 +47,7 @@ import java.util.Iterator;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private int currentClickFront;
     private int data1;

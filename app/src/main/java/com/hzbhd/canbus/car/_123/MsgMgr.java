@@ -39,7 +39,7 @@ import java.util.Iterator;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String SHARE_123_AMPLIFIER_BALANCE = "share_123_amplifier_balance";
     static final String SHARE_123_AMPLIFIER_BASS = "share_123_amplifier_bass";

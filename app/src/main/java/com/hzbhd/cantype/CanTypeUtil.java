@@ -19,7 +19,7 @@ public final class CanTypeUtil {
     public CanTypeBase getCanType(int type) {
         try {
             Object objNewInstance = Class.forName("com.hzbhd.cantype.id.CanType" + type).newInstance();
-            Intrinsics.checkNotNull(objNewInstance, "null cannot be cast to non-null type com.hzbhd.cantype.CanTypeBase");
+
             return (CanTypeBase) objNewInstance;
         } catch (Exception e) {
             e.printStackTrace();
@@ -28,8 +28,8 @@ public final class CanTypeUtil {
     }
 
     public final ArrayList<CanTypeAllEntity> getCanTypeAllEntityByCompanyAndCategory(String company, String category, int canType) {
-        Intrinsics.checkNotNullParameter(company, "company");
-        Intrinsics.checkNotNullParameter(category, "category");
+
+
         ArrayList<CanTypeAllEntity> arrayList = new ArrayList<>();
         for (CanTypeAllEntity next : getCanType(canType).getList()) {
             if (company.equals(next.getProtocol_company()) & category.equals(next.getCar_category())) {

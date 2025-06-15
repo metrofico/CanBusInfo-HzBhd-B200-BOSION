@@ -16,7 +16,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static String INTENT_KEY_POSITION = "intent_key_position";
     public static String SHARE_AIR_SET = "share_air_set";

@@ -26,7 +26,7 @@ import java.util.TimerTask;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final String SHARE_41_CTM_SYSTEM = "share_41_ctm_system";
     static final String SHARE_41_FRONT_CAMERA_SWITCH = "share_41_front_camera_switch";

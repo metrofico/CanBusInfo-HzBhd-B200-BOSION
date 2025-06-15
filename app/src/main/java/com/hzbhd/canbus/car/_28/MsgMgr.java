@@ -18,7 +18,7 @@ import com.hzbhd.commontools.SourceConstantsDef;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int AMPLIFIER_HALF_MAX = 10;
     private static final int AMPLIFIER_MAX = 20;

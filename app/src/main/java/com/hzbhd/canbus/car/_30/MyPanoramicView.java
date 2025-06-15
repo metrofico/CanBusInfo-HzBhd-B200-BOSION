@@ -17,16 +17,16 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.StringCompanionObject;
 
-/* compiled from: MyPanoramicView.kt */
-@Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0001\u0012B\u000f\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\n\u001a\u00020\u000bH\u0014J\u0006\u0010\f\u001a\u00020\u000bJ\u000e\u0010\r\u001a\u00020\u000b2\u0006\u0010\u000e\u001a\u00020\u000fJ\u000e\u0010\u0010\u001a\u00020\u000b2\u0006\u0010\u0011\u001a\u00020\u000fR\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u0016\u0010\u0007\u001a\n \t*\u0004\u0018\u00010\b0\bX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u0013"}, d2 = {"Lcom/hzbhd/canbus/car/_30/MyPanoramicView;", "Landroid/widget/RelativeLayout;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "TAG", "", "mCurrentBtns", "Landroid/widget/LinearLayout;", "kotlin.jvm.PlatformType", "onAttachedToWindow", "", "showIbRearDown", "updateBtns", "index", "", "updateSide", "side", "SIDE", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MyPanoramicView extends RelativeLayout {
     private String TAG;
     public Map<Integer, View> _$_findViewCache = new LinkedHashMap();
     private LinearLayout mCurrentBtns;
 
     /* compiled from: MyPanoramicView.kt */
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u0004\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002j\u0002\b\u0003j\u0002\b\u0004¨\u0006\u0005"}, d2 = {"Lcom/hzbhd/canbus/car/_30/MyPanoramicView$SIDE;", "", "(Ljava/lang/String;I)V", "FRONT", "REAR", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public enum SIDE {
         FRONT,
         REAR
@@ -120,7 +120,7 @@ public final class MyPanoramicView extends RelativeLayout {
         String str = this.TAG;
         StringCompanionObject stringCompanionObject = StringCompanionObject.INSTANCE;
         String str2 = String.format("onAttachedToWindow: isPanoramic %s|  isBackCamera %s|", Arrays.copyOf(new Object[]{Boolean.valueOf(zIsPanoramic), Boolean.valueOf(zIsBackCamera)}, 2));
-        Intrinsics.checkNotNullExpressionValue(str2, "format(format, *args)");
+
         Log.i(str, str2);
         if (zIsPanoramic) {
             updateSide(SIDE.FRONT.ordinal());

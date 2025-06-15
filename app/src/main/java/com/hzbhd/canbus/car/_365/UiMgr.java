@@ -19,16 +19,16 @@ import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0010\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\fH\u0002J\u0010\u0010\r\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\u000fH\u0002R\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\b¨\u0006\u0010"}, d2 = {"Lcom/hzbhd/canbus/car/_365/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mAirPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "getMAirPageUiSet", "()Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "selectAirConditionerBtn", "", "btn", "", "sendAirConditionerCmd", "d0", "", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private final AirPageUiSet mAirPageUiSet;
 
     public UiMgr(final Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         AirPageUiSet airUiSet = getAirUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(airUiSet, "getAirUiSet(context)");
+
         this.mAirPageUiSet = airUiSet;
         final FrontArea frontArea = airUiSet.getFrontArea();
         frontArea.setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._365.UiMgr$$ExternalSyntheticLambda0
@@ -311,36 +311,36 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-4$lambda-0, reason: not valid java name */
     public static final void m787lambda4$lambda0(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-4$lambda-1, reason: not valid java name */
     public static final void m788lambda4$lambda1(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-4$lambda-2, reason: not valid java name */
     public static final void m789lambda4$lambda2(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-4$lambda-3, reason: not valid java name */
     public static final void m790lambda4$lambda3(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
@@ -355,7 +355,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: _init_$lambda-6, reason: not valid java name */
     public static final void m785_init_$lambda6(Context context, MotionEvent motionEvent) {
-        Intrinsics.checkNotNullParameter(context, "$context");
+
         int i = context.getResources().getDisplayMetrics().widthPixels;
         int i2 = context.getResources().getDisplayMetrics().heightPixels;
         int x = (int) (motionEvent.getX() * (1000.0f / i));

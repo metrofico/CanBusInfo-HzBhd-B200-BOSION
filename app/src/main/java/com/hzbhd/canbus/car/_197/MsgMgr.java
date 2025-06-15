@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int AMPLIFIER_PARAM_BASS_OFFSET = 2;
     static final int AMPLIFIER_PARAM_HALF_FAD = 7;

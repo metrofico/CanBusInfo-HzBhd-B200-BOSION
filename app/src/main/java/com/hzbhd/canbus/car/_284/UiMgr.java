@@ -29,7 +29,7 @@ import java.util.Arrays;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_284_SUPPORT_PANORAMIC = "share_284_support_panoramic";
     static final String SHARE_284_SUPPORT_RIGHTVIEW = "share_284_support_rightview";

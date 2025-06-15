@@ -12,7 +12,7 @@ import com.hzbhd.util.LogUtil;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
-/* loaded from: classes2.dex */
+
 public class RadarView extends RelativeLayout {
     FrameLayout left_rear;
     ImageView left_rear_point;

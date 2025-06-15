@@ -35,7 +35,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int FreqInt;
     private byte bandType;

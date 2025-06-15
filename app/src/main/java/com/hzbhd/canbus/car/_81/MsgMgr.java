@@ -58,7 +58,7 @@ import kotlinx.coroutines.scheduling.WorkQueueKt;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.Priority;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String IS_ACTIVE_PARK_OPEN = "is_active_park_open";
     static int[] mLanguageMapArray;

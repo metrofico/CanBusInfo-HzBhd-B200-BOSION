@@ -38,9 +38,9 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.Charsets;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000r\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u001a\n\u0002\u0018\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b&\n\u0002\u0010\u000b\n\u0002\b\f\n\u0002\u0010\u0015\n\u0002\b\u000b\n\u0002\u0010\u0012\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\bE\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0015\u0010\u009c\u0001\u001a\u00030\u009d\u00012\t\u0010\u009e\u0001\u001a\u0004\u0018\u00010wH\u0016J\u0019\u0010\u009f\u0001\u001a\u0002042\u0007\u0010 \u0001\u001a\u0002042\u0007\u0010\u009f\u0001\u001a\u000204J \u0010¡\u0001\u001a\u00030\u009d\u00012\t\u0010\u009e\u0001\u001a\u0004\u0018\u00010w2\t\u0010¢\u0001\u001a\u0004\u0018\u00010tH\u0016J\u001b\u0010£\u0001\u001a\u00030\u009d\u00012\u0007\u0010¤\u0001\u001a\u0002042\u0006\u0010Z\u001a\u00020[H\u0016J\u000b\u0010¥\u0001\u001a\u0004\u0018\u00010\u0004H\u0002J\u0012\u0010¦\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010¢\u0001\u001a\u00020tJ\u0014\u0010§\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010¨\u0001\u001a\u000204H\u0002J\u0014\u0010©\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010¨\u0001\u001a\u000204H\u0002J\u0014\u0010ª\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010¨\u0001\u001a\u000204H\u0002J\u0014\u0010«\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010¬\u0001\u001a\u00020[H\u0002J\u000b\u0010\u00ad\u0001\u001a\u0004\u0018\u00010\u0004H\u0002J\u0019\u0010®\u0001\u001a\u0002042\u0007\u0010¯\u0001\u001a\u0002042\u0007\u0010°\u0001\u001a\u000204J\u000b\u0010±\u0001\u001a\u0004\u0018\u00010\u0004H\u0002J\u0014\u0010²\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010³\u0001\u001a\u000204H\u0002J\u0014\u0010´\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010¨\u0001\u001a\u000204H\u0002J\u001d\u0010µ\u0001\u001a\u0002042\t\u0010\u009e\u0001\u001a\u0004\u0018\u00010w2\u0007\u0010¶\u0001\u001a\u00020\u0004H\u0002J\u001d\u0010·\u0001\u001a\u0002042\t\u0010\u009e\u0001\u001a\u0004\u0018\u00010w2\u0007\u0010¶\u0001\u001a\u00020\u0004H\u0002J\u0014\u0010¸\u0001\u001a\u0004\u0018\u00010\u00042\u0007\u0010³\u0001\u001a\u000204H\u0002J\u0013\u0010¹\u0001\u001a\u00030\u0088\u00012\u0007\u0010\u009e\u0001\u001a\u00020wH\u0002J\u0015\u0010º\u0001\u001a\u00030\u009d\u00012\t\u0010\u009e\u0001\u001a\u0004\u0018\u00010wH\u0016J\t\u0010»\u0001\u001a\u00020[H\u0002J\t\u0010¼\u0001\u001a\u00020[H\u0002J\t\u0010½\u0001\u001a\u00020[H\u0002J\u0012\u0010¾\u0001\u001a\u00020[2\u0007\u0010¿\u0001\u001a\u000204H\u0002J\t\u0010À\u0001\u001a\u00020[H\u0002J\u0012\u0010Á\u0001\u001a\u00020[2\u0007\u0010Â\u0001\u001a\u000204H\u0002J\t\u0010Ã\u0001\u001a\u00020[H\u0002J\t\u0010Ä\u0001\u001a\u00020[H\u0002J\n\u0010Å\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Æ\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ç\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010È\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010É\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ê\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ë\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ì\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Í\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Î\u0001\u001a\u00030\u009d\u0001H\u0003J\n\u0010Ï\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ð\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ñ\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ò\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ó\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ô\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Õ\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ö\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010×\u0001\u001a\u00030\u009d\u0001H\u0002J\u0013\u0010Ø\u0001\u001a\u00030\u009d\u00012\u0007\u0010\u009e\u0001\u001a\u00020wH\u0002J\u0013\u0010Ù\u0001\u001a\u00030\u009d\u00012\u0007\u0010\u009e\u0001\u001a\u00020wH\u0002J\u0013\u0010Ú\u0001\u001a\u00030\u009d\u00012\u0007\u0010\u009e\u0001\u001a\u00020wH\u0002J\u0013\u0010Û\u0001\u001a\u00030\u009d\u00012\u0007\u0010\u009e\u0001\u001a\u00020wH\u0002J\n\u0010Ü\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Ý\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010Þ\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010ß\u0001\u001a\u00030\u009d\u0001H\u0002J\n\u0010à\u0001\u001a\u00030\u009d\u0001H\u0002J\b\u0010á\u0001\u001a\u00030\u009d\u0001R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\n\u0010\u0006\"\u0004\b\u000b\u0010\bR\u001a\u0010\f\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\r\u0010\u0006\"\u0004\b\u000e\u0010\bR\u001a\u0010\u000f\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0010\u0010\u0006\"\u0004\b\u0011\u0010\bR\u001a\u0010\u0012\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0006\"\u0004\b\u0014\u0010\bR\u001a\u0010\u0015\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\u0006\"\u0004\b\u0017\u0010\bR\u001a\u0010\u0018\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0019\u0010\u0006\"\u0004\b\u001a\u0010\bR\u001a\u0010\u001b\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001c\u0010\u0006\"\u0004\b\u001d\u0010\bR\u001c\u0010\u001e\u001a\u0004\u0018\u00010\u001fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b \u0010!\"\u0004\b\"\u0010#R\u001c\u0010$\u001a\u0004\u0018\u00010\u001fX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b%\u0010!\"\u0004\b&\u0010#R\u0011\u0010'\u001a\u00020(¢\u0006\b\n\u0000\u001a\u0004\b)\u0010*R\u0011\u0010+\u001a\u00020(¢\u0006\b\n\u0000\u001a\u0004\b,\u0010*R\u001c\u0010-\u001a\u0004\u0018\u00010.X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b/\u00100\"\u0004\b1\u00102R\u001a\u00103\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b5\u00106\"\u0004\b7\u00108R\u001a\u00109\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b:\u00106\"\u0004\b;\u00108R\u001a\u0010<\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b=\u00106\"\u0004\b>\u00108R\u001a\u0010?\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b@\u00106\"\u0004\bA\u00108R\u001a\u0010B\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bC\u00106\"\u0004\bD\u00108R\u001a\u0010E\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bF\u00106\"\u0004\bG\u00108R\u001a\u0010H\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bI\u00106\"\u0004\bJ\u00108R\u001a\u0010K\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bL\u00106\"\u0004\bM\u00108R\u001a\u0010N\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bO\u00106\"\u0004\bP\u00108R\u001a\u0010Q\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bR\u00106\"\u0004\bS\u00108R\u001a\u0010T\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bU\u00106\"\u0004\bV\u00108R\u001a\u0010W\u001a\u000204X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bX\u00106\"\u0004\bY\u00108R\u001a\u0010Z\u001a\u00020[X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bZ\u0010\\\"\u0004\b]\u0010^R\u001a\u0010_\u001a\u00020[X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b_\u0010\\\"\u0004\b`\u0010^R\u001a\u0010a\u001a\u00020[X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\ba\u0010\\\"\u0004\bb\u0010^R\u001a\u0010c\u001a\u00020[X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bc\u0010\\\"\u0004\bd\u0010^R\u001a\u0010e\u001a\u00020[X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\be\u0010\\\"\u0004\bf\u0010^R\u001a\u0010g\u001a\u00020hX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bi\u0010j\"\u0004\bk\u0010lR\u001a\u0010m\u001a\u00020hX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bn\u0010j\"\u0004\bo\u0010lR\u001a\u0010p\u001a\u00020hX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bq\u0010j\"\u0004\br\u0010lR\u000e\u0010s\u001a\u00020tX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010u\u001a\u00020hX\u0082\u000e¢\u0006\u0002\n\u0000R\u001c\u0010v\u001a\u0004\u0018\u00010wX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\bx\u0010y\"\u0004\bz\u0010{R\u001a\u0010|\u001a\u00020hX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b}\u0010j\"\u0004\b~\u0010lR\u001c\u0010\u007f\u001a\u00020hX\u0086\u000e¢\u0006\u0010\n\u0000\u001a\u0005\b\u0080\u0001\u0010j\"\u0005\b\u0081\u0001\u0010lR\u001f\u0010\u0082\u0001\u001a\u00020tX\u0086\u000e¢\u0006\u0012\n\u0000\u001a\u0006\b\u0083\u0001\u0010\u0084\u0001\"\u0006\b\u0085\u0001\u0010\u0086\u0001R\u0012\u0010\u0087\u0001\u001a\u0005\u0018\u00010\u0088\u0001X\u0082\u000e¢\u0006\u0002\n\u0000R\u001d\u0010\u0089\u0001\u001a\u000204X\u0086\u000e¢\u0006\u0010\n\u0000\u001a\u0005\b\u008a\u0001\u00106\"\u0005\b\u008b\u0001\u00108R\u001d\u0010\u008c\u0001\u001a\u000204X\u0086\u000e¢\u0006\u0010\n\u0000\u001a\u0005\b\u008d\u0001\u00106\"\u0005\b\u008e\u0001\u00108R\u001d\u0010\u008f\u0001\u001a\u000204X\u0086\u000e¢\u0006\u0010\n\u0000\u001a\u0005\b\u0090\u0001\u00106\"\u0005\b\u0091\u0001\u00108R\u001d\u0010\u0092\u0001\u001a\u00020\u0004X\u0086\u000e¢\u0006\u0010\n\u0000\u001a\u0005\b\u0093\u0001\u0010\u0006\"\u0005\b\u0094\u0001\u0010\bR\u0012\u0010\u0095\u0001\u001a\u0005\u0018\u00010\u0096\u0001X\u0082\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u0097\u0001\u001a\u0005\u0018\u00010\u0096\u0001X\u0082\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u0098\u0001\u001a\u0005\u0018\u00010\u0096\u0001X\u0082\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u0099\u0001\u001a\u0005\u0018\u00010\u0096\u0001X\u0082\u000e¢\u0006\u0002\n\u0000R\u0012\u0010\u009a\u0001\u001a\u0005\u0018\u00010\u009b\u0001X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006â\u0001"}, d2 = {"Lcom/hzbhd/canbus/car/_432/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "SoftKey0", "", "getSoftKey0", "()Ljava/lang/String;", "setSoftKey0", "(Ljava/lang/String;)V", "SoftKey1", "getSoftKey1", "setSoftKey1", "SoftKey2", "getSoftKey2", "setSoftKey2", "SoftKey3", "getSoftKey3", "setSoftKey3", "content0x78WorkingMode", "getContent0x78WorkingMode", "setContent0x78WorkingMode", "contentStr0x70", "getContentStr0x70", "setContentStr0x70", "contentStr0x71", "getContentStr0x71", "setContentStr0x71", "contentStr0x72", "getContentStr0x72", "setContentStr0x72", "countDownTimer", "Landroid/os/CountDownTimer;", "getCountDownTimer", "()Landroid/os/CountDownTimer;", "setCountDownTimer", "(Landroid/os/CountDownTimer;)V", "countDownTimerAutoPacking", "getCountDownTimerAutoPacking", "setCountDownTimerAutoPacking", "df_2Integer", "Ljava/text/DecimalFormat;", "getDf_2Integer", "()Ljava/text/DecimalFormat;", "df_2float", "getDf_2float", "dialog", "Landroid/app/AlertDialog;", "getDialog", "()Landroid/app/AlertDialog;", "setDialog", "(Landroid/app/AlertDialog;)V", "icon1", "", "getIcon1", "()I", "setIcon1", "(I)V", "icon2", "getIcon2", "setIcon2", "icon3", "getIcon3", "setIcon3", "icon4", "getIcon4", "setIcon4", "icon5", "getIcon5", "setIcon5", "icon6", "getIcon6", "setIcon6", "icon7", "getIcon7", "setIcon7", "icon8", "getIcon8", "setIcon8", "image0", "getImage0", "setImage0", "image1", "getImage1", "setImage1", "image2", "getImage2", "setImage2", "image3", "getImage3", "setImage3", "isMute", "", "()Z", "setMute", "(Z)V", "isSelected0", "setSelected0", "isSelected1", "setSelected1", "isSelected2", "setSelected2", "isSelected3", "setSelected3", "m0x79Data", "", "getM0x79Data", "()[I", "setM0x79Data", "([I)V", "mAirData", "getMAirData", "setMAirData", "mBacklightInfo", "getMBacklightInfo", "setMBacklightInfo", "mCanBusByte", "", "mCanBusInfoInt", "mContext", "Landroid/content/Context;", "getMContext", "()Landroid/content/Context;", "setMContext", "(Landroid/content/Context;)V", "mFrontRadarData", "getMFrontRadarData", "setMFrontRadarData", "mRearRadarData", "getMRearRadarData", "setMRearRadarData", "mTrackData", "getMTrackData", "()[B", "setMTrackData", "([B)V", "mUiMgr", "Lcom/hzbhd/canbus/car/_432/UiMgr;", "now0x24Data0", "getNow0x24Data0", "setNow0x24Data0", "nowData6", "getNowData6", "setNowData6", "nowIndex", "getNowIndex", "setNowIndex", "nowSyncTime", "getNowSyncTime", "setNowSyncTime", "park_1", "Landroid/widget/Button;", "park_2", "park_3", "park_4", "parking_content", "Landroid/widget/TextView;", "afterServiceNormalSetting", "", "context", "blockBit", "canBusInfo", "canbusInfoChange", "canbusInfo", "currentVolumeInfoChange", "volValue", "get0x61Str", "getAsciiStr", "getBandState", "i", "getCdPlayState", "getCdState", "getEqData5Bit7Info", "boolBit7", "getFrequencyState", "getMsbLsbResult", "MSB", "LSB", "getPlayMode", "getRearTemperature", "tem", "getRunningState", "getStringIdByName", LcdInfoShare.MediaInfo.name, "getSyncIconResId", "getTemperature", "getUigMgr", "initCommand", "is0x79DataNoChange", "isAirDataChange", "isBacklightInfoChange", "isDoorInfoChange", "data0", "isFrontRadarDataChange", "isRearAirChange", "data6", "isRearRadarDataChange", "isTrackInfoChange", "set0x14BackLightInfo", "set0x16SpeedInfo", "set0x20SwcInfo", "set0x21AirInfo", "set0x22RearRadar", "set0x23FrontRadar", "set0x24BasicInfo", "set0x25RadarState", "set0x27Languge", "set0x28AutoPacking", "set0x29CarInfo", "set0x2bSeatInfo", "set0x30VersionInfo", "set0x35EspInfo", "set0x40SyncVersion", "set0x50SyncInfo", "set0x51SyncInfo", "set0x52SyncInfo", "set0x53SyncInfo", "set0x60RadioInfo", "set0x61RadioInfo", "set0x62CdInfo", "set0x63EqInfo", "set0x70SyncLastStr", "set0x71SyncNextStr", "set0x72SyncTimeInfo", "set0x78SyncState", "set0x79SyncAudio", "updateSYNC", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     private CountDownTimer countDownTimer;
     private CountDownTimer countDownTimerAutoPacking;
@@ -170,7 +170,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         this.mCanBusByte = canbusInfo;
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         this.mCanBusInfoInt = byteArrayToIntArray;
         int i = byteArrayToIntArray[1];
         if (i == 20) {
@@ -349,11 +349,11 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final UiMgr getUigMgr(Context context) {
         if (this.mUiMgr == null) {
             UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-            Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._432.UiMgr");
+
             this.mUiMgr = (UiMgr) canUiMgr;
         }
         UiMgr uiMgr = this.mUiMgr;
-        Intrinsics.checkNotNull(uiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._432.UiMgr");
+
         return uiMgr;
     }
 
@@ -478,11 +478,11 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         AlertDialog alertDialog = this.dialog;
         Window window = alertDialog != null ? alertDialog.getWindow() : null;
-        Intrinsics.checkNotNull(window);
+
         window.setBackgroundDrawableResource(android.R.color.transparent);
         AlertDialog alertDialog2 = this.dialog;
         Window window2 = alertDialog2 != null ? alertDialog2.getWindow() : null;
-        Intrinsics.checkNotNull(window2);
+
         window2.setType(2003);
         if (DataHandleUtils.getBoolBit0(this.mCanBusInfoInt[2])) {
             AlertDialog alertDialog3 = this.dialog;
@@ -603,7 +603,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setNowSyncTime(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.nowSyncTime = str;
     }
 
@@ -617,7 +617,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setSoftKey0(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.SoftKey0 = str;
     }
 
@@ -626,7 +626,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setSoftKey1(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.SoftKey1 = str;
     }
 
@@ -635,7 +635,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setSoftKey2(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.SoftKey2 = str;
     }
 
@@ -644,7 +644,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setSoftKey3(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.SoftKey3 = str;
     }
 
@@ -822,7 +822,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setContent0x78WorkingMode(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.content0x78WorkingMode = str;
     }
 
@@ -962,7 +962,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setContentStr0x72(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.contentStr0x72 = str;
     }
 
@@ -977,7 +977,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setContentStr0x71(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.contentStr0x71 = str;
     }
 
@@ -992,7 +992,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setContentStr0x70(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.contentStr0x70 = str;
     }
 
@@ -1518,7 +1518,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final String getAsciiStr(byte[] canbusInfo) {
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
         int length = canbusInfo.length - 2;
         byte[] bArr = new byte[length];
         for (int i = 0; i < length; i++) {
@@ -1573,7 +1573,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMBacklightInfo(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.mBacklightInfo = iArr;
     }
 
@@ -1583,7 +1583,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr = this.mCanBusInfoInt;
         int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length);
-        Intrinsics.checkNotNullExpressionValue(iArrCopyOf, "copyOf(mCanBusInfoInt, mCanBusInfoInt.size)");
+
         this.mBacklightInfo = iArrCopyOf;
         return true;
     }
@@ -1593,7 +1593,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMAirData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.mAirData = iArr;
     }
 
@@ -1610,7 +1610,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMRearRadarData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.mRearRadarData = iArr;
     }
 
@@ -1620,7 +1620,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr = this.mCanBusInfoInt;
         int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length);
-        Intrinsics.checkNotNullExpressionValue(iArrCopyOf, "copyOf(mCanBusInfoInt, mCanBusInfoInt.size)");
+
         this.mRearRadarData = iArrCopyOf;
         return true;
     }
@@ -1630,7 +1630,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMFrontRadarData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.mFrontRadarData = iArr;
     }
 
@@ -1640,7 +1640,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr = this.mCanBusInfoInt;
         int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length);
-        Intrinsics.checkNotNullExpressionValue(iArrCopyOf, "copyOf(mCanBusInfoInt, mCanBusInfoInt.size)");
+
         this.mFrontRadarData = iArrCopyOf;
         return true;
     }
@@ -1650,7 +1650,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setM0x79Data(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.m0x79Data = iArr;
     }
 
@@ -1660,7 +1660,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr = this.mCanBusInfoInt;
         int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length);
-        Intrinsics.checkNotNullExpressionValue(iArrCopyOf, "copyOf(mCanBusInfoInt, mCanBusInfoInt.size)");
+
         this.m0x79Data = iArrCopyOf;
         return false;
     }
@@ -1670,7 +1670,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMTrackData(byte[] bArr) {
-        Intrinsics.checkNotNullParameter(bArr, "<set-?>");
+
         this.mTrackData = bArr;
     }
 
@@ -1680,7 +1680,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         byte[] bArr = this.mCanBusByte;
         byte[] bArrCopyOf = Arrays.copyOf(bArr, bArr.length);
-        Intrinsics.checkNotNullExpressionValue(bArrCopyOf, "copyOf(mCanBusByte, mCanBusByte.size)");
+
         this.mTrackData = bArrCopyOf;
         return false;
     }

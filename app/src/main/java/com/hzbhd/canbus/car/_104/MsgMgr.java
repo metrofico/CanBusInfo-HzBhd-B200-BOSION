@@ -16,7 +16,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int[] m0x1CData;
     private int[] m0x24Data;

@@ -45,7 +45,7 @@ import java.util.Objects;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_165_LANGUAGE = "share_165_language";
     private BtnGroup mBtnGroup;

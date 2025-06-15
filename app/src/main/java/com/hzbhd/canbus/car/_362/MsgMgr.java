@@ -25,9 +25,9 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.StringsKt;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000h\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010\u0012\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\n\n\u0002\b\u0012\n\u0002\u0010\u0006\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u001e\u001a\u00020\u001f2\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0016J\b\u0010 \u001a\u00020\u001fH\u0002J\u001c\u0010!\u001a\u00020\u001f2\b\u0010\u0003\u001a\u0004\u0018\u00010\u00042\b\u0010\"\u001a\u0004\u0018\u00010#H\u0016J\b\u0010$\u001a\u00020\u001fH\u0002J\b\u0010%\u001a\u00020\u001fH\u0002J\u0018\u0010&\u001a\u00020'2\u0006\u0010(\u001a\u00020)2\u0006\u0010*\u001a\u00020'H\u0002J\b\u0010+\u001a\u00020\u001fH\u0002J\b\u0010,\u001a\u00020\u001fH\u0002J\b\u0010-\u001a\u00020\u001fH\u0002J\b\u0010.\u001a\u00020\u001fH\u0002J\b\u0010/\u001a\u00020\u001fH\u0002J\b\u00100\u001a\u00020\u001fH\u0002J\b\u00101\u001a\u00020\u001fH\u0002J\b\u00102\u001a\u00020\u001fH\u0002J\b\u00103\u001a\u00020\u001fH\u0002J\u0006\u00104\u001a\u00020\u001fJ\b\u00105\u001a\u00020\u001fH\u0002J\b\u00106\u001a\u00020\u001fH\u0002J\b\u00107\u001a\u00020\u001fH\u0002J\b\u00108\u001a\u00020\u001fH\u0002J\b\u00109\u001a\u00020\u001fH\u0002J\b\u0010:\u001a\u00020\u001fH\u0002J\u0013\u0010;\u001a\u0004\u0018\u00010<*\u00020\u0013H\u0002¢\u0006\u0002\u0010=R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u000e¢\u0006\u0002\n\u0000R*\u0010\u0011\u001a\u001e\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\u00140\u0012j\u000e\u0012\u0004\u0012\u00020\u0013\u0012\u0004\u0012\u00020\u0014`\u0015X\u0082\u000e¢\u0006\u0002\n\u0000R2\u0010\u0016\u001a&\u0012\u0004\u0012\u00020\u0013\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00170\u0012j\u0012\u0012\u0004\u0012\u00020\u0013\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u0017`\u0015X\u0082\u000e¢\u0006\u0002\n\u0000R\u001a\u0010\u0018\u001a\u00020\u0019X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u001b\"\u0004\b\u001c\u0010\u001d¨\u0006>"}, d2 = {"Lcom/hzbhd/canbus/car/_362/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "context", "Landroid/content/Context;", "getContext", "()Landroid/content/Context;", "setContext", "(Landroid/content/Context;)V", "frame", "", "getFrame", "()[I", "setFrame", "([I)V", "lastDeviceStatus", "", "mDrivingItemIndex", "Ljava/util/HashMap;", "", "Lcom/hzbhd/canbus/ui_set/DriverDataPageUiSet$Page$Item;", "Lkotlin/collections/HashMap;", "mSettingItemIndex", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet$ListBean$ItemListBean;", "mUiMgr", "Lcom/hzbhd/canbus/car/_362/UiMgr;", "getMUiMgr", "()Lcom/hzbhd/canbus/car/_362/UiMgr;", "setMUiMgr", "(Lcom/hzbhd/canbus/car/_362/UiMgr;)V", "afterServiceNormalSetting", "", "airConditioningInfo", "canbusInfoChange", "canbusInfo", "", "carSpeedInfo", "corneringLampInfo", "culTrackAngle", "", "track", "", "max", "drivingModeAndAssistanceInfo", "electricPSInfo", "essentialInfo", "frontRadarInfo", "fuelConsumptionPerMin", "historicalFuelConsumption", "instantaneousFuelConsumption", "powerAmplifierInfo", "rearRadarInfo", "returnClick", "seatHeatingStatus", "steeringWheelKeys", "systemInfo", "tirePMSInfo", "vehicleSettings", "vehicleSpeedInfo", "toDoubleOrStringSelf", "", "(Ljava/lang/String;)Ljava/lang/Double;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public Context context;
     public int[] frame;
@@ -41,12 +41,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (context != null) {
             return context;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("context");
+
         return null;
     }
 
     public final void setContext(Context context) {
-        Intrinsics.checkNotNullParameter(context, "<set-?>");
+
         this.context = context;
     }
 
@@ -55,12 +55,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("frame");
+
         return null;
     }
 
     public final void setFrame(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.frame = iArr;
     }
 
@@ -69,19 +69,19 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (uiMgr != null) {
             return uiMgr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
         return null;
     }
 
     public final void setMUiMgr(UiMgr uiMgr) {
-        Intrinsics.checkNotNullParameter(uiMgr, "<set-?>");
+
         this.mUiMgr = uiMgr;
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._362.UiMgr");
+
         setMUiMgr((UiMgr) canUiMgr);
         GeneralDoorData.isSubShowSeatBelt = true;
         InitUtilsKt.initDrivingItemsIndexHashMap(context, getMUiMgr(), this.mDrivingItemIndex);
@@ -95,7 +95,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         setContext(context);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         setFrame(byteArrayToIntArray);
         int i = getFrame()[1];
         if (i == 22) {
@@ -177,47 +177,47 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit62 = DataHandleUtils.getBoolBit6(getFrame()[4]);
         if (boolBit7) {
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_2");
-            Intrinsics.checkNotNull(itemListBean);
+
             if (itemListBean.getSelectIndex() == 2) {
                 SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_2");
-                Intrinsics.checkNotNull(itemListBean2);
+
                 SettingPageUiSet.ListBean.ItemListBean<?> itemListBean3 = itemListBean2;
                 itemListBean3.setValue(itemListBean3.getValueSrnArray().get(0));
             }
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean4 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_2");
-            Intrinsics.checkNotNull(itemListBean4);
+
             itemListBean4.getValueSrnArray().remove("S362_drivingModeAndAssistanceInfo_2_2");
         } else {
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean5 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_2");
-            Intrinsics.checkNotNull(itemListBean5);
+
             if (!itemListBean5.getValueSrnArray().contains("S362_drivingModeAndAssistanceInfo_2_2")) {
                 SettingPageUiSet.ListBean.ItemListBean<?> itemListBean6 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_2");
-                Intrinsics.checkNotNull(itemListBean6);
+
                 itemListBean6.getValueSrnArray().add("S362_drivingModeAndAssistanceInfo_2_2");
             }
         }
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean7 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_1");
-        Intrinsics.checkNotNull(itemListBean7);
+
         itemListBean7.setValue(Integer.valueOf(boolBit7 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean8 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_2");
-        Intrinsics.checkNotNull(itemListBean8);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean9 = itemListBean8;
         itemListBean9.setValue(itemListBean9.getValueSrnArray().get(intFromByteWithBit >= 0 && intFromByteWithBit < 3 ? intFromByteWithBit : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean10 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_3");
-        Intrinsics.checkNotNull(itemListBean10);
+
         itemListBean10.setValue(Integer.valueOf(boolBit72 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean11 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_4");
-        Intrinsics.checkNotNull(itemListBean11);
+
         itemListBean11.setValue(Integer.valueOf(boolBit6 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean12 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_5");
-        Intrinsics.checkNotNull(itemListBean12);
+
         itemListBean12.setValue(Integer.valueOf(boolBit5 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean13 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_6");
-        Intrinsics.checkNotNull(itemListBean13);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean14 = itemListBean13;
         itemListBean14.setValue(itemListBean14.getValueSrnArray().get(boolBit73 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean15 = this.mSettingItemIndex.get("S362_drivingModeAndAssistanceInfo_7");
-        Intrinsics.checkNotNull(itemListBean15);
+
         itemListBean15.setValue(Integer.valueOf(boolBit62 ? 1 : 0));
         updateSettingActivity(null);
     }
@@ -226,10 +226,10 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit7 = DataHandleUtils.getBoolBit7(getFrame()[2]);
         boolean boolBit6 = DataHandleUtils.getBoolBit6(getFrame()[2]);
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("D362_corneringLampInfo_2");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(boolBit7 ? "ON" : "OFF");
         DriverDataPageUiSet.Page.Item item2 = this.mDrivingItemIndex.get("D362_corneringLampInfo_1");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(boolBit6 ? "ON" : "OFF");
         updateDriveDataActivity(null);
     }
@@ -238,10 +238,10 @@ public final class MsgMgr extends AbstractMsgMgr {
         int msbLsbResult = DataHandleUtils.getMsbLsbResult(getFrame()[3], getFrame()[2]);
         int i = getFrame()[4];
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("D362_carSpeedInfo_1");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(msbLsbResult + " rp");
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndex.get("S362_carSpeedInfo_1");
-        Intrinsics.checkNotNull(itemListBean);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = itemListBean;
         itemListBean2.setProgress(i / 10);
         itemListBean2.setValue(itemListBean2.getProgress() == 0 ? "OFF" : itemListBean2.getProgress() + " s");
@@ -265,22 +265,22 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit6 = DataHandleUtils.getBoolBit6(getFrame()[2]);
         boolean boolBit7 = DataHandleUtils.getBoolBit7(getFrame()[2]);
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("_350_d_3_0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(boolBit0 ? CommUtil.getStrByResId(getContext(), "_350_u_2") : CommUtil.getStrByResId(getContext(), "_350_u_3"));
         DriverDataPageUiSet.Page.Item item2 = this.mDrivingItemIndex.get("_350_d_3_1");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(boolBit1 ? CommUtil.getStrByResId(getContext(), "_350_u_2") : CommUtil.getStrByResId(getContext(), "_350_u_3"));
         DriverDataPageUiSet.Page.Item item3 = this.mDrivingItemIndex.get("_350_d_3_2");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue(boolBit2 ? CommUtil.getStrByResId(getContext(), "_350_u_2") : CommUtil.getStrByResId(getContext(), "_350_u_3"));
         DriverDataPageUiSet.Page.Item item4 = this.mDrivingItemIndex.get("_350_d_3_3");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue(boolBit3 ? CommUtil.getStrByResId(getContext(), "_350_u_2") : CommUtil.getStrByResId(getContext(), "_350_u_3"));
         DriverDataPageUiSet.Page.Item item5 = this.mDrivingItemIndex.get("_350_d_3_4");
-        Intrinsics.checkNotNull(item5);
+
         item5.setValue(boolBit6 ? CommUtil.getStrByResId(getContext(), "_350_u_1") : CommUtil.getStrByResId(getContext(), "_350_u_0"));
         DriverDataPageUiSet.Page.Item item6 = this.mDrivingItemIndex.get("_350_d_3_5");
-        Intrinsics.checkNotNull(item6);
+
         item6.setValue(boolBit7 ? CommUtil.getStrByResId(getContext(), "_350_u_1") : CommUtil.getStrByResId(getContext(), "_350_u_0"));
         updateDriveDataActivity(null);
         if (boolBit3) {
@@ -299,13 +299,13 @@ public final class MsgMgr extends AbstractMsgMgr {
         GeneralAmplifierData.volume = DataHandleUtils.rangeNumber(getFrame()[5], 0, 63);
         updateAmplifierActivity(null);
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndex.get("S362_powerAmplifierInfo_1");
-        Intrinsics.checkNotNull(itemListBean);
+
         itemListBean.setValue(Integer.valueOf(DataHandleUtils.getIntFromByteWithBit(getFrame()[4], 0, 4) == 8 ? 1 : 0));
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("D362_powerAmplifierInfo_1");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(DataHandleUtils.getBoolBit0(getFrame()[6]) ? "有" : "无");
         DriverDataPageUiSet.Page.Item item2 = this.mDrivingItemIndex.get("D362_powerAmplifierInfo_2");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(DataHandleUtils.getBoolBit1(getFrame()[6]) ? "有" : "无");
         updateSettingActivity(null);
         updateDriveDataActivity(null);
@@ -366,26 +366,26 @@ public final class MsgMgr extends AbstractMsgMgr {
         GeneralAirData.pollrn_removal = DataHandleUtils.getBoolBit7(getFrame()[6]);
         if (DataHandleUtils.getBoolBit0(getFrame()[6])) {
             String front_left_temperature = GeneralAirData.front_left_temperature;
-            Intrinsics.checkNotNullExpressionValue(front_left_temperature, "front_left_temperature");
+
             Double doubleOrNull = StringsKt.toDoubleOrNull(front_left_temperature);
             if (doubleOrNull != null) {
                 GeneralAirData.front_left_temperature = MsgMgrKt.transToF(doubleOrNull.doubleValue());
             }
             String front_right_temperature = GeneralAirData.front_right_temperature;
-            Intrinsics.checkNotNullExpressionValue(front_right_temperature, "front_right_temperature");
+
             Double doubleOrNull2 = StringsKt.toDoubleOrNull(front_right_temperature);
             if (doubleOrNull2 != null) {
                 GeneralAirData.front_right_temperature = MsgMgrKt.transToF(doubleOrNull2.doubleValue());
             }
         } else {
             String front_left_temperature2 = GeneralAirData.front_left_temperature;
-            Intrinsics.checkNotNullExpressionValue(front_left_temperature2, "front_left_temperature");
+
             Double doubleOrNull3 = StringsKt.toDoubleOrNull(front_left_temperature2);
             if (doubleOrNull3 != null) {
                 GeneralAirData.front_left_temperature = MsgMgrKt.transToC(doubleOrNull3.doubleValue());
             }
             String front_right_temperature2 = GeneralAirData.front_right_temperature;
-            Intrinsics.checkNotNullExpressionValue(front_right_temperature2, "front_right_temperature");
+
             Double doubleOrNull4 = StringsKt.toDoubleOrNull(front_right_temperature2);
             if (doubleOrNull4 != null) {
                 GeneralAirData.front_right_temperature = MsgMgrKt.transToC(doubleOrNull4.doubleValue());
@@ -400,19 +400,19 @@ public final class MsgMgr extends AbstractMsgMgr {
         int intFromByteWithBit2 = DataHandleUtils.getIntFromByteWithBit(getFrame()[2], 2, 2);
         int intFromByteWithBit3 = DataHandleUtils.getIntFromByteWithBit(getFrame()[2], 0, 2);
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndex.get("S361_d0b7");
-        Intrinsics.checkNotNull(itemListBean);
+
         itemListBean.setValue(Integer.valueOf(boolBit7 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = this.mSettingItemIndex.get("S361_d0b6t4");
-        Intrinsics.checkNotNull(itemListBean2);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean3 = itemListBean2;
         itemListBean3.setProgress(intFromByteWithBit);
         itemListBean3.setValue(String.valueOf(itemListBean3.getProgress()));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean4 = this.mSettingItemIndex.get("S361_d0b2t3");
-        Intrinsics.checkNotNull(itemListBean4);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean5 = itemListBean4;
         itemListBean5.setValue(itemListBean5.getValueSrnArray().get(intFromByteWithBit2));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean6 = this.mSettingItemIndex.get("S361_d0b0t1");
-        Intrinsics.checkNotNull(itemListBean6);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean7 = itemListBean6;
         itemListBean7.setValue(itemListBean7.getValueSrnArray().get(intFromByteWithBit3));
         boolean boolBit72 = DataHandleUtils.getBoolBit7(getFrame()[3]);
@@ -421,19 +421,19 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit4 = DataHandleUtils.getBoolBit4(getFrame()[3]);
         int intFromByteWithBit4 = DataHandleUtils.getIntFromByteWithBit(getFrame()[3], 0, 3);
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean8 = this.mSettingItemIndex.get("S361_d1b7");
-        Intrinsics.checkNotNull(itemListBean8);
+
         itemListBean8.setValue(Integer.valueOf(boolBit72 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean9 = this.mSettingItemIndex.get("S361_d1b6");
-        Intrinsics.checkNotNull(itemListBean9);
+
         itemListBean9.setValue(Integer.valueOf(boolBit6 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean10 = this.mSettingItemIndex.get("S361_d1b5");
-        Intrinsics.checkNotNull(itemListBean10);
+
         itemListBean10.setValue(Integer.valueOf(boolBit5 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean11 = this.mSettingItemIndex.get("S361_d1b4");
-        Intrinsics.checkNotNull(itemListBean11);
+
         itemListBean11.setValue(Integer.valueOf(boolBit4 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean12 = this.mSettingItemIndex.get("S361_d1b0t2");
-        Intrinsics.checkNotNull(itemListBean12);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean13 = itemListBean12;
         itemListBean13.setProgress(intFromByteWithBit4);
         itemListBean13.setValue(String.valueOf(itemListBean13.getProgress()));
@@ -443,28 +443,28 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit42 = DataHandleUtils.getBoolBit4(getFrame()[4]);
         boolean boolBit3 = DataHandleUtils.getBoolBit3(getFrame()[4]);
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean14 = this.mSettingItemIndex.get("S361_d2b7");
-        Intrinsics.checkNotNull(itemListBean14);
+
         itemListBean14.setValue(Integer.valueOf(boolBit73 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean15 = this.mSettingItemIndex.get("S361_d2b6");
-        Intrinsics.checkNotNull(itemListBean15);
+
         itemListBean15.setValue(Integer.valueOf(boolBit62 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean16 = this.mSettingItemIndex.get("S361_d2b5");
-        Intrinsics.checkNotNull(itemListBean16);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean17 = itemListBean16;
         itemListBean17.setValue(itemListBean17.getValueSrnArray().get(boolBit52 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean18 = this.mSettingItemIndex.get("S362_vehicleSettings_1");
-        Intrinsics.checkNotNull(itemListBean18);
+
         itemListBean18.setValue(Integer.valueOf(boolBit42 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean19 = this.mSettingItemIndex.get("S362_vehicleSettings_2");
-        Intrinsics.checkNotNull(itemListBean19);
+
         itemListBean19.setValue(Integer.valueOf(boolBit3 ? 1 : 0));
         boolean boolBit74 = DataHandleUtils.getBoolBit7(getFrame()[5]);
         boolean boolBit63 = DataHandleUtils.getBoolBit6(getFrame()[5]);
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean20 = this.mSettingItemIndex.get("S362_vehicleSettings_3");
-        Intrinsics.checkNotNull(itemListBean20);
+
         itemListBean20.setValue(Integer.valueOf(boolBit74 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean21 = this.mSettingItemIndex.get("S362_vehicleSettings_4");
-        Intrinsics.checkNotNull(itemListBean21);
+
         itemListBean21.setValue(Integer.valueOf(boolBit63 ? 1 : 0));
         updateSettingActivity(null);
     }
@@ -516,22 +516,22 @@ public final class MsgMgr extends AbstractMsgMgr {
         int i7 = (getFrame()[13] * 256) + getFrame()[14];
         String str = i != 0 ? i != 1 ? i != 2 ? "None" : "L/100Km" : "Km/L" : "MPG";
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("D361_2_d1t2");
-        Intrinsics.checkNotNull(item);
+
         item.setValue((i2 / 10) + ' ' + str);
         DriverDataPageUiSet.Page.Item item2 = this.mDrivingItemIndex.get("D361_2_d3t4");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue((i3 / 10) + ' ' + str);
         DriverDataPageUiSet.Page.Item item3 = this.mDrivingItemIndex.get("D361_2_d5t6");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue((i4 / 10) + ' ' + str);
         DriverDataPageUiSet.Page.Item item4 = this.mDrivingItemIndex.get("D361_2_d7t8");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue((i5 / 10) + ' ' + str);
         DriverDataPageUiSet.Page.Item item5 = this.mDrivingItemIndex.get("D361_2_d9t10");
-        Intrinsics.checkNotNull(item5);
+
         item5.setValue((i6 / 10) + ' ' + str);
         DriverDataPageUiSet.Page.Item item6 = this.mDrivingItemIndex.get("D361_2_d11t12");
-        Intrinsics.checkNotNull(item6);
+
         item6.setValue((i7 / 10) + ' ' + str);
         updateDriveDataActivity(null);
     }
@@ -541,7 +541,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         int i2 = (getFrame()[3] * 256) + getFrame()[4];
         String str = i != 0 ? i != 1 ? i != 2 ? "None" : "L/100Km" : "Km/L" : "MPG";
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("D361_1_d1t2");
-        Intrinsics.checkNotNull(item);
+
         item.setValue((i2 / 10) + ' ' + str);
         updateDriveDataActivity(null);
     }
@@ -553,14 +553,14 @@ public final class MsgMgr extends AbstractMsgMgr {
         int i4 = getFrame()[8];
         String str = i4 != 1 ? i4 != 2 ? "None" : "Km" : "Mile";
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("D362_fuelConsumptionPerMin_1");
-        Intrinsics.checkNotNull(item);
-        item.setValue(Intrinsics.areEqual(str, "None") ? "----" : (i / 10) + ' ' + str);
+
+
         DriverDataPageUiSet.Page.Item item2 = this.mDrivingItemIndex.get("D362_fuelConsumptionPerMin_2");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue((i2 / 60) + " : " + (i2 % 60));
         DriverDataPageUiSet.Page.Item item3 = this.mDrivingItemIndex.get("D362_fuelConsumptionPerMin_3");
-        Intrinsics.checkNotNull(item3);
-        item3.setValue(Intrinsics.areEqual(str, "None") ? "----" : (i3 / 10) + ' ' + str);
+
+
         updateDriveDataActivity(null);
     }
 
@@ -700,21 +700,21 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit4 = DataHandleUtils.getBoolBit4(getFrame()[6]);
         int intFromByteWithBit = DataHandleUtils.getIntFromByteWithBit(getFrame()[6], 0, 3);
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndex.get("S362_rearRadarInfo_1");
-        Intrinsics.checkNotNull(itemListBean);
+
         itemListBean.setValue(Integer.valueOf(boolBit7 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = this.mSettingItemIndex.get("S362_rearRadarInfo_2");
-        Intrinsics.checkNotNull(itemListBean2);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean3 = itemListBean2;
         itemListBean3.setValue(itemListBean3.getValueSrnArray().get(boolBit6 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean4 = this.mSettingItemIndex.get("S362_rearRadarInfo_3");
-        Intrinsics.checkNotNull(itemListBean4);
+
         itemListBean4.setValue(Integer.valueOf(boolBit5 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean5 = this.mSettingItemIndex.get("S362_rearRadarInfo_4");
-        Intrinsics.checkNotNull(itemListBean5);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean6 = itemListBean5;
         itemListBean6.setValue(itemListBean6.getValueSrnArray().get(boolBit4 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean7 = this.mSettingItemIndex.get("S362_rearRadarInfo_5");
-        Intrinsics.checkNotNull(itemListBean7);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean8 = itemListBean7;
         itemListBean8.setProgress(intFromByteWithBit);
         itemListBean8.setValue(String.valueOf(itemListBean8.getProgress()));
@@ -733,10 +733,10 @@ public final class MsgMgr extends AbstractMsgMgr {
         int msbLsbResult = DataHandleUtils.getMsbLsbResult(getFrame()[3], getFrame()[2]) / 16;
         int i = getFrame()[4];
         DriverDataPageUiSet.Page.Item item = this.mDrivingItemIndex.get("D362_vehicleSpeedInfo_1");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(msbLsbResult + " Km/H");
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndex.get("S362_vehicleSpeedInfo_1");
-        Intrinsics.checkNotNull(itemListBean);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = itemListBean;
         itemListBean2.setProgress(i / 10);
         itemListBean2.setValue(itemListBean2.getProgress() == 0 ? "OFF" : itemListBean2.getProgress() + " s");

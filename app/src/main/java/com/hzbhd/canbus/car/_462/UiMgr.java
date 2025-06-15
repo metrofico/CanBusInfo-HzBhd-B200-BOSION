@@ -11,7 +11,7 @@ import com.hzbhd.constant.share.ShareConstants;
 import com.hzbhd.proxy.share.ShareDataManager;
 import com.hzbhd.proxy.share.interfaces.IShareStringListener;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private MyPanoramicView panoramicView;
     float screenHeight;

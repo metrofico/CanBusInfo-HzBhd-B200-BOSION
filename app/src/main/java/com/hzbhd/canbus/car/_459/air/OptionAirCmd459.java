@@ -4,7 +4,7 @@ import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class OptionAirCmd459 {
     public boolean ac;
     public boolean acMax;

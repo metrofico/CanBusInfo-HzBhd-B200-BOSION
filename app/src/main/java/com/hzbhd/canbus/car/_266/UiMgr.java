@@ -12,7 +12,7 @@ import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private AirPageUiSet airPageUiSet;
     private Context mContext;

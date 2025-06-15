@@ -279,7 +279,7 @@ public final class AmplifierPageUiSet {
     }
 
     public final void setCustomTitle(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.customTitle = str;
     }
 
@@ -288,7 +288,7 @@ public final class AmplifierPageUiSet {
     }
 
     public final void setCustom2Title(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.custom2Title = str;
     }
 

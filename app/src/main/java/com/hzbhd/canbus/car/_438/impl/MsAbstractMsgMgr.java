@@ -19,7 +19,7 @@ import com.hzbhd.proxy.share.interfaces.IShareIntListener;
 import com.hzbhd.proxy.sourcemanager.SourceManager;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsAbstractMsgMgr implements MsgMgrInterface {
     private String airJsonStr;
     private boolean isMute = false;

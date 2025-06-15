@@ -26,7 +26,7 @@ import java.util.List;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     Context mContext;
     private MsgMgr mMsgMgr;

@@ -24,7 +24,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private String[] mAirBtnListFrontBottom;
     private String[] mAirBtnListFrontLeft;

@@ -15,7 +15,7 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-/* loaded from: classes.dex */
+
 public class SetTimeView {
     private Button cancel;
     private TextView day;

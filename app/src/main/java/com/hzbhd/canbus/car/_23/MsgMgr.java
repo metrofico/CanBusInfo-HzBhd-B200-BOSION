@@ -30,7 +30,7 @@ import java.util.TimerTask;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String SHARE_23_AMPLIFIER_ASL = "share_23_amplifier_asl";
     static final int SHARE_23_AMPLIFIER_BAND_OFFSET = 5;

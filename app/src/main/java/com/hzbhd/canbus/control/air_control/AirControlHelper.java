@@ -63,8 +63,8 @@ public final class AirControlHelper {
     private final AirWindControl windTarget;
 
     public AirControlHelper(Context mContext, AirPageUiSet mAirPageUiSet) {
-        Intrinsics.checkNotNullParameter(mContext, "mContext");
-        Intrinsics.checkNotNullParameter(mAirPageUiSet, "mAirPageUiSet");
+
+
         this.mContext = mContext;
         this.mTemperatureSwitch = -1;
         this.targetDelay = -200L;
@@ -195,8 +195,8 @@ public final class AirControlHelper {
             // com.hzbhd.canbus.control.air_control.AbstractAirControl, com.hzbhd.canbus.interfaces.AirControlInterface
             public void target(String type, String value) throws NumberFormatException {
                 float f;
-                Intrinsics.checkNotNullParameter(type, "type");
-                Intrinsics.checkNotNullParameter(value, "value");
+
+
                 String str = "AirWindControl" + SystemClock.elapsedRealtime();
                 try {
                     int iHashCode = type.hashCode();
@@ -234,11 +234,11 @@ public final class AirControlHelper {
         AirControlHelper.mTimerTask = timerTask;
         if (period == 0) {
             Timer timer = AirControlHelper.mTimer;
-            Intrinsics.checkNotNull(timer);
+
             timer.schedule(AirControlHelper.mTimerTask, delay);
         } else {
             Timer timer2 = AirControlHelper.mTimer;
-            Intrinsics.checkNotNull(timer2);
+
             timer2.schedule(AirControlHelper.mTimerTask, delay, period);
         }
     }

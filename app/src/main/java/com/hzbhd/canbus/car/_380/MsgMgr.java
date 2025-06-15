@@ -7,7 +7,7 @@ import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int eachId;

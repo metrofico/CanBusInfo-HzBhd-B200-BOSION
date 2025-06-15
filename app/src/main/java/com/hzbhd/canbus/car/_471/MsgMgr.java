@@ -5,7 +5,7 @@ import com.hzbhd.canbus.canCustom.canBase.CanDocking;
 import com.hzbhd.canbus.canCustom.canBase.CanVm;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     CanDocking docking;
 

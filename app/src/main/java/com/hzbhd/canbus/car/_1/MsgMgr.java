@@ -37,7 +37,7 @@ import java.util.Arrays;
 import java.util.List;
 import org.apache.log4j.Priority;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static int bandBassTag = 1;
     public static int bandMiddleTag = 1;

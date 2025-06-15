@@ -32,7 +32,7 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static final String L0R0 = "Share_327_Settings_L0R0";
     public static final String L1R0 = "Share_327_Settings_L1R0";

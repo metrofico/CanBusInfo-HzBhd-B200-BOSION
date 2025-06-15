@@ -16,7 +16,7 @@ import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_204_LANGUAGE = "share_204_language";
     static final String SHARE_204_REAR_MIRROR_FOLD = "share_204_rear_mirror_fold";

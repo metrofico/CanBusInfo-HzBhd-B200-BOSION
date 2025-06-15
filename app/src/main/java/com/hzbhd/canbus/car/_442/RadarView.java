@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class RadarView extends RelativeLayout {
     ImageView rear_left_line;
     ImageView rear_mid_left_line;

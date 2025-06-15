@@ -12,7 +12,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static int data0bit3;
     public static int data0bit4;

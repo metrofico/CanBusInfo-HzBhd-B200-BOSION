@@ -24,7 +24,7 @@ import java.util.Map;
 import java.util.Objects;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static int[] index;
     int[] mAirData;

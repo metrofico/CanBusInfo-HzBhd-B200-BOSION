@@ -10,7 +10,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final String SHARE_218_SETTING_DATA0 = "share_218_setting_data0";
     private Context mContext;

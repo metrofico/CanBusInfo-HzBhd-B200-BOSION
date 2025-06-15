@@ -11,7 +11,7 @@ import com.hzbhd.commontools.SourceConstantsDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.io.UnsupportedEncodingException;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int eachId;
     byte[] mCanBusInfoByte;

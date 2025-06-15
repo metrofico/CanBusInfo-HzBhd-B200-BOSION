@@ -34,9 +34,9 @@ import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.Charsets;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u000b\n\u0002\b\n\n\u0002\u0010\b\n\u0002\b\u0016\n\u0002\u0010\u0005\n\u0002\b\n\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\t\n\u0002\b-\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0019\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\nH\u0016J\b\u0010\u001c\u001a\u00020\u001aH\u0002J\b\u0010\u001d\u001a\u00020\u001aH\u0002J\"\u0010\u001e\u001a\u00020\u001a2\b\u0010\u001f\u001a\u0004\u0018\u00010 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016J\"\u0010$\u001a\u00020\u001a2\b\u0010\u001f\u001a\u0004\u0018\u00010 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016J\"\u0010%\u001a\u00020\u001a2\b\u0010\u001f\u001a\u0004\u0018\u00010 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016J\"\u0010&\u001a\u00020\u001a2\b\u0010\u001f\u001a\u0004\u0018\u00010 2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016J\u001c\u0010'\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\n2\b\u0010(\u001a\u0004\u0018\u00010 H\u0016J\b\u0010)\u001a\u00020\u001aH\u0002J\b\u0010*\u001a\u00020\u001aH\u0002Jp\u0010+\u001a\u00020\u001a2\u0006\u0010,\u001a\u00020-2\u0006\u0010.\u001a\u00020-2\u0006\u0010/\u001a\u00020-2\u0006\u00100\u001a\u00020-2\u0006\u00101\u001a\u00020-2\u0006\u00102\u001a\u00020-2\u0006\u00103\u001a\u00020-2\u0006\u00104\u001a\u00020-2\u0006\u00105\u001a\u00020-2\u0006\u00106\u001a\u00020\"2\u0006\u00107\u001a\u00020\"2\u0006\u00108\u001a\u00020\"2\u0006\u00109\u001a\u00020-H\u0016J\b\u0010:\u001a\u00020\u001aH\u0002J\b\u0010;\u001a\u00020\u001aH\u0002J\b\u0010<\u001a\u00020\u001aH\u0002J\b\u0010=\u001a\u00020\u001aH\u0002J\u000e\u0010>\u001a\u00020\u001a2\u0006\u0010?\u001a\u00020\"J\u0018\u0010@\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\n2\u0006\u0010A\u001a\u00020\"JÄ\u0001\u0010B\u001a\u00020\u001a2\u0006\u0010C\u001a\u00020D2\u0006\u0010E\u001a\u00020D2\u0006\u0010F\u001a\u00020-2\u0006\u0010G\u001a\u00020-2\u0006\u0010H\u001a\u00020D2\u0006\u0010I\u001a\u00020D2\u0006\u0010J\u001a\u00020D2\u0006\u0010K\u001a\u00020D2\u0006\u0010L\u001a\u00020D2\u0006\u0010M\u001a\u00020D2\b\u0010N\u001a\u0004\u0018\u00010O2\b\u0010P\u001a\u0004\u0018\u00010O2\b\u0010Q\u001a\u0004\u0018\u00010O2\u0006\u0010R\u001a\u00020S2\u0006\u0010T\u001a\u00020D2\u0006\u0010U\u001a\u00020-2\u0006\u0010V\u001a\u00020\"2\u0006\u0010W\u001a\u00020S2\b\u0010X\u001a\u0004\u0018\u00010O2\b\u0010Y\u001a\u0004\u0018\u00010O2\b\u0010Z\u001a\u0004\u0018\u00010O2\u0006\u0010[\u001a\u00020\"H\u0016J\b\u0010\\\u001a\u00020\u001aH\u0002J\b\u0010]\u001a\u00020\u001aH\u0002J\u000e\u0010^\u001a\u00020\u001a2\u0006\u0010_\u001a\u00020\"J\b\u0010`\u001a\u00020\u001aH\u0002J\b\u0010a\u001a\u00020\u001aH\u0002J\b\u0010b\u001a\u00020\u001aH\u0002J\b\u0010c\u001a\u00020\u001aH\u0002J\b\u0010d\u001a\u00020\u001aH\u0002J\b\u0010e\u001a\u00020\u001aH\u0002J6\u0010f\u001a\u00020\u001a2\u0006\u0010g\u001a\u00020-2\b\u0010h\u001a\u0004\u0018\u00010O2\b\u0010i\u001a\u0004\u0018\u00010O2\b\u0010j\u001a\u0004\u0018\u00010O2\u0006\u0010k\u001a\u00020-H\u0016J\b\u0010l\u001a\u00020\u001aH\u0002J\b\u0010m\u001a\u00020\u001aH\u0002J\b\u0010n\u001a\u00020\u001aH\u0002J \u0010o\u001a\u00020\u001a2\u0006\u0010p\u001a\u00020-2\u0006\u0010q\u001a\u00020 2\u0006\u0010r\u001a\u00020-H\u0002J\u001a\u0010s\u001a\u00020\u001a2\u0006\u0010p\u001a\u00020-2\b\b\u0002\u0010t\u001a\u00020 H\u0002J\b\u0010u\u001a\u00020\u001aH\u0002J\b\u0010v\u001a\u00020\u001aH\u0002J\u0010\u0010w\u001a\u00020\u001a2\u0006\u0010x\u001a\u00020 H\u0002J\b\u0010y\u001a\u00020\u001aH\u0002J\u0010\u0010z\u001a\u00020\u001a2\u0006\u0010{\u001a\u00020\"H\u0016J\u0006\u0010|\u001a\u00020\u001aJ\u0098\u0001\u0010}\u001a\u00020\u001a2\u0006\u0010C\u001a\u00020D2\u0006\u0010E\u001a\u00020D2\u0006\u0010F\u001a\u00020-2\u0006\u0010G\u001a\u00020-2\u0006\u0010H\u001a\u00020D2\u0006\u0010I\u001a\u00020D2\u0006\u0010J\u001a\u00020D2\b\u0010K\u001a\u0004\u0018\u00010O2\u0006\u0010L\u001a\u00020D2\u0006\u0010M\u001a\u00020D2\b\u0010N\u001a\u0004\u0018\u00010O2\b\u0010P\u001a\u0004\u0018\u00010O2\b\u0010Q\u001a\u0004\u0018\u00010O2\u0006\u0010R\u001a\u00020-2\u0006\u0010~\u001a\u00020D2\u0006\u0010V\u001a\u00020\"2\u0006\u0010\u007f\u001a\u00020-H\u0016R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u0011\u0010\u000f\u001a\u00020\u0010¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012R\u001a\u0010\u0013\u001a\u00020\u0014X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018¨\u0006\u0080\u0001"}, d2 = {"Lcom/hzbhd/canbus/car/_55/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "frame", "", "getFrame", "()[I", "setFrame", "([I)V", "mContext", "Landroid/content/Context;", "getMContext", "()Landroid/content/Context;", "setMContext", "(Landroid/content/Context;)V", "mOriginalCarDevicePageUiSet", "Lcom/hzbhd/canbus/ui_set/OriginalCarDevicePageUiSet;", "getMOriginalCarDevicePageUiSet", "()Lcom/hzbhd/canbus/ui_set/OriginalCarDevicePageUiSet;", "mUiMgr", "Lcom/hzbhd/canbus/car/_55/UiMgr;", "getMUiMgr", "()Lcom/hzbhd/canbus/car/_55/UiMgr;", "setMUiMgr", "(Lcom/hzbhd/canbus/car/_55/UiMgr;)V", "afterServiceNormalSetting", "", "context", "airConditioning", "basicCarInfo", "btPhoneHangUpInfoChange", "phoneNumber", "", "isMicMute", "", "isAudioTransferTowardsAG", "btPhoneIncomingInfoChange", "btPhoneOutGoingInfoChange", "btPhoneTalkingInfoChange", "canbusInfoChange", "canbusInfo", "carDetailsInfo", "carInfo", "dateTimeRepCanbus", "bYearTotal", "", "bYear2Dig", "bMonth", "bDay", "bHours", "bMins", "bSecond", "bHours24H", "systemDateFormat", "isFormat24H", "isFormatPm", "isGpsTime", "dayOfWeek", "doorLock", "driverAssistanceSystemSetting", "drivingPosturePersonalization", "light", "mEnterOrExitAux", "bool", "mForceReverse", "isReverse", "musicInfoChange", "stoagePath", "", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playModel", "playIndex", "isPlaying", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "oilConsumption", "oilConsumptionHistory", "openRightCamera", "isOpen", "originalCarScreen", "originalVehiclePowerAmplifierStatus", "panelButton", "powerTailgateSettingStatus", "radar", "radioInfo", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "radioPreStoredStationInfo", "remoteControl", "requestSourceCut", "sendBtPhoneNumber", "d0", "d1t30", "d31", "sendVoiceSource", "d1t12", "set0x1FData", "set0xA4Data", "set0xF0Data", "bytes", "setDisplaySettingStatus", "sourceSwitchNoMediaInfoChange", "isPowerOff", "updateSetting", "videoInfoChange", "playMode", "duration", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public int[] frame;
     public Context mContext;
@@ -58,7 +58,7 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     public MsgMgr() {
         OriginalCarDevicePageUiSet originalCarDevicePageUiSet = UiMgrFactory.getCanUiMgr(BaseUtil.INSTANCE.getContext()).getOriginalCarDevicePageUiSet(BaseUtil.INSTANCE.getContext());
-        Intrinsics.checkNotNullExpressionValue(originalCarDevicePageUiSet, "getCanUiMgr(context).get…rDevicePageUiSet(context)");
+
         this.mOriginalCarDevicePageUiSet = originalCarDevicePageUiSet;
     }
 
@@ -67,12 +67,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("frame");
+
         return null;
     }
 
     public final void setFrame(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.frame = iArr;
     }
 
@@ -81,12 +81,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (uiMgr != null) {
             return uiMgr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
         return null;
     }
 
     public final void setMUiMgr(UiMgr uiMgr) {
-        Intrinsics.checkNotNullParameter(uiMgr, "<set-?>");
+
         this.mUiMgr = uiMgr;
     }
 
@@ -95,12 +95,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (context != null) {
             return context;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
         return null;
     }
 
     public final void setMContext(Context context) {
-        Intrinsics.checkNotNullParameter(context, "<set-?>");
+
         this.mContext = context;
     }
 
@@ -137,25 +137,25 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneIncomingInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNull(phoneNumber);
+
         sendBtPhoneNumber(1, MsgMgrKt.restrict$default(phoneNumber, 30, 0, 4, null), 0);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneOutGoingInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNull(phoneNumber);
+
         sendBtPhoneNumber(2, MsgMgrKt.restrict$default(phoneNumber, 30, 0, 4, null), 0);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneTalkingInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNull(phoneNumber);
+
         sendBtPhoneNumber(3, MsgMgrKt.restrict$default(phoneNumber, 30, 0, 4, null), 0);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneHangUpInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNull(phoneNumber);
+
         sendBtPhoneNumber(4, MsgMgrKt.restrict$default(phoneNumber, 30, 0, 4, null), 0);
     }
 
@@ -218,7 +218,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                 default:
                     return;
             }
-            Intrinsics.checkNotNull(currentFreq);
+
             sendVoiceSource(i, com.hzbhd.canbus.car._403.MsgMgrKt.radioAscii(currClickPresetIndex, currBand, 8, currentFreq));
         }
     }
@@ -226,11 +226,11 @@ public final class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, byte currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, long currentPos, byte playModel, int playIndex, boolean isPlaying, long totalTime, String songTitle, String songAlbum, String songArtist, boolean isReportFromPlay) {
         sendVoiceSource$default(this, stoagePath != 9 ? 13 : 14, null, 2, null);
-        Intrinsics.checkNotNull(songAlbum);
+
         com.hzbhd.canbus.car._404.MsgMgrKt.sendTextInfo(HotKeyConstant.K_CARPLAY, songAlbum, Charsets.UTF_16BE, 32, 10);
-        Intrinsics.checkNotNull(songArtist);
+
         com.hzbhd.canbus.car._404.MsgMgrKt.sendTextInfo(HotKeyConstant.K_ANDROIDAUTO, songArtist, Charsets.UTF_16BE, 32, 10);
-        Intrinsics.checkNotNull(songTitle);
+
         com.hzbhd.canbus.car._404.MsgMgrKt.sendTextInfo(HotKeyConstant.K_ANDROIDAUTO, songTitle, Charsets.UTF_16BE, 32, 10);
         CanbusMsgSender.sendMsg(ArraysKt.plus(new byte[]{22, -104}, MsgMgrKt.restrict$default(new byte[]{0, 0, 0, 0, currentMinute, currentSecond}, 16, 0, 4, null)));
     }
@@ -245,7 +245,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (context != null) {
             setMContext(context);
             UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-            Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._55.UiMgr");
+
             setMUiMgr((UiMgr) canUiMgr);
             SingletonForKt.INSTANCE.init(context, getMUiMgr());
         }
@@ -255,7 +255,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         setFrame(byteArrayToIntArray);
         int i = getFrame()[1];
         if (i == 17) {
@@ -307,7 +307,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             return;
         }
         if (i == 240) {
-            Intrinsics.checkNotNull(canbusInfo);
+
             set0xF0Data(canbusInfo);
             return;
         }

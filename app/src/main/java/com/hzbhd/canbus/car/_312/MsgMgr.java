@@ -29,7 +29,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int MEDIA_ID3_INFO_LANGTH = 56;
     private int mAmplifierSwitch;

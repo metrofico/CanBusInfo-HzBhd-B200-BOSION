@@ -7,7 +7,7 @@ import com.hzbhd.canbus.interfaces.OnSettingPageStatusListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private OnSettingPageStatusListener mOnSettingPageStatusListener = new OnSettingPageStatusListener() { // from class: com.hzbhd.canbus.car._241.UiMgr.1

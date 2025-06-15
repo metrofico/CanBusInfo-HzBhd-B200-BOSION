@@ -13,7 +13,7 @@ import java.text.DecimalFormat;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     Context mContext;
     com.hzbhd.canbus.car._0.MsgMgr mMsgMgr;

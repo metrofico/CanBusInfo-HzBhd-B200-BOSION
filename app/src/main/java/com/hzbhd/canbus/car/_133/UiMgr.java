@@ -5,7 +5,7 @@ import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.interfaces.OnPanelKeyPositionListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private OnPanelKeyPositionListener mOnPanelKeyPositionListener = new OnPanelKeyPositionListener() { // from class: com.hzbhd.canbus.car._133.UiMgr.1
         @Override // com.hzbhd.canbus.interfaces.OnPanelKeyPositionListener

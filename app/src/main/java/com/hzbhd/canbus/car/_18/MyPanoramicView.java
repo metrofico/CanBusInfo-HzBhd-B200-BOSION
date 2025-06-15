@@ -10,7 +10,7 @@ import com.hzbhd.R;
 import com.hzbhd.canbus.util.LogUtil;
 import com.hzbhd.common.settings.constant.BodaSysContant;
 
-/* loaded from: classes.dex */
+
 public class MyPanoramicView extends RelativeLayout {
     private Button mBtnTest;
     private Context mContext;

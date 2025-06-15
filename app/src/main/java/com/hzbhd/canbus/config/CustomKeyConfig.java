@@ -139,7 +139,7 @@ public final class CustomKeyConfig {
                 return false;
             }
             CustomKey customKey = (CustomKey) other;
-            return Intrinsics.areEqual(this.canIdList, customKey.canIdList);
+
         }
 
         @Override
@@ -190,7 +190,7 @@ public final class CustomKeyConfig {
                 return false;
             }
             CanIdKeyMap canIdKeyMap = (CanIdKeyMap) other;
-            return this.canId == canIdKeyMap.canId && Intrinsics.areEqual(this.keyList, canIdKeyMap.keyList);
+
         }
 
         // Hash code method
@@ -213,7 +213,7 @@ public final class CustomKeyConfig {
 
         // Constructor
         public KeyMap(int input, Key output) {
-            Intrinsics.checkNotNullParameter(output, "output");
+
             this.input = input;
             this.output = output;
         }
@@ -230,7 +230,7 @@ public final class CustomKeyConfig {
 
         // Copy function
         public KeyMap copy(int input, Key output) {
-            Intrinsics.checkNotNullParameter(output, "output");
+
             return new KeyMap(input, output);
         }
 
@@ -244,7 +244,7 @@ public final class CustomKeyConfig {
                 return false;
             }
             KeyMap keyMap = (KeyMap) other;
-            return this.input == keyMap.input && Intrinsics.areEqual(this.output, keyMap.output);
+
         }
 
         // Hash code function
@@ -266,7 +266,7 @@ public final class CustomKeyConfig {
 
         // Setter for 'output'
         public void setOutput(Key output) {
-            Intrinsics.checkNotNullParameter(output, "<set-?>");
+
             this.output = output;
         }
     }

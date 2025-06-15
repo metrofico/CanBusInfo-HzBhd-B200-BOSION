@@ -6,7 +6,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class HwCarSettings {
     public static final String ACCELERATOR_PERFORMANCE = "ACCELERATOR_PERFORMANCE";
     public static final String AUXILIARY_BRAKING = "AUXILIARY_BRAKING";

@@ -10,7 +10,7 @@ import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.util.SelectCanTypeUtil;
 
-/* loaded from: classes2.dex */
+
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {
     private ImageView d2_360_View;
     private ImageView d3_360_View;

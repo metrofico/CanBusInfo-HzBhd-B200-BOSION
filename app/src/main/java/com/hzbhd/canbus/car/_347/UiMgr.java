@@ -23,7 +23,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final int CONFIGURATION_camera_452 = 1;
     private static final int CONFIGURATION_defualt_452 = -1;

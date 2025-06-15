@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public ID447RadarView id447RadarView;
     private Context mContext;

@@ -38,7 +38,7 @@ import com.hzbhd.util.LogUtil;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_188_IS_SUPPORT_PANORAMIC = "share_188_is_support_panoramic";
     private static final String SHARE_188_LANGUAGE = "share_188_language";

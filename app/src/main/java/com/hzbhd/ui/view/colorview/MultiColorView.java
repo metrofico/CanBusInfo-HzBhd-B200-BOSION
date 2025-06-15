@@ -64,8 +64,8 @@ public class MultiColorView extends TextView {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MultiColorView(final Context context, AttributeSet attrs, int i, int i2) {
         super(context, attrs, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         ResId[] resIdArr = new ResId[4];
         for (int i3 = 0; i3 < 4; i3++) {
             resIdArr[i3] = null;
@@ -128,15 +128,15 @@ public class MultiColorView extends TextView {
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public MultiColorView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
     }
 
     /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
     public MultiColorView(Context context, AttributeSet attrs, int i) {
         this(context, attrs, i, 0);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
     }
 
     public final void setIndex(int value) {
@@ -181,7 +181,7 @@ public class MultiColorView extends TextView {
                     drawable.setBounds(0, 0, getMeasuredWidth(), getMeasuredHeight());
                 }
                 if (drawable != null) {
-                    Intrinsics.checkNotNull(canvas);
+
                     drawable.draw(canvas);
                 }
             }
@@ -210,7 +210,7 @@ public class MultiColorView extends TextView {
                     drawable2.setBounds(0, 0, getMeasuredWidth(), getMeasuredHeight());
                 }
                 if (drawable2 != null) {
-                    Intrinsics.checkNotNull(canvas);
+
                     drawable2.draw(canvas);
                 }
             }

@@ -30,8 +30,8 @@ public final class DoubleChangeColorView extends ColorView {
     /* JADX WARN: Type inference failed for: r1v1, types: [com.hzbhd.ui.view.colorview.DoubleChangeColorView$mSettingsContentObserver$1] */
     public DoubleChangeColorView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         final Handler handler = new Handler(Looper.getMainLooper());
         this.mSettingsContentObserver = new ContentObserver(handler) { // from class: com.hzbhd.ui.view.colorview.DoubleChangeColorView$mSettingsContentObserver$1
             @Override // android.database.ContentObserver
@@ -47,8 +47,8 @@ public final class DoubleChangeColorView extends ColorView {
     /* JADX WARN: Type inference failed for: r0v3, types: [com.hzbhd.ui.view.colorview.DoubleChangeColorView$mSettingsContentObserver$1] */
     public DoubleChangeColorView(Context context, AttributeSet attrs, int i) {
         super(context, attrs, i);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         final Handler handler = new Handler(Looper.getMainLooper());
         this.mSettingsContentObserver = new ContentObserver(handler) { // from class: com.hzbhd.ui.view.colorview.DoubleChangeColorView$mSettingsContentObserver$1
             @Override // android.database.ContentObserver
@@ -89,14 +89,14 @@ public final class DoubleChangeColorView extends ColorView {
         int i = Settings.System.getInt(this.mContext.getContentResolver(), "changeAllColor", 0);
         if (i == 0) {
             Context context = getContext();
-            Intrinsics.checkNotNullExpressionValue(context, "context");
+
             setBackground(new PressedDrawable(context, this.id_n1, this.id_p1, this.id_s1, this.id_d1));
         } else {
             if (i != 1) {
                 return;
             }
             Context context2 = getContext();
-            Intrinsics.checkNotNullExpressionValue(context2, "context");
+
             setBackground(new PressedDrawable(context2, this.id_n2, this.id_p2, this.id_s2, this.id_d2));
         }
     }

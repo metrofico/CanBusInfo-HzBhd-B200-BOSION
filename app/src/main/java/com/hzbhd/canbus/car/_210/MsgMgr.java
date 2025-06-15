@@ -32,7 +32,7 @@ import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static boolean angleWide = false;
     private static boolean isDoorFirst = true;

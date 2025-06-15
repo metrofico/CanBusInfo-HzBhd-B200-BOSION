@@ -16,7 +16,7 @@ import com.hzbhd.canbus.util.amap.AMapUtils;
 import com.hzbhd.commontools.SourceConstantsDef;
 import java.util.regex.Pattern;
 
-/* loaded from: classes2.dex */
+
 public class AMapBroadcast extends BroadcastReceiver {
     private static final String INIT_TIME = "0:0";
     private static final int WHAT_ONLINE_IN = 0;

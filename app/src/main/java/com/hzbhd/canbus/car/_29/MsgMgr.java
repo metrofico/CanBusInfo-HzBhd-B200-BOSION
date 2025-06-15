@@ -35,7 +35,7 @@ import java.util.Arrays;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.Priority;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int SHARE_29_AMPLIFIER_HALF_MAX = 10;
     static final int SHARE_29_AMPLIFIER_START = 6;

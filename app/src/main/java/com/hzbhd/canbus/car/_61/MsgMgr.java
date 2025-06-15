@@ -33,7 +33,7 @@ import java.util.HashMap;
 import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int VEHICLE_TYPE_17_REGAL = 22;
     static final int VEHICLE_TYPE_ASTRA = 7;

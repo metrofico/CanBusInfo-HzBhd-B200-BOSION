@@ -10,9 +10,9 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.StringCompanionObject;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u00001\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0005*\u0001\u0000\b\n\u0018\u00002\u00060\u0001R\u00020\u0002J\u0010\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tH\u0016J\u0015\u0010\n\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\f0\u000bH\u0016¢\u0006\u0002\u0010\rJ\u0014\u0010\u000e\u001a\u00020\t*\u00020\t2\u0006\u0010\u000f\u001a\u00020\tH\u0002J\u001c\u0010\u000e\u001a\u00020\t*\u00020\t2\u0006\u0010\u0010\u001a\u00020\t2\u0006\u0010\u000f\u001a\u00020\tH\u0002R\u0014\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0082.¢\u0006\u0002\n\u0000¨\u0006\u0011"}, d2 = {"com/hzbhd/canbus/car/_161/MsgMgr$initParsers$1$8", "Lcom/hzbhd/canbus/car/_161/MsgMgr$Parser;", "Lcom/hzbhd/canbus/car/_161/MsgMgr;", "list", "Ljava/util/ArrayList;", "Lcom/hzbhd/canbus/entity/DriverUpdateEntity;", "parse", "", "dataLength", "", "setOnParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "range", "max", "min", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
     private ArrayList<DriverUpdateEntity> list;
     final /* synthetic */ MsgMgr this$0;
@@ -70,8 +70,8 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
     /* renamed from: setOnParseListeners$lambda-3, reason: not valid java name */
     public static final void m200setOnParseListeners$lambda3(MsgMgr this$0, MsgMgr$initParsers$1$8 this$1) {
         String str;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         Log.d("_18_current_fuel", "----------------");
         DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this$0.mDriveItemIndexHashMap.get("_18_current_fuel");
         if (driverUpdateEntity != null) {
@@ -91,7 +91,7 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList = this$1.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             arrayList.add(driverUpdateEntity.setValue(str));
@@ -102,8 +102,8 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
     /* renamed from: setOnParseListeners$lambda-7, reason: not valid java name */
     public static final void m201setOnParseListeners$lambda7(MsgMgr this$0, MsgMgr$initParsers$1$8 this$1) {
         String str;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this$0.mDriveItemIndexHashMap.get("_186_endurancee_mileage");
         if (driverUpdateEntity != null) {
             int i = this$0.mCanbusInfoInt[5] | (this$0.mCanbusInfoInt[4] << 8);
@@ -122,7 +122,7 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList = this$1.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             arrayList.add(driverUpdateEntity.setValue(str));
@@ -133,8 +133,8 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
     /* renamed from: setOnParseListeners$lambda-11, reason: not valid java name */
     public static final void m197setOnParseListeners$lambda11(MsgMgr this$0, MsgMgr$initParsers$1$8 this$1) {
         String str;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this$0.mDriveItemIndexHashMap.get("cat_set_mileage");
         if (driverUpdateEntity != null) {
             int i = this$0.mCanbusInfoInt[7] | (this$0.mCanbusInfoInt[6] << 8);
@@ -153,7 +153,7 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList = this$1.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             arrayList.add(driverUpdateEntity.setValue(str));
@@ -163,8 +163,8 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-13, reason: not valid java name */
     public static final void m198setOnParseListeners$lambda13(MsgMgr this$0, MsgMgr$initParsers$1$8 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this$0.mDriveItemIndexHashMap.get("_161_start_stop_timing");
         if (driverUpdateEntity != null) {
             if (this$0.mCanbusInfoInt[10] == 255 || this$0.mCanbusInfoInt[9] == 255 || this$0.mCanbusInfoInt[8] == 255) {
@@ -172,12 +172,12 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
             } else {
                 StringCompanionObject stringCompanionObject = StringCompanionObject.INSTANCE;
                 String str = String.format("%d : %02d : %02d", Arrays.copyOf(new Object[]{Integer.valueOf(this$0.mCanbusInfoInt[8]), Integer.valueOf(this$1.range(this$0.mCanbusInfoInt[9], 59)), Integer.valueOf(this$1.range(this$0.mCanbusInfoInt[10], 59))}, 3));
-                Intrinsics.checkNotNullExpressionValue(str, "format(format, *args)");
+
                 driverUpdateEntity.setValue(str);
             }
             ArrayList<DriverUpdateEntity> arrayList = this$1.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             arrayList.add(driverUpdateEntity);
@@ -187,8 +187,8 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-17, reason: not valid java name */
     public static final void m199setOnParseListeners$lambda17(MsgMgr this$0, MsgMgr$initParsers$1$8 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this$0.mDriveItemIndexHashMap.get("_161_CurrentSpeed");
         if (driverUpdateEntity != null) {
             int i = this$0.mCanbusInfoInt[12] | (this$0.mCanbusInfoInt[11] << 8);
@@ -205,7 +205,7 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList = this$1.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             arrayList.add(driverUpdateEntity.setValue((i / 100) + " km/h"));
@@ -221,7 +221,7 @@ public final class MsgMgr$initParsers$1$8 extends MsgMgr.Parser {
             MsgMgr msgMgr = this.this$0;
             ArrayList<DriverUpdateEntity> arrayList = this.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             msgMgr.updateGeneralDriveData(arrayList);

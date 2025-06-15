@@ -56,7 +56,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int AMPLIFIER_BALANCE_OFFSET = 7;
     static final String SHARE_85_AIR_AUTO_MANUAL_STATUS = "share_85_air_auto_manual_status";

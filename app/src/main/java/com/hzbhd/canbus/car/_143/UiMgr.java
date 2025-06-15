@@ -32,7 +32,7 @@ import java.util.List;
 import java.util.Objects;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private int currentClickFront;
     private int currentWindLv;

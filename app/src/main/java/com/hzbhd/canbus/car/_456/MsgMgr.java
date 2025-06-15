@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.apache.log4j.helpers.DateLayout;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] mCarDoorData;
     Context mContext;

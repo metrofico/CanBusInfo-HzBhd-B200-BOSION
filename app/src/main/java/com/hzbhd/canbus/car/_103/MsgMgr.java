@@ -19,7 +19,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final String SHARE_103_AMPLIFIER_BALANCE = "share_103_amplifier_balance";
     private static final String SHARE_103_AMPLIFIER_BASS = "share_103_amplifier_bass";

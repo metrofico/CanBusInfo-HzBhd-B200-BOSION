@@ -22,7 +22,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private byte[] mCanBusInfoByte;
     private int[] mCanBusInfoInt;

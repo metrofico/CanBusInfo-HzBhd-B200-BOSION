@@ -20,7 +20,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String CAN_195_SAVE_RADAR_DISP = "__195_SAVE_RADAR_DISP";
     static int cam3603dMode = 0;

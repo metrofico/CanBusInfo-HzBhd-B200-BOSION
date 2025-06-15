@@ -34,7 +34,7 @@ import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     protected static final int CAR_ID_AX3_2019 = 6;
     protected static final int CAR_ID_AX5_2016 = 2;

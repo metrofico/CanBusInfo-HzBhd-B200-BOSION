@@ -9,7 +9,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.SetTimeView;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     int data;
     private Context mContext;

@@ -57,7 +57,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String IS_ACTIVE_PARK_OPEN = "is_active_park_open";
     static int[] mLanguageMapArray;

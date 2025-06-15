@@ -26,7 +26,7 @@ import com.hzbhd.canbus.util.LogUtil;
 import java.util.ArrayList;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private int chargeEndTimeHourProgress;
     private int chargeEndTimeMinuteProgress;

@@ -54,7 +54,7 @@ public final class BtManager {
         public void onCloseA2dp() {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onCloseA2dp();
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -65,7 +65,7 @@ public final class BtManager {
         public void onCloseHfp() {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onCloseHfp();
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -74,13 +74,13 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void updateBtStatus(int changeState, String status) {
-            Intrinsics.checkNotNullParameter(status, "status");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 BtConstants.BT_STATUS bt_status = BtConstants.BT_STATUS.values()[changeState];
                 BtStatus btStatusFromJson = BtStatus.INSTANCE.fromJson(status);
-                Intrinsics.checkNotNull(btStatusFromJson);
+
                 btListener.updateBtStatus(bt_status, btStatusFromJson);
                 return;
             }
@@ -93,7 +93,7 @@ public final class BtManager {
         public void updateIsAutoConn(boolean autoConn) {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateIsAutoConn(autoConn);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -102,10 +102,10 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void updateName(String name) {
-            Intrinsics.checkNotNullParameter(name, "name");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateName(name);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -114,10 +114,10 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void onFoundDeviceChange(List<String> stringList) {
-            Intrinsics.checkNotNullParameter(stringList, "stringList");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onVisibleDeviceChange(BtUtil.INSTANCE.stringToDevices(stringList));
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -126,10 +126,10 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void onHfpConnChange(List<String> hfpList) {
-            Intrinsics.checkNotNullParameter(hfpList, "hfpList");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onHfpConnChange(BtUtil.INSTANCE.stringToDevices(hfpList));
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -138,10 +138,10 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void onCurrHfpAddressChange(String address) {
-            Intrinsics.checkNotNullParameter(address, "address");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onCurrHfpAddressChange(address);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -150,10 +150,10 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void onCurrA2dpAddressChange(String address) {
-            Intrinsics.checkNotNullParameter(address, "address");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onCurrA2dpAddressChange(address);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -164,7 +164,7 @@ public final class BtManager {
         public void onMicOutChange(boolean micOut) {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onMicOutChange(micOut);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -173,10 +173,10 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void onPairedChange(List<String> pairList) {
-            Intrinsics.checkNotNullParameter(pairList, "pairList");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.onPairedChange(BtUtil.INSTANCE.stringToDevices(pairList));
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -187,7 +187,7 @@ public final class BtManager {
         public void updateId3(String title, String artist, String album) {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateId3(title, artist, album);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -198,7 +198,7 @@ public final class BtManager {
         public void updateMicMute(boolean mute) {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateMicMute(mute);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -209,7 +209,7 @@ public final class BtManager {
         public void updateCallDevice(int callDevice) {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateCallDevice(BtConstants.CallDevice.values()[callDevice]);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -218,10 +218,10 @@ public final class BtManager {
 
         @Override // com.hzbhd.proxy.bluetooth.aidl.IBtCallback
         public void updateCall(List<String> call, String changeCall) {
-            Intrinsics.checkNotNullParameter(call, "call");
+
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateCall(BtUtil.INSTANCE.stringToCall(call), changeCall != null ? BtCall.INSTANCE.fromJson(changeCall) : null);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -232,7 +232,7 @@ public final class BtManager {
         public void updateWechatCall(String changeCall) {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateWechatCall(changeCall != null ? BtCall.INSTANCE.fromJson(changeCall) : null);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -243,7 +243,7 @@ public final class BtManager {
         public void updateIsAutoAnswer(boolean autoAnswer) {
             if (mBtListener != null) {
                 BtListener btListener = mBtListener;
-                Intrinsics.checkNotNull(btListener);
+
                 btListener.updateIsAutoAnswer(autoAnswer);
             } else if (LogUtil.log3()) {
                 LogUtil.d("iBtCallback: listener is null");
@@ -290,7 +290,7 @@ public final class BtManager {
 
     /* JADX INFO: Access modifiers changed from: private */
     public static final void _get_iBtManager_$lambda$1$lambda$0(BtManager this$0) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         this$0.mIBtManager = null;
     }
 
@@ -324,7 +324,7 @@ public final class BtManager {
     }
 
     public final void setIBtCallback(IBtCallback iBtCallback) {
-        Intrinsics.checkNotNullParameter(iBtCallback, "<set-?>");
+
         this.iBtCallback = iBtCallback;
     }
 
@@ -359,7 +359,7 @@ public final class BtManager {
     }
 
     public final void sendAction(BtConstants.BT_ACTION action) {
-        Intrinsics.checkNotNullParameter(action, "action");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager != null) {
@@ -371,7 +371,7 @@ public final class BtManager {
     }
 
     public final void sendDeviceAction(BtConstants.BT_ACTION action, String address) {
-        Intrinsics.checkNotNullParameter(action, "action");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager != null) {
@@ -386,9 +386,9 @@ public final class BtManager {
         try {
             BtStatus.Companion companion = BtStatus.INSTANCE;
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             BtStatus btStatusFromJson = companion.fromJson(iBtManager.getState());
-            Intrinsics.checkNotNull(btStatusFromJson);
+
             return btStatusFromJson;
         } catch (Exception e) {
             e.printStackTrace();
@@ -397,7 +397,7 @@ public final class BtManager {
     }
 
     public final void call(String num) {
-        Intrinsics.checkNotNullParameter(num, "num");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager != null) {
@@ -411,7 +411,7 @@ public final class BtManager {
     public final boolean isAutoConn() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.isAutoConn();
         } catch (Exception e) {
             e.printStackTrace();
@@ -422,9 +422,9 @@ public final class BtManager {
     public final String getName() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             String name = iBtManager.getName();
-            Intrinsics.checkNotNullExpressionValue(name, "iBtManager!!.name");
+
             return name;
         } catch (Exception e) {
             e.printStackTrace();
@@ -433,7 +433,7 @@ public final class BtManager {
     }
 
     public final void setName(String name) {
-        Intrinsics.checkNotNullParameter(name, "name");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager == null) {
@@ -449,9 +449,9 @@ public final class BtManager {
         try {
             BtUtil btUtil = BtUtil.INSTANCE;
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             List<String> pairedHfp = iBtManager.getPairedHfp();
-            Intrinsics.checkNotNullExpressionValue(pairedHfp, "iBtManager!!.pairedHfp");
+
             return btUtil.stringToDevices(pairedHfp);
         } catch (Exception e) {
             e.printStackTrace();
@@ -463,9 +463,9 @@ public final class BtManager {
         try {
             BtUtil btUtil = BtUtil.INSTANCE;
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             List<String> conHfp = iBtManager.getConHfp();
-            Intrinsics.checkNotNullExpressionValue(conHfp, "iBtManager!!.conHfp");
+
             return btUtil.stringToDevices(conHfp);
         } catch (Exception e) {
             e.printStackTrace();
@@ -476,9 +476,9 @@ public final class BtManager {
     public final String getLocalAddress() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             String localAddress = iBtManager.getLocalAddress();
-            Intrinsics.checkNotNullExpressionValue(localAddress, "iBtManager!!.localAddress");
+
             return localAddress;
         } catch (Exception e) {
             e.printStackTrace();
@@ -489,9 +489,9 @@ public final class BtManager {
     public final String getCurrA2dpAddress() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             String currA2dpAddress = iBtManager.getCurrA2dpAddress();
-            Intrinsics.checkNotNullExpressionValue(currA2dpAddress, "iBtManager!!.currA2dpAddress");
+
             return currA2dpAddress;
         } catch (Exception e) {
             e.printStackTrace();
@@ -502,9 +502,9 @@ public final class BtManager {
     public final String getCurrHfpAddress() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             String currHfpAddress = iBtManager.getCurrHfpAddress();
-            Intrinsics.checkNotNullExpressionValue(currHfpAddress, "iBtManager!!.currHfpAddress");
+
             return currHfpAddress;
         } catch (Exception e) {
             e.printStackTrace();
@@ -515,7 +515,7 @@ public final class BtManager {
     public final String getMusicTitle() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.getMusicTitle();
         } catch (Exception e) {
             e.printStackTrace();
@@ -526,7 +526,7 @@ public final class BtManager {
     public final String getMusicAlbum() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.getMusicAlbum();
         } catch (Exception e) {
             e.printStackTrace();
@@ -537,7 +537,7 @@ public final class BtManager {
     public final String getMusicArtist() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.getMusicArtist();
         } catch (Exception e) {
             e.printStackTrace();
@@ -548,7 +548,7 @@ public final class BtManager {
     public final boolean isMicOut() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.isMicOut();
         } catch (Exception e) {
             e.printStackTrace();
@@ -559,7 +559,7 @@ public final class BtManager {
     public final boolean isMicMute() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.isMicMute();
         } catch (Exception e) {
             e.printStackTrace();
@@ -571,7 +571,7 @@ public final class BtManager {
         try {
             BtConstants.CallDevice[] callDeviceArrValues = BtConstants.CallDevice.values();
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return callDeviceArrValues[iBtManager.getCallDevice()];
         } catch (Exception e) {
             e.printStackTrace();
@@ -580,7 +580,7 @@ public final class BtManager {
     }
 
     public final void sendKey(String key) {
-        Intrinsics.checkNotNullParameter(key, "key");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager != null) {
@@ -592,8 +592,8 @@ public final class BtManager {
     }
 
     public final void sendKey(BtCall btCall, String key) {
-        Intrinsics.checkNotNullParameter(btCall, "btCall");
-        Intrinsics.checkNotNullParameter(key, "key");
+
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager != null) {
@@ -607,7 +607,7 @@ public final class BtManager {
     public final boolean getPairMode() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.getPairMode();
         } catch (Exception e) {
             e.printStackTrace();
@@ -618,9 +618,9 @@ public final class BtManager {
     public final String getPinCode() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             String pinCode = iBtManager.getPinCode();
-            Intrinsics.checkNotNullExpressionValue(pinCode, "iBtManager!!.pinCode");
+
             return pinCode;
         } catch (Exception e) {
             e.printStackTrace();
@@ -629,7 +629,7 @@ public final class BtManager {
     }
 
     public final void setPinCode(String pinCode) {
-        Intrinsics.checkNotNullParameter(pinCode, "pinCode");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager == null) {
@@ -644,7 +644,7 @@ public final class BtManager {
     public final boolean enableWechatFilter() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.enableWechatFilter();
         } catch (Exception e) {
             e.printStackTrace();
@@ -655,7 +655,7 @@ public final class BtManager {
     public final boolean isWechatFilter() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.isWechatFilter();
         } catch (Exception e) {
             e.printStackTrace();
@@ -679,9 +679,9 @@ public final class BtManager {
         try {
             BtUtil btUtil = BtUtil.INSTANCE;
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             List<String> call = iBtManager.getCall();
-            Intrinsics.checkNotNullExpressionValue(call, "iBtManager!!.call");
+
             return btUtil.stringToCall(call);
         } catch (Exception e) {
             e.printStackTrace();
@@ -690,7 +690,7 @@ public final class BtManager {
     }
 
     public final void answer(BtCall call) {
-        Intrinsics.checkNotNullParameter(call, "call");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager != null) {
@@ -702,7 +702,7 @@ public final class BtManager {
     }
 
     public final void handup(BtCall call) {
-        Intrinsics.checkNotNullParameter(call, "call");
+
         try {
             IBtManager iBtManager = getIBtManager();
             if (iBtManager != null) {
@@ -727,7 +727,7 @@ public final class BtManager {
     public final boolean isAutoAnswer() {
         try {
             IBtManager iBtManager = getIBtManager();
-            Intrinsics.checkNotNull(iBtManager);
+
             return iBtManager.isAutoAnswer();
         } catch (Exception e) {
             e.printStackTrace();

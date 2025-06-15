@@ -14,7 +14,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private boolean mIsClickReset = false;

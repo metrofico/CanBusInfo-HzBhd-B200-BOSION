@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class SetTimeView {
     Button cancel;
     Button hours_down;

@@ -12,7 +12,7 @@ import androidx.core.app.ActivityCompat;
 import java.util.Calendar;
 import java.util.Iterator;
 
-/* loaded from: classes2.dex */
+
 public class GPSTimeManager {
     private static GPSTimeManager mGPSTimeManager;
     private LocationManager locationManager;

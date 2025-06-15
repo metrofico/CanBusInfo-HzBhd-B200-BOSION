@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final /* synthetic */ boolean $assertionsDisabled = false;
     static final String SHARE_353_AMPLIFIER_BALANCE = "share_122_amplifier_balance";

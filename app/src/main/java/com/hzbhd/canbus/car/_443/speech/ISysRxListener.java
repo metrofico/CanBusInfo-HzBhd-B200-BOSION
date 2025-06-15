@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._443.speech;
 
 import com.hzbhd.canbus.car._443.speech.STxData;
 
-/* loaded from: classes2.dex */
+
 public interface ISysRxListener {
     void AcAir(boolean z);
 

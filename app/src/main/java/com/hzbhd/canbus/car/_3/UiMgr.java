@@ -3,6 +3,7 @@ package com.hzbhd.canbus.car._3;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Looper;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AmplifierActivity;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
@@ -12,7 +13,6 @@ import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener;
-import com.hzbhd.canbus.car._3.MsgMgr;
 import com.hzbhd.canbus.interfaces.MsgMgrInterface;
 import com.hzbhd.canbus.interfaces.OnAmplifierPositionListener;
 import com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener;
@@ -31,19 +31,14 @@ import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.constant.disc.MpegConstantsDef;
-import com.hzbhd.constant.share.lcd.LcdInfoShare;
 import com.hzbhd.midware.constant.HotKeyConstant;
-import kotlin.Metadata;
-import kotlin.jvm.internal.ByteCompanionObject;
-import kotlin.jvm.internal.Intrinsics;
-import kotlin.ranges.RangesKt;
-import kotlinx.coroutines.scheduling.WorkQueueKt;
-import nfore.android.bt.res.NfDef;
+
 import org.apache.log4j.net.SyslogAppender;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0002\u0018\u0000 \u00172\u00020\u0001:\u0001\u0017B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0010\u0010\u000b\u001a\u00020\n2\u0006\u0010\u0002\u001a\u00020\u0003H\u0016J\u0018\u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u000fH\u0002J\u0010\u0010\f\u001a\u00020\r2\u0006\u0010\u0011\u001a\u00020\u0012H\u0002J\u0014\u0010\u0013\u001a\u00020\u000f*\u00020\u000f2\u0006\u0010\u0014\u001a\u00020\u000fH\u0002J\f\u0010\u0015\u001a\u00020\u000f*\u00020\u0016H\u0002R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0018"}, d2 = {"Lcom/hzbhd/canbus/car/_3/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mHandler", "Landroid/os/Handler;", "mMsgMgr", "Lcom/hzbhd/canbus/car/_3/MsgMgr;", "mPanoramicView", "Lcom/hzbhd/canbus/car/_3/MyPanoramicView;", "getCusPanoramicView", "sendAirCommand", "", "command", "", "param", LcdInfoShare.MediaInfo.title, "", "cycle", "max", "switch", "", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+import kotlin.ranges.RangesKt;
+import nfore.android.bt.res.NfDef;
+
+
 public final class UiMgr extends AbstractUiMgr {
     private static final String TAG = "_3_UiMgr";
     private final Handler mHandler;
@@ -64,20 +59,22 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public UiMgr(final Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(context);
-        Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._3.MsgMgr");
+
         this.mMsgMgr = (MsgMgr) canMsgMgr;
         this.mHandler = new Handler(Looper.getMainLooper());
         this.mPanoramicView = new MyPanoramicView(context);
         AirPageUiSet airUiSet = getAirUiSet(context);
         final FrontArea frontArea = airUiSet.getFrontArea();
         OnAirBtnClickListener[] onAirBtnClickListenerArr = new OnAirBtnClickListener[4];
-        for (final int i = 0; i < 4; i++) {
+        for (int i = 0; i < 4; i++) {
+            int finalI = i;
             onAirBtnClickListenerArr[i] = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda0
                 @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
                 public final void onClickItem(int i2) {
-                    UiMgr.m397lambda6$lambda1$lambda0(this.f$0, frontArea, i, i2);
+                    String str = frontArea.getLineBtnAction()[finalI][i2];
+                    sendAirCommand(str);
                 }
             };
         }
@@ -85,33 +82,33 @@ public final class UiMgr extends AbstractUiMgr {
         frontArea.setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$1$2
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
             public void onClickUp() {
-                this.this$0.sendAirCommand(184, 1);
+                sendAirCommand(184, 1);
             }
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
             public void onClickDown() {
-                this.this$0.sendAirCommand(184, 0);
+                sendAirCommand(184, 0);
             }
         }, null, new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$1$3
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
             public void onClickUp() {
-                this.this$0.sendAirCommand(HotKeyConstant.K_CAN_CONFIG, 1);
+                sendAirCommand(HotKeyConstant.K_CAN_CONFIG, 1);
             }
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
             public void onClickDown() {
-                this.this$0.sendAirCommand(HotKeyConstant.K_CAN_CONFIG, 0);
+                sendAirCommand(HotKeyConstant.K_CAN_CONFIG, 0);
             }
         }});
         frontArea.setSetWindSpeedViewOnClickListener(new OnAirWindSpeedUpDownClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$1$4
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener
             public void onClickLeft() {
-                this.this$0.sendAirCommand(HotKeyConstant.K_HOUR, RangesKt.coerceAtLeast(GeneralAirData.front_wind_level - 1, 0));
+                sendAirCommand(HotKeyConstant.K_HOUR, RangesKt.coerceAtLeast(GeneralAirData.front_wind_level - 1, 0));
             }
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener
             public void onClickRight() {
-                this.this$0.sendAirCommand(HotKeyConstant.K_HOUR, RangesKt.coerceAtMost(GeneralAirData.front_wind_level + 1, frontArea.getWindMaxLevel()));
+                sendAirCommand(HotKeyConstant.K_HOUR, RangesKt.coerceAtMost(GeneralAirData.front_wind_level + 1, frontArea.getWindMaxLevel()));
             }
         });
         frontArea.setSeatHeatColdClickListeners(new OnAirSeatHeatColdMinPlusClickListener[]{new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$1$5
@@ -121,8 +118,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
             public void onClickPlus() {
-                UiMgr uiMgr = this.this$0;
-                uiMgr.sendAirCommand(173, uiMgr.cycle(GeneralAirData.front_left_seat_heat_level, frontArea.getSeatHeatSrnArray().length - 1));
+                sendAirCommand(173, cycle(GeneralAirData.front_left_seat_heat_level, frontArea.getSeatHeatSrnArray().length - 1));
             }
         }, new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$1$6
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
@@ -131,8 +127,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
             public void onClickPlus() {
-                UiMgr uiMgr = this.this$0;
-                uiMgr.sendAirCommand(174, uiMgr.cycle(GeneralAirData.front_right_seat_heat_level, frontArea.getSeatHeatSrnArray().length - 1));
+                sendAirCommand(174, cycle(GeneralAirData.front_right_seat_heat_level, frontArea.getSeatHeatSrnArray().length - 1));
             }
         }, new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$1$7
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
@@ -141,8 +136,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
             public void onClickPlus() {
-                UiMgr uiMgr = this.this$0;
-                uiMgr.sendAirCommand(191, uiMgr.cycle(GeneralAirData.front_left_seat_cold_level, frontArea.getSeatColdSrnArray().length - 1));
+                sendAirCommand(191, cycle(GeneralAirData.front_left_seat_cold_level, frontArea.getSeatColdSrnArray().length - 1));
             }
         }, new OnAirSeatHeatColdMinPlusClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$1$8
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
@@ -151,114 +145,515 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirSeatHeatColdMinPlusClickListener
             public void onClickPlus() {
-                UiMgr uiMgr = this.this$0;
-                uiMgr.sendAirCommand(192, uiMgr.cycle(GeneralAirData.front_right_seat_cold_level, frontArea.getSeatColdSrnArray().length - 1));
+                sendAirCommand(192, cycle(GeneralAirData.front_right_seat_cold_level, frontArea.getSeatColdSrnArray().length - 1));
             }
         }});
         final RearArea rearArea = airUiSet.getRearArea();
         rearArea.setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda1
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i2) {
-                UiMgr.m398lambda6$lambda5$lambda2(this.f$0, rearArea, i2);
+                String str = rearArea.getLineBtnAction()[0][i2];
+                sendAirCommand(str);
             }
         }, null, null, new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda2
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
             public final void onClickItem(int i2) {
-                UiMgr.m399lambda6$lambda5$lambda3(this.f$0, rearArea, i2);
+                String str = rearArea.getLineBtnAction()[3][i2];
+                sendAirCommand(str);
             }
         }});
-        rearArea.setTempSetViewOnUpDownClickListeners(new UiMgr$1$2$3[]{null, new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$2$3
-            @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+
+        rearArea.setTempSetViewOnUpDownClickListeners(new OnAirTemperatureUpDownClickListener[]{new OnAirTemperatureUpDownClickListener() {
+            @Override
+            // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
             public void onClickUp() {
-                this.this$0.sendAirCommand(186, 1);
+                sendAirCommand(186, 1);
             }
 
-            @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
+            @Override
+            // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
             public void onClickDown() {
-                this.this$0.sendAirCommand(186, 0);
+                sendAirCommand(186, 0);
             }
-        }, null});
+        }});
         rearArea.setSetWindSpeedViewOnClickListener(new OnAirWindSpeedUpDownClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$1$2$5
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener
             public void onClickLeft() {
-                this.this$0.sendAirCommand(40, RangesKt.coerceAtLeast(GeneralAirData.rear_wind_level - 1, 0));
+                sendAirCommand(40, RangesKt.coerceAtLeast(GeneralAirData.rear_wind_level - 1, 0));
             }
 
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener
             public void onClickRight() {
-                this.this$0.sendAirCommand(40, RangesKt.coerceAtMost(GeneralAirData.rear_wind_level + 1, rearArea.getWindMaxLevel()));
+                sendAirCommand(40, RangesKt.coerceAtMost(GeneralAirData.rear_wind_level + 1, rearArea.getWindMaxLevel()));
             }
         });
-        final SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        settingUiSet.setOnSettingItemSelectListener(new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda3
+        getSettingUiSet(context).setOnSettingItemSelectListener(new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda3
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
             public final void onClickItem(int i2, int i3, int i4) {
-                UiMgr.m393lambda12$lambda7(settingUiSet, i2, i3, i4);
+                UiMgr.m393lambda12$lambda7(getSettingUiSet(context), i2, i3, i4);
             }
         });
-        settingUiSet.setOnSettingItemSwitchListener(new OnSettingItemSwitchListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda4
+        getSettingUiSet(context).setOnSettingItemSwitchListener(new OnSettingItemSwitchListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda4
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSwitchListener
-            public final void onSwitch(int i2, int i3, int i4) {
-                UiMgr.m394lambda12$lambda8(settingUiSet, this, i2, i3, i4);
+            public final void onSwitch(int i, int i2, int i3) {
+                String titleSrn = getSettingUiSet(context).getList().get(i).getItemList().get(i2).getTitleSrn();
+                if (titleSrn != null) {
+                    switch (titleSrn.hashCode()) {
+                        case -2087556778:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mirror_wipers_auto_wiping")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 98, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1955990015:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_travelling_time")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -124, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1835574973:
+                            if (titleSrn.equals("_2_settings_lower_while_reversing")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 97, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1792009119:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_eco_tips")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -125, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1685396382:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_distance_travelled")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -123, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1626662470:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_current_consumption")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, Byte.MIN_VALUE, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1552511302:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_driver_assistance_lane_assisit")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 54, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1454223666:
+                            if (titleSrn.equals("inductive_trunk_lid")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 116, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1417441837:
+                            if (titleSrn.equals("parking_brake_function")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 58, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1369742382:
+                            if (titleSrn.equals("driving_out_of_the_parking_space")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 59, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1274837915:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_con_consumers")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -126, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1248570349:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_avg_consumption")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -127, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1062929027:
+                            if (titleSrn.equals("_303_setting_content_11")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 102, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1062929026:
+                            if (titleSrn.equals("_303_setting_content_12")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 103, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -1062929025:
+                            if (titleSrn.equals("_303_setting_content_13")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 104, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -897027326:
+                            if (titleSrn.equals("hillDescentAssist")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -27, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -834987329:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_avg_speed")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -122, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -725720196:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_open_close_auto_locking")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 114, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -710443082:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_background_lighting")) {
+                                if (i3 == 0) {
+                                    CanbusMsgSender.sendMsg(new byte[]{22, -58, 76, 0});
+                                    break;
+                                } else if (i3 == 1) {
+                                    CanbusMsgSender.sendMsg(new byte[]{22, -58, 76, (byte) mMsgMgr.getMColour()});
+                                    break;
+                                }
+                            }
+                            break;
+                        case -585729983:
+                            if (titleSrn.equals("parkingAssist")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -25, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -578117088:
+                            if (titleSrn.equals("_283_car_setting_light_4")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -56, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -576263338:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mirror_wipers_rear_window_wiping")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 99, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -424337997:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_driver_assistance_last_distance_selected")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 50, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -184768695:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_speed_warning")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -120, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -140298758:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_parking_active_auto")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 64, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case -46292327:
+                            if (titleSrn.equals("individual")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -96, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 115233015:
+                            if (titleSrn.equals("_3_40h_31h_p3_b0")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 57, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 178210912:
+                            if (titleSrn.equals("_2_settings_syncchronous_adjustment")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 96, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 179817561:
+                            if (titleSrn.equals("_3_40h_20h_p1_b0")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 32, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 278137725:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_light_auto_control")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 81, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 362469612:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_oil_temperature")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -119, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 455816650:
+                            if (titleSrn.equals("two_color_sync")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 79, (byte) (1 - i3)});
+                                break;
+                            }
+                            break;
+                        case 620816228:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_light_lane_change_flash")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 82, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 678740831:
+                            if (titleSrn.equals("_3_21h_d8_b7")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 41, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 887148936:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_digital_speed_display")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -121, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 982307432:
+                            if (titleSrn.equals("_2_setting_2_0")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 48, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 982314164:
+                            if (titleSrn.equals("_2_setting_9_5")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 115, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 982314165:
+                            if (titleSrn.equals("_2_setting_9_6")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 117, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1192434642:
+                            if (titleSrn.equals("air_conditioning_is_powered_by_battery")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -13, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1253361596:
+                            if (titleSrn.equals("driver_seat")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -55, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1329380962:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_light_dynamic_light_assist")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 90, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1468626858:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_light_dynamic_light_follow")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 89, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1539964092:
+                            if (titleSrn.equals("_3_40h_60h_p2_b0")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 100, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1582870156:
+                            if (titleSrn.equals("hillHoidAssist")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -26, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1849560298:
+                            if (titleSrn.equals("vm_golf7_vehicle_setup_service_wiper_in_maintenance_position")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -116, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 1987301822:
+                            if (titleSrn.equals("_3_40h_10h_p2_b7")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 17, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 2105117358:
+                            if (titleSrn.equals("_283_car_setting_pa_1")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 51, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 2105117359:
+                            if (titleSrn.equals("_283_car_setting_pa_2")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 52, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 2105117360:
+                            if (titleSrn.equals("_283_car_setting_pa_3")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 53, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 2105117363:
+                            if (titleSrn.equals("_283_car_setting_pa_6")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 49, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 2105117364:
+                            if (titleSrn.equals("_283_car_setting_pa_7")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 61, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 2105117365:
+                            if (titleSrn.equals("_283_car_setting_pa_8")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 62, (byte) i3});
+                                break;
+                            }
+                            break;
+                        case 2136472732:
+                            if (titleSrn.equals("seat_remote_key_memory_matching")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, -53, (byte) i3});
+                                break;
+                            }
+                            break;
+                    }
+                }
             }
         });
-        settingUiSet.setOnSettingItemSeekbarSelectListener(new OnSettingItemSeekbarSelectListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda5
+        getSettingUiSet(context).setOnSettingItemSeekbarSelectListener(new OnSettingItemSeekbarSelectListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda5
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSeekbarSelectListener
             public final void onClickItem(int i2, int i3, int i4) {
-                UiMgr.m395lambda12$lambda9(settingUiSet, i2, i3, i4);
+                UiMgr.m395lambda12$lambda9(getSettingUiSet(context), i2, i3, i4);
             }
         });
-        settingUiSet.setOnSettingConfirmDialogListener(new OnConfirmDialogListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda6
+        getSettingUiSet(context).setOnSettingConfirmDialogListener(new OnConfirmDialogListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda6
             @Override // com.hzbhd.canbus.interfaces.OnConfirmDialogListener
             public final void onConfirmClick(int i2, int i3) {
-                UiMgr.m391lambda12$lambda10(settingUiSet, i2, i3);
+                UiMgr.m391lambda12$lambda10(getSettingUiSet(context), i2, i3);
             }
         });
-        settingUiSet.setOnSettingItemSeekbarSetTextListener(new OnSettingItemSeekbarSetTextListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda7
+        getSettingUiSet(context).setOnSettingItemSeekbarSetTextListener(new OnSettingItemSeekbarSetTextListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda7
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSeekbarSetTextListener
             public final String onSetText(int i2, int i3, int i4) {
-                return UiMgr.m392lambda12$lambda11(settingUiSet, context, i2, i3, i4);
+                return UiMgr.m392lambda12$lambda11(getSettingUiSet(context), context, i2, i3, i4);
             }
         });
         final ParkPageUiSet parkPageUiSet = getParkPageUiSet(context);
         parkPageUiSet.setOnPanoramicItemClickListener(new OnPanoramicItemClickListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$$ExternalSyntheticLambda8
             @Override // com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener
             public final void onClickItem(int i2) {
-                UiMgr.m396lambda14$lambda13(parkPageUiSet, this, context, i2);
+                String titleSrn = parkPageUiSet.getPanoramicBtnList().get(i2).getTitleSrn();
+                if (titleSrn != null) {
+                    int iHashCode = titleSrn.hashCode();
+                    switch (iHashCode) {
+                        case -1932462487:
+                            if (titleSrn.equals("_253_front_view")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 0});
+                                break;
+                            }
+                            break;
+                        case -1705162449:
+                            if (titleSrn.equals("_250_exit")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 105, 0});
+                                break;
+                            }
+                            break;
+                        case -1483394203:
+                            if (titleSrn.equals("_94_parallel_parking")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 1});
+                                break;
+                            }
+                            break;
+                        case -1219351889:
+                            if (titleSrn.equals("_253_left_view")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 1});
+                                break;
+                            }
+                            break;
+                        case -404582956:
+                            if (titleSrn.equals("_94_vertical_parking")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 0});
+                                break;
+                            }
+                            break;
+                        case 621013810:
+                            if (titleSrn.equals("_253_rear_view")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 2});
+                                break;
+                            }
+                            break;
+                        case 1298895446:
+                            if (titleSrn.equals("_253_right_view")) {
+                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 3});
+                                break;
+                            }
+                            break;
+                        case 1981264262:
+                            if (titleSrn.equals("color_set")) {
+                                getCusPanoramicView(context).showHideWindow();
+                                break;
+                            }
+                            break;
+                        default:
+                            switch (iHashCode) {
+                                case -1907444892:
+                                    if (titleSrn.equals("_3_c6h_46h_2")) {
+                                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 2});
+                                        break;
+                                    }
+                                    break;
+                                case -1907444891:
+                                    if (titleSrn.equals("_3_c6h_46h_3")) {
+                                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 3});
+                                        break;
+                                    }
+                                    break;
+                                case -1907444890:
+                                    if (titleSrn.equals("_3_c6h_46h_4")) {
+                                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 4});
+                                        break;
+                                    }
+                                    break;
+                                case -1907444889:
+                                    if (titleSrn.equals("_3_c6h_46h_5")) {
+                                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 5});
+                                        break;
+                                    }
+                                    break;
+                                case -1907444888:
+                                    if (titleSrn.equals("_3_c6h_46h_6")) {
+                                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 6});
+                                        break;
+                                    }
+                                    break;
+                            }
+                    }
+                }
             }
         });
         AmplifierPageUiSet amplifierPageUiSet = getAmplifierPageUiSet(context);
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$4$1
 
-            /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
-            public /* synthetic */ class WhenMappings {
-                public static final /* synthetic */ int[] $EnumSwitchMapping$0;
-
-                static {
-                    int[] iArr = new int[AmplifierActivity.AmplifierBand.values().length];
-                    iArr[AmplifierActivity.AmplifierBand.VOLUME.ordinal()] = 1;
-                    iArr[AmplifierActivity.AmplifierBand.TREBLE.ordinal()] = 2;
-                    iArr[AmplifierActivity.AmplifierBand.MIDDLE.ordinal()] = 3;
-                    iArr[AmplifierActivity.AmplifierBand.BASS.ordinal()] = 4;
-                    $EnumSwitchMapping$0 = iArr;
-                }
-            }
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public void progress(AmplifierActivity.AmplifierBand amplifierBand, int progress) {
-                Intrinsics.checkNotNullParameter(amplifierBand, "amplifierBand");
-                int i2 = WhenMappings.$EnumSwitchMapping$0[amplifierBand.ordinal()];
-                if (i2 == 1) {
+
+                if (AmplifierActivity.AmplifierBand.VOLUME == amplifierBand) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -88, 0, (byte) progress});
                     return;
                 }
-                if (i2 == 2) {
+                if (AmplifierActivity.AmplifierBand.TREBLE == amplifierBand) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -88, 1, (byte) progress});
-                } else if (i2 == 3) {
+                } else if (AmplifierActivity.AmplifierBand.MIDDLE == amplifierBand) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -88, 2, (byte) progress});
                 } else {
-                    if (i2 != 4) {
+                    if (AmplifierActivity.AmplifierBand.BASS != amplifierBand) {
                         return;
                     }
                     CanbusMsgSender.sendMsg(new byte[]{22, -88, 3, (byte) progress});
@@ -267,27 +662,13 @@ public final class UiMgr extends AbstractUiMgr {
         });
         amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._3.UiMgr$4$2
 
-            /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
-            public /* synthetic */ class WhenMappings {
-                public static final /* synthetic */ int[] $EnumSwitchMapping$0;
-
-                static {
-                    int[] iArr = new int[AmplifierActivity.AmplifierPosition.values().length];
-                    iArr[AmplifierActivity.AmplifierPosition.FRONT_REAR.ordinal()] = 1;
-                    iArr[AmplifierActivity.AmplifierPosition.LEFT_RIGHT.ordinal()] = 2;
-                    $EnumSwitchMapping$0 = iArr;
-                }
-            }
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
             public void position(AmplifierActivity.AmplifierPosition amplifierPosition, int value) {
-                Intrinsics.checkNotNullParameter(amplifierPosition, "amplifierPosition");
-                int i2 = WhenMappings.$EnumSwitchMapping$0[amplifierPosition.ordinal()];
-                if (i2 == 1) {
+                if (AmplifierActivity.AmplifierPosition.FRONT_REAR == amplifierPosition) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -88, 4, (byte) (value + 9)});
                 } else {
-                    if (i2 != 2) {
+                    if (amplifierPosition != AmplifierActivity.AmplifierPosition.LEFT_RIGHT) {
                         return;
                     }
                     CanbusMsgSender.sendMsg(new byte[]{22, -88, 5, (byte) (value + 9)});
@@ -299,29 +680,10 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-6$lambda-1$lambda-0, reason: not valid java name */
     public static final void m397lambda6$lambda1$lambda0(UiMgr this$0, FrontArea frontArea, int i, int i2) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        String str = frontArea.getLineBtnAction()[i][i2];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[it][position]");
-        this$0.sendAirCommand(str);
+
+
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: lambda-6$lambda-5$lambda-2, reason: not valid java name */
-    public static final void m398lambda6$lambda5$lambda2(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        String str = rearArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[0][position]");
-        this$0.sendAirCommand(str);
-    }
-
-    /* JADX INFO: Access modifiers changed from: private */
-    /* renamed from: lambda-6$lambda-5$lambda-3, reason: not valid java name */
-    public static final void m399lambda6$lambda5$lambda3(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        String str = rearArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[3][position]");
-        this$0.sendAirCommand(str);
-    }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
@@ -592,335 +954,8 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
     /* renamed from: lambda-12$lambda-8, reason: not valid java name */
     public static final void m394lambda12$lambda8(SettingPageUiSet settingPageUiSet, UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
-        if (titleSrn != null) {
-            switch (titleSrn.hashCode()) {
-                case -2087556778:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mirror_wipers_auto_wiping")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 98, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1955990015:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_travelling_time")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -124, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1835574973:
-                    if (titleSrn.equals("_2_settings_lower_while_reversing")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 97, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1792009119:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_eco_tips")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -125, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1685396382:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_distance_travelled")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -123, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1626662470:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_current_consumption")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, ByteCompanionObject.MIN_VALUE, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1552511302:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_driver_assistance_lane_assisit")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 54, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1454223666:
-                    if (titleSrn.equals("inductive_trunk_lid")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 116, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1417441837:
-                    if (titleSrn.equals("parking_brake_function")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 58, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1369742382:
-                    if (titleSrn.equals("driving_out_of_the_parking_space")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 59, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1274837915:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_con_consumers")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -126, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1248570349:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_avg_consumption")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -127, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1062929027:
-                    if (titleSrn.equals("_303_setting_content_11")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 102, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1062929026:
-                    if (titleSrn.equals("_303_setting_content_12")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 103, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -1062929025:
-                    if (titleSrn.equals("_303_setting_content_13")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 104, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -897027326:
-                    if (titleSrn.equals("hillDescentAssist")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -27, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -834987329:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_avg_speed")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -122, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -725720196:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_open_close_auto_locking")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 114, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -710443082:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_background_lighting")) {
-                        if (i3 == 0) {
-                            CanbusMsgSender.sendMsg(new byte[]{22, -58, 76, 0});
-                            break;
-                        } else if (i3 == 1) {
-                            CanbusMsgSender.sendMsg(new byte[]{22, -58, 76, (byte) this$0.mMsgMgr.getMColour()});
-                            break;
-                        }
-                    }
-                    break;
-                case -585729983:
-                    if (titleSrn.equals("parkingAssist")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -25, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -578117088:
-                    if (titleSrn.equals("_283_car_setting_light_4")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -56, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -576263338:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mirror_wipers_rear_window_wiping")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 99, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -424337997:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_driver_assistance_last_distance_selected")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 50, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -184768695:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_speed_warning")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -120, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -140298758:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_parking_active_auto")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 64, (byte) i3});
-                        break;
-                    }
-                    break;
-                case -46292327:
-                    if (titleSrn.equals("individual")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -96, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 115233015:
-                    if (titleSrn.equals("_3_40h_31h_p3_b0")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 57, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 178210912:
-                    if (titleSrn.equals("_2_settings_syncchronous_adjustment")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 96, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 179817561:
-                    if (titleSrn.equals("_3_40h_20h_p1_b0")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 32, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 278137725:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_light_auto_control")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 81, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 362469612:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_oil_temperature")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -119, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 455816650:
-                    if (titleSrn.equals("two_color_sync")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 79, (byte) (1 - i3)});
-                        break;
-                    }
-                    break;
-                case 620816228:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_light_lane_change_flash")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 82, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 678740831:
-                    if (titleSrn.equals("_3_21h_d8_b7")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 41, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 887148936:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_mfd_digital_speed_display")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -121, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 982307432:
-                    if (titleSrn.equals("_2_setting_2_0")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 48, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 982314164:
-                    if (titleSrn.equals("_2_setting_9_5")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 115, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 982314165:
-                    if (titleSrn.equals("_2_setting_9_6")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 117, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1192434642:
-                    if (titleSrn.equals("air_conditioning_is_powered_by_battery")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -13, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1253361596:
-                    if (titleSrn.equals("driver_seat")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -55, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1329380962:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_light_dynamic_light_assist")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 90, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1468626858:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_light_dynamic_light_follow")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 89, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1539964092:
-                    if (titleSrn.equals("_3_40h_60h_p2_b0")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 100, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1582870156:
-                    if (titleSrn.equals("hillHoidAssist")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -26, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1849560298:
-                    if (titleSrn.equals("vm_golf7_vehicle_setup_service_wiper_in_maintenance_position")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -116, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 1987301822:
-                    if (titleSrn.equals("_3_40h_10h_p2_b7")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 17, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 2105117358:
-                    if (titleSrn.equals("_283_car_setting_pa_1")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 51, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 2105117359:
-                    if (titleSrn.equals("_283_car_setting_pa_2")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 52, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 2105117360:
-                    if (titleSrn.equals("_283_car_setting_pa_3")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 53, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 2105117363:
-                    if (titleSrn.equals("_283_car_setting_pa_6")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 49, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 2105117364:
-                    if (titleSrn.equals("_283_car_setting_pa_7")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 61, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 2105117365:
-                    if (titleSrn.equals("_283_car_setting_pa_8")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 62, (byte) i3});
-                        break;
-                    }
-                    break;
-                case 2136472732:
-                    if (titleSrn.equals("seat_remote_key_memory_matching")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -53, (byte) i3});
-                        break;
-                    }
-                    break;
-            }
-        }
+
+
     }
 
     /* JADX INFO: Access modifiers changed from: private */
@@ -997,7 +1032,7 @@ public final class UiMgr extends AbstractUiMgr {
                     break;
                 case -376524840:
                     if (titleSrn.equals("second_color")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 78, (byte) ((i3 & WorkQueueKt.MASK) | 128)});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 78, (byte) ((i3 & 0x7F) | 128)});
                         break;
                     }
                     break;
@@ -1212,7 +1247,7 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: lambda-12$lambda-11, reason: not valid java name */
     public static final String m392lambda12$lambda11(SettingPageUiSet settingPageUiSet, Context context, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(context, "$context");
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             switch (titleSrn.hashCode()) {
@@ -1301,100 +1336,13 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: lambda-14$lambda-13, reason: not valid java name */
     public static final void m396lambda14$lambda13(ParkPageUiSet parkPageUiSet, UiMgr this$0, Context context, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        String titleSrn = parkPageUiSet.getPanoramicBtnList().get(i).getTitleSrn();
-        if (titleSrn != null) {
-            int iHashCode = titleSrn.hashCode();
-            switch (iHashCode) {
-                case -1932462487:
-                    if (titleSrn.equals("_253_front_view")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 0});
-                        break;
-                    }
-                    break;
-                case -1705162449:
-                    if (titleSrn.equals("_250_exit")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 105, 0});
-                        break;
-                    }
-                    break;
-                case -1483394203:
-                    if (titleSrn.equals("_94_parallel_parking")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 1});
-                        break;
-                    }
-                    break;
-                case -1219351889:
-                    if (titleSrn.equals("_253_left_view")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 1});
-                        break;
-                    }
-                    break;
-                case -404582956:
-                    if (titleSrn.equals("_94_vertical_parking")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 0});
-                        break;
-                    }
-                    break;
-                case 621013810:
-                    if (titleSrn.equals("_253_rear_view")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 2});
-                        break;
-                    }
-                    break;
-                case 1298895446:
-                    if (titleSrn.equals("_253_right_view")) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, 69, 3});
-                        break;
-                    }
-                    break;
-                case 1981264262:
-                    if (titleSrn.equals("color_set")) {
-                        this$0.getCusPanoramicView(context).showHideWindow();
-                        break;
-                    }
-                    break;
-                default:
-                    switch (iHashCode) {
-                        case -1907444892:
-                            if (titleSrn.equals("_3_c6h_46h_2")) {
-                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 2});
-                                break;
-                            }
-                            break;
-                        case -1907444891:
-                            if (titleSrn.equals("_3_c6h_46h_3")) {
-                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 3});
-                                break;
-                            }
-                            break;
-                        case -1907444890:
-                            if (titleSrn.equals("_3_c6h_46h_4")) {
-                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 4});
-                                break;
-                            }
-                            break;
-                        case -1907444889:
-                            if (titleSrn.equals("_3_c6h_46h_5")) {
-                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 5});
-                                break;
-                            }
-                            break;
-                        case -1907444888:
-                            if (titleSrn.equals("_3_c6h_46h_6")) {
-                                CanbusMsgSender.sendMsg(new byte[]{22, -58, 70, 6});
-                                break;
-                            }
-                            break;
-                    }
-            }
-        }
+
+
     }
 
     @Override // com.hzbhd.canbus.ui_mgr.AbstractUiMgr, com.hzbhd.canbus.interfaces.UiMgrInterface
     public MyPanoramicView getCusPanoramicView(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         return this.mPanoramicView;
     }
 

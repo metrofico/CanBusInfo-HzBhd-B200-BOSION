@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class BluetoothView extends RelativeLayout {
     private static final int BUTTOM = 4;
     private static final int LEFT = 0;

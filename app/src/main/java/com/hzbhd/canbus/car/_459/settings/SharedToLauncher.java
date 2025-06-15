@@ -4,7 +4,7 @@ import com.hzbhd.canbus.car._459.tbox_wifi.TboxWifiState;
 import com.hzbhd.canbus.control.CanbusInfoChangeListener;
 import com.hzbhd.constant.share.ShareConstants;
 
-/* loaded from: classes2.dex */
+
 public class SharedToLauncher {
     public void syncStateToLauncher() {
         notifyOtherModule("BL", Integer.valueOf(OptionSettingsCmd459.getInstance().getBL()));

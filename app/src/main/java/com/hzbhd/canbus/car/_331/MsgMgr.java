@@ -5,7 +5,7 @@ import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int[] mCanBusInfoInt;
     private Context mContext;

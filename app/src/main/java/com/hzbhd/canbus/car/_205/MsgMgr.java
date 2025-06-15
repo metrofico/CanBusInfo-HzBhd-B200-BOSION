@@ -20,7 +20,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int SEND_GIVEN_MEDIA_MESSAGE = 1;
     private static final int SEND_NORMAL_MESSAGE = 2;

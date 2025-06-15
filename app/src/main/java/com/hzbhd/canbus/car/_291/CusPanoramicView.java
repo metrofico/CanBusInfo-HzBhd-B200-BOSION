@@ -10,7 +10,7 @@ import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._291.RadarView;
 import com.hzbhd.canbus.ui_datas.GeneralParkData;
 
-/* loaded from: classes2.dex */
+
 public class CusPanoramicView extends RelativeLayout {
     private ImageView baselineImage;
     private int[] leftImageTracks;

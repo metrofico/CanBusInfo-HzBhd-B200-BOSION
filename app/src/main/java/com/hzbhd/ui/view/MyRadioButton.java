@@ -179,7 +179,7 @@ public class MyRadioButton extends RadioButton {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MyRadioButton(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
 
         this.mDrawablePaint = createPaint();
         init(context, null);
@@ -195,8 +195,8 @@ public class MyRadioButton extends RadioButton {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MyRadioButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.mDrawablePaint = createPaint();
         init(context, attrs);
     }
@@ -204,8 +204,8 @@ public class MyRadioButton extends RadioButton {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MyRadioButton(Context context, AttributeSet attrs, int i) {
         super(context, attrs, i);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.mDrawablePaint = createPaint();
         init(context, attrs);
     }
@@ -213,8 +213,8 @@ public class MyRadioButton extends RadioButton {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public MyRadioButton(Context context, AttributeSet attrs, int i, int i2) {
         super(context, attrs, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.mDrawablePaint = createPaint();
         init(context, attrs);
     }
@@ -315,7 +315,7 @@ public class MyRadioButton extends RadioButton {
             matrix.postScale(drawWidth / bitmap.getWidth(), drawHeight / bitmap.getHeight());
         }
         Bitmap bitmapCreateBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-        Intrinsics.checkNotNullExpressionValue(bitmapCreateBitmap, "createBitmap(bitmap, 0, …map.height, matrix, true)");
+
         return bitmapCreateBitmap;
     }
 

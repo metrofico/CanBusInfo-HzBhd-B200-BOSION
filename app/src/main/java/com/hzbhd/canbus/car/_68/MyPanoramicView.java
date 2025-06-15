@@ -7,7 +7,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class MyPanoramicView extends RelativeLayout {
     int mRearCarStatus;
     private ImageView mRearCarWarnLeft1;

@@ -17,32 +17,32 @@ public final class BtApi {
     }
 
     public final void pair(String address) {
-        Intrinsics.checkNotNullParameter(address, "address");
+
         BtAdapter.INSTANCE.pair(address, true);
     }
 
     public final void unPair(String address) {
-        Intrinsics.checkNotNullParameter(address, "address");
+
         BtAdapter.INSTANCE.pair(address, false);
     }
 
     public final void connHfp(String address) {
-        Intrinsics.checkNotNullParameter(address, "address");
+
         BtAdapter.INSTANCE.connectHfp(address, true);
     }
 
     public final void disConnHfp(String address) {
-        Intrinsics.checkNotNullParameter(address, "address");
+
         BtAdapter.INSTANCE.connectHfp(address, false);
     }
 
     public final void connA2dp(String address) {
-        Intrinsics.checkNotNullParameter(address, "address");
+
         BtAdapter.INSTANCE.connectA2dp(address, true);
     }
 
     public final void disConnA2dp(String address) {
-        Intrinsics.checkNotNullParameter(address, "address");
+
         BtAdapter.INSTANCE.connectA2dp(address, false);
     }
 
@@ -51,7 +51,7 @@ public final class BtApi {
     }
 
     public final void call(String num) {
-        Intrinsics.checkNotNullParameter(num, "num");
+
         BtAdapter.INSTANCE.call(num);
     }
 
@@ -96,12 +96,12 @@ public final class BtApi {
     }
 
     public final void sendKey(String key) {
-        Intrinsics.checkNotNullParameter(key, "key");
+
         BtAdapter.INSTANCE.sendKey(key);
     }
 
     public final void setName(String name) {
-        Intrinsics.checkNotNullParameter(name, "name");
+
         BtAdapter.INSTANCE.setBtName(name);
     }
 

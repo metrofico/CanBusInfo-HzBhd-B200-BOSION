@@ -38,36 +38,36 @@ public final class ReverseMainView extends BaseFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReverseMainView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this._$_findViewCache = new LinkedHashMap();
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReverseMainView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this._$_findViewCache = new LinkedHashMap();
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReverseMainView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this._$_findViewCache = new LinkedHashMap();
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReverseMainView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this._$_findViewCache = new LinkedHashMap();
     }
 
     @Override // com.hzbhd.ui.life.BaseFrameLayout
     public ReverseMainBinding getBinding() {
         Context context = getContext();
-        Intrinsics.checkNotNullExpressionValue(context, "context");
+
         return new ReverseMainBinding(context);
     }
 }

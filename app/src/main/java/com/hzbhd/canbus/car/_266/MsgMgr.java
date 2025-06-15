@@ -15,7 +15,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static boolean isAirFirst = true;
     private static boolean isDoorFirst = true;

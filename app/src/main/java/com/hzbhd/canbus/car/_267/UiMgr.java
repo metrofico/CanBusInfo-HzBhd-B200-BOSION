@@ -9,7 +9,7 @@ import com.hzbhd.canbus.interfaces.OnSettingItemTouchListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
 

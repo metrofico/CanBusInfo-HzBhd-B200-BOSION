@@ -48,7 +48,7 @@ import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 import kotlin.text.Typography;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final String CAROUTTEMCHANGEACTION2 = "com.android.systemui.statusbar.action.CAROUTTEMCHANGE2";
     static int carSpeedWarning = 0;

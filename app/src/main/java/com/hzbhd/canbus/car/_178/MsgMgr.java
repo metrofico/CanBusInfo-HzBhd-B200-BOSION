@@ -11,7 +11,7 @@ import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private byte[] mCanBusInfoByte;
     private int[] mCanBusInfoInt;

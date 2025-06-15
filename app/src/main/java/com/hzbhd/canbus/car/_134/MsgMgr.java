@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static boolean isDoorFirst = true;
     private List<OriginalCarDeviceUpdateEntity> OriginalCarDeviceInfo0x06List = new ArrayList();

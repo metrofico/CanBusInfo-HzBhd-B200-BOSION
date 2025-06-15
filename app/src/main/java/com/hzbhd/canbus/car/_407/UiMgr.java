@@ -19,14 +19,14 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001:\u0001\u0005B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004¨\u0006\u0006"}, d2 = {"Lcom/hzbhd/canbus/car/_407/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "SettingHandleListener", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     public UiMgr(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "this");
+
         SettingHandleListener settingHandleListener = new SettingHandleListener(settingUiSet);
         settingUiSet.setOnSettingItemSwitchListener(settingHandleListener);
         settingUiSet.setOnSettingItemSelectListener(settingHandleListener);
@@ -183,7 +183,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-5$lambda-1, reason: not valid java name */
     public static final void m844lambda11$lambda5$lambda1(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -191,7 +191,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-5$lambda-2, reason: not valid java name */
     public static final void m845lambda11$lambda5$lambda2(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -199,7 +199,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-5$lambda-3, reason: not valid java name */
     public static final void m846lambda11$lambda5$lambda3(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -207,7 +207,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-5$lambda-4, reason: not valid java name */
     public static final void m847lambda11$lambda5$lambda4(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -215,7 +215,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-10$lambda-6, reason: not valid java name */
     public static final void m840lambda11$lambda10$lambda6(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -223,7 +223,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-10$lambda-7, reason: not valid java name */
     public static final void m841lambda11$lambda10$lambda7(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -231,7 +231,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-10$lambda-8, reason: not valid java name */
     public static final void m842lambda11$lambda10$lambda8(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -239,7 +239,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-11$lambda-10$lambda-9, reason: not valid java name */
     public static final void m843lambda11$lambda10$lambda9(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         m848lambda11$selectAirConditionerBtn(str);
     }
 
@@ -264,12 +264,12 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     /* compiled from: UiMgr.kt */
-    @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0007\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\r\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J \u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\fH\u0016J \u0010\u000f\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u0010\u001a\u00020\fH\u0016J \u0010\u0011\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u0012\u001a\u00020\fH\u0002R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\b¨\u0006\u0013"}, d2 = {"Lcom/hzbhd/canbus/car/_407/UiMgr$SettingHandleListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSelectListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSwitchListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSeekbarSelectListener;", "mSettingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "(Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;)V", "getMSettingPageUiSet", "()Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "onClickItem", "", "leftPos", "", "rightPos", "progressORvalue", "onSwitch", "value", "selectSettingsBtn", "param", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final class SettingHandleListener implements OnSettingItemSelectListener, OnSettingItemSwitchListener, OnSettingItemSeekbarSelectListener {
         private final SettingPageUiSet mSettingPageUiSet;
 
         public SettingHandleListener(SettingPageUiSet mSettingPageUiSet) {
-            Intrinsics.checkNotNullParameter(mSettingPageUiSet, "mSettingPageUiSet");
+
             this.mSettingPageUiSet = mSettingPageUiSet;
         }
 

@@ -27,7 +27,7 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     protected static final byte AMP_BAL_OFFSET = 0;
     protected static final byte AMP_EQ_OFFSET = 1;

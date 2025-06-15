@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import org.apache.log4j.varia.ExternallyRolledFileAppender;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private byte[] mCanBusAirInfoCopy;
     private byte[] mCanBusInfoByte;

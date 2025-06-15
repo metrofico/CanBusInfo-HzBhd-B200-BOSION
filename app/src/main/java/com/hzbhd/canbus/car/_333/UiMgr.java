@@ -31,7 +31,7 @@ import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static int accState = 0;
     public static int cruiseSpeedLimit_Data0Bit0 = 0;

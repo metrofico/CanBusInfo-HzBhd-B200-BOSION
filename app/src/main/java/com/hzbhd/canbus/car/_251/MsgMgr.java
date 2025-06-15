@@ -31,9 +31,9 @@ import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.GlobalScope;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000F\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0015\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u000f\n\u0002\u0010\u000b\n\u0002\b\u000b\n\u0002\u0010\u000e\n\u0002\b\u000b\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0014\u001a\u00020\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u000eH\u0016J\b\u0010\u0017\u001a\u00020\u0015H\u0002J\u0018\u0010\u0018\u001a\u00020\u00152\u0006\u0010\u0016\u001a\u00020\u000e2\u0006\u0010\u0019\u001a\u00020\nH\u0016Jp\u0010\u001a\u001a\u00020\u00152\u0006\u0010\u001b\u001a\u00020\u00042\u0006\u0010\u001c\u001a\u00020\u00042\u0006\u0010\u001d\u001a\u00020\u00042\u0006\u0010\u001e\u001a\u00020\u00042\u0006\u0010\u001f\u001a\u00020\u00042\u0006\u0010 \u001a\u00020\u00042\u0006\u0010!\u001a\u00020\u00042\u0006\u0010\"\u001a\u00020\u00042\u0006\u0010#\u001a\u00020\u00042\u0006\u0010$\u001a\u00020%2\u0006\u0010&\u001a\u00020%2\u0006\u0010'\u001a\u00020%2\u0006\u0010(\u001a\u00020\u0004H\u0016J\b\u0010)\u001a\u00020\u0015H\u0002J\b\u0010*\u001a\u00020\u0015H\u0002J\u0012\u0010+\u001a\u00020\u00152\b\u0010\u0016\u001a\u0004\u0018\u00010\u000eH\u0016J\b\u0010,\u001a\u00020\u0015H\u0002J\u0010\u0010-\u001a\u00020\u00152\u0006\u0010.\u001a\u00020\u0004H\u0002J\b\u0010/\u001a\u00020\u0015H\u0002J\u0010\u00100\u001a\u0002012\u0006\u0010.\u001a\u00020\u0004H\u0002J\b\u00102\u001a\u000201H\u0002J\b\u00103\u001a\u00020\u0015H\u0002J\b\u00104\u001a\u00020\u0015H\u0002J\b\u00105\u001a\u00020\u0015H\u0002J\b\u00106\u001a\u00020\u0015H\u0002J\b\u00107\u001a\u00020\u0015H\u0002J\b\u00108\u001a\u00020\u0015H\u0002J\b\u00109\u001a\u00020\u0015H\u0002J\u0010\u0010:\u001a\u00020\u00152\u0006\u0010;\u001a\u000201H\u0002R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u000e\u0010\t\u001a\u00020\nX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082.¢\u0006\u0002\n\u0000R\u001a\u0010\u0011\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0012\u0010\u0006\"\u0004\b\u0013\u0010\b¨\u0006<"}, d2 = {"Lcom/hzbhd/canbus/car/_251/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "i", "", "getI", "()I", "setI", "(I)V", "mCanBusInfoByte", "", "mCanBusInfoInt", "", "mContext", "Landroid/content/Context;", "mUiMgr", "Lcom/hzbhd/canbus/car/_251/UiMgr;", "type", "getType", "setType", "afterServiceNormalSetting", "", "context", "anotherRearRadar", "canbusInfoChange", "canbusInfo", "dateTimeRepCanbus", "bYearTotal", "bYear2Dig", "bMonth", "bDay", "bHours", "bMins", "bSecond", "bHours24H", "systemDateFormat", "isFormat24H", "", "isFormatPm", "isGpsTime", "dayOfWeek", "frontRadar", "information", "initCommand", "keyControl0x21", "realKeyClick", "value", "rearRadar", "resolveLeftAndRightTemp", "", "resolveOutDoorTem", "setAirData0x23", "setAirData0x36", "setDoorData0x28", "setPanoramaData", "setSettingData", "setTrackData", "setVersionInfo", "showDialog", "showContent", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     private Context mContext;
     private UiMgr mUiMgr;
@@ -43,7 +43,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private int type = 1;
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u008a@"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {1, 7, 1}, xi = 48)
+    
     @DebugMetadata(c = "com.hzbhd.canbus.car._251.MsgMgr$initCommand$1", f = "MsgMgr.kt", i = {}, l = {43}, m = "invokeSuspend", n = {}, s = {})
     /* renamed from: com.hzbhd.canbus.car._251.MsgMgr$initCommand$1, reason: invalid class name */
     static final class AnonymousClass1 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
@@ -191,17 +191,17 @@ public final class MsgMgr extends AbstractMsgMgr {
     public void afterServiceNormalSetting(Context context) {
         GeneralParkData.isShowDistanceAndShowLocationUi = true;
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._251.UiMgr");
+
         UiMgr uiMgr = (UiMgr) canUiMgr;
         this.mUiMgr = uiMgr;
         if (uiMgr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
             uiMgr = null;
         }
         InitUtilsKt.initDrivingItemsIndexHashMap$default(context, uiMgr, null, 4, null);
         UiMgr uiMgr2 = this.mUiMgr;
         if (uiMgr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
             uiMgr2 = null;
         }
         InitUtilsKt.initSettingItemsIndexHashMap$default(context, uiMgr2, null, 4, null);
@@ -209,11 +209,11 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
+
         this.mCanBusInfoByte = canbusInfo;
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         this.mCanBusInfoInt = byteArrayToIntArray;
         this.mContext = context;
         int i = byteArrayToIntArray[1];
@@ -699,8 +699,8 @@ public final class MsgMgr extends AbstractMsgMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: showDialog$lambda-6, reason: not valid java name */
     public static final void m327showDialog$lambda6(MsgMgr this$0, String showContent) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(showContent, "$showContent");
+
+
         new AlertView().showDialog(this$0.getActivity(), showContent);
     }
 }

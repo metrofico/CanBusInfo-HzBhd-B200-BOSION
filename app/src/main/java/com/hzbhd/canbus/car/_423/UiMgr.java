@@ -15,7 +15,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     AirPageUiSet airPageUiSet;
     DriverDataPageUiSet driverDataPageUiSet;

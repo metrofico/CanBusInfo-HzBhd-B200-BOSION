@@ -14,7 +14,7 @@ import com.hzbhd.commontools.SourceConstantsDef;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static int mAmb;
     private static int mOutDoorTemp;

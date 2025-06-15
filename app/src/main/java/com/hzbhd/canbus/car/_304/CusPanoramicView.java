@@ -9,7 +9,7 @@ import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._304.view.MyRadarView;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class CusPanoramicView extends RelativeLayout {
     private final String TAG;
     private Button mBtnExit;

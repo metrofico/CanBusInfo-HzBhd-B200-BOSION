@@ -6,7 +6,7 @@ import com.hzbhd.canbus.interfaces.OnPanelKeyPositionListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.PanelKeyPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     Context mContext;
     int eachId = getEachId();

@@ -37,7 +37,7 @@ import java.util.Arrays;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int eachId;

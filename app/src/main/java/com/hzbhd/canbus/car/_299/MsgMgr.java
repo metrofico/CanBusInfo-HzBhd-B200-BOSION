@@ -30,7 +30,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final String SHARE_299_SMARTPOWER_DATA3 = "_299_smart_data3";
     private static final String SHARE_299_SMARTPOWER_DATA4 = "_299_smart_data4";

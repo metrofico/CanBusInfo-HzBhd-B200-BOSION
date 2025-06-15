@@ -5,7 +5,7 @@ import com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
 

@@ -74,7 +74,7 @@ public abstract class CellChild extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellChild(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.xsize = 1;
         this.ysize = 1;
         this.longClickRunnable = new Runnable() { // from class: com.hzbhd.ui.view.paged.CellChild$$ExternalSyntheticLambda0
@@ -89,8 +89,8 @@ public abstract class CellChild extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellChild(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.xsize = 1;
         this.ysize = 1;
         this.longClickRunnable = new Runnable() { // from class: com.hzbhd.ui.view.paged.CellChild$$ExternalSyntheticLambda0
@@ -105,8 +105,8 @@ public abstract class CellChild extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellChild(Context context, AttributeSet attrs, int i) {
         super(context, attrs, i);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.xsize = 1;
         this.ysize = 1;
         this.longClickRunnable = new Runnable() { // from class: com.hzbhd.ui.view.paged.CellChild$$ExternalSyntheticLambda0
@@ -121,8 +121,8 @@ public abstract class CellChild extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellChild(Context context, AttributeSet attrs, int i, int i2) {
         super(context, attrs, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.xsize = 1;
         this.ysize = 1;
         this.longClickRunnable = new Runnable() { // from class: com.hzbhd.ui.view.paged.CellChild$$ExternalSyntheticLambda0
@@ -155,7 +155,7 @@ public abstract class CellChild extends BaseLifeFrameLayout {
 
     @Override // android.view.ViewGroup
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        Intrinsics.checkNotNullParameter(ev, "ev");
+
         this.isThisTouch = true;
         this.isLongClick = false;
         setPressed(true);
@@ -174,7 +174,7 @@ public abstract class CellChild extends BaseLifeFrameLayout {
     }
 
     public final void onTouch(MotionEvent ev) {
-        Intrinsics.checkNotNullParameter(ev, "ev");
+
         if (ev.getAction() == 0) {
             this.isThisTouch = false;
             this.event_move = false;

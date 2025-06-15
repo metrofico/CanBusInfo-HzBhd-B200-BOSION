@@ -64,8 +64,8 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PlayView(Context context, ScalePlayViewInterface scalePlayViewInterface) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(scalePlayViewInterface, "scalePlayViewInterface");
+
+
         this.coverReasonArray = new ArrayList<>();
         final Context context2 = getContext();
         this.coverView = new View(context2) { // from class: com.hzbhd.ui.view.playview.PlayView$coverView$1
@@ -91,7 +91,7 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PlayView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.coverReasonArray = new ArrayList<>();
         final Context context2 = getContext();
         this.coverView = new View(context2) { // from class: com.hzbhd.ui.view.playview.PlayView$coverView$1
@@ -116,8 +116,8 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PlayView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.coverReasonArray = new ArrayList<>();
         final Context context2 = getContext();
         this.coverView = new View(context2) { // from class: com.hzbhd.ui.view.playview.PlayView$coverView$1
@@ -142,7 +142,7 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PlayView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.coverReasonArray = new ArrayList<>();
         final Context context2 = getContext();
         this.coverView = new View(context2) { // from class: com.hzbhd.ui.view.playview.PlayView$coverView$1
@@ -167,7 +167,7 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public PlayView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.coverReasonArray = new ArrayList<>();
         final Context context2 = getContext();
         this.coverView = new View(context2) { // from class: com.hzbhd.ui.view.playview.PlayView$coverView$1
@@ -212,7 +212,7 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
     }
 
     public final void setCoverView(View view) {
-        Intrinsics.checkNotNullParameter(view, "<set-?>");
+
         this.coverView = view;
     }
 
@@ -263,7 +263,7 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
 
 
     public void showCover(CoverReason coverReason) {
-        Intrinsics.checkNotNullParameter(coverReason, "coverReason");
+
         if (coverReason != CoverReason.DELAY) {
             showCover(CoverReason.DELAY);
             removeCallbacks(this.hideCoverDelayRunnable);
@@ -297,13 +297,13 @@ public abstract class PlayView extends BaseLifeRelativeLayout {
     }
 
     public void hideCover(CoverReason coverReason) {
-        Intrinsics.checkNotNullParameter(coverReason, "coverReason");
+
         this.coverReasonArray.remove(coverReason);
         refreshCover(!this.coverReasonArray.isEmpty());
         if (LogUtil.log5()) {
             StringBuilder sbAppend = new StringBuilder().append("hideCover:-- ").append(coverReason).append(" :: ");
             String string = Arrays.toString(this.coverReasonArray.toArray());
-            Intrinsics.checkNotNullExpressionValue(string, "toString(this)");
+
             LogUtil.d(sbAppend.append(string).toString());
         }
     }

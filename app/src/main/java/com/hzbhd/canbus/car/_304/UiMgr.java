@@ -29,7 +29,7 @@ import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import java.util.Objects;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static final int PANO_BTN_ALL = 4;
     public static final int PANO_BTN_EXIT = 6;

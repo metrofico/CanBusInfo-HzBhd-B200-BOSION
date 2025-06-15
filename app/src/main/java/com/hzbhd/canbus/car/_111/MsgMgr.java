@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.TimerTask;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int _1111_AMPLIFIER_BAND_MAX = 1;
     static final int _1111_AMPLIFIER_HALF_MAX = 10;

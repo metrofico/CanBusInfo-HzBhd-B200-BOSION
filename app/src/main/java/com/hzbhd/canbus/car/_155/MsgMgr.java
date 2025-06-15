@@ -13,7 +13,7 @@ import com.hzbhd.canbus.util.SelectCanTypeUtil;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private boolean mBackStatus;
     private byte[] mCanBusInfoByte;

@@ -7,7 +7,7 @@ import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int FreqInt;
     private byte freqHi;

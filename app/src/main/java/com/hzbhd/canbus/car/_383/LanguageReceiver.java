@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import com.hzbhd.canbus.CanbusMsgSender;
 
-/* loaded from: classes2.dex */
+
 public class LanguageReceiver extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) {

@@ -40,7 +40,7 @@ public final class ReversePanoramicCustomBinding extends EmptyBinding {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReversePanoramicCustomBinding(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.view_cus_panoramic = getRoot().findViewById(R.id.view_cus_panoramic);
     }
 
@@ -71,7 +71,7 @@ public final class ReversePanoramicCustomBinding extends EmptyBinding {
                         if ((view_cus_panoramic2 != null ? view_cus_panoramic2.getChildCount() : null) == 0) {
                             if (cusPanoramicView.getParent() != null) {
                                 ViewParent parent = cusPanoramicView.getParent();
-                                Intrinsics.checkNotNull(parent, "null cannot be cast to non-null type android.view.ViewGroup");
+
                                 ((ViewGroup) parent).removeAllViews();
                             }
                             RelativeLayout view_cus_panoramic3 = getView_cus_panoramic();

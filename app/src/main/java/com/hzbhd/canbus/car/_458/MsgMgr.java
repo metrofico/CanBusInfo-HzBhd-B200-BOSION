@@ -14,7 +14,7 @@ import com.hzbhd.commontools.utils.FgeString;
 import com.hzbhd.util.LogUtil;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int MESSAGE_ADD_DATA = 1;
     private static final int MESSAGE_PARSE_DATA = 0;

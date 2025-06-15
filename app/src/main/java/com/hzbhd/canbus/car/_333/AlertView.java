@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class AlertView {
     TextView content;
     Button i_know;

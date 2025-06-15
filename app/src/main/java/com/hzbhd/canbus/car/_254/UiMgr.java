@@ -15,7 +15,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.commontools.SourceConstantsDef;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private OnOriginalTopBtnClickListener mOnOriginalTopBtnClickListener = new OnOriginalTopBtnClickListener() { // from class: com.hzbhd.canbus.car._254.UiMgr.1
         @Override // com.hzbhd.canbus.interfaces.OnOriginalTopBtnClickListener

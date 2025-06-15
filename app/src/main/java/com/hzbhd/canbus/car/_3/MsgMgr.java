@@ -5,8 +5,9 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
-import androidx.core.app.NotificationCompat;
+
 import com.hzbhd.canbus.CanbusMsgSender;
+import com.hzbhd.canbus.activity.SettingActivity;
 import com.hzbhd.canbus.car._206.MqbHybirdActivity;
 import com.hzbhd.canbus.car_cus._451.Interface.ActionCallback;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
@@ -16,6 +17,7 @@ import com.hzbhd.canbus.entity.WarningEntity;
 import com.hzbhd.canbus.interfaces.OnParseListener;
 import com.hzbhd.canbus.interfaces.UiMgrInterface;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
+import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_datas.GeneralAmplifierData;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
 import com.hzbhd.canbus.ui_datas.GeneralHybirdData;
@@ -31,8 +33,9 @@ import com.hzbhd.canbus.util.MediaShareData;
 import com.hzbhd.canbus.util.RadarInfoUtil;
 import com.hzbhd.canbus.util.TimerUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
-import com.hzbhd.constant.share.lcd.LcdInfoShare;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -41,25 +44,24 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TimerTask;
-import kotlin.Metadata;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Supplier;
+
 import kotlin.Pair;
-import kotlin.TuplesKt;
+import kotlin.Unit;
 import kotlin.collections.ArraysKt;
 import kotlin.collections.CollectionsKt;
-import kotlin.jvm.functions.Function1;
 import kotlin.jvm.internal.ArrayIteratorKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
-import kotlin.ranges.ClosedRange;
 import kotlin.ranges.IntRange;
 import kotlin.ranges.RangesKt;
 import kotlin.text.Charsets;
 import kotlin.text.StringsKt;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000\u008e\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0002\b\u0007\n\u0002\u0010\u0015\n\u0002\b\u0007\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010%\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\n\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u001f\n\u0002\u0010\u0005\n\u0002\b\r\n\u0002\u0010\t\n\u0002\b\u0012\n\u0002\u0010\u0011\n\u0002\b\u0012\u0018\u0000 \u008c\u00012\u00020\u0001:\b\u008c\u0001\u008d\u0001\u008e\u0001\u008f\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0010\u0010(\u001a\u00020)2\u0006\u0010*\u001a\u00020+H\u0016J\b\u0010,\u001a\u00020)H\u0016J\b\u0010-\u001a\u00020)H\u0016J \u0010.\u001a\u00020)2\u0006\u0010/\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\u001c2\u0006\u00101\u001a\u00020\u001cH\u0016JT\u00102\u001a\u00020)2\u0006\u00103\u001a\u00020\u00162\b\u00104\u001a\u0004\u0018\u00010\u00062\u0006\u00105\u001a\u0002062\u0006\u00107\u001a\u0002062\u0006\u00108\u001a\u0002062\u0006\u00109\u001a\u0002062\u0006\u0010:\u001a\u00020\u00162\u0006\u0010;\u001a\u00020\u00162\b\u0010<\u001a\u0004\u0018\u00010=H\u0016J*\u0010>\u001a\u00020)2\b\u00104\u001a\u0004\u0018\u00010\u00062\u0006\u00108\u001a\u0002062\u0006\u00109\u001a\u0002062\u0006\u0010?\u001a\u00020\u0016H\u0016J\u001a\u0010@\u001a\u00020)2\b\u0010*\u001a\u0004\u0018\u00010+2\u0006\u0010A\u001a\u00020\u0006H\u0016J\u0018\u0010B\u001a\u00020)2\u0006\u0010C\u001a\u00020\u00162\u0006\u0010D\u001a\u000206H\u0016Jp\u0010E\u001a\u00020)2\u0006\u0010F\u001a\u00020\u00162\u0006\u0010G\u001a\u00020\u00162\u0006\u0010H\u001a\u00020\u00162\u0006\u0010I\u001a\u00020\u00162\u0006\u0010J\u001a\u00020\u00162\u0006\u0010K\u001a\u00020\u00162\u0006\u0010L\u001a\u00020\u00162\u0006\u0010M\u001a\u00020\u00162\u0006\u0010N\u001a\u00020\u00162\u0006\u0010O\u001a\u0002062\u0006\u0010P\u001a\u0002062\u0006\u0010Q\u001a\u0002062\u0006\u0010R\u001a\u00020\u0016H\u0016J\b\u0010S\u001a\u00020)H\u0016J\u0012\u0010T\u001a\u00020)2\b\u0010*\u001a\u0004\u0018\u00010+H\u0002J\u0012\u0010U\u001a\u00020)2\b\u0010*\u001a\u0004\u0018\u00010+H\u0016J\u0012\u0010V\u001a\u00020)2\b\u0010*\u001a\u0004\u0018\u00010+H\u0002J\u0010\u0010W\u001a\u00020)2\u0006\u0010*\u001a\u00020+H\u0002J\b\u0010X\u001a\u000206H\u0002J\u0014\u0010Y\u001a\u00020\u00162\n\u0010Z\u001a\u00020\u000e\"\u00020\u0016H\u0002JÄ\u0001\u0010[\u001a\u00020)2\u0006\u0010\\\u001a\u00020]2\u0006\u0010^\u001a\u00020]2\u0006\u0010_\u001a\u00020\u00162\u0006\u0010`\u001a\u00020\u00162\u0006\u0010a\u001a\u00020]2\u0006\u0010b\u001a\u00020]2\u0006\u0010c\u001a\u00020]2\u0006\u0010d\u001a\u00020]2\u0006\u0010e\u001a\u00020]2\u0006\u0010f\u001a\u00020]2\b\u0010g\u001a\u0004\u0018\u00010\u001c2\b\u0010h\u001a\u0004\u0018\u00010\u001c2\b\u0010i\u001a\u0004\u0018\u00010\u001c2\u0006\u0010j\u001a\u00020k2\u0006\u0010l\u001a\u00020]2\u0006\u0010m\u001a\u00020\u00162\u0006\u0010n\u001a\u0002062\u0006\u0010o\u001a\u00020k2\b\u0010p\u001a\u0004\u0018\u00010\u001c2\b\u0010q\u001a\u0004\u0018\u00010\u001c2\b\u0010r\u001a\u0004\u0018\u00010\u001c2\u0006\u0010s\u001a\u000206H\u0016J0\u0010t\u001a\u00020)2\u0006\u0010u\u001a\u00020\u00162\u0006\u0010v\u001a\u00020\u001c2\u0006\u0010w\u001a\u00020\u001c2\u0006\u0010x\u001a\u00020\u001c2\u0006\u0010y\u001a\u00020\u0016H\u0016J\u0010\u0010z\u001a\u00020)2\u0006\u0010{\u001a\u000206H\u0016J!\u0010|\u001a\u00020)2\u0012\u0010}\u001a\n\u0012\u0006\b\u0001\u0012\u00020\u00060~\"\u00020\u0006H\u0002¢\u0006\u0002\u0010\u007fJ\u001d\u0010\u0080\u0001\u001a\u00020)2\u0007\u0010\u0081\u0001\u001a\u00020\u00162\t\u0010\u0082\u0001\u001a\u0004\u0018\u00010\u001cH\u0002J\u0012\u0010\u0083\u0001\u001a\u00020)2\u0007\u0010\u0084\u0001\u001a\u000206H\u0016J\u0018\u0010\u0085\u0001\u001a\u00020)2\u0006\u0010/\u001a\u00020\u001c2\u0007\u0010\u0086\u0001\u001a\u00020%J\u009b\u0001\u0010\u0087\u0001\u001a\u00020)2\u0006\u0010\\\u001a\u00020]2\u0006\u0010^\u001a\u00020]2\u0006\u0010_\u001a\u00020\u00162\u0006\u0010`\u001a\u00020\u00162\u0006\u0010a\u001a\u00020]2\u0006\u0010b\u001a\u00020]2\u0006\u0010c\u001a\u00020]2\b\u0010d\u001a\u0004\u0018\u00010\u001c2\u0006\u0010e\u001a\u00020]2\u0006\u0010f\u001a\u00020]2\b\u0010g\u001a\u0004\u0018\u00010\u001c2\b\u0010h\u001a\u0004\u0018\u00010\u001c2\b\u0010i\u001a\u0004\u0018\u00010\u001c2\u0006\u0010j\u001a\u00020\u00162\u0007\u0010\u0088\u0001\u001a\u00020]2\u0006\u0010n\u001a\u0002062\u0007\u0010\u0089\u0001\u001a\u00020\u0016H\u0016J\u0016\u0010\u008a\u0001\u001a\u00020\u001c*\u00020\u001c2\u0007\u0010\u008b\u0001\u001a\u00020\u0016H\u0002R\u0012\u0010\u0003\u001a\u00060\u0004R\u00020\u0000X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\r\u001a\u00020\u000eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u000f\u0010\u0010\"\u0004\b\u0011\u0010\u0012R\u000e\u0010\u0013\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u000eX\u0082\u000e¢\u0006\u0002\n\u0000R\u001e\u0010\u0017\u001a\u00020\u00162\u0006\u0010\u0015\u001a\u00020\u0016@BX\u0086\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0018\u0010\u0019R\u001a\u0010\u001a\u001a\u000e\u0012\u0004\u0012\u00020\u001c\u0012\u0004\u0012\u00020\u001d0\u001bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\u001fX\u0082\u0004¢\u0006\u0002\n\u0000R\u001e\u0010 \u001a\u0012\u0012\u0004\u0012\u00020\u0016\u0012\b\u0012\u00060\"R\u00020\u00000!X\u0082\u0004¢\u0006\u0002\n\u0000R \u0010#\u001a\u0014\u0012\u0004\u0012\u00020\u001c\u0012\n\u0012\b\u0012\u0004\u0012\u00020%0$0\u001bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010&\u001a\u00020'X\u0082.¢\u0006\u0002\n\u0000¨\u0006\u0090\u0001"}, d2 = {"Lcom/hzbhd/canbus/car/_3/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "m0x70Sender", "Lcom/hzbhd/canbus/car/_3/MsgMgr$M0x70Sender;", "m0xA6Command", "", "m0xC0Command", "m0xC1Command", "m0xC4Command", "m0xC5Command", "m0xC7Command", "m0xCACommand", "mAirData", "", "getMAirData", "()[I", "setMAirData", "([I)V", "mCanbusInfoByte", "mCanbusInfoInt", "<set-?>", "", "mColour", "getMColour", "()I", "mDriveItemIndexHashMap", "Ljava/util/HashMap;", "", "Lcom/hzbhd/canbus/entity/DriverUpdateEntity;", "mHandler", "Landroid/os/Handler;", "mParserMap", "", "Lcom/hzbhd/canbus/car/_3/MsgMgr$Parser;", "mSettingItemIndexHashMap", "Lcom/hzbhd/canbus/entity/SettingUpdateEntity;", "", "mUiMgr", "Lcom/hzbhd/canbus/car/_3/UiMgr;", "afterServiceNormalSetting", "", "context", "Landroid/content/Context;", "atvInfoChange", "auxInInfoChange", "btMusicId3InfoChange", LcdInfoShare.MediaInfo.title, LcdInfoShare.MediaInfo.artist, LcdInfoShare.MediaInfo.album, "btPhoneStatusInfoChange", "callStatus", "phoneNumber", "isHfpConnected", "", "isCallingFlag", "isMicMute", "isAudioTransferTowardsAG", "batteryStatus", "signalValue", "bundle", "Landroid/os/Bundle;", "btPhoneTalkingWithTimeInfoChange", "time", "canbusInfoChange", "canbusInfo", "currentVolumeInfoChange", "volValue", "isMute", "dateTimeRepCanbus", "bYearTotal", "bYear2Dig", "bMonth", "bDay", "bHours", "bMins", "bSecond", "bHours24H", "systemDateFormat", "isFormat24H", "isFormatPm", "isGpsTime", "dayOfWeek", "dtvInfoChange", "initAmplifier", "initCommand", "initItemsIndexHashMap", "initParsers", "isAirDataChange", "mergeValue", "values", "musicInfoChange", "stoagePath", "", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playModel", "playIndex", "isPlaying", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "reverseStateChange", "isReverse", "sendMultiCommand", "commands", "", "([[B)V", "sendTextInfo", "dataType", "text", "sourceSwitchNoMediaInfoChange", "isPowerOff", "updateSettings", "value", "videoInfoChange", "playMode", "duration", "getInfo", "len", "Companion", "M0x70Sender", "Parser", "SpeedAlertHelper", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
 public final class MsgMgr extends AbstractMsgMgr {
     public static final int AMPLIFIER_BALANCE_DATA_HALF = 9;
     public static final float MILE_TO_KILO_RATE = 1.609344f;
@@ -74,11 +76,11 @@ public final class MsgMgr extends AbstractMsgMgr {
     private static final ArrayList<Integer> languageList = CollectionsKt.arrayListOf(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 16, 17, 18, 20, 22, 23, 26, 29, 30, 31, 32, 33, 37, 38, 39, 40, 41, 42, 43);
     private int[] mCanbusInfoInt = new int[0];
     private byte[] mCanbusInfoByte = new byte[0];
-    private final Map<Integer, Parser> mParserMap = new LinkedHashMap();
-    private HashMap<String, SettingUpdateEntity<Object>> mSettingItemIndexHashMap = new HashMap<>();
-    private HashMap<String, DriverUpdateEntity> mDriveItemIndexHashMap = new HashMap<>();
+    private final Map<Integer, Parser> mParserMap = new LinkedHashMap<>();
+    private final HashMap<String, SettingUpdateEntity<Object>> mSettingItemIndexHashMap = new HashMap<>();
+    private final HashMap<String, DriverUpdateEntity> mDriveItemIndexHashMap = new HashMap<>();
     private final Handler mHandler = new Handler(Looper.getMainLooper());
-    private int mColour = 1;
+    private final int mColour = 1;
     private final byte[] m0xA6Command = {22, -90, 0, 0, 0, 0, 0, 0, 1};
     private final M0x70Sender m0x70Sender = new M0x70Sender();
     private final byte[] m0xC0Command = {22, -64, 0, 0, 0, 0, 0, 0, 0, 0};
@@ -99,7 +101,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0007\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0082T¢\u0006\u0002\n\u0000R!\u0010\t\u001a\u0012\u0012\u0004\u0012\u00020\u00040\nj\b\u0012\u0004\u0012\u00020\u0004`\u000b¢\u0006\b\n\u0000\u001a\u0004\b\f\u0010\r¨\u0006\u000e"}, d2 = {"Lcom/hzbhd/canbus/car/_3/MsgMgr$Companion;", "", "()V", "AMPLIFIER_BALANCE_DATA_HALF", "", "MILE_TO_KILO_RATE", "", "TAG", "", "languageList", "Ljava/util/ArrayList;", "Lkotlin/collections/ArrayList;", "getLanguageList", "()Ljava/util/ArrayList;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
@@ -108,21 +110,22 @@ public final class MsgMgr extends AbstractMsgMgr {
         private Companion() {
         }
 
-        public final ArrayList<Integer> getLanguageList() {
+        public ArrayList<Integer> getLanguageList() {
             return MsgMgr.languageList;
         }
     }
 
-    public final int getMColour() {
+    public int getMColour() {
         return this.mColour;
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         super.afterServiceNormalSetting(context);
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._3.UiMgr");
+
         this.mUiMgr = (UiMgr) canUiMgr;
         RadarInfoUtil.mMinIsClose = true;
         RadarInfoUtil.mDisableData = 255;
@@ -131,25 +134,26 @@ public final class MsgMgr extends AbstractMsgMgr {
         initParsers(context);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
         super.initCommand(context);
         Log.i(TAG, "initCommand: ");
         initAmplifier(context);
     }
 
-    private final void initAmplifier(Context context) {
+    private void initAmplifier(Context context) {
         Log.i(TAG, "initAmplifier: context[" + context + ']');
         if (context != null) {
             int canId = getCanId();
             UiMgr uiMgr = this.mUiMgr;
             if (uiMgr == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
                 uiMgr = null;
             }
             getAmplifierData(context, canId, uiMgr.getAmplifierPageUiSet(context));
         }
-        final Iterator it = ArrayIteratorKt.iterator(new byte[][]{new byte[]{22, -127, 1}, this.m0xC4Command, new byte[]{22, -88, 0, (byte) GeneralAmplifierData.volume}, new byte[]{22, -88, 1, (byte) GeneralAmplifierData.bandTreble}, new byte[]{22, -88, 2, (byte) GeneralAmplifierData.bandMiddle}, new byte[]{22, -88, 3, (byte) GeneralAmplifierData.bandBass}, new byte[]{22, -88, 4, (byte) (GeneralAmplifierData.frontRear + 9)}, new byte[]{22, -88, 5, (byte) (GeneralAmplifierData.leftRight + 9)}});
+        final Iterator<byte[]> it = ArrayIteratorKt.iterator(new byte[][]{new byte[]{22, -127, 1}, this.m0xC4Command, new byte[]{22, -88, 0, (byte) GeneralAmplifierData.volume}, new byte[]{22, -88, 1, (byte) GeneralAmplifierData.bandTreble}, new byte[]{22, -88, 2, (byte) GeneralAmplifierData.bandMiddle}, new byte[]{22, -88, 3, (byte) GeneralAmplifierData.bandBass}, new byte[]{22, -88, 4, (byte) (GeneralAmplifierData.frontRear + 9)}, new byte[]{22, -88, 5, (byte) (GeneralAmplifierData.leftRight + 9)}});
         final TimerUtil timerUtil = new TimerUtil();
         timerUtil.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initAmplifier$2$1$1
             @Override // java.util.TimerTask, java.lang.Runnable
@@ -163,7 +167,8 @@ public final class MsgMgr extends AbstractMsgMgr {
         }, 0L, 100L);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchNoMediaInfoChange(boolean isPowerOff) {
         Log.i(TAG, "sourceSwitchNoMediaInfoChange: isPowerOff[" + isPowerOff + ']');
         if (isPowerOff) {
@@ -178,7 +183,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (isReverse) {
             CycleRequest.getInstance().start(100, new ActionCallback() { // from class: com.hzbhd.canbus.car._3.MsgMgr$$ExternalSyntheticLambda0
                 @Override // com.hzbhd.canbus.car_cus._451.Interface.ActionCallback
-                public final void toDo(Object obj) {
+                public void toDo(Object obj) {
                     MsgMgr.m363reverseStateChange$lambda3(obj);
                 }
             });
@@ -189,17 +194,18 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: reverseStateChange$lambda-3, reason: not valid java name */
-    public static final void m363reverseStateChange$lambda3(Object obj) {
+    public static void m363reverseStateChange$lambda3(Object obj) {
         CanbusMsgSender.sendMsg(new byte[]{22, -112, 41, 41});
         CycleRequest.getInstance().reset(100);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
         super.canbusInfoChange(context, canbusInfo);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         this.mCanbusInfoInt = byteArrayToIntArray;
         this.mCanbusInfoByte = canbusInfo;
         try {
@@ -212,19 +218,13 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    private final void initParsers(final Context context) {
+    private void initParsers(final Context context) {
         Map<Integer, Parser> map = this.mParserMap;
-        map.put(32, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$1
-            private int index;
-
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x20】方向盘按键");
-            }
+        map.put(32, new Parser(this, "【0x20】方向盘按键") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$1
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                switch (this.this$0.mCanbusInfoInt[2]) {
+                switch (this.msgmgr.mCanbusInfoInt[2]) {
                     case 0:
                         realKeyLongClick1(0);
                         break;
@@ -255,28 +255,159 @@ public final class MsgMgr extends AbstractMsgMgr {
                 }
             }
 
-            private final void realKeyLongClick1(int key) {
-                MsgMgr msgMgr = this.this$0;
+            private void realKeyLongClick1(int key) {
+                MsgMgr msgMgr = this.msgmgr;
                 msgMgr.realKeyLongClick1(context, key, msgMgr.mCanbusInfoInt[3]);
             }
 
-            private final void compoundKey(int... keys) {
-                MsgMgr msgMgr = this.this$0;
+            private void compoundKey(int... keys) {
+                MsgMgr msgMgr = this.msgmgr;
                 msgMgr.compoundKey(context, keys, msgMgr.mCanbusInfoInt[3]);
             }
         });
-        map.put(33, new MsgMgr$initParsers$1$2(this, context));
-        map.put(47, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$3
-            private int preFast;
+        map.put(33, new Parser(this, "【0x21】空调信息") {
 
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x2F】方向盘指令");
+            private int rearData;
+            private int rearDataRecord;
+            private int data8;
+            private int[] frontData = new int[0];
+            private final ArrayList<SettingUpdateEntity> list = new ArrayList<>();
+
+            @Override
+            public void parse(int dataLength) {
+                if (dataLength > 8) {
+                    if (this.data8 != msgmgr.mCanbusInfoInt[10]) {
+                        this.data8 = msgmgr.mCanbusInfoInt[10];
+                        this.list.clear();
+                        SettingUpdateEntity settingUpdateEntity = msgmgr.mSettingItemIndexHashMap.get("_3_21h_d8_b7");
+                        if (settingUpdateEntity != null) {
+                            this.list.add(settingUpdateEntity.setValue(Integer.valueOf((msgmgr.mCanbusInfoInt[10] >> 7) & 1)));
+                        }
+                        SettingUpdateEntity settingUpdateEntity2 = msgmgr.mSettingItemIndexHashMap.get("_3_21h_d8_b65");
+                        if (settingUpdateEntity2 != null) {
+                            this.list.add(settingUpdateEntity2.setValue(Integer.valueOf((msgmgr.mCanbusInfoInt[10] >> 5) & 3)));
+                        }
+                        msgmgr.updateGeneralSettingData(this.list);
+                        msgmgr.updateSettingActivity(null);
+                    }
+                    msgmgr.mCanbusInfoInt[10] = 0;
+                }
+                msgmgr.mCanbusInfoInt[3] = msgmgr.mCanbusInfoInt[3] & 239;
+                if (msgmgr.isAirDataChange()) {
+                    super.parse(dataLength);
+                    msgmgr.updateAirActivity(context, getWhat());
+                }
             }
+
+            private int getWhat() {
+                if (!Arrays.equals(this.frontData, msgmgr.mCanbusInfoInt)) {
+                    int[] iArr = msgmgr.mCanbusInfoInt;
+
+                    this.frontData = Arrays.copyOf(iArr, iArr.length);
+                    return 1004;
+                }
+                int i = this.rearDataRecord;
+                int i2 = this.rearData;
+                if (i == i2) {
+                    return 0;
+                }
+                this.rearDataRecord = i2;
+                return 1003;
+            }
+
+            private String toTemperature(int i) {
+                if (i == 0) {
+                    return "LO";
+                }
+                if (i == 31) {
+                    return "HI";
+                }
+                if (!(1 <= i && i < 29)) {
+                    return "";
+                }
+                if (GeneralAirData.fahrenheit_celsius) {
+                    return String.valueOf(i + 59) + (char) 8457;
+                }
+                return String.format("%.1f℃", Arrays.copyOf(new Object[]{Float.valueOf((i + 31) / 2.0f)}, 1));
+            }
+
+            @Override
+            public OnParseListener[] setOnParseListeners() {
+                return new OnParseListener[]{new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda0
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.power = ((msgmgr.mCanbusInfoInt[2] >> 7) & 1) == 1;
+                        GeneralAirData.ac = ((msgmgr.mCanbusInfoInt[2] >> 6) & 1) == 1;
+                        GeneralAirData.in_out_cycle = ((msgmgr.mCanbusInfoInt[2] >> 5) & 1) == 0;
+                        GeneralAirData.auto_1_2 = (msgmgr.mCanbusInfoInt[2] >> 3) & 3;
+                        GeneralAirData.dual = ((msgmgr.mCanbusInfoInt[2] >> 2) & 1) == 1;
+                        GeneralAirData.max_front = ((msgmgr.mCanbusInfoInt[2] >> 1) & 1) == 1;
+                        GeneralAirData.rear = (msgmgr.mCanbusInfoInt[2] & 1) == 1;
+                        GeneralAirData.manual = GeneralAirData.auto_1_2 == 0 && !GeneralAirData.ac_max && !GeneralAirData.max_front;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda1
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.front_left_blow_window = ((msgmgr.mCanbusInfoInt[3] >> 7) & 1) == 1;
+                        GeneralAirData.front_left_blow_head = ((msgmgr.mCanbusInfoInt[3] >> 6) & 1) == 1;
+                        GeneralAirData.front_left_blow_foot = ((msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1;
+                        GeneralAirData.front_wind_level = msgmgr.mCanbusInfoInt[3] & 15;
+                        GeneralAirData.front_right_blow_window = GeneralAirData.front_left_blow_window;
+                        GeneralAirData.front_right_blow_head = GeneralAirData.front_left_blow_head;
+                        GeneralAirData.front_right_blow_foot = GeneralAirData.front_left_blow_foot;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda2
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.front_left_temperature = toTemperature(msgmgr.mCanbusInfoInt[4]);
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda3
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.front_right_temperature = toTemperature(msgmgr.mCanbusInfoInt[5]);
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda4
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.front_defog = ((msgmgr.mCanbusInfoInt[6] >> 7) & 1) == 1;
+                        GeneralAirData.rear_defog = ((msgmgr.mCanbusInfoInt[6] >> 6) & 1) == 1;
+                        GeneralAirData.aqs = ((msgmgr.mCanbusInfoInt[6] >> 5) & 1) == 1;
+                        GeneralAirData.eco = ((msgmgr.mCanbusInfoInt[6] >> 4) & 1) == 1;
+                        GeneralAirData.ac_max = ((msgmgr.mCanbusInfoInt[6] >> 3) & 1) == 1;
+                        GeneralAirData.clean_air = ((msgmgr.mCanbusInfoInt[6] >> 2) & 1) == 1;
+                        GeneralAirData.fahrenheit_celsius = (msgmgr.mCanbusInfoInt[6] & 1) == 1;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda5
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.steering_wheel_heating = ((msgmgr.mCanbusInfoInt[7] >> 7) & 1) == 1;
+                        GeneralAirData.front_left_seat_heat_level = (msgmgr.mCanbusInfoInt[7] >> 4) & 7;
+                        GeneralAirData.front_right_seat_heat_level = msgmgr.mCanbusInfoInt[7] & 7;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda6
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.front_left_seat_cold_level = (msgmgr.mCanbusInfoInt[8] >> 6) & 3;
+                        GeneralAirData.front_right_seat_cold_level = (msgmgr.mCanbusInfoInt[8] >> 4) & 3;
+                        GeneralAirData.auto_wind_lv = msgmgr.mCanbusInfoInt[8] & 3;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$2$$ExternalSyntheticLambda7
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        int i = msgmgr.mCanbusInfoInt[9];
+                        rearData = i;
+                        GeneralAirData.rear_temperature = toTemperature(i);
+                        msgmgr.mCanbusInfoInt[9] = 0;
+                    }
+                }};
+            }
+        });
+        map.put(47, new Parser(this, "【0x2F】方向盘指令") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$3
+            private int preFast;
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                int i = this.this$0.mCanbusInfoInt[2];
+                int i = this.msgmgr.mCanbusInfoInt[2];
                 if (i == 1) {
                     realKeyClick4(45);
                 }
@@ -329,701 +460,1223 @@ public final class MsgMgr extends AbstractMsgMgr {
                 }
             }
 
-            private final void realKeyClick4(int key) {
-                this.this$0.realKeyClick(context, key);
+            private void realKeyClick4(int key) {
+                this.msgmgr.realKeyClick(context, key);
             }
         });
-        map.put(34, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$4
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x22】后雷达信息");
-            }
+        map.put(34, new Parser(this, "【0x22】后雷达信息") {
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                this.this$0.mCanbusInfoInt[6] = 0;
-                this.this$0.mCanbusInfoInt[7] = 0;
+                this.msgmgr.mCanbusInfoInt[6] = 0;
+                this.msgmgr.mCanbusInfoInt[7] = 0;
                 if (isDataChange()) {
-                    RadarInfoUtil.setRearRadarLocationData(10, MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[2], 60), MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[3], 165), MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[4], 165), MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[5], 60));
+                    RadarInfoUtil.setRearRadarLocationData(10, MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[2], 60), MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[3], 165), MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[4], 165), MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[5], 60));
                     GeneralParkData.radar_location_data = RadarInfoUtil.mLocationMap;
-                    this.this$0.updateParkUi(null, context);
+                    this.msgmgr.updateParkUi(null, context);
                 }
             }
         });
-        map.put(35, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$5
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x23】前雷达信息");
-            }
+        map.put(35, new Parser(this, "【0x23】前雷达信息") {
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                this.this$0.mCanbusInfoInt[6] = 0;
-                this.this$0.mCanbusInfoInt[7] = 0;
+                this.msgmgr.mCanbusInfoInt[6] = 0;
+                this.msgmgr.mCanbusInfoInt[7] = 0;
                 if (isDataChange()) {
-                    RadarInfoUtil.setFrontRadarLocationData(10, MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[2], 60), MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[3], 120), MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[4], 120), MsgMgr.m362initParsers$lambda4$getRadarValue(this.this$0.mCanbusInfoInt[5], 60));
+                    RadarInfoUtil.setFrontRadarLocationData(10, MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[2], 60), MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[3], 120), MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[4], 120), MsgMgr.m362initParsers$lambda4$getRadarValue(this.msgmgr.mCanbusInfoInt[5], 60));
                     GeneralParkData.radar_location_data = RadarInfoUtil.mLocationMap;
-                    this.this$0.updateParkUi(null, context);
+                    this.msgmgr.updateParkUi(null, context);
                 }
             }
         });
-        map.put(36, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$6
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x24】基本信息");
-            }
+        map.put(36, new Parser(this, "【0x24】基本信息") {
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                this.this$0.mCanbusInfoInt[2] = this.this$0.mCanbusInfoInt[2] & 252;
-                this.this$0.mCanbusInfoInt[3] = 0;
+                this.msgmgr.mCanbusInfoInt[2] = this.msgmgr.mCanbusInfoInt[2] & 252;
+                this.msgmgr.mCanbusInfoInt[3] = 0;
                 if (isDataChange()) {
-                    GeneralDoorData.isRightFrontDoorOpen = ((this.this$0.mCanbusInfoInt[2] >> 7) & 1) == 1;
-                    GeneralDoorData.isLeftFrontDoorOpen = ((this.this$0.mCanbusInfoInt[2] >> 6) & 1) == 1;
-                    GeneralDoorData.isRightRearDoorOpen = ((this.this$0.mCanbusInfoInt[2] >> 5) & 1) == 1;
-                    GeneralDoorData.isLeftRearDoorOpen = ((this.this$0.mCanbusInfoInt[2] >> 4) & 1) == 1;
-                    GeneralDoorData.isBackOpen = ((this.this$0.mCanbusInfoInt[2] >> 3) & 1) == 1;
-                    GeneralDoorData.isFrontOpen = ((this.this$0.mCanbusInfoInt[2] >> 2) & 1) == 1;
-                    this.this$0.updateDoorView(context);
+                    GeneralDoorData.isRightFrontDoorOpen = ((this.msgmgr.mCanbusInfoInt[2] >> 7) & 1) == 1;
+                    GeneralDoorData.isLeftFrontDoorOpen = ((this.msgmgr.mCanbusInfoInt[2] >> 6) & 1) == 1;
+                    GeneralDoorData.isRightRearDoorOpen = ((this.msgmgr.mCanbusInfoInt[2] >> 5) & 1) == 1;
+                    GeneralDoorData.isLeftRearDoorOpen = ((this.msgmgr.mCanbusInfoInt[2] >> 4) & 1) == 1;
+                    GeneralDoorData.isBackOpen = ((this.msgmgr.mCanbusInfoInt[2] >> 3) & 1) == 1;
+                    GeneralDoorData.isFrontOpen = ((this.msgmgr.mCanbusInfoInt[2] >> 2) & 1) == 1;
+                    this.msgmgr.updateDoorView(context);
                 }
             }
         });
-        map.put(37, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$7
-            private final ArrayList<DriverUpdateEntity> list;
+        map.put(37, new Parser(this, "【0x25】泊车辅助状态") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$7
+            private final ArrayList<DriverUpdateEntity> list = new ArrayList<>();
 
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x25】泊车辅助状态");
-                this.list = new ArrayList<>();
-            }
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
                 if (isDataChange()) {
                     this.list.clear();
-                    DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("_41_rear_radar");
+                    DriverUpdateEntity driverUpdateEntity = this.msgmgr.mDriveItemIndexHashMap.get("_41_rear_radar");
                     if (driverUpdateEntity != null) {
-                        this.list.add(driverUpdateEntity.setValue(toSwitch((this.this$0.mCanbusInfoInt[2] >> 3) & 1)));
+                        this.list.add(driverUpdateEntity.setValue(toSwitch((this.msgmgr.mCanbusInfoInt[2] >> 3) & 1)));
                     }
-                    DriverUpdateEntity driverUpdateEntity2 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("_41_front_radar");
+                    DriverUpdateEntity driverUpdateEntity2 = this.msgmgr.mDriveItemIndexHashMap.get("_41_front_radar");
                     if (driverUpdateEntity2 != null) {
-                        this.list.add(driverUpdateEntity2.setValue(toSwitch((this.this$0.mCanbusInfoInt[2] >> 2) & 1)));
+                        this.list.add(driverUpdateEntity2.setValue(toSwitch((this.msgmgr.mCanbusInfoInt[2] >> 2) & 1)));
                     }
-                    DriverUpdateEntity driverUpdateEntity3 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("_41_park_assist");
+                    DriverUpdateEntity driverUpdateEntity3 = this.msgmgr.mDriveItemIndexHashMap.get("_41_park_assist");
                     if (driverUpdateEntity3 != null) {
-                        this.list.add(driverUpdateEntity3.setValue(toSwitch((this.this$0.mCanbusInfoInt[2] >> 1) & 1)));
+                        this.list.add(driverUpdateEntity3.setValue(toSwitch((this.msgmgr.mCanbusInfoInt[2] >> 1) & 1)));
                     }
-                    DriverUpdateEntity driverUpdateEntity4 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("_41_radar_sound");
+                    DriverUpdateEntity driverUpdateEntity4 = this.msgmgr.mDriveItemIndexHashMap.get("_41_radar_sound");
                     if (driverUpdateEntity4 != null) {
-                        this.list.add(driverUpdateEntity4.setValue(toSwitch(this.this$0.mCanbusInfoInt[2] & 1)));
+                        this.list.add(driverUpdateEntity4.setValue(toSwitch(this.msgmgr.mCanbusInfoInt[2] & 1)));
                     }
-                    this.this$0.updateGeneralDriveData(this.list);
-                    this.this$0.updateDriveDataActivity(null);
-                    GeneralParkData.pKeyRadarState = DataHandleUtils.getBoolBit1(this.this$0.mCanbusInfoInt[2]);
-                    this.this$0.updatePKeyRadar();
+                    this.msgmgr.updateGeneralDriveData(this.list);
+                    this.msgmgr.updateDriveDataActivity(null);
+                    GeneralParkData.pKeyRadarState = DataHandleUtils.getBoolBit1(this.msgmgr.mCanbusInfoInt[2]);
+                    this.msgmgr.updatePKeyRadar();
                 }
             }
 
-            private final String toSwitch(int i) {
+            private String toSwitch(int i) {
                 return CommUtil.getStrByResId(context, Integer.valueOf(i).equals(1) ? "_103_car_setting_value_7_1" : "_103_car_setting_value_7_0");
             }
         });
-        map.put(39, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$8
-            private String outdoorTemperature;
-
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x27】环境温度信息");
-                this.outdoorTemperature = "";
-            }
+        map.put(39, new Parser(this, "【0x27】环境温度信息") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$8
+            private String outdoorTemperature = "";
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                short s = (short) ((this.this$0.mCanbusInfoInt[4] << 8) | this.this$0.mCanbusInfoInt[3]);
-                String str = (s / 10) + ' ' + ((this.this$0.mCanbusInfoInt[2] & 1) == 1 ? "℉" : "℃");
+                short s = (short) ((this.msgmgr.mCanbusInfoInt[4] << 8) | this.msgmgr.mCanbusInfoInt[3]);
+                String str = (s / 10) + ' ' + ((this.msgmgr.mCanbusInfoInt[2] & 1) == 1 ? "℉" : "℃");
                 Log.i("_3_MsgMgr", "parse: value[" + ((int) s) + "] result[" + str + "] outdoorTemperature[" + this.outdoorTemperature + ']');
                 if (Intrinsics.areEqual(this.outdoorTemperature, str)) {
                     return;
                 }
                 this.outdoorTemperature = str;
-                this.this$0.updateOutDoorTemp(context, str);
+                this.msgmgr.updateOutDoorTemp(context, str);
             }
         });
-        map.put(40, new MsgMgr$initParsers$1$9(this, context));
-        map.put(41, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$10
-            {
-                super(this.this$0, "【0x29】方向盘转角");
+        map.put(40, new Parser(this, "【0x28】后座空调") {
+            @Override
+            public void parse(int dataLength) {
+                if (msgmgr.isAirDataChange()) {
+                    super.parse(dataLength);
+                    msgmgr.updateAirActivity(context, 1003);
+                }
             }
+
+            @Override
+            public OnParseListener[] setOnParseListeners() {
+                return new OnParseListener[]{new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$9$$ExternalSyntheticLambda0
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.rear_power = ((msgmgr.mCanbusInfoInt[2] >> 7) & 1) == 1;
+                        GeneralAirData.auto_manual = ((msgmgr.mCanbusInfoInt[2] >> 3) & 1) == 1;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$9$$ExternalSyntheticLambda1
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAirData.rear_left_blow_head = ((msgmgr.mCanbusInfoInt[3] >> 6) & 1) == 1;
+                        GeneralAirData.rear_left_blow_foot = ((msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1;
+                        GeneralAirData.rear_wind_level = msgmgr.mCanbusInfoInt[3] & 15;
+                        GeneralAirData.rear_right_blow_head = GeneralAirData.rear_left_blow_head;
+                        GeneralAirData.rear_right_blow_foot = GeneralAirData.rear_left_blow_foot;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$9$$ExternalSyntheticLambda2
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+
+                        GeneralAirData.rear_left_seat_heat_level = (msgmgr.mCanbusInfoInt[4] >> 4) & 7;
+                        GeneralAirData.rear_right_seat_heat_level = msgmgr.mCanbusInfoInt[4] & 7;
+                    }
+                }};
+            }
+        });
+        map.put(41, new Parser(this, "【0x29】方向盘转角") {
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
                 if (isDataChange()) {
-                    GeneralParkData.trackAngle = TrackInfoUtil.getTrackAngle0(this.this$0.mCanbusInfoByte[2], this.this$0.mCanbusInfoByte[3], 0, 19918, 16);
-                    this.this$0.updateTrack();
+                    GeneralParkData.trackAngle = TrackInfoUtil.getTrackAngle0(this.msgmgr.mCanbusInfoByte[2], this.msgmgr.mCanbusInfoByte[3], 0, 19918, 16);
+                    this.msgmgr.updateTrack();
                 }
             }
         });
-        map.put(42, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$11
-            private final ArrayList<DriverUpdateEntity> list;
+        map.put(42, new Parser(this, "【0x2A】PM2.5") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$11
+            private final ArrayList<DriverUpdateEntity> list = new ArrayList<>();
 
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x2A】PM2.5");
-                this.list = new ArrayList<>();
-            }
-
-            /* JADX WARN: Removed duplicated region for block: B:52:0x009a  */
-            @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
-            /*
-                Code decompiled incorrectly, please refer to instructions dump.
-                To view partially-correct code enable 'Show inconsistent code' option in preferences
-            */
             public void parse(int r6) {
-                /*
-                    r5 = this;
-                    boolean r6 = r5.isDataChange()
-                    if (r6 == 0) goto Lc3
-                    java.util.ArrayList<com.hzbhd.canbus.entity.DriverUpdateEntity> r6 = r5.list
-                    r6.clear()
-                    com.hzbhd.canbus.car._3.MsgMgr r6 = r5.this$0
-                    int[] r6 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r6)
-                    r0 = 2
-                    r6 = r6[r0]
-                    int r6 = r6 << 8
-                    com.hzbhd.canbus.car._3.MsgMgr r0 = r5.this$0
-                    int[] r0 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r1 = 3
-                    r0 = r0[r1]
-                    r6 = r6 | r0
-                    r0 = 36
-                    r1 = 1
-                    r2 = 0
-                    if (r6 < 0) goto L2a
-                    if (r6 >= r0) goto L2a
-                    r3 = r1
-                    goto L2b
-                L2a:
-                    r3 = r2
-                L2b:
-                    r4 = 0
-                    if (r3 == 0) goto L32
-                    java.lang.String r0 = "pm_excellent"
-                    goto L78
-                L32:
-                    r3 = 76
-                    if (r0 > r6) goto L3a
-                    if (r6 >= r3) goto L3a
-                    r0 = r1
-                    goto L3b
-                L3a:
-                    r0 = r2
-                L3b:
-                    if (r0 == 0) goto L40
-                    java.lang.String r0 = "pm_good"
-                    goto L78
-                L40:
-                    r0 = 116(0x74, float:1.63E-43)
-                    if (r3 > r6) goto L48
-                    if (r6 >= r0) goto L48
-                    r3 = r1
-                    goto L49
-                L48:
-                    r3 = r2
-                L49:
-                    if (r3 == 0) goto L4e
-                    java.lang.String r0 = "pm_mild_pollution"
-                    goto L78
-                L4e:
-                    r3 = 151(0x97, float:2.12E-43)
-                    if (r0 > r6) goto L56
-                    if (r6 >= r3) goto L56
-                    r0 = r1
-                    goto L57
-                L56:
-                    r0 = r2
-                L57:
-                    if (r0 == 0) goto L5c
-                    java.lang.String r0 = "pm_moderately_polluted"
-                    goto L78
-                L5c:
-                    r0 = 251(0xfb, float:3.52E-43)
-                    if (r3 > r6) goto L64
-                    if (r6 >= r0) goto L64
-                    r3 = r1
-                    goto L65
-                L64:
-                    r3 = r2
-                L65:
-                    if (r3 == 0) goto L6a
-                    java.lang.String r0 = "pm_heavy_pollution"
-                    goto L78
-                L6a:
-                    if (r0 > r6) goto L71
-                    r0 = 1001(0x3e9, float:1.403E-42)
-                    if (r6 >= r0) goto L71
-                    goto L72
-                L71:
-                    r1 = r2
-                L72:
-                    if (r1 == 0) goto L77
-                    java.lang.String r0 = "pm_severe_pollution"
-                    goto L78
-                L77:
-                    r0 = r4
-                L78:
-                    if (r0 == 0) goto L9a
-                    android.content.Context r1 = r2
-                    java.lang.StringBuilder r2 = new java.lang.StringBuilder
-                    r2.<init>()
-                    java.lang.StringBuilder r6 = r2.append(r6)
-                    r2 = 32
-                    java.lang.StringBuilder r6 = r6.append(r2)
-                    java.lang.String r0 = com.hzbhd.canbus.util.CommUtil.getStrByResId(r1, r0)
-                    java.lang.StringBuilder r6 = r6.append(r0)
-                    java.lang.String r6 = r6.toString()
-                    if (r6 == 0) goto L9a
-                    goto L9c
-                L9a:
-                    java.lang.String r6 = "---"
-                L9c:
-                    com.hzbhd.canbus.car._3.MsgMgr r0 = r5.this$0
-                    java.util.HashMap r0 = com.hzbhd.canbus.car._3.MsgMgr.access$getMDriveItemIndexHashMap$p(r0)
-                    java.lang.String r1 = "_3_2ah_d1"
-                    java.lang.Object r0 = r0.get(r1)
-                    com.hzbhd.canbus.entity.DriverUpdateEntity r0 = (com.hzbhd.canbus.entity.DriverUpdateEntity) r0
-                    if (r0 == 0) goto Lb5
-                    java.util.ArrayList<com.hzbhd.canbus.entity.DriverUpdateEntity> r1 = r5.list
-                    com.hzbhd.canbus.entity.DriverUpdateEntity r6 = r0.setValue(r6)
-                    r1.add(r6)
-                Lb5:
-                    com.hzbhd.canbus.car._3.MsgMgr r6 = r5.this$0
-                    java.util.ArrayList<com.hzbhd.canbus.entity.DriverUpdateEntity> r0 = r5.list
-                    java.util.List r0 = (java.util.List) r0
-                    com.hzbhd.canbus.car._3.MsgMgr.access$updateGeneralDriveData(r6, r0)
-                    com.hzbhd.canbus.car._3.MsgMgr r6 = r5.this$0
-                    com.hzbhd.canbus.car._3.MsgMgr.access$updateDriveDataActivity(r6, r4)
-                Lc3:
-                    return
-                */
-                throw new UnsupportedOperationException("Method not decompiled: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$11.parse(int):void");
+                if (!this.isDataChange()) return;
+
+                this.list.clear();
+
+                int[] canbusData = this.msgmgr.mCanbusInfoInt;
+                int pmValue = (canbusData[2] << 8) | canbusData[3];
+
+                String resKey;
+
+                if (pmValue >= 0 && pmValue < 36) {
+                    resKey = "pm_excellent";
+                } else if (pmValue < 76) {
+                    resKey = "pm_good";
+                } else if (pmValue < 116) {
+                    resKey = "pm_mild_pollution";
+                } else if (pmValue < 151) {
+                    resKey = "pm_moderately_polluted";
+                } else if (pmValue < 251) {
+                    resKey = "pm_heavy_pollution";
+                } else if (pmValue < 1001) {
+                    resKey = "pm_severe_pollution";
+                } else {
+                    resKey = null;
+                }
+
+                String displayValue;
+                if (resKey != null) {
+                    String label = CommUtil.getStrByResId(context, resKey);
+                    displayValue = pmValue + " " + label;
+                } else {
+                    displayValue = "---";
+                }
+
+                DriverUpdateEntity entity = this.msgmgr.mDriveItemIndexHashMap.get("_3_2ah_d1");
+                if (entity != null) {
+                    this.list.add(entity.setValue(displayValue));
+                }
+                this.msgmgr.updateGeneralDriveData(list);
+                this.msgmgr.updateDriveDataActivity(null);
             }
         });
-        map.put(48, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$12
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x30】解码盒版本信息");
-            }
+        map.put(48, new Parser(this, "【0x30】解码盒版本信息") {
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                MsgMgr msgMgr = this.this$0;
+                MsgMgr msgMgr = this.msgmgr;
                 msgMgr.updateVersionInfo(context, msgMgr.getVersionStr(msgMgr.mCanbusInfoByte));
             }
         });
-        map.put(50, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$13
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x32】左侧雷达数据");
-            }
+        map.put(50, new Parser(this, "【0x32】左侧雷达数据") {
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                this.this$0.mCanbusInfoInt[6] = 0;
-                this.this$0.mCanbusInfoInt[7] = 0;
+                this.msgmgr.mCanbusInfoInt[6] = 0;
+                this.msgmgr.mCanbusInfoInt[7] = 0;
                 if (isDataChange()) {
-                    RadarInfoUtil.setLeftRadarLocationData(7, this.this$0.mCanbusInfoInt[2] + 1, this.this$0.mCanbusInfoInt[3] + 1, this.this$0.mCanbusInfoInt[4] + 1, this.this$0.mCanbusInfoInt[5] + 1);
+                    RadarInfoUtil.setLeftRadarLocationData(7, this.msgmgr.mCanbusInfoInt[2] + 1, this.msgmgr.mCanbusInfoInt[3] + 1, this.msgmgr.mCanbusInfoInt[4] + 1, this.msgmgr.mCanbusInfoInt[5] + 1);
                     GeneralParkData.radar_location_data = RadarInfoUtil.mLocationMap;
-                    this.this$0.updateParkUi(null, context);
+                    this.msgmgr.updateParkUi(null, context);
                 }
             }
         });
-        map.put(51, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$14
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x33】右侧雷达数据");
-            }
-
+        map.put(51, new Parser(this, "【0x33】右侧雷达数据") {
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                this.this$0.mCanbusInfoInt[6] = 0;
-                this.this$0.mCanbusInfoInt[7] = 0;
+                this.msgmgr.mCanbusInfoInt[6] = 0;
+                this.msgmgr.mCanbusInfoInt[7] = 0;
                 if (isDataChange()) {
-                    RadarInfoUtil.setRightRadarLocationData(7, this.this$0.mCanbusInfoInt[2] + 1, this.this$0.mCanbusInfoInt[3] + 1, this.this$0.mCanbusInfoInt[4] + 1, this.this$0.mCanbusInfoInt[5] + 1);
+                    RadarInfoUtil.setRightRadarLocationData(7, this.msgmgr.mCanbusInfoInt[2] + 1, this.msgmgr.mCanbusInfoInt[3] + 1, this.msgmgr.mCanbusInfoInt[4] + 1, this.msgmgr.mCanbusInfoInt[5] + 1);
                     GeneralParkData.radar_location_data = RadarInfoUtil.mLocationMap;
-                    this.this$0.updateParkUi(null, context);
+                    this.msgmgr.updateParkUi(null, context);
                 }
             }
         });
-        map.put(64, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$15
+        map.put(64, new Parser(this, "【0x40】车身状态信息") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$15
             private int driveModeButtonStatus;
             private int isShowDriveAssist;
             private int isShowDriveMode;
             private int isShowParkSetting;
-            private final ArrayList<SettingUpdateEntity<Object>> list;
+            private final ArrayList<SettingUpdateEntity> list = new ArrayList<>();
             private int m0x40Param4;
 
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x40】车身状态信息");
-                this.list = new ArrayList<>();
+
+            public void parse(int var1_1) {
+                // Verificar si hubo un cambio en los datos.
+                if (!this.isDataChange()) {
+                    return;
+                }
+
+                // Limpiar la lista de actualizaciones previas.
+                this.list.clear();
+
+                // Obtener los datos del CAN bus.
+                int[] canbusInfo = this.msgmgr.mCanbusInfoInt;
+                var1_1 = 2; // Esto parece estar relacionado con un parámetro de control (posiblemente un índice)
+                int status = canbusInfo[2];
+
+                // Manejar diferentes valores de status.
+                if (status == 0) {
+                    return;  // Si el status es 0, no hacer nada.
+                }
+
+                // Establecer la bandera de modo inglés si el estado es 16.
+                if (status == 16) {
+                    updateSetting("english_on");
+                    return;
+                }
+
+                // Casos para otros valores de status (32, 64, etc.)
+                switch (status) {
+                    case 32:
+                        updateSetting("spanish_on");
+                        break;
+                    case 64:
+                        updateSetting("french_on");
+                        break;
+                    case 96:
+                        updateSetting("german_on");
+                        break;
+                    case 112:
+                        updateSetting("italian_on");
+                        break;
+                    case 128:
+                        updateSetting("portuguese_on");
+                        break;
+                    case 144:
+                        updateSetting("japanese_on");
+                        break;
+                    default:
+                        handleCustomCases(status);
+                        break;
+                }
+
+                // Procesar valores adicionales del CAN bus.
+                processCanbusData(canbusInfo);
             }
 
-            /* JADX WARN: Removed duplicated region for block: B:178:0x06a9  */
-            /* JADX WARN: Removed duplicated region for block: B:221:0x08cb  */
-            @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
-            /*
-                Code decompiled incorrectly, please refer to instructions dump.
-                To view partially-correct code enable 'Show inconsistent code' option in preferences
-            */
-            public void parse(int r17) {
-                /*
-                    Method dump skipped, instructions count: 6368
-                    To view this dump change 'Code comments level' option to 'DEBUG'
-                */
-                throw new UnsupportedOperationException("Method not decompiled: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$15.parse(int):void");
+            private void updateSetting(String language) {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get(language);
+                if (setting != null) {
+                    this.list.add(setting.setValue(language));
+                }
             }
+
+            private void handleCustomCases(int status) {
+                switch (status) {
+                    case 178:
+                        processIndividualSettings();
+                        break;
+                    case 177:
+                        processOffroadSettings();
+                        break;
+                    case 176:
+                        processDriveModeSettings(this.msgmgr.mCanbusInfoInt);
+                        break;
+                    case 83:
+                        processLightSettings();
+                        break;
+                    case 82:
+                        processCarLightingSettings();
+                        break;
+                    case 81:
+                        processSpeedAlertSettings();
+                        break;
+                    case 80:
+                        processChargingSettings();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            private void processCanbusData(int[] canbusInfo) {
+                // Procesar configuraciones relacionadas con el control de conducción.
+                processDriveAssistSettings(canbusInfo);
+                processDriveModeSettings(canbusInfo);
+
+                // Actualizar la UI con los nuevos datos.
+                msgmgr.updateGeneralSettingData(list);
+                this.msgmgr.updateSettingActivity(null);
+            }
+
+            private void processDriveAssistSettings(int[] canbusInfo) {
+                int driveAssistStatus = canbusInfo[3] >> 7 & 1;
+                if (this.isShowDriveAssist != driveAssistStatus) {
+                    this.isShowDriveAssist = driveAssistStatus;
+                    if (driveAssistStatus == 1) {
+                        openDriveAssistSettings();
+                    } else if (msgmgr.getActivity() instanceof SettingActivity && msgmgr.isActivityFront()) {
+                        msgmgr.finishActivity();
+                    }
+                }
+            }
+
+            private void openDriveAssistSettings() {
+
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("_2_setting_2_0");
+                if (setting != null) {
+                    msgmgr.startSettingActivity(context, setting.getLeftListIndex(), setting.getRightListIndex());
+                }
+            }
+
+            private void processDriveModeSettings(int[] canbusInfo) {
+                int driveModeStatus = canbusInfo[3] >> 5 & 1;
+                if (this.isShowDriveMode != driveModeStatus) {
+                    this.isShowDriveMode = driveModeStatus;
+                    if (driveModeStatus == 1) {
+                        openDriveModeSettings();
+                    } else if (msgmgr.getActivity() instanceof SettingActivity && msgmgr.isActivityFront()) {
+                        msgmgr.finishActivity();
+                    }
+                }
+            }
+
+            private void openDriveModeSettings() {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("_283_title_2");
+                if (setting != null) {
+                    msgmgr.startSettingActivity(context, setting.getLeftListIndex(), setting.getRightListIndex());
+                }
+            }
+
+            private void processIndividualSettings() {
+                // Actualiza las configuraciones relacionadas con la individualidad (por ejemplo, ajustes del motor, dirección, etc.)
+                updateIndividualSetting("engine");
+                updateIndividualSetting("steering");
+                updateIndividualSetting("cornering_light");
+                updateIndividualSetting("air_conditioning");
+            }
+
+            private void updateIndividualSetting(String settingType) {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("_2_settings_individual_" + settingType);
+                if (setting != null) {
+                    this.list.add(setting.setValue(getCanbusDataForSetting(settingType)));
+                }
+            }
+
+            private int getCanbusDataForSetting(String settingType) {
+                // Aquí se puede implementar la lógica para extraer el valor correspondiente del CAN bus según el tipo de configuración.
+                // Por ejemplo:
+                switch (settingType) {
+                    case "engine":
+
+                        return msgmgr.mCanbusInfoInt[4] >> 4 & 15;
+                    case "steering":
+                        return msgmgr.mCanbusInfoInt[4] & 15;
+                    case "cornering_light":
+                        return msgmgr.mCanbusInfoInt[5] >> 4 & 15;
+                    case "air_conditioning":
+                        return (msgmgr.mCanbusInfoInt[5] & 15) == 2 ? 1 : 0;
+                    default:
+                        return 0;
+                }
+            }
+
+            private void processOffroadSettings() {
+                // Procesa las configuraciones relacionadas con el modo offroad.
+                updateOffroadSetting("drive");
+                updateOffroadSetting("steering");
+                updateOffroadSetting("four_wheel_drive");
+                updateOffroadSetting("air_conditioning");
+            }
+
+            private void updateOffroadSetting(String settingType) {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("_2_settings_offroad_" + settingType);
+                if (setting != null) {
+                    this.list.add(setting.setValue(getCanbusDataForOffroadSetting(settingType)));
+                }
+            }
+
+            private int getCanbusDataForOffroadSetting(String settingType) {
+                // Similar a los ajustes individuales, se obtienen los datos del CAN bus para el modo offroad.
+                switch (settingType) {
+                    case "drive":
+                        return msgmgr.mCanbusInfoInt[4] >> 4 & 15;
+                    case "steering":
+                        return msgmgr.mCanbusInfoInt[3] & 15;
+                    case "four_wheel_drive":
+                        return msgmgr.mCanbusInfoInt[4] >> 4 & 15;
+                    case "air_conditioning":
+                        return (msgmgr.mCanbusInfoInt[4] & 15) == 2 ? 1 : 0;
+                    default:
+                        return 0;
+                }
+            }
+
+            private void processLightSettings() {
+                // Actualiza las configuraciones relacionadas con las luces.
+                updateLightSetting("handle_box_light");
+                updateLightSetting("sync_light");
+                updateLightSetting("first_color");
+                updateLightSetting("second_color");
+            }
+
+            private void updateLightSetting(String settingType) {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_" + settingType);
+                if (setting != null) {
+                    this.list.add(setting.setValue(getCanbusDataForLightSetting(settingType)));
+                }
+            }
+
+            private int getCanbusDataForLightSetting(String settingType) {
+                // Obtener datos del CAN bus para los ajustes de las luces.
+                switch (settingType) {
+                    case "handle_box_light":
+                        return msgmgr.mCanbusInfoInt[3] / 10;
+                    case "sync_light":
+                        return 1 - (msgmgr.mCanbusInfoInt[4] >> 7 & 1);
+                    case "first_color":
+                        return msgmgr.mCanbusInfoInt[5] & 63;
+                    case "second_color":
+                        return msgmgr.mCanbusInfoInt[6] & 63;
+                    default:
+                        return 0;
+                }
+            }
+
+            private void processCarLightingSettings() {
+                // Ajuste de configuraciones relacionadas con las luces del coche.
+                updateLightingSettings("roof_light");
+                updateLightingSettings("front_light");
+                updateLightingSettings("all_area_light");
+            }
+
+            private void updateLightingSettings(String settingType) {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_" + settingType);
+                if (setting != null) {
+                    this.list.add(setting.setValue(getCanbusDataForLightingSetting(settingType)));
+                }
+            }
+
+            private int getCanbusDataForLightingSetting(String settingType) {
+                // Obtener datos del CAN bus para las configuraciones de iluminación del coche.
+                switch (settingType) {
+                    case "roof_light":
+                        return msgmgr.mCanbusInfoInt[3] / 10;
+                    case "front_light":
+                        return msgmgr.mCanbusInfoInt[4] / 10;
+                    case "all_area_light":
+                        return msgmgr.mCanbusInfoInt[6] / 10;
+                    default:
+                        return 0;
+                }
+            }
+
+            private void processSpeedAlertSettings() {
+                // Configuraciones relacionadas con las alertas de velocidad.
+                updateSpeedAlertSetting("current_consumption");
+                updateSpeedAlertSetting("avg_consumption");
+                updateSpeedAlertSetting("con_consumers");
+                updateSpeedAlertSetting("eco_tips");
+            }
+
+            private void updateSpeedAlertSetting(String settingType) {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_" + settingType);
+                if (setting != null) {
+                    this.list.add(setting.setValue(getCanbusDataForSpeedAlertSetting(settingType)));
+                }
+            }
+
+            private int getCanbusDataForSpeedAlertSetting(String settingType) {
+                // Obtener los datos del CAN bus relacionados con las alertas de velocidad.
+                switch (settingType) {
+                    case "current_consumption":
+                        return msgmgr.mCanbusInfoInt[3] & 1;
+                    case "avg_consumption":
+                        return msgmgr.mCanbusInfoInt[3] >> 1 & 1;
+                    case "con_consumers":
+                        return msgmgr.mCanbusInfoInt[3] >> 2 & 1;
+                    case "eco_tips":
+                        return msgmgr.mCanbusInfoInt[3] >> 3 & 1;
+                    default:
+                        return 0;
+                }
+            }
+
+            private void processChargingSettings() {
+                // Configuraciones de carga.
+                updateChargingSetting("current");
+                updateChargingSetting("speed");
+            }
+
+            private void updateChargingSetting(String settingType) {
+                SettingUpdateEntity setting = this.msgmgr.mSettingItemIndexHashMap.get("vm_power_consumption");
+                if (setting != null) {
+                    this.list.add(setting.setValue(this.msgmgr.mCanbusInfoInt[3] & 3));
+                }
+            }
+
         });
-        map.put(65, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$16
-            private final ArrayList<SettingUpdateEntity<Object>> list;
+        map.put(65, new Parser(this, "【0x41】中控使能") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$16
+            private final ArrayList<SettingUpdateEntity> list = new ArrayList<>();
 
-            {
-                super(this.this$0, "【0x41】中控使能");
-                this.list = new ArrayList<>();
-            }
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
                 SettingUpdateEntity settingUpdateEntity;
                 if (isDataChange()) {
                     this.list.clear();
-                    int i = this.this$0.mCanbusInfoInt[2];
+                    int i = this.msgmgr.mCanbusInfoInt[2];
                     if (i == 16) {
-                        SettingUpdateEntity settingUpdateEntity2 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_2_setting_0");
+                        SettingUpdateEntity settingUpdateEntity2 = this.msgmgr.mSettingItemIndexHashMap.get("_2_setting_0");
                         if (settingUpdateEntity2 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity2.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity2.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity3 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_3_40h_10h_p2_b7");
+                        SettingUpdateEntity settingUpdateEntity3 = this.msgmgr.mSettingItemIndexHashMap.get("_3_40h_10h_p2_b7");
                         if (settingUpdateEntity3 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity3.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity3.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
                     } else if (i == 32) {
-                        SettingUpdateEntity settingUpdateEntity4 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("tpms_set");
+                        SettingUpdateEntity settingUpdateEntity4 = this.msgmgr.mSettingItemIndexHashMap.get("tpms_set");
                         if (settingUpdateEntity4 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity4.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity4.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity5 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_3_40h_20h_p1_b0");
+                        SettingUpdateEntity settingUpdateEntity5 = this.msgmgr.mSettingItemIndexHashMap.get("_3_40h_20h_p1_b0");
                         if (settingUpdateEntity5 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity5.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity5.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity6 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_3_40h_20h_p2");
+                        SettingUpdateEntity settingUpdateEntity6 = this.msgmgr.mSettingItemIndexHashMap.get("_3_40h_20h_p2");
                         if (settingUpdateEntity6 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity6.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity6.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
                     } else if (i == 64) {
-                        SettingUpdateEntity settingUpdateEntity7 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_active_auto");
+                        SettingUpdateEntity settingUpdateEntity7 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_active_auto");
                         if (settingUpdateEntity7 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity7.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity7.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity8 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_front_volume");
+                        SettingUpdateEntity settingUpdateEntity8 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_front_volume");
                         if (settingUpdateEntity8 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity8.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity8.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity9 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_front_tone_setting");
+                        SettingUpdateEntity settingUpdateEntity9 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_front_tone_setting");
                         if (settingUpdateEntity9 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity9.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity9.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity10 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_rear_volume");
+                        SettingUpdateEntity settingUpdateEntity10 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_rear_volume");
                         if (settingUpdateEntity10 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity10.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity10.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity11 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_rear_tone_setting");
+                        SettingUpdateEntity settingUpdateEntity11 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_rear_tone_setting");
                         if (settingUpdateEntity11 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity11.setEnable(((this.this$0.mCanbusInfoInt[3] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity11.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity12 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_active");
+                        SettingUpdateEntity settingUpdateEntity12 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_parking_active");
                         if (settingUpdateEntity12 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity12.setEnable(((this.this$0.mCanbusInfoInt[3] >> 6) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity12.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 6) & 1) == 1)));
                         }
                     } else if (i == 96) {
-                        SettingUpdateEntity settingUpdateEntity13 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_2_settings_syncchronous_adjustment");
+                        SettingUpdateEntity settingUpdateEntity13 = this.msgmgr.mSettingItemIndexHashMap.get("_2_settings_syncchronous_adjustment");
                         if (settingUpdateEntity13 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity13.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity13.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity14 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_2_settings_lower_while_reversing");
+                        SettingUpdateEntity settingUpdateEntity14 = this.msgmgr.mSettingItemIndexHashMap.get("_2_settings_lower_while_reversing");
                         if (settingUpdateEntity14 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity14.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity14.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity15 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mirror_wipers_auto_wiping");
+                        SettingUpdateEntity settingUpdateEntity15 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mirror_wipers_auto_wiping");
                         if (settingUpdateEntity15 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity15.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity15.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity16 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mirror_wipers_rear_window_wiping");
+                        SettingUpdateEntity settingUpdateEntity16 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mirror_wipers_rear_window_wiping");
                         if (settingUpdateEntity16 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity16.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity16.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity17 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_3_40h_60h_p2_b0");
+                        SettingUpdateEntity settingUpdateEntity17 = this.msgmgr.mSettingItemIndexHashMap.get("_3_40h_60h_p2_b0");
                         if (settingUpdateEntity17 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity17.setEnable(((this.this$0.mCanbusInfoInt[3] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity17.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity18 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_service_wiper_in_maintenance_position");
+                        SettingUpdateEntity settingUpdateEntity18 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_service_wiper_in_maintenance_position");
                         if (settingUpdateEntity18 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity18.setEnable(((this.this$0.mCanbusInfoInt[3] >> 5) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity18.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1)));
                         }
                     } else if (i == 112) {
-                        SettingUpdateEntity settingUpdateEntity19 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_3_40h_70h_p1_b30");
+                        SettingUpdateEntity settingUpdateEntity19 = this.msgmgr.mSettingItemIndexHashMap.get("_3_40h_70h_p1_b30");
                         if (settingUpdateEntity19 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity19.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity19.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity20 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_open_close_door_unlocking");
+                        SettingUpdateEntity settingUpdateEntity20 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_open_close_door_unlocking");
                         if (settingUpdateEntity20 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity20.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity20.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity21 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_open_close_auto_locking");
+                        SettingUpdateEntity settingUpdateEntity21 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_open_close_auto_locking");
                         if (settingUpdateEntity21 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity21.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity21.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity22 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("inductive_trunk_lid");
+                        SettingUpdateEntity settingUpdateEntity22 = this.msgmgr.mSettingItemIndexHashMap.get("inductive_trunk_lid");
                         if (settingUpdateEntity22 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity22.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity22.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
                     } else if (i == 128) {
-                        SettingUpdateEntity settingUpdateEntity23 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_current_consumption");
+                        SettingUpdateEntity settingUpdateEntity23 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_current_consumption");
                         if (settingUpdateEntity23 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity23.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity23.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity24 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_avg_consumption");
+                        SettingUpdateEntity settingUpdateEntity24 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_avg_consumption");
                         if (settingUpdateEntity24 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity24.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity24.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity25 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_con_consumers");
+                        SettingUpdateEntity settingUpdateEntity25 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_con_consumers");
                         if (settingUpdateEntity25 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity25.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity25.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity26 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_eco_tips");
+                        SettingUpdateEntity settingUpdateEntity26 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_eco_tips");
                         if (settingUpdateEntity26 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity26.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity26.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity27 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_travelling_time");
+                        SettingUpdateEntity settingUpdateEntity27 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_travelling_time");
                         if (settingUpdateEntity27 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity27.setEnable(((this.this$0.mCanbusInfoInt[3] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity27.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity28 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_distance_travelled");
+                        SettingUpdateEntity settingUpdateEntity28 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_distance_travelled");
                         if (settingUpdateEntity28 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity28.setEnable(((this.this$0.mCanbusInfoInt[3] >> 5) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity28.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity29 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_avg_speed");
+                        SettingUpdateEntity settingUpdateEntity29 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_avg_speed");
                         if (settingUpdateEntity29 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity29.setEnable(((this.this$0.mCanbusInfoInt[3] >> 6) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity29.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 6) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity30 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_digital_speed_display");
+                        SettingUpdateEntity settingUpdateEntity30 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_digital_speed_display");
                         if (settingUpdateEntity30 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity30.setEnable(((this.this$0.mCanbusInfoInt[3] >> 7) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity30.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 7) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity31 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_speed_warning");
+                        SettingUpdateEntity settingUpdateEntity31 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_speed_warning");
                         if (settingUpdateEntity31 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity31.setEnable((this.this$0.mCanbusInfoInt[4] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity31.setEnable((this.msgmgr.mCanbusInfoInt[4] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity32 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_oil_temperature");
+                        SettingUpdateEntity settingUpdateEntity32 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_mfd_oil_temperature");
                         if (settingUpdateEntity32 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity32.setEnable(((this.this$0.mCanbusInfoInt[4] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity32.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 1) & 1) == 1)));
                         }
                     } else if (i == 144) {
-                        SettingUpdateEntity settingUpdateEntity33 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_distance");
+                        SettingUpdateEntity settingUpdateEntity33 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_distance");
                         if (settingUpdateEntity33 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity33.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity33.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity34 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_speed");
+                        SettingUpdateEntity settingUpdateEntity34 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_speed");
                         if (settingUpdateEntity34 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity34.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity34.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity35 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_temperature");
+                        SettingUpdateEntity settingUpdateEntity35 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_temperature");
                         if (settingUpdateEntity35 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity35.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity35.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity36 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_volume");
+                        SettingUpdateEntity settingUpdateEntity36 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_volume");
                         if (settingUpdateEntity36 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity36.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity36.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity37 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_consumption");
+                        SettingUpdateEntity settingUpdateEntity37 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_consumption");
                         if (settingUpdateEntity37 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity37.setEnable(((this.this$0.mCanbusInfoInt[3] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity37.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity38 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_pressure");
+                        SettingUpdateEntity settingUpdateEntity38 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_units_pressure");
                         if (settingUpdateEntity38 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity38.setEnable(((this.this$0.mCanbusInfoInt[3] >> 5) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity38.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1)));
                         }
                     } else if (i == 48) {
-                        SettingUpdateEntity settingUpdateEntity39 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_2_setting_2_0");
+                        SettingUpdateEntity settingUpdateEntity39 = this.msgmgr.mSettingItemIndexHashMap.get("_2_setting_2_0");
                         if (settingUpdateEntity39 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity39.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity39.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity40 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_283_car_setting_pa_6");
+                        SettingUpdateEntity settingUpdateEntity40 = this.msgmgr.mSettingItemIndexHashMap.get("_283_car_setting_pa_6");
                         if (settingUpdateEntity40 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity40.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity40.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity41 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_driver_assistance_lane_assisit");
+                        SettingUpdateEntity settingUpdateEntity41 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_driver_assistance_lane_assisit");
                         if (settingUpdateEntity41 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity41.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity41.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
                     } else if (i == 49) {
-                        SettingUpdateEntity settingUpdateEntity42 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_driver_assistance_last_distance_selected");
+                        SettingUpdateEntity settingUpdateEntity42 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_driver_assistance_last_distance_selected");
                         if (settingUpdateEntity42 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity42.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity42.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity43 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_283_car_setting_pa_1");
+                        SettingUpdateEntity settingUpdateEntity43 = this.msgmgr.mSettingItemIndexHashMap.get("_283_car_setting_pa_1");
                         if (settingUpdateEntity43 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity43.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity43.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity44 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_283_car_setting_pa_2");
+                        SettingUpdateEntity settingUpdateEntity44 = this.msgmgr.mSettingItemIndexHashMap.get("_283_car_setting_pa_2");
                         if (settingUpdateEntity44 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity44.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity44.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity45 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_283_car_setting_pa_3");
+                        SettingUpdateEntity settingUpdateEntity45 = this.msgmgr.mSettingItemIndexHashMap.get("_283_car_setting_pa_3");
                         if (settingUpdateEntity45 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity45.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity45.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity46 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_2_settings_acc_drive_program");
+                        SettingUpdateEntity settingUpdateEntity46 = this.msgmgr.mSettingItemIndexHashMap.get("_2_settings_acc_drive_program");
                         if (settingUpdateEntity46 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity46.setEnable(((this.this$0.mCanbusInfoInt[3] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity46.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity47 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_2_settings_acc_distance");
+                        SettingUpdateEntity settingUpdateEntity47 = this.msgmgr.mSettingItemIndexHashMap.get("_2_settings_acc_distance");
                         if (settingUpdateEntity47 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity47.setEnable(((this.this$0.mCanbusInfoInt[3] >> 5) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity47.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1)));
                         }
                     } else if (i == 80) {
-                        SettingUpdateEntity settingUpdateEntity48 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_switch_on_time");
+                        SettingUpdateEntity settingUpdateEntity48 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_switch_on_time");
                         if (settingUpdateEntity48 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity48.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity48.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity49 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_auto_control");
+                        SettingUpdateEntity settingUpdateEntity49 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_auto_control");
                         if (settingUpdateEntity49 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity49.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity49.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity50 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_lane_change_flash");
+                        SettingUpdateEntity settingUpdateEntity50 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_lane_change_flash");
                         if (settingUpdateEntity50 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity50.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity50.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity51 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_ins_swi_lighting");
+                        SettingUpdateEntity settingUpdateEntity51 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_ins_swi_lighting");
                         if (settingUpdateEntity51 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity51.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity51.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity52 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_coming_home");
+                        SettingUpdateEntity settingUpdateEntity52 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_coming_home");
                         if (settingUpdateEntity52 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity52.setEnable(((this.this$0.mCanbusInfoInt[3] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity52.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity53 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_leaving_home");
+                        SettingUpdateEntity settingUpdateEntity53 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_leaving_home");
                         if (settingUpdateEntity53 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity53.setEnable(((this.this$0.mCanbusInfoInt[3] >> 5) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity53.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity54 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_283_car_setting_light_4");
+                        SettingUpdateEntity settingUpdateEntity54 = this.msgmgr.mSettingItemIndexHashMap.get("_283_car_setting_light_4");
                         if (settingUpdateEntity54 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity54.setEnable(((this.this$0.mCanbusInfoInt[3] >> 6) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity54.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 6) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity55 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("headlight_illumination_distance_adjustment");
+                        SettingUpdateEntity settingUpdateEntity55 = this.msgmgr.mSettingItemIndexHashMap.get("headlight_illumination_distance_adjustment");
                         if (settingUpdateEntity55 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity55.setEnable(((this.this$0.mCanbusInfoInt[3] >> 7) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity55.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 7) & 1) == 1)));
                         }
                     } else if (i == 81) {
-                        SettingUpdateEntity settingUpdateEntity56 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_travel_mode");
+                        SettingUpdateEntity settingUpdateEntity56 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_travel_mode");
                         if (settingUpdateEntity56 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity56.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity56.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity57 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_door_ambient_light");
+                        SettingUpdateEntity settingUpdateEntity57 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_door_ambient_light");
                         if (settingUpdateEntity57 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity57.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity57.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity58 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_footwell_light");
+                        SettingUpdateEntity settingUpdateEntity58 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_footwell_light");
                         if (settingUpdateEntity58 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity58.setEnable(((this.this$0.mCanbusInfoInt[3] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity58.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity59 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_car_roof_light");
+                        SettingUpdateEntity settingUpdateEntity59 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_car_roof_light");
                         if (settingUpdateEntity59 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity59.setEnable(((this.this$0.mCanbusInfoInt[3] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity59.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity60 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_car_front_light");
+                        SettingUpdateEntity settingUpdateEntity60 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_car_front_light");
                         if (settingUpdateEntity60 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity60.setEnable(((this.this$0.mCanbusInfoInt[3] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity60.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity61 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_all_area_light");
+                        SettingUpdateEntity settingUpdateEntity61 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_all_area_light");
                         if (settingUpdateEntity61 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity61.setEnable(((this.this$0.mCanbusInfoInt[3] >> 5) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity61.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 5) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity62 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_dynamic_light_assist");
+                        SettingUpdateEntity settingUpdateEntity62 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_dynamic_light_assist");
                         if (settingUpdateEntity62 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity62.setEnable(((this.this$0.mCanbusInfoInt[3] >> 6) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity62.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 6) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity63 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_dynamic_light_follow");
+                        SettingUpdateEntity settingUpdateEntity63 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_dynamic_light_follow");
                         if (settingUpdateEntity63 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity63.setEnable(((this.this$0.mCanbusInfoInt[3] >> 7) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity63.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 7) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity64 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_303_setting_content_11");
+                        SettingUpdateEntity settingUpdateEntity64 = this.msgmgr.mSettingItemIndexHashMap.get("_303_setting_content_11");
                         if (settingUpdateEntity64 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity64.setEnable((this.this$0.mCanbusInfoInt[4] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity64.setEnable((this.msgmgr.mCanbusInfoInt[4] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity65 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_303_setting_content_12");
+                        SettingUpdateEntity settingUpdateEntity65 = this.msgmgr.mSettingItemIndexHashMap.get("_303_setting_content_12");
                         if (settingUpdateEntity65 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity65.setEnable(((this.this$0.mCanbusInfoInt[4] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity65.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity66 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_303_setting_content_13");
+                        SettingUpdateEntity settingUpdateEntity66 = this.msgmgr.mSettingItemIndexHashMap.get("_303_setting_content_13");
                         if (settingUpdateEntity66 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity66.setEnable(((this.this$0.mCanbusInfoInt[4] >> 2) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity66.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 2) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity67 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_handle_box_light");
+                        SettingUpdateEntity settingUpdateEntity67 = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_light_handle_box_light");
                         if (settingUpdateEntity67 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity67.setEnable(((this.this$0.mCanbusInfoInt[4] >> 3) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity67.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 3) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity68 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("two_color_sync");
+                        SettingUpdateEntity settingUpdateEntity68 = this.msgmgr.mSettingItemIndexHashMap.get("two_color_sync");
                         if (settingUpdateEntity68 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity68.setEnable(((this.this$0.mCanbusInfoInt[4] >> 4) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity68.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 4) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity69 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("first_color");
+                        SettingUpdateEntity settingUpdateEntity69 = this.msgmgr.mSettingItemIndexHashMap.get("first_color");
                         if (settingUpdateEntity69 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity69.setEnable(((this.this$0.mCanbusInfoInt[4] >> 5) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity69.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 5) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity70 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("second_color");
+                        SettingUpdateEntity settingUpdateEntity70 = this.msgmgr.mSettingItemIndexHashMap.get("second_color");
                         if (settingUpdateEntity70 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity70.setEnable(((this.this$0.mCanbusInfoInt[4] >> 6) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity70.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 6) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity71 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("on_off_btn_txt_7");
+                        SettingUpdateEntity settingUpdateEntity71 = this.msgmgr.mSettingItemIndexHashMap.get("on_off_btn_txt_7");
                         if (settingUpdateEntity71 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity71.setEnable(((this.this$0.mCanbusInfoInt[4] >> 7) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity71.setEnable(((this.msgmgr.mCanbusInfoInt[4] >> 7) & 1) == 1)));
                         }
                     } else if (i == 176) {
-                        SettingUpdateEntity settingUpdateEntity72 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("seat_remote_key_memory_matching");
+                        SettingUpdateEntity settingUpdateEntity72 = this.msgmgr.mSettingItemIndexHashMap.get("seat_remote_key_memory_matching");
                         if (settingUpdateEntity72 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity72.setEnable((this.this$0.mCanbusInfoInt[3] & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity72.setEnable((this.msgmgr.mCanbusInfoInt[3] & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity73 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("driver_seat");
+                        SettingUpdateEntity settingUpdateEntity73 = this.msgmgr.mSettingItemIndexHashMap.get("driver_seat");
                         if (settingUpdateEntity73 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity73.setEnable(((this.this$0.mCanbusInfoInt[3] >> 1) & 1) == 1)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity73.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 1) & 1) == 1)));
                         }
-                        SettingUpdateEntity settingUpdateEntity74 = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("_2_setting_14_1");
+                        SettingUpdateEntity settingUpdateEntity74 = this.msgmgr.mSettingItemIndexHashMap.get("_2_setting_14_1");
                         if (settingUpdateEntity74 != null) {
-                            Boolean.valueOf(this.list.add(settingUpdateEntity74.setEnable((this.this$0.mCanbusInfoInt[3] & 3) != 0)));
+                            Boolean.valueOf(this.list.add(settingUpdateEntity74.setEnable((this.msgmgr.mCanbusInfoInt[3] & 3) != 0)));
                         }
-                    } else if (i == 177 && (settingUpdateEntity = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("individual")) != null) {
-                        Boolean.valueOf(this.list.add(settingUpdateEntity.setEnable(((this.this$0.mCanbusInfoInt[3] >> 7) & 1) == 1)));
+                    } else if (i == 177 && (settingUpdateEntity = this.msgmgr.mSettingItemIndexHashMap.get("individual")) != null) {
+                        Boolean.valueOf(this.list.add(settingUpdateEntity.setEnable(((this.msgmgr.mCanbusInfoInt[3] >> 7) & 1) == 1)));
                     }
-                    this.this$0.updateGeneralSettingData(this.list);
-                    this.this$0.updateSettingActivity(null);
+                    this.msgmgr.updateGeneralSettingData(this.list);
+                    this.msgmgr.updateSettingActivity(null);
                 }
             }
         });
-        map.put(80, new MsgMgr$initParsers$1$17(this, context));
-        map.put(81, new MsgMgr$initParsers$1$18(this, context));
-        map.put(82, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$19
-            private final ArrayList<DriverUpdateEntity> list;
-            private int mData45;
+        map.put(80, new Parser(this, "【0x50】Driving Data") {
 
-            {
-                super(this.this$0, "【0x52】电子显示");
-                this.list = new ArrayList<>();
+            private final ArrayList<DriverUpdateEntity> list = new ArrayList<>();
+            final DecimalFormat df_2Integer = new DecimalFormat("00");
+            private final Supplier<String> unit0x10 = () -> (msgmgr.mCanbusInfoInt[3] & 1) == 1 ? "mi" : "km";
+
+            private int value0x10;
+            private int value0x11;
+
+            private final Consumer<DriverUpdateEntity> parse0x20 = driverUpdateEntity -> {
+                StringBuilder sb = new StringBuilder();
+                list.add(driverUpdateEntity.setValue(sb.append(msgmgr.mergeValue(msgmgr.mCanbusInfoInt[4], msgmgr.mCanbusInfoInt[5], msgmgr.mCanbusInfoInt[6], msgmgr.mCanbusInfoInt[7]) / 10.0f).append(' ').append(unit0x10.get()).toString()));
+            };
+            private final Consumer<DriverUpdateEntity> parse0x30 = driverUpdateEntity -> {
+                String strSubstring;
+
+                int iMergeValue = msgmgr.mergeValue(msgmgr.mCanbusInfoInt[4], msgmgr.mCanbusInfoInt[5], msgmgr.mCanbusInfoInt[6], msgmgr.mCanbusInfoInt[7]);
+                String str = "";
+                switch (iMergeValue) {
+                    case 65534:
+                    case 65535:
+                        strSubstring = "--";
+                        break;
+                    default:
+                        String strValueOf = String.valueOf(iMergeValue / 10.0f);
+                        int length = strValueOf.length();
+                        int i = 0;
+                        for (int i2 = 0; i2 < length; i2++) {
+                            char cCharAt = strValueOf.charAt(i2);
+                            if ('0' <= cCharAt && cCharAt < ':') {
+                                i++;
+                            }
+                            if (i == 3 || i2 == strValueOf.length() - 1) {
+                                strSubstring = strValueOf.substring(0, i2 + 1);
+
+                                break;
+                            }
+                        }
+                        strSubstring = "";
+                        break;
+                }
+                ArrayList arrayList = this.list;
+                StringBuilder sbAppend = new StringBuilder().append(strSubstring).append(' ');
+                int i3 = msgmgr.mCanbusInfoInt[3];
+                if (i3 == 0) {
+                    str = "L/100km";
+                } else if (i3 == 1) {
+                    str = "km/L";
+                } else if (i3 == 2 || i3 == 3) {
+                    str = "mpg";
+                } else if (i3 != 4) {
+                    switch (i3) {
+                        case 18:
+                            str = "kWh/100km";
+                            break;
+                        case 19:
+                            str = "km/kWh";
+                            break;
+                        case 20:
+                            str = "kWh/mi";
+                            break;
+                        case 21:
+                            str = "mi/kWh";
+                            break;
+                    }
+                } else {
+                    str = "l/h";
+                }
+                arrayList.add(driverUpdateEntity.setValue(sbAppend.append(str).toString()));
+            };
+            private final Consumer<DriverUpdateEntity> parse0x40 = driverUpdateEntity -> {
+
+                StringBuilder sb = new StringBuilder();
+                StringBuilder sbAppend = sb.append(msgmgr.mergeValue(msgmgr.mCanbusInfoInt[4], msgmgr.mCanbusInfoInt[5]) / 10.0f).append(' ');
+                if ((msgmgr.mCanbusInfoInt[3] & 1) == 1) {
+                    String str = this.df_2Integer.format(((msgmgr.mCanbusInfoInt[4] + (msgmgr.mCanbusInfoInt[5] * 256)) / 10) * 1.6d);
+
+                    msgmgr.updateSpeedInfo(Integer.parseInt(str));
+                } else {
+                    String str2 = this.df_2Integer.format(Integer.valueOf((msgmgr.mCanbusInfoInt[4] + (msgmgr.mCanbusInfoInt[5] * 256)) / 10));
+
+                    msgmgr.updateSpeedInfo(Integer.parseInt(str2));
+                }
+                list.add(driverUpdateEntity.setValue(sbAppend.append(Unit.INSTANCE).toString()));
+            };
+            private final Consumer<DriverUpdateEntity> parse0x50 = driverUpdateEntity -> {
+                int iMergeValue = msgmgr.mergeValue(msgmgr.mCanbusInfoInt[3], msgmgr.mCanbusInfoInt[4], msgmgr.mCanbusInfoInt[5]);
+                StringBuilder sbAppend = new StringBuilder().append(iMergeValue / 60).append(" : ");
+                String str = String.format("%02d", Arrays.copyOf(new Object[]{Integer.valueOf(iMergeValue % 60)}, 1));
+                list.add(driverUpdateEntity.setValue(sbAppend.append(str).toString()));
+            };
+
+            private final Consumer<DriverUpdateEntity> parse0x70 = driverUpdateEntity -> {
+
+                StringBuilder sb = new StringBuilder();
+                list.add(driverUpdateEntity.setValue(sb.append(((short) msgmgr.mergeValue(msgmgr.mCanbusInfoInt[4], msgmgr.mCanbusInfoInt[5])) / 10.0f).append(' ').append((msgmgr.mCanbusInfoInt[3] & 1) == 1 ? "km/kwh" : "kwh/100km").toString()));
+            };
+
+            @Override
+            public void parse(int dataLength) {
+                super.parse(dataLength);
+                if (isDataChange()) {
+                    this.list.clear();
+                    switch (msgmgr.mCanbusInfoInt[2]) {
+                        case 16:
+                            DriverUpdateEntity driverUpdateEntity = msgmgr.mDriveItemIndexHashMap.get("_3_50h_10h");
+                            if (driverUpdateEntity != null) {
+                                MsgMgr msgMgr = msgmgr;
+                                this.value0x10 = msgMgr.mergeValue(msgMgr.mCanbusInfoInt[4], msgMgr.mCanbusInfoInt[5]);
+                                this.list.add(driverUpdateEntity.setValue(this.value0x10 + ' ' + this.unit0x10.get()));
+                                break;
+                            }
+                            break;
+                        case 17:
+                            DriverUpdateEntity driverUpdateEntity2 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_11h");
+                            if (driverUpdateEntity2 != null) {
+                                MsgMgr msgMgr2 = msgmgr;
+                                this.value0x11 = msgMgr2.mergeValue(msgMgr2.mCanbusInfoInt[4], msgMgr2.mCanbusInfoInt[5]);
+                                this.list.add(driverUpdateEntity2.setValue(this.value0x11 + ' ' + this.unit0x10.get()));
+                                break;
+                            }
+                            break;
+                        case 18:
+                            DriverUpdateEntity driverUpdateEntity3 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_12h");
+                            if (driverUpdateEntity3 != null) {
+                                this.list.add(driverUpdateEntity3.setValue((this.value0x10 + this.value0x11) + ' ' + this.unit0x10.get()));
+                                break;
+                            }
+                            break;
+                        case 32:
+                            DriverUpdateEntity driverUpdateEntity4 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_20h");
+                            if (driverUpdateEntity4 != null) {
+                                parse0x20.accept(driverUpdateEntity4);
+                                break;
+                            }
+                            break;
+                        case 33:
+                            DriverUpdateEntity driverUpdateEntity5 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_21h");
+                            if (driverUpdateEntity5 != null) {
+                                this.parse0x20.accept(driverUpdateEntity5);
+                                break;
+                            }
+                            break;
+                        case 34:
+                            DriverUpdateEntity driverUpdateEntity6 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_22h");
+                            if (driverUpdateEntity6 != null) {
+                                this.parse0x20.accept(driverUpdateEntity6);
+                                break;
+                            }
+                            break;
+                        case 48:
+                            DriverUpdateEntity driverUpdateEntity7 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_30h");
+                            if (driverUpdateEntity7 != null) {
+                                this.parse0x30.accept(driverUpdateEntity7);
+                                break;
+                            }
+                            break;
+                        case 49:
+                            DriverUpdateEntity driverUpdateEntity8 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_31h");
+                            if (driverUpdateEntity8 != null) {
+                                this.parse0x30.accept(driverUpdateEntity8);
+                                break;
+                            }
+                            break;
+                        case 50:
+                            DriverUpdateEntity driverUpdateEntity9 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_32h");
+                            if (driverUpdateEntity9 != null) {
+                                this.parse0x30.accept(driverUpdateEntity9);
+                                break;
+                            }
+                            break;
+                        case 64:
+                            DriverUpdateEntity driverUpdateEntity10 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_40h");
+                            if (driverUpdateEntity10 != null) {
+                                this.parse0x40.accept(driverUpdateEntity10);
+                                break;
+                            }
+                            break;
+                        case 65:
+                            DriverUpdateEntity driverUpdateEntity11 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_41h");
+                            if (driverUpdateEntity11 != null) {
+                                this.parse0x40.accept(driverUpdateEntity11);
+                                break;
+                            }
+                            break;
+                        case 66:
+                            DriverUpdateEntity driverUpdateEntity12 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_42h");
+                            if (driverUpdateEntity12 != null) {
+                                this.parse0x40.accept(driverUpdateEntity12);
+                                break;
+                            }
+                            break;
+                        case 80:
+                            DriverUpdateEntity driverUpdateEntity13 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_50h");
+                            if (driverUpdateEntity13 != null) {
+                                this.parse0x50.accept(driverUpdateEntity13);
+                                break;
+                            }
+                            break;
+                        case 81:
+                            DriverUpdateEntity driverUpdateEntity14 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_51h");
+                            if (driverUpdateEntity14 != null) {
+                                this.parse0x50.accept(driverUpdateEntity14);
+                                break;
+                            }
+                            break;
+                        case 82:
+                            DriverUpdateEntity driverUpdateEntity15 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_52h");
+                            if (driverUpdateEntity15 != null) {
+                                this.parse0x50.accept(driverUpdateEntity15);
+                                break;
+                            }
+                            break;
+                        case 96:
+                            DriverUpdateEntity driverUpdateEntity16 = msgmgr.mDriveItemIndexHashMap.get("_2_driver_15");
+                            if (driverUpdateEntity16 != null) {
+                                MsgMgr msgMgr3 = msgmgr;
+                                this.list.add(driverUpdateEntity16.setValue(msgMgr3.mergeValue(msgMgr3.mCanbusInfoInt[4], msgMgr3.mCanbusInfoInt[5]) + ' ' + ((msgMgr3.mCanbusInfoInt[3] & 1) == 1 ? "l/h" : "gal/h")));
+                                break;
+                            }
+                            break;
+                        case 97:
+                            DriverUpdateEntity driverUpdateEntity17 = msgmgr.mDriveItemIndexHashMap.get("_2_driver_16");
+                            if (driverUpdateEntity17 != null) {
+                                MsgMgr msgMgr4 = msgmgr;
+                                ArrayList<DriverUpdateEntity> arrayList = this.list;
+                                StringBuilder sbAppend = new StringBuilder().append(msgMgr4.mergeValue(msgMgr4.mCanbusInfoInt[4], msgMgr4.mCanbusInfoInt[5]) / 10.0f).append(' ');
+                                int i = msgMgr4.mCanbusInfoInt[3] & 3;
+                                String str = "mpg";
+                                if (i == 0) {
+                                    str = "L/100km";
+                                } else if (i == 1) {
+                                    str = "km/L";
+                                } else if (i != 2 && i != 3) {
+                                    str = "";
+                                }
+                                arrayList.add(driverUpdateEntity17.setValue(sbAppend.append(str).toString()));
+                                break;
+                            }
+                            break;
+                        case 112:
+                            DriverUpdateEntity driverUpdateEntity18 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_70h");
+                            if (driverUpdateEntity18 != null) {
+                                this.parse0x70.accept(driverUpdateEntity18);
+                                break;
+                            }
+                            break;
+                        case 113:
+                            DriverUpdateEntity driverUpdateEntity19 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_71h");
+                            if (driverUpdateEntity19 != null) {
+                                this.parse0x70.accept(driverUpdateEntity19);
+                                break;
+                            }
+                            break;
+                        case 114:
+                            DriverUpdateEntity driverUpdateEntity20 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_72h");
+                            if (driverUpdateEntity20 != null) {
+                                this.parse0x70.accept(driverUpdateEntity20);
+                                break;
+                            }
+                            break;
+                        case 128:
+                            DriverUpdateEntity driverUpdateEntity21 = msgmgr.mDriveItemIndexHashMap.get("_3_50h_80h");
+                            if (driverUpdateEntity21 != null) {
+                                MsgMgr msgMgr5 = msgmgr;
+                                ArrayList<DriverUpdateEntity> arrayList2 = this.list;
+                                StringBuilder sbAppend2 = new StringBuilder().append(msgMgr5.mCanbusInfoInt[3]).append(' ');
+                                int i2 = msgMgr5.mCanbusInfoInt[4];
+                                arrayList2.add(driverUpdateEntity21.setValue(sbAppend2.append(CommUtil.getStrByResId(context, i2 != 1 ? i2 != 3 ? i2 != 5 ? i2 != 9 ? "_3_50h_80h_p2_e" : "_3_50h_80h_p2_9" : "_3_50h_80h_p2_5" : "_3_50h_80h_p2_3" : "_3_50h_80h_p2_1")).toString()));
+                                break;
+                            }
+                            break;
+                    }
+                    msgmgr.updateGeneralDriveData(this.list);
+                    msgmgr.updateDriveDataActivity(null);
+                }
             }
+
+
+        });
+        map.put(81, new Parser(this, "【0x51】功放信息") {
+
+            private final int[] amplifierData = new int[6];
+            private final ArrayList<SettingUpdateEntity> list = new ArrayList<>();
+            private int mData6;
+            private int mData6Record;
+
+            @Override
+            public void parse(int dataLength) {
+                super.parse(dataLength);
+                int[] iArrCopyOfRange = ArraysKt.copyOfRange(this.msgmgr.mCanbusInfoInt, 2, 8);
+
+                if (!Arrays.equals(iArrCopyOfRange, this.amplifierData)) {
+                    System.arraycopy(iArrCopyOfRange, 0, this.amplifierData, 0, 14);
+                    msgmgr.updateAmplifierActivity(null);
+                    msgmgr.saveAmplifierData(context, msgmgr.getCanId());
+                }
+                int i = this.mData6Record;
+                int i2 = this.mData6;
+                if (i != i2) {
+                    this.mData6Record = i2;
+                    this.msgmgr.updateGeneralSettingData(this.list);
+                    this.msgmgr.updateSettingActivity(null);
+                }
+            }
+
+            @Override
+            public OnParseListener[] setOnParseListeners() {
+                return new OnParseListener[]{new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$18$$ExternalSyntheticLambda0
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAmplifierData.volume = msgmgr.mCanbusInfoInt[2];
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$18$$ExternalSyntheticLambda1
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAmplifierData.bandTreble = msgmgr.mCanbusInfoInt[3];
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$18$$ExternalSyntheticLambda2
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAmplifierData.bandMiddle = msgmgr.mCanbusInfoInt[4];
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$18$$ExternalSyntheticLambda3
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAmplifierData.bandBass = msgmgr.mCanbusInfoInt[5];
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$18$$ExternalSyntheticLambda4
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAmplifierData.frontRear = msgmgr.mCanbusInfoInt[6] - 9;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$18$$ExternalSyntheticLambda5
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        GeneralAmplifierData.leftRight = msgmgr.mCanbusInfoInt[7] - 9;
+                    }
+                }, new OnParseListener() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$18$$ExternalSyntheticLambda6
+                    @Override // com.hzbhd.canbus.interfaces.OnParseListener
+                    public void onParse() {
+                        list.clear();
+                        mData6 = msgmgr.mCanbusInfoInt[8];
+                        SettingUpdateEntity settingUpdateEntity = msgmgr.mSettingItemIndexHashMap.get("_143_0xAD_setting6");
+                        if (settingUpdateEntity != null) {
+                            list.add(settingUpdateEntity.setValue(Integer.valueOf(mData6)).setProgress(mData6));
+                        }
+                    }
+                }};
+            }
+        });
+        map.put(82, new Parser(this, "【0x52】电子显示") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$19
+            private final ArrayList<DriverUpdateEntity> list = new ArrayList<>();
+            private int mData45;
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                int i = (this.this$0.mCanbusInfoInt[6] << 8) | this.this$0.mCanbusInfoInt[7];
-                MsgMgr msgMgr = this.this$0;
+                int i = (this.msgmgr.mCanbusInfoInt[6] << 8) | this.msgmgr.mCanbusInfoInt[7];
+                MsgMgr msgMgr = this.msgmgr;
                 if (this.mData45 != i) {
                     this.mData45 = i;
                     GeneralHybirdData.energyDirection = (msgMgr.mCanbusInfoInt[6] >> 6) & 3;
@@ -1037,59 +1690,53 @@ public final class MsgMgr extends AbstractMsgMgr {
                         msgMgr.updateActivity(null);
                     }
                 }
-                this.this$0.mCanbusInfoInt[6] = 0;
-                this.this$0.mCanbusInfoInt[7] = 0;
+                this.msgmgr.mCanbusInfoInt[6] = 0;
+                this.msgmgr.mCanbusInfoInt[7] = 0;
                 if (isDataChange()) {
                     this.list.clear();
-                    DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("mqb_endurance_potential");
+                    DriverUpdateEntity driverUpdateEntity = this.msgmgr.mDriveItemIndexHashMap.get("mqb_endurance_potential");
                     if (driverUpdateEntity != null) {
-                        MsgMgr msgMgr2 = this.this$0;
+                        MsgMgr msgMgr2 = this.msgmgr;
                         ArrayList<DriverUpdateEntity> arrayList = this.list;
                         StringBuilder sb = new StringBuilder();
                         int iMergeValue = msgMgr2.mergeValue(msgMgr2.mCanbusInfoInt[3], msgMgr2.mCanbusInfoInt[2]) / 10;
                         arrayList.add(driverUpdateEntity.setValue(sb.append(iMergeValue < 1 ? "< 1" : String.valueOf(iMergeValue)).append(" km").toString()));
                     }
-                    DriverUpdateEntity driverUpdateEntity2 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("battery_life");
+                    DriverUpdateEntity driverUpdateEntity2 = this.msgmgr.mDriveItemIndexHashMap.get("battery_life");
                     if (driverUpdateEntity2 != null) {
-                        MsgMgr msgMgr3 = this.this$0;
+                        MsgMgr msgMgr3 = this.msgmgr;
                         this.list.add(driverUpdateEntity2.setValue((msgMgr3.mergeValue(msgMgr3.mCanbusInfoInt[5], msgMgr3.mCanbusInfoInt[4]) / 10) + " km"));
                     }
-                    DriverUpdateEntity driverUpdateEntity3 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("driven_distance");
+                    DriverUpdateEntity driverUpdateEntity3 = this.msgmgr.mDriveItemIndexHashMap.get("driven_distance");
                     if (driverUpdateEntity3 != null) {
-                        MsgMgr msgMgr4 = this.this$0;
+                        MsgMgr msgMgr4 = this.msgmgr;
                         this.list.add(driverUpdateEntity3.setValue((msgMgr4.mergeValue(msgMgr4.mCanbusInfoInt[9], msgMgr4.mCanbusInfoInt[8]) / 10) + " km"));
                     }
-                    DriverUpdateEntity driverUpdateEntity4 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("vm_golf7_vehicle_hybrid_zero_emission");
+                    DriverUpdateEntity driverUpdateEntity4 = this.msgmgr.mDriveItemIndexHashMap.get("vm_golf7_vehicle_hybrid_zero_emission");
                     if (driverUpdateEntity4 != null) {
-                        MsgMgr msgMgr5 = this.this$0;
+                        MsgMgr msgMgr5 = this.msgmgr;
                         this.list.add(driverUpdateEntity4.setValue((msgMgr5.mergeValue(msgMgr5.mCanbusInfoInt[11], msgMgr5.mCanbusInfoInt[10]) / 10) + " km"));
                     }
-                    DriverUpdateEntity driverUpdateEntity5 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("proportion");
+                    DriverUpdateEntity driverUpdateEntity5 = this.msgmgr.mDriveItemIndexHashMap.get("proportion");
                     if (driverUpdateEntity5 != null) {
-                        this.list.add(driverUpdateEntity5.setValue(new StringBuilder().append(this.this$0.mCanbusInfoInt[12]).append('%').toString()));
+                        this.list.add(driverUpdateEntity5.setValue(String.valueOf(this.msgmgr.mCanbusInfoInt[12]) + '%'));
                     }
-                    this.this$0.updateGeneralDriveData(this.list);
-                    this.this$0.updateDriveDataActivity(null);
+                    this.msgmgr.updateGeneralDriveData(this.list);
+                    this.msgmgr.updateDriveDataActivity(null);
                 }
             }
         });
-        map.put(83, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$20
-            private final float barMaxValue;
-            private final String fullBar;
-            private final ArrayList<DriverUpdateEntity> list;
+        map.put(83, new Parser(this, "【0x53】能量回收") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$20
+            private final float barMaxValue = 100.0f;
+            private final String fullBar = "==============================================================";
+            private final ArrayList<DriverUpdateEntity> list = new ArrayList<>();
 
-            {
-                super(this.this$0, "【0x53】能量回收");
-                this.list = new ArrayList<>();
-                this.fullBar = "==============================================================";
-                this.barMaxValue = 100.0f;
-            }
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
                 if (isDataChange()) {
                     this.list.clear();
-                    int i = this.this$0.mCanbusInfoInt[2];
+                    int i = this.msgmgr.mCanbusInfoInt[2];
                     if (i != 0) {
                         if (i == 16) {
                             for (int i2 = 1; i2 < 16; i2++) {
@@ -1103,44 +1750,44 @@ public final class MsgMgr extends AbstractMsgMgr {
                     } else {
                         setEntity("_3_53h_00", 3);
                     }
-                    this.this$0.updateGeneralDriveData(this.list);
-                    this.this$0.updateDriveDataActivity(null);
+                    this.msgmgr.updateGeneralDriveData(this.list);
+                    this.msgmgr.updateDriveDataActivity(null);
                 }
             }
 
-            private final void setEntity(String name, int valueIndex) {
+            private void setEntity(String name, int valueIndex) {
                 DriverUpdateEntity driverUpdateEntity;
-                if (valueIndex + 1 < this.this$0.mCanbusInfoInt.length && (driverUpdateEntity = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get(name)) != null) {
-                    MsgMgr msgMgr = this.this$0;
-                    int iMergeValue = (int) (msgMgr.mergeValue(msgMgr.mCanbusInfoInt[valueIndex], msgMgr.mCanbusInfoInt[r0]) / 10.0f);
+                if (valueIndex + 1 < this.msgmgr.mCanbusInfoInt.length && (driverUpdateEntity = this.msgmgr.mDriveItemIndexHashMap.get(name)) != null) {
+                    MsgMgr msgMgr = this.msgmgr;
+                    int iMergeValue = (int) (msgMgr.mergeValue(msgMgr.mCanbusInfoInt[valueIndex], msgMgr.mCanbusInfoInt[valueIndex + 1]) / 10.0f);
                     this.list.add(driverUpdateEntity.setValue(iMergeValue == 0 ? "" : iMergeValue + " kWh"));
                 }
             }
         });
-        final ArrayList arrayList = new ArrayList();
-        final ArrayList arrayList2 = new ArrayList();
-        map.put(96, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$21
-            private final ArrayList<WarningEntity> list;
+        final ArrayList<WarningEntity> arrayList = new ArrayList<>();
+        final ArrayList<WarningEntity> arrayList2 = new ArrayList<>();
+        map.put(96, new Parser(this, "【0x60】车辆提示信息") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$21
+            private final ArrayList<WarningEntity> list = new ArrayList<>();
 
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x60】车辆提示信息");
-                this.list = new ArrayList<>();
-            }
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                String str;
                 if (isDataChange()) {
                     arrayList.clear();
                     arrayList.add(new WarningEntity(CommUtil.getStrByResId(context, "_2_information_title_1")));
-                    if (this.this$0.mCanbusInfoInt[2] != 0) {
-                        int iCoerceAtMost = RangesKt.coerceAtMost(this.this$0.mCanbusInfoInt[2], 6);
-                        for (int i = 0; i < iCoerceAtMost; i++) {
-                            ArrayList<WarningEntity> arrayList3 = arrayList;
-                            StringBuilder sbAppend = new StringBuilder().append("\t\t");
-                            Context context2 = context;
-                            switch (this.this$0.mCanbusInfoInt[i + 3]) {
+
+                    // Verificar si el valor en mCanbusInfoInt[2] es distinto de 0
+                    if (this.msgmgr.mCanbusInfoInt[2] != 0) {
+                        // Limitar el rango de 0 a 6 (mCanbusInfoInt[2] está entre 0 y 6)
+                        int maxRange = RangesKt.coerceAtMost(this.msgmgr.mCanbusInfoInt[2], 6);
+
+                        // Iterar sobre el rango máximo y agregar las advertencias correspondientes
+                        for (int i = 0; i < maxRange; i++) {
+                            String str;
+                            int status = this.msgmgr.mCanbusInfoInt[i + 3]; // El valor para obtener el tipo de advertencia
+
+                            // Determinar el mensaje que se debe mostrar basado en el valor de 'status'
+                            switch (status) {
                                 case 0:
                                     str = "vm_golf7_vehicle_status_start_stop_prompt_0";
                                     break;
@@ -1243,43 +1890,49 @@ public final class MsgMgr extends AbstractMsgMgr {
                                 case 33:
                                     str = "vm_golf7_vehicle_status_start_stop_prompt_33";
                                     break;
+                                default:
+                                    str = "Unknown"; // En caso de un valor no contemplado.
                             }
-                            arrayList3.add(new WarningEntity(sbAppend.append(CommUtil.getStrByResId(context2, str)).toString()));
+
+                            // Agregar la advertencia al arrayList
+                            String warningMessage = "\t\t" + CommUtil.getStrByResId(context, str);
+                            arrayList.add(new WarningEntity(warningMessage));
                         }
                     } else {
-                        arrayList.add(new WarningEntity("\t\t" + CommUtil.getStrByResId(context, (this.this$0.mCanbusInfoInt[9] & 1) == 1 ? "vm_golf7_vehicle_status_start_stop_0" : "_3_60h_d7_1")));
+                        // Si el valor de mCanbusInfoInt[2] es 0, agregar una advertencia predeterminada
+                        String warningMessage = "\t\t" + CommUtil.getStrByResId(context, (this.msgmgr.mCanbusInfoInt[9] & 1) == 1 ? "vm_golf7_vehicle_status_start_stop_0" : "_3_60h_d7_1");
+                        arrayList.add(new WarningEntity(warningMessage));
                     }
-                    ArrayList<WarningEntity> arrayList4 = this.list;
-                    ArrayList<WarningEntity> arrayList5 = arrayList;
-                    ArrayList<WarningEntity> arrayList6 = arrayList2;
-                    arrayList4.clear();
-                    arrayList4.addAll(arrayList5);
-                    arrayList4.addAll(arrayList6);
-                    GeneralWarningDataData.dataList = arrayList4;
-                    this.this$0.updateWarningActivity(null);
+
+                    // Unir todas las listas de advertencias en 'arrayList'
+                    ArrayList<WarningEntity> finalList = new ArrayList<>();
+                    finalList.addAll(arrayList); // Array de advertencias obtenidas
+                    finalList.addAll(arrayList2); // Array de advertencias adicionales (arrayList2)
+
+                    // Actualizar el dataList de advertencias
+                    GeneralWarningDataData.dataList = finalList;
+
+                    // Actualizar la actividad de advertencia
+                    this.msgmgr.updateWarningActivity(null);
                 }
             }
-        });
-        map.put(98, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$22
-            private final ArrayList<WarningEntity> list;
 
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x62】Conv. Consumers 信息");
-                this.list = new ArrayList<>();
-            }
+        });
+        map.put(98, new Parser(this, "【0x62】Conv. Consumers 信息") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$22
+            private final ArrayList<WarningEntity> list = new ArrayList<>();
+
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
-                String str;
+                String str = "";
                 arrayList2.clear();
                 arrayList2.add(new WarningEntity(CommUtil.getStrByResId(context, "_2_information_title_4")));
-                int iCoerceAtMost = RangesKt.coerceAtMost(this.this$0.mCanbusInfoInt[2], 3);
+                int iCoerceAtMost = RangesKt.coerceAtMost(this.msgmgr.mCanbusInfoInt[2], 3);
                 for (int i = 0; i < iCoerceAtMost; i++) {
                     ArrayList<WarningEntity> arrayList3 = arrayList2;
                     StringBuilder sbAppend = new StringBuilder().append("\t\t");
                     Context context2 = context;
-                    switch (this.this$0.mCanbusInfoInt[i + 3]) {
+                    switch (this.msgmgr.mCanbusInfoInt[i + 3]) {
                         case 0:
                             str = "vm_golf7_Conv_consumers_prompt_0";
                             break;
@@ -1345,7 +1998,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                             arrayList4.addAll(arrayList5);
                             arrayList4.addAll(arrayList6);
                             GeneralWarningDataData.dataList = arrayList4;
-                            this.this$0.updateWarningActivity(null);
+                            this.msgmgr.updateWarningActivity(null);
                     }
                     arrayList3.add(new WarningEntity(sbAppend.append(CommUtil.getStrByResId(context2, str)).toString()));
                 }
@@ -1356,28 +2009,21 @@ public final class MsgMgr extends AbstractMsgMgr {
                 arrayList42.addAll(arrayList52);
                 arrayList42.addAll(arrayList62);
                 GeneralWarningDataData.dataList = arrayList42;
-                this.this$0.updateWarningActivity(null);
+                this.msgmgr.updateWarningActivity(null);
             }
         });
-        map.put(99, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$23
-            private final ArrayList<DriverUpdateEntity> driList;
-            private final ArrayList<SettingUpdateEntity<Object>> setList;
-
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x63】Service");
-                this.setList = new ArrayList<>();
-                this.driList = new ArrayList<>();
-            }
+        map.put(99, new Parser(this, "【0x63】Service") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$23
+            private final ArrayList<DriverUpdateEntity> driList = new ArrayList<>();
+            private final ArrayList<SettingUpdateEntity> setList = new ArrayList<>();
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
                 if (isDataChange()) {
-                    int i = this.this$0.mCanbusInfoInt[2];
+                    int i = this.msgmgr.mCanbusInfoInt[2];
                     if (i == 0) {
-                        DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_vehicle_no");
+                        DriverUpdateEntity driverUpdateEntity = this.msgmgr.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_vehicle_no");
                         if (driverUpdateEntity != null) {
-                            MsgMgr msgMgr = this.this$0;
+                            MsgMgr msgMgr = this.msgmgr;
                             ArrayList<DriverUpdateEntity> arrayList3 = this.driList;
                             arrayList3.clear();
                             arrayList3.add(driverUpdateEntity.setValue(new String(ArraysKt.copyOfRange(msgMgr.mCanbusInfoByte, 3, msgMgr.mCanbusInfoByte.length), Charsets.UTF_8)));
@@ -1388,7 +2034,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                         return;
                     }
                     if (i == 16) {
-                        DriverUpdateEntity driverUpdateEntity2 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_volkswagen_inspection_days");
+                        DriverUpdateEntity driverUpdateEntity2 = this.msgmgr.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_volkswagen_inspection_days");
                         if (driverUpdateEntity2 != null) {
                             setDay(driverUpdateEntity2);
                             return;
@@ -1398,24 +2044,24 @@ public final class MsgMgr extends AbstractMsgMgr {
                     if (i != 17) {
                         switch (i) {
                             case 32:
-                                DriverUpdateEntity driverUpdateEntity3 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_oil_change_service_days");
+                                DriverUpdateEntity driverUpdateEntity3 = this.msgmgr.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_oil_change_service_days");
                                 if (driverUpdateEntity3 != null) {
                                     setDay(driverUpdateEntity3);
                                     break;
                                 }
                                 break;
                             case 33:
-                                DriverUpdateEntity driverUpdateEntity4 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_oil_change_service_distance");
+                                DriverUpdateEntity driverUpdateEntity4 = this.msgmgr.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_oil_change_service_distance");
                                 if (driverUpdateEntity4 != null) {
                                     setDistance(driverUpdateEntity4);
                                     break;
                                 }
                                 break;
                             case 34:
-                                SettingUpdateEntity settingUpdateEntity = (SettingUpdateEntity) this.this$0.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_service_wiper_in_maintenance_position");
+                                SettingUpdateEntity settingUpdateEntity = this.msgmgr.mSettingItemIndexHashMap.get("vm_golf7_vehicle_setup_service_wiper_in_maintenance_position");
                                 if (settingUpdateEntity != null) {
-                                    MsgMgr msgMgr2 = this.this$0;
-                                    ArrayList<SettingUpdateEntity<Object>> arrayList4 = this.setList;
+                                    MsgMgr msgMgr2 = this.msgmgr;
+                                    ArrayList<SettingUpdateEntity> arrayList4 = this.setList;
                                     arrayList4.clear();
                                     arrayList4.add(settingUpdateEntity.setValue(Integer.valueOf(msgMgr2.mCanbusInfoInt[3] & 1)));
                                     msgMgr2.updateGeneralSettingData(arrayList4);
@@ -1426,169 +2072,108 @@ public final class MsgMgr extends AbstractMsgMgr {
                         }
                         return;
                     }
-                    DriverUpdateEntity driverUpdateEntity5 = (DriverUpdateEntity) this.this$0.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_volkswagen_inspection_distance");
+                    DriverUpdateEntity driverUpdateEntity5 = this.msgmgr.mDriveItemIndexHashMap.get("vm_golf7_vehicle_setup_service_volkswagen_inspection_distance");
                     if (driverUpdateEntity5 != null) {
                         setDistance(driverUpdateEntity5);
                     }
                 }
             }
 
-            /* JADX WARN: Removed duplicated region for block: B:14:0x005f  */
-            /*
-                Code decompiled incorrectly, please refer to instructions dump.
-                To view partially-correct code enable 'Show inconsistent code' option in preferences
-            */
-            private final void setDay(com.hzbhd.canbus.entity.DriverUpdateEntity r11) {
-                /*
-                    r10 = this;
-                    com.hzbhd.canbus.car._3.MsgMgr r0 = r10.this$0
-                    java.util.ArrayList<com.hzbhd.canbus.entity.DriverUpdateEntity> r1 = r10.driList
-                    android.content.Context r2 = r2
-                    r1.clear()
-                    int[] r3 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r4 = 3
-                    r3 = r3[r4]
-                    r3 = r3 & 15
-                    r4 = 0
-                    r5 = 2
-                    r6 = 1
-                    if (r3 == 0) goto L22
-                    if (r3 == r6) goto L1f
-                    if (r3 == r5) goto L1c
-                    return
-                L1c:
-                    java.lang.String r3 = "vm_golf7_vehicle_setup_service_overdue_days"
-                    goto L23
-                L1f:
-                    java.lang.String r3 = "vm_golf7_vehicle_setup_service_days"
-                    goto L23
-                L22:
-                    r3 = r4
-                L23:
-                    if (r3 == 0) goto L5f
-                    java.lang.String r2 = com.hzbhd.canbus.util.CommUtil.getStrByResId(r2, r3)
-                    java.lang.String r3 = "getStrByResId(context, it)"
-                    kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r2, r3)
-                    java.lang.Object[] r3 = new java.lang.Object[r6]
-                    int[] r5 = new int[r5]
-                    int[] r7 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r8 = 4
-                    r7 = r7[r8]
-                    r8 = 0
-                    r5[r8] = r7
-                    int[] r7 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r9 = 5
-                    r7 = r7[r9]
-                    r5[r6] = r7
-                    int r5 = com.hzbhd.canbus.car._3.MsgMgr.access$mergeValue(r0, r5)
-                    java.lang.Integer r5 = java.lang.Integer.valueOf(r5)
-                    r3[r8] = r5
-                    java.lang.Object[] r3 = java.util.Arrays.copyOf(r3, r6)
-                    java.lang.String r2 = java.lang.String.format(r2, r3)
-                    java.lang.String r3 = "format(this, *args)"
-                    kotlin.jvm.internal.Intrinsics.checkNotNullExpressionValue(r2, r3)
-                    if (r2 == 0) goto L5f
-                    goto L61
-                L5f:
-                    java.lang.String r2 = "--"
-                L61:
-                    com.hzbhd.canbus.entity.DriverUpdateEntity r11 = r11.setValue(r2)
-                    r1.add(r11)
-                    java.util.List r1 = (java.util.List) r1
-                    com.hzbhd.canbus.car._3.MsgMgr.access$updateGeneralDriveData(r0, r1)
-                    com.hzbhd.canbus.car._3.MsgMgr r11 = r10.this$0
-                    com.hzbhd.canbus.car._3.MsgMgr.access$updateDriveDataActivity(r11, r4)
-                    return
-                */
-                throw new UnsupportedOperationException("Method not decompiled: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$23.setDay(com.hzbhd.canbus.entity.DriverUpdateEntity):void");
+            private void setDay(DriverUpdateEntity driverUpdateEntity) {
+                String string = null;
+                ArrayList<DriverUpdateEntity> arrayList = this.driList;
+                MsgMgr msgMgr = this.msgmgr;
+
+                // Limpiar la lista de actualizaciones del conductor
+                arrayList.clear();
+
+                // Obtener el valor de mCanbusInfoInt[3] y aplicarle una máscara
+                int n = msgmgr.mCanbusInfoInt[3] & 0xF;
+
+                // Determinar el mensaje según el valor de 'n'
+                if (n != 0) {
+                    if (n == 1) {
+                        string = "vm_golf7_vehicle_setup_service_days"; // Si 'n' es 1, mensaje de días de servicio
+                    } else if (n == 2) {
+                        string = "vm_golf7_vehicle_setup_service_overdue_days"; // Si 'n' es 2, mensaje de días de servicio vencidos
+                    }
+                }
+
+                // Si el mensaje es válido, obtener la cadena formateada
+                if (string != null) {
+                    // Obtener el texto de la cadena usando el recurso de texto
+                    string = CommUtil.getStrByResId(context, string);
+
+                    // Verificar que la cadena no sea nula
+
+
+                    // Formatear la cadena con los valores de mCanbusInfoInt[4] y mCanbusInfoInt[5]
+                    string = String.format(string, Arrays.copyOf(new Object[]{msgmgr.mergeValue(msgmgr.mCanbusInfoInt[4], msgmgr.mCanbusInfoInt[5])}, 1));
+
+                    // Verificar que la cadena formateada no sea nula
+
+                }
+
+                // Si la cadena es nula, asignar un valor predeterminado
+                if (string == null) {
+                    string = "--";
+                }
+
+                // Agregar el valor formateado o predeterminado a la lista de actualizaciones del conductor
+                arrayList.add(driverUpdateEntity.setValue(string));
+
+                msgmgr.updateGeneralDriveData(arrayList);
+                msgmgr.updateDriveDataActivity(null);
             }
 
-            /* JADX WARN: Removed duplicated region for block: B:18:0x0082  */
-            /*
-                Code decompiled incorrectly, please refer to instructions dump.
-                To view partially-correct code enable 'Show inconsistent code' option in preferences
-            */
-            private final void setDistance(com.hzbhd.canbus.entity.DriverUpdateEntity r12) {
-                /*
-                    r11 = this;
-                    com.hzbhd.canbus.car._3.MsgMgr r0 = r11.this$0
-                    java.util.ArrayList<com.hzbhd.canbus.entity.DriverUpdateEntity> r1 = r11.driList
-                    android.content.Context r2 = r2
-                    r1.clear()
-                    int[] r3 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r4 = 3
-                    r3 = r3[r4]
-                    r3 = r3 & 15
-                    r5 = 32
-                    r6 = 0
-                    r7 = 2
-                    r8 = 1
-                    if (r3 == 0) goto L39
-                    if (r3 == r8) goto L36
-                    if (r3 == r7) goto L1e
-                    return
-                L1e:
-                    java.lang.StringBuilder r3 = new java.lang.StringBuilder
-                    r3.<init>()
-                    java.lang.String r9 = "vm_golf7_vehicle_setup_service_overdue"
-                    java.lang.String r2 = com.hzbhd.canbus.util.CommUtil.getStrByResId(r2, r9)
-                    java.lang.StringBuilder r2 = r3.append(r2)
-                    java.lang.StringBuilder r2 = r2.append(r5)
-                    java.lang.String r2 = r2.toString()
-                    goto L3a
-                L36:
-                    java.lang.String r2 = ""
-                    goto L3a
-                L39:
-                    r2 = r6
-                L3a:
-                    if (r2 == 0) goto L82
-                    java.lang.StringBuilder r3 = new java.lang.StringBuilder
-                    r3.<init>()
-                    java.lang.StringBuilder r2 = r3.append(r2)
-                    int[] r3 = new int[r7]
-                    r7 = 0
-                    int[] r9 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r10 = 4
-                    r9 = r9[r10]
-                    r3[r7] = r9
-                    int[] r7 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r9 = 5
-                    r7 = r7[r9]
-                    r3[r8] = r7
-                    int r3 = com.hzbhd.canbus.car._3.MsgMgr.access$mergeValue(r0, r3)
-                    int r3 = r3 * 100
-                    java.lang.StringBuilder r2 = r2.append(r3)
-                    java.lang.StringBuilder r2 = r2.append(r5)
-                    int[] r3 = com.hzbhd.canbus.car._3.MsgMgr.access$getMCanbusInfoInt$p(r0)
-                    r3 = r3[r4]
-                    int r3 = r3 >> r10
-                    r3 = r3 & r8
-                    if (r3 != r8) goto L75
-                    java.lang.String r3 = "mi"
-                    goto L77
-                L75:
-                    java.lang.String r3 = "km"
-                L77:
-                    java.lang.StringBuilder r2 = r2.append(r3)
-                    java.lang.String r2 = r2.toString()
-                    if (r2 == 0) goto L82
-                    goto L84
-                L82:
-                    java.lang.String r2 = "--"
-                L84:
-                    com.hzbhd.canbus.entity.DriverUpdateEntity r12 = r12.setValue(r2)
-                    r1.add(r12)
-                    java.util.List r1 = (java.util.List) r1
-                    com.hzbhd.canbus.car._3.MsgMgr.access$updateGeneralDriveData(r0, r1)
-                    com.hzbhd.canbus.car._3.MsgMgr r12 = r11.this$0
-                    com.hzbhd.canbus.car._3.MsgMgr.access$updateDriveDataActivity(r12, r6)
-                    return
-                */
-                throw new UnsupportedOperationException("Method not decompiled: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$23.setDistance(com.hzbhd.canbus.entity.DriverUpdateEntity):void");
+            private void setDistance(DriverUpdateEntity driverUpdateEntity) {
+                String result = null;
+                ArrayList<DriverUpdateEntity> arrayList = this.driList;
+
+
+                arrayList.clear();
+
+                int n = msgmgr.mCanbusInfoInt[3] & 0xF;
+
+                // Determinar la cadena de texto basada en el valor de 'n'
+                if (n != 0) {
+                    if (n == 1) {
+                        result = ""; // Si n es 1, no se agrega ningún texto adicional
+                    } else if (n == 2) {
+                        result = CommUtil.getStrByResId(context, "vm_golf7_vehicle_setup_service_overdue") + ' '; // Si n es 2, agregar el texto de "servicio vencido"
+                    }
+                }
+
+                // Si 'result' no es nulo, proceder a construir la cadena
+                if (result != null) {
+                    StringBuilder stringBuilder = new StringBuilder(result);
+
+                    // Agregar el valor formateado con los valores de mCanbusInfo[4] y mCanbusInfo[5]
+                    stringBuilder.append(msgmgr.mergeValue(msgmgr.mCanbusInfoInt[4], msgmgr.mCanbusInfoInt[5]) * 100).append(' ');
+
+                    // Determinar la unidad (millas o kilómetros) según el valor de mCanbusInfo[3]
+                    result = (msgmgr.mCanbusInfoInt[3] >> 4 & 1) == 1 ? "mi" : "km";
+
+                    // Añadir la unidad a la cadena final
+                    result = stringBuilder.append(result).toString();
+                }
+
+                // Si no se pudo formar la cadena, asignar un valor predeterminado
+                if (result == null) {
+                    result = "--";
+                }
+
+                // Agregar el valor final a la lista de actualizaciones
+                arrayList.add(driverUpdateEntity.setValue(result));
+
+                // Actualizar los datos generales del conductor
+                msgmgr.updateGeneralDriveData(arrayList);
+
+                // Actualizar la actividad de los datos del conductor
+                msgmgr.updateDriveDataActivity(null);
             }
         });
-        final ArrayList arrayList3 = new ArrayList();
+        final ArrayList<TireUpdateEntity> arrayList3 = new ArrayList<>();
         String[] strArr = new String[3];
         for (int i = 0; i < 3; i++) {
             strArr[i] = "";
@@ -1610,89 +2195,67 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         arrayList3.add(new TireUpdateEntity(3, 0, strArr4));
         GeneralTireData.isHaveSpareTire = false;
-        map.put(102, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$28
-            private final Pair<String, Function1<Integer, Float>>[] units;
+        map.put(102, new Parser(this, "【0x66】直接式胎压监测信息") { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$28
+            private final Pair<String, Function<Integer, Float>>[] units = new Pair[]{new Pair<>("bar", new Function<Integer, Float>() {
+                @Override
+                public Float apply(Integer i5) {
+                    return i5 / 10.0f;
+                }
+            }), new Pair<>("psi", new Function<Integer, Float>() {
+                @Override
+                public Float apply(Integer i5) {
+                    return i5 / 2.0f;
+                }
+            }), new Pair<>("kPa", new Function<Integer, Float>() {
+                @Override
+                public Float apply(Integer i5) {
+                    return i5 * 10.0f;
+                }
+            })};
 
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x66】直接式胎压监测信息");
-                this.units = new Pair[]{TuplesKt.to("bar", new Function1<Integer, Float>() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$28$units$1
-                    public final Float invoke(int i5) {
-                        return Float.valueOf(i5 / 10.0f);
-                    }
-
-                    @Override // kotlin.jvm.functions.Function1
-                    public /* bridge */ /* synthetic */ Float invoke(Integer num) {
-                        return invoke(num.intValue());
-                    }
-                }), TuplesKt.to("psi", new Function1<Integer, Float>() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$28$units$2
-                    public final Float invoke(int i5) {
-                        return Float.valueOf(i5 / 2.0f);
-                    }
-
-                    @Override // kotlin.jvm.functions.Function1
-                    public /* bridge */ /* synthetic */ Float invoke(Integer num) {
-                        return invoke(num.intValue());
-                    }
-                }), TuplesKt.to("kPa", new Function1<Integer, Float>() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$28$units$3
-                    public final Float invoke(int i5) {
-                        return Float.valueOf(i5 * 10.0f);
-                    }
-
-                    @Override // kotlin.jvm.functions.Function1
-                    public /* bridge */ /* synthetic */ Float invoke(Integer num) {
-                        return invoke(num.intValue());
-                    }
-                })};
+            private int coerceIn(int value, int min, int max) {
+                return Math.max(min, Math.min(value, max));
             }
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
                 if (isDataChange()) {
-                    Pair<String, Function1<Integer, Float>> pair = this.units[RangesKt.coerceIn(this.this$0.mCanbusInfoInt[7], (ClosedRange<Integer>) new IntRange(0, 2))];
-                    ArrayList<TireUpdateEntity> arrayList4 = arrayList3;
-                    MsgMgr msgMgr = this.this$0;
+                    Pair<String, Function<Integer, Float>> pair = this.units[(coerceIn(this.msgmgr.mCanbusInfoInt[7], 0, 2))];
+                    MsgMgr msgMgr = this.msgmgr;
                     int i5 = 0;
-                    for (Object obj : arrayList4) {
+                    for (TireUpdateEntity obj : arrayList3) {
                         int i6 = i5 + 1;
                         if (i5 < 0) {
-                            CollectionsKt.throwIndexOverflow();
+                            continue;
                         }
-                        ((TireUpdateEntity) obj).getList().set(RangesKt.coerceIn(msgMgr.mCanbusInfoInt[2], (ClosedRange<Integer>) new IntRange(0, 1)), pair.getSecond().invoke(Integer.valueOf(msgMgr.mCanbusInfoInt[i5 + 3])).floatValue() + ' ' + pair.getFirst());
+                        obj.getList().set(RangesKt.coerceIn(msgMgr.mCanbusInfoInt[2], new IntRange(0, 1)), pair.getSecond().apply(msgMgr.mCanbusInfoInt[i5 + 3]) + ' ' + pair.getFirst());
                         i5 = i6;
                     }
                     GeneralTireData.dataList = arrayList3;
-                    this.this$0.updateTirePressureActivity(null);
+                    this.msgmgr.updateTirePressureActivity(null);
                 }
             }
         });
-        map.put(104, new Parser() { // from class: com.hzbhd.canbus.car._3.MsgMgr$initParsers$1$29
-            /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
-            {
-                super(this.this$0, "【0x68】胎压报警信息状态 2");
-            }
+        map.put(104, new Parser(this, "【0x68】胎压报警信息状态 2") {
 
             @Override // com.hzbhd.canbus.car._3.MsgMgr.Parser
             public void parse(int dataLength) {
                 if (isDataChange()) {
-                    int i5 = this.this$0.mCanbusInfoInt[3];
+                    int i5 = this.msgmgr.mCanbusInfoInt[3];
                     String str = i5 != 2 ? i5 != 3 ? i5 != 4 ? "null_value" : "vm_golf7__direct_tpms_warn_lose_pressure" : "vm_golf7__direct_tpms_warn_low_pressure" : "vm_golf7__direct_tpms_warn_check_pressure";
-                    ArrayList<TireUpdateEntity> arrayList4 = arrayList3;
-                    MsgMgr msgMgr = this.this$0;
-                    Context context2 = context;
+
                     int i6 = 0;
-                    for (Object obj : arrayList4) {
+                    for (TireUpdateEntity tireUpdateEntity : arrayList3) {
                         int i7 = i6 + 1;
                         if (i6 < 0) {
-                            CollectionsKt.throwIndexOverflow();
+                            continue;
                         }
-                        TireUpdateEntity tireUpdateEntity = (TireUpdateEntity) obj;
-                        tireUpdateEntity.setTireStatus((msgMgr.mCanbusInfoInt[2] >> i6) & 1);
-                        tireUpdateEntity.getList().set(2, CommUtil.getStrByResId(context2, tireUpdateEntity.getTireStatus() == 0 ? "vm_golf7__direct_tpms_warn_normal" : str));
+                        tireUpdateEntity.setTireStatus((this.msgmgr.mCanbusInfoInt[2] >> i6) & 1);
+                        tireUpdateEntity.getList().set(2, CommUtil.getStrByResId(context, tireUpdateEntity.getTireStatus() == 0 ? "vm_golf7__direct_tpms_warn_normal" : str));
                         i6 = i7;
                     }
                     GeneralTireData.dataList = arrayList3;
-                    this.this$0.updateTirePressureActivity(null);
+                    this.msgmgr.updateTirePressureActivity(null);
                 }
             }
         });
@@ -1700,25 +2263,25 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: initParsers$lambda-4$getRadarValue, reason: not valid java name */
-    public static final int m362initParsers$lambda4$getRadarValue(int i, int i2) {
+    public static int m362initParsers$lambda4$getRadarValue(int i, int i2) {
         if (Integer.valueOf(i).equals(0)) {
             return 0;
         }
-        return (int) (((i / i2) * 9) + 1);
+        return ((i / i2) * 9) + 1;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\b¢\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0011\u001a\u00020\u0012J\u0010\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0006H\u0016J\u0015\u0010\u0016\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000eH\u0016¢\u0006\u0002\u0010\u0017R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u001c\u0010\u0007\u001a\u0004\u0018\u00010\bX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR\u0018\u0010\r\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000eX\u0082\u0004¢\u0006\u0004\n\u0002\u0010\u0010¨\u0006\u0018"}, d2 = {"Lcom/hzbhd/canbus/car/_3/MsgMgr$Parser;", "", NotificationCompat.CATEGORY_MESSAGE, "", "(Lcom/hzbhd/canbus/car/_3/MsgMgr;Ljava/lang/String;)V", "PARSE_LISTENERS_LENGTH", "", "canbusInfo", "", "getCanbusInfo", "()[I", "setCanbusInfo", "([I)V", "onParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "isDataChange", "", "parse", "", "dataLength", "setOnParseListeners", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+
     abstract class Parser {
         private final int PARSE_LISTENERS_LENGTH;
         private int[] canbusInfo;
         private final OnParseListener[] onParseListeners;
-        final /* synthetic */ MsgMgr this$0;
+        final MsgMgr msgmgr;
 
         public Parser(MsgMgr msgMgr, String msg) {
-            Intrinsics.checkNotNullParameter(msg, "msg");
-            this.this$0 = msgMgr;
+
+            this.msgmgr = msgMgr;
             OnParseListener[] onParseListeners = setOnParseListeners();
             this.onParseListeners = onParseListeners;
             int length = onParseListeners.length;
@@ -1744,12 +2307,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
 
         public final boolean isDataChange() {
-            if (Arrays.equals(this.canbusInfo, this.this$0.mCanbusInfoInt)) {
+            if (Arrays.equals(this.canbusInfo, this.msgmgr.mCanbusInfoInt)) {
                 return false;
             }
-            int[] iArr = this.this$0.mCanbusInfoInt;
+            int[] iArr = this.msgmgr.mCanbusInfoInt;
             int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length);
-            Intrinsics.checkNotNullExpressionValue(iArrCopyOf, "copyOf(this, size)");
+
             this.canbusInfo = iArrCopyOf;
             return true;
         }
@@ -1759,11 +2322,11 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    private final void initItemsIndexHashMap(Context context) {
+    private void initItemsIndexHashMap(Context context) {
         Log.i(TAG, "initItems: ");
         UiMgr uiMgr = this.mUiMgr;
         if (uiMgr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
             uiMgr = null;
         }
         Iterator<SettingPageUiSet.ListBean> it = uiMgr.getSettingUiSet(context).getList().iterator();
@@ -1774,7 +2337,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             for (SettingPageUiSet.ListBean.ItemListBean itemListBean : it.next().getItemList()) {
                 HashMap<String, SettingUpdateEntity<Object>> map = this.mSettingItemIndexHashMap;
                 String titleSrn = itemListBean.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn, "itemListBean.titleSrn");
+
                 map.put(titleSrn, new SettingUpdateEntity<>(i, i3));
                 i3++;
             }
@@ -1788,7 +2351,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             for (DriverDataPageUiSet.Page.Item item : it2.next().getItemList()) {
                 HashMap<String, DriverUpdateEntity> map2 = this.mDriveItemIndexHashMap;
                 String titleSrn2 = item.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn2, "item.titleSrn");
+
                 map2.put(titleSrn2, new DriverUpdateEntity(i4, i6, "null_value"));
                 i6++;
             }
@@ -1796,9 +2359,9 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
     }
 
-    public final void updateSettings(String title, Object value) {
-        Intrinsics.checkNotNullParameter(title, "title");
-        Intrinsics.checkNotNullParameter(value, "value");
+    public void updateSettings(String title, Object value) {
+
+
         SettingUpdateEntity<Object> settingUpdateEntity = this.mSettingItemIndexHashMap.get(title);
         if (settingUpdateEntity != null) {
             updateGeneralSettingData(CollectionsKt.arrayListOf(settingUpdateEntity.setValue(value)));
@@ -1807,7 +2370,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\bÆ\u0002\u0018\u00002\u00020\u0001:\u0001\u0013B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0006\u0010\f\u001a\u00020\u000bJ\u0006\u0010\r\u001a\u00020\u000bJ\u0016\u0010\u000e\u001a\u00020\u000f2\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\n\u001a\u00020\u000bJ\n\u0010\u0012\u001a\u00020\u000f*\u00020\u000bR\u000e\u0010\u0003\u001a\u00020\u0004X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082\u0004¢\u0006\u0002\n\u0000R\u001e\u0010\u0007\u001a\u00020\u00042\u0006\u0010\u0006\u001a\u00020\u0004@BX\u0086\u000e¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\tR\u000e\u0010\n\u001a\u00020\u000bX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u0014"}, d2 = {"Lcom/hzbhd/canbus/car/_3/MsgMgr$SpeedAlertHelper;", "", "()V", "kmh", "Lcom/hzbhd/canbus/car/_3/MsgMgr$SpeedAlertHelper$SpeedUnit;", "mph", "<set-?>", "speedUnit", "getSpeedUnit", "()Lcom/hzbhd/canbus/car/_3/MsgMgr$SpeedAlertHelper$SpeedUnit;", "value", "", "getProgress", "getValue", "setUnit", "", "context", "Landroid/content/Context;", "setValue", "SpeedUnit", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+
     public static final class SpeedAlertHelper {
         public static final SpeedAlertHelper INSTANCE = new SpeedAlertHelper();
         private static final SpeedUnit kmh;
@@ -1816,66 +2379,57 @@ public final class MsgMgr extends AbstractMsgMgr {
         private static int value;
 
         /* compiled from: MsgMgr.kt */
-        @Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0007\n\u0002\u0018\u0002\n\u0002\b\u0010\n\u0002\u0010\u000b\n\u0002\b\u0004\b\u0086\b\u0018\u00002\u00020\u0001B>\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0007\u0012\u0017\u0010\b\u001a\u0013\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\n0\t¢\u0006\u0002\b\u000b¢\u0006\u0002\u0010\fJ\t\u0010\u0015\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0016\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0017\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0018\u001a\u00020\u0007HÆ\u0003J\u001a\u0010\u0019\u001a\u0013\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\n0\t¢\u0006\u0002\b\u000bHÆ\u0003JL\u0010\u001a\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00032\b\b\u0002\u0010\u0005\u001a\u00020\u00032\b\b\u0002\u0010\u0006\u001a\u00020\u00072\u0019\b\u0002\u0010\b\u001a\u0013\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\n0\t¢\u0006\u0002\b\u000bHÆ\u0001J\u0013\u0010\u001b\u001a\u00020\u001c2\b\u0010\u001d\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u001e\u001a\u00020\u0003HÖ\u0001J\t\u0010\u001f\u001a\u00020\u0007HÖ\u0001R\"\u0010\b\u001a\u0013\u0012\u0004\u0012\u00020\u0003\u0012\u0004\u0012\u00020\n0\t¢\u0006\u0002\b\u000b¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0011\u0010\u0005\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0010R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0010R\u0011\u0010\u0006\u001a\u00020\u0007¢\u0006\b\n\u0000\u001a\u0004\b\u0013\u0010\u0014¨\u0006 "}, d2 = {"Lcom/hzbhd/canbus/car/_3/MsgMgr$SpeedAlertHelper$SpeedUnit;", "", "step", "", "min", "max", "unitStrName", "", "conversion", "Lkotlin/Function1;", "", "Lkotlin/ExtensionFunctionType;", "(IIILjava/lang/String;Lkotlin/jvm/functions/Function1;)V", "getConversion", "()Lkotlin/jvm/functions/Function1;", "getMax", "()I", "getMin", "getStep", "getUnitStrName", "()Ljava/lang/String;", "component1", "component2", "component3", "component4", "component5", "copy", "equals", "", "other", "hashCode", "toString", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-        public static final /* data */ class SpeedUnit {
-            private final Function1<Integer, Float> conversion;
+
+        public static class SpeedUnit {
+            private final Function<Integer, Float> conversion;
             private final int max;
             private final int min;
             private final int step;
             private final String unitStrName;
 
-            public static /* synthetic */ SpeedUnit copy$default(SpeedUnit speedUnit, int i, int i2, int i3, String str, Function1 function1, int i4, Object obj) {
-                if ((i4 & 1) != 0) {
-                    i = speedUnit.step;
+            // Constructor
+            public SpeedUnit(int step, int min, int max, String unitStrName, Function<Integer, Float> conversion) {
+                if (unitStrName == null || conversion == null) {
+                    throw new IllegalArgumentException("Unit name and conversion function cannot be null");
                 }
-                if ((i4 & 2) != 0) {
-                    i2 = speedUnit.min;
-                }
-                int i5 = i2;
-                if ((i4 & 4) != 0) {
-                    i3 = speedUnit.max;
-                }
-                int i6 = i3;
-                if ((i4 & 8) != 0) {
-                    str = speedUnit.unitStrName;
-                }
-                String str2 = str;
-                if ((i4 & 16) != 0) {
-                    function1 = speedUnit.conversion;
-                }
-                return speedUnit.copy(i, i5, i6, str2, function1);
+                this.step = step;
+                this.min = min;
+                this.max = max;
+                this.unitStrName = unitStrName;
+                this.conversion = conversion;
             }
 
-            /* renamed from: component1, reason: from getter */
-            public final int getStep() {
+            // Getter methods
+            public int getStep() {
                 return this.step;
             }
 
-            /* renamed from: component2, reason: from getter */
-            public final int getMin() {
+            public int getMin() {
                 return this.min;
             }
 
-            /* renamed from: component3, reason: from getter */
-            public final int getMax() {
+            public int getMax() {
                 return this.max;
             }
 
-            /* renamed from: component4, reason: from getter */
-            public final String getUnitStrName() {
+            public String getUnitStrName() {
                 return this.unitStrName;
             }
 
-            public final Function1<Integer, Float> component5() {
+            public Function<Integer, Float> getConversion() {
                 return this.conversion;
             }
 
-            public final SpeedUnit copy(int step, int min, int max, String unitStrName, Function1<? super Integer, Float> conversion) {
-                Intrinsics.checkNotNullParameter(unitStrName, "unitStrName");
-                Intrinsics.checkNotNullParameter(conversion, "conversion");
+            // Copy constructor equivalent (without synthetic Kotlin copy method)
+            public SpeedUnit copy(int step, int min, int max, String unitStrName, Function<Integer, Float> conversion) {
+                if (unitStrName == null || conversion == null) {
+                    throw new IllegalArgumentException("Unit name and conversion function cannot be null");
+                }
                 return new SpeedUnit(step, min, max, unitStrName, conversion);
             }
 
+            // equals method (overriding Object.equals)
+            @Override
             public boolean equals(Object other) {
                 if (this == other) {
                     return true;
@@ -1883,131 +2437,103 @@ public final class MsgMgr extends AbstractMsgMgr {
                 if (!(other instanceof SpeedUnit)) {
                     return false;
                 }
-                SpeedUnit speedUnit = (SpeedUnit) other;
-                return this.step == speedUnit.step && this.min == speedUnit.min && this.max == speedUnit.max && Intrinsics.areEqual(this.unitStrName, speedUnit.unitStrName) && Intrinsics.areEqual(this.conversion, speedUnit.conversion);
+                SpeedUnit otherSpeedUnit = (SpeedUnit) other;
+                return this.step == otherSpeedUnit.step && this.min == otherSpeedUnit.min && this.max == otherSpeedUnit.max && this.unitStrName.equals(otherSpeedUnit.unitStrName) && this.conversion.equals(otherSpeedUnit.conversion);
             }
 
+            // hashCode method (overriding Object.hashCode)
+            @Override
             public int hashCode() {
-                return (((((((Integer.hashCode(this.step) * 31) + Integer.hashCode(this.min)) * 31) + Integer.hashCode(this.max)) * 31) + this.unitStrName.hashCode()) * 31) + this.conversion.hashCode();
+                int result = Integer.hashCode(this.step);
+                result = 31 * result + Integer.hashCode(this.min);
+                result = 31 * result + Integer.hashCode(this.max);
+                result = 31 * result + this.unitStrName.hashCode();
+                result = 31 * result + this.conversion.hashCode();
+                return result;
             }
 
+            // toString method
+            @Override
             public String toString() {
-                return "SpeedUnit(step=" + this.step + ", min=" + this.min + ", max=" + this.max + ", unitStrName=" + this.unitStrName + ", conversion=" + this.conversion + ')';
+                return "SpeedUnit{" + "step=" + step + ", min=" + min + ", max=" + max + ", unitStrName='" + unitStrName + '\'' + ", conversion=" + conversion + '}';
             }
 
-            /* JADX WARN: Multi-variable type inference failed */
-            public SpeedUnit(int i, int i2, int i3, String unitStrName, Function1<? super Integer, Float> conversion) {
-                Intrinsics.checkNotNullParameter(unitStrName, "unitStrName");
-                Intrinsics.checkNotNullParameter(conversion, "conversion");
-                this.step = i;
-                this.min = i2;
-                this.max = i3;
-                this.unitStrName = unitStrName;
-                this.conversion = conversion;
-            }
-
-            public final int getStep() {
-                return this.step;
-            }
-
-            public final int getMin() {
-                return this.min;
-            }
-
-            public final int getMax() {
-                return this.max;
-            }
-
-            public final String getUnitStrName() {
-                return this.unitStrName;
-            }
-
-            public final Function1<Integer, Float> getConversion() {
-                return this.conversion;
-            }
         }
 
         private SpeedAlertHelper() {
         }
 
         static {
-            SpeedUnit speedUnit2 = new SpeedUnit(10, 30, NfDef.STATE_3WAY_M_HOLD, "_2_setting_1_3_1", new Function1<Integer, Float>() { // from class: com.hzbhd.canbus.car._3.MsgMgr$SpeedAlertHelper$kmh$1
-                public final Float invoke(int i) {
-                    return Float.valueOf(i * 1.609344f);
-                }
-
-                @Override // kotlin.jvm.functions.Function1
-                public /* bridge */ /* synthetic */ Float invoke(Integer num) {
-                    return invoke(num.intValue());
+            SpeedUnit speedUnit2 = new SpeedUnit(10, 30, NfDef.STATE_3WAY_M_HOLD, "_2_setting_1_3_1", new Function<Integer, Float>() {
+                @Override
+                public Float apply(Integer i) {
+                    return i * 1.609344f;
                 }
             });
             kmh = speedUnit2;
-            mph = new SpeedUnit(5, 20, 150, "_2_setting_1_3_2", new Function1<Integer, Float>() { // from class: com.hzbhd.canbus.car._3.MsgMgr$SpeedAlertHelper$mph$1
-                public final Float invoke(int i) {
-                    return Float.valueOf(i / 1.609344f);
-                }
-
-                @Override // kotlin.jvm.functions.Function1
-                public /* bridge */ /* synthetic */ Float invoke(Integer num) {
-                    return invoke(num.intValue());
+            mph = new SpeedUnit(5, 20, 150, "_2_setting_1_3_2", new Function<Integer, Float>() {
+                @Override
+                public Float apply(Integer integer) {
+                    return integer / 1.609344f;
                 }
             });
             speedUnit = speedUnit2;
         }
 
-        public final SpeedUnit getSpeedUnit() {
+        public SpeedUnit getSpeedUnit() {
             return speedUnit;
         }
 
-        public final void setUnit(Context context, int value2) {
-            Intrinsics.checkNotNullParameter(context, "context");
+        public void setUnit(Context context, int value2) {
+
             SpeedUnit speedUnit2 = value2 == 0 ? kmh : mph;
             if (Intrinsics.areEqual(speedUnit, speedUnit2)) {
                 return;
             }
             speedUnit = speedUnit2;
             List<SettingPageUiSet.ListBean> list = UiMgrFactory.getCanUiMgr(context).getSettingUiSet(context).getList();
-            Intrinsics.checkNotNullExpressionValue(list, "getCanUiMgr(context)\n   …ettingUiSet(context).list");
-            ArrayList arrayList = new ArrayList();
-            Iterator<T> it = list.iterator();
+
+            ArrayList<SettingPageUiSet.ListBean.ItemListBean> arrayList = new ArrayList<>();
+            Iterator<SettingPageUiSet.ListBean> it = list.iterator();
             while (it.hasNext()) {
-                List<SettingPageUiSet.ListBean.ItemListBean> itemList = ((SettingPageUiSet.ListBean) it.next()).getItemList();
-                Intrinsics.checkNotNullExpressionValue(itemList, "it.itemList");
+                List<SettingPageUiSet.ListBean.ItemListBean> itemList = it.next().getItemList();
+
                 CollectionsKt.addAll(arrayList, itemList);
             }
-            ArrayList arrayList2 = new ArrayList();
-            for (Object obj : arrayList) {
-                if (Intrinsics.areEqual(((SettingPageUiSet.ListBean.ItemListBean) obj).getTitleSrn(), "_3_40h_20h_p2")) {
+            ArrayList<SettingPageUiSet.ListBean.ItemListBean> arrayList2 = new ArrayList();
+            for (SettingPageUiSet.ListBean.ItemListBean obj : arrayList) {
+                if (Intrinsics.areEqual(obj.getTitleSrn(), "_3_40h_20h_p2")) {
                     arrayList2.add(obj);
                 }
             }
-            ArrayList arrayList3 = arrayList2;
+            ArrayList<SettingPageUiSet.ListBean.ItemListBean> arrayList3 = arrayList2;
             if (arrayList3.size() > 0) {
-                SettingPageUiSet.ListBean.ItemListBean itemListBean = (SettingPageUiSet.ListBean.ItemListBean) arrayList3.get(0);
+                SettingPageUiSet.ListBean.ItemListBean itemListBean = arrayList3.get(0);
                 SpeedAlertHelper speedAlertHelper = INSTANCE;
                 itemListBean.setMin(speedUnit.getMin() / speedUnit.getStep());
                 itemListBean.setMax(speedUnit.getMax() / speedUnit.getStep());
                 itemListBean.setUnit(speedUnit.getUnitStrName());
-                speedAlertHelper.setValue((int) speedUnit.getConversion().invoke(Integer.valueOf(value)).floatValue());
+                speedAlertHelper.setValue((int) speedUnit.getConversion().apply(Integer.valueOf(value)).floatValue());
             }
         }
 
-        public final void setValue(int i) {
+        public void setValue(int i) {
             SpeedUnit speedUnit2 = speedUnit;
             value = RangesKt.coerceIn(i, speedUnit2.getMin(), speedUnit2.getMax());
         }
 
-        public final int getValue() {
+        public int getValue() {
             return value / speedUnit.getStep();
         }
 
-        public final int getProgress() {
+        public int getProgress() {
             SpeedUnit speedUnit2 = speedUnit;
             return (value - speedUnit2.getMin()) / speedUnit2.getStep();
         }
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dateTimeRepCanbus(int bYearTotal, int bYear2Dig, int bMonth, int bDay, int bHours, int bMins, int bSecond, int bHours24H, int systemDateFormat, boolean isFormat24H, boolean isFormatPm, boolean isGpsTime, int dayOfWeek) {
         byte[] bArr = this.m0xA6Command;
         bArr[2] = (byte) bYear2Dig;
@@ -2018,43 +2544,98 @@ public final class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(bArr);
     }
 
-    /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-    /* JADX WARN: Failed to restore switch over string. Please report as a decompilation issue */
-    /* JADX WARN: Removed duplicated region for block: B:24:0x005e  */
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
-    /*
-        Code decompiled incorrectly, please refer to instructions dump.
-        To view partially-correct code enable 'Show inconsistent code' option in preferences
-    */
-    public void radioInfoChange(int r5, java.lang.String r6, java.lang.String r7, java.lang.String r8, int r9) {
-        /*
-            Method dump skipped, instructions count: 240
-            To view this dump change 'Code comments level' option to 'DEBUG'
-        */
-        throw new UnsupportedOperationException("Method not decompiled: com.hzbhd.canbus.car._3.MsgMgr.radioInfoChange(int, java.lang.String, java.lang.String, java.lang.String, int):void");
+    @Override
+    public void radioInfoChange(int var1, String currBand, String currentFreq, String psName, int var5) {
+        // Validar los parámetros de entrada
+
+
+        // Inicializamos el comando de radio
+        byte[] radioCommand = this.m0xC0Command;
+
+        // Configurar band status y preset status
+        radioCommand[2] = 1;  // Band status: 1 significa que está activo
+        radioCommand[3] = 1;  // Preset status: 1 significa que está activo
+
+        // Obtener la banda actual
+        String band = currBand;
+        int bandValue = 0;
+
+        // Determinar el valor de la banda
+        switch (band) {
+            case "FM3":
+                bandValue = 1;
+                break;
+            case "FM2":
+                bandValue = 2;
+                break;
+            case "FM1":
+                bandValue = 3;
+                break;
+            case "AM2":
+                bandValue = 4;
+                break;
+            case "AM1":
+                bandValue = 5;
+                break;
+            default:
+                bandValue = -1; // Banda no reconocida
+                break;
+        }
+
+        // Asignamos el valor correspondiente al comando de radio
+        radioCommand[4] = (byte) bandValue;
+
+        // Determinar la frecuencia según la banda
+        int frequency = 0;
+        if (band.contains("FM")) {
+            // Para FM, multiplicamos por 100 para obtener la frecuencia en entero
+            frequency = (int) (Float.parseFloat(currentFreq) * 100);
+        } else if (band.contains("AM")) {
+            // Para AM, la frecuencia es un valor entero
+            frequency = Integer.parseInt(currentFreq);
+        }
+
+        // Establecer la frecuencia en el comando
+        radioCommand[5] = (byte) (frequency & 255);  // Primer byte de la frecuencia
+        radioCommand[6] = (byte) ((frequency >> 8) & 255);  // Segundo byte de la frecuencia
+
+        // Establecer el índice del preset
+        radioCommand[7] = (byte) Integer.parseInt(psName);
+
+        // Configurar el estéreo
+        byte[] stereoCommand = this.m0xC1Command;
+        // Usamos el valor 1 para activar el bit 6 del byte en el índice 2
+        stereoCommand[2] = (byte) DataHandleUtils.setOneBit(stereoCommand[2], 6, 1);  // Activar estéreo
+
+        // Enviar los comandos para cambiar la información del radio
+        this.sendMultiCommand(this.m0xC0Command, this.m0xC1Command);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void atvInfoChange() {
         byte[] bArr = this.m0xC0Command;
         bArr[2] = 3;
         bArr[3] = -1;
         ArraysKt.fill(bArr, (byte) 0, 4, 10);
         CanbusMsgSender.sendMsg(this.m0xC0Command);
-        M0x70Sender.sendInfo$default(this.m0x70Sender, "ATV", null, null, null, 14, null);
+        m0x70Sender.sendInfo("ATV", null, null, null);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void auxInInfoChange() {
         byte[] bArr = this.m0xC0Command;
         bArr[2] = 7;
         bArr[3] = -1;
         ArraysKt.fill(bArr, (byte) 0, 4, 10);
         CanbusMsgSender.sendMsg(this.m0xC0Command);
-        M0x70Sender.sendInfo$default(this.m0x70Sender, "AUX", null, null, null, 14, null);
+        m0x70Sender.sendInfo("AUX", null, null, null);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, byte currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, long currentPos, byte playModel, int playIndex, boolean isPlaying, long totalTime, String songTitle, String songAlbum, String songArtist, boolean isReportFromPlay) {
         MediaShareData.Music music = MediaShareData.Music.INSTANCE;
         int i = currentSecond % 10;
@@ -2068,7 +2649,11 @@ public final class MsgMgr extends AbstractMsgMgr {
             }
             return;
         }
-        this.m0xC0Command[2] = StringsKt.contains$default((CharSequence) music.getMPath(), (CharSequence) "emulated", false, 2, (Object) null) ? (byte) 9 : (byte) 8;
+        if (music.getMPath().contains("emulated")) {
+            m0xC0Command[2] = 9;  // Si contiene "emulated", asignamos 9
+        } else {
+            m0xC0Command[2] = 8;  // Si no contiene "emulated", asignamos 8
+        }
         byte[] bArr = this.m0xC0Command;
         bArr[3] = 17;
         bArr[4] = (byte) (music.getMPlaySize() & 255);
@@ -2082,10 +2667,15 @@ public final class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(this.m0xC0Command);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, String currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, int currentPos, byte playMode, boolean isPlaying, int duration) {
         MediaShareData.Video video = MediaShareData.Video.INSTANCE;
-        this.m0xC0Command[2] = StringsKt.contains$default((CharSequence) video.getMPath(), (CharSequence) "emulated", false, 2, (Object) null) ? (byte) 9 : (byte) 8;
+        if (video.getMPath().contains("emulated")) {
+            m0xC0Command[2] = 9;  // Si contiene "emulated", asignamos 9
+        } else {
+            m0xC0Command[2] = 8;  // Si no contiene "emulated", asignamos 8
+        }
         byte[] bArr = this.m0xC0Command;
         bArr[3] = 17;
         bArr[4] = (byte) (video.getMPlaySize() & 255);
@@ -2099,11 +2689,11 @@ public final class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(this.m0xC0Command);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusicId3InfoChange(String title, String artist, String album) {
-        Intrinsics.checkNotNullParameter(title, "title");
-        Intrinsics.checkNotNullParameter(artist, "artist");
-        Intrinsics.checkNotNullParameter(album, "album");
+
+
         byte[] bArr = this.m0xC0Command;
         bArr[2] = 11;
         bArr[3] = -1;
@@ -2114,24 +2704,26 @@ public final class MsgMgr extends AbstractMsgMgr {
         bArr[8] = 0;
         bArr[9] = 0;
         CanbusMsgSender.sendMsg(bArr);
-        M0x70Sender.sendInfo$default(this.m0x70Sender, title, artist, album, null, 8, null);
+        m0x70Sender.sendInfo(title, artist, album, null);
         sendTextInfo(112, title);
         sendTextInfo(113, artist);
         sendTextInfo(114, album);
         sendTextInfo(115, " ");
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dtvInfoChange() {
         byte[] bArr = this.m0xC0Command;
         bArr[2] = 10;
         bArr[3] = -1;
         ArraysKt.fill(bArr, (byte) 0, 4, 10);
         CanbusMsgSender.sendMsg(this.m0xC0Command);
-        M0x70Sender.sendInfo$default(this.m0x70Sender, "DTV", null, null, null, 14, null);
+        m0x70Sender.sendInfo("DTV", null, null, null);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void currentVolumeInfoChange(int volValue, boolean isMute) {
         MediaShareData.Volume volume = MediaShareData.Volume.INSTANCE;
         byte[] bArr = this.m0xC4Command;
@@ -2139,18 +2731,20 @@ public final class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(bArr);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneStatusInfoChange(int callStatus, byte[] phoneNumber, boolean isHfpConnected, boolean isCallingFlag, boolean isMicMute, boolean isAudioTransferTowardsAG, int batteryStatus, int signalValue, Bundle bundle) {
         byte[] bArr = this.m0xC5Command;
         bArr[2] = (byte) ((signalValue & NfDef.STATE_3WAY_M_HOLD) | (batteryStatus & 15));
         bArr[3] = (byte) ((isAudioTransferTowardsAG ? 0 : 64) | (isMicMute ? 0 : 32) | 16 | ((!isHfpConnected ? 6 : callStatus) & 15));
         if (phoneNumber != null) {
-            ArraysKt.copyInto$default(phoneNumber, this.m0xCACommand, 4, 0, 0, 12, (Object) null);
+            System.arraycopy(phoneNumber, 0, m0xCACommand, 4, 12);
         }
         sendMultiCommand(this.m0xC5Command, this.m0xCACommand);
     }
 
-    @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
+    @Override
+    // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneTalkingWithTimeInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG, int time) {
         byte[] bArr = this.m0xC7Command;
         int i = time / 60;
@@ -2160,31 +2754,31 @@ public final class MsgMgr extends AbstractMsgMgr {
         CanbusMsgSender.sendMsg(bArr);
     }
 
-    private final void sendTextInfo(int dataType, String text) {
+    private void sendTextInfo(int dataType, String text) {
         byte[] bytes;
         if (text == null) {
             text = "Unknown";
         }
         if (text.length() > 10) {
             bytes = StringsKt.substring(text, new IntRange(0, 10)).getBytes(Charsets.UTF_16BE);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         } else {
             bytes = text.getBytes(Charsets.UTF_16BE);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         }
         CanbusMsgSender.sendMsg(ArraysKt.plus(new byte[]{22, (byte) dataType, 16}, bytes));
     }
 
-    private final void sendMultiCommand(final byte[]... commands) {
+    private void sendMultiCommand(final byte[]... commands) {
         final TimerUtil timerUtil = new TimerUtil();
         timerUtil.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.car._3.MsgMgr$sendMultiCommand$1$1
             private int i;
 
-            public final int getI() {
+            public int getI() {
                 return this.i;
             }
 
-            public final void setI(int i) {
+            public void setI(int i) {
                 this.i = i;
             }
 
@@ -2203,7 +2797,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000,\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0010\u0012\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0004\b\u0086\u0004\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J.\u0010\n\u001a\u00020\u000b2\b\b\u0002\u0010\f\u001a\u00020\r2\b\b\u0002\u0010\u000e\u001a\u00020\r2\b\b\u0002\u0010\u000f\u001a\u00020\r2\b\b\u0002\u0010\u0010\u001a\u00020\rR\u0016\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0082\u0004¢\u0006\u0004\n\u0002\u0010\u0006R\u000e\u0010\u0007\u001a\u00020\u0005X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, d2 = {"Lcom/hzbhd/canbus/car/_3/MsgMgr$M0x70Sender;", "", "(Lcom/hzbhd/canbus/car/_3/MsgMgr;)V", "commands", "", "", "[[B", "emptyInfo", "timerUtil", "Lcom/hzbhd/canbus/util/TimerUtil;", "sendInfo", "", "line1", "", "line2", "line3", "line4", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+
     public final class M0x70Sender {
         private final byte[][] commands;
         private final byte[] emptyInfo;
@@ -2222,42 +2816,25 @@ public final class MsgMgr extends AbstractMsgMgr {
             }
             this.commands = bArr;
             byte[] bytes = "          ".getBytes(Charsets.UTF_16);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
             this.emptyInfo = bytes;
             this.timerUtil = new TimerUtil();
         }
 
-        public static /* synthetic */ void sendInfo$default(M0x70Sender m0x70Sender, String str, String str2, String str3, String str4, int i, Object obj) {
-            if ((i & 1) != 0) {
-                str = "";
-            }
-            if ((i & 2) != 0) {
-                str2 = "";
-            }
-            if ((i & 4) != 0) {
-                str3 = "";
-            }
-            if ((i & 8) != 0) {
-                str4 = "";
-            }
-            m0x70Sender.sendInfo(str, str2, str3, str4);
-        }
 
-        public final void sendInfo(String line1, String line2, String line3, String line4) {
-            Intrinsics.checkNotNullParameter(line1, "line1");
-            Intrinsics.checkNotNullParameter(line2, "line2");
-            Intrinsics.checkNotNullParameter(line3, "line3");
-            Intrinsics.checkNotNullParameter(line4, "line4");
-            final Pair[] pairArr = {TuplesKt.to(line1, this.commands[0]), TuplesKt.to(line2, this.commands[1]), TuplesKt.to(line3, this.commands[2]), TuplesKt.to(line4, this.commands[3])};
+        public void sendInfo(String line1, String line2, String line3, String line4) {
+
+            Pair<String, byte[]>[] pairArr = new Pair[]{new Pair<>(line1, this.commands[0]), new Pair<>(line2, this.commands[1]), new Pair<>(line3, this.commands[2]), new Pair<>(line4, this.commands[3])};
+
             final MsgMgr msgMgr = MsgMgr.this;
             this.timerUtil.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.car._3.MsgMgr$M0x70Sender$sendInfo$1$1
                 private int i;
 
-                public final int getI() {
+                public int getI() {
                     return this.i;
                 }
 
-                public final void setI(int i) {
+                public void setI(int i) {
                     this.i = i;
                 }
 
@@ -2265,18 +2842,17 @@ public final class MsgMgr extends AbstractMsgMgr {
                 public void run() {
                     byte[] bytes;
                     int i = this.i;
-                    Pair<String, byte[]>[] pairArr2 = pairArr;
-                    if (i >= pairArr2.length) {
-                        this.timerUtil.stopTimer();
+                    if (i >= pairArr.length) {
+                        timerUtil.stopTimer();
                         return;
                     }
-                    if (Intrinsics.areEqual(pairArr2[i].getFirst(), "")) {
-                        bytes = this.emptyInfo;
+                    if (Intrinsics.areEqual(pairArr[i].getFirst(), "")) {
+                        bytes = emptyInfo;
                     } else {
                         bytes = msgMgr.getInfo(pairArr[this.i].getFirst(), 10).getBytes(Charsets.UTF_16);
-                        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
                     }
-                    ArraysKt.copyInto$default(bytes, pairArr[this.i].getSecond(), 3, 2, 0, 8, (Object) null);
+                    System.arraycopy(bytes, 2, pairArr[this.i].getSecond(), 3, 8);
                     CanbusMsgSender.sendMsg(pairArr[this.i].getSecond());
                     this.i++;
                 }
@@ -2285,7 +2861,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final String getInfo(String str, int i) {
+    public String getInfo(String str, int i) {
         if (str.length() < i) {
             return getInfo(str + ' ', i);
         }
@@ -2294,21 +2870,21 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         StringBuilder sb = new StringBuilder();
         String strSubstring = str.substring(0, i - 2);
-        Intrinsics.checkNotNullExpressionValue(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+
         return sb.append(strSubstring).append("..").toString();
     }
 
-    public final int[] getMAirData() {
+    public int[] getMAirData() {
         return this.mAirData;
     }
 
-    public final void setMAirData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+    public void setMAirData(int[] iArr) {
+
         this.mAirData = iArr;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final boolean isAirDataChange() {
+    public boolean isAirDataChange() {
         if (Arrays.equals(this.mAirData, this.mCanbusInfoInt)) {
             return false;
         }
@@ -2317,7 +2893,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public final int mergeValue(int... values) {
+    public int mergeValue(int... values) {
         int length = values.length;
         int i = 0;
         int i2 = 0;

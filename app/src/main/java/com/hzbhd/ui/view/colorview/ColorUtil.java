@@ -59,7 +59,7 @@ public final class ColorUtil {
     }
 
     public final void addColorInterface(ColorViewInterface colorViewInterface) {
-        Intrinsics.checkNotNullParameter(colorViewInterface, "colorViewInterface");
+
         if (this.colorViewInterfaces.contains(colorViewInterface)) {
             return;
         }
@@ -67,7 +67,7 @@ public final class ColorUtil {
     }
 
     public final void removeColorInterface(ColorViewInterface colorViewInterface) {
-        Intrinsics.checkNotNullParameter(colorViewInterface, "colorViewInterface");
+
         if (this.colorViewInterfaces.contains(colorViewInterface)) {
             return;
         }
@@ -96,7 +96,7 @@ public final class ColorUtil {
     }
 
     public final void BackGroundChangeColor(Drawable bg, int color) {
-        Intrinsics.checkNotNullParameter(bg, "bg");
+
         viewBackGroundChange(bg, ((-16777216) & color) >> 24, (16711680 & color) >> 16, (65280 & color) >> 8, color & 255);
     }
 
@@ -108,7 +108,7 @@ public final class ColorUtil {
     }
 
     public final void viewStateChange(Drawable bg, boolean isPress) {
-        Intrinsics.checkNotNullParameter(bg, "bg");
+
         if (isPress) {
             viewBackGroundChange(bg, instance.currColor_p);
         } else {
@@ -117,7 +117,7 @@ public final class ColorUtil {
     }
 
     public final void textviewStateCahnge(TextView textView, boolean isPress) {
-        Intrinsics.checkNotNullParameter(textView, "textView");
+
         if (isPress) {
             textView.setTextColor(this.currTextColor_p);
         } else {
@@ -126,42 +126,42 @@ public final class ColorUtil {
     }
 
     public final void init(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mContext = context;
-        Intrinsics.checkNotNull(context);
+
         ContentResolver contentResolver = context.getContentResolver();
         int i = DEFAULT_COLOR;
         int i2 = Settings.System.getInt(contentResolver, COLOR_VIEW_COLOR_N, i);
         Context context2 = this.mContext;
-        Intrinsics.checkNotNull(context2);
+
         int i3 = Settings.System.getInt(context2.getContentResolver(), COLOR_VIEW_COLOR_P, i);
         Context context3 = this.mContext;
-        Intrinsics.checkNotNull(context3);
+
         int i4 = Settings.System.getInt(context3.getContentResolver(), COLOR_TEXT_VIEW_COLOR_N, i);
         Context context4 = this.mContext;
-        Intrinsics.checkNotNull(context4);
+
         setCurrColor(i2, i3, i4, Settings.System.getInt(context4.getContentResolver(), COLOR_TEXT_VIEW_COLOR_P, i));
         context.getContentResolver().registerContentObserver(Settings.System.getUriFor(COLOR_VIEW_COLOR_N), false, new ContentObserver(new Handler(Looper.getMainLooper())) { // from class: com.hzbhd.ui.view.colorview.ColorUtil.init.1
             @Override // android.database.ContentObserver
             public void onChange(boolean selfChange) {
                 Context context5 = ColorUtil.this.mContext;
-                Intrinsics.checkNotNull(context5);
+
                 int i5 = Settings.System.getInt(context5.getContentResolver(), ColorUtil.COLOR_VIEW_COLOR_N, ColorUtil.DEFAULT_COLOR);
                 Context context6 = ColorUtil.this.mContext;
-                Intrinsics.checkNotNull(context6);
+
                 int i6 = Settings.System.getInt(context6.getContentResolver(), ColorUtil.COLOR_VIEW_COLOR_P, ColorUtil.DEFAULT_COLOR);
                 Context context7 = ColorUtil.this.mContext;
-                Intrinsics.checkNotNull(context7);
+
                 int i7 = Settings.System.getInt(context7.getContentResolver(), ColorUtil.COLOR_TEXT_VIEW_COLOR_N, ColorUtil.DEFAULT_COLOR);
                 Context context8 = ColorUtil.this.mContext;
-                Intrinsics.checkNotNull(context8);
+
                 ColorUtil.this.setCurrColor(i5, i6, i7, Settings.System.getInt(context8.getContentResolver(), ColorUtil.COLOR_TEXT_VIEW_COLOR_P, ColorUtil.DEFAULT_COLOR));
             }
         });
     }
 
     public final void saveColor(Context context, int color_n, int color_p, int textColor_n, int textColor_p) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         Settings.System.putInt(context.getContentResolver(), COLOR_VIEW_COLOR_N, color_n);
         Settings.System.putInt(context.getContentResolver(), COLOR_VIEW_COLOR_P, color_p);
         Settings.System.putInt(context.getContentResolver(), COLOR_TEXT_VIEW_COLOR_N, textColor_n);
@@ -169,7 +169,7 @@ public final class ColorUtil {
     }
 
     public final int getsaveColor(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         return Settings.System.getInt(context.getContentResolver(), COLOR_VIEW_COLOR_N, DEFAULT_COLOR);
     }
 

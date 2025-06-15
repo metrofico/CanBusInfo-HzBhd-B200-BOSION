@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] mAirData;
     int[] mCarDoorData;

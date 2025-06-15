@@ -15,7 +15,7 @@ import com.hzbhd.canbus.util.SystemUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private final String TAG = "_318_MsgMgr";
     private SparseArray<int[]> mCanbusDataArray;

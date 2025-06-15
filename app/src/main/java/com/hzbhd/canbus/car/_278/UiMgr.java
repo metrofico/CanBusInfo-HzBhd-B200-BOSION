@@ -27,7 +27,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     protected static final String CAN_1168_SAVE_LANGUAGE = "__1168_SAVE_LANGUAGE";
     protected static final int CAR_ID_EXCELLE_2015 = 251;

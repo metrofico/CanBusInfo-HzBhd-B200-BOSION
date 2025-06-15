@@ -27,9 +27,9 @@ import kotlin.TuplesKt;
 import kotlin.collections.MapsKt;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000D\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\u0018\u00002\u00020\u0001:\u0001\u0016B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0010\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012H\u0002J\u0010\u0010\u0013\u001a\u00020\u00102\u0006\u0010\u0014\u001a\u00020\u0015H\u0002R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0003X\u0082\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\b\u001a\n \n*\u0004\u0018\u00010\t0\tX\u0082\u0004¢\u0006\u0002\n\u0000R\u0012\u0010\u000b\u001a\u00060\fR\u00020\u0000X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0017"}, d2 = {"Lcom/hzbhd/canbus/car/_163/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mAirPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "mContext", "mParkPageUiSet", "Lcom/hzbhd/canbus/ui_set/ParkPageUiSet;", "kotlin.jvm.PlatformType", "mSettingHandleListener", "Lcom/hzbhd/canbus/car/_163/UiMgr$SettingHandleListener;", "mSettingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "selectAirConditionerBtn", "", "btn", "", "sendAirConditionerCmd", "d0", "", "SettingHandleListener", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private final AirPageUiSet mAirPageUiSet;
     private final Context mContext;
@@ -38,12 +38,12 @@ public final class UiMgr extends AbstractUiMgr {
     private final SettingPageUiSet mSettingPageUiSet;
 
     public UiMgr(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "getSettingUiSet(context)");
+
         this.mSettingPageUiSet = settingUiSet;
         AirPageUiSet airUiSet = getAirUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(airUiSet, "getAirUiSet(context)");
+
         this.mAirPageUiSet = airUiSet;
         ParkPageUiSet parkPageUiSet = getParkPageUiSet(context);
         this.mParkPageUiSet = parkPageUiSet;
@@ -130,36 +130,36 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-6$lambda-5$lambda-1, reason: not valid java name */
     public static final void m251lambda6$lambda5$lambda1(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-6$lambda-5$lambda-2, reason: not valid java name */
     public static final void m252lambda6$lambda5$lambda2(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-6$lambda-5$lambda-3, reason: not valid java name */
     public static final void m253lambda6$lambda5$lambda3(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-6$lambda-5$lambda-4, reason: not valid java name */
     public static final void m254lambda6$lambda5$lambda4(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         this$0.selectAirConditionerBtn(str);
     }
 
@@ -269,7 +269,7 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     /* compiled from: UiMgr.kt */
-    @Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010$\n\u0002\u0010\u000e\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u0002\n\u0002\b\n\b\u0086\u0004\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u00032\u00020\u0004B\u0005¢\u0006\u0002\u0010\u0005J \u0010\f\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\t2\u0006\u0010\u000f\u001a\u00020\t2\u0006\u0010\u0010\u001a\u00020\tH\u0016J\u0018\u0010\u0011\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\t2\u0006\u0010\u000f\u001a\u00020\tH\u0016J \u0010\u0012\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\t2\u0006\u0010\u000f\u001a\u00020\t2\u0006\u0010\u0013\u001a\u00020\tH\u0016J)\u0010\u0014\u001a\u00020\r2\u0006\u0010\u000e\u001a\u00020\t2\u0006\u0010\u000f\u001a\u00020\t2\n\b\u0002\u0010\u0015\u001a\u0004\u0018\u00010\tH\u0002¢\u0006\u0002\u0010\u0016R\u001d\u0010\u0006\u001a\u000e\u0012\u0004\u0012\u00020\b\u0012\u0004\u0012\u00020\t0\u0007¢\u0006\b\n\u0000\u001a\u0004\b\n\u0010\u000b¨\u0006\u0017"}, d2 = {"Lcom/hzbhd/canbus/car/_163/UiMgr$SettingHandleListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSelectListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSwitchListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSeekbarSelectListener;", "Lcom/hzbhd/canbus/interfaces/OnConfirmDialogListener;", "(Lcom/hzbhd/canbus/car/_163/UiMgr;)V", "language", "", "", "", "getLanguage", "()Ljava/util/Map;", "onClickItem", "", "leftPos", "rightPos", "progressORvalue", "onConfirmClick", "onSwitch", "value", "selectSettingsBtn", "param", "(IILjava/lang/Integer;)V", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public final class SettingHandleListener implements OnSettingItemSelectListener, OnSettingItemSwitchListener, OnSettingItemSeekbarSelectListener, OnConfirmDialogListener {
         private final Map<String, Integer> language = MapsKt.mapOf(TuplesKt.to("English", 1), TuplesKt.to("简体中文", 2), TuplesKt.to("Deutsch", 3), TuplesKt.to("Italiano", 4), TuplesKt.to("Francais", 5), TuplesKt.to("Svenska", 6), TuplesKt.to("Espanol", 7), TuplesKt.to("Nederlands", 8), TuplesKt.to("Portugues", 9), TuplesKt.to("Norsk", 11), TuplesKt.to("Suomi", 12), TuplesKt.to("Dansk", 13), TuplesKt.to("Eyynvlka", 14), TuplesKt.to("auell", 15), TuplesKt.to("Turkce", 16), TuplesKt.to("Pyccknn", 18), TuplesKt.to("Romana", 20), TuplesKt.to("Ykpaihcbka", 22), TuplesKt.to("Polski", 23), TuplesKt.to("Slovencia", 24), TuplesKt.to("Cesky", 25), TuplesKt.to("Magyar", 26), TuplesKt.to("Srpski", 28), TuplesKt.to("PortuguesdoBrasil", 29), TuplesKt.to("Hrvatski", 31), TuplesKt.to("bbnrapckn", 32), TuplesKt.to("Eesti", 33), TuplesKt.to("Vlaams", 34), TuplesKt.to("NNNy", 35), TuplesKt.to("印度语", 36), TuplesKt.to("uule", 37), TuplesKt.to("Latviesu", 38), TuplesKt.to("Lietuviu", 39), TuplesKt.to("Slovenscina", 40), TuplesKt.to("America_latina", 41));
 
@@ -332,7 +332,7 @@ public final class UiMgr extends AbstractUiMgr {
                         break;
                     case -1400265025:
                         if (titleSrn.equals("_163_setting_11")) {
-                            Intrinsics.checkNotNull(param);
+
                             selectSettingsBtn$sendSettingsCmd(11, Integer.valueOf(param.intValue() + 2));
                             break;
                         }
@@ -457,7 +457,7 @@ public final class UiMgr extends AbstractUiMgr {
                                         break;
                                     case -1324002571:
                                         if (titleSrn.equals("S163_x2A_1")) {
-                                            Intrinsics.checkNotNull(param);
+
                                             CanbusMsgSender.sendMsg(new byte[]{22, 42, (byte) param.intValue(), 0});
                                             break;
                                         }
@@ -465,14 +465,14 @@ public final class UiMgr extends AbstractUiMgr {
                                     case -490097043:
                                         if (titleSrn.equals("S163_Language_0")) {
                                             MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(UiMgr.this.mContext);
-                                            Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._163.MsgMgr");
+
                                             MsgMgr msgMgr = (MsgMgr) canMsgMgr;
-                                            Intrinsics.checkNotNull(param);
+
                                             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = InitUtilsKt.getMSettingItemIndex().get("S163_Language_0");
                                             if (itemListBean != null) {
                                                 itemListBean.setValue(itemListBean.getValueSrnArray().get(param.intValue()));
                                                 Integer num = this.language.get(itemListBean.getValue());
-                                                Intrinsics.checkNotNull(num);
+
                                                 CanbusMsgSender.sendMsg(new byte[]{22, -102, 1, (byte) num.intValue()});
                                             }
                                             msgMgr.updateSettingData();
@@ -488,7 +488,7 @@ public final class UiMgr extends AbstractUiMgr {
                                         break;
                                     case 748741536:
                                         if (titleSrn.equals("S18_Car_0")) {
-                                            Intrinsics.checkNotNull(param);
+
                                             CanbusMsgSender.sendMsg(new byte[]{22, 36, (byte) (param.intValue() + 16), 49});
                                             break;
                                         }
@@ -545,7 +545,7 @@ public final class UiMgr extends AbstractUiMgr {
                                                 break;
                                             case -1391072530:
                                                 if (titleSrn.equals("S163_CarInfo2_9")) {
-                                                    Intrinsics.checkNotNull(param);
+
                                                     selectSettingsBtn$sendSettingsCmd(60, Integer.valueOf(param.intValue() * 5));
                                                     break;
                                                 }

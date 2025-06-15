@@ -38,7 +38,7 @@ import java.util.Iterator;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final String DEVICE_STATUS_AUX = "AUX";
     private static final String DEVICE_STATUS_CD = "CD";

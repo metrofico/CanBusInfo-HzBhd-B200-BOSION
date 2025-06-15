@@ -33,7 +33,7 @@ import java.util.List;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private final String TAG = "_197_UiMgr";
     private int mAirAddition = 204;

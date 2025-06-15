@@ -34,9 +34,9 @@ import kotlin.ranges.IntRange;
 import kotlin.text.Charsets;
 import kotlin.text.StringsKt;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000n\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0006\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0012\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\b\f\n\u0002\u0010\u0005\n\u0002\b\r\n\u0002\u0010\t\n\u0002\b\u001d\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\"\u001a\u00020#2\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0016J\b\u0010$\u001a\u00020#H\u0002J\b\u0010%\u001a\u00020#H\u0016J\b\u0010&\u001a\u00020#H\u0002J\b\u0010'\u001a\u00020#H\u0002JT\u0010(\u001a\u00020#2\u0006\u0010)\u001a\u00020*2\b\u0010+\u001a\u0004\u0018\u00010,2\u0006\u0010-\u001a\u00020\u001d2\u0006\u0010.\u001a\u00020\u001d2\u0006\u0010/\u001a\u00020\u001d2\u0006\u00100\u001a\u00020\u001d2\u0006\u00101\u001a\u00020*2\u0006\u00102\u001a\u00020*2\b\u00103\u001a\u0004\u0018\u000104H\u0016J\u001c\u00105\u001a\u00020#2\b\u0010\u0003\u001a\u0004\u0018\u00010\u00042\b\u00106\u001a\u0004\u0018\u00010,H\u0016J\b\u00107\u001a\u00020#H\u0002J\b\u00108\u001a\u00020#H\u0002J\b\u00109\u001a\u00020#H\u0002J\b\u0010:\u001a\u00020#H\u0002J\b\u0010;\u001a\u00020#H\u0002J\b\u0010<\u001a\u00020#H\u0002J\u0010\u0010=\u001a\u00020#2\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004J\b\u0010>\u001a\u00020#H\u0002JÄ\u0001\u0010?\u001a\u00020#2\u0006\u0010@\u001a\u00020A2\u0006\u0010B\u001a\u00020A2\u0006\u0010C\u001a\u00020*2\u0006\u0010D\u001a\u00020*2\u0006\u0010E\u001a\u00020A2\u0006\u0010F\u001a\u00020A2\u0006\u0010G\u001a\u00020A2\u0006\u0010H\u001a\u00020A2\u0006\u0010I\u001a\u00020A2\u0006\u0010J\u001a\u00020A2\b\u0010K\u001a\u0004\u0018\u00010\u00112\b\u0010L\u001a\u0004\u0018\u00010\u00112\b\u0010M\u001a\u0004\u0018\u00010\u00112\u0006\u0010N\u001a\u00020O2\u0006\u0010P\u001a\u00020A2\u0006\u0010Q\u001a\u00020*2\u0006\u0010R\u001a\u00020\u001d2\u0006\u0010S\u001a\u00020O2\b\u0010T\u001a\u0004\u0018\u00010\u00112\b\u0010U\u001a\u0004\u0018\u00010\u00112\b\u0010V\u001a\u0004\u0018\u00010\u00112\u0006\u0010W\u001a\u00020\u001dH\u0016J\b\u0010X\u001a\u00020#H\u0002J\b\u0010Y\u001a\u00020#H\u0002J\b\u0010Z\u001a\u00020#H\u0002J6\u0010[\u001a\u00020#2\u0006\u0010\\\u001a\u00020*2\b\u0010]\u001a\u0004\u0018\u00010\u00112\b\u0010^\u001a\u0004\u0018\u00010\u00112\b\u0010_\u001a\u0004\u0018\u00010\u00112\u0006\u0010`\u001a\u00020*H\u0016J\b\u0010a\u001a\u00020#H\u0002J\b\u0010b\u001a\u00020#H\u0002J\b\u0010c\u001a\u00020#H\u0002J\u0006\u0010d\u001a\u00020#J\"\u0010e\u001a\u00020#2\u0006\u0010f\u001a\u00020*2\u0006\u0010g\u001a\u00020*2\b\u0010h\u001a\u0004\u0018\u00010\u0011H\u0002J\b\u0010i\u001a\u00020#H\u0002J\b\u0010j\u001a\u00020#H\u0002J\b\u0010k\u001a\u00020#H\u0002R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR6\u0010\u000f\u001a\u001e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00120\u0010j\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u0012`\u0013X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0014\u0010\u0015\"\u0004\b\u0016\u0010\u0017R>\u0010\u0018\u001a&\u0012\u0004\u0012\u00020\u0011\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u00190\u0010j\u0012\u0012\u0004\u0012\u00020\u0011\u0012\b\u0012\u0006\u0012\u0002\b\u00030\u0019`\u0013X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001a\u0010\u0015\"\u0004\b\u001b\u0010\u0017R\u001a\u0010\u001c\u001a\u00020\u001dX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001e\u0010\u001f\"\u0004\b \u0010!¨\u0006l"}, d2 = {"Lcom/hzbhd/canbus/car/_361/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "context", "Landroid/content/Context;", "getContext", "()Landroid/content/Context;", "setContext", "(Landroid/content/Context;)V", "frameData", "", "getFrameData", "()[I", "setFrameData", "([I)V", "mDriveItemIndexHashMap", "Ljava/util/HashMap;", "", "Lcom/hzbhd/canbus/ui_set/DriverDataPageUiSet$Page$Item;", "Lkotlin/collections/HashMap;", "getMDriveItemIndexHashMap", "()Ljava/util/HashMap;", "setMDriveItemIndexHashMap", "(Ljava/util/HashMap;)V", "mSettingItemIndexHashMap", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet$ListBean$ItemListBean;", "getMSettingItemIndexHashMap", "setMSettingItemIndexHashMap", "powerSwitcher", "", "getPowerSwitcher", "()Z", "setPowerSwitcher", "(Z)V", "afterServiceNormalSetting", "", "airConditionerInfo", "auxInInfoChange", "basicInfoOfJourney", "bodyState", "btPhoneStatusInfoChange", "callStatus", "", "phoneNumber", "", "isHfpConnected", "isCallingFlag", "isMicMute", "isAudioTransferTowardsAG", "batteryStatus", "signalValue", "bundle", "Landroid/os/Bundle;", "canbusInfoChange", "canbusInfo", "centralControlEnableBit", "centralCtrlInfo", "drivingInfo", "essentialInfo", "frontRadarInfo", "fuelConsumptionInPast15Min", "initItemsIndexHashMap", "instantaneousFuelConsumptionInfo", "musicInfoChange", "stoagePath", "", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playModel", "playIndex", "isPlaying", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "oilAndElectricHybridInfo", "powerAmplifierIndicationInfo", "powerAmplifierInfo", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "rangeFuelConsumptionInfo", "rearRadarInfo", "rearSeatAirConditioner", "returnClick", "sendTextInfo", "dataType", "date0", "data2_25", "steeringWheelAngle", "steeringWheelKeys", "tirePressureInfo", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public Context context;
     public int[] frameData;
@@ -49,12 +49,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (context != null) {
             return context;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("context");
+
         return null;
     }
 
     public final void setContext(Context context) {
-        Intrinsics.checkNotNullParameter(context, "<set-?>");
+
         this.context = context;
     }
 
@@ -63,12 +63,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("frameData");
+
         return null;
     }
 
     public final void setFrameData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.frameData = iArr;
     }
 
@@ -79,7 +79,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         setContext(context);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         setFrameData(byteArrayToIntArray);
         int i = getFrameData()[1];
         if (i == 26) {
@@ -213,7 +213,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         bArr[0] = (byte) i;
         MsgMgrKt.sendMediaInfo(5, 3, bArr);
         String string = Arrays.toString(phoneNumber);
-        Intrinsics.checkNotNullExpressionValue(string, "toString(this)");
+
         sendTextInfo(137, 3, string);
     }
 
@@ -395,16 +395,16 @@ public final class MsgMgr extends AbstractMsgMgr {
         int i3 = (getFrameData()[6] * 256) + getFrameData()[7];
         int i4 = getFrameData()[6];
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("D361_d0t1");
-        Intrinsics.checkNotNull(item);
+
         item.setValue((i / 10.0f) + " Km/Mile");
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("D361_d2t3");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(i2 + " Min");
         DriverDataPageUiSet.Page.Item item3 = this.mDriveItemIndexHashMap.get("D361_d4t5");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue(i3 + " Km/Mile");
         DriverDataPageUiSet.Page.Item item4 = this.mDriveItemIndexHashMap.get("D361_d6");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue(i4 != 1 ? i4 != 2 ? "----" : "公制 KM" : "英制 MILE");
         updateDriveDataActivity(null);
     }
@@ -413,10 +413,10 @@ public final class MsgMgr extends AbstractMsgMgr {
         int i = getFrameData()[2];
         int i2 = (getFrameData()[3] * 256) + getFrameData()[4];
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("D361_1_d0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(i != 0 ? i != 1 ? i != 2 ? "----" : "L/100Km" : "Km/L" : "MPG");
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("D361_1_d1t2");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(String.valueOf(i2 / 10.0f));
         updateDriveDataActivity(null);
     }
@@ -430,25 +430,25 @@ public final class MsgMgr extends AbstractMsgMgr {
         int i6 = (getFrameData()[11] * 256) + getFrameData()[12];
         int i7 = (getFrameData()[13] * 256) + getFrameData()[14];
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("D361_2_d0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(i != 0 ? i != 1 ? i != 2 ? "----" : "L/100Km" : "Km/L" : "MPG");
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("D361_2_d1t2");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(String.valueOf(i2 / 10.0f));
         DriverDataPageUiSet.Page.Item item3 = this.mDriveItemIndexHashMap.get("D361_2_d3t4");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue(String.valueOf(i3 / 10.0f));
         DriverDataPageUiSet.Page.Item item4 = this.mDriveItemIndexHashMap.get("D361_2_d5t6");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue(String.valueOf(i4 / 10.0f));
         DriverDataPageUiSet.Page.Item item5 = this.mDriveItemIndexHashMap.get("D361_2_d7t8");
-        Intrinsics.checkNotNull(item5);
+
         item5.setValue(String.valueOf(i5 / 10.0f));
         DriverDataPageUiSet.Page.Item item6 = this.mDriveItemIndexHashMap.get("D361_2_d9t10");
-        Intrinsics.checkNotNull(item6);
+
         item6.setValue(String.valueOf(i6 / 10.0f));
         DriverDataPageUiSet.Page.Item item7 = this.mDriveItemIndexHashMap.get("D361_2_d11t12");
-        Intrinsics.checkNotNull(item7);
+
         item7.setValue(String.valueOf(i7 / 10.0f));
         updateDriveDataActivity(null);
     }
@@ -502,76 +502,76 @@ public final class MsgMgr extends AbstractMsgMgr {
         int intFromByteWithBit8 = DataHandleUtils.getIntFromByteWithBit(getFrameData()[6], 0, 4);
         if (!UiMgrKt.isRemove2()) {
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndexHashMap.get("S361_d0b7");
-            Intrinsics.checkNotNull(itemListBean);
+
             itemListBean.setValue(Integer.valueOf(boolBit7 ? 1 : 0));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = this.mSettingItemIndexHashMap.get("S361_d1b0t2");
-            Intrinsics.checkNotNull(itemListBean2);
+
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean3 = itemListBean2;
             itemListBean3.setProgress(intFromByteWithBit4);
             itemListBean3.setValue(String.valueOf(itemListBean3.getProgress()));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean4 = this.mSettingItemIndexHashMap.get("S361_d0b0t1");
-            Intrinsics.checkNotNull(itemListBean4);
+
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean5 = itemListBean4;
             itemListBean5.setValue(itemListBean5.getValueSrnArray().get(intFromByteWithBit3));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean6 = this.mSettingItemIndexHashMap.get("S361_d2b7");
-            Intrinsics.checkNotNull(itemListBean6);
+
             itemListBean6.setValue(Integer.valueOf(boolBit73 ? 1 : 0));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean7 = this.mSettingItemIndexHashMap.get("S361_d2b5");
-            Intrinsics.checkNotNull(itemListBean7);
+
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean8 = itemListBean7;
             itemListBean8.setValue(itemListBean8.getValueSrnArray().get(intFromByteWithBit5));
         }
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean9 = this.mSettingItemIndexHashMap.get("S361_d0b6t4");
-        Intrinsics.checkNotNull(itemListBean9);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean10 = itemListBean9;
         itemListBean10.setProgress(intFromByteWithBit);
         itemListBean10.setValue(String.valueOf(itemListBean10.getProgress()));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean11 = this.mSettingItemIndexHashMap.get("S361_d0b2t3");
-        Intrinsics.checkNotNull(itemListBean11);
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean12 = itemListBean11;
         itemListBean12.setValue(itemListBean12.getValueSrnArray().get(intFromByteWithBit2));
         if (!UiMgrKt.isRemove1()) {
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean13 = this.mSettingItemIndexHashMap.get("S361_d1b7");
-            Intrinsics.checkNotNull(itemListBean13);
+
             itemListBean13.setValue(Integer.valueOf(boolBit72 ? 1 : 0));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean14 = this.mSettingItemIndexHashMap.get("S361_d1b6");
-            Intrinsics.checkNotNull(itemListBean14);
+
             itemListBean14.setValue(Integer.valueOf(boolBit6 ? 1 : 0));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean15 = this.mSettingItemIndexHashMap.get("S361_d1b5");
-            Intrinsics.checkNotNull(itemListBean15);
+
             itemListBean15.setValue(Integer.valueOf(boolBit5 ? 1 : 0));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean16 = this.mSettingItemIndexHashMap.get("S361_d1b4");
-            Intrinsics.checkNotNull(itemListBean16);
+
             itemListBean16.setValue(Integer.valueOf(boolBit4 ? 1 : 0));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean17 = this.mSettingItemIndexHashMap.get("S361_d2b6");
-            Intrinsics.checkNotNull(itemListBean17);
+
             itemListBean17.setValue(Integer.valueOf(boolBit62 ? 1 : 0));
         }
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean18 = this.mSettingItemIndexHashMap.get("S361_d2b4");
-        Intrinsics.checkNotNull(itemListBean18);
+
         itemListBean18.setValue(Integer.valueOf(boolBit42 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean19 = this.mSettingItemIndexHashMap.get("S361_d2b3");
-        Intrinsics.checkNotNull(itemListBean19);
+
         itemListBean19.setValue(Integer.valueOf(boolBit3 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean20 = this.mSettingItemIndexHashMap.get("S361_d3b7");
-        Intrinsics.checkNotNull(itemListBean20);
+
         itemListBean20.setValue(Integer.valueOf(boolBit74 ? 1 : 0));
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean21 = this.mSettingItemIndexHashMap.get("S361_d3b6");
-        Intrinsics.checkNotNull(itemListBean21);
+
         itemListBean21.setValue(Integer.valueOf(boolBit63 ? 1 : 0));
         if (!UiMgrKt.isRemove0()) {
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean22 = this.mSettingItemIndexHashMap.get("S361_d30t1");
-            Intrinsics.checkNotNull(itemListBean22);
+
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean23 = itemListBean22;
             itemListBean23.setValue(itemListBean23.getValueSrnArray().get(intFromByteWithBit6));
         }
         if (!UiMgrKt.isRemove4()) {
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean24 = this.mSettingItemIndexHashMap.get("S361_d4b4t5");
-            Intrinsics.checkNotNull(itemListBean24);
+
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean25 = itemListBean24;
             itemListBean25.setValue(itemListBean25.getValueSrnArray().get(intFromByteWithBit7));
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean26 = this.mSettingItemIndexHashMap.get("S361_d4b0t3");
-            Intrinsics.checkNotNull(itemListBean26);
+
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean27 = itemListBean26;
             itemListBean27.setValue(itemListBean27.getValueSrnArray().get(intFromByteWithBit8));
         }
@@ -596,52 +596,52 @@ public final class MsgMgr extends AbstractMsgMgr {
         int i15 = (getFrameData()[29] * 256) + getFrameData()[30];
         int i16 = (getFrameData()[31] * 256) + getFrameData()[32];
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("D361_3_d0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(i != 0 ? i != 1 ? i != 2 ? "无效" : "L/100Km" : "Km/L" : "MPG");
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("D361_3_d1t2");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(String.valueOf(i2 / 10.0f));
         DriverDataPageUiSet.Page.Item item3 = this.mDriveItemIndexHashMap.get("D361_3_d3t4");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue(String.valueOf(i3 / 10.0f));
         DriverDataPageUiSet.Page.Item item4 = this.mDriveItemIndexHashMap.get("D361_3_d5t6");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue(String.valueOf(i4 / 10.0f));
         DriverDataPageUiSet.Page.Item item5 = this.mDriveItemIndexHashMap.get("D361_3_d7t8");
-        Intrinsics.checkNotNull(item5);
+
         item5.setValue(String.valueOf(i5 / 10.0f));
         DriverDataPageUiSet.Page.Item item6 = this.mDriveItemIndexHashMap.get("D361_3_d9t10");
-        Intrinsics.checkNotNull(item6);
+
         item6.setValue(String.valueOf(i6 / 10.0f));
         DriverDataPageUiSet.Page.Item item7 = this.mDriveItemIndexHashMap.get("D361_3_d11t12");
-        Intrinsics.checkNotNull(item7);
+
         item7.setValue(String.valueOf(i7 / 10.0f));
         DriverDataPageUiSet.Page.Item item8 = this.mDriveItemIndexHashMap.get("D361_3_d13t14");
-        Intrinsics.checkNotNull(item8);
+
         item8.setValue(String.valueOf(i8 / 10.0f));
         DriverDataPageUiSet.Page.Item item9 = this.mDriveItemIndexHashMap.get("D361_3_d15t16");
-        Intrinsics.checkNotNull(item9);
+
         item9.setValue(String.valueOf(i9 / 10.0f));
         DriverDataPageUiSet.Page.Item item10 = this.mDriveItemIndexHashMap.get("D361_3_d17t18");
-        Intrinsics.checkNotNull(item10);
+
         item10.setValue(String.valueOf(i10 / 10.0f));
         DriverDataPageUiSet.Page.Item item11 = this.mDriveItemIndexHashMap.get("D361_3_d19t20");
-        Intrinsics.checkNotNull(item11);
+
         item11.setValue(String.valueOf(i11 / 10.0f));
         DriverDataPageUiSet.Page.Item item12 = this.mDriveItemIndexHashMap.get("D361_3_d21t22");
-        Intrinsics.checkNotNull(item12);
+
         item12.setValue(String.valueOf(i12 / 10.0f));
         DriverDataPageUiSet.Page.Item item13 = this.mDriveItemIndexHashMap.get("D361_3_d23t24");
-        Intrinsics.checkNotNull(item13);
+
         item13.setValue(String.valueOf(i13 / 10.0f));
         DriverDataPageUiSet.Page.Item item14 = this.mDriveItemIndexHashMap.get("D361_3_d25t26");
-        Intrinsics.checkNotNull(item14);
+
         item14.setValue(String.valueOf(i14 / 10.0f));
         DriverDataPageUiSet.Page.Item item15 = this.mDriveItemIndexHashMap.get("D361_3_d27t28");
-        Intrinsics.checkNotNull(item15);
+
         item15.setValue(String.valueOf(i15 / 10.0f));
         DriverDataPageUiSet.Page.Item item16 = this.mDriveItemIndexHashMap.get("D361_3_d29t30");
-        Intrinsics.checkNotNull(item16);
+
         item16.setValue(String.valueOf(i16 / 10.0f));
         updateDriveDataActivity(null);
     }
@@ -740,62 +740,62 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit03 = DataHandleUtils.getBoolBit0(getFrameData()[4]);
         boolean boolBit13 = DataHandleUtils.getBoolBit1(getFrameData()[4]);
         String strByResId = CommUtil.getStrByResId(getContext(), "_341_setting_0_0_0");
-        Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context, \"_341_setting_0_0_0\")");
+
         String strByResId2 = CommUtil.getStrByResId(getContext(), "_341_setting_0_0_1");
-        Intrinsics.checkNotNullExpressionValue(strByResId2, "getStrByResId(context, \"_341_setting_0_0_1\")");
+
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("S361_1_d0b0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(boolBit0 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("S361_1_d0b1");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(boolBit1 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item3 = this.mDriveItemIndexHashMap.get("S361_1_d0b2");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue(boolBit2 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item4 = this.mDriveItemIndexHashMap.get("S361_1_d0b3");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue(boolBit3 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item5 = this.mDriveItemIndexHashMap.get("S361_1_d0b4");
-        Intrinsics.checkNotNull(item5);
+
         item5.setValue(boolBit4 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item6 = this.mDriveItemIndexHashMap.get("S361_1_d0b5");
-        Intrinsics.checkNotNull(item6);
+
         item6.setValue(boolBit5 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item7 = this.mDriveItemIndexHashMap.get("S361_1_d0b6");
-        Intrinsics.checkNotNull(item7);
+
         item7.setValue(boolBit6 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item8 = this.mDriveItemIndexHashMap.get("S361_1_d0b7");
-        Intrinsics.checkNotNull(item8);
+
         item8.setValue(boolBit7 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item9 = this.mDriveItemIndexHashMap.get("S361_1_d1b0");
-        Intrinsics.checkNotNull(item9);
+
         item9.setValue(boolBit02 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item10 = this.mDriveItemIndexHashMap.get("S361_1_d1b1");
-        Intrinsics.checkNotNull(item10);
+
         item10.setValue(boolBit12 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item11 = this.mDriveItemIndexHashMap.get("S361_1_d1b2");
-        Intrinsics.checkNotNull(item11);
+
         item11.setValue(boolBit22 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item12 = this.mDriveItemIndexHashMap.get("S361_1_d1b3");
-        Intrinsics.checkNotNull(item12);
+
         item12.setValue(boolBit32 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item13 = this.mDriveItemIndexHashMap.get("S361_1_d1b4");
-        Intrinsics.checkNotNull(item13);
+
         item13.setValue(boolBit42 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item14 = this.mDriveItemIndexHashMap.get("S361_1_d1b5");
-        Intrinsics.checkNotNull(item14);
+
         item14.setValue(boolBit52 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item15 = this.mDriveItemIndexHashMap.get("S361_1_d1b6");
-        Intrinsics.checkNotNull(item15);
+
         item15.setValue(boolBit62 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item16 = this.mDriveItemIndexHashMap.get("S361_1_d1b7");
-        Intrinsics.checkNotNull(item16);
+
         item16.setValue(boolBit72 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item17 = this.mDriveItemIndexHashMap.get("S361_1_d2b0");
-        Intrinsics.checkNotNull(item17);
+
         item17.setValue(boolBit03 ? strByResId2 : strByResId);
         DriverDataPageUiSet.Page.Item item18 = this.mDriveItemIndexHashMap.get("S361_1_d2b1");
-        Intrinsics.checkNotNull(item18);
+
         item18.setValue(boolBit13 ? strByResId2 : strByResId);
         updateDriveDataActivity(null);
     }
@@ -811,11 +811,11 @@ public final class MsgMgr extends AbstractMsgMgr {
         int intFromByteWithBit = DataHandleUtils.getIntFromByteWithBit(getFrameData()[4], 0, 4);
         boolean boolBit0 = DataHandleUtils.getBoolBit0(getFrameData()[6]);
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = this.mSettingItemIndexHashMap.get("S361_2_d2b0t3");
-        Intrinsics.checkNotNull(itemListBean);
+
         itemListBean.setValue(Integer.valueOf(intFromByteWithBit == 8 ? 1 : 0));
         if (!UiMgrKt.isRemove0()) {
             SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = this.mSettingItemIndexHashMap.get("S361_2_d4b0");
-            Intrinsics.checkNotNull(itemListBean2);
+
             itemListBean2.setValue(Integer.valueOf(boolBit0 ? 1 : 0));
         }
         updateSettingActivity(null);
@@ -837,28 +837,28 @@ public final class MsgMgr extends AbstractMsgMgr {
         boolean boolBit6 = DataHandleUtils.getBoolBit6(getFrameData()[2]);
         boolean boolBit7 = DataHandleUtils.getBoolBit7(getFrameData()[2]);
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("_350_d_3_0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(boolBit0 ? CommUtil.getStrByResId(getContext(), "_350_u_2") : CommUtil.getStrByResId(getContext(), "_350_u_3"));
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("_350_d_3_1");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(boolBit1 ? CommUtil.getStrByResId(getContext(), "_350_u_2") : CommUtil.getStrByResId(getContext(), "_350_u_3"));
         DriverDataPageUiSet.Page.Item item3 = this.mDriveItemIndexHashMap.get("_350_d_3_2");
-        Intrinsics.checkNotNull(item3);
+
         DriverDataPageUiSet.Page.Item item4 = item3;
         Context context = getContext();
         item4.setValue(boolBit2 ? CommUtil.getStrByResId(context, "_350_u_2") : CommUtil.getStrByResId(context, "_350_u_3"));
         DriverDataPageUiSet.Page.Item item5 = this.mDriveItemIndexHashMap.get("_350_d_3_3");
-        Intrinsics.checkNotNull(item5);
+
         DriverDataPageUiSet.Page.Item item6 = item5;
         Context context2 = getContext();
         item6.setValue(boolBit3 ? CommUtil.getStrByResId(context2, "_350_u_2") : CommUtil.getStrByResId(context2, "_350_u_3"));
         DriverDataPageUiSet.Page.Item item7 = this.mDriveItemIndexHashMap.get("_350_d_3_4");
-        Intrinsics.checkNotNull(item7);
+
         DriverDataPageUiSet.Page.Item item8 = item7;
         Context context3 = getContext();
         item8.setValue(boolBit6 ? CommUtil.getStrByResId(context3, "_350_u_1") : CommUtil.getStrByResId(context3, "_350_u_0"));
         DriverDataPageUiSet.Page.Item item9 = this.mDriveItemIndexHashMap.get("_350_d_3_5");
-        Intrinsics.checkNotNull(item9);
+
         item9.setValue(boolBit7 ? CommUtil.getStrByResId(getContext(), "_350_u_1") : CommUtil.getStrByResId(getContext(), "_350_u_0"));
         updateDriveDataActivity(null);
         this.powerSwitcher = boolBit6;
@@ -946,7 +946,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             string = context.getString(R.string._341_setting_0_0_1);
             str = "context.getString(R.string._341_setting_0_0_1)";
         }
-        Intrinsics.checkNotNullExpressionValue(string, str);
+
         return string;
     }
 
@@ -960,26 +960,26 @@ public final class MsgMgr extends AbstractMsgMgr {
         int anotherMsbLsbResult2 = MsgMgrKt.getAnotherMsbLsbResult(getFrameData()[13], getFrameData()[14], getFrameData()[15]);
         int anotherMsbLsbResult3 = MsgMgrKt.getAnotherMsbLsbResult(getFrameData()[14], getFrameData()[15], getFrameData()[16]);
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("d0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue((i / 10) + " V");
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("d1t2");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue((msbLsbResult / 10) + " L");
         DriverDataPageUiSet.Page.Item item3 = this.mDriveItemIndexHashMap.get("d3t4");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue(msbLsbResult2 + " r/min");
         DriverDataPageUiSet.Page.Item item4 = this.mDriveItemIndexHashMap.get("d5t7");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue(anotherMsbLsbResult + " km");
         DriverDataPageUiSet.Page.Item item5 = this.mDriveItemIndexHashMap.get("d8t9");
-        Intrinsics.checkNotNull(item5);
+
         item5.setValue(msbLsbResult3 + " km/h");
         updateOutDoorTemp(getContext(), ((int) b) + " °C");
         DriverDataPageUiSet.Page.Item item6 = this.mDriveItemIndexHashMap.get("d11t13");
-        Intrinsics.checkNotNull(item6);
+
         item6.setValue((anotherMsbLsbResult2 / 10) + " km");
         DriverDataPageUiSet.Page.Item item7 = this.mDriveItemIndexHashMap.get("d14t16");
-        Intrinsics.checkNotNull(item7);
+
         item7.setValue((anotherMsbLsbResult3 / 10) + " km");
         updateDriveDataActivity(null);
     }
@@ -1035,7 +1035,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMSettingItemIndexHashMap(HashMap<String, SettingPageUiSet.ListBean.ItemListBean<?>> map) {
-        Intrinsics.checkNotNullParameter(map, "<set-?>");
+
         this.mSettingItemIndexHashMap = map;
     }
 
@@ -1044,13 +1044,13 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMDriveItemIndexHashMap(HashMap<String, DriverDataPageUiSet.Page.Item> map) {
-        Intrinsics.checkNotNullParameter(map, "<set-?>");
+
         this.mDriveItemIndexHashMap = map;
     }
 
     public final void initItemsIndexHashMap(Context context) {
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._361.UiMgr");
+
         UiMgr uiMgr = (UiMgr) canUiMgr;
         List<DriverDataPageUiSet.Page> list = uiMgr.getDriverDataPageUiSet(context).getList();
         Iterator<DriverDataPageUiSet.Page> it = list.iterator();
@@ -1062,9 +1062,9 @@ public final class MsgMgr extends AbstractMsgMgr {
                 int i4 = i3 + 1;
                 HashMap<String, DriverDataPageUiSet.Page.Item> map = this.mDriveItemIndexHashMap;
                 String titleSrn = item.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn, "item.titleSrn");
+
                 DriverDataPageUiSet.Page.Item item2 = list.get(i).getItemList().get(i3);
-                Intrinsics.checkNotNullExpressionValue(item2, "this[pageIndex].itemList[itemIndex]");
+
                 map.put(titleSrn, item2);
                 i3 = i4;
             }
@@ -1080,9 +1080,9 @@ public final class MsgMgr extends AbstractMsgMgr {
                 int i8 = i7 + 1;
                 HashMap<String, SettingPageUiSet.ListBean.ItemListBean<?>> map2 = this.mSettingItemIndexHashMap;
                 String titleSrn2 = itemListBean.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn2, "itemListBean.titleSrn");
+
                 SettingPageUiSet.ListBean.ItemListBean<?> itemListBean2 = list2.get(i5).getItemList().get(i7);
-                Intrinsics.checkNotNullExpressionValue(itemListBean2, "this[left].itemList[right]");
+
                 map2.put(titleSrn2, itemListBean2);
                 i7 = i8;
             }
@@ -1101,10 +1101,10 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         if (data2_25.length() > 10) {
             bytes = StringsKt.substring(data2_25, new IntRange(0, 10)).getBytes(Charsets.UTF_16LE);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         } else {
             bytes = data2_25.getBytes(Charsets.UTF_16LE);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         }
         CanbusMsgSender.sendMsg(ArraysKt.plus(new byte[]{22, (byte) dataType, (byte) date0, 3}, MsgMgrKt.restrict$default(bytes, 24, 0, 4, null)));
     }

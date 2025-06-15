@@ -12,7 +12,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     int differentId;
     int[] mCanBusInfoInt;

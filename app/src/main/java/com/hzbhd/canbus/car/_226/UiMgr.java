@@ -5,7 +5,7 @@ import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.AirBtnAction;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
 

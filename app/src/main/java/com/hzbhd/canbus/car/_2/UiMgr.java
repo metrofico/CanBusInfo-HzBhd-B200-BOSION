@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.car._2;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;
@@ -22,13 +23,14 @@ import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import java.util.Iterator;
 import java.util.List;
-import kotlin.jvm.internal.ByteCompanionObject;
+
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     MsgMgr mMsgMgr;
@@ -770,7 +772,7 @@ public class UiMgr extends AbstractUiMgr {
                         CanbusMsgSender.sendMsg(new byte[]{22, -58, -119, (byte) i3});
                         break;
                     case "_2_setting_10_1":
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, ByteCompanionObject.MIN_VALUE, (byte) i3});
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, Byte.MIN_VALUE, (byte) i3});
                         break;
                     case "_2_setting_10_2":
                         CanbusMsgSender.sendMsg(new byte[]{22, -58, -127, (byte) i3});

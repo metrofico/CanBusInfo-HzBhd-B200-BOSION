@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 import java.util.Calendar;
 import java.util.Date;
 
-/* loaded from: classes2.dex */
+
 public class Mp5Time {
     private int MP5_TIME_RE_SEAND;
     private Calendar calendar;

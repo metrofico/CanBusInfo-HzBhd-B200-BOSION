@@ -38,15 +38,15 @@ public abstract class RecyclerListAdapterView extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public RecyclerListAdapterView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.itemInfo = new ItemInfo();
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public RecyclerListAdapterView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.itemInfo = new ItemInfo();
         initAttr(context, attrs);
     }
@@ -54,7 +54,7 @@ public abstract class RecyclerListAdapterView extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public RecyclerListAdapterView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.itemInfo = new ItemInfo();
         initAttr(context, attributeSet);
     }
@@ -62,7 +62,7 @@ public abstract class RecyclerListAdapterView extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public RecyclerListAdapterView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.itemInfo = new ItemInfo();
         initAttr(context, attributeSet);
     }
@@ -97,7 +97,7 @@ public abstract class RecyclerListAdapterView extends BaseLifeFrameLayout {
 
     @Override // com.hzbhd.ui.life.BaseLifeFrameLayout
     public void onLifeCycleChange(Lifecycle.State state) {
-        Intrinsics.checkNotNullParameter(state, "state");
+
         super.onLifeCycleChange(state);
         if (state == Lifecycle.State.RESUMED) {
             RecyclerView recyclerView = this.recyclerView;
@@ -119,13 +119,13 @@ public abstract class RecyclerListAdapterView extends BaseLifeFrameLayout {
                         }
                         recyclerListAdapterView.setRecyclerView(recyclerView2);
                         RecyclerView recyclerView3 = RecyclerListAdapterView.this.getRecyclerView();
-                        Intrinsics.checkNotNull(recyclerView3);
+
                         recyclerView3.setLayoutManager(RecyclerListAdapterView.this.getLayoutManager());
                         RecyclerView recyclerView4 = RecyclerListAdapterView.this.getRecyclerView();
-                        Intrinsics.checkNotNull(recyclerView4);
+
                         recyclerView4.setAdapter(RecyclerListAdapterView.this.getAdapter());
                         RecyclerView recyclerView5 = RecyclerListAdapterView.this.getRecyclerView();
-                        Intrinsics.checkNotNull(recyclerView5);
+
                         recyclerView5.setScrollBarStyle(RecyclerListAdapterView.this.getScrollStyle());
                         RecyclerListAdapterView.this.initData();
                         BhdViewUtil bhdViewUtil = BhdViewUtil.INSTANCE;

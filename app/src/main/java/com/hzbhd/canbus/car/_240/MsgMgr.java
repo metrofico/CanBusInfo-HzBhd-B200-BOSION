@@ -20,9 +20,9 @@ import kotlin.collections.ArraysKt;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000@\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0003\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\f\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0018\u0010\u0011\u001a\u00020\u00122\u0006\u0010\u0013\u001a\u00020\u00102\u0006\u0010\u0014\u001a\u00020\u0004H\u0016J\u0010\u0010\u0015\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u0018H\u0002J\u0010\u0010\u0019\u001a\u00020\u00162\u0006\u0010\u0017\u001a\u00020\u0016H\u0002J\u0010\u0010\u001a\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u0016H\u0002J\u0010\u0010\u001d\u001a\u00020\u001b2\u0006\u0010\u001c\u001a\u00020\u0016H\u0002J\u0014\u0010\u001e\u001a\u00020\u00122\n\u0010\u001f\u001a\u00020\n\"\u00020\u0016H\u0002J\b\u0010 \u001a\u00020\u0012H\u0002J\b\u0010!\u001a\u00020\u0012H\u0002J\b\u0010\"\u001a\u00020\u0012H\u0002J\b\u0010#\u001a\u00020\u0012H\u0002J\b\u0010$\u001a\u00020\u0012H\u0002J\b\u0010%\u001a\u00020\u0012H\u0002J\b\u0010&\u001a\u00020\u0012H\u0002R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u0010\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006'"}, d2 = {"Lcom/hzbhd/canbus/car/_240/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "mCanBusInfoByte", "", "getMCanBusInfoByte", "()[B", "setMCanBusInfoByte", "([B)V", "mCanBusInfoInt", "", "getMCanBusInfoInt", "()[I", "setMCanBusInfoInt", "([I)V", "mContext", "Landroid/content/Context;", "canbusInfoChange", "", "context", "canbusInfo", "getIndexBy2Bit", "", "bit", "", "getIndexBy6Bit", "resolveLeftAndRightTemp", "", "value", "resolveLeftAndRightTempNum", "sendMediaSource", "b0tx", "setAirData0x23", "setCornerData", "setDoorData0x28", "setPanoramaData", "setSettingData0x40", "setVersionInfo", "setWheelKeyInfo", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public byte[] mCanBusInfoByte;
     public int[] mCanBusInfoInt;
@@ -47,12 +47,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         return null;
     }
 
     public final void setMCanBusInfoInt(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.mCanBusInfoInt = iArr;
     }
 
@@ -61,22 +61,22 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (bArr != null) {
             return bArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
         return null;
     }
 
     public final void setMCanBusInfoByte(byte[] bArr) {
-        Intrinsics.checkNotNullParameter(bArr, "<set-?>");
+
         this.mCanBusInfoByte = bArr;
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
+
         setMCanBusInfoByte(canbusInfo);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         setMCanBusInfoInt(byteArrayToIntArray);
         this.mContext = context;
         int i = getMCanBusInfoInt()[1];
@@ -264,10 +264,10 @@ public final class MsgMgr extends AbstractMsgMgr {
             arrayList.add(new SettingUpdateEntity(0, 2, Integer.valueOf(indexBy2Bit2)));
         }
         Context context = this.mContext;
-        Intrinsics.checkNotNull(context);
+
         Settings.System.putInt(context.getContentResolver(), "d0b7", indexBy2Bit);
         Context context2 = this.mContext;
-        Intrinsics.checkNotNull(context2);
+
         Settings.System.putInt(context2.getContentResolver(), "d0b0t6", indexBy6Bit);
         updateGeneralSettingData(arrayList);
         updateSettingActivity(null);
@@ -292,9 +292,9 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         if (value == 255) {
             Context context = this.mContext;
-            Intrinsics.checkNotNull(context);
+
             String string = context.getString(R.string.no_display);
-            Intrinsics.checkNotNullExpressionValue(string, "{\n                mConte…no_display)\n            }");
+
             return string;
         }
         boolean z = false;

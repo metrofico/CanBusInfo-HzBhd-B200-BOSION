@@ -74,7 +74,7 @@ public class CellLayout extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellLayout(Context context, int i) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mXSize = 5;
         this.mYSize = 2;
         this.mMaxWidth = 1920;
@@ -87,7 +87,7 @@ public class CellLayout extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellLayout(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mXSize = 5;
         this.mYSize = 2;
         this.mMaxWidth = 1920;
@@ -99,7 +99,7 @@ public class CellLayout extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellLayout(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mXSize = 5;
         this.mYSize = 2;
         this.mMaxWidth = 1920;
@@ -111,7 +111,7 @@ public class CellLayout extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mXSize = 5;
         this.mYSize = 2;
         this.mMaxWidth = 1920;
@@ -123,7 +123,7 @@ public class CellLayout extends FrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CellLayout(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mXSize = 5;
         this.mYSize = 2;
         this.mMaxWidth = 1920;
@@ -142,13 +142,13 @@ public class CellLayout extends FrameLayout {
     }
 
     public final void addChild(CellChild child, int x, int y) {
-        Intrinsics.checkNotNullParameter(child, "child");
+
         child.setLoc(x, y);
         addChild(child);
     }
 
     public final boolean addChild(CellChild child) {
-        Intrinsics.checkNotNullParameter(child, "child");
+
         if (child.getPageX() + child.getXsize() > this.mXSize || child.getPageY() + child.getYsize() > this.mYSize) {
             if (!LogUtil.log5()) {
                 return false;

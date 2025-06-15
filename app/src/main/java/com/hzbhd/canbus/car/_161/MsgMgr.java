@@ -55,9 +55,9 @@ import kotlin.text.Charsets;
 import kotlin.text.StringsKt;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000\u008a\u0001\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0002\b\u0007\n\u0002\u0010\u0015\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0005\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000b\n\u0002\u0010\u000b\n\u0002\b\u0017\n\u0002\u0010\u0005\n\u0002\b\f\n\u0002\u0018\u0002\n\u0002\b\u0014\n\u0002\u0010\t\n\u0002\b\u0017\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u0000 \u0085\u00012\u00020\u0001:\u0006\u0085\u0001\u0086\u0001\u0087\u0001B\u0005¢\u0006\u0002\u0010\u0002J\b\u0010%\u001a\u00020&H\u0002J\u0010\u0010'\u001a\u00020&2\u0006\u0010(\u001a\u00020\u000eH\u0016J\b\u0010)\u001a\u00020&H\u0016J\b\u0010*\u001a\u00020&H\u0016J \u0010+\u001a\u00020&2\u0006\u0010,\u001a\u00020\u00152\u0006\u0010-\u001a\u00020\u00152\u0006\u0010.\u001a\u00020\u0015H\u0016J \u0010/\u001a\u00020&2\u0006\u00100\u001a\u00020\u00042\u0006\u00101\u001a\u0002022\u0006\u00103\u001a\u000202H\u0016J \u00104\u001a\u00020&2\u0006\u00100\u001a\u00020\u00042\u0006\u00101\u001a\u0002022\u0006\u00103\u001a\u000202H\u0016J\u0018\u00105\u001a\u00020&2\u0006\u0010(\u001a\u00020\u000e2\u0006\u00106\u001a\u00020\u0004H\u0016J\u0018\u00107\u001a\u00020&2\u0006\u00108\u001a\u00020\u000f2\u0006\u00109\u001a\u000202H\u0016Jp\u0010:\u001a\u00020&2\u0006\u0010;\u001a\u00020\u000f2\u0006\u0010<\u001a\u00020\u000f2\u0006\u0010=\u001a\u00020\u000f2\u0006\u0010>\u001a\u00020\u000f2\u0006\u0010?\u001a\u00020\u000f2\u0006\u0010@\u001a\u00020\u000f2\u0006\u0010A\u001a\u00020\u000f2\u0006\u0010B\u001a\u00020\u000f2\u0006\u0010C\u001a\u00020\u000f2\u0006\u0010D\u001a\u0002022\u0006\u0010E\u001a\u0002022\u0006\u0010F\u001a\u0002022\u0006\u0010G\u001a\u00020\u000fH\u0016Jp\u0010H\u001a\u00020&2\u0006\u0010I\u001a\u00020J2\u0006\u0010K\u001a\u00020\u000f2\u0006\u0010L\u001a\u00020\u000f2\u0006\u0010M\u001a\u00020\u000f2\u0006\u0010N\u001a\u00020\u000f2\u0006\u0010O\u001a\u00020\u000f2\u0006\u0010P\u001a\u00020\u000f2\u0006\u0010Q\u001a\u0002022\u0006\u0010R\u001a\u0002022\u0006\u0010S\u001a\u00020\u000f2\u0006\u0010T\u001a\u00020\u00152\u0006\u0010.\u001a\u00020\u00152\u0006\u0010-\u001a\u00020\u0015H\u0016J\b\u0010U\u001a\u00020&H\u0016J\b\u0010V\u001a\u0004\u0018\u00010WJ\u0012\u0010X\u001a\u0004\u0018\u00010#2\u0006\u0010(\u001a\u00020\u000eH\u0002J\u0012\u0010Y\u001a\u00020&2\b\u0010(\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010Z\u001a\u00020&2\b\u0010(\u001a\u0004\u0018\u00010\u000eH\u0016J\u0012\u0010[\u001a\u00020&2\b\u0010(\u001a\u0004\u0018\u00010\u000eH\u0002J\u0010\u0010\\\u001a\u00020&2\u0006\u0010(\u001a\u00020\u000eH\u0002J¾\u0001\u0010]\u001a\u00020&2\u0006\u0010^\u001a\u00020J2\u0006\u0010_\u001a\u00020J2\u0006\u0010`\u001a\u00020\u000f2\u0006\u0010a\u001a\u00020\u000f2\u0006\u0010b\u001a\u00020J2\u0006\u0010c\u001a\u00020J2\u0006\u0010d\u001a\u00020J2\u0006\u0010e\u001a\u00020J2\u0006\u0010f\u001a\u00020J2\u0006\u0010g\u001a\u00020J2\b\u0010h\u001a\u0004\u0018\u00010\u00152\b\u0010i\u001a\u0004\u0018\u00010\u00152\b\u0010j\u001a\u0004\u0018\u00010\u00152\u0006\u0010k\u001a\u00020l2\u0006\u0010I\u001a\u00020J2\u0006\u0010m\u001a\u00020\u000f2\u0006\u0010R\u001a\u0002022\u0006\u0010n\u001a\u00020l2\u0006\u0010o\u001a\u00020\u00152\u0006\u0010p\u001a\u00020\u00152\u0006\u0010q\u001a\u00020\u00152\u0006\u0010r\u001a\u000202H\u0016J0\u0010s\u001a\u00020&2\u0006\u0010t\u001a\u00020\u000f2\u0006\u0010u\u001a\u00020\u00152\u0006\u0010v\u001a\u00020\u00152\u0006\u0010w\u001a\u00020\u00152\u0006\u0010x\u001a\u00020\u000fH\u0016J\u0012\u0010y\u001a\u00020&2\b\u0010z\u001a\u0004\u0018\u00010\u0015H\u0016J\u0016\u0010{\u001a\u00020&2\u0006\u0010,\u001a\u00020\u00152\u0006\u0010|\u001a\u00020!J\u001e\u0010}\u001a\u00020&2\u0006\u0010~\u001a\u00020\u000f2\u0006\u0010\u007f\u001a\u00020\u000f2\u0006\u0010|\u001a\u00020\u000fJ\u009b\u0001\u0010\u0080\u0001\u001a\u00020&2\u0006\u0010^\u001a\u00020J2\u0006\u0010_\u001a\u00020J2\u0006\u0010`\u001a\u00020\u000f2\u0006\u0010a\u001a\u00020\u000f2\u0006\u0010b\u001a\u00020J2\u0006\u0010c\u001a\u00020J2\u0006\u0010d\u001a\u00020J2\b\u0010e\u001a\u0004\u0018\u00010\u00152\u0006\u0010f\u001a\u00020J2\u0006\u0010g\u001a\u00020J2\b\u0010h\u001a\u0004\u0018\u00010\u00152\b\u0010i\u001a\u0004\u0018\u00010\u00152\b\u0010j\u001a\u0004\u0018\u00010\u00152\u0006\u0010k\u001a\u00020\u000f2\u0007\u0010\u0081\u0001\u001a\u00020J2\u0006\u0010R\u001a\u0002022\u0007\u0010\u0082\u0001\u001a\u00020\u000fH\u0016J\u0014\u0010\u0083\u0001\u001a\u00020&*\t\u0012\u0004\u0012\u00020\u00040\u0084\u0001H\u0002R\u001e\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0004@BX\u0086\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0006\u0010\u0007R\u001e\u0010\b\u001a\u00020\u00042\u0006\u0010\u0003\u001a\u00020\u0004@BX\u0086\u000e¢\u0006\b\n\u0000\u001a\u0004\b\t\u0010\u0007R\u000e\u0010\n\u001a\u00020\u0004X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082.¢\u0006\u0002\n\u0000R\u001e\u0010\u0010\u001a\u00020\u000f2\u0006\u0010\u0003\u001a\u00020\u000f@BX\u0086\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u0011\u0010\u0012R\u000e\u0010\u0013\u001a\u00020\u000fX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u000fX\u0082\u000e¢\u0006\u0002\n\u0000R\u001a\u0010\u0017\u001a\u000e\u0012\u0004\u0012\u00020\u0015\u0012\u0004\u0012\u00020\u00190\u0018X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082\u0004¢\u0006\u0002\n\u0000R\u0018\u0010\u001c\u001a\f\u0012\b\u0012\u00060\u001eR\u00020\u00000\u001dX\u0082\u0004¢\u0006\u0002\n\u0000R \u0010\u001f\u001a\u0014\u0012\u0004\u0012\u00020\u0015\u0012\n\u0012\b\u0012\u0004\u0012\u00020!0 0\u0018X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\"\u001a\u00020#X\u0082.¢\u0006\u0002\n\u0000R\u0010\u0010$\u001a\u0004\u0018\u00010#X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u0088\u0001"}, d2 = {"Lcom/hzbhd/canbus/car/_161/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "<set-?>", "", "m0x3BDatas", "getM0x3BDatas", "()[B", "m0x3DDatas", "getM0x3DDatas", "mCanbusInfoByte", "mCanbusInfoInt", "", "mContext", "Landroid/content/Context;", "", "mDifferent", "getMDifferent", "()I", "mDiscCurrent", "mDiscTitle", "", "mDiscTotal", "mDriveItemIndexHashMap", "Ljava/util/HashMap;", "Lcom/hzbhd/canbus/entity/DriverUpdateEntity;", "mHandler", "Landroid/os/Handler;", "mParserArray", "Landroid/util/SparseArray;", "Lcom/hzbhd/canbus/car/_161/MsgMgr$Parser;", "mSettingItemIndexHashMap", "Lcom/hzbhd/canbus/entity/SettingUpdateEntity;", "", "mUiMgr", "Lcom/hzbhd/canbus/car/_161/UiMgr;", "uiMgr", "Jump", "", "afterServiceNormalSetting", "context", "atvInfoChange", "auxInInfoChange", "btMusicId3InfoChange", LcdInfoShare.MediaInfo.title, LcdInfoShare.MediaInfo.artist, LcdInfoShare.MediaInfo.album, "btPhoneIncomingInfoChange", "phoneNumber", "isMicMute", "", "isAudioTransferTowardsAG", "btPhoneOutGoingInfoChange", "canbusInfoChange", "canbusInfo", "currentVolumeInfoChange", "volValue", "isMute", "dateTimeRepCanbus", "bYearTotal", "bYear2Dig", "bMonth", "bDay", "bHours", "bMins", "bSecond", "bHours24H", "systemDateFormat", "isFormat24H", "isFormatPm", "isGpsTime", "dayOfWeek", "discInfoChange", "playModel", "", "currentTime", "playTitleNo", "position", "currentPlayNo", "currentTotalNo", "discType", "isUnMuted", "isPlaying", "playStat", "song", "dtvInfoChange", "getCurrentActivity", "Landroid/app/Activity;", "getUiMgr", "initAmplifier", "initCommand", "initItemsIndexHashMap", "initParsers", "musicInfoChange", "stoagePath", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playIndex", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "sourceSwitchChange", LcdInfoShare.DspInfo.source, "updateSettingActivity", "value", "updateSettings", "leftListIndex", "rightListIndex", "videoInfoChange", "playMode", "duration", "sendCommands", "Ljava/util/ArrayList;", "Companion", "Parser", "VehicleType", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     private static final String TAG = "_1161_MsgMgr";
     public static final String _161_VEHICLE_CONFIG = "_161_vehicle_config";
@@ -78,7 +78,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private String mDiscTitle = " ";
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0003\u0018\u0000 \u00032\u00020\u0001:\u0001\u0003B\u0005¢\u0006\u0002\u0010\u0002¨\u0006\u0004"}, d2 = {"Lcom/hzbhd/canbus/car/_161/MsgMgr$VehicleType;", "", "()V", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final class VehicleType {
         public static final int AIRCROSS_4008 = 26;
         public static final int AIRPANEL = 32;
@@ -129,10 +129,10 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         super.afterServiceNormalSetting(context);
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._161.UiMgr");
+
         this.mUiMgr = (UiMgr) canUiMgr;
         initItemsIndexHashMap(context);
         initParsers(context);
@@ -273,11 +273,11 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
+
         super.canbusInfoChange(context, canbusInfo);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         this.mCanbusInfoInt = byteArrayToIntArray;
         this.mCanbusInfoByte = canbusInfo;
         this.mContext = context;
@@ -799,7 +799,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                         for (int i2 = 0; i2 < 8; i2++) {
                             SparseArray<Popup.Ops.WarningBean> sparseArray2 = this.warningBeans.get(i - 2);
                             if (sparseArray2 != null && (warningBean = sparseArray2.get(i2)) != null) {
-                                Intrinsics.checkNotNullExpressionValue(warningBean, "get(bit)");
+
                                 Popup.InfoBean bean = warningBean.getBean();
                                 int i3 = (msgMgr.mCanbusInfoInt[i] >> i2) & 1;
                                 if (i3 == 1) {
@@ -926,7 +926,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                                 int i7 = iKeyAt;
                                 Log.i("_1161_MsgMgr", "        value " + i6 + "  isNeedShow " + functionBean.getBean().isNeedShow());
                                 if (iKeyAt3 == i6 && functionBean.getBean().isNeedShow() != i6) {
-                                    Intrinsics.checkNotNullExpressionValue(functionBean, "this");
+
                                     popup2.plus(functionBean);
                                 }
                                 bean.setNeedShow(i6);
@@ -1075,7 +1075,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                     for (int i = 3; i < length; i++) {
                         WarningEntity warningEntity = this.diagnosisInfoArray.get(msgMgr.mCanbusInfoInt[i]);
                         if (warningEntity != null) {
-                            Intrinsics.checkNotNullExpressionValue(warningEntity, "diagnosisInfoArray[mCanbusInfoInt[i]]");
+
                             arrayList.add(warningEntity);
                         }
                     }
@@ -1447,7 +1447,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                 Log.i("_1161_MsgMgr", "parse: 当前页码 " + ((this.this$0.mCanbusInfoInt[4] << 8) & this.this$0.mCanbusInfoInt[5]));
                 StringBuilder sbAppend2 = new StringBuilder().append("parse: 字符 {");
                 byte[] bArrCopyOfRange = Arrays.copyOfRange(this.this$0.mCanbusInfoByte, 8, this.this$0.mCanbusInfoByte.length);
-                Intrinsics.checkNotNullExpressionValue(bArrCopyOfRange, "copyOfRange(mCanbusInfoB… 8, mCanbusInfoByte.size)");
+
                 Log.i("_1161_MsgMgr", sbAppend2.append(new String(bArrCopyOfRange, Charsets.UTF_8)).append('}').toString());
             }
         });
@@ -1533,7 +1533,7 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     /* JADX INFO: Access modifiers changed from: private */
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000:\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\b¢\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0011\u001a\u00020\u0012J\u0010\u0010\u0013\u001a\u00020\u00142\u0006\u0010\u0015\u001a\u00020\u0006H\u0016J\u0015\u0010\u0016\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000eH\u0016¢\u0006\u0002\u0010\u0017R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u001c\u0010\u0007\u001a\u0004\u0018\u00010\bX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR\u0018\u0010\r\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u000f0\u000eX\u0082\u0004¢\u0006\u0004\n\u0002\u0010\u0010¨\u0006\u0018"}, d2 = {"Lcom/hzbhd/canbus/car/_161/MsgMgr$Parser;", "", NotificationCompat.CATEGORY_MESSAGE, "", "(Lcom/hzbhd/canbus/car/_161/MsgMgr;Ljava/lang/String;)V", "PARSE_LISTENERS_LENGTH", "", "canbusInfo", "", "getCanbusInfo", "()[I", "setCanbusInfo", "([I)V", "onParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "isDataChange", "", "parse", "", "dataLength", "setOnParseListeners", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     abstract class Parser {
         private final int PARSE_LISTENERS_LENGTH;
         private int[] canbusInfo;
@@ -1541,7 +1541,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         final /* synthetic */ MsgMgr this$0;
 
         public Parser(MsgMgr msgMgr, String msg) {
-            Intrinsics.checkNotNullParameter(msg, "msg");
+
             this.this$0 = msgMgr;
             OnParseListener[] onParseListeners = setOnParseListeners();
             this.onParseListeners = onParseListeners;
@@ -1573,7 +1573,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             }
             int[] iArr = this.this$0.mCanbusInfoInt;
             int[] iArrCopyOf = Arrays.copyOf(iArr, iArr.length);
-            Intrinsics.checkNotNullExpressionValue(iArrCopyOf, "copyOf(this, size)");
+
             this.canbusInfo = iArrCopyOf;
             return true;
         }
@@ -1587,7 +1587,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         Log.i(TAG, "initItems: ");
         UiMgr uiMgr = this.mUiMgr;
         if (uiMgr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
             uiMgr = null;
         }
         Iterator<SettingPageUiSet.ListBean> it = uiMgr.getSettingUiSet(context).getList().iterator();
@@ -1598,7 +1598,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             for (SettingPageUiSet.ListBean.ItemListBean itemListBean : it.next().getItemList()) {
                 HashMap<String, SettingUpdateEntity<Object>> map = this.mSettingItemIndexHashMap;
                 String titleSrn = itemListBean.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn, "itemListBean.titleSrn");
+
                 map.put(titleSrn, new SettingUpdateEntity<>(i, i3));
                 i3++;
             }
@@ -1612,7 +1612,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             for (DriverDataPageUiSet.Page.Item item : it2.next().getItemList()) {
                 HashMap<String, DriverUpdateEntity> map2 = this.mDriveItemIndexHashMap;
                 String titleSrn2 = item.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn2, "item.titleSrn");
+
                 map2.put(titleSrn2, new DriverUpdateEntity(i4, i6, "null_value"));
                 i6++;
             }
@@ -1621,8 +1621,8 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void updateSettingActivity(String title, Object value) {
-        Intrinsics.checkNotNullParameter(title, "title");
-        Intrinsics.checkNotNullParameter(value, "value");
+
+
         SettingUpdateEntity<Object> settingUpdateEntity = this.mSettingItemIndexHashMap.get(title);
         if (settingUpdateEntity != null) {
             ArrayList arrayList = new ArrayList();
@@ -1634,9 +1634,9 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int currClickPresetIndex, String currBand, String currentFreq, String psName, int isStereo) {
-        Intrinsics.checkNotNullParameter(currBand, "currBand");
-        Intrinsics.checkNotNullParameter(currentFreq, "currentFreq");
-        Intrinsics.checkNotNullParameter(psName, "psName");
+
+
+
         Pair pair = StringsKt.contains$default((CharSequence) currBand, (CharSequence) "FM", false, 2, (Object) null) ? new Pair(0, Integer.valueOf((int) (Float.parseFloat(currentFreq) * 100))) : new Pair(16, Integer.valueOf(Integer.parseInt(currentFreq)));
         CanbusMsgSender.sendMsg(new byte[]{22, -64, 1, 1, (byte) ((Number) pair.getFirst()).intValue(), (byte) ((((Number) pair.getSecond()).intValue() >> 8) & 255), (byte) (((Number) pair.getSecond()).intValue() & 255), (byte) currClickPresetIndex});
     }
@@ -1655,9 +1655,9 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void discInfoChange(byte playModel, int currentTime, int playTitleNo, int position, int currentPlayNo, int currentTotalNo, int discType, boolean isUnMuted, boolean isPlaying, int playStat, String song, String album, String artist) {
-        Intrinsics.checkNotNullParameter(song, "song");
-        Intrinsics.checkNotNullParameter(album, "album");
-        Intrinsics.checkNotNullParameter(artist, "artist");
+
+
+
         ArrayList<byte[]> arrayList = new ArrayList<>();
         if (discType == 1 || discType == 5) {
             position = currentPlayNo;
@@ -1671,7 +1671,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             this.mDiscTitle = song;
             arrayList.add(new byte[]{22, -64, 2, -1});
             byte[] bytes = song.getBytes(Charsets.UTF_8);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
             arrayList.add(ArraysKt.plus(new byte[]{22, -61, 3}, bytes));
         }
         sendCommands(arrayList);
@@ -1689,7 +1689,7 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneIncomingInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNullParameter(phoneNumber, "phoneNumber");
+
         ArrayList<byte[]> arrayList = new ArrayList<>();
         arrayList.add(new byte[]{22, -64, 5, 1, 0});
         arrayList.add(new byte[]{22, -64, 5, -1});
@@ -1699,7 +1699,7 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneOutGoingInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNullParameter(phoneNumber, "phoneNumber");
+
         ArrayList<byte[]> arrayList = new ArrayList<>();
         arrayList.add(new byte[]{22, -64, 5, 1, 0});
         arrayList.add(new byte[]{22, -64, 5, -1});
@@ -1714,15 +1714,15 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, byte currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, long currentPos, byte playModel, int playIndex, boolean isPlaying, long totalTime, String songTitle, String songAlbum, String songArtist, boolean isReportFromPlay) {
-        Intrinsics.checkNotNullParameter(songTitle, "songTitle");
-        Intrinsics.checkNotNullParameter(songAlbum, "songAlbum");
-        Intrinsics.checkNotNullParameter(songArtist, "songArtist");
+
+
+
         if (stoagePath != 9) {
             ArrayList<byte[]> arrayList = new ArrayList<>();
             arrayList.add(new byte[]{22, -64, 8, 1, (byte) ((totalCount >> 8) & 255), (byte) (totalCount & 255), currentPlayingIndexHigh, (byte) currentPlayingIndexLow});
             arrayList.add(new byte[]{22, -64, 8, -1});
             byte[] bytes = songTitle.getBytes(Charsets.UTF_8);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
             arrayList.add(ArraysKt.plus(new byte[]{22, -61, 3}, bytes));
             sendCommands(arrayList);
         }
@@ -1735,13 +1735,13 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btMusicId3InfoChange(String title, String artist, String album) {
-        Intrinsics.checkNotNullParameter(title, "title");
-        Intrinsics.checkNotNullParameter(artist, "artist");
-        Intrinsics.checkNotNullParameter(album, "album");
+
+
+
         ArrayList<byte[]> arrayList = new ArrayList<>();
         arrayList.add(new byte[]{22, -64, 11, -1});
         byte[] bytes = title.getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         arrayList.add(ArraysKt.plus(new byte[]{22, -61, 3}, bytes));
         sendCommands(arrayList);
     }
@@ -1801,7 +1801,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         Context context = this.mContext;
         Context context2 = null;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         intent.setClass(context, SettingActivity.class);
@@ -1809,14 +1809,14 @@ public final class MsgMgr extends AbstractMsgMgr {
         intent.setAction(Constant.SETTING_OPEN_TARGET_PAGE);
         Context context3 = this.mContext;
         if (context3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context3 = null;
         }
         UiMgr uiMgr = getUiMgr(context3);
         if (uiMgr != null) {
             Context context4 = this.mContext;
             if (context4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                 context4 = null;
             }
             numValueOf = Integer.valueOf(uiMgr.getSettingLeftIndexes(context4, "_161_hybird_Setting"));
@@ -1826,7 +1826,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         intent.putExtra(Constant.LEFT_INDEX, numValueOf);
         Context context5 = this.mContext;
         if (context5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
         } else {
             context2 = context5;
         }
@@ -1836,7 +1836,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final UiMgr getUiMgr(Context context) {
         if (this.uiMgr == null) {
             UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-            Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._161.UiMgr");
+
             this.uiMgr = (UiMgr) canUiMgr;
         }
         return this.uiMgr;

@@ -35,7 +35,7 @@ import java.util.List;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     protected static final int CAR_ID_EV_19 = 15;
     protected static final int CAR_ID_GA3S = 1;

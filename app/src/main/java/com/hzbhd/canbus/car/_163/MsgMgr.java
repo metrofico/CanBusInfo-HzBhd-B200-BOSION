@@ -32,9 +32,9 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.Charsets;
 import kotlin.text.Typography;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000^\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\u0012\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0006\n\u0002\u0010\u0005\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\n\n\u0002\u0018\u0002\n\u0002\b\u0018\n\u0002\u0010\u000e\n\u0002\b\u001d\n\u0002\u0010\t\n\u0002\b+\u0018\u0000 \u008e\u00012\u00020\u0001:\u0002\u008e\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u001b\u001a\u00020\u001c2\b\u0010\u001d\u001a\u0004\u0018\u00010\u000fH\u0016J\b\u0010\u001e\u001a\u00020\u001cH\u0016J\"\u0010\u001f\u001a\u00020\u001c2\b\u0010 \u001a\u0004\u0018\u00010\n2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016J\"\u0010$\u001a\u00020\u001c2\b\u0010 \u001a\u0004\u0018\u00010\n2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016J\"\u0010%\u001a\u00020\u001c2\b\u0010 \u001a\u0004\u0018\u00010\n2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016JP\u0010&\u001a\u00020\u001c2\u0006\u0010'\u001a\u00020\u00132\u0006\u0010 \u001a\u00020\n2\u0006\u0010(\u001a\u00020\"2\u0006\u0010)\u001a\u00020\"2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"2\u0006\u0010*\u001a\u00020\u00132\u0006\u0010+\u001a\u00020\u00132\u0006\u0010,\u001a\u00020-H\u0016J\"\u0010.\u001a\u00020\u001c2\b\u0010 \u001a\u0004\u0018\u00010\n2\u0006\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\"H\u0016J\u0018\u0010/\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u000f2\u0006\u00100\u001a\u00020\nH\u0016J\u0018\u00101\u001a\u00020\u001c2\u0006\u00102\u001a\u00020\u00132\u0006\u00103\u001a\u00020\"H\u0016Jp\u00104\u001a\u00020\u001c2\u0006\u00105\u001a\u00020\u00132\u0006\u00106\u001a\u00020\u00132\u0006\u00107\u001a\u00020\u00132\u0006\u00108\u001a\u00020\u00132\u0006\u00109\u001a\u00020\u00132\u0006\u0010:\u001a\u00020\u00132\u0006\u0010;\u001a\u00020\u00132\u0006\u0010<\u001a\u00020\u00132\u0006\u0010=\u001a\u00020\u00132\u0006\u0010>\u001a\u00020\"2\u0006\u0010?\u001a\u00020\"2\u0006\u0010@\u001a\u00020\"2\u0006\u0010A\u001a\u00020\u0013H\u0016J\b\u0010B\u001a\u00020\u001cH\u0002J\b\u0010C\u001a\u00020\u001cH\u0002J8\u0010D\u001a\u00020\u001a2\u0006\u0010E\u001a\u00020F2\u0006\u0010G\u001a\u00020\u001a2\u0006\u0010H\u001a\u00020\u001a2\u0006\u0010I\u001a\u00020\u001a2\u0006\u0010J\u001a\u00020\u001a2\u0006\u0010K\u001a\u00020\u001aH\u0002J\u000e\u0010L\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0013J\u0010\u0010M\u001a\u00020\u00132\u0006\u0010N\u001a\u00020\"H\u0002J\u000e\u0010O\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0013J\u0010\u0010P\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u000fH\u0016J\b\u0010Q\u001a\u00020\"H\u0002J\u0010\u0010R\u001a\u00020\"2\u0006\u00100\u001a\u00020\nH\u0002J\u0010\u0010S\u001a\u00020\"2\u0006\u00100\u001a\u00020\nH\u0002J\u0006\u0010T\u001a\u00020\u001cJ¸\u0001\u0010U\u001a\u00020\u001c2\u0006\u0010V\u001a\u00020\u001a2\u0006\u0010W\u001a\u00020\u001a2\u0006\u0010X\u001a\u00020\u00132\u0006\u0010Y\u001a\u00020\u00132\u0006\u0010Z\u001a\u00020\u001a2\u0006\u0010[\u001a\u00020\u001a2\u0006\u0010\\\u001a\u00020\u001a2\u0006\u0010]\u001a\u00020\u001a2\u0006\u0010^\u001a\u00020\u001a2\u0006\u0010_\u001a\u00020\u001a2\u0006\u0010`\u001a\u00020F2\u0006\u0010a\u001a\u00020F2\u0006\u0010b\u001a\u00020F2\u0006\u0010c\u001a\u00020d2\u0006\u0010e\u001a\u00020\u001a2\u0006\u0010f\u001a\u00020\u00132\u0006\u0010g\u001a\u00020\"2\u0006\u0010h\u001a\u00020d2\u0006\u0010i\u001a\u00020F2\u0006\u0010j\u001a\u00020F2\u0006\u0010k\u001a\u00020F2\u0006\u0010l\u001a\u00020\"H\u0016J\b\u0010m\u001a\u00020\u001cH\u0002J\u0010\u0010n\u001a\u00020\u001c2\u0006\u00100\u001a\u00020\nH\u0002J0\u0010o\u001a\u00020\u001c2\u0006\u0010p\u001a\u00020\u00132\u0006\u0010E\u001a\u00020F2\u0006\u0010q\u001a\u00020F2\u0006\u0010r\u001a\u00020F2\u0006\u0010s\u001a\u00020\u0013H\u0016J\u0010\u0010t\u001a\u00020\u001c2\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u0010\u0010u\u001a\u00020\u001c2\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u0010\u0010v\u001a\u00020F2\u0006\u0010\u0012\u001a\u00020\u0013H\u0002J\u001a\u0010w\u001a\u00020\u001c2\u0006\u0010x\u001a\u00020\u00132\b\u0010 \u001a\u0004\u0018\u00010\nH\u0002J\u001a\u0010y\u001a\u00020\u001c2\u0006\u0010x\u001a\u00020\u00132\b\b\u0002\u0010z\u001a\u00020\nH\u0002J\u0010\u0010{\u001a\u00020\u001c2\u0006\u0010|\u001a\u00020\nH\u0002J\b\u0010}\u001a\u00020\u001cH\u0002J\b\u0010~\u001a\u00020\u001cH\u0002J\b\u0010\u007f\u001a\u00020\u001cH\u0002J\t\u0010\u0080\u0001\u001a\u00020\u001cH\u0002J\t\u0010\u0081\u0001\u001a\u00020\u001cH\u0002J\t\u0010\u0082\u0001\u001a\u00020\u001cH\u0002J\t\u0010\u0083\u0001\u001a\u00020\u001cH\u0002J\t\u0010\u0084\u0001\u001a\u00020\u001cH\u0002J\t\u0010\u0085\u0001\u001a\u00020\u001cH\u0002J\t\u0010\u0086\u0001\u001a\u00020\u001cH\u0002J\t\u0010\u0087\u0001\u001a\u00020\u001cH\u0002J\u0012\u0010\u0088\u0001\u001a\u00020\u001c2\u0007\u0010\u0089\u0001\u001a\u00020\"H\u0016J\u0007\u0010\u008a\u0001\u001a\u00020\u001cJ\u0093\u0001\u0010\u008b\u0001\u001a\u00020\u001c2\u0006\u0010V\u001a\u00020\u001a2\u0006\u0010W\u001a\u00020\u001a2\u0006\u0010X\u001a\u00020\u00132\u0006\u0010Y\u001a\u00020\u00132\u0006\u0010Z\u001a\u00020\u001a2\u0006\u0010[\u001a\u00020\u001a2\u0006\u0010\\\u001a\u00020\u001a2\u0006\u0010]\u001a\u00020F2\u0006\u0010^\u001a\u00020\u001a2\u0006\u0010_\u001a\u00020\u001a2\u0006\u0010`\u001a\u00020F2\u0006\u0010a\u001a\u00020F2\u0006\u0010b\u001a\u00020F2\u0006\u0010c\u001a\u00020\u00132\u0007\u0010\u008c\u0001\u001a\u00020\u001a2\u0006\u0010g\u001a\u00020\"2\u0007\u0010\u008d\u0001\u001a\u00020\u0013H\u0016R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u000e\u0010\t\u001a\u00020\nX\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0004X\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\nX\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\nX\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082.¢\u0006\u0002\n\u0000R$\u0010\u0014\u001a\u00020\u00132\u0006\u0010\u0012\u001a\u00020\u0013@FX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0015\u0010\u0016\"\u0004\b\u0017\u0010\u0018R\u000e\u0010\u0019\u001a\u00020\u001aX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u008f\u0001"}, d2 = {"Lcom/hzbhd/canbus/car/_163/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "mAirData", "", "getMAirData", "()[I", "setMAirData", "([I)V", "mCanBusInfoByte", "", "mCanBusInfoInt", "mCanbusAirInfoCopy", "mCanbusDoorInfoCopy", "mContext", "Landroid/content/Context;", "mUiMgr", "Lcom/hzbhd/canbus/car/_163/UiMgr;", "value", "", "mVolume", "getMVolume", "()I", "setMVolume", "(I)V", "x22D1", "", "afterServiceNormalSetting", "", "context", "btMusicInfoChange", "btPhoneHangUpInfoChange", "phoneNumber", "isMicMute", "", "isAudioTransferTowardsAG", "btPhoneIncomingInfoChange", "btPhoneOutGoingInfoChange", "btPhoneStatusInfoChange", "callStatus", "isHfpConnected", "isCallingFlag", "batteryStatus", "signalValue", "bundle", "Landroid/os/Bundle;", "btPhoneTalkingInfoChange", "canbusInfoChange", "canbusInfo", "currentVolumeInfoChange", "volValue", "isMute", "dateTimeRepCanbus", "bYearTotal", "bYear2Dig", "bMonth", "bDay", "bHours", "bMins", "bSecond", "bHours24H", "systemDateFormat", "isFormat24H", "isFormatPm", "isGpsTime", "dayOfWeek", "driveData0", "driveData1", "getAllBandTypeData", "currBand", "", OriginalBtnAction.FM1, OriginalBtnAction.FM2, "fm3", "am1", "am2", "getBits", "getBoolResult", "data", "getTens", "initCommand", "isAirDataNoChange", "isAirMsgRepeatRenault", "isDoorMsgRepeatRenault", "languageSet", "musicInfoChange", "stoagePath", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playModel", "playIndex", "isPlaying", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "originalStatus", "panelKnob", "radioInfoChange", "currClickPresetIndex", "currentFreq", "psName", "isStereo", "realKeyClick", "realKeyClick2", "resolveLeftAndRightTemp", "sendBtPhoneData", "d0", "sendMediaSource", "d1t12", "sendTextData", "byteArray", "set0x23Data", "setAirData0x31", "setCarData", "setCarInfo", "setCarInfoData2", "setDoorData0x12", "setPanelBtnKey", "setRadar", "setSwc", "setTrack", "setVersionInfo", "sourceSwitchNoMediaInfoChange", "isPowerOff", "updateSettingData", "videoInfoChange", "playMode", "duation", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     private static boolean isAirFirst = true;
     private static boolean isDoorFirst = true;
@@ -73,7 +73,7 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         super.initCommand(context);
         this.mContext = context;
         languageSet();
@@ -82,11 +82,11 @@ public final class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._163.UiMgr");
+
         UiMgr uiMgr = (UiMgr) canUiMgr;
         this.mUiMgr = uiMgr;
         if (uiMgr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mUiMgr");
+
             uiMgr = null;
         }
         InitUtilsKt.initSettingItemsIndexHashMap$default(context, uiMgr, null, 4, null);
@@ -94,16 +94,16 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) throws Resources.NotFoundException {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
+
         super.canbusInfoChange(context, canbusInfo);
         this.mCanBusInfoByte = canbusInfo;
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         this.mCanBusInfoInt = byteArrayToIntArray;
         this.mContext = context;
         if (byteArrayToIntArray == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             byteArrayToIntArray = null;
         }
         int i = byteArrayToIntArray[1];
@@ -170,7 +170,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             List<String> valueSrnArray = itemListBean.getValueSrnArray();
             int[] iArr = this.mCanBusInfoInt;
             if (iArr == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr = null;
             }
             itemListBean.setValue(valueSrnArray.get(iArr[2]));
@@ -182,79 +182,79 @@ public final class MsgMgr extends AbstractMsgMgr {
         char c;
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int intFromByteWithBit = DataHandleUtils.getIntFromByteWithBit(iArr[2], 7, 1);
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         int intFromByteWithBit2 = DataHandleUtils.getIntFromByteWithBit(iArr2[2], 6, 1);
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         int intFromByteWithBit3 = DataHandleUtils.getIntFromByteWithBit(iArr3[2], 5, 1);
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         int intFromByteWithBit4 = DataHandleUtils.getIntFromByteWithBit(iArr4[2], 4, 1);
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         int intFromByteWithBit5 = DataHandleUtils.getIntFromByteWithBit(iArr5[2], 3, 1);
         int[] iArr6 = this.mCanBusInfoInt;
         if (iArr6 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr6 = null;
         }
         int intFromByteWithBit6 = DataHandleUtils.getIntFromByteWithBit(iArr6[2], 2, 1);
         int[] iArr7 = this.mCanBusInfoInt;
         if (iArr7 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr7 = null;
         }
         int intFromByteWithBit7 = DataHandleUtils.getIntFromByteWithBit(iArr7[2], 1, 1);
         int[] iArr8 = this.mCanBusInfoInt;
         if (iArr8 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr8 = null;
         }
         int intFromByteWithBit8 = DataHandleUtils.getIntFromByteWithBit(iArr8[2], 0, 1);
         int[] iArr9 = this.mCanBusInfoInt;
         if (iArr9 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr9 = null;
         }
         int i = iArr9[3];
         int[] iArr10 = this.mCanBusInfoInt;
         if (iArr10 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr10 = null;
         }
         int i2 = iArr10[4];
         int[] iArr11 = this.mCanBusInfoInt;
         if (iArr11 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr11 = null;
         }
         int i3 = iArr11[5];
         int[] iArr12 = this.mCanBusInfoInt;
         if (iArr12 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr12 = null;
         }
         int intFromByteWithBit9 = DataHandleUtils.getIntFromByteWithBit(iArr12[6], 7, 1);
         int[] iArr13 = this.mCanBusInfoInt;
         if (iArr13 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             c = 6;
             iArr13 = null;
         } else {
@@ -321,7 +321,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (itemListBean != null) {
             int[] iArr = this.mCanBusInfoInt;
             if (iArr == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr = null;
             }
             int i = iArr[3];
@@ -333,7 +333,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                 List<String> valueSrnArray = itemListBean.getValueSrnArray();
                 int[] iArr2 = this.mCanBusInfoInt;
                 if (iArr2 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                     iArr2 = null;
                 }
                 itemListBean.setValue(valueSrnArray.get(iArr2[3] - 16));
@@ -349,7 +349,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         Context context = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[2];
@@ -358,7 +358,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                 if (b > b2) {
                     Context context2 = this.mContext;
                     if (context2 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                     } else {
                         context = context2;
                     }
@@ -366,7 +366,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                 } else if (b < b2) {
                     Context context3 = this.mContext;
                     if (context3 == null) {
-                        Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                     } else {
                         context = context3;
                     }
@@ -376,7 +376,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         } else if (b > b2) {
             Context context4 = this.mContext;
             if (context4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             } else {
                 context = context4;
             }
@@ -384,7 +384,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         } else if (b < b2) {
             Context context5 = this.mContext;
             if (context5 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             } else {
                 context = context5;
             }
@@ -397,12 +397,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         Context context = this.mContext;
         byte[] bArr = null;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         byte[] bArr2 = this.mCanBusInfoByte;
         if (bArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
         } else {
             bArr = bArr2;
         }
@@ -416,79 +416,79 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         Context context = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         GeneralAirData.power = DataHandleUtils.getBoolBit6(iArr[2]);
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         GeneralAirData.rear = DataHandleUtils.getBoolBit4(iArr2[2]);
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         GeneralAirData.auto = DataHandleUtils.getBoolBit3(iArr3[2]);
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         GeneralAirData.sync = DataHandleUtils.getBoolBit2(iArr4[2]);
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         GeneralAirData.ac = DataHandleUtils.getIntFromByteWithBit(iArr5[2], 0, 2) == 1;
         int[] iArr6 = this.mCanBusInfoInt;
         if (iArr6 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr6 = null;
         }
         GeneralAirData.in_out_cycle = !DataHandleUtils.getBoolBit4(iArr6[3]);
         int[] iArr7 = this.mCanBusInfoInt;
         if (iArr7 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr7 = null;
         }
         GeneralAirData.auto_cycle = DataHandleUtils.getBoolBit3(iArr7[3]);
         int[] iArr8 = this.mCanBusInfoInt;
         if (iArr8 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr8 = null;
         }
         GeneralAirData.rear_defog = DataHandleUtils.getBoolBit5(iArr8[4]);
         int[] iArr9 = this.mCanBusInfoInt;
         if (iArr9 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr9 = null;
         }
         GeneralAirData.front_defog = DataHandleUtils.getBoolBit4(iArr9[4]);
         int[] iArr10 = this.mCanBusInfoInt;
         if (iArr10 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr10 = null;
         }
         GeneralAirData.fast = DataHandleUtils.getBoolBit1(iArr10[5]);
         int[] iArr11 = this.mCanBusInfoInt;
         if (iArr11 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr11 = null;
         }
         GeneralAirData.soft = DataHandleUtils.getBoolBit0(iArr11[5]);
         int[] iArr12 = this.mCanBusInfoInt;
         if (iArr12 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr12 = null;
         }
         GeneralAirData.front_wind_level = iArr12[7];
         int[] iArr13 = this.mCanBusInfoInt;
         if (iArr13 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr13 = null;
         }
         int i = iArr13[6];
@@ -540,31 +540,31 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr14 = this.mCanBusInfoInt;
         if (iArr14 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr14 = null;
         }
         GeneralAirData.front_left_temperature = resolveLeftAndRightTemp(iArr14[8]);
         int[] iArr15 = this.mCanBusInfoInt;
         if (iArr15 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr15 = null;
         }
         GeneralAirData.front_right_temperature = resolveLeftAndRightTemp(iArr15[9]);
         Context context2 = this.mContext;
         if (context2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context2 = null;
         }
         StringBuilder sb = new StringBuilder();
         int[] iArr16 = this.mCanBusInfoInt;
         if (iArr16 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr16 = null;
         }
         updateOutDoorTemp(context2, sb.append((float) ((iArr16[13] * 0.5d) - 40)).append(" °C").toString());
         Context context3 = this.mContext;
         if (context3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
         } else {
             context = context3;
         }
@@ -576,7 +576,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMAirData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.mAirData = iArr;
     }
 
@@ -585,7 +585,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr2 = this.mCanBusInfoInt;
         int[] iArr3 = null;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         if (Arrays.equals(iArr, iArr2)) {
@@ -593,7 +593,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         } else {
             iArr3 = iArr4;
         }
@@ -604,7 +604,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setSwc() {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[4];
@@ -663,19 +663,19 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setTrack() {
         byte[] bArr = this.mCanBusInfoByte;
         if (bArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
             bArr = null;
         }
         byte b = bArr[9];
         byte[] bArr2 = this.mCanBusInfoByte;
         if (bArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
             bArr2 = null;
         }
         GeneralParkData.trackAngle = -TrackInfoUtil.getTrackAngle1(b, bArr2[8], 0, 5400, 16);
         Context context = this.mContext;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         updateParkUi(null, context);
@@ -685,37 +685,37 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         Context context = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         GeneralDoorData.isLeftFrontDoorOpen = DataHandleUtils.getBoolBit7(iArr[4]);
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         GeneralDoorData.isRightFrontDoorOpen = DataHandleUtils.getBoolBit6(iArr2[4]);
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         GeneralDoorData.isLeftRearDoorOpen = DataHandleUtils.getBoolBit5(iArr3[4]);
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         GeneralDoorData.isRightRearDoorOpen = DataHandleUtils.getBoolBit4(iArr4[4]);
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         GeneralDoorData.isBackOpen = DataHandleUtils.getBoolBit3(iArr5[4]);
         Context context2 = this.mContext;
         if (context2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
         } else {
             context = context2;
         }
@@ -727,22 +727,22 @@ public final class MsgMgr extends AbstractMsgMgr {
         String string2;
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[10];
         if (128 <= i && i < 159) {
             Context context = this.mContext;
             if (context == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                 context = null;
             }
             String string3 = context.getResources().getString(R.string._163_drive_data7);
-            Intrinsics.checkNotNullExpressionValue(string3, "mContext.resources.getSt….string._163_drive_data7)");
+
             StringBuilder sbAppend = new StringBuilder().append(string3);
             int[] iArr2 = this.mCanBusInfoInt;
             if (iArr2 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr2 = null;
             }
             string = sbAppend.append(iArr2[10] - 128).append(Typography.degree).toString();
@@ -750,35 +750,35 @@ public final class MsgMgr extends AbstractMsgMgr {
             StringBuilder sb = new StringBuilder();
             Context context2 = this.mContext;
             if (context2 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                 context2 = null;
             }
             StringBuilder sbAppend2 = sb.append(context2.getResources().getString(R.string._163_drive_data6));
             int[] iArr3 = this.mCanBusInfoInt;
             if (iArr3 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr3 = null;
             }
             string = sbAppend2.append(iArr3[10]).append(Typography.degree).toString();
         }
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         int i2 = iArr4[11];
         if (128 <= i2 && i2 < 159) {
             Context context3 = this.mContext;
             if (context3 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                 context3 = null;
             }
             String string4 = context3.getResources().getString(R.string._163_drive_data8);
-            Intrinsics.checkNotNullExpressionValue(string4, "mContext.resources.getSt….string._163_drive_data8)");
+
             StringBuilder sbAppend3 = new StringBuilder().append(string4);
             int[] iArr5 = this.mCanBusInfoInt;
             if (iArr5 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr5 = null;
             }
             string2 = sbAppend3.append(iArr5[11] - 128).append(Typography.degree).toString();
@@ -786,13 +786,13 @@ public final class MsgMgr extends AbstractMsgMgr {
             StringBuilder sb2 = new StringBuilder();
             Context context4 = this.mContext;
             if (context4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                 context4 = null;
             }
             StringBuilder sbAppend4 = sb2.append(context4.getResources().getString(R.string._163_drive_data9));
             int[] iArr6 = this.mCanBusInfoInt;
             if (iArr6 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr6 = null;
             }
             string2 = sbAppend4.append(iArr6[11]).append(Typography.degree).toString();
@@ -821,7 +821,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         Context context = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[2];
@@ -864,7 +864,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                     case 18:
                         Context context2 = this.mContext;
                         if (context2 == null) {
-                            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
                         } else {
                             context = context2;
                         }
@@ -921,32 +921,32 @@ public final class MsgMgr extends AbstractMsgMgr {
         RadarInfoUtil.mDisableData = 255;
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[2];
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         int i2 = iArr2[3];
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         int i3 = iArr3[4];
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         RadarInfoUtil.setRearRadarLocationData(4, i, i2, i3, iArr4[5]);
         GeneralParkData.radar_location_data = RadarInfoUtil.mLocationMap;
         Context context = this.mContext;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         updateParkUi(null, context);
@@ -956,43 +956,43 @@ public final class MsgMgr extends AbstractMsgMgr {
         ArrayList arrayList = new ArrayList();
         Context context = this.mContext;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         forceReverse(context, iArr[5] == 1);
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         arrayList.add(new PanoramicBtnUpdateEntity(0, iArr2[3] == 5));
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         arrayList.add(new PanoramicBtnUpdateEntity(1, iArr3[3] == 6));
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         arrayList.add(new PanoramicBtnUpdateEntity(2, iArr4[3] == 7));
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         arrayList.add(new PanoramicBtnUpdateEntity(3, iArr5[3] == 8));
         GeneralParkData.dataList = arrayList;
         Context context2 = this.mContext;
         if (context2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context2 = null;
         }
         updateParkUi(null, context2);
@@ -1001,7 +1001,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setCarInfo() {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = InitUtilsKt.getMSettingItemIndex().get("_163_setting_1");
@@ -1146,7 +1146,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         ArrayList arrayList = new ArrayList();
         Context context = this.mContext;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         arrayList.add(new SettingUpdateEntity(0, 0, Integer.valueOf(SharePreUtil.getIntValue(context, "_163_language_item", 0))));
@@ -1158,12 +1158,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         Context context = this.mContext;
         int[] iArr = null;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         } else {
             iArr = iArr2;
         }
@@ -1174,12 +1174,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         Context context = this.mContext;
         int[] iArr = null;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         } else {
             iArr = iArr2;
         }
@@ -1196,7 +1196,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         StringBuilder sbAppend = new StringBuilder().append(value * 0.5f);
         Context context = this.mContext;
         if (context == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mContext");
+
             context = null;
         }
         return sbAppend.append(getTempUnitC(context)).toString();
@@ -1205,12 +1205,12 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final boolean isAirMsgRepeatRenault(byte[] canbusInfo) {
         byte[] bArr = this.mCanbusAirInfoCopy;
         if (bArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanbusAirInfoCopy");
+
             bArr = null;
         }
         if (!Arrays.equals(canbusInfo, bArr)) {
             byte[] bArrCopyOf = Arrays.copyOf(canbusInfo, canbusInfo.length);
-            Intrinsics.checkNotNullExpressionValue(bArrCopyOf, "copyOf(this, newSize)");
+
             this.mCanbusAirInfoCopy = bArrCopyOf;
             if (!isAirFirst) {
                 return false;
@@ -1223,12 +1223,12 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final boolean isDoorMsgRepeatRenault(byte[] canbusInfo) {
         byte[] bArr = this.mCanbusDoorInfoCopy;
         if (bArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanbusDoorInfoCopy");
+
             bArr = null;
         }
         if (!Arrays.equals(canbusInfo, bArr)) {
             byte[] bArrCopyOf = Arrays.copyOf(canbusInfo, canbusInfo.length);
-            Intrinsics.checkNotNullExpressionValue(bArrCopyOf, "copyOf(this, newSize)");
+
             this.mCanbusDoorInfoCopy = bArrCopyOf;
             if (!isDoorFirst) {
                 return false;
@@ -1338,9 +1338,9 @@ public final class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int currClickPresetIndex, String currBand, String currentFreq, String psName, int isStereo) {
         int i;
-        Intrinsics.checkNotNullParameter(currBand, "currBand");
-        Intrinsics.checkNotNullParameter(currentFreq, "currentFreq");
-        Intrinsics.checkNotNullParameter(psName, "psName");
+
+
+
         switch (currBand.hashCode()) {
             case 64901:
                 if (currBand.equals("AM1")) {
@@ -1417,15 +1417,15 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, byte currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, long currentPos, byte playModel, int playIndex, boolean isPlaying, long totalTime, String songTitle, String songAlbum, String songArtist, boolean isReportFromPlay) {
-        Intrinsics.checkNotNullParameter(currentHourStr, "currentHourStr");
-        Intrinsics.checkNotNullParameter(currentMinuteStr, "currentMinuteStr");
-        Intrinsics.checkNotNullParameter(currentSecondStr, "currentSecondStr");
-        Intrinsics.checkNotNullParameter(songTitle, "songTitle");
-        Intrinsics.checkNotNullParameter(songAlbum, "songAlbum");
-        Intrinsics.checkNotNullParameter(songArtist, "songArtist");
+
+
+
+
+
+
         if (stoagePath != 9) {
             byte[] bytes = songTitle.getBytes(Charsets.UTF_16BE);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
             sendTextData(bytes);
             sendMediaSource$default(this, 13, null, 2, null);
         }
@@ -1437,10 +1437,10 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, String currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, int currentPos, byte playMode, boolean isPlaying, int duation) {
-        Intrinsics.checkNotNullParameter(currentAllMinuteStr, "currentAllMinuteStr");
-        Intrinsics.checkNotNullParameter(currentHourStr, "currentHourStr");
-        Intrinsics.checkNotNullParameter(currentMinuteStr, "currentMinuteStr");
-        Intrinsics.checkNotNullParameter(currentSecondStr, "currentSecondStr");
+
+
+
+
         if (stoagePath != 9) {
             sendMediaSource$default(this, 13, null, 2, null);
         }
@@ -1472,8 +1472,8 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneStatusInfoChange(int callStatus, byte[] phoneNumber, boolean isHfpConnected, boolean isCallingFlag, boolean isMicMute, boolean isAudioTransferTowardsAG, int batteryStatus, int signalValue, Bundle bundle) {
-        Intrinsics.checkNotNullParameter(phoneNumber, "phoneNumber");
-        Intrinsics.checkNotNullParameter(bundle, "bundle");
+
+
         sendMediaSource$default(this, 10, null, 2, null);
     }
 

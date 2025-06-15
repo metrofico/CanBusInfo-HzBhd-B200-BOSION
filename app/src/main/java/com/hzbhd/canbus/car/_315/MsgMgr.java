@@ -30,7 +30,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static String UPDATE_SETTING_ACTION = "update_setting_action";
     private BroadcastReceiver mBroadcastReceiver;

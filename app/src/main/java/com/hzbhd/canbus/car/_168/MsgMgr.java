@@ -39,7 +39,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final String SOURCE_REAL_CHANGE_ACTION = "com.hzbhd.action.sourcerealchange";
     private static boolean isAirFirst = true;

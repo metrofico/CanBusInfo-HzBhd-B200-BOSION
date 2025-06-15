@@ -23,9 +23,9 @@ import kotlin.collections.ArraysKt;
 import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: ActivePark.kt */
-@Metadata(d1 = {"\u0000L\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0007\u0018\u0000 \u001f2\u00020\u0001:\u0006\u001d\u001e\u001f !\"B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\u0011\u001a\u00020\u0012H\u0002J\n\u0010\u0013\u001a\u00060\u0006R\u00020\u0000J\b\u0010\u0014\u001a\u00020\u0012H\u0002J\u000e\u0010\u0015\u001a\u00020\u00122\u0006\u0010\u0016\u001a\u00020\tJ\u000e\u0010\u0017\u001a\u00020\u00122\u0006\u0010\u0018\u001a\u00020\u0019J\u000e\u0010\u001a\u001a\u00020\u00122\u0006\u0010\u001b\u001a\u00020\u001cR\u0012\u0010\u0005\u001a\u00060\u0006R\u00020\u0000X\u0082\u0004¢\u0006\u0002\n\u0000R\u0012\u0010\u0007\u001a\u00060\u0006R\u00020\u0000X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\tX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0082\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\f\u001a\n \u000e*\u0004\u0018\u00010\r0\rX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006#"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark;", "", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mActiveParkView", "Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkView;", "mBackActiveParkView", "mIsActiveViewOpen", "", "mLayoutParams", "Landroid/view/WindowManager$LayoutParams;", "mParkPageUiSet", "Lcom/hzbhd/canbus/ui_set/ParkPageUiSet;", "kotlin.jvm.PlatformType", "mWindowManager", "Landroid/view/WindowManager;", "addActiveParkView", "", "getActiveParkView", "removeActiveParkView", "setActiveParkActive", "isActive", "updateMessageAndImage", "beam", "Lcom/hzbhd/canbus/car/_322/ActivePark$UpdateBeam;", "updateParkTypeStatus", "value", "", "ActiveParkElement", "ActiveParkView", "Companion", "Option", "UiOption", "UpdateBeam", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class ActivePark {
     public static final String TAG = "_322_ActivePark";
     private final ActiveParkView mActiveParkView;
@@ -36,7 +36,7 @@ public final class ActivePark {
     private final WindowManager mWindowManager;
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0010\u0010\n\u0002\b\u001b\b\u0086\u0001\u0018\u00002\b\u0012\u0004\u0012\u00020\u00000\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002j\u0002\b\u0003j\u0002\b\u0004j\u0002\b\u0005j\u0002\b\u0006j\u0002\b\u0007j\u0002\b\bj\u0002\b\tj\u0002\b\nj\u0002\b\u000bj\u0002\b\fj\u0002\b\rj\u0002\b\u000ej\u0002\b\u000fj\u0002\b\u0010j\u0002\b\u0011j\u0002\b\u0012j\u0002\b\u0013j\u0002\b\u0014j\u0002\b\u0015j\u0002\b\u0016j\u0002\b\u0017j\u0002\b\u0018j\u0002\b\u0019j\u0002\b\u001aj\u0002\b\u001b¨\u0006\u001c"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;", "", "(Ljava/lang/String;I)V", "WARNING", "FLAG", "STOP", "ARROW_FRONT", "ARROW_BACK", "ARROW_LEFTT", "ARROW_RIGHT", "RADAR_LEFTT", "RADAR_RIGHT", "WALL_PARALLEL_RIGHT", "WALL_PARALLEL_LEFTT", "WALL_VERTICAL_RIGHT_FORWARD", "WALL_VERTICAL_LEFTT_FORWARD", "WALL_VERTICAL_RIGHT_STOP_LINE", "WALL_VERTICAL_LEFTT_STOP_LINE", "SPACE_PARALLEL_RIGHT", "SPACE_PARALLEL_LEFTT", "SPACE_VERTICAL_RIGHT", "SPACE_VERTICAL_LEFTT", "FIND_RIGHT", "FIND_LEFTT", "LINE_PARALLEL_RIGHT", "LINE_PARALLEL_LEFTT", "LINE_VERTICAL_RIGHT", "LINE_VERTICAL_LEFTT", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public enum ActiveParkElement {
         WARNING,
         FLAG,
@@ -66,9 +66,9 @@ public final class ActivePark {
     }
 
     public ActivePark(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         Object systemService = context.getSystemService("window");
-        Intrinsics.checkNotNull(systemService, "null cannot be cast to non-null type android.view.WindowManager");
+
         this.mWindowManager = (WindowManager) systemService;
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         layoutParams.type = 2002;
@@ -87,7 +87,7 @@ public final class ActivePark {
     }
 
     public final void updateMessageAndImage(UpdateBeam beam) {
-        Intrinsics.checkNotNullParameter(beam, "beam");
+
         this.mActiveParkView.clean();
         this.mActiveParkView.updateParkType(beam.getParkType());
         this.mActiveParkView.updateMessage(beam.getMessage1ResId(), beam.getMessage2ResId());
@@ -127,7 +127,7 @@ public final class ActivePark {
     }
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u0000<\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0004\n\u0002\u0010\u0011\n\u0002\b\u0007\b\u0086\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0014\u001a\u00020\u0015J\u000e\u0010\u0016\u001a\u00020\u00152\u0006\u0010\u0017\u001a\u00020\u0006J\u0019\u0010\u0018\u001a\u00020\u00152\f\u0010\u0019\u001a\b\u0012\u0004\u0012\u00020\u00110\u001a¢\u0006\u0002\u0010\u001bJ\u0016\u0010\u001c\u001a\u00020\u00152\u0006\u0010\u001d\u001a\u00020\u00062\u0006\u0010\u001e\u001a\u00020\u0006J\u000e\u0010\u001f\u001a\u00020\u00152\u0006\u0010 \u001a\u00020\u0006R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R*\u0010\u000f\u001a\u001e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u00120\u0010j\u000e\u0012\u0004\u0012\u00020\u0011\u0012\u0004\u0012\u00020\u0012`\u0013X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006!"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkView;", "Landroid/widget/LinearLayout;", "context", "Landroid/content/Context;", "(Lcom/hzbhd/canbus/car/_322/ActivePark;Landroid/content/Context;)V", "dp100", "", "dp187", "dp28", "dp32", "dp42", "dp88", "dpMinus119", "dpMinus16", "dpMinus54", "map", "Ljava/util/HashMap;", "Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;", "Lcom/hzbhd/canbus/car/_322/ActivePark$UiOption;", "Lkotlin/collections/HashMap;", "clean", "", "setParkTypeBtnStatus", "value", "updateImage", "elements", "", "([Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;)V", "updateMessage", "message1ResId", "message2ResId", "updateParkType", "resId", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public final class ActiveParkView extends LinearLayout {
         public Map<Integer, View> _$_findViewCache;
         private final int dp100;
@@ -163,7 +163,7 @@ public final class ActivePark {
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ActiveParkView(ActivePark activePark, Context context) throws Resources.NotFoundException {
             super(context);
-            Intrinsics.checkNotNullParameter(context, "context");
+
             this.this$0 = activePark;
             this._$_findViewCache = new LinkedHashMap();
             int dimensionPixelOffset = context.getResources().getDimensionPixelOffset(R.dimen.dp_119);
@@ -189,104 +189,104 @@ public final class ActivePark {
             LayoutInflater.from(context).inflate(R.layout.layout_active_park_322_view, this);
             ActiveParkElement activeParkElement = ActiveParkElement.WARNING;
             ImageView iv_warning = (ImageView) _$_findCachedViewById(R.id.iv_warning);
-            Intrinsics.checkNotNullExpressionValue(iv_warning, "iv_warning");
+
             int i = 2;
             map.put(activeParkElement, new UiOption(iv_warning, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement2 = ActiveParkElement.FLAG;
             ImageView iv_flag = (ImageView) _$_findCachedViewById(R.id.iv_flag);
-            Intrinsics.checkNotNullExpressionValue(iv_flag, "iv_flag");
+
             map.put(activeParkElement2, new UiOption(iv_flag, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement3 = ActiveParkElement.STOP;
             ImageView iv_stop = (ImageView) _$_findCachedViewById(R.id.iv_stop);
-            Intrinsics.checkNotNullExpressionValue(iv_stop, "iv_stop");
+
             map.put(activeParkElement3, new UiOption(iv_stop, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement4 = ActiveParkElement.ARROW_FRONT;
             ImageView iv_front_arrow = (ImageView) _$_findCachedViewById(R.id.iv_front_arrow);
-            Intrinsics.checkNotNullExpressionValue(iv_front_arrow, "iv_front_arrow");
+
             map.put(activeParkElement4, new UiOption(iv_front_arrow, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement5 = ActiveParkElement.ARROW_BACK;
             ImageView iv_back_arrow = (ImageView) _$_findCachedViewById(R.id.iv_back_arrow);
-            Intrinsics.checkNotNullExpressionValue(iv_back_arrow, "iv_back_arrow");
+
             map.put(activeParkElement5, new UiOption(iv_back_arrow, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement6 = ActiveParkElement.ARROW_LEFTT;
             ImageView iv_left_arrow = (ImageView) _$_findCachedViewById(R.id.iv_left_arrow);
-            Intrinsics.checkNotNullExpressionValue(iv_left_arrow, "iv_left_arrow");
+
             map.put(activeParkElement6, new UiOption(iv_left_arrow, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement7 = ActiveParkElement.ARROW_RIGHT;
             ImageView iv_right_arrow = (ImageView) _$_findCachedViewById(R.id.iv_right_arrow);
-            Intrinsics.checkNotNullExpressionValue(iv_right_arrow, "iv_right_arrow");
+
             map.put(activeParkElement7, new UiOption(iv_right_arrow, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement8 = ActiveParkElement.RADAR_RIGHT;
             ImageView iv_right_radar = (ImageView) _$_findCachedViewById(R.id.iv_right_radar);
-            Intrinsics.checkNotNullExpressionValue(iv_right_radar, "iv_right_radar");
+
             map.put(activeParkElement8, new UiOption(iv_right_radar, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement9 = ActiveParkElement.RADAR_LEFTT;
             ImageView iv_left_radar = (ImageView) _$_findCachedViewById(R.id.iv_left_radar);
-            Intrinsics.checkNotNullExpressionValue(iv_left_radar, "iv_left_radar");
+
             map.put(activeParkElement9, new UiOption(iv_left_radar, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement10 = ActiveParkElement.WALL_PARALLEL_RIGHT;
             LinearLayout ll_right_wall = (LinearLayout) _$_findCachedViewById(R.id.ll_right_wall);
-            Intrinsics.checkNotNullExpressionValue(ll_right_wall, "ll_right_wall");
+
             map.put(activeParkElement10, new UiOption(ll_right_wall, null, i, 0 == true ? 1 : 0).plus(new Option.Width(dimensionPixelOffset8)).plus(new Option.MarginTop(dimensionPixelOffset4)));
             ActiveParkElement activeParkElement11 = ActiveParkElement.WALL_PARALLEL_LEFTT;
             LinearLayout ll_left_wall = (LinearLayout) _$_findCachedViewById(R.id.ll_left_wall);
-            Intrinsics.checkNotNullExpressionValue(ll_left_wall, "ll_left_wall");
+
             map.put(activeParkElement11, new UiOption(ll_left_wall, null, i, 0 == true ? 1 : 0).plus(new Option.Width(dimensionPixelOffset8)).plus(new Option.MarginTop(dimensionPixelOffset4)));
             ActiveParkElement activeParkElement12 = ActiveParkElement.WALL_VERTICAL_RIGHT_FORWARD;
             LinearLayout ll_right_wall2 = (LinearLayout) _$_findCachedViewById(R.id.ll_right_wall);
-            Intrinsics.checkNotNullExpressionValue(ll_right_wall2, "ll_right_wall");
+
             map.put(activeParkElement12, new UiOption(ll_right_wall2, null, i, 0 == true ? 1 : 0).plus(new Option.Width(dimensionPixelOffset9)).plus(new Option.MarginTop(dimensionPixelOffset3)));
             ActiveParkElement activeParkElement13 = ActiveParkElement.WALL_VERTICAL_LEFTT_FORWARD;
             LinearLayout ll_left_wall2 = (LinearLayout) _$_findCachedViewById(R.id.ll_left_wall);
-            Intrinsics.checkNotNullExpressionValue(ll_left_wall2, "ll_left_wall");
+
             map.put(activeParkElement13, new UiOption(ll_left_wall2, null, i, 0 == true ? 1 : 0).plus(new Option.Width(dimensionPixelOffset9)).plus(new Option.MarginTop(dimensionPixelOffset3)));
             ActiveParkElement activeParkElement14 = ActiveParkElement.WALL_VERTICAL_RIGHT_STOP_LINE;
             LinearLayout ll_right_wall3 = (LinearLayout) _$_findCachedViewById(R.id.ll_right_wall);
-            Intrinsics.checkNotNullExpressionValue(ll_right_wall3, "ll_right_wall");
+
             map.put(activeParkElement14, new UiOption(ll_right_wall3, null, i, 0 == true ? 1 : 0).plus(new Option.Width(dimensionPixelOffset9)).plus(new Option.MarginTop(dimensionPixelOffset7)));
             ActiveParkElement activeParkElement15 = ActiveParkElement.WALL_VERTICAL_LEFTT_STOP_LINE;
             LinearLayout ll_left_wall3 = (LinearLayout) _$_findCachedViewById(R.id.ll_left_wall);
-            Intrinsics.checkNotNullExpressionValue(ll_left_wall3, "ll_left_wall");
+
             map.put(activeParkElement15, new UiOption(ll_left_wall3, null, i, 0 == true ? 1 : 0).plus(new Option.Width(dimensionPixelOffset9)).plus(new Option.MarginTop(dimensionPixelOffset7)));
             ActiveParkElement activeParkElement16 = ActiveParkElement.SPACE_PARALLEL_RIGHT;
             LinearLayout ll_right_park_space = (LinearLayout) _$_findCachedViewById(R.id.ll_right_park_space);
-            Intrinsics.checkNotNullExpressionValue(ll_right_park_space, "ll_right_park_space");
+
             map.put(activeParkElement16, new UiOption(ll_right_park_space, null, i, 0 == true ? 1 : 0).plus(new Option.Height(dimensionPixelOffset9)));
             ActiveParkElement activeParkElement17 = ActiveParkElement.SPACE_PARALLEL_LEFTT;
             LinearLayout ll_left_park_space = (LinearLayout) _$_findCachedViewById(R.id.ll_left_park_space);
-            Intrinsics.checkNotNullExpressionValue(ll_left_park_space, "ll_left_park_space");
+
             map.put(activeParkElement17, new UiOption(ll_left_park_space, null, i, 0 == true ? 1 : 0).plus(new Option.Height(dimensionPixelOffset9)));
             ActiveParkElement activeParkElement18 = ActiveParkElement.SPACE_VERTICAL_RIGHT;
             LinearLayout ll_right_park_space2 = (LinearLayout) _$_findCachedViewById(R.id.ll_right_park_space);
-            Intrinsics.checkNotNullExpressionValue(ll_right_park_space2, "ll_right_park_space");
+
             map.put(activeParkElement18, new UiOption(ll_right_park_space2, null, i, 0 == true ? 1 : 0).plus(new Option.Height(dimensionPixelOffset8)));
             ActiveParkElement activeParkElement19 = ActiveParkElement.SPACE_VERTICAL_LEFTT;
             LinearLayout ll_left_park_space2 = (LinearLayout) _$_findCachedViewById(R.id.ll_left_park_space);
-            Intrinsics.checkNotNullExpressionValue(ll_left_park_space2, "ll_left_park_space");
+
             map.put(activeParkElement19, new UiOption(ll_left_park_space2, null, i, 0 == true ? 1 : 0).plus(new Option.Height(dimensionPixelOffset8)));
             ActiveParkElement activeParkElement20 = ActiveParkElement.FIND_RIGHT;
             ImageView iv_right_find = (ImageView) _$_findCachedViewById(R.id.iv_right_find);
-            Intrinsics.checkNotNullExpressionValue(iv_right_find, "iv_right_find");
+
             map.put(activeParkElement20, new UiOption(iv_right_find, null, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement21 = ActiveParkElement.FIND_LEFTT;
             ImageView iv_left_find = (ImageView) _$_findCachedViewById(R.id.iv_left_find);
-            Intrinsics.checkNotNullExpressionValue(iv_left_find, "iv_left_find");
+
             map.put(activeParkElement21, new UiOption(iv_left_find, 0 == true ? 1 : 0, i, 0 == true ? 1 : 0));
             ActiveParkElement activeParkElement22 = ActiveParkElement.LINE_PARALLEL_RIGHT;
             ImageView iv_parallel_line = (ImageView) _$_findCachedViewById(R.id.iv_parallel_line);
-            Intrinsics.checkNotNullExpressionValue(iv_parallel_line, "iv_parallel_line");
+
             map.put(activeParkElement22, new UiOption(iv_parallel_line, 0 == true ? 1 : 0, i, 0 == true ? 1 : 0).plus(new Option.MarginEnd(dimensionPixelOffset2)).plus(new Option.RotationY(0.0f)));
             ActiveParkElement activeParkElement23 = ActiveParkElement.LINE_PARALLEL_LEFTT;
             ImageView iv_parallel_line2 = (ImageView) _$_findCachedViewById(R.id.iv_parallel_line);
-            Intrinsics.checkNotNullExpressionValue(iv_parallel_line2, "iv_parallel_line");
+
             map.put(activeParkElement23, new UiOption(iv_parallel_line2, null, i, 0 == true ? 1 : 0).plus(new Option.MarginEnd(dimensionPixelOffset6)).plus(new Option.RotationY(180.0f)));
             ActiveParkElement activeParkElement24 = ActiveParkElement.LINE_VERTICAL_RIGHT;
             ImageView iv_vertical_line = (ImageView) _$_findCachedViewById(R.id.iv_vertical_line);
-            Intrinsics.checkNotNullExpressionValue(iv_vertical_line, "iv_vertical_line");
+
             map.put(activeParkElement24, new UiOption(iv_vertical_line, null, i, 0 == true ? 1 : 0).plus(new Option.MarginEnd(dimensionPixelOffset)).plus(new Option.RotationY(180.0f)));
             ActiveParkElement activeParkElement25 = ActiveParkElement.LINE_VERTICAL_LEFTT;
             ImageView iv_vertical_line2 = (ImageView) _$_findCachedViewById(R.id.iv_vertical_line);
-            Intrinsics.checkNotNullExpressionValue(iv_vertical_line2, "iv_vertical_line");
+
             map.put(activeParkElement25, new UiOption(iv_vertical_line2, null, i, 0 == true ? 1 : 0).plus(new Option.MarginEnd(dimensionPixelOffset5)).plus(new Option.RotationY(0.0f)));
             View.OnClickListener onClickListener = new View.OnClickListener() { // from class: com.hzbhd.canbus.car._322.ActivePark$ActiveParkView$$ExternalSyntheticLambda0
                 @Override // android.view.View.OnClickListener
@@ -303,7 +303,7 @@ public final class ActivePark {
         /* JADX INFO: Access modifiers changed from: private */
         /* renamed from: _init_$lambda-1, reason: not valid java name */
         public static final void m526_init_$lambda1(ActiveParkView this$0, View view) {
-            Intrinsics.checkNotNullParameter(this$0, "this$0");
+
             if (Intrinsics.areEqual(view, (TextView) this$0._$_findCachedViewById(R.id.btn_parallel_park))) {
                 CanbusMsgSender.sendMsg(new byte[]{22, -48, 2, 0});
                 return;
@@ -341,7 +341,7 @@ public final class ActivePark {
         }
 
         public final void updateImage(ActiveParkElement[] elements) {
-            Intrinsics.checkNotNullParameter(elements, "elements");
+
             for (ActiveParkElement activeParkElement : elements) {
                 UiOption uiOption = this.map.get(activeParkElement);
                 if (uiOption != null) {
@@ -361,14 +361,14 @@ public final class ActivePark {
                         } else if (option instanceof Option.MarginTop) {
                             View view3 = uiOption.getView();
                             ViewGroup.LayoutParams layoutParams3 = uiOption.getView().getLayoutParams();
-                            Intrinsics.checkNotNull(layoutParams3, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+
                             ViewGroup.MarginLayoutParams marginLayoutParams = (ViewGroup.MarginLayoutParams) layoutParams3;
                             marginLayoutParams.topMargin = ((Option.MarginTop) option).getValue();
                             view3.setLayoutParams(marginLayoutParams);
                         } else if (option instanceof Option.MarginEnd) {
                             View view4 = uiOption.getView();
                             ViewGroup.LayoutParams layoutParams4 = uiOption.getView().getLayoutParams();
-                            Intrinsics.checkNotNull(layoutParams4, "null cannot be cast to non-null type android.view.ViewGroup.MarginLayoutParams");
+
                             ViewGroup.MarginLayoutParams marginLayoutParams2 = (ViewGroup.MarginLayoutParams) layoutParams4;
                             marginLayoutParams2.setMarginEnd(((Option.MarginEnd) option).getValue());
                             view4.setLayoutParams(marginLayoutParams2);
@@ -387,7 +387,7 @@ public final class ActivePark {
     }
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u00000\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u0011\n\u0002\b\u0011\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0000\b\u0086\b\u0018\u00002\u00020\u0001B'\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\bB\u0017\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003¢\u0006\u0002\u0010\tB%\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\f\u0010\n\u001a\b\u0012\u0004\u0012\u00020\u00070\u000b¢\u0006\u0002\u0010\fB\u001f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0006\u001a\u00020\u0007¢\u0006\u0002\u0010\rB-\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u0006\u0010\u0004\u001a\u00020\u0003\u0012\u0006\u0010\u0005\u001a\u00020\u0003\u0012\u000e\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000b¢\u0006\u0002\u0010\u000eJ\t\u0010\u0016\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0017\u001a\u00020\u0003HÆ\u0003J\t\u0010\u0018\u001a\u00020\u0003HÆ\u0003J\u0016\u0010\u0019\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000bHÆ\u0003¢\u0006\u0002\u0010\u0010J>\u0010\u001a\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\b\b\u0002\u0010\u0004\u001a\u00020\u00032\b\b\u0002\u0010\u0005\u001a\u00020\u00032\u0010\b\u0002\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000bHÆ\u0001¢\u0006\u0002\u0010\u001bJ\u0013\u0010\u001c\u001a\u00020\u001d2\b\u0010\u001e\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u001f\u001a\u00020\u0003HÖ\u0001J\t\u0010 \u001a\u00020!HÖ\u0001R\u001b\u0010\n\u001a\n\u0012\u0004\u0012\u00020\u0007\u0018\u00010\u000b¢\u0006\n\n\u0002\u0010\u0011\u001a\u0004\b\u000f\u0010\u0010R\u0011\u0010\u0004\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0013R\u0011\u0010\u0005\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0014\u0010\u0013R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0015\u0010\u0013¨\u0006\""}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$UpdateBeam;", "", "parkType", "", "message1ResId", "message2ResId", "element", "Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;", "(IIILcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;)V", "(II)V", "elements", "", "(II[Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;)V", "(IILcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;)V", "(III[Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;)V", "getElements", "()[Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;", "[Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;", "getMessage1ResId", "()I", "getMessage2ResId", "getParkType", "component1", "component2", "component3", "component4", "copy", "(III[Lcom/hzbhd/canbus/car/_322/ActivePark$ActiveParkElement;)Lcom/hzbhd/canbus/car/_322/ActivePark$UpdateBeam;", "equals", "", "other", "hashCode", "toString", "", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final /* data */ class UpdateBeam {
         private final ActiveParkElement[] elements;
         private final int message1ResId;
@@ -442,7 +442,7 @@ public final class ActivePark {
                 return false;
             }
             UpdateBeam updateBeam = (UpdateBeam) other;
-            return this.parkType == updateBeam.parkType && this.message1ResId == updateBeam.message1ResId && this.message2ResId == updateBeam.message2ResId && Intrinsics.areEqual(this.elements, updateBeam.elements);
+
         }
 
         public int hashCode() {
@@ -481,7 +481,7 @@ public final class ActivePark {
         /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
         public UpdateBeam(int i, int i2, int i3, ActiveParkElement element) {
             this(i, i2, i3, new ActiveParkElement[]{element});
-            Intrinsics.checkNotNullParameter(element, "element");
+
         }
 
         public UpdateBeam(int i, int i2) {
@@ -491,25 +491,25 @@ public final class ActivePark {
         /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
         public UpdateBeam(int i, int i2, ActiveParkElement[] elements) {
             this(i, i2, R.string.null_value, elements);
-            Intrinsics.checkNotNullParameter(elements, "elements");
+
         }
 
         /* JADX WARN: 'this' call moved to the top of the method (can break code semantics) */
         public UpdateBeam(int i, int i2, ActiveParkElement element) {
             this(i, i2, new ActiveParkElement[]{element});
-            Intrinsics.checkNotNullParameter(element, "element");
+
         }
     }
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u0000&\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0007\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\b6\u0018\u00002\u00020\u0001:\u0006\u0003\u0004\u0005\u0006\u0007\bB\u0007\b\u0004¢\u0006\u0002\u0010\u0002\u0082\u0001\u0006\t\n\u000b\f\r\u000e¨\u0006\u000f"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "", "()V", "Height", "MarginEnd", "MarginTop", "RotationY", "Show", "Width", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option$Height;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option$MarginEnd;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option$MarginTop;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option$RotationY;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option$Show;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option$Width;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static abstract class Option {
         public /* synthetic */ Option(DefaultConstructorMarker defaultConstructorMarker) {
             this();
         }
 
         /* compiled from: ActivePark.kt */
-        @Metadata(d1 = {"\u0000\f\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002¨\u0006\u0003"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$Option$Show;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "()V", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+        
         public static final class Show extends Option {
             public static final Show INSTANCE = new Show();
 
@@ -522,7 +522,7 @@ public final class ActivePark {
         }
 
         /* compiled from: ActivePark.kt */
-        @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$Option$Width;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "value", "", "(I)V", "getValue", "()I", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+        
         public static final class Width extends Option {
             private final int value;
 
@@ -537,7 +537,7 @@ public final class ActivePark {
         }
 
         /* compiled from: ActivePark.kt */
-        @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$Option$Height;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "value", "", "(I)V", "getValue", "()I", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+        
         public static final class Height extends Option {
             private final int value;
 
@@ -552,7 +552,7 @@ public final class ActivePark {
         }
 
         /* compiled from: ActivePark.kt */
-        @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$Option$MarginTop;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "value", "", "(I)V", "getValue", "()I", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+        
         public static final class MarginTop extends Option {
             private final int value;
 
@@ -567,7 +567,7 @@ public final class ActivePark {
         }
 
         /* compiled from: ActivePark.kt */
-        @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$Option$MarginEnd;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "value", "", "(I)V", "getValue", "()I", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+        
         public static final class MarginEnd extends Option {
             private final int value;
 
@@ -582,7 +582,7 @@ public final class ActivePark {
         }
 
         /* compiled from: ActivePark.kt */
-        @Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0007\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u0005\u0010\u0006¨\u0006\u0007"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$Option$RotationY;", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "value", "", "(F)V", "getValue", "()F", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+        
         public static final class RotationY extends Option {
             private final float value;
 
@@ -598,14 +598,14 @@ public final class ActivePark {
     }
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\t\u0018\u00002\u00020\u0001B\u001d\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\u000e\b\u0002\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005¢\u0006\u0002\u0010\u0007J\u0011\u0010\r\u001a\u00020\u00002\u0006\u0010\u000e\u001a\u00020\u0006H\u0086\u0002R\u0019\u0010\u0004\u001a\b\u0012\u0004\u0012\u00020\u00060\u0005¢\u0006\n\n\u0002\u0010\n\u001a\u0004\b\b\u0010\tR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\f¨\u0006\u000f"}, d2 = {"Lcom/hzbhd/canbus/car/_322/ActivePark$UiOption;", "", "view", "Landroid/view/View;", "opts", "", "Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "(Landroid/view/View;[Lcom/hzbhd/canbus/car/_322/ActivePark$Option;)V", "getOpts", "()[Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "[Lcom/hzbhd/canbus/car/_322/ActivePark$Option;", "getView", "()Landroid/view/View;", "plus", "opt", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final class UiOption {
         private final Option[] opts;
         private final View view;
 
         public UiOption(View view, Option[] opts) {
-            Intrinsics.checkNotNullParameter(view, "view");
-            Intrinsics.checkNotNullParameter(opts, "opts");
+
+
             this.view = view;
             this.opts = opts;
         }
@@ -623,7 +623,7 @@ public final class ActivePark {
         }
 
         public final UiOption plus(Option opt) {
-            Intrinsics.checkNotNullParameter(opt, "opt");
+
             return new UiOption(this.view, (Option[]) ArraysKt.plus(this.opts, opt));
         }
     }

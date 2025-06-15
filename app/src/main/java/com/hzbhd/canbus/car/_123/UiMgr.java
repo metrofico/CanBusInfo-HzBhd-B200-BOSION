@@ -33,7 +33,7 @@ import java.util.Iterator;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_123_COMPASS_DIRECT = "share_123_compass_direct";
     private static int mBlowMode = 8;

@@ -48,7 +48,7 @@ import java.util.Arrays;
 import kotlin.jvm.internal.ByteCompanionObject;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int SEND_GIVEN_MEDIA_MESSAGE = 1;
     private static final int SEND_NORMAL_MESSAGE = 2;

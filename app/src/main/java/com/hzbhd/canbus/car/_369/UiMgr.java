@@ -15,20 +15,20 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0011\u0010\u0005\u001a\u00020\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0011\u0010\t\u001a\u00020\n¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\f¨\u0006\r"}, d2 = {"Lcom/hzbhd/canbus/car/_369/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mAirPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "getMAirPageUiSet", "()Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "mSettingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "getMSettingPageUiSet", "()Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private final AirPageUiSet mAirPageUiSet;
     private final SettingPageUiSet mSettingPageUiSet;
 
     public UiMgr(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         AirPageUiSet airUiSet = getAirUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(airUiSet, "getAirUiSet(context)");
+
         this.mAirPageUiSet = airUiSet;
         SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "getSettingUiSet(context)");
+
         this.mSettingPageUiSet = settingUiSet;
         final FrontArea frontArea = airUiSet.getFrontArea();
         frontArea.setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._369.UiMgr$$ExternalSyntheticLambda0
@@ -175,7 +175,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-0, reason: not valid java name */
     public static final void m797lambda4$lambda0(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         m802lambda4$selectAirPageBtn$default(str, 0, 2, null);
     }
 
@@ -183,7 +183,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-1, reason: not valid java name */
     public static final void m798lambda4$lambda1(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         m802lambda4$selectAirPageBtn$default(str, 0, 2, null);
     }
 
@@ -191,7 +191,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-2, reason: not valid java name */
     public static final void m799lambda4$lambda2(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         m802lambda4$selectAirPageBtn$default(str, 0, 2, null);
     }
 
@@ -199,7 +199,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-3, reason: not valid java name */
     public static final void m800lambda4$lambda3(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         m802lambda4$selectAirPageBtn$default(str, 0, 2, null);
     }
 
@@ -339,14 +339,14 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-7$lambda-5, reason: not valid java name */
     public static final void m804lambda7$lambda5(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         m806lambda7$select(this$0, i, i2, i3);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-7$lambda-6, reason: not valid java name */
     public static final void m805lambda7$lambda6(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         m806lambda7$select(this$0, i, i2, i3);
     }
 }

@@ -8,7 +8,7 @@ import com.hzbhd.R;
 import com.hzbhd.canbus.car_cus._299.RadarView;
 import com.hzbhd.common.settings.constant.BodaSysContant;
 
-/* loaded from: classes2.dex */
+
 public class CusPanoramicView extends RelativeLayout {
     private RadarView mRadarView;
 

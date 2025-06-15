@@ -64,13 +64,13 @@ public final class PanelKeyActivity extends AbstractBaseActivity implements Pane
         PanelKeyPageUiSet panelKeyPageUiSet = this.mSet;
         if (panelKeyPageUiSet != null && (list = panelKeyPageUiSet.getList()) != null) {
             ArrayList<String> arrayList = this.mLeftList;
-            Intrinsics.checkNotNull(arrayList);
+
             arrayList.addAll(list);
         }
         this.mPanelKeyLvAdapter = new PanelKeyLvAdapter(panelKeyActivity, this.mLeftList, this, this, this);
         RecyclerView recyclerView = (RecyclerView) _$_findCachedViewById(R.id.rv_list);
         PanelKeyPageUiSet panelKeyPageUiSet2 = this.mSet;
-        Intrinsics.checkNotNull(panelKeyPageUiSet2);
+
         recyclerView.setLayoutManager(new GridLayoutManager(panelKeyActivity, panelKeyPageUiSet2.getCount(), RecyclerView.VERTICAL, false));
         ((RecyclerView) _$_findCachedViewById(R.id.rv_list)).setAdapter(this.mPanelKeyLvAdapter);
     }
@@ -98,7 +98,7 @@ public final class PanelKeyActivity extends AbstractBaseActivity implements Pane
     @Override // com.hzbhd.canbus.adapter.PanelKeyLvAdapter.ItemTouchInterface
     public void onItemTouch(int position, MotionEvent event) {
         OnPanelKeyPositionTouchListener onPanelKeyPositionTouchListener;
-        Intrinsics.checkNotNullParameter(event, "event");
+
         PanelKeyPageUiSet panelKeyPageUiSet = this.mSet;
         if (panelKeyPageUiSet == null || (onPanelKeyPositionTouchListener = panelKeyPageUiSet.getOnPanelKeyPositionTouchListener()) == null) {
             return;

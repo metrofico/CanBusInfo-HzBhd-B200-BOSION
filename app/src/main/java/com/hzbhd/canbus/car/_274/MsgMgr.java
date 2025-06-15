@@ -24,7 +24,7 @@ import java.util.List;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.Priority;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String SHARE_274_LEFT_CAMERA_INPUT = "share_274_left_camera_input";
     static final String SHARE_274_RIGHT_CAMERA_INPUT = "share_274_right_camera_input";

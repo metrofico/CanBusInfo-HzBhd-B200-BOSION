@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._469.air;
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes2.dex */
+
 public class OptionAirCmd469 {
     public byte[] airCmd;
     public int compRunSt;

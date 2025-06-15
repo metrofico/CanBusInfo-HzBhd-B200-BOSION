@@ -15,7 +15,7 @@ import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     OnAirBtnClickListener mOnAirBtnClickListenerFrontTop = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._103.UiMgr.7
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener

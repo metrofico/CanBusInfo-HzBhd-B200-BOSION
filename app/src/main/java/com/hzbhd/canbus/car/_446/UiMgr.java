@@ -11,7 +11,7 @@ import com.hzbhd.proxy.share.interfaces.IShareStringListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static boolean canHand = false;
     private static boolean launchgerHand = false;

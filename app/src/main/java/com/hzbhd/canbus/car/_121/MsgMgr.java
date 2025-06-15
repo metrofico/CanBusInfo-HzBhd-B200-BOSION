@@ -9,7 +9,7 @@ import com.hzbhd.commontools.SourceConstantsDef;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private final String TAG = "_1121_MsgMgr";
     private byte[] mCanBusInfoByte;

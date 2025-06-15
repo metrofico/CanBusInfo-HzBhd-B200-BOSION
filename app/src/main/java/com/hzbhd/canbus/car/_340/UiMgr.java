@@ -31,9 +31,9 @@ import kotlinx.coroutines.CoroutineScope;
 import kotlinx.coroutines.DelayKt;
 import kotlinx.coroutines.GlobalScope;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000x\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\t\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0006\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0010\u000b\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u000f\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\u0004J\u0012\u0010A\u001a\u0004\u0018\u00010\u00102\u0006\u0010\u0002\u001a\u00020\u0003H\u0002J\u0010\u0010B\u001a\u00020C2\u0006\u0010D\u001a\u00020EH\u0002J\u0018\u0010F\u001a\u00020C2\u0006\u0010G\u001a\u00020E2\u0006\u0010H\u001a\u00020IH\u0002J\u0018\u0010J\u001a\u00020C2\u0006\u0010G\u001a\u00020E2\u0006\u0010H\u001a\u00020IH\u0002J\u0018\u0010K\u001a\u00020C2\u0006\u0010D\u001a\u00020E2\u0006\u0010L\u001a\u00020EH\u0002R\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR\u001c\u0010\u000b\u001a\u0004\u0018\u00010\u0003X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\r\"\u0004\b\u000e\u0010\u0004R\u001c\u0010\u000f\u001a\u0004\u0018\u00010\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\u000e\u0010\u0015\u001a\u00020\u0016X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0016X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0016X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u0016X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001c\u001a\u00020\u001bX\u0082\u000e¢\u0006\u0002\n\u0000R\u001a\u0010\u001d\u001a\u00020\u001eX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001f\u0010 \"\u0004\b!\u0010\"R\u001a\u0010#\u001a\u00020$X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b%\u0010&\"\u0004\b'\u0010(R\u001a\u0010)\u001a\u00020*X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b+\u0010,\"\u0004\b-\u0010.R\u001a\u0010/\u001a\u000200X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b1\u00102\"\u0004\b3\u00104R\u001a\u00105\u001a\u000206X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b7\u00108\"\u0004\b9\u0010:R\u001a\u0010;\u001a\u00020<X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b=\u0010>\"\u0004\b?\u0010@¨\u0006M"}, d2 = {"Lcom/hzbhd/canbus/car/_340/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "airPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "getAirPageUiSet", "()Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "setAirPageUiSet", "(Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;)V", "mContext", "getMContext", "()Landroid/content/Context;", "setMContext", "mMsgMgr", "Lcom/hzbhd/canbus/car/_340/MsgMgr;", "getMMsgMgr", "()Lcom/hzbhd/canbus/car/_340/MsgMgr;", "setMMsgMgr", "(Lcom/hzbhd/canbus/car/_340/MsgMgr;)V", "onAirBtnClickListenerFrontBottom", "Lcom/hzbhd/canbus/adapter/interfaces/OnAirBtnClickListener;", "onAirBtnClickListenerFrontLeft", "onAirBtnClickListenerFrontRight", "onAirBtnClickListenerFrontTop", "onAirTemperatureUpDownClickListenerFrontLeft", "Lcom/hzbhd/canbus/adapter/interfaces/OnAirTemperatureUpDownClickListener;", "onAirTemperatureUpDownClickListenerFrontRight", "onAirWindSpeedUpDownClickListener", "Lcom/hzbhd/canbus/adapter/interfaces/OnAirWindSpeedUpDownClickListener;", "getOnAirWindSpeedUpDownClickListener", "()Lcom/hzbhd/canbus/adapter/interfaces/OnAirWindSpeedUpDownClickListener;", "setOnAirWindSpeedUpDownClickListener", "(Lcom/hzbhd/canbus/adapter/interfaces/OnAirWindSpeedUpDownClickListener;)V", "onSettingItemClickListener", "Lcom/hzbhd/canbus/interfaces/OnSettingItemClickListener;", "getOnSettingItemClickListener", "()Lcom/hzbhd/canbus/interfaces/OnSettingItemClickListener;", "setOnSettingItemClickListener", "(Lcom/hzbhd/canbus/interfaces/OnSettingItemClickListener;)V", "onSettingItemSeekbarSelectListener", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSeekbarSelectListener;", "getOnSettingItemSeekbarSelectListener", "()Lcom/hzbhd/canbus/interfaces/OnSettingItemSeekbarSelectListener;", "setOnSettingItemSeekbarSelectListener", "(Lcom/hzbhd/canbus/interfaces/OnSettingItemSeekbarSelectListener;)V", "onSettingItemSelectListener", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSelectListener;", "getOnSettingItemSelectListener", "()Lcom/hzbhd/canbus/interfaces/OnSettingItemSelectListener;", "setOnSettingItemSelectListener", "(Lcom/hzbhd/canbus/interfaces/OnSettingItemSelectListener;)V", "onSettingItemSwitchListener", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSwitchListener;", "getOnSettingItemSwitchListener", "()Lcom/hzbhd/canbus/interfaces/OnSettingItemSwitchListener;", "setOnSettingItemSwitchListener", "(Lcom/hzbhd/canbus/interfaces/OnSettingItemSwitchListener;)V", "settingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "getSettingPageUiSet", "()Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "setSettingPageUiSet", "(Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;)V", "getMsgMgr", "sendAirData", "", "data0", "", "sendAirLeftTemData", "cmd", "isUpAction", "", "sendAirRightTemData", "sendSettingData", "data1", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private AirPageUiSet airPageUiSet;
     private Context mContext;
@@ -54,7 +54,7 @@ public final class UiMgr extends AbstractUiMgr {
     public UiMgr(Context context) {
         this.mContext = context;
         SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "getSettingUiSet(context)");
+
         this.settingPageUiSet = settingUiSet;
         this.onAirBtnClickListenerFrontTop = new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._340.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
@@ -142,7 +142,7 @@ public final class UiMgr extends AbstractUiMgr {
         this.settingPageUiSet.setOnSettingItemSeekbarSelectListener(this.onSettingItemSeekbarSelectListener);
         this.settingPageUiSet.setOnSettingItemSwitchListener(this.onSettingItemSwitchListener);
         AirPageUiSet airUiSet = getAirUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(airUiSet, "getAirUiSet(context)");
+
         this.airPageUiSet = airUiSet;
         airUiSet.getFrontArea().setOnAirBtnClickListeners(new OnAirBtnClickListener[]{this.onAirBtnClickListenerFrontTop, this.onAirBtnClickListenerFrontLeft, this.onAirBtnClickListenerFrontRight, this.onAirBtnClickListenerFrontBottom});
         this.airPageUiSet.getFrontArea().setSetWindSpeedViewOnClickListener(this.onAirWindSpeedUpDownClickListener);
@@ -203,7 +203,7 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setSettingPageUiSet(SettingPageUiSet settingPageUiSet) {
-        Intrinsics.checkNotNullParameter(settingPageUiSet, "<set-?>");
+
         this.settingPageUiSet = settingPageUiSet;
     }
 
@@ -212,14 +212,14 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setAirPageUiSet(AirPageUiSet airPageUiSet) {
-        Intrinsics.checkNotNullParameter(airPageUiSet, "<set-?>");
+
         this.airPageUiSet = airPageUiSet;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onAirBtnClickListenerFrontTop$lambda-0, reason: not valid java name */
     public static final void m726onAirBtnClickListenerFrontTop$lambda0(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             this$0.sendAirData(1);
         }
@@ -228,7 +228,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onAirBtnClickListenerFrontLeft$lambda-1, reason: not valid java name */
     public static final void m724onAirBtnClickListenerFrontLeft$lambda1(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             this$0.sendAirData(6);
         }
@@ -237,7 +237,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onAirBtnClickListenerFrontRight$lambda-2, reason: not valid java name */
     public static final void m725onAirBtnClickListenerFrontRight$lambda2(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             this$0.sendAirData(23);
         }
@@ -246,7 +246,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onAirBtnClickListenerFrontBottom$lambda-3, reason: not valid java name */
     public static final void m723onAirBtnClickListenerFrontBottom$lambda3(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             this$0.sendAirData(21);
         } else if (i == 1) {
@@ -264,7 +264,7 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setOnAirWindSpeedUpDownClickListener(OnAirWindSpeedUpDownClickListener onAirWindSpeedUpDownClickListener) {
-        Intrinsics.checkNotNullParameter(onAirWindSpeedUpDownClickListener, "<set-?>");
+
         this.onAirWindSpeedUpDownClickListener = onAirWindSpeedUpDownClickListener;
     }
 
@@ -273,14 +273,14 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setOnSettingItemSeekbarSelectListener(OnSettingItemSeekbarSelectListener onSettingItemSeekbarSelectListener) {
-        Intrinsics.checkNotNullParameter(onSettingItemSeekbarSelectListener, "<set-?>");
+
         this.onSettingItemSeekbarSelectListener = onSettingItemSeekbarSelectListener;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onSettingItemSeekbarSelectListener$lambda-4, reason: not valid java name */
     public static final void m728onSettingItemSeekbarSelectListener$lambda4(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String titleSrn = this$0.settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (i == 0 && Intrinsics.areEqual(titleSrn, "_340_adaptive_cruise_speed_setting")) {
             this$0.sendSettingData(18, i3);
@@ -292,14 +292,14 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setOnSettingItemClickListener(OnSettingItemClickListener onSettingItemClickListener) {
-        Intrinsics.checkNotNullParameter(onSettingItemClickListener, "<set-?>");
+
         this.onSettingItemClickListener = onSettingItemClickListener;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onSettingItemClickListener$lambda-5, reason: not valid java name */
     public static final void m727onSettingItemClickListener$lambda5(UiMgr this$0, int i, int i2) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             if (i2 == 0) {
                 this$0.sendSettingData(0, 1);
@@ -317,14 +317,14 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setOnSettingItemSelectListener(OnSettingItemSelectListener onSettingItemSelectListener) {
-        Intrinsics.checkNotNullParameter(onSettingItemSelectListener, "<set-?>");
+
         this.onSettingItemSelectListener = onSettingItemSelectListener;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onSettingItemSelectListener$lambda-6, reason: not valid java name */
     public static final void m729onSettingItemSelectListener$lambda6(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             if (i2 == 13) {
                 this$0.sendSettingData(13, i3 + 1);
@@ -361,14 +361,14 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setOnSettingItemSwitchListener(OnSettingItemSwitchListener onSettingItemSwitchListener) {
-        Intrinsics.checkNotNullParameter(onSettingItemSwitchListener, "<set-?>");
+
         this.onSettingItemSwitchListener = onSettingItemSwitchListener;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onSettingItemSwitchListener$lambda-7, reason: not valid java name */
     public static final void m730onSettingItemSwitchListener$lambda7(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             if (i2 == 1) {
                 this$0.sendSettingData(1, i3 + 1);
@@ -424,7 +424,7 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     /* compiled from: UiMgr.kt */
-    @Metadata(d1 = {"\u0000\n\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\u0010\u0000\u001a\u00020\u0001*\u00020\u0002H\u008a@"}, d2 = {"<anonymous>", "", "Lkotlinx/coroutines/CoroutineScope;"}, k = 3, mv = {1, 7, 1}, xi = 48)
+    
     @DebugMetadata(c = "com.hzbhd.canbus.car._340.UiMgr$sendAirData$1", f = "UiMgr.kt", i = {}, l = {152}, m = "invokeSuspend", n = {}, s = {})
     /* renamed from: com.hzbhd.canbus.car._340.UiMgr$sendAirData$1, reason: invalid class name and case insensitive filesystem */
     static final class C00411 extends SuspendLambda implements Function2<CoroutineScope, Continuation<? super Unit>, Object> {
@@ -485,7 +485,7 @@ public final class UiMgr extends AbstractUiMgr {
     private final MsgMgr getMsgMgr(Context context) {
         if (this.mMsgMgr == null) {
             MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(context);
-            Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._340.MsgMgr");
+
             this.mMsgMgr = (MsgMgr) canMsgMgr;
         }
         return this.mMsgMgr;
@@ -532,12 +532,12 @@ public final class UiMgr extends AbstractUiMgr {
                         if (isUpAction) {
                             MsgMgr msgMgr8 = getMsgMgr(context);
                             numValueOf = msgMgr8 != null ? Integer.valueOf(msgMgr8.nowLeftValue) : null;
-                            Intrinsics.checkNotNull(numValueOf);
+
                             iIntValue = numValueOf.intValue() + 1;
                         } else {
                             MsgMgr msgMgr9 = getMsgMgr(context);
                             numValueOf = msgMgr9 != null ? Integer.valueOf(msgMgr9.nowLeftValue) : null;
-                            Intrinsics.checkNotNull(numValueOf);
+
                             iIntValue = numValueOf.intValue() - 1;
                         }
                     }
@@ -564,12 +564,12 @@ public final class UiMgr extends AbstractUiMgr {
                         if (isUpAction) {
                             MsgMgr msgMgr4 = getMsgMgr(context);
                             numValueOf = msgMgr4 != null ? Integer.valueOf(msgMgr4.nowRightValue) : null;
-                            Intrinsics.checkNotNull(numValueOf);
+
                             iIntValue = numValueOf.intValue() + 1;
                         } else {
                             MsgMgr msgMgr5 = getMsgMgr(context);
                             numValueOf = msgMgr5 != null ? Integer.valueOf(msgMgr5.nowRightValue) : null;
-                            Intrinsics.checkNotNull(numValueOf);
+
                             iIntValue = numValueOf.intValue() - 1;
                         }
                     }

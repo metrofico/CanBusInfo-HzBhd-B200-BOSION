@@ -8,7 +8,7 @@ import com.hzbhd.canbus.ui_datas.GeneralParkData;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.RadarInfoUtil;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private boolean mBackStatus;
     private byte[] mCanBusInfoByte;

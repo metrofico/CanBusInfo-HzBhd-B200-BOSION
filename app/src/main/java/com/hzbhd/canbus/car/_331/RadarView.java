@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class RadarView extends RelativeLayout {
     private ImageView img_car;
     private ImageView img_front_left;

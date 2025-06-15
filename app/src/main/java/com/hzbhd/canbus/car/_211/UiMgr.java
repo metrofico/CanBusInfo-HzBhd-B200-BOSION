@@ -12,7 +12,7 @@ import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static boolean isExplorer;
     private AirActivity mActivity;

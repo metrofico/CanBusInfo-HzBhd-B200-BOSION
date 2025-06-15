@@ -36,7 +36,7 @@ import kotlin.jvm.internal.ByteCompanionObject;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static final String KEY_LANGUAGE_POS_TAG = "key.laguage.pos.tag";
     private Context mContext;

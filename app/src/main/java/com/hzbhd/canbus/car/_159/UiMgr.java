@@ -10,7 +10,7 @@ import com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.AirBtnAction;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private com.hzbhd.canbus.car._97.MsgMgr mMsgMgr;

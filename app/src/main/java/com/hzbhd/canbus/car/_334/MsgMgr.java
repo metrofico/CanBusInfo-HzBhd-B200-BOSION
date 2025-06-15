@@ -41,7 +41,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     TextView content;
     public int currentCanDifferentId;

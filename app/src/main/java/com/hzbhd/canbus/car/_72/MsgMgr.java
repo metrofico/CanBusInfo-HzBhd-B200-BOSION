@@ -14,7 +14,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.proxy.service.ServiceConstants;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private byte[] mCanBusInfoByte;
     private int[] mCanBusInfoInt;

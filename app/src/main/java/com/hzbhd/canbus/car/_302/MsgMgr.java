@@ -14,7 +14,7 @@ import com.hzbhd.canbus.util.TrackInfoUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private boolean mBackStatus;
     private byte[] mCanBusInfoByte;

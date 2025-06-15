@@ -19,7 +19,7 @@ import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] m0x22RearRadarData;
     int[] m0x23FrontRadarData;

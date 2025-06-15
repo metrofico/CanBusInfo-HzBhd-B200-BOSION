@@ -9,7 +9,7 @@ import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import java.text.DecimalFormat;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static byte[] mCdInfo = {22, -125, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
     private byte[] mCanBusInfoByte;

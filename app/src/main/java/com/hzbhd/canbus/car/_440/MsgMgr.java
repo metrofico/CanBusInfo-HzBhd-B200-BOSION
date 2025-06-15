@@ -8,7 +8,7 @@ import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private String airJsonStr;
     private UiMgr mUiMgr;

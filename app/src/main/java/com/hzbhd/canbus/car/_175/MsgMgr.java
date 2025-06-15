@@ -25,7 +25,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String _175_IS_BACK_CAMERA = "_175_is_back_camera";
     static final String _175_IS_PANORAMIC = "_175_is_panoramic";

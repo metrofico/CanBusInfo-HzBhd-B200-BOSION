@@ -69,14 +69,14 @@ public class ColorView extends TextView implements ColorUtil.ColorViewInterface 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ColorView(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         init(context, attributeSet);
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ColorView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         init(context, attributeSet);
     }
 
@@ -124,13 +124,13 @@ public class ColorView extends TextView implements ColorUtil.ColorViewInterface 
         }
         ColorUtil colorUtil = ColorUtil.instance;
         Drawable current = getBackground().getCurrent();
-        Intrinsics.checkNotNullExpressionValue(current, "background.current");
+
         colorUtil.viewStateChange(current, isPressed());
     }
 
     @Override // android.view.View
     public void setBackground(Drawable background) {
-        Intrinsics.checkNotNullParameter(background, "background");
+
         super.setBackground(background);
         if (this.isColorImage) {
             ColorUtil.instance.viewStateChange(background, isPressed());
@@ -145,7 +145,7 @@ public class ColorView extends TextView implements ColorUtil.ColorViewInterface 
         }
         ColorUtil colorUtil = ColorUtil.instance;
         Drawable current = getBackground().getCurrent();
-        Intrinsics.checkNotNullExpressionValue(current, "background.current");
+
         colorUtil.viewStateChange(current, isPressed());
     }
 }

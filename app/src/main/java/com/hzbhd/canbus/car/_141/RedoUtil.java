@@ -5,7 +5,7 @@ import android.os.Looper;
 import android.os.Message;
 import com.hzbhd.canbus.interfaces.ActionDo;
 
-/* loaded from: classes.dex */
+
 public class RedoUtil {
     private ActionDo thisActionDo;
     private final int ACTION_TAG = 255;

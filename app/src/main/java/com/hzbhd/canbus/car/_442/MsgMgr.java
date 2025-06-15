@@ -20,7 +20,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] dvrInt;
     int[] mAirData;

@@ -35,9 +35,9 @@ import kotlin.jvm.internal.ArrayIteratorKt;
 import kotlin.jvm.internal.ByteCompanionObject;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000\\\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\u0010\u0015\n\u0000\n\u0002\u0010\u0012\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u000e\n\u0002\u0010\u000b\n\u0002\b\u001e\u0018\u0000 F2\u00020\u0001:\u0001FB\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0019\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0016J\u001c\u0010\u001c\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000e2\b\u0010\u001d\u001a\u0004\u0018\u00010\u000bH\u0016Jp\u0010\u001e\u001a\u00020\u001a2\u0006\u0010\u001f\u001a\u00020\u00062\u0006\u0010 \u001a\u00020\u00062\u0006\u0010!\u001a\u00020\u00062\u0006\u0010\"\u001a\u00020\u00062\u0006\u0010#\u001a\u00020\u00062\u0006\u0010$\u001a\u00020\u00062\u0006\u0010%\u001a\u00020\u00062\u0006\u0010&\u001a\u00020\u00062\u0006\u0010'\u001a\u00020\u00062\u0006\u0010(\u001a\u00020)2\u0006\u0010*\u001a\u00020)2\u0006\u0010+\u001a\u00020)2\u0006\u0010,\u001a\u00020\u0006H\u0016J\u001a\u0010-\u001a\f\u0012\u0006\u0012\u0004\u0018\u00010\u0016\u0018\u00010\u00152\u0006\u0010.\u001a\u00020\u0004H\u0002J\u0012\u0010/\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u00100\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0016J\u0012\u00101\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0006\u00102\u001a\u00020)J\u0006\u00103\u001a\u00020)J\u001a\u00104\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000e2\u0006\u00105\u001a\u00020\u0006H\u0002J\u001a\u00106\u001a\u00020\u00042\b\u0010\u001b\u001a\u0004\u0018\u00010\u000e2\u0006\u00107\u001a\u00020\u0006H\u0002J\u0012\u00108\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u00109\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010:\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010;\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010<\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010=\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010>\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\b\u0010?\u001a\u00020\u001aH\u0002J\u0012\u0010@\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010A\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0012\u0010B\u001a\u00020\u001a2\b\u0010\u001b\u001a\u0004\u0018\u00010\u000eH\u0002J\u0010\u0010C\u001a\u00020\u001a2\u0006\u0010D\u001a\u00020)H\u0016J\u0016\u0010E\u001a\u00020\u001a2\u0006\u0010.\u001a\u00020\u00042\u0006\u00107\u001a\u00020\u0016R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u0014\u0010\u0007\u001a\b\u0012\u0004\u0012\u00020\t0\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\tX\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\r\u001a\u0004\u0018\u00010\u000eX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\u0010X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R$\u0010\u0013\u001a\u0018\u0012\u0004\u0012\u00020\u0004\u0012\f\u0012\n\u0012\u0006\u0012\u0004\u0018\u00010\u00160\u0015\u0018\u00010\u0014X\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0017\u001a\u0004\u0018\u00010\u0018X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006G"}, d2 = {"Lcom/hzbhd/canbus/car/_317/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "TAG", "", "mCanId", "", "mCanbusDataArray", "Landroid/util/SparseArray;", "", "mCanbusInfoByte", "", "mCanbusInfoInt", "mContext", "Landroid/content/Context;", "mDecimalFormat0p0", "Ljava/text/DecimalFormat;", "mDifferentId", "mEachId", "mSettingItemIndeHashMap", "Ljava/util/HashMap;", "Lcom/hzbhd/canbus/entity/SettingUpdateEntity;", "", "mUiMgr", "Lcom/hzbhd/canbus/car/_317/UiMgr;", "afterServiceNormalSetting", "", "context", "canbusInfoChange", "canbusInfo", "dateTimeRepCanbus", "bYearTotal", "bYear2Dig", "bMonth", "bDay", "bHours", "bMins", "bSecond", "bHours24H", "systemDateFormat", "isFormat24H", "", "isFormatPm", "isGpsTime", "dayOfWeek", "getSettingUpdateEntity", LcdInfoShare.MediaInfo.title, "initAmplifier", "initCommand", "initSettingsItem", "is2016PajeroSport", "is2020PajeroSport", "realKeyLongClick1", "key", "resolveAirTemperature", "value", "set0x1DFrontRadarData", "set0x1ERearRadarData", "set0x20WheelKeyData", "set0x24BaseData", "set0x29TrackData", "set0x30VersionData", "set0x35VehicleData", "set0x40Vehicle2Data", "set0x41AmplifierData", "set0x55AirData", "set0x60TireData", "sourceSwitchNoMediaInfoChange", "isPowerOff", "updateSettingItem", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public static final int AMPLIFIER_POSITION_OFFSET = 11;
     public static final int AMPLIFIER_PROGRESS_OFFSET = 2;
@@ -64,7 +64,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         this.mDifferentId = getCurrentCanDifferentId();
         this.mEachId = getCurrentEachCanId();
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._317.UiMgr");
+
         this.mUiMgr = (UiMgr) canUiMgr;
         initSettingsItem(context);
     }
@@ -143,9 +143,9 @@ public final class MsgMgr extends AbstractMsgMgr {
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
         super.canbusInfoChange(context, canbusInfo);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         this.mCanbusInfoInt = byteArrayToIntArray;
-        Intrinsics.checkNotNull(canbusInfo);
+
         this.mCanbusInfoByte = canbusInfo;
         int i = this.mCanbusInfoInt[1];
         if (i == 29) {
@@ -254,23 +254,23 @@ public final class MsgMgr extends AbstractMsgMgr {
             updateAmplifierActivity(null);
             saveAmplifierData(context, this.mCanId);
             SettingUpdateEntity<Object> settingUpdateEntity = getSettingUpdateEntity("outlander_simple_car_set_17");
-            Intrinsics.checkNotNull(settingUpdateEntity);
+
             SettingUpdateEntity<Object> settingUpdateEntity2 = getSettingUpdateEntity("_103_punch");
-            Intrinsics.checkNotNull(settingUpdateEntity2);
+
             SettingUpdateEntity value = settingUpdateEntity2.setValue(Integer.valueOf((this.mCanbusInfoInt[8] - 2) - 3));
-            Intrinsics.checkNotNull(value);
+
             SettingUpdateEntity<Object> settingUpdateEntity3 = getSettingUpdateEntity("outlander_simple_car_set_8");
-            Intrinsics.checkNotNull(settingUpdateEntity3);
+
             SettingUpdateEntity<Object> settingUpdateEntity4 = getSettingUpdateEntity("outlander_simple_car_set_9");
-            Intrinsics.checkNotNull(settingUpdateEntity4);
+
             SettingUpdateEntity<Object> settingUpdateEntity5 = getSettingUpdateEntity("outlander_simple_car_set_10");
-            Intrinsics.checkNotNull(settingUpdateEntity5);
+
             SettingUpdateEntity<Object> settingUpdateEntity6 = getSettingUpdateEntity("outlander_simple_car_set_11");
-            Intrinsics.checkNotNull(settingUpdateEntity6);
+
             SettingUpdateEntity<Object> settingUpdateEntity7 = getSettingUpdateEntity("outlander_simple_car_set_12");
-            Intrinsics.checkNotNull(settingUpdateEntity7);
+
             SettingUpdateEntity<Object> settingUpdateEntity8 = getSettingUpdateEntity("amplifier_switch");
-            Intrinsics.checkNotNull(settingUpdateEntity8);
+
             updateGeneralSettingData(CollectionsKt.arrayListOf(settingUpdateEntity.setValue(Integer.valueOf(this.mCanbusInfoInt[4])), value.setProgress(this.mCanbusInfoInt[8] - 2), settingUpdateEntity3.setValue(Integer.valueOf(this.mCanbusInfoInt[10])), settingUpdateEntity4.setValue(Integer.valueOf(this.mCanbusInfoInt[11])), settingUpdateEntity5.setValue(Integer.valueOf(this.mCanbusInfoInt[12])), settingUpdateEntity6.setValue(Integer.valueOf(this.mCanbusInfoInt[13])), settingUpdateEntity7.setValue(Integer.valueOf(this.mCanbusInfoInt[14])), settingUpdateEntity8.setValue(Integer.valueOf(this.mCanbusInfoInt[15]))));
             updateSettingActivity(null);
         }
@@ -376,9 +376,9 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void initSettingsItem(Context context) {
         Log.i(this.TAG, "initSettingsItem: ");
         UiMgr uiMgr = this.mUiMgr;
-        Intrinsics.checkNotNull(uiMgr);
+
         SettingPageUiSet settingUiSet = uiMgr.getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "mUiMgr!!.getSettingUiSet(context)");
+
         Iterator<SettingPageUiSet.ListBean> it = settingUiSet.getList().iterator();
         int i = 0;
         while (it.hasNext()) {
@@ -386,9 +386,9 @@ public final class MsgMgr extends AbstractMsgMgr {
             int i3 = 0;
             for (SettingPageUiSet.ListBean.ItemListBean itemListBean : it.next().getItemList()) {
                 HashMap<String, SettingUpdateEntity<Object>> map = this.mSettingItemIndeHashMap;
-                Intrinsics.checkNotNull(map);
+
                 String titleSrn = itemListBean.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn, "itemListBean.titleSrn");
+
                 map.put(titleSrn, new SettingUpdateEntity<>(i, i3));
                 i3++;
             }
@@ -402,14 +402,14 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     private final SettingUpdateEntity<Object> getSettingUpdateEntity(String title) {
         HashMap<String, SettingUpdateEntity<Object>> map = this.mSettingItemIndeHashMap;
-        Intrinsics.checkNotNull(map);
+
         if (map.containsKey(title)) {
             HashMap<String, SettingUpdateEntity<Object>> map2 = this.mSettingItemIndeHashMap;
-            Intrinsics.checkNotNull(map2);
+
             return map2.get(title);
         }
         HashMap<String, SettingUpdateEntity<Object>> map3 = this.mSettingItemIndeHashMap;
-        Intrinsics.checkNotNull(map3);
+
         map3.put(title, new SettingUpdateEntity<>(-1, -1, null));
         return getSettingUpdateEntity(title);
     }
@@ -429,8 +429,8 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void updateSettingItem(String title, Object value) {
-        Intrinsics.checkNotNullParameter(title, "title");
-        Intrinsics.checkNotNullParameter(value, "value");
+
+
         SettingUpdateEntity[] settingUpdateEntityArr = new SettingUpdateEntity[1];
         SettingUpdateEntity<Object> settingUpdateEntity = getSettingUpdateEntity(title);
         settingUpdateEntityArr[0] = settingUpdateEntity != null ? settingUpdateEntity.setValue(value) : null;

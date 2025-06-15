@@ -13,7 +13,7 @@ import com.hzbhd.canbus.util.TimerUtil;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private MsgMgr mMsgMgr;

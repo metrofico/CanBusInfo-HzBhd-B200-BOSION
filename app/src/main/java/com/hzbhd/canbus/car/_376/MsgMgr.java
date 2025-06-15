@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._376;
 import android.content.Context;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int eachId;

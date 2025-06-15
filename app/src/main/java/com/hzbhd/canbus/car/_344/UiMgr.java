@@ -4,7 +4,7 @@ import android.content.Context;
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     Context mContext;
 

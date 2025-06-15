@@ -40,9 +40,9 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\u0018\u0000 \u00102\u00020\u0001:\u0001\u0010B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0018\u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\fH\u0002J\u0010\u0010\t\u001a\u00020\n2\u0006\u0010\u000e\u001a\u00020\u000fH\u0002R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0011"}, d2 = {"Lcom/hzbhd/canbus/car/_324/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mHandler", "Landroid/os/Handler;", "mMsgMgr", "Lcom/hzbhd/canbus/car/_324/MsgMgr;", "sendAirCommand", "", "dataType", "", "command", LcdInfoShare.MediaInfo.title, "", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private static final int DATATYPE_FRONTAIR = 113;
     private static final int DATATYPE_REARAIR = 114;
@@ -51,9 +51,9 @@ public final class UiMgr extends AbstractUiMgr {
     private final MsgMgr mMsgMgr;
 
     public UiMgr(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(context);
-        Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._324.MsgMgr");
+
         this.mMsgMgr = (MsgMgr) canMsgMgr;
         this.mHandler = new Handler(Looper.getMainLooper());
         AirPageUiSet airUiSet = getAirUiSet(context);
@@ -206,7 +206,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._324.UiMgr$3$1
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -222,7 +222,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public void progress(AmplifierActivity.AmplifierBand amplifierBand, int progress) {
-                Intrinsics.checkNotNullParameter(amplifierBand, "amplifierBand");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierBand.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -124, 4, (byte) (progress + 2)});
@@ -243,7 +243,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._324.UiMgr$3$2
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -257,7 +257,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
             public void position(AmplifierActivity.AmplifierPosition amplifierPosition, int value) {
-                Intrinsics.checkNotNullParameter(amplifierPosition, "amplifierPosition");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierPosition.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -124, 1, (byte) (7 - value)});
@@ -420,54 +420,54 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-9$lambda-4$lambda-0, reason: not valid java name */
     public static final void m642lambda9$lambda4$lambda0(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[0][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-9$lambda-4$lambda-1, reason: not valid java name */
     public static final void m643lambda9$lambda4$lambda1(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[1][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-9$lambda-4$lambda-2, reason: not valid java name */
     public static final void m644lambda9$lambda4$lambda2(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[2][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-9$lambda-4$lambda-3, reason: not valid java name */
     public static final void m645lambda9$lambda4$lambda3(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[3][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-9$lambda-8$lambda-5, reason: not valid java name */
     public static final void m646lambda9$lambda8$lambda5(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = rearArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[0][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-9$lambda-8$lambda-6, reason: not valid java name */
     public static final void m647lambda9$lambda8$lambda6(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = rearArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "lineBtnAction[3][position]");
+
         this$0.sendAirCommand(str);
     }
 
@@ -504,7 +504,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-21$lambda-16, reason: not valid java name */
     public static final void m634lambda21$lambda16(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             CanbusMsgSender.sendMsg(new byte[]{22, -118, 1, 1});
             this$0.mHandler.postDelayed(new Runnable() { // from class: com.hzbhd.canbus.car._324.UiMgr$$ExternalSyntheticLambda0
@@ -597,7 +597,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-21$lambda-20, reason: not valid java name */
     public static final void m638lambda21$lambda20(OriginalCarDevicePageUiSet originalCarDevicePageUiSet, UiMgr$4$fastParams$1 fastParams, int i) {
-        Intrinsics.checkNotNullParameter(fastParams, "$fastParams");
+
         String str = originalCarDevicePageUiSet.getRowBottomBtnAction()[i];
         if (Intrinsics.areEqual(str, "down")) {
             m639lambda21$sendFastCommand(fastParams, 14);
@@ -622,7 +622,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-24$sendCommand$lambda-23$lambda-22, reason: not valid java name */
     public static final void m641lambda24$sendCommand$lambda23$lambda22(byte[] this_run) {
-        Intrinsics.checkNotNullParameter(this_run, "$this_run");
+
         this_run[3] = 0;
         CanbusMsgSender.sendMsg(this_run);
     }
@@ -806,7 +806,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: sendAirCommand$lambda-26$lambda-25, reason: not valid java name */
     public static final void m648sendAirCommand$lambda26$lambda25(byte[] this_run) {
-        Intrinsics.checkNotNullParameter(this_run, "$this_run");
+
         this_run[3] = 0;
         CanbusMsgSender.sendMsg(this_run);
     }

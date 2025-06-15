@@ -54,13 +54,13 @@ public final class UI {
     }
 
     public final String getUI(Context context, UIBean.AppName appName) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(appName, "appName");
+
+
         if (TextUtils.isEmpty(Settings.System.getString(context.getContentResolver(), UIKey.ui_s_id.name()))) {
             return getUI(appName);
         }
         String string = Settings.System.getString(context.getContentResolver(), UIKey.ui_s_id.name());
-        Intrinsics.checkNotNullExpressionValue(string, "{\n            Settings.S…y.ui_s_id.name)\n        }");
+
         return string;
     }
 
@@ -68,11 +68,11 @@ public final class UI {
         String saveUI = DefaultSharedUtil.getStr(UIKey.ui_s_id_encrypt.name(), "");
         if (TextUtils.isEmpty(saveUI)) {
             String str = DefaultSharedUtil.getStr(UIKey.ui_s_id.name(), UIDefault.INSTANCE.getCurrUI());
-            Intrinsics.checkNotNullExpressionValue(str, "{\n            DefaultSha…Default.currUI)\n        }");
+
             return str;
         }
         UIEncrypt uIEncrypt = UIEncrypt.INSTANCE;
-        Intrinsics.checkNotNullExpressionValue(saveUI, "saveUI");
+
         return uIEncrypt.changeStringToUI(saveUI);
     }
 
@@ -82,7 +82,7 @@ public final class UI {
         if (TextUtils.isEmpty(str)) {
             return UIDefault.INSTANCE.getSelectUI();
         }
-        Intrinsics.checkNotNullExpressionValue(configSelectUI, "configSelectUI");
+
         List listSplit$default = StringsKt.split$default((CharSequence) str, new String[]{"___"}, false, 0, 6, (Object) null);
         int size = listSplit$default.size();
         String[] strArr = new String[size];
@@ -94,7 +94,7 @@ public final class UI {
 
     public final String getUI(UIBean.AppName appName) {
         String media;
-        Intrinsics.checkNotNullParameter(appName, "appName");
+
         String uIId = getUIId();
         switch (WhenMappings.$EnumSwitchMapping$0[appName.ordinal()]) {
             case 1:
@@ -170,7 +170,7 @@ public final class UI {
     }
 
     public final void setUI(String uiId) {
-        Intrinsics.checkNotNullParameter(uiId, "uiId");
+
         DefaultSharedUtilReflection.setStr(UIKey.ui_s_id_encrypt.name(), UIEncrypt.INSTANCE.changeUIToString(uiId));
     }
 

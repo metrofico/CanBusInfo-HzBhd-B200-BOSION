@@ -29,7 +29,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int RADAR_PARAM_FORNT_MID_MAX = 120;
     private static final int RADAR_PARAM_MID_RANGE = 10;

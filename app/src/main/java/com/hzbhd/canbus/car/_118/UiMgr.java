@@ -40,7 +40,7 @@ import java.util.List;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     int DATA3;
     int DATA4;

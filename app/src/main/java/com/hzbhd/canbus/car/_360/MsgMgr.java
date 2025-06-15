@@ -13,9 +13,9 @@ import java.util.List;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000H\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0002\u0010\u000e\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0002\b\u0004\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010!\u001a\u00020\"2\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004H\u0016J\u001c\u0010#\u001a\u00020\"2\b\u0010\u0003\u001a\u0004\u0018\u00010\u00042\b\u0010$\u001a\u0004\u0018\u00010%H\u0016J\b\u0010&\u001a\u00020\"H\u0002J\u0010\u0010'\u001a\u00020\"2\b\u0010\u0003\u001a\u0004\u0018\u00010\u0004J\b\u0010(\u001a\u00020\"H\u0002R\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u001a\u0010\u000f\u001a\u00020\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\u001a\u0010\u0015\u001a\u00020\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\u0012\"\u0004\b\u0017\u0010\u0014R6\u0010\u0018\u001a\u001e\u0012\u0004\u0012\u00020\u001a\u0012\u0004\u0012\u00020\u001b0\u0019j\u000e\u0012\u0004\u0012\u00020\u001a\u0012\u0004\u0012\u00020\u001b`\u001cX\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u001d\u0010\u001e\"\u0004\b\u001f\u0010 ¨\u0006)"}, d2 = {"Lcom/hzbhd/canbus/car/_360/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "context", "Landroid/content/Context;", "getContext", "()Landroid/content/Context;", "setContext", "(Landroid/content/Context;)V", "frameData", "", "getFrameData", "()[I", "setFrameData", "([I)V", "lastD10", "", "getLastD10", "()I", "setLastD10", "(I)V", "lastD9", "getLastD9", "setLastD9", "mDriveItemIndexHashMap", "Ljava/util/HashMap;", "", "Lcom/hzbhd/canbus/ui_set/DriverDataPageUiSet$Page$Item;", "Lkotlin/collections/HashMap;", "getMDriveItemIndexHashMap", "()Ljava/util/HashMap;", "setMDriveItemIndexHashMap", "(Ljava/util/HashMap;)V", "afterServiceNormalSetting", "", "canbusInfoChange", "canbusInfo", "", "carBodyStatus", "initItemsIndexHashMap", "steeringWheelKeys", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public Context context;
     public int[] frameData;
@@ -28,12 +28,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("frameData");
+
         return null;
     }
 
     public final void setFrameData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.frameData = iArr;
     }
 
@@ -42,12 +42,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (context != null) {
             return context;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("context");
+
         return null;
     }
 
     public final void setContext(Context context) {
-        Intrinsics.checkNotNullParameter(context, "<set-?>");
+
         this.context = context;
     }
 
@@ -58,7 +58,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         setContext(context);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         setFrameData(byteArrayToIntArray);
         int i = getFrameData()[1];
         if (i == 1) {
@@ -144,19 +144,19 @@ public final class MsgMgr extends AbstractMsgMgr {
         int intFromByteWithBit = DataHandleUtils.getIntFromByteWithBit(getFrameData()[13], 0, 4);
         boolean boolBit42 = DataHandleUtils.getBoolBit4(getFrameData()[13]);
         DriverDataPageUiSet.Page.Item item = this.mDriveItemIndexHashMap.get("D360_d0");
-        Intrinsics.checkNotNull(item);
+
         item.setValue(i + " Km/H");
         DriverDataPageUiSet.Page.Item item2 = this.mDriveItemIndexHashMap.get("D360_d1t2");
-        Intrinsics.checkNotNull(item2);
+
         item2.setValue(i2 != 65535 ? i2 + " Km" : "----");
         DriverDataPageUiSet.Page.Item item3 = this.mDriveItemIndexHashMap.get("D360_d3t4");
-        Intrinsics.checkNotNull(item3);
+
         item3.setValue(i3 + " Km/H");
         DriverDataPageUiSet.Page.Item item4 = this.mDriveItemIndexHashMap.get("D360_d5t6");
-        Intrinsics.checkNotNull(item4);
+
         item4.setValue(i4 != 65535 ? (i4 / 10) + " L/100Km" : "----");
         DriverDataPageUiSet.Page.Item item5 = this.mDriveItemIndexHashMap.get("D360_d7t8");
-        Intrinsics.checkNotNull(item5);
+
         item5.setValue(i5 != 65535 ? (i5 / 10) + " L/100Km" : "----");
         if (!carBodyStatus$isOutTempMsgRepeat(i6, this)) {
             updateOutDoorTemp(getContext(), ((int) ((byte) i6)) + " °C");
@@ -171,10 +171,10 @@ public final class MsgMgr extends AbstractMsgMgr {
             updateDoorView(getContext());
         }
         DriverDataPageUiSet.Page.Item item6 = this.mDriveItemIndexHashMap.get("D360_d11b0t3");
-        Intrinsics.checkNotNull(item6);
+
         item6.setValue(intFromByteWithBit != 1 ? intFromByteWithBit != 2 ? intFromByteWithBit != 3 ? intFromByteWithBit != 4 ? "无效" : "START" : "ON" : "ACC" : "OFF");
         DriverDataPageUiSet.Page.Item item7 = this.mDriveItemIndexHashMap.get("D360_d11b4");
-        Intrinsics.checkNotNull(item7);
+
         item7.setValue(boolBit42 ? "行驶状态" : "静止状态");
         updateDriveDataActivity(null);
     }
@@ -200,13 +200,13 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void setMDriveItemIndexHashMap(HashMap<String, DriverDataPageUiSet.Page.Item> map) {
-        Intrinsics.checkNotNullParameter(map, "<set-?>");
+
         this.mDriveItemIndexHashMap = map;
     }
 
     public final void initItemsIndexHashMap(Context context) {
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._360.UiMgr");
+
         List<DriverDataPageUiSet.Page> list = ((UiMgr) canUiMgr).getDriverDataPageUiSet(context).getList();
         Iterator<DriverDataPageUiSet.Page> it = list.iterator();
         int i = 0;
@@ -217,9 +217,9 @@ public final class MsgMgr extends AbstractMsgMgr {
                 int i4 = i3 + 1;
                 HashMap<String, DriverDataPageUiSet.Page.Item> map = this.mDriveItemIndexHashMap;
                 String titleSrn = item.getTitleSrn();
-                Intrinsics.checkNotNullExpressionValue(titleSrn, "item.titleSrn");
+
                 DriverDataPageUiSet.Page.Item item2 = list.get(i).getItemList().get(i3);
-                Intrinsics.checkNotNullExpressionValue(item2, "this[pageIndex].itemList[itemIndex]");
+
                 map.put(titleSrn, item2);
                 i3 = i4;
             }

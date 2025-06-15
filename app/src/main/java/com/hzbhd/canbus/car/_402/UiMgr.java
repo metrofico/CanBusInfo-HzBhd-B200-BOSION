@@ -12,13 +12,13 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Ref;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000\u0012\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004¨\u0006\u0005"}, d2 = {"Lcom/hzbhd/canbus/car/_402/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     /* JADX WARN: Type inference failed for: r0v2, types: [T, int[]] */
     public UiMgr(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         final FrontArea frontArea = getAirUiSet(context).getFrontArea();
         frontArea.setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._402.UiMgr$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
@@ -132,7 +132,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-0, reason: not valid java name */
     public static final void m813lambda4$lambda0(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         m817lambda4$selectAirPageBtn(str);
     }
 
@@ -140,7 +140,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-1, reason: not valid java name */
     public static final void m814lambda4$lambda1(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         m817lambda4$selectAirPageBtn(str);
     }
 
@@ -148,7 +148,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-2, reason: not valid java name */
     public static final void m815lambda4$lambda2(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         m817lambda4$selectAirPageBtn(str);
     }
 
@@ -156,7 +156,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-3, reason: not valid java name */
     public static final void m816lambda4$lambda3(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         m817lambda4$selectAirPageBtn(str);
     }
 }

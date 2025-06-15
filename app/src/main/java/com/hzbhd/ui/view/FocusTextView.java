@@ -71,7 +71,7 @@ public final class FocusTextView extends TextView {
 
     @Override // android.widget.TextView, android.view.View
     protected void onVisibilityChanged(View changedView, int visibility) {
-        Intrinsics.checkNotNullParameter(changedView, "changedView");
+
         super.onVisibilityChanged(changedView, visibility);
         if (LogUtil.log5()) {
             LogUtil.d("onVisibilityChanged: " + visibility);

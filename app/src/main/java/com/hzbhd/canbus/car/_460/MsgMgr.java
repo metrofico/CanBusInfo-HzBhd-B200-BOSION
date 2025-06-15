@@ -9,7 +9,7 @@ import com.hzbhd.canbus.ui_datas.GeneralParkData;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.RadarInfoUtil;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     Context context;
     CanDocking docking;

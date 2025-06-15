@@ -11,7 +11,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 import java.util.Objects;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public UiMgr(final Context context) {
         AmplifierPageUiSet amplifierPageUiSet = getAmplifierPageUiSet(context);

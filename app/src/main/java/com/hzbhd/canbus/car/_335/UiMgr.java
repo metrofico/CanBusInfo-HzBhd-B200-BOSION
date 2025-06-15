@@ -24,7 +24,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static int UsbPlayPauseState;
     Context mContext;

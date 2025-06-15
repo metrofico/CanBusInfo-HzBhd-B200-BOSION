@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String SHARE_122_AMPLIFIER_BALANCE = "share_122_amplifier_balance";
     static final String SHARE_122_AMPLIFIER_BASS = "share_122_amplifier_bass";

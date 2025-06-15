@@ -19,7 +19,7 @@ import java.util.Arrays;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.helpers.DateLayout;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] mAirData;
     int[] mCarDoorData;

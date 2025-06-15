@@ -5,7 +5,7 @@ import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import java.nio.charset.StandardCharsets;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private Context mContext;
     private UiMgr mUiMgr;

@@ -11,9 +11,9 @@ import kotlin.Metadata;
 import kotlin.collections.CollectionsKt;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u00005\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010!\n\u0002\u0010\u000e\n\u0002\b\u0006\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002*\u0001\u0000\b\n\u0018\u00002\u00060\u0001R\u00020\u0002J\u0010\u0010\n\u001a\u00020\u00052\u0006\u0010\u000b\u001a\u00020\fH\u0002J\u0010\u0010\r\u001a\u00020\u000e2\u0006\u0010\u000f\u001a\u00020\fH\u0016J\u0015\u0010\u0010\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u00120\u0011H\u0016¢\u0006\u0002\u0010\u0013R \u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0006\u0010\u0007\"\u0004\b\b\u0010\t¨\u0006\u0014"}, d2 = {"com/hzbhd/canbus/car/_94/MsgMgr$initParsers$1$15", "Lcom/hzbhd/canbus/car/_94/MsgMgr$Parser;", "Lcom/hzbhd/canbus/car/_94/MsgMgr;", "hybridUpdateList", "", "", "getHybridUpdateList", "()Ljava/util/List;", "setHybridUpdateList", "(Ljava/util/List;)V", "getValue", "value", "", "parse", "", "dataLength", "setOnParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     final /* synthetic */ Context $context;
     private List<String> hybridUpdateList;
@@ -63,7 +63,7 @@ public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     }
 
     public final void setHybridUpdateList(List<String> list) {
-        Intrinsics.checkNotNullParameter(list, "<set-?>");
+
         this.hybridUpdateList = list;
     }
 
@@ -112,53 +112,53 @@ public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     public static final void m959setOnParseListeners$lambda0(MsgMgr this$0, Context context, MsgMgr$initParsers$1$15 this$1) {
         String strByResId;
         String str;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
+
         switch (this$0.mCanbusInfoInt[2]) {
             case 1:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_18");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_18\")");
+
                 break;
             case 2:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_19");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_19\")");
+
                 break;
             case 3:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_20");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_20\")");
+
                 break;
             case 4:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_21");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_21\")");
+
                 break;
             case 5:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_22");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_22\")");
+
                 break;
             case 6:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_23");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_23\")");
+
                 break;
             case 7:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_24");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_24\")");
+
                 break;
             case 8:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_25");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_25\")");
+
                 break;
             case 9:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_26");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_26\")");
+
                 break;
             case 10:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_27");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_27\")");
+
                 break;
             default:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_17");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_17\")");
+
                 break;
         }
         this$1.hybridUpdateList.set(0, CommUtil.getStrByResId(context, "_94_values_40") + ':' + strByResId);
@@ -204,9 +204,9 @@ public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-2, reason: not valid java name */
     public static final void m960setOnParseListeners$lambda2(MsgMgr this$0, Context context, MsgMgr$initParsers$1$15 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
+
         int i = (this$0.mCanbusInfoInt[3] << 8) | this$0.mCanbusInfoInt[4];
         this$1.hybridUpdateList.set(1, CommUtil.getStrByResId(context, "_94_values_41") + ':' + ((this$0.getMsbLsbResult(this$0.mCanbusInfoInt[3], this$0.mCanbusInfoInt[4]) / 10.0f) + CommUtil.getStrByResId(context, "hour")));
         Log.i(MsgMgr.TAG, "setOnParseListeners: 【0x32】整车能量状态  充满电所需时间  {" + (i / 10) + '.' + (i % 10) + "小时}");
@@ -215,9 +215,9 @@ public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-3, reason: not valid java name */
     public static final void m961setOnParseListeners$lambda3(MsgMgr this$0, MsgMgr$initParsers$1$15 this$1, Context context) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
-        Intrinsics.checkNotNullParameter(context, "$context");
+
+
+
         this$1.hybridUpdateList.set(2, CommUtil.getStrByResId(context, "_94_values_42") + ':' + new StringBuilder().append(this$0.mCanbusInfoInt[5]).append('%').toString());
         GeneralHybirdData.powerBatteryValue = this$0.mCanbusInfoInt[5] / 10;
         GeneralHybirdData.powerBatteryLevel = this$0.mCanbusInfoInt[5] / 10;
@@ -228,61 +228,61 @@ public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     /* renamed from: setOnParseListeners$lambda-4, reason: not valid java name */
     public static final void m962setOnParseListeners$lambda4(MsgMgr this$0, Context context, MsgMgr$initParsers$1$15 this$1) {
         String strByResId;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
+
         switch (this$0.mCanbusInfoInt[6]) {
             case 1:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_28");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_28\")");
+
                 break;
             case 2:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_29");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_29\")");
+
                 break;
             case 3:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_30");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_30\")");
+
                 break;
             case 4:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_31");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_31\")");
+
                 break;
             case 5:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_32");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_32\")");
+
                 break;
             case 6:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_33");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_33\")");
+
                 break;
             case 7:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_34");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_34\")");
+
                 break;
             case 8:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_35");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_35\")");
+
                 break;
             case 9:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_36");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_36\")");
+
                 break;
             case 10:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_37");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_37\")");
+
                 break;
             case 11:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_38");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_38\")");
+
                 break;
             case 12:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_39");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_39\")");
+
                 break;
             default:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_17");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_17\")");
+
                 break;
         }
         this$1.hybridUpdateList.set(3, CommUtil.getStrByResId(context, "_94_values_43") + ':' + strByResId);
@@ -293,61 +293,61 @@ public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     /* renamed from: setOnParseListeners$lambda-5, reason: not valid java name */
     public static final void m963setOnParseListeners$lambda5(MsgMgr this$0, Context context, MsgMgr$initParsers$1$15 this$1) {
         String strByResId;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
+
         switch (this$0.mCanbusInfoInt[7]) {
             case 1:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_28");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_28\")");
+
                 break;
             case 2:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_29");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_29\")");
+
                 break;
             case 3:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_30");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_30\")");
+
                 break;
             case 4:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_31");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_31\")");
+
                 break;
             case 5:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_32");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_32\")");
+
                 break;
             case 6:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_33");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_33\")");
+
                 break;
             case 7:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_34");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_34\")");
+
                 break;
             case 8:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_35");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_35\")");
+
                 break;
             case 9:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_36");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_36\")");
+
                 break;
             case 10:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_37");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_37\")");
+
                 break;
             case 11:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_38");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_38\")");
+
                 break;
             case 12:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_39");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_39\")");
+
                 break;
             default:
                 strByResId = CommUtil.getStrByResId(context, "_94_values_17");
-                Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context,\"_94_values_17\")");
+
                 break;
         }
         this$1.hybridUpdateList.set(4, CommUtil.getStrByResId(context, "_94_values_44") + ':' + strByResId);

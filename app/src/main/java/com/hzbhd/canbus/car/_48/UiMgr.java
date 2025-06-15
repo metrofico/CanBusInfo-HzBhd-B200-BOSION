@@ -25,7 +25,7 @@ import com.hzbhd.canbus.util.TimerUtil;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final String SHARE_48_FRONT_CAMERA_SWITCH = "share_48_front_camera_switch";
     private Context mContext;

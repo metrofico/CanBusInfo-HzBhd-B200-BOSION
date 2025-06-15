@@ -13,7 +13,7 @@ import java.util.Iterator;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     OnAirWindSpeedUpDownClickListener windControl = new OnAirWindSpeedUpDownClickListener() { // from class: com.hzbhd.canbus.car._453.UiMgr.1

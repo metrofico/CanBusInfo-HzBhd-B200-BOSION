@@ -41,7 +41,7 @@ import java.util.Arrays;
 import kotlin.jvm.internal.ByteCompanionObject;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static SysToSpeechReceiver.AcCtrl sa;
     private static SysToSpeechReceiver.CarCtrl sc;

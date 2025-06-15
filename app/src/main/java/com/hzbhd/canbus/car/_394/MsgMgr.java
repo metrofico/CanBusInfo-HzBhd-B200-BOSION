@@ -24,7 +24,7 @@ import java.util.Arrays;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.Priority;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static int volKnobValue;
     DecimalFormat format1 = new DecimalFormat("###0.00");

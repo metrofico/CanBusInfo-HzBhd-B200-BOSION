@@ -1,6 +1,6 @@
 package com.hzbhd.canbus.car._438.speech;
 
-/* loaded from: classes2.dex */
+
 public class STxData {
     public static final String TxAction = "com.hzbhd.speech.to.sys";
     public static final String TxType = "tx_type";

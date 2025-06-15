@@ -14,7 +14,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.ArrayList;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int _0x33_data0;
     int _0x33_data1;

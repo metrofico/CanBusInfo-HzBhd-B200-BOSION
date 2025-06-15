@@ -16,7 +16,7 @@ import com.hzbhd.canbus.util.CommUtil;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {
     private static Timer mTimer;
     private static TimerTask mTimerTask;

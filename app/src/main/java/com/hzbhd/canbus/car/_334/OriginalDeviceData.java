@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._334;
 import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class OriginalDeviceData {
     private final String[] bottomBtn;
     private final List<OriginalCarDevicePageUiSet.Item> list;

@@ -14,7 +14,7 @@ import java.util.Arrays;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends MsAbstractUiMgr {
     private SharedPreferences.Editor editor;
     private byte[] lastCmd;

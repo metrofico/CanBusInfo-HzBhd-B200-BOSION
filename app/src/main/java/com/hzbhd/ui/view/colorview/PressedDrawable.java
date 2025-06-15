@@ -13,7 +13,7 @@ import kotlin.jvm.internal.Intrinsics;
 
 public final class PressedDrawable extends StateListDrawable {
     public PressedDrawable(Context context, int i, int i2, int i3, int i4) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         if (i2 != 0) {
             addState(new int[]{R.attr.state_pressed}, ContextCompat.getDrawable(context, i2));
         }

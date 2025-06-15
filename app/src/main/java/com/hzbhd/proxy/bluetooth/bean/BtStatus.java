@@ -39,7 +39,7 @@ public final class BtStatus {
     }
 
     public final void setAddress(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.address = str;
     }
 
@@ -192,7 +192,7 @@ public final class BtStatus {
                 JSONObject jSONObject = new JSONObject(statusString);
                 BtStatus btStatus = new BtStatus();
                 String strOptString = jSONObject.optString(BtStatus.ADDRESS);
-                Intrinsics.checkNotNullExpressionValue(strOptString, "jsonObject.optString(ADDRESS)");
+
                 btStatus.setAddress(strOptString);
                 btStatus.setEnable(jSONObject.optBoolean(BtConstants.BT_STATUS.ENABLE.name()));
                 btStatus.setHfpConn(jSONObject.optBoolean(BtConstants.BT_STATUS.HFP_CONN.name()));
@@ -216,7 +216,7 @@ public final class BtStatus {
         }
 
         public final String toJsonString(BtStatus btStatus) throws JSONException {
-            Intrinsics.checkNotNullParameter(btStatus, "btStatus");
+
             try {
                 JSONObject jSONObject = new JSONObject();
                 jSONObject.put(BtStatus.ADDRESS, btStatus.getAddress());
@@ -235,7 +235,7 @@ public final class BtStatus {
                 jSONObject.put(BtConstants.BT_STATUS.SYNC_PB_ING.name(), btStatus.getIsPbSyncing());
                 jSONObject.put(BtConstants.BT_STATUS.SYNC_PB_FINISH.name(), btStatus.getIsPbSyncFinish());
                 String string = jSONObject.toString();
-                Intrinsics.checkNotNullExpressionValue(string, "jsonObject.toString()");
+
                 return string;
             } catch (Exception unused) {
                 Log.d("Device", "toJsonString: error");

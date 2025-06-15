@@ -42,7 +42,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final String DEVICE_STATUS_AUX = "AUX";
     private static final String DEVICE_STATUS_CD = "CD";

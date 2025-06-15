@@ -1,7 +1,7 @@
 package com.hzbhd.canbus.car._97;
 
-/* compiled from: MsgMgr.java */
-/* loaded from: classes2.dex */
+
+
 class ID3 {
     private String charsetName;
     private int head;

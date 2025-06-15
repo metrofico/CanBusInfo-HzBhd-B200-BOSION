@@ -42,8 +42,8 @@ public final /* data */ class EventDialog {
     }
 
     public final EventDialog copy(String click_id, Action action, View view) {
-        Intrinsics.checkNotNullParameter(click_id, "click_id");
-        Intrinsics.checkNotNullParameter(action, "action");
+
+
         return new EventDialog(click_id, action, view);
     }
 
@@ -55,7 +55,7 @@ public final /* data */ class EventDialog {
             return false;
         }
         EventDialog eventDialog = (EventDialog) other;
-        return Intrinsics.areEqual(this.click_id, eventDialog.click_id) && this.action == eventDialog.action && Intrinsics.areEqual(this.view, eventDialog.view);
+
     }
 
     public int hashCode() {
@@ -69,8 +69,8 @@ public final /* data */ class EventDialog {
     }
 
     public EventDialog(String click_id, Action action, View view) {
-        Intrinsics.checkNotNullParameter(click_id, "click_id");
-        Intrinsics.checkNotNullParameter(action, "action");
+
+
         this.click_id = click_id;
         this.action = action;
         this.view = view;

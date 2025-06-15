@@ -7,7 +7,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public UiMgr(Context context) {
         final OriginalCarDevicePageUiSet originalCarDevicePageUiSet = getOriginalCarDevicePageUiSet(context);

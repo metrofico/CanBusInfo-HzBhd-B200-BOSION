@@ -22,16 +22,16 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000*\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0013\u0010\u0005\u001a\u0004\u0018\u00010\u0006¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\bR\u0013\u0010\t\u001a\u0004\u0018\u00010\n¢\u0006\b\n\u0000\u001a\u0004\b\u000b\u0010\fR\u0013\u0010\r\u001a\u0004\u0018\u00010\u000e¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010¨\u0006\u0011"}, d2 = {"Lcom/hzbhd/canbus/car/_341/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "airPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "getAirPageUiSet", "()Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "amplifierPageUiSet", "Lcom/hzbhd/canbus/ui_set/AmplifierPageUiSet;", "getAmplifierPageUiSet", "()Lcom/hzbhd/canbus/ui_set/AmplifierPageUiSet;", "settingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "getSettingPageUiSet", "()Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private final AirPageUiSet airPageUiSet;
     private final AmplifierPageUiSet amplifierPageUiSet;
     private final SettingPageUiSet settingPageUiSet;
 
     public UiMgr(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         SettingPageUiSet settingUiSet = getSettingUiSet(context);
         this.settingPageUiSet = settingUiSet;
         AirPageUiSet airUiSet = getAirUiSet(context);
@@ -180,7 +180,7 @@ public final class UiMgr extends AbstractUiMgr {
             amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._341.UiMgr.14
 
                 /* compiled from: UiMgr.kt */
-                @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+                
                 /* renamed from: com.hzbhd.canbus.car._341.UiMgr$14$WhenMappings */
                 public /* synthetic */ class WhenMappings {
                     public static final /* synthetic */ int[] $EnumSwitchMapping$0;
@@ -195,7 +195,7 @@ public final class UiMgr extends AbstractUiMgr {
 
                 @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
                 public void position(AmplifierActivity.AmplifierPosition amplifierPosition, int value) {
-                    Intrinsics.checkNotNullParameter(amplifierPosition, "amplifierPosition");
+
                     Log.i("lyn", new StringBuilder().append(' ').append(value).toString());
                     int iRangeNumber = DataHandleUtils.rangeNumber(value + 7, 0, 14);
                     int i = WhenMappings.$EnumSwitchMapping$0[amplifierPosition.ordinal()];
@@ -216,7 +216,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._341.UiMgr.15
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             /* renamed from: com.hzbhd.canbus.car._341.UiMgr$15$WhenMappings */
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
@@ -233,7 +233,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public void progress(AmplifierActivity.AmplifierBand amplifierBand, int progress) {
-                Intrinsics.checkNotNullParameter(amplifierBand, "amplifierBand");
+
                 Log.i("lyn", new StringBuilder().append(' ').append(progress).toString());
                 int iRangeNumber = DataHandleUtils.rangeNumber(progress + 2, 2, 12);
                 int iRangeNumber2 = DataHandleUtils.rangeNumber(progress, 0, 63);

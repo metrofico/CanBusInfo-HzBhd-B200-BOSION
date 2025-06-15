@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class AlertWindowView {
     public boolean addTag = false;
     private TextView contentTxt;

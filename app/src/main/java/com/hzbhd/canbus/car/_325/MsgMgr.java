@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String IS_AIR_LEFT_TEMP = "is_air_left_temp";
     static final String IS_AIR_RIGHT_TEMP = "is_air_right_temp";

@@ -14,7 +14,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private AirActivity mActivity;
     private Context mContext;

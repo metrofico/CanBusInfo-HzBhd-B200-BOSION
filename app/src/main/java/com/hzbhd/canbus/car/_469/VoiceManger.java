@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import com.hzbhd.canbus.car._469.impl.MsAbstractMsgMgr;
 import java.io.IOException;
 
-/* loaded from: classes2.dex */
+
 public class VoiceManger {
     private final int MAX_VOLUME = 100;
     private MediaPlayer mMediaPlayer;

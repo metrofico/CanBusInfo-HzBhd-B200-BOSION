@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     protected static final String CAN_250_SAVE_RADAR_DISP = "__250_SAVE_RADAR_DISP";
     public static int m0x27SettingData = 0;

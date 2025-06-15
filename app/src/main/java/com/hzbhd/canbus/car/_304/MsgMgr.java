@@ -31,7 +31,7 @@ import java.util.HashMap;
 import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static final String SHARE_304_WARN_COUNT = "share_304_warn_count";
     public static final int VEHICLE_TYPE_HIGH_CONFIG = 1;

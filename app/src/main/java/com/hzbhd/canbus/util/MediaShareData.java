@@ -311,14 +311,14 @@ public final class MediaShareData {
                 // Asignación de valores con comprobación nula
                 id = jSONObject.optInt("id");
                 pkgName = jSONObject.optString("pkgName");
-                Intrinsics.checkNotNullExpressionValue(pkgName, "optString(\"pkgName\")");
+
 
                 clsName = jSONObject.optString("clsName");
-                Intrinsics.checkNotNullExpressionValue(clsName, "optString(\"clsName\")");
+
 
                 // Obtener y asignar tipo de fuente
                 SourceConstantsDef.SOURCE_ID type = SourceConstantsDef.SOURCE_ID.getType(id);
-                Intrinsics.checkNotNullExpressionValue(type, "getType(id)");
+
                 source = type;
 
                 Log.i(MediaShareData.TAG, "Source: SHARE_CURRENT_SOURCE_INFO source[" + source + "] preSource[" + preSource + ']');
@@ -454,7 +454,7 @@ public final class MediaShareData {
         }
 
         public final void setRadioInfoSave(String str) {
-            Intrinsics.checkNotNullParameter(str, "<set-?>");
+
             radioInfoSave = str;
         }
 
@@ -1003,7 +1003,7 @@ public final class MediaShareData {
                         JSONObject jSONObject = new JSONObject(str);
                         Video video = INSTANCE;
                         String strOptString = jSONObject.optString("path");
-                        Intrinsics.checkNotNullExpressionValue(strOptString, "optString(\"path\")");
+
                         video.setMPath(strOptString);
                         video.infoChange();
                     } catch (Throwable e) {

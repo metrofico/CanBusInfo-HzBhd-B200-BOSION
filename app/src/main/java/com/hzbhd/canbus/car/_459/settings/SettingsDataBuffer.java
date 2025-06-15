@@ -4,7 +4,7 @@ import android.os.CountDownTimer;
 import com.hzbhd.constant.share.ShareConstants;
 import com.hzbhd.proxy.share.ShareDataManager;
 
-/* loaded from: classes2.dex */
+
 public class SettingsDataBuffer {
     private boolean bufferTag;
     private boolean cw;

@@ -12,7 +12,7 @@ import nfore.android.bt.res.NfDef;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public byte[] airCmd = {22, NfDef.AVRCP_EVENT_ID_UIDS_CHANGED, -11, 112, 40, 0, -2, -32, 0, 0, 0, 0, 0, 1};
     private Context mContext;

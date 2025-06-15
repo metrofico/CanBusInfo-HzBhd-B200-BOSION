@@ -21,7 +21,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_188_IS_SUPPORT_PANORAMIC = "share_188_is_support_panoramic";
     private static final String SHARE_188_LANGUAGE = "share_188_language";

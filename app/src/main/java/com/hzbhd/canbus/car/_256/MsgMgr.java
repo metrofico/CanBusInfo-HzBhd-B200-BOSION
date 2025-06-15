@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int SHARE_256_AMP_BAS_TRE_OFFSET = 10;
     static final int SHARE_256_AMP_FAD_BAL_OFFSET = 16;

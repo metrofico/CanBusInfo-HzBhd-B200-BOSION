@@ -43,9 +43,9 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Ref;
 import kotlin.ranges.IntRange;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000T\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0010\u000e\n\u0002\b\u0004\n\u0002\u0010\u000b\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u000e\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0012\u0010\u001c\u001a\u0004\u0018\u00010\u00172\u0006\u0010\u0002\u001a\u00020\u0003H\u0002J\u0018\u0010\u001d\u001a\u00020\u00062\b\u0010\u0002\u001a\u0004\u0018\u00010\u00032\u0006\u0010\u001e\u001a\u00020\u001fJ \u0010 \u001a\u00020\u00062\b\u0010\u0002\u001a\u0004\u0018\u00010\u00032\u0006\u0010!\u001a\u00020\u001f2\u0006\u0010\"\u001a\u00020\u001fJ\b\u0010#\u001a\u00020$H\u0002J\b\u0010%\u001a\u00020$H\u0002J\u0010\u0010&\u001a\u00020'2\u0006\u0010(\u001a\u00020\u001fH\u0002J \u0010)\u001a\u00020'2\u0006\u0010*\u001a\u00020\u00062\u0006\u0010+\u001a\u00020\u00062\u0006\u0010,\u001a\u00020\u0006H\u0002J\u0010\u0010-\u001a\u00020'2\u0006\u0010.\u001a\u00020\u0006H\u0002J\u000e\u0010/\u001a\u00020'2\u0006\u00100\u001a\u00020\u0006J\u000e\u00101\u001a\u00020'2\u0006\u00100\u001a\u00020\u0006J \u00102\u001a\u00020'2\u0006\u0010.\u001a\u00020\u00062\u0006\u00100\u001a\u00020\u00062\u0006\u00103\u001a\u00020\u0006H\u0002J\u0012\u00104\u001a\u00020'2\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003H\u0016R\u001a\u0010\u0005\u001a\u00020\u0006X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0007\u0010\b\"\u0004\b\t\u0010\nR\u001a\u0010\u000b\u001a\u00020\u0006X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\f\u0010\b\"\u0004\b\r\u0010\nR\u000e\u0010\u000e\u001a\u00020\u000fX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\u0011X\u0082\u0004¢\u0006\u0002\n\u0000R\u001a\u0010\u0012\u001a\u00020\u0003X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0004R\u0010\u0010\u0016\u001a\u0004\u0018\u00010\u0017X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\u0019X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\u001bX\u0082\u0004¢\u0006\u0002\n\u0000¨\u00065"}, d2 = {"Lcom/hzbhd/canbus/car/_18/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "airRearWindMode", "", "getAirRearWindMode", "()I", "setAirRearWindMode", "(I)V", "airWindMode", "getAirWindMode", "setAirWindMode", "mAirPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "mAmplifierPageUiSet", "Lcom/hzbhd/canbus/ui_set/AmplifierPageUiSet;", "mContext", "getMContext", "()Landroid/content/Context;", "setMContext", "mMsgMgr", "Lcom/hzbhd/canbus/car/_18/MsgMgr;", "mParkPageUiSet", "Lcom/hzbhd/canbus/ui_set/ParkPageUiSet;", "mSettingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "getMsgMgr", "getSettingLeftIndexes", "titleSrn", "", "getSettingRightIndex", "leftTitleSrn", "rightTitleStn", "isPanoramicUseBtn", "", "isPanoramicUseCoordinate", "selectABtn", "", "btn", "selectSBtn", "leftPos", "rightPos", "param", "sendACmd", "d0", "sendCarModelData", "d1", "sendPanoramaCmd", "sendSCmd", "d2", "updateUiByDifferentCar", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private int airRearWindMode;
     private int airWindMode;
@@ -57,18 +57,18 @@ public final class UiMgr extends AbstractUiMgr {
     private final SettingPageUiSet mSettingPageUiSet;
 
     public UiMgr(final Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         AirPageUiSet airUiSet = getAirUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(airUiSet, "getAirUiSet(context)");
+
         this.mAirPageUiSet = airUiSet;
         AmplifierPageUiSet amplifierPageUiSet = getAmplifierPageUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(amplifierPageUiSet, "getAmplifierPageUiSet(context)");
+
         this.mAmplifierPageUiSet = amplifierPageUiSet;
         ParkPageUiSet parkPageUiSet = getParkPageUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(parkPageUiSet, "getParkPageUiSet(context)");
+
         this.mParkPageUiSet = parkPageUiSet;
         SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "getSettingUiSet(context)");
+
         this.mSettingPageUiSet = settingUiSet;
         this.mContext = context;
         if (context.getResources().getConfiguration().orientation == 2) {
@@ -305,7 +305,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._18.UiMgr$4$1
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -319,7 +319,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
             public void position(AmplifierActivity.AmplifierPosition amplifierPosition, int value) {
-                Intrinsics.checkNotNullParameter(amplifierPosition, "amplifierPosition");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierPosition.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -83, 2, (byte) DataHandleUtils.rangeNumber(value + 7, 0, 14)});
@@ -334,7 +334,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._18.UiMgr$4$2
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -350,7 +350,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public void progress(AmplifierActivity.AmplifierBand amplifierBand, int progress) {
-                Intrinsics.checkNotNullParameter(amplifierBand, "amplifierBand");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierBand.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -83, 4, (byte) progress});
@@ -436,79 +436,79 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final void setMContext(Context context) {
-        Intrinsics.checkNotNullParameter(context, "<set-?>");
+
         this.mContext = context;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-5$lambda-1, reason: not valid java name */
     public static final void m290lambda5$lambda1(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         this$0.selectABtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-5$lambda-2, reason: not valid java name */
     public static final void m291lambda5$lambda2(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         this$0.selectABtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-5$lambda-3, reason: not valid java name */
     public static final void m292lambda5$lambda3(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         this$0.selectABtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-5$lambda-4, reason: not valid java name */
     public static final void m293lambda5$lambda4(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         this$0.selectABtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-10$lambda-6, reason: not valid java name */
     public static final void m280lambda10$lambda6(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = rearArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         this$0.selectABtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-10$lambda-7, reason: not valid java name */
     public static final void m281lambda10$lambda7(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = rearArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         this$0.selectABtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-10$lambda-8, reason: not valid java name */
     public static final void m282lambda10$lambda8(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = rearArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         this$0.selectABtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-10$lambda-9, reason: not valid java name */
     public static final void m283lambda10$lambda9(UiMgr this$0, RearArea rearArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = rearArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         this$0.selectABtn(str);
     }
 
@@ -524,13 +524,13 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-13$lambda-12, reason: not valid java name */
     public static final void m285lambda13$lambda12(UiMgr this$0, Ref.IntRef mMaxHigh, Ref.IntRef mBtnHeight, Ref.IntRef mBtnWidth, Ref.IntRef mBtnThreeEnd, Ref.IntRef mMaxWidth, Context context, MotionEvent motionEvent) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(mMaxHigh, "$mMaxHigh");
-        Intrinsics.checkNotNullParameter(mBtnHeight, "$mBtnHeight");
-        Intrinsics.checkNotNullParameter(mBtnWidth, "$mBtnWidth");
-        Intrinsics.checkNotNullParameter(mBtnThreeEnd, "$mBtnThreeEnd");
-        Intrinsics.checkNotNullParameter(mMaxWidth, "$mMaxWidth");
-        Intrinsics.checkNotNullParameter(context, "$context");
+
+
+
+
+
+
+
         int x = (int) motionEvent.getX();
         int y = (int) motionEvent.getY();
         int action = motionEvent.getAction();
@@ -566,29 +566,29 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-18$lambda-14, reason: not valid java name */
     public static final void m286lambda18$lambda14(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         this$0.selectSBtn(i, i2, i3);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-18$lambda-15, reason: not valid java name */
     public static final void m287lambda18$lambda15(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         this$0.selectSBtn(i, i2, i3);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-18$lambda-16, reason: not valid java name */
     public static final void m288lambda18$lambda16(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         this$0.selectSBtn(i, i2, i3);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-18$lambda-17, reason: not valid java name */
     public static final void m289lambda18$lambda17(UiMgr this$0, Context context, int i, int i2) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
+
+
         if (i == this$0.getSettingLeftIndexes(context, "S18Title1")) {
             if (i2 == this$0.getSettingRightIndex(context, "S18Title1", "_18_park_0")) {
                 this$0.sendSCmd(1, 10, 1);
@@ -1073,7 +1073,7 @@ public final class UiMgr extends AbstractUiMgr {
     private final MsgMgr getMsgMgr(Context context) {
         if (this.mMsgMgr == null) {
             MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(context);
-            Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._18.MsgMgr");
+
             this.mMsgMgr = (MsgMgr) canMsgMgr;
         }
         return this.mMsgMgr;
@@ -1095,7 +1095,7 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final int getSettingLeftIndexes(Context context, String titleSrn) {
-        Intrinsics.checkNotNullParameter(titleSrn, "titleSrn");
+
         List<SettingPageUiSet.ListBean> list = getPageUiSet(context).getSettingPageUiSet().getList();
         Iterator<SettingPageUiSet.ListBean> it = list.iterator();
         int size = list.size();
@@ -1108,8 +1108,8 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     public final int getSettingRightIndex(Context context, String leftTitleSrn, String rightTitleStn) {
-        Intrinsics.checkNotNullParameter(leftTitleSrn, "leftTitleSrn");
-        Intrinsics.checkNotNullParameter(rightTitleStn, "rightTitleStn");
+
+
         List<SettingPageUiSet.ListBean> list = getPageUiSet(context).getSettingPageUiSet().getList();
         Iterator<SettingPageUiSet.ListBean> it = list.iterator();
         int size = list.size();

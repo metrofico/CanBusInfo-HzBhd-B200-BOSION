@@ -24,7 +24,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_209_FRONT_CAMERA_SWITCH = "share_209_front_camera_switch";
     static final String SHARE_209_FRONT_LINK_TURN_SIGNAL = "share_209_front_link_turn_signal";

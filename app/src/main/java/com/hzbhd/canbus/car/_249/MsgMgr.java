@@ -6,7 +6,7 @@ import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private byte[] mCanBusInfoByte;
     private int[] mCanBusInfoInt;

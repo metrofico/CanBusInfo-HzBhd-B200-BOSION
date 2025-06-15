@@ -11,7 +11,7 @@ import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private OnSettingItemSelectListener mOnSettingItemSelectListener = new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._276.UiMgr.2

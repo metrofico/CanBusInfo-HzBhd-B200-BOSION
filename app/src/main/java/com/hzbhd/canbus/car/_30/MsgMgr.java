@@ -51,7 +51,7 @@ import kotlin.jvm.internal.ByteCompanionObject;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final /* synthetic */ boolean $assertionsDisabled = false;
     static final String SHARE_30_LANGUAGE = "share_30_language";

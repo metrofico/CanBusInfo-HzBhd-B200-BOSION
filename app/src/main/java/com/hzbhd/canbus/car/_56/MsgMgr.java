@@ -34,7 +34,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String _55_IS_RADAR_OPEN = "_55_is_radar_open";
     private int[] mAirFrontDataNow;

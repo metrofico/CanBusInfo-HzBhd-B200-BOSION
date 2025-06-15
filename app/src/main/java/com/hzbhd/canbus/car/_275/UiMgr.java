@@ -5,7 +5,7 @@ import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private OnPanoramicItemClickListener mOnPanoramicItemClickListener = new OnPanoramicItemClickListener() { // from class: com.hzbhd.canbus.car._275.UiMgr.1

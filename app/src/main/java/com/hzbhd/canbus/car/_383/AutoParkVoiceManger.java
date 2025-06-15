@@ -7,7 +7,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import java.io.IOException;
 
-/* loaded from: classes2.dex */
+
 public class AutoParkVoiceManger {
     private final String TAG = "AutoParkVoiceManger";
     private MediaPlayer mMediaPlayer;

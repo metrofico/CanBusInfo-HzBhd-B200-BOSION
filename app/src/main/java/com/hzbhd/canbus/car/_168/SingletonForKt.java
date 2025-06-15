@@ -20,9 +20,9 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: SingletonForKt.kt */
-@Metadata(d1 = {"\u0000R\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u0005\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u0015\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0012\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\bÆ\u0002\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002J\u0016\u0010\u0005\u001a\u00020\u00062\u0006\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\nJ\u000e\u0010\u000b\u001a\u00020\u00062\u0006\u0010\f\u001a\u00020\rJ\u0016\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u00102\u0006\u0010\u0011\u001a\u00020\u0012J\u000e\u0010\u0013\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u0010J\u000e\u0010\u0014\u001a\u00020\r2\u0006\u0010\u000f\u001a\u00020\u0010J\u0016\u0010\u0015\u001a\u00020\u00062\u0006\u0010\u0016\u001a\u00020\u00172\u0006\u0010\u0007\u001a\u00020\bJ\u000e\u0010\u0018\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u0010J\u000e\u0010\u0019\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u0010J\u000e\u0010\u001a\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u0010J\u000e\u0010\u001b\u001a\u00020\u00062\u0006\u0010\u000f\u001a\u00020\u0010J\u000e\u0010\u001c\u001a\u00020\u00062\u0006\u0010\u001d\u001a\u00020\u001eJ\u000e\u0010\u001f\u001a\u00020\u00062\u0006\u0010 \u001a\u00020!R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\""}, d2 = {"Lcom/hzbhd/canbus/car/_168/SingletonForKt;", "", "()V", "lastKnobValue", "", "init", "", "context", "Landroid/content/Context;", "uiMgr", "Lcom/hzbhd/canbus/car/_168/UiMgr;", "sendCarData", "d0", "", "set0x11Data", "frame", "", "mgr", "Lcom/hzbhd/canbus/car/_168/MsgMgr;", "set0x12Data", "set0x21Data", "set0x22Data", "canbusInfo", "", "set0x31Data", "set0x35Data", "set0x56Data", "set0x67Data", "setAirListener", "airPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "setSettingsListener", "mSettingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class SingletonForKt {
     public static final SingletonForKt INSTANCE = new SingletonForKt();
     private static byte lastKnobValue;
@@ -39,16 +39,16 @@ public final class SingletonForKt {
     }
 
     public final void init(Context context, UiMgr uiMgr) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(uiMgr, "uiMgr");
+
+
         UiMgr uiMgr2 = uiMgr;
         InitUtilsKt.initSettingItemsIndexHashMap$default(context, uiMgr2, null, 4, null);
         InitUtilsKt.initDrivingItemsIndexHashMap$default(context, uiMgr2, null, 4, null);
     }
 
     public final void set0x11Data(int[] frame, MsgMgr mgr) {
-        Intrinsics.checkNotNullParameter(frame, "frame");
-        Intrinsics.checkNotNullParameter(mgr, "mgr");
+
+
         int i = frame[7];
         if (!(i >= 0 && i < 21)) {
             if (21 <= i && i < 41) {
@@ -73,8 +73,8 @@ public final class SingletonForKt {
     }
 
     public final void set0x22Data(byte[] canbusInfo, Context context) {
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
-        Intrinsics.checkNotNullParameter(context, "context");
+
+
         byte b = canbusInfo[3];
         byte b2 = lastKnobValue;
         int iAbs = Math.abs(b - b2);
@@ -96,7 +96,7 @@ public final class SingletonForKt {
     }
 
     public final void setSettingsListener(final SettingPageUiSet mSettingPageUiSet) {
-        Intrinsics.checkNotNullParameter(mSettingPageUiSet, "mSettingPageUiSet");
+
         mSettingPageUiSet.setOnSettingItemSwitchListener(new OnSettingItemSwitchListener() { // from class: com.hzbhd.canbus.car._168.SingletonForKt$$ExternalSyntheticLambda8
             @Override // com.hzbhd.canbus.interfaces.OnSettingItemSwitchListener
             public final void onSwitch(int i, int i2, int i3) {
@@ -125,7 +125,7 @@ public final class SingletonForKt {
      */
     /* renamed from: setSettingsListener$lambda-1, reason: not valid java name */
     public static final void m275setSettingsListener$lambda1(SettingPageUiSet mSettingPageUiSet, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(mSettingPageUiSet, "$mSettingPageUiSet");
+
         String titleSrn = mSettingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             switch (titleSrn.hashCode()) {
@@ -152,7 +152,7 @@ public final class SingletonForKt {
     }
 
     public final void set0x56Data(int[] frame) {
-        Intrinsics.checkNotNullParameter(frame, "frame");
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = InitUtilsKt.getMSettingItemIndex().get("S168_x56_2");
         if (itemListBean == null) {
             return;
@@ -163,7 +163,7 @@ public final class SingletonForKt {
     public final void set0x31Data(int[] frame) {
         String str;
         String str2;
-        Intrinsics.checkNotNullParameter(frame, "frame");
+
         GeneralAirData.power = DataHandleUtils.getBoolBit6(frame[2]);
         GeneralAirData.ac_auto = DataHandleUtils.getBoolBit4(frame[2]);
         GeneralAirData.sync = DataHandleUtils.getIntFromByteWithBit(frame[2], 2, 2) == 1;
@@ -296,7 +296,7 @@ public final class SingletonForKt {
     }
 
     public final void set0x35Data(int[] frame) {
-        Intrinsics.checkNotNullParameter(frame, "frame");
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = InitUtilsKt.getMSettingItemIndex().get("S168_x35_1");
         if (itemListBean == null) {
             return;
@@ -305,7 +305,7 @@ public final class SingletonForKt {
     }
 
     public final void set0x67Data(int[] frame) {
-        Intrinsics.checkNotNullParameter(frame, "frame");
+
         SettingPageUiSet.ListBean.ItemListBean<?> itemListBean = InitUtilsKt.getMSettingItemIndex().get("S168_x67_1");
         if (itemListBean != null) {
             itemListBean.setValue(Integer.valueOf(MsgMgrKt.getValueOfBoolean(DataHandleUtils.getBoolBit4(frame[3]))));
@@ -394,7 +394,7 @@ public final class SingletonForKt {
     }
 
     public final void setAirListener(AirPageUiSet airPageUiSet) {
-        Intrinsics.checkNotNullParameter(airPageUiSet, "airPageUiSet");
+
         final FrontArea frontArea = airPageUiSet.getFrontArea();
         frontArea.setOnAirBtnClickListeners(new OnAirBtnClickListener[]{new OnAirBtnClickListener() { // from class: com.hzbhd.canbus.car._168.SingletonForKt$$ExternalSyntheticLambda0
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener
@@ -467,7 +467,7 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-9$lambda-5, reason: not valid java name */
     public static final void m269setAirListener$lambda15$lambda9$lambda5(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         setAirListener$select(str);
     }
 
@@ -475,7 +475,7 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-9$lambda-6, reason: not valid java name */
     public static final void m270setAirListener$lambda15$lambda9$lambda6(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         setAirListener$select(str);
     }
 
@@ -483,7 +483,7 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-9$lambda-7, reason: not valid java name */
     public static final void m271setAirListener$lambda15$lambda9$lambda7(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         setAirListener$select(str);
     }
 
@@ -491,7 +491,7 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-9$lambda-8, reason: not valid java name */
     public static final void m272setAirListener$lambda15$lambda9$lambda8(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         setAirListener$select(str);
     }
 
@@ -499,7 +499,7 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-14$lambda-10, reason: not valid java name */
     public static final void m265setAirListener$lambda15$lambda14$lambda10(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         setAirListener$select(str);
     }
 
@@ -507,7 +507,7 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-14$lambda-11, reason: not valid java name */
     public static final void m266setAirListener$lambda15$lambda14$lambda11(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         setAirListener$select(str);
     }
 
@@ -515,7 +515,7 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-14$lambda-12, reason: not valid java name */
     public static final void m267setAirListener$lambda15$lambda14$lambda12(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         setAirListener$select(str);
     }
 
@@ -523,12 +523,12 @@ public final class SingletonForKt {
     /* renamed from: setAirListener$lambda-15$lambda-14$lambda-13, reason: not valid java name */
     public static final void m268setAirListener$lambda15$lambda14$lambda13(RearArea rearArea, int i) {
         String str = rearArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         setAirListener$select(str);
     }
 
     public final int set0x21Data(int[] frame) {
-        Intrinsics.checkNotNullParameter(frame, "frame");
+
         switch (frame[2]) {
             case 1:
                 return 1;
@@ -622,7 +622,7 @@ public final class SingletonForKt {
     }
 
     public final void set0x12Data(int[] frame) {
-        Intrinsics.checkNotNullParameter(frame, "frame");
+
         DriverDataPageUiSet.Page.Item item = InitUtilsKt.getMDrivingItemIndex().get("instaneous_fuel_consumption");
         if (item != null) {
             item.setValue(new StringBuilder().append(frame[5]).append('.').append(frame[6]).toString());

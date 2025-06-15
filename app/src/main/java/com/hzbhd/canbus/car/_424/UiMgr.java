@@ -11,7 +11,7 @@ import com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener;
 import com.hzbhd.canbus.interfaces.OnTirePageStatusListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     AirPageUiSet airPageUiSet;
     int i = 26;

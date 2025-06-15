@@ -26,7 +26,7 @@ import java.util.Iterator;
 import java.util.List;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public static int accState = 0;
     public static int cruiseSpeedLimit_Data0Bit0 = 0;

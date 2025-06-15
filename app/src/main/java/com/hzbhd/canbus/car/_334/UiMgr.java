@@ -33,7 +33,7 @@ import java.util.Objects;
 import kotlin.jvm.internal.ByteCompanionObject;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public List<OriginalCarDevicePageUiSet.Item> cdPageList;
     public List<OriginalCarDevicePageUiSet.Item> dvdPageList;

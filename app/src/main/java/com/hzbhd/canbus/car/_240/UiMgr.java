@@ -24,9 +24,9 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.ByteCompanionObject;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000V\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\u0010\u0010\u001b\u001a\u00020\u001c2\u0006\u0010\u001d\u001a\u00020\u001eH\u0002J\u0010\u0010\u001f\u001a\u00020\u001c2\u0006\u0010 \u001a\u00020\u0003H\u0016R\u000e\u0010\u0002\u001a\u00020\u0003X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\b\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u000bX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\u000fX\u0082\u0004¢\u0006\u0002\n\u0000R\u0011\u0010\u0010\u001a\u00020\u0011¢\u0006\b\n\u0000\u001a\u0004\b\u0012\u0010\u0013R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0015X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0017\u001a\u00020\u0018X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\u001aX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006!"}, d2 = {"Lcom/hzbhd/canbus/car/_240/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "mContext", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mOnAirBtnClickListenerBottom", "Lcom/hzbhd/canbus/adapter/interfaces/OnAirBtnClickListener;", "mOnAirBtnClickListenerCenter1", "mOnAirBtnClickListenerCenter2", "mOnAirBtnClickListenerTop", "mOnAirPageStatusListener", "Lcom/hzbhd/canbus/adapter/interfaces/OnAirPageStatusListener;", "mOnSettingItemSelectListener", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSelectListener;", "mOnSettingPageStatusListener", "Lcom/hzbhd/canbus/interfaces/OnSettingPageStatusListener;", "mParkPageUiSet", "Lcom/hzbhd/canbus/ui_set/ParkPageUiSet;", "getMParkPageUiSet", "()Lcom/hzbhd/canbus/ui_set/ParkPageUiSet;", "monUpDownClickListenerLeft", "Lcom/hzbhd/canbus/adapter/interfaces/OnAirTemperatureUpDownClickListener;", "monUpDownClickListenerRight", "onSettingItemSeekbarSelectListener", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSeekbarSelectListener;", "setWindSpeedViewOnClickListener", "Lcom/hzbhd/canbus/adapter/interfaces/OnAirWindSpeedUpDownClickListener;", "sendPanoramaData", "", "d0", "", "updateUiByDifferentCar", "context", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private final Context mContext;
     private final OnAirBtnClickListener mOnAirBtnClickListenerBottom;
@@ -43,7 +43,7 @@ public final class UiMgr extends AbstractUiMgr {
     private final OnAirWindSpeedUpDownClickListener setWindSpeedViewOnClickListener;
 
     public UiMgr(Context mContext) {
-        Intrinsics.checkNotNullParameter(mContext, "mContext");
+
         this.mContext = mContext;
         OnAirWindSpeedUpDownClickListener onAirWindSpeedUpDownClickListener = new OnAirWindSpeedUpDownClickListener() { // from class: com.hzbhd.canbus.car._240.UiMgr$setWindSpeedViewOnClickListener$1
             @Override // com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener
@@ -144,7 +144,7 @@ public final class UiMgr extends AbstractUiMgr {
         };
         this.onSettingItemSeekbarSelectListener = onSettingItemSeekbarSelectListener;
         ParkPageUiSet parkPageUiSet = getParkPageUiSet(mContext);
-        Intrinsics.checkNotNullExpressionValue(parkPageUiSet, "getParkPageUiSet(mContext)");
+
         this.mParkPageUiSet = parkPageUiSet;
         final SettingPageUiSet settingUiSet = getSettingUiSet(mContext);
         settingUiSet.setOnSettingItemSelectListener(onSettingItemSelectListener);
@@ -171,7 +171,7 @@ public final class UiMgr extends AbstractUiMgr {
 
     @Override // com.hzbhd.canbus.ui_mgr.AbstractUiMgr, com.hzbhd.canbus.interfaces.UiMgrInterface
     public void updateUiByDifferentCar(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         super.updateUiByDifferentCar(context);
         int currentCarId = getCurrentCarId();
         if (currentCarId == 0 || currentCarId == 1) {
@@ -193,7 +193,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: mOnAirPageStatusListener$lambda-0, reason: not valid java name */
     public static final void m322mOnAirPageStatusListener$lambda0(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 1) {
             this$0.sendData(new byte[]{22, -112, 35});
         }
@@ -284,7 +284,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: mOnSettingPageStatusListener$lambda-5, reason: not valid java name */
     public static final void m324mOnSettingPageStatusListener$lambda5(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i == 0) {
             this$0.sendData(new byte[]{22, -112, 64});
         }
@@ -293,7 +293,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: mOnSettingItemSelectListener$lambda-6, reason: not valid java name */
     public static final void m323mOnSettingItemSelectListener$lambda6(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (i != 0) {
             if (i == 1 && i2 == 0) {
                 CanbusMsgSender.sendMsg(new byte[]{22, -116, (byte) i3});
@@ -318,7 +318,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: onSettingItemSeekbarSelectListener$lambda-7, reason: not valid java name */
     public static final void m325onSettingItemSeekbarSelectListener$lambda7(UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         CanbusMsgSender.sendMsg(new byte[]{22, ByteCompanionObject.MIN_VALUE, 1, (byte) DataHandleUtils.setIntFromByteWithBit(DataHandleUtils.setIntByteWithBit(0, 7, Settings.System.getInt(this$0.mContext.getContentResolver(), "data0_7", 0) == 1), i3, 0, 7)});
     }
 
@@ -334,7 +334,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: _init_$lambda-8, reason: not valid java name */
     public static final void m315_init_$lambda8(SettingPageUiSet settingPageUiSet, UiMgr this$0, int i, int i2) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (Intrinsics.areEqual(titleSrn, "low_car")) {
             m317lambda8$sendCarData(0);
@@ -347,7 +347,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: _init_$lambda-9, reason: not valid java name */
     public static final void m316_init_$lambda9(UiMgr this$0, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         switch (i + 1) {
             case 1:
                 this$0.sendPanoramaData(1);

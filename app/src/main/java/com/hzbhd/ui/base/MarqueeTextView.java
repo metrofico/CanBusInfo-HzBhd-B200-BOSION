@@ -53,7 +53,7 @@ public class MarqueeTextView extends TextView {
             return;
         }
         if (LogUtil.log5()) {
-            LogUtil.d(Intrinsics.stringPlus("onLayout: ", getText()));
+
         }
         if (this.refreshText) {
             this.refreshText = false;
@@ -71,7 +71,7 @@ public class MarqueeTextView extends TextView {
     protected void onVisibilityChanged(View changedView, int visibility) {
         super.onVisibilityChanged(changedView, visibility);
         if (LogUtil.log5()) {
-            LogUtil.d(Intrinsics.stringPlus("onVisibilityChanged: ", visibility));
+
         }
         if (visibility == 0) {
             this.refreshText = true;

@@ -1,6 +1,6 @@
 package com.hzbhd.canbus.car._470;
 
-/* loaded from: classes2.dex */
+
 public class MdRadarData {
     public static int distanceRl = 0;
     public static int distanceRml = 0;

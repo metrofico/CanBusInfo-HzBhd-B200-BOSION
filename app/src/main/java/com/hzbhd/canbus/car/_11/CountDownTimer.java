@@ -5,7 +5,7 @@ import android.os.Looper;
 import android.os.Message;
 import com.hzbhd.canbus.car_cus._448.Interface.ActionCallback;
 
-/* loaded from: classes.dex */
+
 public class CountDownTimer {
     private static CountDownTimer myCountDownTimer;
     public final int ACTION_TAG = 255;

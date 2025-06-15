@@ -21,9 +21,9 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u00002\u00020\u0001:\u0001\u000eB\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u0016\u0010\u0005\u001a\n \u0007*\u0004\u0018\u00010\u00060\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\b\u001a\n \u0007*\u0004\u0018\u00010\t0\tX\u0082\u0004¢\u0006\u0002\n\u0000R\u0012\u0010\n\u001a\u00060\u000bR\u00020\u0000X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\f\u001a\u00020\rX\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u000f"}, d2 = {"Lcom/hzbhd/canbus/car/_404/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mAirPageUiSet", "Lcom/hzbhd/canbus/adapter/bean/AirPageUiSet;", "kotlin.jvm.PlatformType", "mParkPageUiSet", "Lcom/hzbhd/canbus/ui_set/ParkPageUiSet;", "mSettingHandleListener", "Lcom/hzbhd/canbus/car/_404/UiMgr$SettingHandleListener;", "mSettingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "SettingHandleListener", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private final AirPageUiSet mAirPageUiSet;
     private final ParkPageUiSet mParkPageUiSet;
@@ -31,9 +31,9 @@ public final class UiMgr extends AbstractUiMgr {
     private final SettingPageUiSet mSettingPageUiSet;
 
     public UiMgr(final Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         SettingPageUiSet settingUiSet = getSettingUiSet(context);
-        Intrinsics.checkNotNullExpressionValue(settingUiSet, "getSettingUiSet(context)");
+
         this.mSettingPageUiSet = settingUiSet;
         SettingHandleListener settingHandleListener = new SettingHandleListener(this, settingUiSet);
         this.mSettingHandleListener = settingHandleListener;
@@ -173,7 +173,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-0, reason: not valid java name */
     public static final void m825lambda4$lambda0(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[0][it]");
+
         m829lambda4$selectAirPageBtn(str);
     }
 
@@ -181,7 +181,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-1, reason: not valid java name */
     public static final void m826lambda4$lambda1(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[1][it]");
+
         m829lambda4$selectAirPageBtn(str);
     }
 
@@ -189,7 +189,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-2, reason: not valid java name */
     public static final void m827lambda4$lambda2(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[2][it]");
+
         m829lambda4$selectAirPageBtn(str);
     }
 
@@ -197,14 +197,14 @@ public final class UiMgr extends AbstractUiMgr {
     /* renamed from: lambda-4$lambda-3, reason: not valid java name */
     public static final void m828lambda4$lambda3(FrontArea frontArea, int i) {
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "this.lineBtnAction[3][it]");
+
         m829lambda4$selectAirPageBtn(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: _init_$lambda-6, reason: not valid java name */
     public static final void m823_init_$lambda6(Context context, MotionEvent motionEvent) {
-        Intrinsics.checkNotNullParameter(context, "$context");
+
         int i = context.getResources().getDisplayMetrics().widthPixels;
         int i2 = context.getResources().getDisplayMetrics().heightPixels;
         int x = (int) (motionEvent.getX() * (160.0f / i));
@@ -220,13 +220,13 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     /* compiled from: UiMgr.kt */
-    @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0002\b\u0005\b\u0086\u0004\u0018\u00002\u00020\u00012\u00020\u00022\u00020\u0003B\r\u0012\u0006\u0010\u0004\u001a\u00020\u0005¢\u0006\u0002\u0010\u0006J \u0010\t\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\fH\u0016J \u0010\u000f\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\fH\u0016J \u0010\u0010\u001a\u00020\n2\u0006\u0010\u000b\u001a\u00020\f2\u0006\u0010\r\u001a\u00020\f2\u0006\u0010\u000e\u001a\u00020\fH\u0002R\u0011\u0010\u0004\u001a\u00020\u0005¢\u0006\b\n\u0000\u001a\u0004\b\u0007\u0010\b¨\u0006\u0011"}, d2 = {"Lcom/hzbhd/canbus/car/_404/UiMgr$SettingHandleListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSelectListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSwitchListener;", "Lcom/hzbhd/canbus/interfaces/OnSettingItemSeekbarSelectListener;", "mSettingPageUiSet", "Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "(Lcom/hzbhd/canbus/car/_404/UiMgr;Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;)V", "getMSettingPageUiSet", "()Lcom/hzbhd/canbus/ui_set/SettingPageUiSet;", "onClickItem", "", "leftPos", "", "rightPos", "value", "onSwitch", "selectSettingsBtn", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public final class SettingHandleListener implements OnSettingItemSelectListener, OnSettingItemSwitchListener, OnSettingItemSeekbarSelectListener {
         private final SettingPageUiSet mSettingPageUiSet;
         final /* synthetic */ UiMgr this$0;
 
         public SettingHandleListener(UiMgr uiMgr, SettingPageUiSet mSettingPageUiSet) {
-            Intrinsics.checkNotNullParameter(mSettingPageUiSet, "mSettingPageUiSet");
+
             this.this$0 = uiMgr;
             this.mSettingPageUiSet = mSettingPageUiSet;
         }

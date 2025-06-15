@@ -5,7 +5,7 @@ import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private boolean mBackStatus;
     private byte[] mCanBusInfoByte;

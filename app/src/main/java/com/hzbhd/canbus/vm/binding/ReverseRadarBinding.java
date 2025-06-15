@@ -37,7 +37,7 @@ public final class ReverseRadarBinding extends EmptyBinding {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReverseRadarBinding(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.view_radar = getRoot().findViewById(R.id.view_radar);
     }
 
@@ -73,7 +73,7 @@ public final class ReverseRadarBinding extends EmptyBinding {
                     if (view_radar == null) {
                         return;
                     }
-                    Intrinsics.checkNotNullExpressionValue(it, "it");
+
                     view_radar.setVisibility(it);
                 }
             });

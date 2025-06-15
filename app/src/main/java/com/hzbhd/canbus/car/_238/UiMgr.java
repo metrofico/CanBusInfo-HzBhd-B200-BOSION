@@ -21,7 +21,7 @@ import com.hzbhd.canbus.util.LogUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private OnAirTemperatureUpDownClickListener mTempSetViewOnUpDownClickListenerLeft = new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._238.UiMgr.3

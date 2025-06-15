@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.hzbhd.R;
 import com.hzbhd.canbus.ui_set.SyncAction;
 
-/* loaded from: classes2.dex */
+
 public class EcoWindow {
     private ActionCallback actionCallback;
     private boolean addTag;

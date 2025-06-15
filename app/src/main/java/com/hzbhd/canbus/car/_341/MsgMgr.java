@@ -24,9 +24,9 @@ import kotlin.ranges.IntRange;
 import kotlin.text.Charsets;
 import kotlin.text.StringsKt;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000b\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0015\n\u0002\b\u0003\n\u0002\u0010\b\n\u0002\b\t\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0010\u0002\n\u0002\b\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0012\n\u0002\b\u0002\n\u0002\u0010\n\n\u0002\b\u0006\n\u0002\u0010\u000b\n\u0002\b\u0003\n\u0002\u0010\u0005\n\u0002\b\r\n\u0002\u0010\t\n\u0002\b\u0014\n\u0002\u0018\u0002\n\u0002\b\u000e\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0010\u0010\u0017\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\b\u0010\u001a\u001a\u00020\u0018H\u0016J&\u0010\u001b\u001a\u00020\u00182\b\u0010\u001c\u001a\u0004\u0018\u00010\u00122\b\u0010\u001d\u001a\u0004\u0018\u00010\u00122\b\u0010\u001e\u001a\u0004\u0018\u00010\u0012H\u0016J\u001c\u0010\u001f\u001a\u00020\u00182\b\u0010 \u001a\u0004\u0018\u00010!2\b\u0010\"\u001a\u0004\u0018\u00010#H\u0016J\u0010\u0010$\u001a\u00020\b2\u0006\u0010%\u001a\u00020&H\u0002J\b\u0010'\u001a\u00020\u0018H\u0016J\u0018\u0010(\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0018\u0010)\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0018\u0010*\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0010\u0010+\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!H\u0016J\u0018\u0010,\u001a\u00020-2\u0006\u0010\u0019\u001a\u00020\u00042\u0006\u0010.\u001a\u00020\bH\u0002JÄ\u0001\u0010/\u001a\u00020\u00182\u0006\u00100\u001a\u0002012\u0006\u00102\u001a\u0002012\u0006\u00103\u001a\u00020\b2\u0006\u00104\u001a\u00020\b2\u0006\u00105\u001a\u0002012\u0006\u00106\u001a\u0002012\u0006\u00107\u001a\u0002012\u0006\u00108\u001a\u0002012\u0006\u00109\u001a\u0002012\u0006\u0010:\u001a\u0002012\b\u0010;\u001a\u0004\u0018\u00010\u00122\b\u0010<\u001a\u0004\u0018\u00010\u00122\b\u0010=\u001a\u0004\u0018\u00010\u00122\u0006\u0010>\u001a\u00020?2\u0006\u0010@\u001a\u0002012\u0006\u0010A\u001a\u00020\b2\u0006\u0010B\u001a\u00020-2\u0006\u0010C\u001a\u00020?2\b\u0010D\u001a\u0004\u0018\u00010\u00122\b\u0010E\u001a\u0004\u0018\u00010\u00122\b\u0010F\u001a\u0004\u0018\u00010\u00122\u0006\u0010G\u001a\u00020-H\u0016J6\u0010H\u001a\u00020\u00182\u0006\u0010I\u001a\u00020\b2\b\u0010J\u001a\u0004\u0018\u00010\u00122\b\u0010K\u001a\u0004\u0018\u00010\u00122\b\u0010L\u001a\u0004\u0018\u00010\u00122\u0006\u0010M\u001a\u00020\bH\u0016J\u0018\u0010N\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0018\u0010O\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J:\u0010P\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010Q\u001a\u00020\u00042\u0006\u0010R\u001a\u00020\u00042\u0018\u0010S\u001a\u0014\u0012\u0004\u0012\u00020!\u0012\u0004\u0012\u00020\u0004\u0012\u0004\u0012\u00020\u00180TH\u0002J\"\u0010U\u001a\u00020\u00182\u0006\u0010V\u001a\u00020\b2\u0006\u0010W\u001a\u00020\b2\b\b\u0002\u0010X\u001a\u00020#H\u0002J\u001a\u0010Y\u001a\u00020\u00182\u0006\u0010Z\u001a\u00020\b2\b\b\u0002\u0010[\u001a\u00020\u0012H\u0002J\u001a\u0010\\\u001a\u00020\u00182\b\u0010 \u001a\u0004\u0018\u00010!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0018\u0010]\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0018\u0010^\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0010\u0010_\u001a\u00020\u00182\u0006\u0010\u0019\u001a\u00020\u0004H\u0002J\u0018\u0010`\u001a\u00020\u00182\u0006\u0010 \u001a\u00020!2\u0006\u0010a\u001a\u00020#H\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0006\u001a\u00020\u0004X\u0082\u000e¢\u0006\u0002\n\u0000R\u001e\u0010\u0007\u001a\u0004\u0018\u00010\bX\u0086\u000e¢\u0006\u0010\n\u0002\u0010\r\u001a\u0004\b\t\u0010\n\"\u0004\b\u000b\u0010\fR\u001e\u0010\u000e\u001a\u0004\u0018\u00010\bX\u0086\u000e¢\u0006\u0010\n\u0002\u0010\r\u001a\u0004\b\u000f\u0010\n\"\u0004\b\u0010\u0010\fR\u001a\u0010\u0011\u001a\u00020\u0012X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0013\u0010\u0014\"\u0004\b\u0015\u0010\u0016¨\u0006b"}, d2 = {"Lcom/hzbhd/canbus/car/_341/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "lastArrayForFrontAirCondition", "", "lastArrayForGeneralInfo", "lastArrayForRearAirCondition", "stagedData1", "", "getStagedData1", "()Ljava/lang/Integer;", "setStagedData1", "(Ljava/lang/Integer;)V", "Ljava/lang/Integer;", "stagedData7", "getStagedData7", "setStagedData7", MainAction.TEST, "", "getTest", "()Ljava/lang/String;", "setTest", "(Ljava/lang/String;)V", "amplifierInfo", "", "mCanBusInfoInt", "auxInInfoChange", "btMusicId3InfoChange", LcdInfoShare.MediaInfo.title, LcdInfoShare.MediaInfo.artist, LcdInfoShare.MediaInfo.album, "canbusInfoChange", "context", "Landroid/content/Context;", "canbusInfo", "", "culTrackAngle", "track", "", "dtvInfoChange", "frontAirConditionInfo", "frontRadarInfo", "generalInfo", "initCommand", "isOnlyChanged", "", "param", "musicInfoChange", "stoagePath", "", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playModel", "playIndex", "isPlaying", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "rearAirConditionInfo", "rearRadarInfo", "rptCmdFilter", "current", "last", "func", "Lkotlin/Function2;", "sendMediaInfo", "data0", "data1", "data2_7", "sendTextInfo", "dataType", "text", "steeringWheelAngle", "steeringWheelKeys", "systemInfo", "vehicleInfo", "versionInfo", "mCanBusInfoByte", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     private int[] lastArrayForFrontAirCondition;
     private int[] lastArrayForGeneralInfo;
@@ -74,12 +74,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (str != null) {
             return str;
         }
-        Intrinsics.throwUninitializedPropertyAccessException(MainAction.TEST);
+
         return null;
     }
 
     public final void setTest(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.test = str;
     }
 
@@ -90,7 +90,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             return;
         }
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         int i = byteArrayToIntArray[1];
         if (i == 29) {
             frontRadarInfo(context, byteArrayToIntArray);
@@ -138,7 +138,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+    
     /* renamed from: com.hzbhd.canbus.car._341.MsgMgr$canbusInfoChange$1, reason: invalid class name */
     /* synthetic */ class AnonymousClass1 extends FunctionReferenceImpl implements Function2<Context, int[], Unit> {
         AnonymousClass1(Object obj) {
@@ -153,14 +153,14 @@ public final class MsgMgr extends AbstractMsgMgr {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context p0, int[] p1) {
-            Intrinsics.checkNotNullParameter(p0, "p0");
-            Intrinsics.checkNotNullParameter(p1, "p1");
+
+
             ((MsgMgr) this.receiver).generalInfo(p0, p1);
         }
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+    
     /* renamed from: com.hzbhd.canbus.car._341.MsgMgr$canbusInfoChange$2, reason: invalid class name */
     /* synthetic */ class AnonymousClass2 extends FunctionReferenceImpl implements Function2<Context, int[], Unit> {
         AnonymousClass2(Object obj) {
@@ -175,14 +175,14 @@ public final class MsgMgr extends AbstractMsgMgr {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context p0, int[] p1) {
-            Intrinsics.checkNotNullParameter(p0, "p0");
-            Intrinsics.checkNotNullParameter(p1, "p1");
+
+
             ((MsgMgr) this.receiver).frontAirConditionInfo(p0, p1);
         }
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+    
     /* renamed from: com.hzbhd.canbus.car._341.MsgMgr$canbusInfoChange$3, reason: invalid class name */
     /* synthetic */ class AnonymousClass3 extends FunctionReferenceImpl implements Function2<Context, int[], Unit> {
         AnonymousClass3(Object obj) {
@@ -197,15 +197,15 @@ public final class MsgMgr extends AbstractMsgMgr {
 
         /* renamed from: invoke, reason: avoid collision after fix types in other method */
         public final void invoke2(Context p0, int[] p1) {
-            Intrinsics.checkNotNullParameter(p0, "p0");
-            Intrinsics.checkNotNullParameter(p1, "p1");
+
+
             ((MsgMgr) this.receiver).rearAirConditionInfo(p0, p1);
         }
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         super.initCommand(context);
         GeneralDoorData.isShowHandBrake = true;
         GeneralDoorData.isSubShowSeatBelt = true;
@@ -494,9 +494,9 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     private final void systemInfo(Context context, int[] mCanBusInfoInt) {
         String strByResId = CommUtil.getStrByResId(context, "_341_setting_0_0_0");
-        Intrinsics.checkNotNullExpressionValue(strByResId, "getStrByResId(context, \"_341_setting_0_0_0\")");
+
         String strByResId2 = CommUtil.getStrByResId(context, "_341_setting_0_0_1");
-        Intrinsics.checkNotNullExpressionValue(strByResId2, "getStrByResId(context, \"_341_setting_0_0_1\")");
+
         ArrayList arrayList = new ArrayList();
         arrayList.add(new SettingUpdateEntity(0, 0, Integer.valueOf(DataHandleUtils.getBoolBit6(mCanBusInfoInt[2]) ? 1 : 0)));
         arrayList.add(new SettingUpdateEntity(0, 1, Integer.valueOf(DataHandleUtils.getBoolBit7(mCanBusInfoInt[2]) ? 1 : 0)));
@@ -590,10 +590,10 @@ public final class MsgMgr extends AbstractMsgMgr {
         byte[] bytes;
         if (text.length() >= 15) {
             bytes = (StringsKt.substring(text, new IntRange(0, 15)) + "...").getBytes(Charsets.UTF_16LE);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         } else {
             bytes = text.getBytes(Charsets.UTF_16LE);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         }
         CanbusMsgSender.sendMsg(DataHandleUtils.byteMerger(new byte[]{22, (byte) dataType, 17}, bytes));
     }

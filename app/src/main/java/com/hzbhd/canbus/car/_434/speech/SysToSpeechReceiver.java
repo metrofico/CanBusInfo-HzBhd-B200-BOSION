@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import com.hzbhd.canbus.car._434.speech.SRxData;
 
-/* loaded from: classes2.dex */
+
 public class SysToSpeechReceiver {
     private Context mContext;
     private Intent mIntent = null;

@@ -15,7 +15,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import kotlin.jvm.internal.ByteCompanionObject;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final String SHARE_236_PARK_ASSIST = "share_236_park_assist";
     private MsgMgr mMsgMgr;

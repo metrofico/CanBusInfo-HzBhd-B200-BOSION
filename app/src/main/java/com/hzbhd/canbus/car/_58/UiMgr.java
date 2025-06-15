@@ -11,7 +11,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private OriginalCarDevicePageUiSet mOriginalCarDevicePageUiSet;

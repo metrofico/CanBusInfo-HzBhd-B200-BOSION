@@ -23,7 +23,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.constant.disc.MpegConstantsDef;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private MsgMgr mMsgMgr;

@@ -7,7 +7,7 @@ import com.hzbhd.canbus.car_cus._283.MessageSender;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes2.dex */
+
 public class MeterManager {
     public static byte[] m0xE6Data = {22, -26, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 

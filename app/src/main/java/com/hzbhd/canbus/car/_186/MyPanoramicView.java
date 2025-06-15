@@ -14,7 +14,7 @@ import android.widget.TextView;
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 
-/* loaded from: classes.dex */
+
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {
     private Button mBtnCamera;
     private Context mContext;

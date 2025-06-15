@@ -24,9 +24,9 @@ import kotlin.jvm.internal.DefaultConstructorMarker;
 import kotlin.jvm.internal.Intrinsics;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000\u001a\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\u0018\u0000 \u00072\u00020\u0001:\u0001\u0007B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\b"}, d2 = {"Lcom/hzbhd/canbus/car/_328/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mMsgMgr", "Lcom/hzbhd/canbus/car/_328/MsgMgr;", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     public static final String SHARE_IS_SUPPORT_PANORAMIC = "share_is_support_panoramic";
     private static final String TAG = "_330_UiMgr";
@@ -37,9 +37,9 @@ public final class UiMgr extends AbstractUiMgr {
     private static final byte[] panoramicCommand = {22, -57, 1};
 
     public UiMgr(final Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(context);
-        Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._328.MsgMgr");
+
         this.mMsgMgr = (MsgMgr) canMsgMgr;
         final SettingPageUiSet settingUiSet = getSettingUiSet(context);
         final byte[] bArr = {22, -125, -1, 0};
@@ -77,7 +77,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._328.UiMgr$2$1
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -93,7 +93,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public void progress(AmplifierActivity.AmplifierBand amplifierBand, int progress) {
-                Intrinsics.checkNotNullParameter(amplifierBand, "amplifierBand");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierBand.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -124, 4, (byte) (progress + 2)});
@@ -114,7 +114,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._328.UiMgr$2$2
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -128,7 +128,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
             public void position(AmplifierActivity.AmplifierPosition amplifierPosition, int value) {
-                Intrinsics.checkNotNullParameter(amplifierPosition, "amplifierPosition");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierPosition.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -124, 1, (byte) (11 - value)});
@@ -156,7 +156,7 @@ public final class UiMgr extends AbstractUiMgr {
     }
 
     /* compiled from: UiMgr.kt */
-    @Metadata(d1 = {"\u0000\u001c\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u000e\u0010\u0003\u001a\u00020\u0004X\u0086T¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0004X\u0082T¢\u0006\u0002\n\u0000R\u0011\u0010\u0006\u001a\u00020\u0007¢\u0006\b\n\u0000\u001a\u0004\b\b\u0010\t¨\u0006\n"}, d2 = {"Lcom/hzbhd/canbus/car/_328/UiMgr$Companion;", "", "()V", "SHARE_IS_SUPPORT_PANORAMIC", "", "TAG", "panoramicCommand", "", "getPanoramicCommand", "()[B", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final class Companion {
         public /* synthetic */ Companion(DefaultConstructorMarker defaultConstructorMarker) {
             this();
@@ -181,9 +181,9 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: lambda-37$lambda-29, reason: not valid java name */
     public static final void m655lambda37$lambda29(SettingPageUiSet settingPageUiSet, byte[] m0x83Command, Context context, UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(m0x83Command, "$m0x83Command");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
+
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             int iHashCode = titleSrn.hashCode();
@@ -491,7 +491,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-37$lambda-30, reason: not valid java name */
     public static final void m656lambda37$lambda30(SettingPageUiSet settingPageUiSet, UiMgr this$0, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (Intrinsics.areEqual(settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn(), "amplifier_switch")) {
             this$0.mMsgMgr.setAmplifierSwitch(i3);
         }
@@ -515,7 +515,7 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: lambda-37$lambda-35, reason: not valid java name */
     public static final void m658lambda37$lambda35(SettingPageUiSet settingPageUiSet, byte[] m0x83Command, int i, int i2) {
-        Intrinsics.checkNotNullParameter(m0x83Command, "$m0x83Command");
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             int iHashCode = titleSrn.hashCode();
@@ -580,7 +580,7 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-41$lambda-39, reason: not valid java name */
     public static final void m660lambda41$lambda39(ParkPageUiSet parkPageUiSet, Context context) {
-        Intrinsics.checkNotNullParameter(context, "$context");
+
         parkPageUiSet.setShowPanoramic(SharePreUtil.getIntValue(context, SHARE_IS_SUPPORT_PANORAMIC, 0) == 1);
     }
 

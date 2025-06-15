@@ -61,7 +61,7 @@ import java.util.Arrays;
 import kotlin.jvm.internal.ByteCompanionObject;
 import kotlin.text.Typography;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static boolean CHANG_TIME = false;
     public static final ComponentName PA6SAirActivity = new ComponentName("com.hzbhd.canbus", "com.hzbhd.canbus.car_cus._283.activity.AirActivity");

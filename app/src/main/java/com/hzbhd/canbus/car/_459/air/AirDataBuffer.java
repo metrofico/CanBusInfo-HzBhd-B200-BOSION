@@ -5,7 +5,7 @@ import android.util.Log;
 import com.hzbhd.constant.share.ShareConstants;
 import com.hzbhd.proxy.share.ShareDataManager;
 
-/* loaded from: classes2.dex */
+
 public class AirDataBuffer {
     private boolean ac;
     private boolean acMax;

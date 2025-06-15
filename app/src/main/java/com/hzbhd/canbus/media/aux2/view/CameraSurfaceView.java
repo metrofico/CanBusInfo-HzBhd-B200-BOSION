@@ -54,7 +54,7 @@ public abstract class CameraSurfaceView extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CameraSurfaceView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this._$_findViewCache = new LinkedHashMap<>();
         TextureView textureView = new TextureView(getContext());
         this.textureView = textureView;
@@ -62,24 +62,24 @@ public abstract class CameraSurfaceView extends BaseLifeFrameLayout {
         this.textureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() { // from class: com.hzbhd.canbus.media.aux2.view.CameraSurfaceView.1
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 CameraSurfaceView.this.setMSurface(new Surface(surface));
                 CameraSurfaceView.this.refreshPreView();
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 CameraSurfaceView.this.setMSurface(null);
                 CameraSurfaceView.this.refreshPreView();
                 return true;
@@ -90,8 +90,8 @@ public abstract class CameraSurfaceView extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CameraSurfaceView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this._$_findViewCache = new LinkedHashMap();
         TextureView textureView = new TextureView(getContext());
         this.textureView = textureView;
@@ -99,24 +99,24 @@ public abstract class CameraSurfaceView extends BaseLifeFrameLayout {
         this.textureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() { // from class: com.hzbhd.canbus.media.aux2.view.CameraSurfaceView.1
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 CameraSurfaceView.this.setMSurface(new Surface(surface));
                 CameraSurfaceView.this.refreshPreView();
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 CameraSurfaceView.this.setMSurface(null);
                 CameraSurfaceView.this.refreshPreView();
                 return true;
@@ -127,7 +127,7 @@ public abstract class CameraSurfaceView extends BaseLifeFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public CameraSurfaceView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this._$_findViewCache = new LinkedHashMap();
         TextureView textureView = new TextureView(getContext());
         this.textureView = textureView;
@@ -135,17 +135,17 @@ public abstract class CameraSurfaceView extends BaseLifeFrameLayout {
         this.textureView.setSurfaceTextureListener(new TextureView.SurfaceTextureListener() { // from class: com.hzbhd.canbus.media.aux2.view.CameraSurfaceView.1
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 CameraSurfaceView.this.setMSurface(new Surface(surface));
                 CameraSurfaceView.this.refreshPreView();
             }

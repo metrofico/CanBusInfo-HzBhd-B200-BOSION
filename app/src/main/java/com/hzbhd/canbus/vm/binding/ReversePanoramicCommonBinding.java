@@ -38,7 +38,7 @@ public final class ReversePanoramicCommonBinding extends EmptyBinding {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ReversePanoramicCommonBinding(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.view_panoramic = getRoot().findViewById(R.id.view_panoramic);
     }
 
@@ -49,7 +49,7 @@ public final class ReversePanoramicCommonBinding extends EmptyBinding {
 
     @Override // com.hzbhd.ui.life.EmptyBinding
     public void addObserver(LifecycleOwner lifecycleObserver) {
-        Intrinsics.checkNotNullParameter(lifecycleObserver, "lifecycleObserver");
+
         HandlerThreadUtilKt.runUi(new Runnable() {
             @Override
             public void run() {

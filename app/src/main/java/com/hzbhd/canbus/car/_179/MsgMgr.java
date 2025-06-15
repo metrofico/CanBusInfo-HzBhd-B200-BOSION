@@ -11,7 +11,7 @@ import com.hzbhd.canbus.util.TrackInfoUtil;
 import java.text.DecimalFormat;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private String mAirUnit;
     private boolean mBackStatus;

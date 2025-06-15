@@ -20,7 +20,7 @@ import com.hzbhd.canbus.ui_set.SyncAction;
 import com.hzbhd.canbus.ui_set.SyncPageUiSet;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private AirPageUiSet mAirPageUiSet;
     private String[][] mDiagitalKeyboardActions;

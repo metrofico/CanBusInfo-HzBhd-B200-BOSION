@@ -24,7 +24,7 @@ public final class SpeechReceiver extends BroadcastReceiver {
         if (Intrinsics.areEqual(action, speech_to_can)) {
             ActionControlUtil.acControl(context, intent.getStringExtra(tx_action), intent.getStringExtra("type"), intent.getStringExtra(value));
         } else {
-            Intrinsics.areEqual(action, speech_rx_can);
+
         }
     }
 

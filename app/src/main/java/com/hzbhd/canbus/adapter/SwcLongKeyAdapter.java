@@ -29,8 +29,8 @@ public final class SwcLongKeyAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     /* JADX WARN: Multi-variable type inference failed */
     public SwcLongKeyAdapter(Context context, SwcLongClickDialog.OnKeyClickListener onItemClick) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(onItemClick, "onItemClick");
+
+
         this.context = context;
         this.onItemClick = onItemClick;
     }
@@ -42,7 +42,7 @@ public final class SwcLongKeyAdapter extends RecyclerView.Adapter<RecyclerView.V
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder(View view) {
             super(view);
-            Intrinsics.checkNotNullParameter(view, "view");
+
             View viewFindViewById = view.findViewById(R.id.iv_key_icon);
             this.ivKeyIcon = (ImageView) viewFindViewById;
             View viewFindViewById2 = view.findViewById(R.id.tv_key_name);
@@ -60,14 +60,14 @@ public final class SwcLongKeyAdapter extends RecyclerView.Adapter<RecyclerView.V
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics.checkNotNullParameter(parent, "parent");
+
         View viewInflate = LayoutInflater.from(this.context).inflate(R.layout.layout_swc_long_click_item, parent, false);
         return new ViewHolder(viewInflate);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        Intrinsics.checkNotNullParameter(holder, "holder");
+
         ViewHolder viewHolder = (ViewHolder) holder;
         SwcActivity.KeyUiEntity keyUiEntity = SwcActivity.getKeyUiList().get(position);
         viewHolder.getIvKeyIcon().setImageResource(keyUiEntity.getDrawableResId());

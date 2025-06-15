@@ -15,7 +15,7 @@ public final class BubbleUiSet {
     }
 
     public final void setIconDrawable(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.iconDrawable = str;
     }
 

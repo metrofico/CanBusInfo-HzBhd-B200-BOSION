@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.car._1;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AmplifierActivity;
 import com.hzbhd.canbus.interfaces.OnAmplifierCreateAndDestroyListener;
@@ -16,10 +17,11 @@ import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     Context mContext;
     MsgMgr mMsgMgr;
@@ -256,8 +258,12 @@ public class UiMgr extends AbstractUiMgr {
     private void initAmp(Context context) {
         new Thread(new Runnable() { // from class: com.hzbhd.canbus.car._1.UiMgr.1
             @Override // java.lang.Runnable
-            public void run() throws InterruptedException {
-                new AmpUtil().initAmpData(UiMgr.this.mContext);
+            public void run() {
+                try {
+                    new AmpUtil().initAmpData(UiMgr.this.mContext);
+                } catch (Throwable w) {
+                    w.printStackTrace();
+                }
             }
         }).start();
         new AmpUtil().intiAmpUi(context);

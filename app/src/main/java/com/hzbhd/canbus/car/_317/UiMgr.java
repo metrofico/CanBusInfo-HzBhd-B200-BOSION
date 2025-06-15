@@ -26,24 +26,24 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: UiMgr.kt */
-@Metadata(d1 = {"\u0000.\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0000\u0018\u00002\u00020\u0001B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\t\u001a\u00020\u0006H\u0002J\u0010\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u0006H\u0002J\u0010\u0010\n\u001a\u00020\u000b2\u0006\u0010\r\u001a\u00020\u000eH\u0002R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0007\u001a\u0004\u0018\u00010\bX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u000f"}, d2 = {"Lcom/hzbhd/canbus/car/_317/UiMgr;", "Lcom/hzbhd/canbus/ui_mgr/AbstractUiMgr;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mAirAddition", "", "mMsgMgr", "Lcom/hzbhd/canbus/car/_317/MsgMgr;", "getAdditionalParam", "sendAirCommand", "", NotificationCompat.CATEGORY_EVENT, "action", "", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class UiMgr extends AbstractUiMgr {
     private int mAirAddition;
     private MsgMgr mMsgMgr;
 
     public UiMgr(final Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mAirAddition = 204;
         MsgMgrInterface canMsgMgr = MsgMgrFactory.getCanMsgMgr(context);
-        Intrinsics.checkNotNull(canMsgMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._317.MsgMgr");
+
         this.mMsgMgr = (MsgMgr) canMsgMgr;
         AmplifierPageUiSet amplifierPageUiSet = getAmplifierPageUiSet(context);
         amplifierPageUiSet.setOnAmplifierPositionListener(new OnAmplifierPositionListener() { // from class: com.hzbhd.canbus.car._317.UiMgr$1$1
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -57,7 +57,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierPositionListener
             public void position(AmplifierActivity.AmplifierPosition amplifierPosition, int value) {
-                Intrinsics.checkNotNullParameter(amplifierPosition, "amplifierPosition");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierPosition.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -124, 1, (byte) (value + 11)});
@@ -72,7 +72,7 @@ public final class UiMgr extends AbstractUiMgr {
         amplifierPageUiSet.setOnAmplifierSeekBarListener(new OnAmplifierSeekBarListener() { // from class: com.hzbhd.canbus.car._317.UiMgr$1$2
 
             /* compiled from: UiMgr.kt */
-            @Metadata(k = 3, mv = {1, 7, 1}, xi = 48)
+            
             public /* synthetic */ class WhenMappings {
                 public static final /* synthetic */ int[] $EnumSwitchMapping$0;
 
@@ -88,7 +88,7 @@ public final class UiMgr extends AbstractUiMgr {
 
             @Override // com.hzbhd.canbus.interfaces.OnAmplifierSeekBarListener
             public void progress(AmplifierActivity.AmplifierBand amplifierBand, int progress) {
-                Intrinsics.checkNotNullParameter(amplifierBand, "amplifierBand");
+
                 int i = WhenMappings.$EnumSwitchMapping$0[amplifierBand.ordinal()];
                 if (i == 1) {
                     CanbusMsgSender.sendMsg(new byte[]{22, -124, 4, (byte) (progress + 2)});
@@ -205,8 +205,8 @@ public final class UiMgr extends AbstractUiMgr {
      */
     /* renamed from: lambda-5$lambda-1, reason: not valid java name */
     public static final void m522lambda5$lambda1(SettingPageUiSet settingPageUiSet, UiMgr this$0, Context context, int i, int i2, int i3) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
+
+
         String titleSrn = settingPageUiSet.getList().get(i).getItemList().get(i2).getTitleSrn();
         if (titleSrn != null) {
             switch (titleSrn.hashCode()) {
@@ -238,7 +238,7 @@ public final class UiMgr extends AbstractUiMgr {
                     if (titleSrn.equals("_283_choose")) {
                         CanbusMsgSender.sendMsg(new byte[]{22, -18, (byte) i3, 0});
                         MsgMgr msgMgr = this$0.mMsgMgr;
-                        Intrinsics.checkNotNull(msgMgr);
+
                         msgMgr.updateSettingItem("_283_choose", Integer.valueOf(i3));
                         SharePreUtil.setIntValue(context, MsgMgr.SHARE_317_LEFT_RIGHT_HAND, i3);
                         break;
@@ -314,36 +314,36 @@ public final class UiMgr extends AbstractUiMgr {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-11$lambda-10$lambda-6, reason: not valid java name */
     public static final void m518lambda11$lambda10$lambda6(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[0][i];
-        Intrinsics.checkNotNullExpressionValue(str, "it.lineBtnAction[0][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-11$lambda-10$lambda-7, reason: not valid java name */
     public static final void m519lambda11$lambda10$lambda7(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[1][i];
-        Intrinsics.checkNotNullExpressionValue(str, "it.lineBtnAction[1][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-11$lambda-10$lambda-8, reason: not valid java name */
     public static final void m520lambda11$lambda10$lambda8(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[2][i];
-        Intrinsics.checkNotNullExpressionValue(str, "it.lineBtnAction[2][position]");
+
         this$0.sendAirCommand(str);
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: lambda-11$lambda-10$lambda-9, reason: not valid java name */
     public static final void m521lambda11$lambda10$lambda9(UiMgr this$0, FrontArea frontArea, int i) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         String str = frontArea.getLineBtnAction()[3][i];
-        Intrinsics.checkNotNullExpressionValue(str, "it.lineBtnAction[3][position]");
+
         this$0.sendAirCommand(str);
     }
 

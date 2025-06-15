@@ -30,7 +30,7 @@ import java.util.Iterator;
 import java.util.TimerTask;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String _37_IS_BACK_CAMERA = "_37_is_back_camera";
     static final String _37_IS_PANORAMIC = "_37_is_panoramic";

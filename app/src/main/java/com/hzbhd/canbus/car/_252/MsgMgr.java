@@ -10,7 +10,7 @@ import com.hzbhd.canbus.util.RadarInfoUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private byte[] mCanBusInfoByte;
     private int[] mCanBusInfoInt;

@@ -8,7 +8,7 @@ import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public UiMgr(Context context) {
         final SettingPageUiSet settingUiSet = getSettingUiSet(context);

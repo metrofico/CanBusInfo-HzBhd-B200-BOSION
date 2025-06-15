@@ -13,7 +13,7 @@ import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     protected AmplifierParams mAmplifierParams;
     private MsgMgr mMsgMgr;

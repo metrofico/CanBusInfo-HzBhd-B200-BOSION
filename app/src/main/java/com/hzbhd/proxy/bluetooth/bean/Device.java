@@ -43,8 +43,8 @@ public final class Device {
     }
 
     public Device(String address, String name, boolean z, boolean z2, boolean z3, boolean z4, boolean z5, boolean z6, boolean z7) {
-        Intrinsics.checkNotNullParameter(address, "address");
-        Intrinsics.checkNotNullParameter(name, "name");
+
+
         this.address = address;
         this.name = name;
         this.isPaired = z;
@@ -61,7 +61,7 @@ public final class Device {
     }
 
     public final void setAddress(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.address = str;
     }
 
@@ -70,7 +70,7 @@ public final class Device {
     }
 
     public final void setName(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.name = str;
     }
 
@@ -157,7 +157,7 @@ public final class Device {
         if (!Intrinsics.areEqual(getClass(), other != null ? other.getClass() : null)) {
             return false;
         }
-        Intrinsics.checkNotNull(other, "null cannot be cast to non-null type com.hzbhd.proxy.bluetooth.bean.Device");
+
         Device device = (Device) other;
         return Intrinsics.areEqual(this.address, device.address) && Intrinsics.areEqual(this.name, device.name) && this.isPaired == device.isPaired && this.isConn == device.isConn && this.isHfpConn == device.isHfpConn && this.isPairIng == device.isPairIng && this.isConnHfping == device.isConnHfping && this.isConnA2dping == device.isConnA2dping && this.isA2dpConn == device.isA2dpConn && this.isVisible == device.isVisible;
     }
@@ -189,8 +189,8 @@ public final class Device {
                 boolean zOptBoolean5 = jSONObject.optBoolean("CONN_A2DP_ING");
                 boolean zOptBoolean6 = jSONObject.optBoolean("HFP_CONNED");
                 boolean zOptBoolean7 = jSONObject.optBoolean("A2DP_CONNED");
-                Intrinsics.checkNotNullExpressionValue(strOptString, "optString(DEVICE_NAME.ADDRESS.name)");
-                Intrinsics.checkNotNullExpressionValue(strOptString2, "optString(DEVICE_NAME.NAME.name)");
+
+
                 return new Device(strOptString, strOptString2, zOptBoolean, zOptBoolean2, zOptBoolean6, zOptBoolean3, zOptBoolean4, zOptBoolean5, zOptBoolean7);
             } catch (Exception unused) {
                 Log.d("Device", "fromJson: error:" + deviceString);
@@ -199,7 +199,7 @@ public final class Device {
         }
 
         public final String toJsonString(Device device) {
-            Intrinsics.checkNotNullParameter(device, "device");
+
             try {
                 JSONObject jSONObject = new JSONObject();
                 jSONObject.put("ADDRESS", device.getAddress());
@@ -212,7 +212,7 @@ public final class Device {
                 jSONObject.put("CONN_A2DP_ING", device.getIsConnA2dping());
                 jSONObject.put("CONN_HFP_ING", device.getIsConnHfping());
                 String string = jSONObject.toString();
-                Intrinsics.checkNotNullExpressionValue(string, "jsonObject.toString()");
+
                 return string;
             } catch (Exception unused) {
                 Log.d("Device", "toJsonString: error");

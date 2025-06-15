@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._68;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.HashMap;
 
-/* loaded from: classes2.dex */
+
 public class ConstantHashMap {
     public static HashMap<Integer, Integer> panelKeyMaps = new HashMap<>();
     public static HashMap<Integer, Integer> panelKeyMaps_Encore_ = new HashMap<>();

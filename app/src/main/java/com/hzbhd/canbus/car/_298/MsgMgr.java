@@ -22,7 +22,7 @@ import com.hzbhd.canbus.util.TrackInfoUtil;
 import java.util.Arrays;
 import org.apache.log4j.helpers.DateLayout;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static boolean isAirFirst = true;
     private static int up_dn_btn_data;

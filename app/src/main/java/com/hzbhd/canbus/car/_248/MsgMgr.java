@@ -26,7 +26,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int RADAR_DATA_MAX = 255;
     private static final int RADAR_DATA_SEGMENT = 10;

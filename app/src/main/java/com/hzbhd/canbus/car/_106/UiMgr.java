@@ -6,7 +6,7 @@ import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     MsgMgr mMsgMgr;
 

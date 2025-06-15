@@ -21,7 +21,7 @@ public abstract class EmptyBinding {
     public abstract int getLayoutId();
 
     public EmptyBinding(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.root = LayoutInflater.from(context).inflate(getLayoutId(), (ViewGroup) null, false);
     }
 

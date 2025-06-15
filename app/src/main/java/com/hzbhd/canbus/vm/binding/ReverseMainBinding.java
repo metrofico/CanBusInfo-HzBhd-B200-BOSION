@@ -37,21 +37,21 @@ public final class ReverseMainBinding extends EmptyBinding {
 
     public ReverseMainBinding(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         View viewFindViewById = getRoot().findViewById(R.id.__01__reverse_main_panoramic);
-        Intrinsics.checkNotNullExpressionValue(viewFindViewById, "root.findViewById(R.id._…__reverse_main_panoramic)");
+
         this.__01__reverse_main_panoramic = viewFindViewById;
         View viewFindViewById2 = getRoot().findViewById(R.id.__01__reverse_main_radar);
-        Intrinsics.checkNotNullExpressionValue(viewFindViewById2, "root.findViewById(R.id.__01__reverse_main_radar)");
+
         this.__01__reverse_main_radar = viewFindViewById2;
         View viewFindViewById3 = getRoot().findViewById(R.id.__01__reverse_main_panoramic1);
-        Intrinsics.checkNotNullExpressionValue(viewFindViewById3, "root.findViewById(R.id._…_reverse_main_panoramic1)");
+
         this.__01__reverse_main_panoramic1 = viewFindViewById3;
         View viewFindViewById4 = getRoot().findViewById(R.id.tv_camera_tis);
-        Intrinsics.checkNotNullExpressionValue(viewFindViewById4, "root.findViewById(R.id.tv_camera_tis)");
+
         this.tv_camera_tis = viewFindViewById4;
         View viewFindViewById5 = getRoot().findViewById(R.id.back_view_back);
-        Intrinsics.checkNotNullExpressionValue(viewFindViewById5, "root.findViewById(R.id.back_view_back)");
+
         this.back_view_back = viewFindViewById5;
     }
 

@@ -34,7 +34,7 @@ import java.util.TimerTask;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     protected static final String CAN_269_SAVE_AMP_BASS = "__269_SAVE_AMP_BASS";
     protected static final String CAN_269_SAVE_AMP_FR = "__269_SAVE_AMP_FR";

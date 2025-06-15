@@ -14,7 +14,7 @@ import com.hzbhd.canbus.util.MyLog;
 import com.hzbhd.canbus.util.SelectCanTypeUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes2.dex */
+
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {
     private LinearLayout avm_alert_view;
     private ImageView d2_360_View;

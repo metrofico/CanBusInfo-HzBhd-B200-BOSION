@@ -23,7 +23,7 @@ import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     boolean CameraDelay;
     boolean DepressedView;

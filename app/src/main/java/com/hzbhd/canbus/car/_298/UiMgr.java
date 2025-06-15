@@ -5,7 +5,7 @@ import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public UiMgr(Context context) {
         getAirUiSet(context).getFrontArea().setOnAirPageStatusListener(new OnAirPageStatusListener() { // from class: com.hzbhd.canbus.car._298.UiMgr.1

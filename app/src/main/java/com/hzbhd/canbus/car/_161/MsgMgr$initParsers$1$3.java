@@ -9,9 +9,9 @@ import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.StringCompanionObject;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000/\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000e\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002*\u0001\u0000\b\n\u0018\u00002\u00060\u0001R\u00020\u0002J\u0010\u0010\u0003\u001a\u00020\u00042\u0006\u0010\u0005\u001a\u00020\u0006H\u0002J\u0010\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\u0006H\u0016J\u0015\u0010\n\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\f0\u000bH\u0016¢\u0006\u0002\u0010\r¨\u0006\u000e"}, d2 = {"com/hzbhd/canbus/car/_161/MsgMgr$initParsers$1$3", "Lcom/hzbhd/canbus/car/_161/MsgMgr$Parser;", "Lcom/hzbhd/canbus/car/_161/MsgMgr;", "getTemperature", "", "value", "", "parse", "", "dataLength", "setOnParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
     final /* synthetic */ Context $context;
     final /* synthetic */ MsgMgr this$0;
@@ -73,7 +73,7 @@ public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-1, reason: not valid java name */
     public static final void m185setOnParseListeners$lambda1(MsgMgr this$0) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         int i = this$0.mCanbusInfoInt[2];
         GeneralAirData.power = ((i >> 7) & 1) == 1;
         GeneralAirData.ac = ((i >> 6) & 1) == 1;
@@ -87,7 +87,7 @@ public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-4, reason: not valid java name */
     public static final void m187setOnParseListeners$lambda4(MsgMgr this$0) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         int i = this$0.mCanbusInfoInt[3];
         GeneralAirData.front_left_blow_window = ((i >> 7) & 1) == 1;
         GeneralAirData.front_left_blow_head = ((i >> 6) & 1) == 1;
@@ -100,8 +100,8 @@ public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-5, reason: not valid java name */
     public static final void m188setOnParseListeners$lambda5(MsgMgr this$0, MsgMgr$initParsers$1$3 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         if (this$0.getCurrentCanDifferentId() == 31) {
             if (this$0.mCanbusInfoInt[4] != 2 && this$0.mCanbusInfoInt[4] != 0) {
                 if (this$0.mCanbusInfoInt[4] != 253 && this$0.mCanbusInfoInt[4] != 255) {
@@ -121,8 +121,8 @@ public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-6, reason: not valid java name */
     public static final void m189setOnParseListeners$lambda6(MsgMgr this$0, MsgMgr$initParsers$1$3 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         if (this$0.getCurrentCanDifferentId() == 31) {
             if (this$0.mCanbusInfoInt[5] != 2 && this$0.mCanbusInfoInt[5] != 0) {
                 if (this$0.mCanbusInfoInt[5] != 253 && this$0.mCanbusInfoInt[5] != 255) {
@@ -142,7 +142,7 @@ public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-8, reason: not valid java name */
     public static final void m190setOnParseListeners$lambda8(MsgMgr this$0) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         int i = this$0.mCanbusInfoInt[6];
         GeneralAirData.front_defog = ((i >> 7) & 1) == 1;
         GeneralAirData.ac_max = ((i >> 3) & 1) == 1;
@@ -152,14 +152,14 @@ public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-9, reason: not valid java name */
     public static final void m191setOnParseListeners$lambda9(MsgMgr this$0) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         GeneralAirData.rear = ((this$0.mCanbusInfoInt[7] >> 7) & 1) == 1;
     }
 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-10, reason: not valid java name */
     public static final void m186setOnParseListeners$lambda10(MsgMgr this$0) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         GeneralAirData.auto_wind_lv = (this$0.mCanbusInfoInt[8] >> 6) & 3;
     }
 
@@ -190,7 +190,7 @@ public final class MsgMgr$initParsers$1$3 extends MsgMgr.Parser {
         StringBuilder sb = new StringBuilder();
         StringCompanionObject stringCompanionObject = StringCompanionObject.INSTANCE;
         String str = String.format("%.1f", Arrays.copyOf(new Object[]{Float.valueOf((f * 9) / 5)}, 1));
-        Intrinsics.checkNotNullExpressionValue(str, "format(format, *args)");
+
         return sb.append(str).append(msgMgr.getTempUnitF(context)).toString();
     }
 }

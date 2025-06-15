@@ -18,39 +18,39 @@ public final class HardScalePlayView extends OneTexturePlayView {
 
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HardScalePlayView(Context context, PlayView.ScalePlayViewInterface scalePlayViewInterface) {
         super(context, scalePlayViewInterface);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(scalePlayViewInterface, "scalePlayViewInterface");
+
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HardScalePlayView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HardScalePlayView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HardScalePlayView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public HardScalePlayView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     public final SurfaceTexture getMSurfaceTexture() {
@@ -71,7 +71,7 @@ public final class HardScalePlayView extends OneTexturePlayView {
 
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         if (LogUtil.log5()) {
             LogUtil.d("onSurfaceTextureAvailable:");
         }
@@ -87,7 +87,7 @@ public final class HardScalePlayView extends OneTexturePlayView {
 
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         if (LogUtil.log5()) {
             LogUtil.d("onSurfaceTextureSizeChanged: ");
         }
@@ -95,7 +95,7 @@ public final class HardScalePlayView extends OneTexturePlayView {
 
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         if (LogUtil.log5()) {
             LogUtil.d("[playSurfaceView:onSurfaceTextureDestroyed]:");
         }

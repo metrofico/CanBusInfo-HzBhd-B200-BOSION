@@ -10,7 +10,7 @@ import com.hzbhd.proxy.share.ShareDataManager;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class WifiStateReceiver extends BroadcastReceiver {
     @Override // android.content.BroadcastReceiver
     public void onReceive(Context context, Intent intent) throws JSONException {

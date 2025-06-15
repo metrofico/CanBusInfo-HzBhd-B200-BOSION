@@ -11,7 +11,7 @@ import com.hzbhd.ui.util.BaseUtil;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
-/* loaded from: classes2.dex */
+
 public class RadarView extends RelativeLayout {
     TextView pdc_ecufault;
     TextView pdc_led;

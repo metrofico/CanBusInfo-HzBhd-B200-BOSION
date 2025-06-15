@@ -59,7 +59,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TimerTask;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int AMPLIFIER_FADE_OFFSET = -9;
     static final int VEHICLE_TYPE_1 = 16;

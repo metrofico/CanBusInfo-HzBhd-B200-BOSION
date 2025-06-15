@@ -45,7 +45,7 @@ import java.util.Objects;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final String SHARE_157_AVERAGE_SPEED = "share_157_average_speed";
     private static final String SHARE_157_BSM_LINE = "share_157_bsm_line";

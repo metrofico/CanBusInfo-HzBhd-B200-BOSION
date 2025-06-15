@@ -41,7 +41,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final int CAR_ID_CX4 = 0;
     private static final int CAR_ID_CX5 = 1;

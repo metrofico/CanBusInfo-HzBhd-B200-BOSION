@@ -7,7 +7,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.MyLog;
 import java.util.Arrays;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int eachId;

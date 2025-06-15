@@ -17,7 +17,7 @@ public final class MyLifeCycleOwner implements LifecycleOwner {
     }
 
     public final void onLifeCycleChange(Lifecycle.State state) {
-        Intrinsics.checkNotNullParameter(state, "state");
+
         this.mLifecycleRegistry.setCurrentState(state);
     }
 }

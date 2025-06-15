@@ -8,7 +8,7 @@ import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes2.dex */
+
 public class Id324AuxVideoActivity extends AppCompatActivity {
     private VideoInfoView videoInfoView;
 

@@ -10,7 +10,7 @@ import com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirWindSpeedUpDownClickListener;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     RadarView radarView;
     private int windModeTag = 0;

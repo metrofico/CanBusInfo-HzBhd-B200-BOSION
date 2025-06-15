@@ -24,7 +24,7 @@ import com.hzbhd.constant.share.ShareConstants;
 import com.hzbhd.proxy.share.impl.ShareDataServiceImpl;
 import kotlinx.coroutines.DebugKt;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr implements DvrDataInterface {
     private Context context;
     int[] mCanBusInfoInt;

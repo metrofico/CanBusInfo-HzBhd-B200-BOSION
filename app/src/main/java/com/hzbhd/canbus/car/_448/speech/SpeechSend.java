@@ -5,7 +5,7 @@ import android.content.Intent;
 import com.hzbhd.canbus.car._448.speech.SpeechAction;
 import com.hzbhd.canbus.util.ContextUtil;
 
-/* loaded from: classes2.dex */
+
 public class SpeechSend {
     private static String speech_rx_can = "speech.rx.can";
     private static String type = "type";

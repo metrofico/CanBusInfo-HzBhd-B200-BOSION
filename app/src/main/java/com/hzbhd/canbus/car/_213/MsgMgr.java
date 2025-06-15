@@ -53,9 +53,9 @@ import kotlin.text.Regex;
 import kotlin.text.StringsKt;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000X\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u0015\n\u0000\n\u0002\u0010\b\n\u0002\b\u0003\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0010\u0002\n\u0002\b\u0011\n\u0002\u0010\u0005\n\u0002\b%\n\u0002\u0010\t\n\u0002\b8\u0018\u0000 \u0090\u00012\u00020\u0001:\u0004\u0090\u0001\u0091\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0010\u0010!\u001a\u00020\"2\u0006\u0010#\u001a\u00020\fH\u0016J\b\u0010$\u001a\u00020\"H\u0016J\b\u0010%\u001a\u00020\"H\u0016J\b\u0010&\u001a\u00020\"H\u0016J \u0010'\u001a\u00020\"2\u0006\u0010(\u001a\u00020\u00042\u0006\u0010)\u001a\u00020\u00122\u0006\u0010*\u001a\u00020\u0012H\u0016J \u0010+\u001a\u00020\"2\u0006\u0010(\u001a\u00020\u00042\u0006\u0010)\u001a\u00020\u00122\u0006\u0010*\u001a\u00020\u0012H\u0016J\u0018\u0010,\u001a\u00020\"2\u0006\u0010#\u001a\u00020\f2\u0006\u0010-\u001a\u00020\u0004H\u0016J\u0010\u0010.\u001a\u00020\u00172\u0006\u0010/\u001a\u00020\bH\u0002J\u0018\u00100\u001a\u00020\u00122\u0006\u0010#\u001a\u00020\f2\u0006\u00101\u001a\u00020\bH\u0016Jp\u00102\u001a\u00020\"2\u0006\u00103\u001a\u0002042\u0006\u00105\u001a\u00020\b2\u0006\u00106\u001a\u00020\b2\u0006\u00107\u001a\u00020\b2\u0006\u00108\u001a\u00020\b2\u0006\u00109\u001a\u00020\b2\u0006\u0010:\u001a\u00020\b2\u0006\u0010;\u001a\u00020\u00122\u0006\u0010<\u001a\u00020\u00122\u0006\u0010=\u001a\u00020\b2\u0006\u0010>\u001a\u00020\u00172\u0006\u0010?\u001a\u00020\u00172\u0006\u0010@\u001a\u00020\u0017H\u0016J\b\u0010A\u001a\u00020\"H\u0016J\u0010\u0010B\u001a\u00020\b2\u0006\u0010C\u001a\u00020\u0012H\u0002J\u0018\u0010D\u001a\u00020\b2\u0006\u0010E\u001a\u00020\b2\u0006\u0010F\u001a\u00020\bH\u0002J\u0012\u0010G\u001a\u00020\"2\b\u0010#\u001a\u0004\u0018\u00010\fH\u0002J\u0010\u0010H\u001a\u00020\"2\u0006\u0010#\u001a\u00020\fH\u0016J\u0010\u0010I\u001a\u00020\u00122\u0006\u0010-\u001a\u00020\u0004H\u0002J\u0010\u0010J\u001a\u00020\u00122\u0006\u0010-\u001a\u00020\u0004H\u0002J¸\u0001\u0010K\u001a\u00020\"2\u0006\u0010L\u001a\u0002042\u0006\u0010M\u001a\u0002042\u0006\u0010N\u001a\u00020\b2\u0006\u0010O\u001a\u00020\b2\u0006\u0010P\u001a\u0002042\u0006\u0010Q\u001a\u0002042\u0006\u0010R\u001a\u0002042\u0006\u0010S\u001a\u0002042\u0006\u0010T\u001a\u0002042\u0006\u0010U\u001a\u0002042\u0006\u0010V\u001a\u00020\u00172\u0006\u0010W\u001a\u00020\u00172\u0006\u0010X\u001a\u00020\u00172\u0006\u0010Y\u001a\u00020Z2\u0006\u00103\u001a\u0002042\u0006\u0010[\u001a\u00020\b2\u0006\u0010<\u001a\u00020\u00122\u0006\u0010\\\u001a\u00020Z2\u0006\u0010]\u001a\u00020\u00172\u0006\u0010^\u001a\u00020\u00172\u0006\u0010_\u001a\u00020\u00172\u0006\u0010`\u001a\u00020\u0012H\u0016J\u0010\u0010a\u001a\u00020\"2\u0006\u0010b\u001a\u00020\bH\u0002J0\u0010c\u001a\u00020\"2\u0006\u0010d\u001a\u00020\b2\u0006\u0010e\u001a\u00020\u00172\u0006\u0010f\u001a\u00020\u00172\u0006\u0010g\u001a\u00020\u00172\u0006\u0010h\u001a\u00020\bH\u0016J\u0018\u0010i\u001a\u00020\"2\u0006\u0010#\u001a\u00020\f2\u0006\u00101\u001a\u00020\bH\u0002J \u0010j\u001a\u00020\"2\u0006\u0010#\u001a\u00020\f2\u0006\u00101\u001a\u00020\b2\u0006\u0010k\u001a\u00020\bH\u0002J \u0010l\u001a\u00020\"2\u0006\u0010#\u001a\u00020\f2\u0006\u00101\u001a\u00020\b2\u0006\u0010k\u001a\u00020\bH\u0002J\u0018\u0010m\u001a\u00020\"2\u0006\u0010#\u001a\u00020\f2\u0006\u00101\u001a\u00020\bH\u0002J\u0010\u0010n\u001a\u00020\u00172\u0006\u0010b\u001a\u00020\bH\u0002J \u0010o\u001a\u00020\"2\u0006\u0010#\u001a\u00020\f2\u0006\u00101\u001a\u00020\b2\u0006\u0010p\u001a\u00020\bH\u0002J\u0010\u0010q\u001a\u00020\"2\u0006\u0010#\u001a\u00020\fH\u0002J\u0010\u0010r\u001a\u00020\"2\u0006\u0010#\u001a\u00020\fH\u0002J\b\u0010s\u001a\u00020\"H\u0002J\b\u0010t\u001a\u00020\"H\u0002J\b\u0010u\u001a\u00020\"H\u0002J\b\u0010v\u001a\u00020\"H\u0002J\b\u0010w\u001a\u00020\"H\u0002J\b\u0010x\u001a\u00020\"H\u0002J\b\u0010y\u001a\u00020\"H\u0002J\u000e\u0010z\u001a\u00020\"2\u0006\u0010b\u001a\u00020\bJ\b\u0010{\u001a\u00020\"H\u0002J\b\u0010|\u001a\u00020\"H\u0002J\b\u0010}\u001a\u00020\"H\u0002J\b\u0010~\u001a\u00020\"H\u0002J\b\u0010\u007f\u001a\u00020\"H\u0002J\t\u0010\u0080\u0001\u001a\u00020\"H\u0002J\t\u0010\u0081\u0001\u001a\u00020\"H\u0002J\t\u0010\u0082\u0001\u001a\u00020\"H\u0002J\t\u0010\u0083\u0001\u001a\u00020\"H\u0002J\u0012\u0010\u0084\u0001\u001a\u00020\"2\u0007\u0010\u0085\u0001\u001a\u00020\u0017H\u0016J\u0012\u0010\u0086\u0001\u001a\u00020\"2\u0007\u0010\u0087\u0001\u001a\u00020\u0012H\u0016J\t\u0010\u0088\u0001\u001a\u00020\"H\u0002J\u0007\u0010\u0089\u0001\u001a\u00020\"J!\u0010\u008a\u0001\u001a\u00020\"2\u0007\u0010\u008b\u0001\u001a\u00020\b2\u0007\u0010\u008c\u0001\u001a\u00020\b2\u0006\u0010b\u001a\u00020\bJ\u0093\u0001\u0010\u008d\u0001\u001a\u00020\"2\u0006\u0010L\u001a\u0002042\u0006\u0010M\u001a\u0002042\u0006\u0010N\u001a\u00020\b2\u0006\u0010O\u001a\u00020\b2\u0006\u0010P\u001a\u0002042\u0006\u0010Q\u001a\u0002042\u0006\u0010R\u001a\u0002042\u0006\u0010S\u001a\u00020\u00172\u0006\u0010T\u001a\u0002042\u0006\u0010U\u001a\u0002042\u0006\u0010V\u001a\u00020\u00172\u0006\u0010W\u001a\u00020\u00172\u0006\u0010X\u001a\u00020\u00172\u0006\u0010Y\u001a\u00020\b2\u0007\u0010\u008e\u0001\u001a\u0002042\u0006\u0010<\u001a\u00020\u00122\u0007\u0010\u008f\u0001\u001a\u00020\bH\u0016R\u000e\u0010\u0003\u001a\u00020\u0004X\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\u0004X\u0082.¢\u0006\u0002\n\u0000R\u000e\u0010\n\u001a\u00020\u0004X\u0082.¢\u0006\u0002\n\u0000R\u0010\u0010\u000b\u001a\u0004\u0018\u00010\fX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000e\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000f\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0010\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0011\u001a\u00020\u0012X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0013\u001a\u00020\u0012X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0012X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0015\u001a\u00020\u0012X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0016\u001a\u00020\u0017X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u0018\u001a\u00020\bX\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\u0019\u001a\u00020\bX\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\u001a\u001a\u00020\bX\u0082D¢\u0006\u0002\n\u0000R\u000e\u0010\u001b\u001a\u00020\bX\u0082D¢\u0006\u0002\n\u0000R\u0014\u0010\u001c\u001a\b\u0018\u00010\u001dR\u00020\u0000X\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001e\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u001f\u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010 \u001a\u00020\bX\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u0092\u0001"}, d2 = {"Lcom/hzbhd/canbus/car/_213/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "mCanBusInfoByte", "", "mCanBusInfoInt", "", "mCanId", "", "mCanbusAirInfoCopy", "mCanbusDoorInfoCopy", "mContext", "Landroid/content/Context;", "mData0_26", "mData0_7", "mData2_03", "mData2_47", "mEnable06_1", "", "mEnable06_2", "mEnable06_3", "mEnable06_4", "mFuelUnit", "", "mKonbCount", "mKonbSelCount", "mLastKonbCount", "mLastSelKonbCount", "mRequestTimer", "Lcom/hzbhd/canbus/car/_213/MsgMgr$TimerHelper;", "mSelKnobValue", "mStartTime", "mVolKnobValue", "afterServiceNormalSetting", "", "context", "atvInfoChange", "auxInInfoChange", "btMusicInfoChange", "btPhoneIncomingInfoChange", "phoneNumber", "isMicMute", "isAudioTransferTowardsAG", "btPhoneOutGoingInfoChange", "canbusInfoChange", "canbusInfo", "carType", "data", "customLongClick", "key", "discInfoChange", "playModel", "", "currentTime", "playTitleNo", "position", "currentPlayNo", "currentTotalNo", "discType", "isUnMuted", "isPlaying", "playStat", "song", LcdInfoShare.MediaInfo.album, LcdInfoShare.MediaInfo.artist, "dtvInfoChange", "getIndexBy2Bit", "bit", "getMsbLsbResult", "MSB", "LSB", "initAmplifierData", "initCommand", "isAirMsgReturn", "isDoorMsgReturn", "musicInfoChange", "stoagePath", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playIndex", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "panelBtnKeyClick", "value", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "realKeyClick1", "realKeyClick3_1", "time", "realKeyClick3_2", "realKeyLongClick1", "resolveFrontAirTemp", "sendAppIconSelect", "different", "set0x21PanelKeyData", "set0x22PanelKnobData", "setAirData0x31", "setAmplifierData", "setCarInfo", "setCarType", "setDoorData", "setDriveData", "setDriveData2", "setFuelUnit", "setHudData", "setHudData0x79", "setOriginalCarDeviceInfo", "setOriginalCarDeviceInfo2", "setRadar", "setSwcKey", "setTrack", "setVersionInfo", "settingInfo", "sourceSwitchChange", LcdInfoShare.DspInfo.source, "sourceSwitchNoMediaInfoChange", "isPowerOff", "touch0x25", "touchpadView", "updateSettings", "left", "right", "videoInfoChange", "playMode", "duation", "Companion", "TimerHelper", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     private static final boolean isLastLongClick = false;
     private static final int lastPanelSt = 0;
@@ -101,7 +101,7 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void initCommand(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         super.initCommand(context);
         this.mCanId = SelectCanTypeUtil.getCurrentCanTypeId(context);
         int currentEachCanId = getCurrentEachCanId();
@@ -146,27 +146,27 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void afterServiceNormalSetting(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         super.afterServiceNormalSetting(context);
         this.mContext = context;
         SelectCanTypeUtil.enableApp(context, Constant.OriginalDeviceActivity);
         UiMgrInterface canUiMgr = UiMgrFactory.getCanUiMgr(context);
-        Intrinsics.checkNotNull(canUiMgr, "null cannot be cast to non-null type com.hzbhd.canbus.car._213.UiMgr");
+
         InitUtilsKt.initDrivingItemsIndexHashMap$default(context, (UiMgr) canUiMgr, null, 4, null);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
+
         super.canbusInfoChange(context, canbusInfo);
         this.mCanBusInfoByte = canbusInfo;
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         this.mCanBusInfoInt = byteArrayToIntArray;
         int[] iArr = null;
         if (byteArrayToIntArray == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             byteArrayToIntArray = null;
         }
         int i = byteArrayToIntArray[1];
@@ -175,7 +175,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             setSwcKey();
             int[] iArr2 = this.mCanBusInfoInt;
             if (iArr2 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             } else {
                 iArr = iArr2;
             }
@@ -257,13 +257,13 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (item != null) {
             int[] iArr = this.mCanBusInfoInt;
             if (iArr == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr = null;
             }
             int i = iArr[4];
             int[] iArr2 = this.mCanBusInfoInt;
             if (iArr2 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr2 = null;
             }
             item.setValue(String.valueOf(DataHandleUtils.getMsbLsbResult(i, iArr2[5])));
@@ -272,13 +272,13 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (item2 != null) {
             int[] iArr3 = this.mCanBusInfoInt;
             if (iArr3 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr3 = null;
             }
             int i2 = iArr3[6];
             int[] iArr4 = this.mCanBusInfoInt;
             if (iArr4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr4 = null;
             }
             item2.setValue(String.valueOf(DataHandleUtils.getMsbLsbResult(i2, iArr4[7])));
@@ -291,25 +291,25 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         int[] iArr2 = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[3];
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         int msbLsbResult = getMsbLsbResult(i, iArr3[4]);
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         int i2 = iArr4[5];
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         } else {
             iArr2 = iArr5;
         }
@@ -317,7 +317,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000\u0013\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0005*\u0001\u0000\b\n\u0018\u00002\u00020\u0001J\b\u0010\u0002\u001a\u00020\u0003H\u0016J\b\u0010\u0004\u001a\u00020\u0003H\u0016J\b\u0010\u0005\u001a\u00020\u0003H\u0016J\b\u0010\u0006\u001a\u00020\u0003H\u0016J\b\u0010\u0007\u001a\u00020\u0003H\u0016¨\u0006\b"}, d2 = {"com/hzbhd/canbus/car/_213/MsgMgr$touch0x25$1", "Lcom/hzbhd/canbus/util/TouchpadEvents$Events;", "enter", "", "goDown", "goLeft", "goRight", "goUp", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     /* renamed from: com.hzbhd.canbus.car._213.MsgMgr$touch0x25$1, reason: invalid class name and case insensitive filesystem */
     public static final class C00391 implements TouchpadEvents.Events {
         C00391() {
@@ -349,7 +349,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         /* JADX INFO: Access modifiers changed from: private */
         /* renamed from: goUp$lambda-0, reason: not valid java name */
         public static final void m308goUp$lambda0(MsgMgr this$0) throws InterruptedException {
-            Intrinsics.checkNotNullParameter(this$0, "this$0");
+
             for (int i = 0; i < 5; i++) {
                 try {
                     this$0.realKeyClick4(this$0.mContext, 7);
@@ -521,7 +521,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         Context context = this.mContext;
         byte[] bArr = this.mCanBusInfoByte;
         if (bArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
             bArr = null;
         }
         updateVersionInfo(context, getVersionStr(bArr));
@@ -531,61 +531,61 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         int[] iArr2 = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         GeneralAirData.power = DataHandleUtils.getBoolBit6(iArr[2]);
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         GeneralAirData.auto = DataHandleUtils.getBoolBit3(iArr3[2]);
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         GeneralAirData.ac_econ = DataHandleUtils.getIntFromByteWithBit(iArr4[3], 6, 2);
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         GeneralAirData.in_out_cycle = !DataHandleUtils.getBoolBit4(iArr5[3]);
         int[] iArr6 = this.mCanBusInfoInt;
         if (iArr6 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr6 = null;
         }
         GeneralAirData.auto_cycle = DataHandleUtils.getBoolBit3(iArr6[3]);
         int[] iArr7 = this.mCanBusInfoInt;
         if (iArr7 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr7 = null;
         }
         GeneralAirData.dual = DataHandleUtils.getBoolBit2(iArr7[3]);
         int[] iArr8 = this.mCanBusInfoInt;
         if (iArr8 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr8 = null;
         }
         GeneralAirData.rear_defog = DataHandleUtils.getBoolBit5(iArr8[4]);
         int[] iArr9 = this.mCanBusInfoInt;
         if (iArr9 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr9 = null;
         }
         GeneralAirData.front_defog = DataHandleUtils.getBoolBit4(iArr9[4]);
         int[] iArr10 = this.mCanBusInfoInt;
         if (iArr10 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr10 = null;
         }
         GeneralAirData.front_left_seat_heat_level = DataHandleUtils.getIntFromByteWithBit(iArr10[4], 0, 2);
         int[] iArr11 = this.mCanBusInfoInt;
         if (iArr11 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr11 = null;
         }
         GeneralAirData.front_right_seat_heat_level = DataHandleUtils.getIntFromByteWithBit(iArr11[4], 2, 2);
@@ -597,7 +597,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         GeneralAirData.front_right_blow_head = false;
         int[] iArr12 = this.mCanBusInfoInt;
         if (iArr12 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr12 = null;
         }
         if (DataHandleUtils.getBoolBit6(iArr12[6])) {
@@ -605,7 +605,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr13 = this.mCanBusInfoInt;
         if (iArr13 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr13 = null;
         }
         if (DataHandleUtils.getBoolBit5(iArr13[6])) {
@@ -613,7 +613,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr14 = this.mCanBusInfoInt;
         if (iArr14 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr14 = null;
         }
         if (DataHandleUtils.getBoolBit4(iArr14[6])) {
@@ -621,7 +621,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr15 = this.mCanBusInfoInt;
         if (iArr15 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr15 = null;
         }
         if (DataHandleUtils.getBoolBit6(iArr15[7])) {
@@ -629,7 +629,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr16 = this.mCanBusInfoInt;
         if (iArr16 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr16 = null;
         }
         if (DataHandleUtils.getBoolBit5(iArr16[7])) {
@@ -637,7 +637,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr17 = this.mCanBusInfoInt;
         if (iArr17 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr17 = null;
         }
         if (DataHandleUtils.getBoolBit4(iArr17[7])) {
@@ -645,25 +645,25 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr18 = this.mCanBusInfoInt;
         if (iArr18 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr18 = null;
         }
         GeneralAirData.front_wind_level = DataHandleUtils.getIntFromByteWithBit(iArr18[6], 0, 4);
         int[] iArr19 = this.mCanBusInfoInt;
         if (iArr19 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr19 = null;
         }
         GeneralAirData.front_right_wind_level = DataHandleUtils.getIntFromByteWithBit(iArr19[7], 0, 4);
         int[] iArr20 = this.mCanBusInfoInt;
         if (iArr20 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr20 = null;
         }
         GeneralAirData.front_left_temperature = resolveFrontAirTemp(iArr20[8]);
         int[] iArr21 = this.mCanBusInfoInt;
         if (iArr21 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         } else {
             iArr2 = iArr21;
         }
@@ -674,7 +674,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setRadar() {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         if (iArr[13] == 0) {
@@ -683,49 +683,49 @@ public final class MsgMgr extends AbstractMsgMgr {
             RadarInfoUtil.mDisableData = 255;
             int[] iArr2 = this.mCanBusInfoInt;
             if (iArr2 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr2 = null;
             }
             int i = iArr2[2];
             int[] iArr3 = this.mCanBusInfoInt;
             if (iArr3 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr3 = null;
             }
             int i2 = iArr3[3];
             int[] iArr4 = this.mCanBusInfoInt;
             if (iArr4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr4 = null;
             }
             int i3 = iArr4[4];
             int[] iArr5 = this.mCanBusInfoInt;
             if (iArr5 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr5 = null;
             }
             RadarInfoUtil.setRearRadarLocationData(3, i, i2, i3, iArr5[5]);
             int[] iArr6 = this.mCanBusInfoInt;
             if (iArr6 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr6 = null;
             }
             int i4 = iArr6[6];
             int[] iArr7 = this.mCanBusInfoInt;
             if (iArr7 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr7 = null;
             }
             int i5 = iArr7[7];
             int[] iArr8 = this.mCanBusInfoInt;
             if (iArr8 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr8 = null;
             }
             int i6 = iArr8[8];
             int[] iArr9 = this.mCanBusInfoInt;
             if (iArr9 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr9 = null;
             }
             RadarInfoUtil.setFrontRadarLocationData(3, i4, i5, i6, iArr9[9]);
@@ -737,49 +737,49 @@ public final class MsgMgr extends AbstractMsgMgr {
         GeneralParkData.isShowDistanceNotShowLocationUi = true;
         int[] iArr10 = this.mCanBusInfoInt;
         if (iArr10 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr10 = null;
         }
         int i7 = iArr10[2];
         int[] iArr11 = this.mCanBusInfoInt;
         if (iArr11 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr11 = null;
         }
         int i8 = iArr11[3];
         int[] iArr12 = this.mCanBusInfoInt;
         if (iArr12 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr12 = null;
         }
         int i9 = iArr12[4];
         int[] iArr13 = this.mCanBusInfoInt;
         if (iArr13 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr13 = null;
         }
         RadarInfoUtil.setRearRadarDistanceData(i7, i8, i9, iArr13[5]);
         int[] iArr14 = this.mCanBusInfoInt;
         if (iArr14 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr14 = null;
         }
         int i10 = iArr14[6];
         int[] iArr15 = this.mCanBusInfoInt;
         if (iArr15 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr15 = null;
         }
         int i11 = iArr15[7];
         int[] iArr16 = this.mCanBusInfoInt;
         if (iArr16 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr16 = null;
         }
         int i12 = iArr16[8];
         int[] iArr17 = this.mCanBusInfoInt;
         if (iArr17 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr17 = null;
         }
         RadarInfoUtil.setFrontRadarDistanceData(i10, i11, i12, iArr17[9]);
@@ -790,19 +790,19 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void settingInfo() {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int indexBy2Bit = getIndexBy2Bit(DataHandleUtils.getBoolBit2(iArr[10]));
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         boolean boolBit7 = DataHandleUtils.getBoolBit7(iArr2[5]);
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         int intFromByteWithBit = DataHandleUtils.getIntFromByteWithBit(iArr3[9], 5, 3);
@@ -811,493 +811,493 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         boolean boolBit72 = DataHandleUtils.getBoolBit7(iArr4[4]);
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         int intFromByteWithBit2 = DataHandleUtils.getIntFromByteWithBit(iArr5[9], 0, 2);
         int[] iArr6 = this.mCanBusInfoInt;
         if (iArr6 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr6 = null;
         }
         boolean boolBit4 = DataHandleUtils.getBoolBit4(iArr6[4]);
         int[] iArr7 = this.mCanBusInfoInt;
         if (iArr7 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr7 = null;
         }
         int intFromByteWithBit3 = DataHandleUtils.getIntFromByteWithBit(iArr7[10], 6, 2);
         int[] iArr8 = this.mCanBusInfoInt;
         if (iArr8 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr8 = null;
         }
         boolean boolBit3 = DataHandleUtils.getBoolBit3(iArr8[4]);
         int[] iArr9 = this.mCanBusInfoInt;
         if (iArr9 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr9 = null;
         }
         int indexBy2Bit2 = getIndexBy2Bit(DataHandleUtils.getBoolBit5(iArr9[10]));
         int[] iArr10 = this.mCanBusInfoInt;
         if (iArr10 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr10 = null;
         }
         boolean boolBit2 = DataHandleUtils.getBoolBit2(iArr10[4]);
         int[] iArr11 = this.mCanBusInfoInt;
         if (iArr11 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr11 = null;
         }
         int indexBy2Bit3 = getIndexBy2Bit(DataHandleUtils.getBoolBit2(iArr11[9]));
         int[] iArr12 = this.mCanBusInfoInt;
         if (iArr12 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr12 = null;
         }
         boolean boolBit5 = DataHandleUtils.getBoolBit5(iArr12[4]);
         int[] iArr13 = this.mCanBusInfoInt;
         if (iArr13 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr13 = null;
         }
         int indexBy2Bit4 = getIndexBy2Bit(DataHandleUtils.getBoolBit4(iArr13[10]));
         int[] iArr14 = this.mCanBusInfoInt;
         if (iArr14 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr14 = null;
         }
         boolean boolBit1 = DataHandleUtils.getBoolBit1(iArr14[4]);
         int[] iArr15 = this.mCanBusInfoInt;
         if (iArr15 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr15 = null;
         }
         int indexBy2Bit5 = getIndexBy2Bit(DataHandleUtils.getBoolBit3(iArr15[10]));
         int[] iArr16 = this.mCanBusInfoInt;
         if (iArr16 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr16 = null;
         }
         boolean boolBit0 = DataHandleUtils.getBoolBit0(iArr16[4]);
         int[] iArr17 = this.mCanBusInfoInt;
         if (iArr17 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr17 = null;
         }
         int intFromByteWithBit4 = DataHandleUtils.getIntFromByteWithBit(iArr17[9], 3, 2);
         int[] iArr18 = this.mCanBusInfoInt;
         if (iArr18 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr18 = null;
         }
         boolean boolBit6 = DataHandleUtils.getBoolBit6(iArr18[4]);
         int[] iArr19 = this.mCanBusInfoInt;
         if (iArr19 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr19 = null;
         }
         int intFromByteWithBit5 = DataHandleUtils.getIntFromByteWithBit(iArr19[10], 0, 2);
         int[] iArr20 = this.mCanBusInfoInt;
         if (iArr20 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr20 = null;
         }
         boolean boolBit62 = DataHandleUtils.getBoolBit6(iArr20[5]);
         int[] iArr21 = this.mCanBusInfoInt;
         if (iArr21 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr21 = null;
         }
         int indexBy2Bit6 = getIndexBy2Bit(DataHandleUtils.getBoolBit1(iArr21[11]));
         int[] iArr22 = this.mCanBusInfoInt;
         if (iArr22 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr22 = null;
         }
         boolean boolBit32 = DataHandleUtils.getBoolBit3(iArr22[5]);
         int[] iArr23 = this.mCanBusInfoInt;
         if (iArr23 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr23 = null;
         }
         int indexBy2Bit7 = getIndexBy2Bit(DataHandleUtils.getBoolBit3(iArr23[12]));
         int[] iArr24 = this.mCanBusInfoInt;
         if (iArr24 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr24 = null;
         }
         boolean boolBit12 = DataHandleUtils.getBoolBit1(iArr24[5]);
         int[] iArr25 = this.mCanBusInfoInt;
         if (iArr25 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr25 = null;
         }
         int indexBy2Bit8 = getIndexBy2Bit(DataHandleUtils.getBoolBit6(iArr25[12]));
         int[] iArr26 = this.mCanBusInfoInt;
         if (iArr26 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr26 = null;
         }
         int indexBy2Bit9 = getIndexBy2Bit(DataHandleUtils.getBoolBit5(iArr26[12]));
         int[] iArr27 = this.mCanBusInfoInt;
         if (iArr27 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr27 = null;
         }
         boolean boolBit22 = DataHandleUtils.getBoolBit2(iArr27[5]);
         int[] iArr28 = this.mCanBusInfoInt;
         if (iArr28 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr28 = null;
         }
         int indexBy2Bit10 = getIndexBy2Bit(DataHandleUtils.getBoolBit4(iArr28[12]));
         int[] iArr29 = this.mCanBusInfoInt;
         if (iArr29 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr29 = null;
         }
         int indexBy2Bit11 = getIndexBy2Bit(DataHandleUtils.getBoolBit2(iArr29[12]));
         int[] iArr30 = this.mCanBusInfoInt;
         if (iArr30 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr30 = null;
         }
         boolean boolBit02 = DataHandleUtils.getBoolBit0(iArr30[5]);
         int[] iArr31 = this.mCanBusInfoInt;
         if (iArr31 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr31 = null;
         }
         int intFromByteWithBit6 = DataHandleUtils.getIntFromByteWithBit(iArr31[12], 0, 2);
         int[] iArr32 = this.mCanBusInfoInt;
         if (iArr32 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr32 = null;
         }
         boolean boolBit73 = DataHandleUtils.getBoolBit7(iArr32[6]);
         int[] iArr33 = this.mCanBusInfoInt;
         if (iArr33 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr33 = null;
         }
         int intFromByteWithBit7 = DataHandleUtils.getIntFromByteWithBit(iArr33[11], 2, 3);
         int[] iArr34 = this.mCanBusInfoInt;
         if (iArr34 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr34 = null;
         }
         boolean boolBit42 = DataHandleUtils.getBoolBit4(iArr34[5]);
         int[] iArr35 = this.mCanBusInfoInt;
         if (iArr35 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr35 = null;
         }
         int intFromByteWithBit8 = DataHandleUtils.getIntFromByteWithBit(iArr35[13], 5, 3);
         int[] iArr36 = this.mCanBusInfoInt;
         if (iArr36 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr36 = null;
         }
         boolean boolBit63 = DataHandleUtils.getBoolBit6(iArr36[6]);
         int[] iArr37 = this.mCanBusInfoInt;
         if (iArr37 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr37 = null;
         }
         int intFromByteWithBit9 = DataHandleUtils.getIntFromByteWithBit(iArr37[11], 5, 3);
         int[] iArr38 = this.mCanBusInfoInt;
         if (iArr38 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr38 = null;
         }
         boolean boolBit52 = DataHandleUtils.getBoolBit5(iArr38[5]);
         int[] iArr39 = this.mCanBusInfoInt;
         if (iArr39 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr39 = null;
         }
         int indexBy2Bit12 = getIndexBy2Bit(DataHandleUtils.getBoolBit4(iArr39[13]));
         int[] iArr40 = this.mCanBusInfoInt;
         if (iArr40 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr40 = null;
         }
         boolean boolBit53 = DataHandleUtils.getBoolBit5(iArr40[6]);
         int[] iArr41 = this.mCanBusInfoInt;
         if (iArr41 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr41 = null;
         }
         int indexBy2Bit13 = getIndexBy2Bit(DataHandleUtils.getBoolBit3(iArr41[13]));
         int[] iArr42 = this.mCanBusInfoInt;
         if (iArr42 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr42 = null;
         }
         boolean boolBit43 = DataHandleUtils.getBoolBit4(iArr42[6]);
         int[] iArr43 = this.mCanBusInfoInt;
         if (iArr43 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr43 = null;
         }
         int intFromByteWithBit10 = DataHandleUtils.getIntFromByteWithBit(iArr43[13], 1, 2);
         int[] iArr44 = this.mCanBusInfoInt;
         if (iArr44 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr44 = null;
         }
         boolean boolBit33 = DataHandleUtils.getBoolBit3(iArr44[6]);
         int[] iArr45 = this.mCanBusInfoInt;
         if (iArr45 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr45 = null;
         }
         int indexBy2Bit14 = getIndexBy2Bit(DataHandleUtils.getBoolBit7(iArr45[14]));
         int[] iArr46 = this.mCanBusInfoInt;
         if (iArr46 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr46 = null;
         }
         boolean boolBit23 = DataHandleUtils.getBoolBit2(iArr46[6]);
         int[] iArr47 = this.mCanBusInfoInt;
         if (iArr47 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr47 = null;
         }
         int intFromByteWithBit11 = DataHandleUtils.getIntFromByteWithBit(iArr47[14], 5, 2);
         int[] iArr48 = this.mCanBusInfoInt;
         if (iArr48 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr48 = null;
         }
         boolean boolBit13 = DataHandleUtils.getBoolBit1(iArr48[6]);
         int[] iArr49 = this.mCanBusInfoInt;
         if (iArr49 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr49 = null;
         }
         int indexBy2Bit15 = getIndexBy2Bit(DataHandleUtils.getBoolBit0(iArr49[11]));
         int[] iArr50 = this.mCanBusInfoInt;
         if (iArr50 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr50 = null;
         }
         boolean boolBit34 = DataHandleUtils.getBoolBit3(iArr50[7]);
         int[] iArr51 = this.mCanBusInfoInt;
         if (iArr51 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr51 = null;
         }
         int indexBy2Bit16 = getIndexBy2Bit(DataHandleUtils.getBoolBit7(iArr51[12]));
         int[] iArr52 = this.mCanBusInfoInt;
         if (iArr52 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr52 = null;
         }
         int indexBy2Bit17 = getIndexBy2Bit(DataHandleUtils.getBoolBit0(iArr52[13]));
         int[] iArr53 = this.mCanBusInfoInt;
         if (iArr53 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr53 = null;
         }
         boolean boolBit24 = DataHandleUtils.getBoolBit2(iArr53[7]);
         int[] iArr54 = this.mCanBusInfoInt;
         if (iArr54 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr54 = null;
         }
         int intFromByteWithBit12 = DataHandleUtils.getIntFromByteWithBit(iArr54[14], 3, 2);
         int[] iArr55 = this.mCanBusInfoInt;
         if (iArr55 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr55 = null;
         }
         int intFromByteWithBit13 = DataHandleUtils.getIntFromByteWithBit(iArr55[14], 1, 2);
         int[] iArr56 = this.mCanBusInfoInt;
         if (iArr56 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr56 = null;
         }
         int indexBy2Bit18 = getIndexBy2Bit(DataHandleUtils.getBoolBit0(iArr56[14]));
         int[] iArr57 = this.mCanBusInfoInt;
         if (iArr57 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr57 = null;
         }
         int intFromByteWithBit14 = DataHandleUtils.getIntFromByteWithBit(iArr57[15], 6, 2);
         int[] iArr58 = this.mCanBusInfoInt;
         if (iArr58 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr58 = null;
         }
         int intFromByteWithBit15 = DataHandleUtils.getIntFromByteWithBit(iArr58[15], 4, 2);
         int[] iArr59 = this.mCanBusInfoInt;
         if (iArr59 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr59 = null;
         }
         int indexBy2Bit19 = getIndexBy2Bit(DataHandleUtils.getBoolBit3(iArr59[15]));
         int[] iArr60 = this.mCanBusInfoInt;
         if (iArr60 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr60 = null;
         }
         int indexBy2Bit20 = getIndexBy2Bit(DataHandleUtils.getBoolBit2(iArr60[15]));
         int[] iArr61 = this.mCanBusInfoInt;
         if (iArr61 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr61 = null;
         }
         int intFromByteWithBit16 = DataHandleUtils.getIntFromByteWithBit(iArr61[15], 0, 2);
         int[] iArr62 = this.mCanBusInfoInt;
         if (iArr62 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr62 = null;
         }
         int indexBy2Bit21 = getIndexBy2Bit(DataHandleUtils.getBoolBit7(iArr62[16]));
         int[] iArr63 = this.mCanBusInfoInt;
         if (iArr63 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr63 = null;
         }
         int indexBy2Bit22 = getIndexBy2Bit(DataHandleUtils.getBoolBit6(iArr63[16]));
         int[] iArr64 = this.mCanBusInfoInt;
         if (iArr64 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr64 = null;
         }
         int indexBy2Bit23 = getIndexBy2Bit(DataHandleUtils.getBoolBit5(iArr64[16]));
         int[] iArr65 = this.mCanBusInfoInt;
         if (iArr65 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr65 = null;
         }
         int indexBy2Bit24 = getIndexBy2Bit(DataHandleUtils.getBoolBit4(iArr65[16]));
         int[] iArr66 = this.mCanBusInfoInt;
         if (iArr66 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr66 = null;
         }
         int indexBy2Bit25 = getIndexBy2Bit(DataHandleUtils.getBoolBit3(iArr66[16]));
         int[] iArr67 = this.mCanBusInfoInt;
         if (iArr67 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr67 = null;
         }
         boolean boolBit14 = DataHandleUtils.getBoolBit1(iArr67[7]);
         int[] iArr68 = this.mCanBusInfoInt;
         if (iArr68 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr68 = null;
         }
         int indexBy2Bit26 = getIndexBy2Bit(DataHandleUtils.getBoolBit2(iArr68[16]));
         int[] iArr69 = this.mCanBusInfoInt;
         if (iArr69 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr69 = null;
         }
         boolean boolBit03 = DataHandleUtils.getBoolBit0(iArr69[7]);
         int[] iArr70 = this.mCanBusInfoInt;
         if (iArr70 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr70 = null;
         }
         int intFromByteWithBit17 = DataHandleUtils.getIntFromByteWithBit(iArr70[16], 0, 2);
         int[] iArr71 = this.mCanBusInfoInt;
         if (iArr71 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr71 = null;
         }
         boolean boolBit64 = DataHandleUtils.getBoolBit6(iArr71[8]);
         int[] iArr72 = this.mCanBusInfoInt;
         if (iArr72 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr72 = null;
         }
         int intFromByteWithBit18 = DataHandleUtils.getIntFromByteWithBit(iArr72[17], 6, 2);
         int[] iArr73 = this.mCanBusInfoInt;
         if (iArr73 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr73 = null;
         }
         boolean boolBit04 = DataHandleUtils.getBoolBit0(iArr73[6]);
         int[] iArr74 = this.mCanBusInfoInt;
         if (iArr74 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr74 = null;
         }
         int indexBy2Bit27 = getIndexBy2Bit(DataHandleUtils.getBoolBit5(iArr74[17]));
         int[] iArr75 = this.mCanBusInfoInt;
         if (iArr75 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr75 = null;
         }
         boolean boolBit74 = DataHandleUtils.getBoolBit7(iArr75[7]);
         int[] iArr76 = this.mCanBusInfoInt;
         if (iArr76 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr76 = null;
         }
         int intFromByteWithBit19 = DataHandleUtils.getIntFromByteWithBit(iArr76[17], 3, 2);
         int[] iArr77 = this.mCanBusInfoInt;
         if (iArr77 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr77 = null;
         }
         boolean boolBit65 = DataHandleUtils.getBoolBit6(iArr77[7]);
         int[] iArr78 = this.mCanBusInfoInt;
         if (iArr78 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr78 = null;
         }
         int indexBy2Bit28 = getIndexBy2Bit(DataHandleUtils.getBoolBit2(iArr78[17]));
         int[] iArr79 = this.mCanBusInfoInt;
         if (iArr79 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr79 = null;
         }
         boolean boolBit54 = DataHandleUtils.getBoolBit5(iArr79[7]);
         int[] iArr80 = this.mCanBusInfoInt;
         if (iArr80 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr80 = null;
         }
         int intFromByteWithBit20 = DataHandleUtils.getIntFromByteWithBit(iArr80[17], 0, 2);
         int[] iArr81 = this.mCanBusInfoInt;
         if (iArr81 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr81 = null;
         }
         boolean boolBit44 = DataHandleUtils.getBoolBit4(iArr81[7]);
         int[] iArr82 = this.mCanBusInfoInt;
         if (iArr82 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr82 = null;
         }
         int intFromByteWithBit21 = DataHandleUtils.getIntFromByteWithBit(iArr82[18], 5, 3);
         int[] iArr83 = this.mCanBusInfoInt;
         if (iArr83 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr83 = null;
         }
         boolean boolBit75 = DataHandleUtils.getBoolBit7(iArr83[8]);
         int[] iArr84 = this.mCanBusInfoInt;
         if (iArr84 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr84 = null;
         }
         int intFromByteWithBit22 = DataHandleUtils.getIntFromByteWithBit(iArr84[18], 3, 2);
         int[] iArr85 = this.mCanBusInfoInt;
         if (iArr85 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr85 = null;
         }
         int[] iArr86 = {indexBy2Bit, intFromByteWithBit, intFromByteWithBit2, intFromByteWithBit3, indexBy2Bit2, indexBy2Bit3, indexBy2Bit4, indexBy2Bit5, intFromByteWithBit4, intFromByteWithBit5, indexBy2Bit6, indexBy2Bit7, indexBy2Bit11, intFromByteWithBit6, intFromByteWithBit7, intFromByteWithBit8, intFromByteWithBit9, indexBy2Bit15, indexBy2Bit16, indexBy2Bit17, indexBy2Bit18, intFromByteWithBit13, intFromByteWithBit12, intFromByteWithBit14, intFromByteWithBit15, indexBy2Bit19, indexBy2Bit20, intFromByteWithBit16, indexBy2Bit21, indexBy2Bit22, indexBy2Bit23, indexBy2Bit24, indexBy2Bit25, indexBy2Bit26, intFromByteWithBit17, intFromByteWithBit18, indexBy2Bit27, intFromByteWithBit19, indexBy2Bit28, intFromByteWithBit20, intFromByteWithBit21, intFromByteWithBit22};
@@ -1309,40 +1309,40 @@ public final class MsgMgr extends AbstractMsgMgr {
         ArrayList arrayList = new ArrayList();
         for (int i = 0; i < 42; i++) {
             SettingUpdateEntity enable = new SettingUpdateEntity(0, i, Integer.valueOf(iArr86[i])).setEnable(zArr[i]);
-            Intrinsics.checkNotNullExpressionValue(enable, "SettingUpdateEntity(0, i…i]).setEnable(enable1[i])");
+
             arrayList.add(enable);
         }
         for (int i2 = 0; i2 < 5; i2++) {
             SettingUpdateEntity enable2 = new SettingUpdateEntity(1, i2, Integer.valueOf(iArr87[i2])).setEnable(zArr2[i2]);
-            Intrinsics.checkNotNullExpressionValue(enable2, "SettingUpdateEntity(1, i…i]).setEnable(enable2[i])");
+
             arrayList.add(enable2);
         }
         for (int i3 = 0; i3 < 3; i3++) {
             SettingUpdateEntity enable3 = new SettingUpdateEntity(2, i3, Integer.valueOf(iArr88[i3])).setEnable(zArr3[i3]);
-            Intrinsics.checkNotNullExpressionValue(enable3, "SettingUpdateEntity(2, i…]).setEnable(enable03[i])");
+
             arrayList.add(enable3);
         }
         int[] iArr89 = this.mCanBusInfoInt;
         if (iArr89 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr89 = null;
         }
         this.mEnable06_4 = DataHandleUtils.getBoolBit4(iArr89[8]);
         int[] iArr90 = this.mCanBusInfoInt;
         if (iArr90 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr90 = null;
         }
         this.mEnable06_3 = DataHandleUtils.getBoolBit3(iArr90[8]);
         int[] iArr91 = this.mCanBusInfoInt;
         if (iArr91 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr91 = null;
         }
         this.mEnable06_2 = DataHandleUtils.getBoolBit2(iArr91[8]);
         int[] iArr92 = this.mCanBusInfoInt;
         if (iArr92 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr92 = null;
         }
         this.mEnable06_1 = DataHandleUtils.getBoolBit1(iArr92[8]);
@@ -1354,16 +1354,16 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setHudData() {
         ArrayList arrayList = new ArrayList();
         SettingUpdateEntity enable = new SettingUpdateEntity(5, 0, Integer.valueOf(this.mData0_7)).setEnable(this.mEnable06_4);
-        Intrinsics.checkNotNullExpressionValue(enable, "SettingUpdateEntity<Any?…7).setEnable(mEnable06_4)");
+
         arrayList.add(enable);
         SettingUpdateEntity enable2 = new SettingUpdateEntity(5, 1, Integer.valueOf(this.mData0_26 - 15)).setProgress(this.mData0_26).setEnable(this.mEnable06_3);
-        Intrinsics.checkNotNullExpressionValue(enable2, "SettingUpdateEntity<Any?…  .setEnable(mEnable06_3)");
+
         arrayList.add(enable2);
         SettingUpdateEntity enable3 = new SettingUpdateEntity(5, 2, Integer.valueOf(this.mData2_47 - 5)).setProgress(this.mData2_47).setEnable(this.mEnable06_2);
-        Intrinsics.checkNotNullExpressionValue(enable3, "SettingUpdateEntity<Any?…  .setEnable(mEnable06_2)");
+
         arrayList.add(enable3);
         SettingUpdateEntity enable4 = new SettingUpdateEntity(5, 3, Integer.valueOf(this.mData2_03 - 5)).setProgress(this.mData2_03).setEnable(this.mEnable06_1);
-        Intrinsics.checkNotNullExpressionValue(enable4, "SettingUpdateEntity<Any?…  .setEnable(mEnable06_1)");
+
         arrayList.add(enable4);
         updateGeneralSettingData(arrayList);
     }
@@ -1371,25 +1371,25 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setHudData0x79() {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         this.mData0_7 = DataHandleUtils.getIntFromByteWithBit(iArr[2], 7, 1);
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         this.mData0_26 = DataHandleUtils.getIntFromByteWithBit(iArr2[2], 2, 5);
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         this.mData2_47 = DataHandleUtils.getIntFromByteWithBit(iArr3[3], 4, 4);
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         this.mData2_03 = DataHandleUtils.getIntFromByteWithBit(iArr4[3], 0, 4);
@@ -1406,13 +1406,13 @@ public final class MsgMgr extends AbstractMsgMgr {
                 StringBuilder sb = new StringBuilder();
                 int[] iArr2 = this.mCanBusInfoInt;
                 if (iArr2 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                     iArr2 = null;
                 }
                 int i2 = iArr2[(i * 2) + 2] * 256;
                 int[] iArr3 = this.mCanBusInfoInt;
                 if (iArr3 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 } else {
                     iArr = iArr3;
                 }
@@ -1435,13 +1435,13 @@ public final class MsgMgr extends AbstractMsgMgr {
                 StringBuilder sb = new StringBuilder();
                 int[] iArr2 = this.mCanBusInfoInt;
                 if (iArr2 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                     iArr2 = null;
                 }
                 int i2 = iArr2[(i * 2) + 2] * 256;
                 int[] iArr3 = this.mCanBusInfoInt;
                 if (iArr3 == null) {
-                    Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 } else {
                     iArr = iArr3;
                 }
@@ -1459,7 +1459,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         ArrayList arrayList = new ArrayList();
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         arrayList.add(new DriverUpdateEntity(2, 2, carType(iArr[3])));
@@ -1470,37 +1470,37 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setAmplifierData() {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         if (isDataChange(iArr)) {
             int[] iArr2 = this.mCanBusInfoInt;
             if (iArr2 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr2 = null;
             }
             GeneralAmplifierData.volume = iArr2[2];
             int[] iArr3 = this.mCanBusInfoInt;
             if (iArr3 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr3 = null;
             }
             GeneralAmplifierData.leftRight = iArr3[3] - 16;
             int[] iArr4 = this.mCanBusInfoInt;
             if (iArr4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr4 = null;
             }
             GeneralAmplifierData.frontRear = iArr4[4] - 16;
             int[] iArr5 = this.mCanBusInfoInt;
             if (iArr5 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr5 = null;
             }
             GeneralAmplifierData.bandBass = iArr5[5] - 10;
             int[] iArr6 = this.mCanBusInfoInt;
             if (iArr6 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
                 iArr6 = null;
             }
             GeneralAmplifierData.bandTreble = iArr6[7] - 10;
@@ -1510,7 +1510,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         ArrayList arrayList = new ArrayList();
         int[] iArr7 = this.mCanBusInfoInt;
         if (iArr7 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr7 = null;
         }
         arrayList.add(new SettingUpdateEntity(3, 0, Integer.valueOf(iArr7[9])));
@@ -1520,9 +1520,9 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     private final String carType(int data) {
         Context context = this.mContext;
-        Intrinsics.checkNotNull(context);
+
         String string = context.getString(CommUtil.getStrIdByResId(this.mContext, "_213_car" + data));
-        Intrinsics.checkNotNullExpressionValue(string, "mContext!!.getString(Com…ontext, \"_213_car$data\"))");
+
         return string;
     }
 
@@ -1530,31 +1530,31 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         int[] iArr2 = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         GeneralDoorData.isLeftFrontDoorOpen = DataHandleUtils.getBoolBit7(iArr[4]);
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         GeneralDoorData.isRightFrontDoorOpen = DataHandleUtils.getBoolBit6(iArr3[4]);
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         GeneralDoorData.isLeftRearDoorOpen = DataHandleUtils.getBoolBit5(iArr4[4]);
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         GeneralDoorData.isRightRearDoorOpen = DataHandleUtils.getBoolBit4(iArr5[4]);
         int[] iArr6 = this.mCanBusInfoInt;
         if (iArr6 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         } else {
             iArr2 = iArr6;
         }
@@ -1566,128 +1566,128 @@ public final class MsgMgr extends AbstractMsgMgr {
         ArrayList arrayList = new ArrayList();
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[7] * 256;
         int[] iArr2 = this.mCanBusInfoInt;
         if (iArr2 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr2 = null;
         }
         arrayList.add(new OriginalCarDeviceUpdateEntity(0, String.valueOf(i + iArr2[8])));
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr3 = null;
         }
         int i2 = iArr3[15] * 256;
         int[] iArr4 = this.mCanBusInfoInt;
         if (iArr4 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr4 = null;
         }
         arrayList.add(new OriginalCarDeviceUpdateEntity(1, String.valueOf(i2 + iArr4[16])));
         int[] iArr5 = this.mCanBusInfoInt;
         if (iArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr5 = null;
         }
         int i3 = iArr5[9] * 256;
         int[] iArr6 = this.mCanBusInfoInt;
         if (iArr6 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr6 = null;
         }
         arrayList.add(new OriginalCarDeviceUpdateEntity(2, String.valueOf(i3 + iArr6[10])));
         GeneralOriginalCarDeviceData.mList = arrayList;
         int[] iArr7 = this.mCanBusInfoInt;
         if (iArr7 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr7 = null;
         }
         if (DataHandleUtils.getBoolBit1(iArr7[6])) {
             Context context = this.mContext;
-            Intrinsics.checkNotNull(context);
+
             GeneralOriginalCarDeviceData.cdStatus = context.getResources().getString(R.string.open);
         } else {
             Context context2 = this.mContext;
-            Intrinsics.checkNotNull(context2);
+
             GeneralOriginalCarDeviceData.cdStatus = context2.getResources().getString(R.string.close);
         }
         int[] iArr8 = this.mCanBusInfoInt;
         if (iArr8 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr8 = null;
         }
         GeneralOriginalCarDeviceData.cd = DataHandleUtils.getBoolBit1(iArr8[6]);
         int[] iArr9 = this.mCanBusInfoInt;
         if (iArr9 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr9 = null;
         }
         GeneralOriginalCarDeviceData.rpt_off = DataHandleUtils.getIntFromByteWithBit(iArr9[6], 5, 3) == 0;
         int[] iArr10 = this.mCanBusInfoInt;
         if (iArr10 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr10 = null;
         }
         GeneralOriginalCarDeviceData.rpt_fold = DataHandleUtils.getIntFromByteWithBit(iArr10[6], 5, 3) == 1;
         int[] iArr11 = this.mCanBusInfoInt;
         if (iArr11 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr11 = null;
         }
         GeneralOriginalCarDeviceData.rpt_track = DataHandleUtils.getIntFromByteWithBit(iArr11[6], 5, 3) == 2;
         int[] iArr12 = this.mCanBusInfoInt;
         if (iArr12 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr12 = null;
         }
         GeneralOriginalCarDeviceData.rdm_off = DataHandleUtils.getIntFromByteWithBit(iArr12[6], 2, 3) == 0;
         int[] iArr13 = this.mCanBusInfoInt;
         if (iArr13 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr13 = null;
         }
         GeneralOriginalCarDeviceData.rdm_fold = DataHandleUtils.getIntFromByteWithBit(iArr13[6], 2, 3) == 1;
         int[] iArr14 = this.mCanBusInfoInt;
         if (iArr14 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr14 = null;
         }
         GeneralOriginalCarDeviceData.rdm_disc = DataHandleUtils.getIntFromByteWithBit(iArr14[6], 2, 3) == 2;
         Context context3 = this.mContext;
-        Intrinsics.checkNotNull(context3);
+
         Context context4 = this.mContext;
         StringBuilder sbAppend = new StringBuilder().append("_123_divice_status_");
         int[] iArr15 = this.mCanBusInfoInt;
         if (iArr15 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr15 = null;
         }
         GeneralOriginalCarDeviceData.runningState = context3.getString(CommUtil.getStrIdByResId(context4, sbAppend.append(iArr15[5]).toString()));
         int[] iArr16 = this.mCanBusInfoInt;
         if (iArr16 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr16 = null;
         }
         int i4 = iArr16[13] * 256;
         int[] iArr17 = this.mCanBusInfoInt;
         if (iArr17 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr17 = null;
         }
         int i5 = i4 + iArr17[14];
         int[] iArr18 = this.mCanBusInfoInt;
         if (iArr18 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr18 = null;
         }
         int i6 = iArr18[11] * 256;
         int[] iArr19 = this.mCanBusInfoInt;
         if (iArr19 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr19 = null;
         }
         int i7 = i6 + iArr19[12];
@@ -1697,7 +1697,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             }
             final byte[][] bArr = {new byte[]{22, -14, 10, 0}, new byte[]{22, -14, 10, 1}, new byte[]{22, -14, 10, 2}};
             TimerHelper timerHelper = this.mRequestTimer;
-            Intrinsics.checkNotNull(timerHelper);
+
             timerHelper.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.car._213.MsgMgr.setOriginalCarDeviceInfo.1
                 private int i;
 
@@ -1715,7 +1715,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                     byte[][] bArr2 = bArr;
                     if (i8 >= bArr2.length) {
                         TimerHelper timerHelper2 = this.mRequestTimer;
-                        Intrinsics.checkNotNull(timerHelper2);
+
                         timerHelper2.stopTimer();
                     } else {
                         this.i = i8 + 1;
@@ -1738,13 +1738,13 @@ public final class MsgMgr extends AbstractMsgMgr {
         try {
             byte[] bArr = this.mCanBusInfoByte;
             if (bArr == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
                 bArr = null;
             }
             byte[] bytesEndWithAssign = DataHandleUtils.getBytesEndWithAssign(bArr, 3, (byte) 0);
-            Intrinsics.checkNotNullExpressionValue(bytesEndWithAssign, "getBytesEndWithAssign(mC…foByte, 3, 0x00.toByte())");
+
             Charset charsetForName = Charset.forName("GB2312");
-            Intrinsics.checkNotNullExpressionValue(charsetForName, "forName(\"GB2312\")");
+
             str = new String(bytesEndWithAssign, charsetForName);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -1753,7 +1753,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         ArrayList arrayList = new ArrayList();
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         arrayList.add(new OriginalCarDeviceUpdateEntity(iArr[2] + 2, str));
@@ -1764,14 +1764,14 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final boolean isDoorMsgReturn(byte[] canbusInfo) {
         byte[] bArr = this.mCanbusDoorInfoCopy;
         if (bArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanbusDoorInfoCopy");
+
             bArr = null;
         }
         if (Arrays.equals(canbusInfo, bArr)) {
             return true;
         }
         byte[] bArrCopyOf = Arrays.copyOf(canbusInfo, canbusInfo.length);
-        Intrinsics.checkNotNullExpressionValue(bArrCopyOf, "copyOf(canbusInfo, canbusInfo.size)");
+
         this.mCanbusDoorInfoCopy = bArrCopyOf;
         if (!isDoorFirst) {
             return false;
@@ -1783,14 +1783,14 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final boolean isAirMsgReturn(byte[] canbusInfo) {
         byte[] bArr = this.mCanbusAirInfoCopy;
         if (bArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanbusAirInfoCopy");
+
             bArr = null;
         }
         if (Arrays.equals(canbusInfo, bArr)) {
             return true;
         }
         byte[] bArrCopyOf = Arrays.copyOf(canbusInfo, canbusInfo.length);
-        Intrinsics.checkNotNullExpressionValue(bArrCopyOf, "copyOf(canbusInfo, canbusInfo.size)");
+
         this.mCanbusAirInfoCopy = bArrCopyOf;
         if (!isAirFirst) {
             return false;
@@ -1806,9 +1806,9 @@ public final class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void radioInfoChange(int currClickPresetIndex, String currBand, String currentFreq, String psName, int isStereo) {
         String string;
-        Intrinsics.checkNotNullParameter(currBand, "currBand");
-        Intrinsics.checkNotNullParameter(currentFreq, "currentFreq");
-        Intrinsics.checkNotNullParameter(psName, "psName");
+
+
+
         super.radioInfoChange(currClickPresetIndex, currBand, currentFreq, psName, isStereo);
         if (currClickPresetIndex > 6) {
             currClickPresetIndex = 0;
@@ -1823,31 +1823,31 @@ public final class MsgMgr extends AbstractMsgMgr {
         } else if (currentFreq.length() == 5) {
             StringBuilder sbAppend = new StringBuilder().append(new DecimalFormat("00").format(currClickPresetIndex)).append("  ");
             String strSubstring = currentFreq.substring(0, currentFreq.length());
-            Intrinsics.checkNotNullExpressionValue(strSubstring, "this as java.lang.String…ing(startIndex, endIndex)");
+
             string = sbAppend.append(strSubstring).append("Mhz").toString();
         } else {
             StringBuilder sbAppend2 = new StringBuilder().append(new DecimalFormat("00").format(currClickPresetIndex)).append(' ');
             String strSubstring2 = currentFreq.substring(0, currentFreq.length());
-            Intrinsics.checkNotNullExpressionValue(strSubstring2, "this as java.lang.String…ing(startIndex, endIndex)");
+
             string = sbAppend2.append(strSubstring2).append("Mhz").toString();
         }
         byte[] bytes = string.getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         byte[] bArrByteMerger = Util.byteMerger(new byte[]{22, -111, radioCurrentBand}, bytes);
-        Intrinsics.checkNotNullExpressionValue(bArrByteMerger, "byteMerger(byteMediaStart, temp.toByteArray())");
+
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.FM.name(), bArrByteMerger);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneIncomingInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNullParameter(phoneNumber, "phoneNumber");
+
         super.btPhoneIncomingInfoChange(phoneNumber, isMicMute, isAudioTransferTowardsAG);
         CanbusMsgSender.sendMsg(new byte[]{22, -111, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneOutGoingInfoChange(byte[] phoneNumber, boolean isMicMute, boolean isAudioTransferTowardsAG) {
-        Intrinsics.checkNotNullParameter(phoneNumber, "phoneNumber");
+
         super.btPhoneOutGoingInfoChange(phoneNumber, isMicMute, isAudioTransferTowardsAG);
         CanbusMsgSender.sendMsg(new byte[]{22, -111, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
     }
@@ -1863,12 +1863,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         byte[] bArr = new byte[12];
         Arrays.fill(bArr, (byte) 32);
         byte[] bytes = "AUX".getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         byte[] bytes2 = "AUX".getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes2, "this as java.lang.String).getBytes(charset)");
+
         System.arraycopy(bytes, 0, bArr, 0, bytes2.length);
         byte[] bArrByteMerger = Util.byteMerger(new byte[]{22, -111, NfDef.AVRCP_EVENT_ID_UIDS_CHANGED}, bArr);
-        Intrinsics.checkNotNullExpressionValue(bArrByteMerger, "byteMerger(byteMediaStart, dataPackage)");
+
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.AUX1.name(), bArrByteMerger);
     }
 
@@ -1878,12 +1878,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         byte[] bArr = new byte[12];
         Arrays.fill(bArr, (byte) 32);
         byte[] bytes = "TV".getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         byte[] bytes2 = "TV".getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes2, "this as java.lang.String).getBytes(charset)");
+
         System.arraycopy(bytes, 0, bArr, 0, bytes2.length);
         byte[] bArrByteMerger = Util.byteMerger(new byte[]{22, -111, 8}, bArr);
-        Intrinsics.checkNotNullExpressionValue(bArrByteMerger, "byteMerger(byteMediaStart, dataPackage)");
+
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.ATV.name(), bArrByteMerger);
     }
 
@@ -1893,92 +1893,92 @@ public final class MsgMgr extends AbstractMsgMgr {
         byte[] bArr = new byte[12];
         Arrays.fill(bArr, (byte) 32);
         byte[] bytes = "TV".getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         byte[] bytes2 = "TV".getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes2, "this as java.lang.String).getBytes(charset)");
+
         System.arraycopy(bytes, 0, bArr, 0, bytes2.length);
         byte[] bArrByteMerger = Util.byteMerger(new byte[]{22, -111, 8}, bArr);
-        Intrinsics.checkNotNullExpressionValue(bArrByteMerger, "byteMerger(byteMediaStart, dataPackage)");
+
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.DTV.name(), bArrByteMerger);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void musicInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, byte currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, long currentPos, byte playModel, int playIndex, boolean isPlaying, long totalTime, String songTitle, String songAlbum, String songArtist, boolean isReportFromPlay) {
-        Intrinsics.checkNotNullParameter(currentHourStr, "currentHourStr");
-        Intrinsics.checkNotNullParameter(currentMinuteStr, "currentMinuteStr");
-        Intrinsics.checkNotNullParameter(currentSecondStr, "currentSecondStr");
-        Intrinsics.checkNotNullParameter(songTitle, "songTitle");
-        Intrinsics.checkNotNullParameter(songAlbum, "songAlbum");
-        Intrinsics.checkNotNullParameter(songArtist, "songArtist");
+
+
+
+
+
+
         super.musicInfoChange(stoagePath, playRatio, currentPlayingIndexLow, totalCount, currentHour, currentMinute, currentSecond, currentAllMinuteStr, currentPlayingIndexHigh, currentAllMinute, currentHourStr, currentMinuteStr, currentSecondStr, currentPos, playModel, playIndex, isPlaying, totalTime, songTitle, songAlbum, songArtist, isReportFromPlay);
         String str = new DecimalFormat("00").format(Byte.valueOf(currentMinute));
-        Intrinsics.checkNotNullExpressionValue(str, "DecimalFormat(\"00\").format(currentMinute)");
+
         String str2 = new DecimalFormat("00").format(Byte.valueOf(currentSecond));
-        Intrinsics.checkNotNullExpressionValue(str2, "DecimalFormat(\"00\").format(currentSecond)");
+
         StringBuilder sb = new StringBuilder();
         StringCompanionObject stringCompanionObject = StringCompanionObject.INSTANCE;
         String str3 = new DecimalFormat("000").format((((byte) (currentPlayingIndexHigh & (-1))) * 256) + (currentPlayingIndexLow & 255));
-        Intrinsics.checkNotNullExpressionValue(str3, "DecimalFormat(\"000\").for…urrentPlayIndex.toLong())");
+
         String str4 = String.format(str3, Arrays.copyOf(new Object[0], 0));
-        Intrinsics.checkNotNullExpressionValue(str4, "format(format, *args)");
+
         String string = sb.append(str4).append(' ').append(str).append(':').append(str2).append("   ").toString();
         byte[] bArr = new byte[3];
         bArr[0] = 22;
         bArr[1] = -111;
         bArr[2] = stoagePath == 9 ? (byte) 14 : NfDef.AVRCP_EVENT_ID_VOLUME_CHANGED;
         byte[] bytes = string.getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         byte[] bArrByteMerger = Util.byteMerger(bArr, bytes);
-        Intrinsics.checkNotNullExpressionValue(bArrByteMerger, "byteMerger(byteMediaStar… mediaInfo.toByteArray())");
+
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.MUSIC.name(), bArrByteMerger);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void videoInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, String currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, int currentPos, byte playMode, boolean isPlaying, int duation) {
-        Intrinsics.checkNotNullParameter(currentAllMinuteStr, "currentAllMinuteStr");
-        Intrinsics.checkNotNullParameter(currentHourStr, "currentHourStr");
-        Intrinsics.checkNotNullParameter(currentMinuteStr, "currentMinuteStr");
-        Intrinsics.checkNotNullParameter(currentSecondStr, "currentSecondStr");
+
+
+
+
         super.videoInfoChange(stoagePath, playRatio, currentPlayingIndexLow, totalCount, currentHour, currentMinute, currentSecond, currentAllMinuteStr, currentPlayingIndexHigh, currentAllMinute, currentHourStr, currentMinuteStr, currentSecondStr, currentPos, playMode, isPlaying, duation);
         StringBuilder sb = new StringBuilder();
         StringCompanionObject stringCompanionObject = StringCompanionObject.INSTANCE;
         String str = new DecimalFormat("000").format((((byte) (currentPlayingIndexHigh & (-1))) * 256) + (currentPlayingIndexLow & 255));
-        Intrinsics.checkNotNullExpressionValue(str, "DecimalFormat(\"000\").for…urrentPlayIndex.toLong())");
+
         String str2 = String.format(str, Arrays.copyOf(new Object[0], 0));
-        Intrinsics.checkNotNullExpressionValue(str2, "format(format, *args)");
+
         String string = sb.append(str2).append("         ").toString();
         byte[] bArr = new byte[3];
         bArr[0] = 22;
         bArr[1] = -111;
         bArr[2] = stoagePath == 9 ? (byte) 14 : NfDef.AVRCP_EVENT_ID_VOLUME_CHANGED;
         byte[] bytes = string.getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.VIDEO.name(), Util.byteMerger(bArr, bytes));
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void discInfoChange(byte playModel, int currentTime, int playTitleNo, int position, int currentPlayNo, int currentTotalNo, int discType, boolean isUnMuted, boolean isPlaying, int playStat, String song, String album, String artist) {
-        Intrinsics.checkNotNullParameter(song, "song");
-        Intrinsics.checkNotNullParameter(album, "album");
-        Intrinsics.checkNotNullParameter(artist, "artist");
+
+
+
         super.discInfoChange(playModel, currentTime, playTitleNo, position, currentPlayNo, currentTotalNo, discType, isUnMuted, isPlaying, playStat, song, album, artist);
         String str = new DecimalFormat("00").format(Byte.valueOf((byte) ((currentTime / 60) % 60)));
-        Intrinsics.checkNotNullExpressionValue(str, "DecimalFormat(\"00\").format(curMinute)");
+
         String str2 = new DecimalFormat("00").format(Byte.valueOf((byte) (currentTime % 60)));
-        Intrinsics.checkNotNullExpressionValue(str2, "DecimalFormat(\"00\").format(curSecond)");
+
         String str3 = new DecimalFormat("000").format(currentPlayNo) + ' ' + str + str2 + "    ";
         byte b = 7;
         if (discType != 1 && discType != 2 && discType != 3) {
             b = (discType == 6 || discType == 7) ? (byte) 6 : (byte) 0;
         }
         byte[] bytes = str3.getBytes(Charsets.UTF_8);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         sendMediaMsg(this.mContext, SourceConstantsDef.SOURCE_ID.MPEG.name(), Util.byteMerger(new byte[]{22, -111, b}, bytes));
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void sourceSwitchChange(String source) {
-        Intrinsics.checkNotNullParameter(source, "source");
+
         super.sourceSwitchChange(source);
         if (Intrinsics.areEqual(SourceConstantsDef.SOURCE_ID.NULL.name(), source)) {
             CanbusMsgSender.sendMsg(new byte[]{22, -111, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0});
@@ -1996,7 +1996,7 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public boolean customLongClick(Context context, int key) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         if (key != 3) {
             return false;
         }
@@ -2007,7 +2007,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void setSwcKey() {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         switch (iArr[4]) {
@@ -2048,7 +2048,7 @@ public final class MsgMgr extends AbstractMsgMgr {
         Context context = this.mContext;
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         realKeyLongClick1(context, value, iArr[5]);
@@ -2057,7 +2057,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void set0x21PanelKeyData(Context context) {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[2];
@@ -2130,14 +2130,14 @@ public final class MsgMgr extends AbstractMsgMgr {
         byte[] bArr = this.mCanBusInfoByte;
         byte[] bArr2 = null;
         if (bArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
             bArr = null;
         }
         if (bArr[2] == 1) {
             int i = this.mVolKnobValue;
             byte[] bArr3 = this.mCanBusInfoByte;
             if (bArr3 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
                 bArr3 = null;
             }
             int i2 = i - bArr3[3];
@@ -2148,7 +2148,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             }
             byte[] bArr4 = this.mCanBusInfoByte;
             if (bArr4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
             } else {
                 bArr2 = bArr4;
             }
@@ -2157,14 +2157,14 @@ public final class MsgMgr extends AbstractMsgMgr {
         }
         byte[] bArr5 = this.mCanBusInfoByte;
         if (bArr5 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
             bArr5 = null;
         }
         if (bArr5[2] == 2) {
             int i3 = this.mSelKnobValue;
             byte[] bArr6 = this.mCanBusInfoByte;
             if (bArr6 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
                 bArr6 = null;
             }
             int i4 = i3 - bArr6[3];
@@ -2175,7 +2175,7 @@ public final class MsgMgr extends AbstractMsgMgr {
             }
             byte[] bArr7 = this.mCanBusInfoByte;
             if (bArr7 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoByte");
+
             } else {
                 bArr2 = bArr7;
             }
@@ -2186,12 +2186,12 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void sendAppIconSelect(Context context, int key, int different) {
         String str;
         String deviceId = ConfigUtil.getDeviceId();
-        Intrinsics.checkNotNullExpressionValue(deviceId, "getDeviceId()");
+
         if (StringsKt.contains$default((CharSequence) deviceId, (CharSequence) "P0R", false, 2, (Object) null)) {
             String string = Settings.System.getString(context.getContentResolver(), ServiceConstants.KEY_CURRENT_TOP_PACKAGENAME);
-            Intrinsics.checkNotNullExpressionValue(string, "getString(\n             …PACKAGENAME\n            )");
+
             Object[] array = new Regex(":;:").split(string, 0).toArray(new String[0]);
-            Intrinsics.checkNotNull(array, "null cannot be cast to non-null type kotlin.Array<T of kotlin.collections.ArraysKt__ArraysJVMKt.toTypedArray>");
+
             String str2 = ((String[]) array)[1];
             if (TextUtils.isEmpty(str2) || !StringsKt.contains$default((CharSequence) str2, (CharSequence) "com.android.launcher3", false, 2, (Object) null)) {
                 if (key == 49) {
@@ -2223,13 +2223,13 @@ public final class MsgMgr extends AbstractMsgMgr {
         int[] iArr = this.mCanBusInfoInt;
         int[] iArr2 = null;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         int i = iArr[2];
         int[] iArr3 = this.mCanBusInfoInt;
         if (iArr3 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
         } else {
             iArr2 = iArr3;
         }
@@ -2239,7 +2239,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void realKeyLongClick1(Context context, int key) {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         realKeyLongClick1(context, key, iArr[3]);
@@ -2248,7 +2248,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void realKeyClick3_1(Context context, int key, int time) {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         realKeyClick3_1(context, key, iArr[2], time);
@@ -2257,7 +2257,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     private final void realKeyClick3_2(Context context, int key, int time) {
         int[] iArr = this.mCanBusInfoInt;
         if (iArr == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("mCanBusInfoInt");
+
             iArr = null;
         }
         realKeyClick3_2(context, key, iArr[2], time);
@@ -2284,7 +2284,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     /* compiled from: MsgMgr.kt */
-    @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\t\n\u0002\b\u0003\b\u0082\u0004\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J \u0010\u0007\u001a\u00020\b2\b\u0010\t\u001a\u0004\u0018\u00010\u00062\u0006\u0010\n\u001a\u00020\u000b2\u0006\u0010\f\u001a\u00020\u000bJ\u0006\u0010\r\u001a\u00020\bR\u0010\u0010\u0003\u001a\u0004\u0018\u00010\u0004X\u0082\u000e¢\u0006\u0002\n\u0000R\u0010\u0010\u0005\u001a\u0004\u0018\u00010\u0006X\u0082\u000e¢\u0006\u0002\n\u0000¨\u0006\u000e"}, d2 = {"Lcom/hzbhd/canbus/car/_213/MsgMgr$TimerHelper;", "", "(Lcom/hzbhd/canbus/car/_213/MsgMgr;)V", "mTimer", "Ljava/util/Timer;", "mTimerTask", "Ljava/util/TimerTask;", "startTimer", "", "timerTask", "delay", "", "period", "stopTimer", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     private final class TimerHelper {
         private Timer mTimer;
         private TimerTask mTimerTask;
@@ -2302,7 +2302,7 @@ public final class MsgMgr extends AbstractMsgMgr {
                 this.mTimer = new Timer();
             }
             Timer timer = this.mTimer;
-            Intrinsics.checkNotNull(timer);
+
             timer.schedule(this.mTimerTask, delay, period);
         }
 
@@ -2310,13 +2310,13 @@ public final class MsgMgr extends AbstractMsgMgr {
             Log.i("TimerUtil", "stopTimer: " + this);
             TimerTask timerTask = this.mTimerTask;
             if (timerTask != null) {
-                Intrinsics.checkNotNull(timerTask);
+
                 timerTask.cancel();
                 this.mTimerTask = null;
             }
             Timer timer = this.mTimer;
             if (timer != null) {
-                Intrinsics.checkNotNull(timer);
+
                 timer.cancel();
                 this.mTimer = null;
             }

@@ -16,7 +16,7 @@ import com.hzbhd.proxy.share.impl.ShareDataServiceImpl;
 import com.hzbhd.proxy.sourcemanager.SourceManager;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsAbstractMsgMgr implements MsgMgrInterface {
     private String airJsonStr;
 

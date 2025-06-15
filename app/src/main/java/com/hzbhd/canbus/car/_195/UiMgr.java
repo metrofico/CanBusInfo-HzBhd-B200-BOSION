@@ -24,7 +24,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.ArrayList;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     protected static final int CAR_ID_360_2015_2017 = 0;
     protected static final int CAR_ID_360_PLUS_2018 = 1;

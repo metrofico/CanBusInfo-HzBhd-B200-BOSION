@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._459.mp5_state;
 
 import com.hzbhd.canbus.CanbusMsgSender;
 
-/* loaded from: classes2.dex */
+
 public class Mp5StateCmdOption {
     public int data0bit0_bit3;
     public int data0bit4_bit5;

@@ -11,7 +11,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.canbus.util.SystemUtil;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int eachId;

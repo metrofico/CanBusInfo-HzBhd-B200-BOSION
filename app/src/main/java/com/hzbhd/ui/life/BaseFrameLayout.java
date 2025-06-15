@@ -36,7 +36,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
     public abstract EmptyBinding getBinding();
 
     public void onLifeCycleChange(Lifecycle.State state) {
-        Intrinsics.checkNotNullParameter(state, "state");
+
     }
 
     public void onViewAdd() {
@@ -45,7 +45,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
     }
@@ -53,8 +53,8 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
     }
@@ -62,7 +62,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
     }
@@ -70,7 +70,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
     }
@@ -96,7 +96,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
                 EmptyBinding emptyBinding = BaseFrameLayout.this.emptyBinding;
                 if (emptyBinding != null) {
                     MyLifeCycleOwner myLifeCycleOwner = BaseFrameLayout.this.getMyLifeCycleOwner();
-                    Intrinsics.checkNotNull(myLifeCycleOwner);
+
                     emptyBinding.addObserver(myLifeCycleOwner);
                 }
                 EmptyBinding emptyBinding2 = BaseFrameLayout.this.emptyBinding;
@@ -136,7 +136,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
 
     @Override // android.view.View
     protected void onVisibilityChanged(View changedView, int visibility) {
-        Intrinsics.checkNotNullParameter(changedView, "changedView");
+
         super.onVisibilityChanged(changedView, visibility);
         this.mVisibility = visibility;
         addOrRemoveView();
@@ -196,7 +196,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
                             if (currentState2 == null) {
                                 currentState2 = Lifecycle.State.CREATED;
                             }
-                            Intrinsics.checkNotNullExpressionValue(currentState2, "myLifeCycleOwner?.lifecy…?:Lifecycle.State.CREATED");
+
                             baseFrameLayout.onLifeCycleChange(currentState2);
                             BaseFrameLayout.this.emptyBinding = null;
                             BaseFrameLayout.this.setMyLifeCycleOwner(null);
@@ -214,7 +214,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
                         if (currentState == null) {
                             currentState = Lifecycle.State.CREATED;
                         }
-                        Intrinsics.checkNotNullExpressionValue(currentState, "myLifeCycleOwner?.lifecy…?:Lifecycle.State.CREATED");
+
                         baseFrameLayout2.onLifeCycleChange(currentState);
                         return;
                     }
@@ -246,7 +246,7 @@ public abstract class BaseFrameLayout extends BhdFrameLayout {
                 if (currentState == null) {
                     currentState = Lifecycle.State.CREATED;
                 }
-                Intrinsics.checkNotNullExpressionValue(currentState, "myLifeCycleOwner?.lifecy…?:Lifecycle.State.CREATED");
+
                 baseFrameLayout3.onLifeCycleChange(currentState);
             }
         });

@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u00001\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002*\u0001\u0000\b\n\u0018\u00002\u00060\u0001R\u00020\u0002J\u0010\u0010\u0006\u001a\u00020\u00072\u0006\u0010\b\u001a\u00020\tH\u0016J\u0015\u0010\n\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\f0\u000bH\u0016¢\u0006\u0002\u0010\rR\u0014\u0010\u0003\u001a\b\u0012\u0004\u0012\u00020\u00050\u0004X\u0082.¢\u0006\u0002\n\u0000¨\u0006\u000e"}, d2 = {"com/hzbhd/canbus/car/_161/MsgMgr$initParsers$1$22", "Lcom/hzbhd/canbus/car/_161/MsgMgr$Parser;", "Lcom/hzbhd/canbus/car/_161/MsgMgr;", "list", "Ljava/util/ArrayList;", "Lcom/hzbhd/canbus/entity/DriverUpdateEntity;", "parse", "", "dataLength", "", "setOnParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
     final /* synthetic */ Context $context;
     private ArrayList<DriverUpdateEntity> list;
@@ -48,9 +48,9 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
     /* renamed from: setOnParseListeners$lambda-3, reason: not valid java name */
     public static final void m179setOnParseListeners$lambda3(MsgMgr this$0, Context context, MsgMgr$initParsers$1$22 this$1) {
         String strByResId;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
+
         DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this$0.mDriveItemIndexHashMap.get("_161_driveInfo_0_0_0");
         if (driverUpdateEntity != null) {
             switch (DataHandleUtils.getIntFromByteWithBit(this$0.mCanbusInfoInt[2], 4, 4)) {
@@ -89,7 +89,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList = this$1.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             arrayList.add(driverUpdateEntity.setValue(strByResId));
@@ -106,9 +106,9 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
         String strByResId5;
         String strByResId6;
         String strByResId7;
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(context, "$context");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
+
         DriverUpdateEntity driverUpdateEntity = (DriverUpdateEntity) this$0.mDriveItemIndexHashMap.get("_161_driveInfo_0_0_1_0");
         ArrayList<DriverUpdateEntity> arrayList = null;
         if (driverUpdateEntity != null) {
@@ -119,7 +119,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList2 = this$1.list;
             if (arrayList2 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList2 = null;
             }
             arrayList2.add(driverUpdateEntity.setValue(strByResId7));
@@ -133,7 +133,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList3 = this$1.list;
             if (arrayList3 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList3 = null;
             }
             arrayList3.add(driverUpdateEntity2.setValue(strByResId6));
@@ -147,7 +147,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList4 = this$1.list;
             if (arrayList4 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList4 = null;
             }
             arrayList4.add(driverUpdateEntity3.setValue(strByResId5));
@@ -161,7 +161,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList5 = this$1.list;
             if (arrayList5 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList5 = null;
             }
             arrayList5.add(driverUpdateEntity4.setValue(strByResId4));
@@ -175,7 +175,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList6 = this$1.list;
             if (arrayList6 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList6 = null;
             }
             arrayList6.add(driverUpdateEntity5.setValue(strByResId3));
@@ -189,7 +189,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList7 = this$1.list;
             if (arrayList7 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList7 = null;
             }
             arrayList7.add(driverUpdateEntity6.setValue(strByResId2));
@@ -203,7 +203,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             }
             ArrayList<DriverUpdateEntity> arrayList8 = this$1.list;
             if (arrayList8 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
             } else {
                 arrayList = arrayList8;
             }
@@ -219,7 +219,7 @@ public final class MsgMgr$initParsers$1$22 extends MsgMgr.Parser {
             MsgMgr msgMgr = this.this$0;
             ArrayList<DriverUpdateEntity> arrayList = this.list;
             if (arrayList == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("list");
+
                 arrayList = null;
             }
             msgMgr.updateGeneralDriveData(arrayList);

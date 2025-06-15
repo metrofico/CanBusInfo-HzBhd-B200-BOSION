@@ -234,7 +234,7 @@ public final class BhdRadioButton extends RadioButton {
     @Override // android.view.View
     public void draw(Canvas canvas) {
         super.draw(canvas);
-        Intrinsics.checkNotNullParameter(canvas, "canvas");
+
         if (LogUtil.log2()) {
             LogUtil.d("draw: " + getMeasuredWidth() + ',' + getMeasuredHeight() + "   " + getMinWidth() + ',' + getMinHeight());
         }
@@ -300,7 +300,7 @@ public final class BhdRadioButton extends RadioButton {
             matrix.postScale(drawWidth / bitmap.getWidth(), drawHeight / bitmap.getHeight());
         }
         Bitmap bitmapCreateBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-        Intrinsics.checkNotNullExpressionValue(bitmapCreateBitmap, "createBitmap(bitmap, 0, …map.height, matrix, true)");
+
         return bitmapCreateBitmap;
     }
 

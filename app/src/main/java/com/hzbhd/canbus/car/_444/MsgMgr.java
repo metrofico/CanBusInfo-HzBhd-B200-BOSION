@@ -20,7 +20,7 @@ import kotlin.jvm.internal.ByteCompanionObject;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static SysToSpeechReceiver.CarCtrl carCtrl;
     private static SysToSpeechReceiver sysToSpeechReceiver;

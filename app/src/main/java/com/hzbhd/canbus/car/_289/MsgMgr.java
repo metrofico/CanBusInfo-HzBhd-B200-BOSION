@@ -8,7 +8,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.RadarInfoUtil;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int RADAR_PARAM_MAX = 24;
     private static final int RADAR_PARAM_RANGE = 10;

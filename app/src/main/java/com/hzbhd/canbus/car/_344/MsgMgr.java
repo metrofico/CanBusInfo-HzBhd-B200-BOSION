@@ -7,7 +7,7 @@ import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] mAirData;
     byte[] mCanBusInfoByte;

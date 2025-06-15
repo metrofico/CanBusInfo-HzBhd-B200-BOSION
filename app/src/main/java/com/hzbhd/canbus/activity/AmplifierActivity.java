@@ -274,12 +274,12 @@ public final class AmplifierActivity extends AbstractBaseActivity implements Vie
     private final SeekBar.OnSeekBarChangeListener mOnSeekBarChangeListener = new SeekBar.OnSeekBarChangeListener() { // from class: com.hzbhd.canbus.activity.AmplifierActivity$mOnSeekBarChangeListener$1
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
         public void onStartTrackingTouch(SeekBar seekBar) {
-            Intrinsics.checkNotNullParameter(seekBar, "seekBar");
+
         }
 
         @Override // android.widget.SeekBar.OnSeekBarChangeListener
         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-            Intrinsics.checkNotNullParameter(seekBar, "seekBar");
+
             try {
                 if (Intrinsics.areEqual(seekBar, ((EqSeekBarView) _$_findCachedViewById(R.id.seek_bar_high)).getSeekBar())) {
                     ((EqSeekBarView) _$_findCachedViewById(R.id.seek_bar_high)).setValue(String.valueOf(progress - mBandRange));
@@ -310,7 +310,7 @@ public final class AmplifierActivity extends AbstractBaseActivity implements Vie
             OnAmplifierSeekBarListener onAmplifierSeekBarListener5;
             OnAmplifierSeekBarListener onAmplifierSeekBarListener6;
             OnAmplifierSeekBarListener onAmplifierSeekBarListener7;
-            Intrinsics.checkNotNullParameter(seekBar, "seekBar");
+
             try {
                 SharePreUtil.setIntValue(AmplifierActivity.this, AmplifierActivity.SHARE_PRE_AMPLIFIER_INDEX, 6);
                 if (Intrinsics.areEqual(seekBar, ((EqSeekBarView) _$_findCachedViewById(R.id.seek_bar_high)).getSeekBar())) {
@@ -612,7 +612,7 @@ public final class AmplifierActivity extends AbstractBaseActivity implements Vie
             return;
         }
         IntRange indices = strArr != null ? ArraysKt.getIndices(strArr) : null;
-        Intrinsics.checkNotNull(indices);
+
         int first = indices.getFirst();
         int last = indices.getLast();
         if (first > last) {
@@ -620,7 +620,7 @@ public final class AmplifierActivity extends AbstractBaseActivity implements Vie
         }
         while (true) {
             String[] strArr2 = this.mLineBtnAction;
-            Intrinsics.checkNotNull(strArr2);
+
             if (Intrinsics.areEqual(strArr2[first], GeneralAmplifierData.bose_center)) {
                 ((LineBtnView) _$_findCachedViewById(R.id.lbv_top)).getBtnItemView(first).turn(GeneralAmplifierData.bose_center_b);
             }

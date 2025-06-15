@@ -12,7 +12,7 @@ import com.hzbhd.canbus.util.RadarInfoUtil;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int eachId;

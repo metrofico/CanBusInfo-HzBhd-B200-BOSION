@@ -7,9 +7,9 @@ import java.util.ArrayList;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u00009\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0000\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u0011\n\u0002\u0018\u0002\n\u0002\b\u0002*\u0001\u0000\b\n\u0018\u00002\u00060\u0001R\u00020\u0002J\u0010\u0010\b\u001a\u00020\t2\u0006\u0010\n\u001a\u00020\u000bH\u0016J\u0015\u0010\f\u001a\n\u0012\u0006\u0012\u0004\u0018\u00010\u000e0\rH\u0016¢\u0006\u0002\u0010\u000fR*\u0010\u0003\u001a\u001e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00060\u00050\u0004j\u000e\u0012\n\u0012\b\u0012\u0004\u0012\u00020\u00060\u0005`\u0007X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\u0010"}, d2 = {"com/hzbhd/canbus/car/_161/MsgMgr$initParsers$1$16", "Lcom/hzbhd/canbus/car/_161/MsgMgr$Parser;", "Lcom/hzbhd/canbus/car/_161/MsgMgr;", "list", "Ljava/util/ArrayList;", "Lcom/hzbhd/canbus/entity/SettingUpdateEntity;", "", "Lkotlin/collections/ArrayList;", "parse", "", "dataLength", "", "setOnParseListeners", "", "Lcom/hzbhd/canbus/interfaces/OnParseListener;", "()[Lcom/hzbhd/canbus/interfaces/OnParseListener;", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes.dex */
+
+
+
 public final class MsgMgr$initParsers$1$16 extends MsgMgr.Parser {
     private final ArrayList<SettingUpdateEntity<Object>> list;
     final /* synthetic */ MsgMgr this$0;
@@ -65,8 +65,8 @@ public final class MsgMgr$initParsers$1$16 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-6, reason: not valid java name */
     public static final void m159setOnParseListeners$lambda6(MsgMgr this$0, MsgMgr$initParsers$1$16 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         SettingUpdateEntity settingUpdateEntity = (SettingUpdateEntity) this$0.mSettingItemIndexHashMap.get("_161_speed_remember");
         if (settingUpdateEntity != null) {
             this$1.list.add(settingUpdateEntity.setValue(Integer.valueOf((this$0.mCanbusInfoInt[2] >> 7) & 1)));
@@ -96,8 +96,8 @@ public final class MsgMgr$initParsers$1$16 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-8, reason: not valid java name */
     public static final void m160setOnParseListeners$lambda8(MsgMgr this$0, MsgMgr$initParsers$1$16 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         SettingUpdateEntity<Object> settingUpdateEntity = (SettingUpdateEntity) this$0.mSettingItemIndexHashMap.get("_161_speed_remember_1");
         if (settingUpdateEntity != null) {
             settingUpdateEntity.setValue(Integer.valueOf(this$0.mCanbusInfoInt[3]));
@@ -109,8 +109,8 @@ public final class MsgMgr$initParsers$1$16 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-10, reason: not valid java name */
     public static final void m155setOnParseListeners$lambda10(MsgMgr this$0, MsgMgr$initParsers$1$16 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         SettingUpdateEntity<Object> settingUpdateEntity = (SettingUpdateEntity) this$0.mSettingItemIndexHashMap.get("_161_speed_remember_2");
         if (settingUpdateEntity != null) {
             settingUpdateEntity.setValue(Integer.valueOf(this$0.mCanbusInfoInt[4]));
@@ -122,8 +122,8 @@ public final class MsgMgr$initParsers$1$16 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-12, reason: not valid java name */
     public static final void m156setOnParseListeners$lambda12(MsgMgr this$0, MsgMgr$initParsers$1$16 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         SettingUpdateEntity<Object> settingUpdateEntity = (SettingUpdateEntity) this$0.mSettingItemIndexHashMap.get("_161_speed_remember_3");
         if (settingUpdateEntity != null) {
             settingUpdateEntity.setValue(Integer.valueOf(this$0.mCanbusInfoInt[5]));
@@ -135,8 +135,8 @@ public final class MsgMgr$initParsers$1$16 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-14, reason: not valid java name */
     public static final void m157setOnParseListeners$lambda14(MsgMgr this$0, MsgMgr$initParsers$1$16 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         SettingUpdateEntity<Object> settingUpdateEntity = (SettingUpdateEntity) this$0.mSettingItemIndexHashMap.get("_161_speed_remember_4");
         if (settingUpdateEntity != null) {
             settingUpdateEntity.setValue(Integer.valueOf(this$0.mCanbusInfoInt[6]));
@@ -148,8 +148,8 @@ public final class MsgMgr$initParsers$1$16 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: setOnParseListeners$lambda-16, reason: not valid java name */
     public static final void m158setOnParseListeners$lambda16(MsgMgr this$0, MsgMgr$initParsers$1$16 this$1) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
+
+
         SettingUpdateEntity<Object> settingUpdateEntity = (SettingUpdateEntity) this$0.mSettingItemIndexHashMap.get("_161_speed_remember_5");
         if (settingUpdateEntity != null) {
             settingUpdateEntity.setValue(Integer.valueOf(this$0.mCanbusInfoInt[7]));

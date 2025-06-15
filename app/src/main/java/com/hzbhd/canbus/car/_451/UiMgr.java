@@ -23,7 +23,7 @@ import java.util.List;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static final int CONFIGURATION_camera_451 = 1;
     private static final int CONFIGURATION_defualt_451 = -1;

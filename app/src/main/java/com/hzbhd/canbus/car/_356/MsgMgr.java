@@ -12,9 +12,9 @@ import kotlin.jvm.internal.Intrinsics;
 import kotlin.text.Charsets;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000Z\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0005\n\u0002\u0010\u0015\n\u0002\b\u0005\n\u0002\u0010\b\n\u0002\b\b\n\u0002\u0010\u0002\n\u0002\b\u0005\n\u0002\u0010\u0012\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0006\n\u0002\u0018\u0002\n\u0002\b\u0007\n\u0002\u0010\u0005\n\u0002\b\n\n\u0002\u0010\u000e\n\u0002\b\u0012\n\u0002\u0010\t\n\u0002\b\u0013\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\b\u0010\u0018\u001a\u00020\u0019H\u0016J\b\u0010\u001a\u001a\u00020\u0019H\u0016J\b\u0010\u001b\u001a\u00020\u0019H\u0016JT\u0010\u001c\u001a\u00020\u00192\u0006\u0010\u001d\u001a\u00020\u00102\b\u0010\u001e\u001a\u0004\u0018\u00010\u001f2\u0006\u0010 \u001a\u00020!2\u0006\u0010\"\u001a\u00020!2\u0006\u0010#\u001a\u00020!2\u0006\u0010$\u001a\u00020!2\u0006\u0010%\u001a\u00020\u00102\u0006\u0010&\u001a\u00020\u00102\b\u0010'\u001a\u0004\u0018\u00010(H\u0016J\u0018\u0010)\u001a\u00020\u00192\u0006\u0010\u0003\u001a\u00020\u00042\u0006\u0010*\u001a\u00020\u001fH\u0016J\u0018\u0010+\u001a\u00020\u00192\u0006\u0010,\u001a\u00020\u00102\u0006\u0010-\u001a\u00020!H\u0016Jp\u0010.\u001a\u00020\u00192\u0006\u0010/\u001a\u0002002\u0006\u00101\u001a\u00020\u00102\u0006\u00102\u001a\u00020\u00102\u0006\u00103\u001a\u00020\u00102\u0006\u00104\u001a\u00020\u00102\u0006\u00105\u001a\u00020\u00102\u0006\u00106\u001a\u00020\u00102\u0006\u00107\u001a\u00020!2\u0006\u00108\u001a\u00020!2\u0006\u00109\u001a\u00020\u00102\u0006\u0010:\u001a\u00020;2\u0006\u0010<\u001a\u00020;2\u0006\u0010=\u001a\u00020;H\u0016J\b\u0010>\u001a\u00020\u0019H\u0016JÄ\u0001\u0010?\u001a\u00020\u00192\u0006\u0010@\u001a\u0002002\u0006\u0010A\u001a\u0002002\u0006\u0010B\u001a\u00020\u00102\u0006\u0010C\u001a\u00020\u00102\u0006\u0010D\u001a\u0002002\u0006\u0010E\u001a\u0002002\u0006\u0010F\u001a\u0002002\u0006\u0010G\u001a\u0002002\u0006\u0010H\u001a\u0002002\u0006\u0010I\u001a\u0002002\b\u0010J\u001a\u0004\u0018\u00010;2\b\u0010K\u001a\u0004\u0018\u00010;2\b\u0010L\u001a\u0004\u0018\u00010;2\u0006\u0010M\u001a\u00020N2\u0006\u0010/\u001a\u0002002\u0006\u0010O\u001a\u00020\u00102\u0006\u00108\u001a\u00020!2\u0006\u0010P\u001a\u00020N2\b\u0010Q\u001a\u0004\u0018\u00010;2\b\u0010R\u001a\u0004\u0018\u00010;2\b\u0010S\u001a\u0004\u0018\u00010;2\u0006\u0010T\u001a\u00020!H\u0016J0\u0010U\u001a\u00020\u00192\u0006\u0010V\u001a\u00020\u00102\u0006\u0010W\u001a\u00020;2\u0006\u0010X\u001a\u00020;2\u0006\u0010Y\u001a\u00020;2\u0006\u0010Z\u001a\u00020\u0010H\u0016J\u000e\u0010[\u001a\u00020\u001f2\u0006\u0010\\\u001a\u00020\u001fJ\u001e\u0010]\u001a\u00020\u00192\u0006\u0010^\u001a\u00020\u00102\u0006\u0010_\u001a\u00020\u00102\u0006\u0010`\u001a\u00020\u001fR\u001a\u0010\u0003\u001a\u00020\u0004X\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u0005\u0010\u0006\"\u0004\b\u0007\u0010\bR\u001a\u0010\t\u001a\u00020\nX\u0086.¢\u0006\u000e\n\u0000\u001a\u0004\b\u000b\u0010\f\"\u0004\b\r\u0010\u000eR\u001a\u0010\u000f\u001a\u00020\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0011\u0010\u0012\"\u0004\b\u0013\u0010\u0014R\u001a\u0010\u0015\u001a\u00020\u0010X\u0086\u000e¢\u0006\u000e\n\u0000\u001a\u0004\b\u0016\u0010\u0012\"\u0004\b\u0017\u0010\u0014¨\u0006a"}, d2 = {"Lcom/hzbhd/canbus/car/_356/MsgMgr;", "Lcom/hzbhd/canbus/msg_mgr/AbstractMsgMgr;", "()V", "context", "Landroid/content/Context;", "getContext", "()Landroid/content/Context;", "setContext", "(Landroid/content/Context;)V", "frameData", "", "getFrameData", "()[I", "setFrameData", "([I)V", "vol", "", "getVol", "()I", "setVol", "(I)V", "volSource", "getVolSource", "setVolSource", "atvInfoChange", "", "auxInInfoChange", "btMusicInfoChange", "btPhoneStatusInfoChange", "callStatus", "phoneNumber", "", "isHfpConnected", "", "isCallingFlag", "isMicMute", "isAudioTransferTowardsAG", "batteryStatus", "signalValue", "bundle", "Landroid/os/Bundle;", "canbusInfoChange", "canbusInfo", "currentVolumeInfoChange", "volValue", "isMute", "discInfoChange", "playModel", "", "currentTime", "playTitleNo", "position", "currentPlayNo", "currentTotalNo", "discType", "isUnMuted", "isPlaying", "playStat", "song", "", LcdInfoShare.MediaInfo.album, LcdInfoShare.MediaInfo.artist, "dtvInfoChange", "musicInfoChange", "stoagePath", "playRatio", "currentPlayingIndexLow", "totalCount", "currentHour", "currentMinute", "currentSecond", "currentAllMinuteStr", "currentPlayingIndexHigh", "currentAllMinute", "currentHourStr", "currentMinuteStr", "currentSecondStr", "currentPos", "", "playIndex", "totalTime", "songTitle", "songAlbum", "songArtist", "isReportFromPlay", "radioInfoChange", "currClickPresetIndex", "currBand", "currentFreq", "psName", "isStereo", "restrict", "param", "sendFrame", "d0", "d1", "d3", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr extends AbstractMsgMgr {
     public Context context;
     public int[] frameData;
@@ -30,12 +30,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (iArr != null) {
             return iArr;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("frameData");
+
         return null;
     }
 
     public final void setFrameData(int[] iArr) {
-        Intrinsics.checkNotNullParameter(iArr, "<set-?>");
+
         this.frameData = iArr;
     }
 
@@ -44,12 +44,12 @@ public final class MsgMgr extends AbstractMsgMgr {
         if (context != null) {
             return context;
         }
-        Intrinsics.throwUninitializedPropertyAccessException("context");
+
         return null;
     }
 
     public final void setContext(Context context) {
-        Intrinsics.checkNotNullParameter(context, "<set-?>");
+
         this.context = context;
     }
 
@@ -71,11 +71,11 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void canbusInfoChange(Context context, byte[] canbusInfo) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(canbusInfo, "canbusInfo");
+
+
         super.canbusInfoChange(context, canbusInfo);
         int[] byteArrayToIntArray = getByteArrayToIntArray(canbusInfo);
-        Intrinsics.checkNotNullExpressionValue(byteArrayToIntArray, "getByteArrayToIntArray(canbusInfo)");
+
         setFrameData(byteArrayToIntArray);
         switch (getFrameData()[4]) {
             case 0:
@@ -197,11 +197,11 @@ public final class MsgMgr extends AbstractMsgMgr {
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void discInfoChange(byte playModel, int currentTime, int playTitleNo, int position, int currentPlayNo, int currentTotalNo, int discType, boolean isUnMuted, boolean isPlaying, int playStat, String song, String album, String artist) {
-        Intrinsics.checkNotNullParameter(song, "song");
-        Intrinsics.checkNotNullParameter(album, "album");
-        Intrinsics.checkNotNullParameter(artist, "artist");
+
+
+
         byte[] bytes = "DISC".getBytes(Charsets.US_ASCII);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         sendFrame(32, this.vol, bytes);
     }
 
@@ -209,7 +209,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     public void auxInInfoChange() {
         super.auxInInfoChange();
         byte[] bytes = "AUX".getBytes(Charsets.US_ASCII);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         sendFrame(83, this.vol, bytes);
     }
 
@@ -217,7 +217,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     public void musicInfoChange(byte stoagePath, byte playRatio, int currentPlayingIndexLow, int totalCount, byte currentHour, byte currentMinute, byte currentSecond, byte currentAllMinuteStr, byte currentPlayingIndexHigh, byte currentAllMinute, String currentHourStr, String currentMinuteStr, String currentSecondStr, long currentPos, byte playModel, int playIndex, boolean isPlaying, long totalTime, String songTitle, String songAlbum, String songArtist, boolean isReportFromPlay) {
         if (totalCount != 0) {
             byte[] bytes = (stoagePath == 9 ? "SD" : "USB").getBytes(Charsets.US_ASCII);
-            Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
             sendFrame(stoagePath == 9 ? 85 : 84, this.vol, bytes);
         }
     }
@@ -225,26 +225,26 @@ public final class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void btPhoneStatusInfoChange(int callStatus, byte[] phoneNumber, boolean isHfpConnected, boolean isCallingFlag, boolean isMicMute, boolean isAudioTransferTowardsAG, int batteryStatus, int signalValue, Bundle bundle) {
         byte[] bytes = "PHONE".getBytes(Charsets.US_ASCII);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         sendFrame(64, this.vol, bytes);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void atvInfoChange() {
         byte[] bytes = "ATV".getBytes(Charsets.US_ASCII);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         sendFrame(81, this.vol, bytes);
     }
 
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void dtvInfoChange() {
         byte[] bytes = "DTV".getBytes(Charsets.US_ASCII);
-        Intrinsics.checkNotNullExpressionValue(bytes, "this as java.lang.String).getBytes(charset)");
+
         sendFrame(87, this.vol, bytes);
     }
 
     public final byte[] restrict(byte[] param) {
-        Intrinsics.checkNotNullParameter(param, "param");
+
         if (param.length > 8) {
             return ArraysKt.copyOfRange(param, 0, 7);
         }
@@ -257,7 +257,7 @@ public final class MsgMgr extends AbstractMsgMgr {
     }
 
     public final void sendFrame(int d0, int d1, byte[] d3) {
-        Intrinsics.checkNotNullParameter(d3, "d3");
+
         CanbusMsgSender.sendMsg(ArraysKt.plus(ArraysKt.plus(new byte[]{22, NfDef.AVRCP_EVENT_ID_UIDS_CHANGED, (byte) d0, (byte) d1, 8}, restrict(d3)), (byte) 0));
     }
 }

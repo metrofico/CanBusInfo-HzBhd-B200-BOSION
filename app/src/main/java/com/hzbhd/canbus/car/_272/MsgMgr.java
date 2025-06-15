@@ -31,7 +31,7 @@ import java.util.Arrays;
 import java.util.List;
 import kotlinx.coroutines.scheduling.WorkQueueKt;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String DEVICE_WORK_MODE_AUX_NAVI = "AUX/Navi";
     static final String DEVICE_WORK_MODE_CD = "CD";

@@ -49,7 +49,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.TimerTask;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int SHARE_16_AMPLIFIER_BAND_OFFSET = 2;
     static final int SHARE_16_AMPLIFIER_FADE_OFFSET = 7;

@@ -12,7 +12,7 @@ import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.util.Util;
 
-/* loaded from: classes2.dex */
+
 public class MyPanoramicView extends RelativeLayout {
     int camSt;
     private Context mContext;

@@ -39,7 +39,7 @@ import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 import org.apache.log4j.Priority;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     public static final String SYSTEM_DIALOG_REASON_HOME_KEY = "homekey";
     public static final String SYSTEM_DIALOG_REASON_KEY = "reason";

@@ -59,7 +59,7 @@ public final class CameraManager {
     }
 
     public void startPreview(int flag, Surface surface) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         try {
             ICameraManager mICameraManager2 = getMICameraManager();
             if (mICameraManager2 != null) {
@@ -107,7 +107,7 @@ public final class CameraManager {
         try {
             ICameraManager mICameraManager2 = getMICameraManager();
             Integer numValueOf = mICameraManager2 != null ? mICameraManager2.getFlagAttr(flag, type) : null;
-            Intrinsics.checkNotNull(numValueOf);
+
             return numValueOf.intValue();
         } catch (Exception e) {
             e.printStackTrace();
@@ -138,7 +138,7 @@ public final class CameraManager {
     }
 
     public void setCameraInfo(int flag, int type, String value) {
-        Intrinsics.checkNotNullParameter(value, "value");
+
         try {
             ICameraManager mICameraManager2 = getMICameraManager();
             if (mICameraManager2 != null) {
@@ -153,7 +153,7 @@ public final class CameraManager {
         try {
             ICameraManager mICameraManager2 = getMICameraManager();
             String cameraInfo = mICameraManager2 != null ? mICameraManager2.getCameraInfo(flag, type) : null;
-            Intrinsics.checkNotNull(cameraInfo);
+
             return cameraInfo;
         } catch (Exception e) {
             e.printStackTrace();
@@ -169,7 +169,7 @@ public final class CameraManager {
             for (Integer cameraFlag : callbackMaps.keySet()) {
                 ICameraManager mICameraManager2 = getMICameraManager();
                 if (mICameraManager2 != null) {
-                    Intrinsics.checkNotNullExpressionValue(cameraFlag, "cameraFlag");
+
                     mICameraManager2.addCallBack(cameraFlag.intValue(), callbackMaps.get(cameraFlag));
                 }
                 ICameraListener iCameraListener = listenerMaps.get(cameraFlag);
@@ -183,7 +183,7 @@ public final class CameraManager {
     }
 
     public void setListener(int cameraFlag, ICameraListener iCameraListener) throws RemoteException {
-        Intrinsics.checkNotNullParameter(iCameraListener, "iCameraListener");
+
         HashMap<Integer, ICameraListener> map = listenerMaps;
         if (map.containsKey(Integer.valueOf(cameraFlag))) {
             map.replace(Integer.valueOf(cameraFlag), iCameraListener);

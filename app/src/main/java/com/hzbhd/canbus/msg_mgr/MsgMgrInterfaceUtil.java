@@ -20,7 +20,7 @@ public final class MsgMgrInterfaceUtil implements MsgMgrInterface {
     private MsgMgrInterface mMsgMgrInterface;
 
     public MsgMgrInterfaceUtil(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.context = context;
         this.mMsgMgrInterface = getMMsgMgrInterface();
     }

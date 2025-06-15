@@ -45,7 +45,7 @@ public final class BtCall {
     }
 
     public final void setCallState(BtConstants.CallState callState) {
-        Intrinsics.checkNotNullParameter(callState, "<set-?>");
+
         this.callState = callState;
     }
 
@@ -54,7 +54,7 @@ public final class BtCall {
     }
 
     public final void setCallNum(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.callNum = str;
     }
 
@@ -63,7 +63,7 @@ public final class BtCall {
     }
 
     public final void setCallName(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.callName = str;
     }
 
@@ -88,7 +88,7 @@ public final class BtCall {
     }
 
     public final void setCallDeviceAddress(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.callDeviceAddress = str;
     }
 
@@ -97,7 +97,7 @@ public final class BtCall {
     }
 
     public final void setCallDeviceName(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.callDeviceName = str;
     }
 
@@ -122,21 +122,21 @@ public final class BtCall {
             JSONObject jSONObject = new JSONObject(callString);
             BtCall btCall = new BtCall();
             String strOptString = jSONObject.optString("CALL_STATE");
-            Intrinsics.checkNotNullExpressionValue(strOptString, "jsonObject.optString(CALL_NAME.CALL_STATE.name)");
+
             btCall.setCallState(BtConstants.CallState.valueOf(strOptString));
             String strOptString2 = jSONObject.optString("CALL_NUM");
-            Intrinsics.checkNotNullExpressionValue(strOptString2, "jsonObject.optString(CALL_NAME.CALL_NUM.name)");
+
             btCall.setCallNum(strOptString2);
             String strOptString3 = jSONObject.optString("CALL_NAME");
-            Intrinsics.checkNotNullExpressionValue(strOptString3, "jsonObject.optString(CALL_NAME.CALL_NAME.name)");
+
             btCall.setCallName(strOptString3);
             btCall.setRingTime(jSONObject.optLong("RING_TIME"));
             btCall.setCallingTime(jSONObject.optLong("CALLING_TIME"));
             String strOptString4 = jSONObject.optString("CALL_DEVICE_ADDRRESS");
-            Intrinsics.checkNotNullExpressionValue(strOptString4, "jsonObject.optString(CAL…ALL_DEVICE_ADDRRESS.name)");
+
             btCall.setCallDeviceAddress(strOptString4);
             String strOptString5 = jSONObject.optString("CALL_DEVICE_NAME");
-            Intrinsics.checkNotNullExpressionValue(strOptString5, "jsonObject.optString(CAL…ME.CALL_DEVICE_NAME.name)");
+
             btCall.setCallDeviceName(strOptString5);
             btCall.setCurrCallDevice(jSONObject.optBoolean("IS_CURR_CALL_DEVICE"));
             return btCall;
@@ -147,11 +147,11 @@ public final class BtCall {
     }
 
     public final String toJsonString(BtCall call) {
-        Intrinsics.checkNotNullParameter(call, "call");
+
         try {
             JSONObject jSONObject = new JSONObject();
             BtConstants.CallState callState = call.getCallState();
-            Intrinsics.checkNotNull(callState);
+
             jSONObject.put("CALL_STATE", callState.name());
             jSONObject.put("CALL_NUM", call.getCallNum());
             jSONObject.put("CALL_NAME", call.getCallName());
@@ -161,7 +161,7 @@ public final class BtCall {
             jSONObject.put("CALL_DEVICE_NAME", call.getCallDeviceName());
             jSONObject.put("IS_CURR_CALL_DEVICE", call.getIsCurrCallDevice());
             String string = jSONObject.toString();
-            Intrinsics.checkNotNullExpressionValue(string, "jsonObject.toString()");
+
             return string;
         } catch (Exception unused) {
             Log.d("Call", "toJsonString: error");

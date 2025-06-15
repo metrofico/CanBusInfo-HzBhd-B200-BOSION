@@ -18,7 +18,7 @@ public final class GeneralData {
     }
 
     public final void setCanVersion(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         canVersion = str;
     }
 }

@@ -40,7 +40,7 @@ public final class AirControlHelperTemperatureTarget extends AirTemperatureContr
                     @Override
                     public String invoke() {
                         String front_left_temperature = GeneralAirData.front_left_temperature;
-                        Intrinsics.checkNotNullExpressionValue(front_left_temperature, "front_left_temperature");
+
                         return front_left_temperature;
                     }
                 }, this.airecontrollerHelper.getLeftTemperatureUp(), this.airecontrollerHelper.getLeftTemperatureDown());
@@ -48,7 +48,7 @@ public final class AirControlHelperTemperatureTarget extends AirTemperatureContr
                     @Override
                     public String invoke() {
                         String front_right_temperature = GeneralAirData.front_right_temperature;
-                        Intrinsics.checkNotNullExpressionValue(front_right_temperature, "front_right_temperature");
+
                         return front_right_temperature;
                     }
                 }, this.airecontrollerHelper.getRightTemperatureUp(), this.airecontrollerHelper.getRightTemperatureDown());
@@ -60,10 +60,10 @@ public final class AirControlHelperTemperatureTarget extends AirTemperatureContr
             floatRef.element = Float.parseFloat(type + value);
             long j = 500;
             String front_left_temperature = GeneralAirData.front_left_temperature;
-            Intrinsics.checkNotNullExpressionValue(front_left_temperature, "front_left_temperature");
+
             if (this.lowRegex.matches(front_left_temperature)) {
                 String front_right_temperature = GeneralAirData.front_right_temperature;
-                Intrinsics.checkNotNullExpressionValue(front_right_temperature, "front_right_temperature");
+
                 if (this.lowRegex.matches(front_right_temperature)) {
                     if (floatRef.element < 0.0f) {
                         return;
@@ -80,10 +80,10 @@ public final class AirControlHelperTemperatureTarget extends AirTemperatureContr
                 }
             }
             String front_left_temperature2 = GeneralAirData.front_left_temperature;
-            Intrinsics.checkNotNullExpressionValue(front_left_temperature2, "front_left_temperature");
+
             if (this.highRegex.matches(front_left_temperature2)) {
                 String front_right_temperature2 = GeneralAirData.front_right_temperature;
-                Intrinsics.checkNotNullExpressionValue(front_right_temperature2, "front_right_temperature");
+
                 if (this.highRegex.matches(front_right_temperature2)) {
                     if (floatRef.element > 0.0f) {
                         return;

@@ -33,7 +33,7 @@ import nfore.android.bt.res.NfDef;
 import org.apache.log4j.helpers.DateLayout;
 import org.apache.log4j.net.SyslogAppender;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] accInfoInt;
     private int data0xCB1;

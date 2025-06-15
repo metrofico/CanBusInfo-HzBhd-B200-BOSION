@@ -19,7 +19,7 @@ import com.hzbhd.canbus.ui_set.SyncPageUiSet;
 import com.hzbhd.canbus.ui_set.TirePageUiSet;
 import com.hzbhd.canbus.ui_set.WarningPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class MsAbstractUiMgr implements UiMgrInterface {
     @Override // com.hzbhd.canbus.interfaces.UiMgrInterface
     public AirPageUiSet getAirUiSet(Context context) {

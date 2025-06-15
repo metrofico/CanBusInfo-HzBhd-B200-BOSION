@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import com.hzbhd.R;
 
-/* loaded from: classes2.dex */
+
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {
     private static final String TAG = "_310_MyPanoramicView";
     private OnBtnClickListener mOnBtnClickListener;

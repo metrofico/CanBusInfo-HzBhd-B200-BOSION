@@ -9,7 +9,7 @@ import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.commontools.SourceConstantsDef;
 import java.io.IOException;
 
-/* loaded from: classes2.dex */
+
 public class AutoParkVoiceManger {
     private final String TAG = "AutoParkVoiceManger";
     private MediaPlayer mMediaPlayer;

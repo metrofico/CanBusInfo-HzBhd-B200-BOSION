@@ -37,7 +37,7 @@ public abstract class BaseFrameLayout extends FrameLayout implements LifecycleOw
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mLifecycleRegistry = new LifecycleRegistry(this);
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
@@ -46,8 +46,8 @@ public abstract class BaseFrameLayout extends FrameLayout implements LifecycleOw
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this.mLifecycleRegistry = new LifecycleRegistry(this);
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
@@ -56,7 +56,7 @@ public abstract class BaseFrameLayout extends FrameLayout implements LifecycleOw
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mLifecycleRegistry = new LifecycleRegistry(this);
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
@@ -65,7 +65,7 @@ public abstract class BaseFrameLayout extends FrameLayout implements LifecycleOw
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public BaseFrameLayout(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this.mLifecycleRegistry = new LifecycleRegistry(this);
         this.mWindowVisibility = 8;
         this.mVisibility = 8;
@@ -153,7 +153,7 @@ public abstract class BaseFrameLayout extends FrameLayout implements LifecycleOw
 
     @Override // android.view.View
     protected void onVisibilityChanged(View changedView, int visibility) {
-        Intrinsics.checkNotNullParameter(changedView, "changedView");
+
         super.onVisibilityChanged(changedView, visibility);
         this.mVisibility = visibility;
         addOrRemoveView();
@@ -225,7 +225,7 @@ public abstract class BaseFrameLayout extends FrameLayout implements LifecycleOw
     }
 
     public void onLifeCycleChange(Lifecycle.State state) {
-        Intrinsics.checkNotNullParameter(state, "state");
+
         this.mLifecycleRegistry.markState(state);
     }
 }

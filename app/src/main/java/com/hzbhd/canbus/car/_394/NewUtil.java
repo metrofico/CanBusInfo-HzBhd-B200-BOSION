@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._394;
 
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes2.dex */
+
 public class NewUtil {
     public static int getBoolBit7(int i) {
         return DataHandleUtils.getIntFromByteWithBit(i, 7, 1);

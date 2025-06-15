@@ -17,19 +17,19 @@ public final class BtUtil {
     }
 
     public final ArrayList<Device> stringToDevices(List<String> stringDevices) {
-        Intrinsics.checkNotNullParameter(stringDevices, "stringDevices");
+
         ArrayList<Device> arrayList = new ArrayList<>();
         int size = stringDevices.size();
         for (int i = 0; i < size; i++) {
             Device deviceFromJson = Device.INSTANCE.fromJson(stringDevices.get(i));
-            Intrinsics.checkNotNull(deviceFromJson);
+
             arrayList.add(deviceFromJson);
         }
         return arrayList;
     }
 
     public final ArrayList<String> devicesToString(List<Device> devices) {
-        Intrinsics.checkNotNullParameter(devices, "devices");
+
         ArrayList<String> arrayList = new ArrayList<>();
         int size = devices.size();
         for (int i = 0; i < size; i++) {
@@ -39,19 +39,19 @@ public final class BtUtil {
     }
 
     public final ArrayList<BtCall> stringToCall(List<String> callStrings) {
-        Intrinsics.checkNotNullParameter(callStrings, "callStrings");
+
         ArrayList<BtCall> arrayList = new ArrayList<>();
         int size = callStrings.size();
         for (int i = 0; i < size; i++) {
             BtCall btCallFromJson = BtCall.INSTANCE.fromJson(callStrings.get(i));
-            Intrinsics.checkNotNull(btCallFromJson);
+
             arrayList.add(btCallFromJson);
         }
         return arrayList;
     }
 
     public final ArrayList<String> callsToString(List<BtCall> calls) {
-        Intrinsics.checkNotNullParameter(calls, "calls");
+
         ArrayList<String> arrayList = new ArrayList<>();
         int size = calls.size();
         for (int i = 0; i < size; i++) {

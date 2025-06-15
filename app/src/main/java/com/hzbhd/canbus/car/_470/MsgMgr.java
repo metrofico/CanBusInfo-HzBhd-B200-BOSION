@@ -15,7 +15,7 @@ import java.util.Arrays;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private String airJsonStr;
     int[] mAirData;

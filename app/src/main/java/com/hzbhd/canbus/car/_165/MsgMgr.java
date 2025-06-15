@@ -38,7 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.TimerTask;
 
-/* loaded from: classes.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int CAR_ELFA = 50;
     private static final int SEND_GIVEN_MEDIA_MESSAGE = 1;

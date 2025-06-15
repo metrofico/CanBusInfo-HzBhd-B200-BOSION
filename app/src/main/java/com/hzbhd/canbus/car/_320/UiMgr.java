@@ -13,7 +13,7 @@ import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private byte[] m0x8AData = {22, -118, 0, 0};

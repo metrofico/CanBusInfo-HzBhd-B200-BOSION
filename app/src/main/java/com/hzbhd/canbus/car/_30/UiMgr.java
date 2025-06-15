@@ -28,7 +28,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import java.text.DecimalFormat;
 import kotlin.text.Typography;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final int AMPLIFIER_BALANCE_MID = 7;
     private static final String TAG = "_1030_UiMgr";

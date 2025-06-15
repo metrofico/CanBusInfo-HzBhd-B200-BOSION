@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._443.speech;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 
-/* loaded from: classes2.dex */
+
 public class SysRxSpeechReceiver extends BroadcastReceiver {
     private static final String TAG = "SysRxSpeechReceiver";
     private Context mContext;

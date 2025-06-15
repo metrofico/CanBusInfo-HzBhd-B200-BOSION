@@ -12,7 +12,7 @@ import android.widget.LinearLayout;
 import com.hzbhd.R;
 import com.hzbhd.proxy.camera.manager.CameraManager;
 
-/* loaded from: classes2.dex */
+
 public class VideoInfoView extends LinearLayout {
     private boolean VIDEO_VIEW_SHOW_TAG;
     private TextureView textureView;

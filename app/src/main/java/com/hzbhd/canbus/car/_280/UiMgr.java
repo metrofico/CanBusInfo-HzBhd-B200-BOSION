@@ -17,7 +17,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String _280_AMPLIFIER_BALANCE = "_280_amplifier_balance";
     static final String _280_AMPLIFIER_BASS = "_280_amplifier_bass";

@@ -30,7 +30,7 @@ import java.util.Arrays;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.net.SyslogAppender;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int[] accInfoInt;
     private int data0xCB1;

@@ -30,8 +30,8 @@ public final class FactoryItemAdapter extends RecyclerView.Adapter<RecyclerView.
     }
 
     public FactoryItemAdapter(Context context, List<FactoryActivity.ItemUiSet> list) {
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(list, "list");
+
+
         this.context = context;
         this.list = list;
     }
@@ -42,9 +42,9 @@ public final class FactoryItemAdapter extends RecyclerView.Adapter<RecyclerView.
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder(View itemView) {
             super(itemView);
-            Intrinsics.checkNotNullParameter(itemView, "itemView");
+
             View viewFindViewById = itemView.findViewById(R.id.tv_title);
-            Intrinsics.checkNotNullExpressionValue(viewFindViewById, "itemView.findViewById(R.id.tv_title)");
+
             this.tvTitle = (TextView) viewFindViewById;
         }
 
@@ -59,9 +59,9 @@ public final class FactoryItemAdapter extends RecyclerView.Adapter<RecyclerView.
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder1(View itemView) {
             super(itemView);
-            Intrinsics.checkNotNullParameter(itemView, "itemView");
+
             View viewFindViewById = itemView.findViewById(R.id.tv_value);
-            Intrinsics.checkNotNullExpressionValue(viewFindViewById, "itemView.findViewById(R.id.tv_value)");
+
             this.tvValue = (TextView) viewFindViewById;
         }
 
@@ -76,9 +76,9 @@ public final class FactoryItemAdapter extends RecyclerView.Adapter<RecyclerView.
         /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
         public ViewHolder4(View itemView) {
             super(itemView);
-            Intrinsics.checkNotNullParameter(itemView, "itemView");
+
             View viewFindViewById = itemView.findViewById(R.id.sw_status);
-            Intrinsics.checkNotNullExpressionValue(viewFindViewById, "itemView.findViewById(R.id.sw_status)");
+
             this.swStatus = (Switch) viewFindViewById;
         }
 
@@ -94,25 +94,25 @@ public final class FactoryItemAdapter extends RecyclerView.Adapter<RecyclerView.
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Intrinsics.checkNotNullParameter(parent, "parent");
+
         if (viewType == 1) {
             View viewInflate = LayoutInflater.from(this.context).inflate(R.layout.layout_item_setting_1_lv, parent, false);
-            Intrinsics.checkNotNullExpressionValue(viewInflate, "from(context).inflate(R.…ting_1_lv, parent, false)");
+
             return new ViewHolder1(viewInflate);
         }
         if (viewType == 4) {
             View viewInflate2 = LayoutInflater.from(this.context).inflate(R.layout.layout_item_setting_4_lv, parent, false);
-            Intrinsics.checkNotNullExpressionValue(viewInflate2, "from(context).inflate(R.…ting_4_lv, parent, false)");
+
             return new ViewHolder4(viewInflate2);
         }
         View viewInflate3 = LayoutInflater.from(this.context).inflate(R.layout.layout_item_setting_0_lv, parent, false);
-        Intrinsics.checkNotNullExpressionValue(viewInflate3, "from(context).inflate(R.…ting_0_lv, parent, false)");
+
         return new ViewHolder(viewInflate3);
     }
 
     @Override // androidx.recyclerview.widget.RecyclerView.Adapter
     public void onBindViewHolder(final RecyclerView.ViewHolder holder, int position) {
-        Intrinsics.checkNotNullParameter(holder, "holder");
+
         final FactoryActivity.ItemUiSet itemUiSet = this.list.get(position);
         ((ViewHolder) holder).getTvTitle().setText(CommUtil.getStrByResId(this.context, itemUiSet.getTitleResName()));
         int style = itemUiSet.getStyle();

@@ -16,7 +16,7 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import kotlin.jvm.internal.ByteCompanionObject;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int FreqInt;
     private byte freqHi;

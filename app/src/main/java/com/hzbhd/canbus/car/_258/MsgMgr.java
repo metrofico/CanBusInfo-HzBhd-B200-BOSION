@@ -8,7 +8,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.midware.constant.HotKeyConstant;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static int data1 = 0;
     private static boolean isAirFirst = true;

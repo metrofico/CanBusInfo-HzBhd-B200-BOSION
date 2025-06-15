@@ -32,7 +32,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final int AMPLIFIER_BAND_OFFSET = 2;
     static final int AMPLIFIER_FAD_MIDDLE_VALUE = 7;

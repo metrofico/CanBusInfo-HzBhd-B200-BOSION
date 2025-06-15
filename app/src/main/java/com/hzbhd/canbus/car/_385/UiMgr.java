@@ -8,7 +8,7 @@ import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_41_FRONT_CAMERA_SWITCH = "share_41_front_camera_switch";
     private AirPageUiSet airPageUiSet;

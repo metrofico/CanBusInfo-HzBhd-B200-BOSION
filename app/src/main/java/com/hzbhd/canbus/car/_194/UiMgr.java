@@ -28,7 +28,7 @@ import java.util.Iterator;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     protected static final int CAR_1 = 1;
     protected static final int CAR_10 = 10;

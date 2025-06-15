@@ -27,39 +27,39 @@ public final class ScalePlayView extends OneTexturePlayView {
 
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ScalePlayView(Context context, PlayView.ScalePlayViewInterface scalePlayViewInterface) {
         super(context, scalePlayViewInterface);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(scalePlayViewInterface, "scalePlayViewInterface");
+
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ScalePlayView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ScalePlayView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ScalePlayView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public ScalePlayView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
     }
 
     @Override
@@ -267,7 +267,7 @@ public final class ScalePlayView extends OneTexturePlayView {
             return false;
         }
         if (this.mIsSoftDecoder) {
-            boolean z = !Intrinsics.areEqual(this.mSurfaceTexture, getSoftSurfaceTexture());
+
             if (z) {
                 this.mSurfaceTexture = getSoftSurfaceTexture();
             }
@@ -276,7 +276,7 @@ public final class ScalePlayView extends OneTexturePlayView {
             }
             return z;
         }
-        boolean z2 = !Intrinsics.areEqual(this.mSurfaceTexture, getHardSurfaceTexture());
+
         if (z2) {
             this.mSurfaceTexture = getHardSurfaceTexture();
         }
@@ -289,7 +289,7 @@ public final class ScalePlayView extends OneTexturePlayView {
     @Override // com.hzbhd.ui.view.lifecycle.BaseLifeRelativeLayout
     public void onLifeCycleChange(Lifecycle.State state) {
         PlayView.ScalePlayViewInterface scalePlayViewInterface;
-        Intrinsics.checkNotNullParameter(state, "state");
+
         super.onLifeCycleChange(state);
         boolean zChangeSurface = changeSurface();
         if (LogUtil.log5()) {
@@ -312,7 +312,7 @@ public final class ScalePlayView extends OneTexturePlayView {
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
         PlayView.ScalePlayViewInterface scalePlayViewInterface;
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         boolean zChangeSurface = changeSurface();
         if (LogUtil.log5()) {
             LogUtil.d("onSurfaceTextureAvailable: " + zChangeSurface);
@@ -325,7 +325,7 @@ public final class ScalePlayView extends OneTexturePlayView {
 
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         if (LogUtil.log5()) {
             LogUtil.d("onSurfaceTextureSizeChanged: ");
         }
@@ -333,7 +333,7 @@ public final class ScalePlayView extends OneTexturePlayView {
 
     @Override // com.hzbhd.ui.view.playview.OneTexturePlayView
     public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-        Intrinsics.checkNotNullParameter(surface, "surface");
+
         if (LogUtil.log5()) {
             LogUtil.d("[playSurfaceView:onSurfaceTextureDestroyed]:");
         }

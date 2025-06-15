@@ -22,7 +22,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_AIR_CONDITIONER_TYPE = "share_air_conditioner_type";
     private Context mContext;

@@ -34,7 +34,7 @@ import java.util.List;
 import nfore.android.bt.res.NfDef;
 import org.apache.log4j.Priority;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context mContext;
     private MsgMgr mMsgMgr;

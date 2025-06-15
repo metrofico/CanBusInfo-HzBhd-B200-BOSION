@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._186;
 
 import com.hzbhd.canbus.CanbusMsgSender;
 
-/* loaded from: classes.dex */
+
 class PauseableThread extends Thread {
     private boolean isPaused;
     private int selectPos;

@@ -8,7 +8,7 @@ import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.DataHandleUtils;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static final int GET_10_0x18FEA217 = 419340823;
     private static final int GET_10_0x18FFC119 = 419414297;

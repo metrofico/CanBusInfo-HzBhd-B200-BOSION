@@ -36,7 +36,7 @@ public final class UiIdObserver {
     }
 
     public final void setOldId(String str) {
-        Intrinsics.checkNotNullParameter(str, "<set-?>");
+
         this.oldId = str;
     }
 
@@ -49,7 +49,7 @@ public final class UiIdObserver {
     }
 
     public final void addUIChangeListener(int index, UIChangeListener uiChangeListener) {
-        Intrinsics.checkNotNullParameter(uiChangeListener, "uiChangeListener");
+
         if (this.uiChangeListeners.contains(uiChangeListener)) {
             return;
         }
@@ -61,7 +61,7 @@ public final class UiIdObserver {
     }
 
     public final void removeUIChangeListener(UIChangeListener uiChangeListener) {
-        Intrinsics.checkNotNullParameter(uiChangeListener, "uiChangeListener");
+
         if (this.uiChangeListeners.contains(uiChangeListener)) {
             this.uiChangeListeners.remove(uiChangeListener);
         }
@@ -86,7 +86,7 @@ public final class UiIdObserver {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: notifyUIChange$lambda-1, reason: not valid java name */
     public static final void m1207notifyUIChange$lambda1(String uiid, UIChangeListener uIChangeListener) {
-        Intrinsics.checkNotNullParameter(uiid, "$uiid");
+
         uIChangeListener.onUIChange(uiid);
     }
 }

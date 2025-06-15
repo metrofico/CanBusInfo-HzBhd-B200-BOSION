@@ -15,7 +15,7 @@ import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 import com.hzbhd.canbus.util.TimerUtil;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private String[] mAirBtnListFrontBottom;
     private String[] mAirBtnListFrontLeft;

@@ -5,7 +5,7 @@ import com.hzbhd.commontools.utils.FgeString;
 import com.hzbhd.midware.jni.SerialPort;
 import com.hzbhd.util.LogUtil;
 
-/* loaded from: classes2.dex */
+
 public class RadarUartDevice {
     private static final int MSG_BUFFER_SIZE = 1024;
     private static final int MSG_MAX_SIZE = 512;

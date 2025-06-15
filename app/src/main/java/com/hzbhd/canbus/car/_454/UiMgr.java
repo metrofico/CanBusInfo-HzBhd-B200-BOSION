@@ -14,7 +14,7 @@ import com.hzbhd.canbus.util.DataHandleUtils;
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private Context context;
     private MsgMgr mMsgMgr;

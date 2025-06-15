@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int doorData = 0;

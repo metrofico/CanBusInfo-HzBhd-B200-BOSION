@@ -7,7 +7,7 @@ import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
 import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     Context mContext;
     MsgMgr mMsgMgr;

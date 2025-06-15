@@ -25,7 +25,7 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private int FreqInt;
     private byte bandType;

@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.car._4;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AmplifierActivity;
 import com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener;
@@ -18,10 +19,11 @@ import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.DataHandleUtils;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import java.util.Iterator;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     Context mContext;
     MsgMgr mMsgMgr;

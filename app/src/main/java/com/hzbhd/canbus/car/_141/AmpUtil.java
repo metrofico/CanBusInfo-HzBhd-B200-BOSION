@@ -6,7 +6,7 @@ import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.ui_datas.GeneralAmplifierData;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes.dex */
+
 public class AmpUtil {
     private static String _141_AMP_BASS = "_141_AMP_BASS";
     private static String _141_AMP_FR = "_141_AMP_FR";

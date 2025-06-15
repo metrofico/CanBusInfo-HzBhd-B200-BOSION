@@ -26,7 +26,7 @@ import com.hzbhd.canbus.ui_set.OriginalCarDevicePageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String SHARE_288_LANGUAGE = "share_288_language";
     AirPageUiSet mAirPageUiSet;

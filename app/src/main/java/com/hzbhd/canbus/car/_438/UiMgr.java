@@ -9,7 +9,7 @@ import com.hzbhd.proxy.share.interfaces.IShareStringListener;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends MsAbstractUiMgr {
     private static boolean msgmgrTagHand = false;
     private static boolean systemUiTagHand = false;

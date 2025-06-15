@@ -27,7 +27,7 @@ import java.util.Arrays;
 import java.util.List;
 import org.apache.log4j.net.SyslogAppender;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     int differentId;
     int eachId;

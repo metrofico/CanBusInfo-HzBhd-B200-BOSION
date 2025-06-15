@@ -23,7 +23,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TimeZone;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private static int fullScreenState;
     Context mContext;

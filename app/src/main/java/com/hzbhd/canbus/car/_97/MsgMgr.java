@@ -26,7 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String SHARE_97_RADAR_SWITCH = "share_97_radar_switch";
     static final String SHARE_97_TEMPERATURE_UNIT = "share_97_temperature_unit";

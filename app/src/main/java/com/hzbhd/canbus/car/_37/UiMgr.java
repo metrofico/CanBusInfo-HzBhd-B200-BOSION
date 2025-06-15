@@ -18,7 +18,7 @@ import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
 import java.util.ArrayList;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     static final String _37_AMPLIFIER_BALANCE = "_37_amplifier_balance";
     static final String _37_AMPLIFIER_BASS = "_37_amplifier_bass";

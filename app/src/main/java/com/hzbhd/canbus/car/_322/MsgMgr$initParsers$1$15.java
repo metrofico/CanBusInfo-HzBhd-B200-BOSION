@@ -15,9 +15,9 @@ import kotlin.collections.MapsKt;
 import kotlin.jvm.internal.Intrinsics;
 import nfore.android.bt.res.NfDef;
 
-/* compiled from: MsgMgr.kt */
-@Metadata(d1 = {"\u0000%\n\u0000\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010$\n\u0002\u0010\b\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002*\u0001\u0000\b\n\u0018\u00002\u00060\u0001R\u00020\u0002J\u0010\u0010\u0007\u001a\u00020\b2\u0006\u0010\t\u001a\u00020\u0005H\u0016R\u001a\u0010\u0003\u001a\u000e\u0012\u0004\u0012\u00020\u0005\u0012\u0004\u0012\u00020\u00060\u0004X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006\n"}, d2 = {"com/hzbhd/canbus/car/_322/MsgMgr$initParsers$1$15", "Lcom/hzbhd/canbus/car/_322/MsgMgr$Parser;", "Lcom/hzbhd/canbus/car/_322/MsgMgr;", "mUpdateBeamArray", "", "", "Lcom/hzbhd/canbus/car/_322/ActivePark$UpdateBeam;", "parse", "", "dataLength", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     final /* synthetic */ Context $context;
     private final Map<Integer, ActivePark.UpdateBeam> mUpdateBeamArray;
@@ -51,10 +51,10 @@ public final class MsgMgr$initParsers$1$15 extends MsgMgr.Parser {
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: parse$lambda-2$lambda-1, reason: not valid java name */
     public static final void m563parse$lambda2$lambda1(ActivePark this_run, MsgMgr this$0, MsgMgr$initParsers$1$15 this$1, Context context) {
-        Intrinsics.checkNotNullParameter(this_run, "$this_run");
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
-        Intrinsics.checkNotNullParameter(this$1, "this$1");
-        Intrinsics.checkNotNullParameter(context, "$context");
+
+
+
+
         this_run.setActiveParkActive(this$0.mCanbusInfoInt[3] != 0);
         ActivePark.UpdateBeam updateBeam = this$1.mUpdateBeamArray.get(Integer.valueOf(this$0.mCanbusInfoInt[3]));
         if (updateBeam != null) {

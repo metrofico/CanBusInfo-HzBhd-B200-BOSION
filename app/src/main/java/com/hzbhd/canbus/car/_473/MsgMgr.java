@@ -17,7 +17,7 @@ import java.util.Locale;
 import kotlin.Unit;
 import kotlin.jvm.functions.Function0;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final /* synthetic */ boolean $assertionsDisabled = false;
     CanDocking docking;

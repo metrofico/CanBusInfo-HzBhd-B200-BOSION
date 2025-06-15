@@ -42,7 +42,7 @@ import kotlin.jvm.internal.ByteCompanionObject;
 import kotlin.text.Typography;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     AirPageUiSet airPageUiSet;
     private Context mContext;

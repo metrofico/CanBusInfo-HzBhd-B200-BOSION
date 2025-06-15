@@ -15,7 +15,7 @@ import com.hzbhd.canbus.util.LogUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-/* loaded from: classes2.dex */
+
 public class MqbHybirdActivity extends AbstractBaseActivity {
     private ImageView mBattery;
     private int[] mBatteryLevelImage = {R.drawable.vw_golf7_hybrid_battery_0, R.drawable.vw_golf7_hybrid_battery_1, R.drawable.vw_golf7_hybrid_battery_2, R.drawable.vw_golf7_hybrid_battery_3, R.drawable.vw_golf7_hybrid_battery_4, R.drawable.vw_golf7_hybrid_battery_5, R.drawable.vw_golf7_hybrid_battery_6, R.drawable.vw_golf7_hybrid_battery_7, R.drawable.vw_golf7_hybrid_battery_8, R.drawable.vw_golf7_hybrid_battery_9, R.drawable.vw_golf7_hybrid_battery_10};

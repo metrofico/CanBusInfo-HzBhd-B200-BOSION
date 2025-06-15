@@ -1,6 +1,6 @@
 package com.hzbhd.canbus.car._447;
 
-/* loaded from: classes2.dex */
+
 public class ID447Data {
     public static int frontLeftMidRange;
     public static int frontLeftRange;

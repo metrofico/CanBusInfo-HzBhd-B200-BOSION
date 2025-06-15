@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import com.hzbhd.R;
 
-/* loaded from: classes.dex */
+
 public class P360ButtonWindow extends RelativeLayout {
     private static final int BUTTOM = 4;
     private static final int LEFT = 0;

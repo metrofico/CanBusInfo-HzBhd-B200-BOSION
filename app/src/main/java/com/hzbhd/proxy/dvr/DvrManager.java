@@ -52,7 +52,7 @@ public final class DvrManager {
     }
 
     public final void registerOnDataReadCallback(IDvrDataCallBack callback) {
-        Intrinsics.checkNotNullParameter(callback, "callback");
+
         IDvrAidlInterface dvrService2 = getDvrService();
         if (dvrService2 != null) {
             try {
@@ -64,7 +64,7 @@ public final class DvrManager {
     }
 
     public final void unregisterOnDataReadCallback(IDvrDataCallBack callback) {
-        Intrinsics.checkNotNullParameter(callback, "callback");
+
         IDvrAidlInterface dvrService2 = getDvrService();
         if (dvrService2 != null) {
             try {
@@ -76,7 +76,7 @@ public final class DvrManager {
     }
 
     public final void sendData(byte[] bytes) {
-        Intrinsics.checkNotNullParameter(bytes, "bytes");
+
         IDvrAidlInterface dvrService2 = getDvrService();
         if (dvrService2 != null) {
             try {

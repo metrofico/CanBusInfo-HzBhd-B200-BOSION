@@ -15,7 +15,7 @@ import com.hzbhd.R;
 import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import java.util.Arrays;
 
-/* loaded from: classes2.dex */
+
 public class TypeInView implements View.OnClickListener {
     static LinearLayout add_page1;
     static LinearLayout add_page2;

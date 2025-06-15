@@ -16,7 +16,7 @@ import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import kotlin.jvm.internal.ByteCompanionObject;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes.dex */
+
 public class UiMgr extends AbstractUiMgr {
     public int currentClickFront;
     private String[] mAirBtnListFrontBottom;

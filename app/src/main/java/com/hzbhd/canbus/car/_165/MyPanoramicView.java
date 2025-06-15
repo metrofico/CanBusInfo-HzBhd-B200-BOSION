@@ -7,7 +7,7 @@ import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import com.hzbhd.R;
 
-/* loaded from: classes.dex */
+
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {
     private static final String TAG = "_165_MyPanoramicView";
     private ImageButton mIbEndBottom;

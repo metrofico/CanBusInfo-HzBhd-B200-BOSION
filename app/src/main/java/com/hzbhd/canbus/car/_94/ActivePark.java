@@ -20,9 +20,9 @@ import java.util.Map;
 import kotlin.Metadata;
 import kotlin.jvm.internal.Intrinsics;
 
-/* compiled from: ActivePark.kt */
-@Metadata(d1 = {"\u0000d\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\b\n\u0002\u0010\u000e\n\u0002\b\u0005\n\u0002\u0018\u0002\n\u0002\b\u0004\u0018\u00002\u00020\u0001:\u0003*+,B\r\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004J\b\u0010\u0016\u001a\u00020\u0017H\u0002J\u0016\u0010\u0018\u001a\u00020\u00172\u0006\u0010\u0002\u001a\u00020\u00032\u0006\u0010\u0019\u001a\u00020\u001aJ\u0006\u0010\u001b\u001a\u00020\u000eJ\b\u0010\u001c\u001a\u00020\u0017H\u0002J\b\u0010\u001d\u001a\u00020\u0017H\u0002J\u000e\u0010\u001e\u001a\u00020\u00172\u0006\u0010\u001f\u001a\u00020\nJ\u0010\u0010 \u001a\u00020\u00172\u0006\u0010!\u001a\u00020\u001aH\u0002J\u0010\u0010 \u001a\u00020\u00172\u0006\u0010\"\u001a\u00020#H\u0002J\u0010\u0010$\u001a\u00020\u00172\u0006\u0010!\u001a\u00020\u001aH\u0002J\b\u0010%\u001a\u00020\u0017H\u0002J\u0006\u0010&\u001a\u00020\u0017J\u000e\u0010'\u001a\u00020\u00172\u0006\u0010(\u001a\u00020)R\u000e\u0010\u0005\u001a\u00020\u0006X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0007\u001a\u00020\bX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\t\u001a\u00020\nX\u0082\u000e¢\u0006\u0002\n\u0000R\u000e\u0010\u000b\u001a\u00020\fX\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\r\u001a\u00020\u000eX\u0082\u0004¢\u0006\u0002\n\u0000R\u0016\u0010\u000f\u001a\n \u0011*\u0004\u0018\u00010\u00100\u0010X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0012\u001a\u00020\u0013X\u0082\u0004¢\u0006\u0002\n\u0000R\u000e\u0010\u0014\u001a\u00020\u0015X\u0082\u0004¢\u0006\u0002\n\u0000¨\u0006-"}, d2 = {"Lcom/hzbhd/canbus/car/_94/ActivePark;", "", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "mActiveParkView", "Lcom/hzbhd/canbus/car/_94/ActivePark$ActiveParkView;", "mHandler", "Landroid/os/Handler;", "mIsActiveViewOpen", "", "mLayoutParams", "Landroid/view/WindowManager$LayoutParams;", "mPanoramicView", "Lcom/hzbhd/canbus/car/_94/ActivePark$MyPanoramicView;", "mParkPageUiSet", "Lcom/hzbhd/canbus/ui_set/ParkPageUiSet;", "kotlin.jvm.PlatformType", "mTimerUtil", "Lcom/hzbhd/canbus/util/TimerUtil;", "mWindowManager", "Landroid/view/WindowManager;", "closeActiveParkView", "", "countDown", "messageResId", "", "getPanoramicView", "hideAlertWindow", "openActiveParkView", "setActiveParkActive", "isActive", "setAlertMessage", "resid", "text", "", "setTipMessage", "showAlertWindow", "stopTimer", "update", "beam", "Lcom/hzbhd/canbus/car/_94/ActivePark$ActiveParkBeam;", "ActiveParkBeam", "ActiveParkView", "MyPanoramicView", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 public final class ActivePark {
     private final ActiveParkView mActiveParkView;
     private final Handler mHandler;
@@ -34,9 +34,9 @@ public final class ActivePark {
     private final WindowManager mWindowManager;
 
     public ActivePark(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         Object systemService = context.getSystemService("window");
-        Intrinsics.checkNotNull(systemService, "null cannot be cast to non-null type android.view.WindowManager");
+
         this.mWindowManager = (WindowManager) systemService;
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         layoutParams.type = 2002;
@@ -57,7 +57,7 @@ public final class ActivePark {
     }
 
     public final void update(ActiveParkBeam beam) {
-        Intrinsics.checkNotNullParameter(beam, "beam");
+
         hideAlertWindow();
         if (beam.getLeftImageResId() == null && beam.getRightImageResId() == null) {
             showAlertWindow();
@@ -84,7 +84,7 @@ public final class ActivePark {
     }
 
     public final void countDown(Context context, int messageResId) {
-        Intrinsics.checkNotNullParameter(context, "context");
+
         TimerUtil timerUtil = this.mTimerUtil;
         timerUtil.startTimer(new ActivePark$countDown$1$1(context, messageResId, timerUtil, this), 0L, 1000L);
     }
@@ -145,7 +145,7 @@ public final class ActivePark {
     }
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\b\n\u0000\n\u0002\u0010\u000e\n\u0002\b\u0005\u0018\u00002\u00020\u0001B\u000f\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0005\u001a\u00020\u0006J\u000e\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\tJ\u000e\u0010\u0007\u001a\u00020\u00062\u0006\u0010\n\u001a\u00020\u000bJ\u000e\u0010\f\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\tJ\u000e\u0010\r\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\tJ\u000e\u0010\u000e\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\tJ\u0006\u0010\u000f\u001a\u00020\u0006¨\u0006\u0010"}, d2 = {"Lcom/hzbhd/canbus/car/_94/ActivePark$ActiveParkView;", "Landroid/widget/LinearLayout;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "hideAlertWindow", "", "setAlertMessage", "resid", "", "text", "", "setLeftSideImage", "setRightSideImage", "setTipMessage", "showAlertWindow", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final class ActiveParkView extends LinearLayout {
         public Map<Integer, View> _$_findViewCache = new LinkedHashMap();
 
@@ -197,13 +197,13 @@ public final class ActivePark {
         }
 
         public final void setAlertMessage(String text) {
-            Intrinsics.checkNotNullParameter(text, "text");
+
             ((TextView) _$_findCachedViewById(R.id.tv_alert_message)).setText(text);
         }
     }
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u00008\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0002\b\u0002\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0003\u0018\u0000 \u00152\u00020\u0001:\u0001\u0015B\u000f\u0012\b\u0010\u0002\u001a\u0004\u0018\u00010\u0003¢\u0006\u0002\u0010\u0004J\u0006\u0010\u0005\u001a\u00020\u0006J\u000e\u0010\u0007\u001a\u00020\u00062\u0006\u0010\b\u001a\u00020\tJ\u000e\u0010\n\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\fJ\u000e\u0010\n\u001a\u00020\u00062\u0006\u0010\r\u001a\u00020\tJ\u000e\u0010\u000e\u001a\u00020\u00062\u0006\u0010\u000b\u001a\u00020\fJ\u0016\u0010\u000f\u001a\u00020\u00062\u0006\u0010\u0010\u001a\u00020\u00112\u0006\u0010\u0012\u001a\u00020\u0013J\u0006\u0010\u0014\u001a\u00020\u0006¨\u0006\u0016"}, d2 = {"Lcom/hzbhd/canbus/car/_94/ActivePark$MyPanoramicView;", "Landroid/widget/RelativeLayout;", "context", "Landroid/content/Context;", "(Landroid/content/Context;)V", "hideAlertWindow", "", "refreshIcon", LcdInfoShare.MediaInfo.name, "", "setAlertMessage", "resid", "", "text", "setTipMessage", "setVisible", "view", "Landroid/view/View;", "visible", "", "showAlertWindow", "Companion", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final class MyPanoramicView extends RelativeLayout {
         public static final String LEFT_BACKWARD = "left_backward";
         public static final String LEFT_FORWARD = "left_forward";
@@ -253,34 +253,34 @@ public final class ActivePark {
         }
 
         public final void setAlertMessage(String text) {
-            Intrinsics.checkNotNullParameter(text, "text");
+
             ((TextView) _$_findCachedViewById(R.id.tv_alert_message)).setText(text);
         }
 
         public final void refreshIcon(String name) {
-            Intrinsics.checkNotNullParameter(name, "name");
+
             ImageView iv_left_radar = (ImageView) _$_findCachedViewById(R.id.iv_left_radar);
-            Intrinsics.checkNotNullExpressionValue(iv_left_radar, "iv_left_radar");
-            setVisible(iv_left_radar, Intrinsics.areEqual(LEFT_RADAR, name));
+
+
             ImageView iv_right_radar = (ImageView) _$_findCachedViewById(R.id.iv_right_radar);
-            Intrinsics.checkNotNullExpressionValue(iv_right_radar, "iv_right_radar");
-            setVisible(iv_right_radar, Intrinsics.areEqual(RIGHT_RADAR, name));
+
+
             ImageView iv_left_forward = (ImageView) _$_findCachedViewById(R.id.iv_left_forward);
-            Intrinsics.checkNotNullExpressionValue(iv_left_forward, "iv_left_forward");
-            setVisible(iv_left_forward, Intrinsics.areEqual(LEFT_FORWARD, name));
+
+
             ImageView iv_left_backward = (ImageView) _$_findCachedViewById(R.id.iv_left_backward);
-            Intrinsics.checkNotNullExpressionValue(iv_left_backward, "iv_left_backward");
-            setVisible(iv_left_backward, Intrinsics.areEqual(LEFT_BACKWARD, name));
+
+
             ImageView iv_left_stop = (ImageView) _$_findCachedViewById(R.id.iv_left_stop);
-            Intrinsics.checkNotNullExpressionValue(iv_left_stop, "iv_left_stop");
-            setVisible(iv_left_stop, Intrinsics.areEqual(LEFT_STOP, name));
+
+
             TextView tv_left_reverse = (TextView) _$_findCachedViewById(R.id.tv_left_reverse);
-            Intrinsics.checkNotNullExpressionValue(tv_left_reverse, "tv_left_reverse");
-            setVisible(tv_left_reverse, Intrinsics.areEqual(LEFT_REVERSE, name));
+
+
         }
 
         public final void setVisible(View view, boolean visible) {
-            Intrinsics.checkNotNullParameter(view, "view");
+
             if (visible) {
                 view.setVisibility(0);
             } else {
@@ -290,7 +290,7 @@ public final class ActivePark {
     }
 
     /* compiled from: ActivePark.kt */
-    @Metadata(d1 = {"\u0000\"\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0010\n\u0002\u0010\u000b\n\u0002\b\u0004\b\u0086\b\u0018\u00002\u00020\u0001B\u000f\b\u0016\u0012\u0006\u0010\u0002\u001a\u00020\u0003¢\u0006\u0002\u0010\u0004B+\u0012\u0006\u0010\u0002\u001a\u00020\u0003\u0012\b\u0010\u0005\u001a\u0004\u0018\u00010\u0003\u0012\b\u0010\u0006\u001a\u0004\u0018\u00010\u0003\u0012\b\u0010\u0007\u001a\u0004\u0018\u00010\b¢\u0006\u0002\u0010\tJ\t\u0010\u0012\u001a\u00020\u0003HÆ\u0003J\u0010\u0010\u0013\u001a\u0004\u0018\u00010\u0003HÆ\u0003¢\u0006\u0002\u0010\u000bJ\u0010\u0010\u0014\u001a\u0004\u0018\u00010\u0003HÆ\u0003¢\u0006\u0002\u0010\u000bJ\u000b\u0010\u0015\u001a\u0004\u0018\u00010\bHÆ\u0003J<\u0010\u0016\u001a\u00020\u00002\b\b\u0002\u0010\u0002\u001a\u00020\u00032\n\b\u0002\u0010\u0005\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0006\u001a\u0004\u0018\u00010\u00032\n\b\u0002\u0010\u0007\u001a\u0004\u0018\u00010\bHÆ\u0001¢\u0006\u0002\u0010\u0017J\u0013\u0010\u0018\u001a\u00020\u00192\b\u0010\u001a\u001a\u0004\u0018\u00010\u0001HÖ\u0003J\t\u0010\u001b\u001a\u00020\u0003HÖ\u0001J\t\u0010\u001c\u001a\u00020\bHÖ\u0001R\u0015\u0010\u0005\u001a\u0004\u0018\u00010\u0003¢\u0006\n\n\u0002\u0010\f\u001a\u0004\b\n\u0010\u000bR\u0011\u0010\u0002\u001a\u00020\u0003¢\u0006\b\n\u0000\u001a\u0004\b\r\u0010\u000eR\u0013\u0010\u0007\u001a\u0004\u0018\u00010\b¢\u0006\b\n\u0000\u001a\u0004\b\u000f\u0010\u0010R\u0015\u0010\u0006\u001a\u0004\u0018\u00010\u0003¢\u0006\n\n\u0002\u0010\f\u001a\u0004\b\u0011\u0010\u000b¨\u0006\u001d"}, d2 = {"Lcom/hzbhd/canbus/car/_94/ActivePark$ActiveParkBeam;", "", "messageResId", "", "(I)V", "leftImageResId", "rightImageResId", "reverseIcon", "", "(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)V", "getLeftImageResId", "()Ljava/lang/Integer;", "Ljava/lang/Integer;", "getMessageResId", "()I", "getReverseIcon", "()Ljava/lang/String;", "getRightImageResId", "component1", "component2", "component3", "component4", "copy", "(ILjava/lang/Integer;Ljava/lang/Integer;Ljava/lang/String;)Lcom/hzbhd/canbus/car/_94/ActivePark$ActiveParkBeam;", "equals", "", "other", "hashCode", "toString", "CanBusInfo_release"}, k = 1, mv = {1, 7, 1}, xi = 48)
+    
     public static final /* data */ class ActiveParkBeam {
         private final Integer leftImageResId;
         private final int messageResId;
@@ -345,7 +345,7 @@ public final class ActivePark {
                 return false;
             }
             ActiveParkBeam activeParkBeam = (ActiveParkBeam) other;
-            return this.messageResId == activeParkBeam.messageResId && Intrinsics.areEqual(this.leftImageResId, activeParkBeam.leftImageResId) && Intrinsics.areEqual(this.rightImageResId, activeParkBeam.rightImageResId) && Intrinsics.areEqual(this.reverseIcon, activeParkBeam.reverseIcon);
+
         }
 
         public int hashCode() {

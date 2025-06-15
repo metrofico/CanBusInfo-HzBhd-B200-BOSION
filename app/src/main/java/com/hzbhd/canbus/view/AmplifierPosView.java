@@ -34,23 +34,23 @@ public final class AmplifierPosView extends RelativeLayout {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AmplifierPosView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         this._$_findViewCache = new LinkedHashMap();
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AmplifierPosView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this._$_findViewCache = new LinkedHashMap();
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public AmplifierPosView(Context context, AttributeSet attrs, int i) {
         super(context, attrs, i);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         this._$_findViewCache = new LinkedHashMap();
     }
 

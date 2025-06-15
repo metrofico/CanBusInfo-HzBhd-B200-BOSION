@@ -38,7 +38,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     static final String DEVICE_WORK_MODE_AUX = "AUX";
     static final String DEVICE_WORK_MODE_CD = "CD";

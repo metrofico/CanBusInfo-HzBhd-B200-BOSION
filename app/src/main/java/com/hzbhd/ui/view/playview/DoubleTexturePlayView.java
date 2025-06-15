@@ -34,8 +34,8 @@ public class DoubleTexturePlayView extends PlayView {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public DoubleTexturePlayView(Context context, PlayView.ScalePlayViewInterface scalePlayViewInterface) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(scalePlayViewInterface, "scalePlayViewInterface");
+
+
         SystemPropertiesUtils.set("vendor.video.play.withoutdisplay", "true");
         setScalePlayViewInterface(scalePlayViewInterface);
     }
@@ -43,29 +43,29 @@ public class DoubleTexturePlayView extends PlayView {
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public DoubleTexturePlayView(Context context) {
         super(context);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         SystemPropertiesUtils.set("vendor.video.play.withoutdisplay", "true");
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public DoubleTexturePlayView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        Intrinsics.checkNotNullParameter(context, "context");
-        Intrinsics.checkNotNullParameter(attrs, "attrs");
+
+
         SystemPropertiesUtils.set("vendor.video.play.withoutdisplay", "true");
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public DoubleTexturePlayView(Context context, AttributeSet attributeSet, int i) {
         super(context, attributeSet, i);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         SystemPropertiesUtils.set("vendor.video.play.withoutdisplay", "true");
     }
 
     /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
     public DoubleTexturePlayView(Context context, AttributeSet attributeSet, int i, int i2) {
         super(context, attributeSet, i, i2);
-        Intrinsics.checkNotNullParameter(context, "context");
+
         SystemPropertiesUtils.set("vendor.video.play.withoutdisplay", "true");
     }
 
@@ -130,7 +130,7 @@ public class DoubleTexturePlayView extends PlayView {
             this.softTextureView = new TextureView(getContext());
         }
         TextureView textureView = this.softTextureView;
-        Intrinsics.checkNotNull(textureView);
+
         return textureView;
     }
 
@@ -139,7 +139,7 @@ public class DoubleTexturePlayView extends PlayView {
             this.hardTextureView = new TextureView(getContext());
         }
         TextureView textureView = this.hardTextureView;
-        Intrinsics.checkNotNull(textureView);
+
         return textureView;
     }
 
@@ -175,7 +175,7 @@ public class DoubleTexturePlayView extends PlayView {
 
     @Override // com.hzbhd.ui.view.lifecycle.BaseLifeRelativeLayout
     public void onLifeCycleChange(Lifecycle.State state) {
-        Intrinsics.checkNotNullParameter(state, "state");
+
         super.onLifeCycleChange(state);
         if (LogUtil.log5()) {
             LogUtil.d("onLifeCycleChange: " + state);
@@ -192,12 +192,12 @@ public class DoubleTexturePlayView extends PlayView {
         getSoftTexureView().setSurfaceTextureListener(new TextureView.SurfaceTextureListener() { // from class: com.hzbhd.ui.view.playview.DoubleTexturePlayView.initSurfaceView.1
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 boolean z = SystemPropertiesUtils.getBoolean("vendor.video.play.withoutdisplay", true);
                 if (LogUtil.log5()) {
                     LogUtil.d("onSurfaceTextureAvailable:withoutdisplay " + z + "  " + DoubleTexturePlayView.this.getMSoftSurfaceTexture());
@@ -215,7 +215,7 @@ public class DoubleTexturePlayView extends PlayView {
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 if (LogUtil.log5()) {
                     LogUtil.d("onSurfaceTextureSizeChanged: ");
                 }
@@ -223,7 +223,7 @@ public class DoubleTexturePlayView extends PlayView {
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 if (LogUtil.log5()) {
                     LogUtil.d("[playSurfaceView:onSurfaceTextureDestroyed]:");
                 }
@@ -235,12 +235,12 @@ public class DoubleTexturePlayView extends PlayView {
         getHardTexureView().setSurfaceTextureListener(new TextureView.SurfaceTextureListener() { // from class: com.hzbhd.ui.view.playview.DoubleTexturePlayView.initSurfaceView.2
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
             }
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 DoubleTexturePlayView.this.setTextureVisible(true);
                 SystemPropertiesUtils.getBoolean("vendor.video.play.withoutdisplay", true);
                 if (LogUtil.log5()) {
@@ -258,7 +258,7 @@ public class DoubleTexturePlayView extends PlayView {
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 if (LogUtil.log5()) {
                     LogUtil.d("onSurfaceTextureSizeChanged: ");
                 }
@@ -266,7 +266,7 @@ public class DoubleTexturePlayView extends PlayView {
 
             @Override // android.view.TextureView.SurfaceTextureListener
             public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-                Intrinsics.checkNotNullParameter(surface, "surface");
+
                 if (LogUtil.log5()) {
                     LogUtil.d("[playSurfaceView:onSurfaceTextureDestroyed]:");
                 }

@@ -11,7 +11,7 @@ import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.canbus.util.TrackInfoUtil;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class MsgMgr extends AbstractMsgMgr {
     private static int outDoorTemp;
     private final String IS_OUT_DOOR_TEMP = "is_out_door_temp";

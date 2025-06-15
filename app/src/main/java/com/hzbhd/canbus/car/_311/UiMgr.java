@@ -10,7 +10,7 @@ import com.hzbhd.canbus.ui_set.MainAction;
 import com.hzbhd.canbus.ui_set.PanelKeyPageUiSet;
 import nfore.android.bt.res.NfDef;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private OnPanelKeyPositionListener mOnPanelKeyPositionListener = new OnPanelKeyPositionListener() { // from class: com.hzbhd.canbus.car._311.UiMgr.1
         @Override // com.hzbhd.canbus.interfaces.OnPanelKeyPositionListener

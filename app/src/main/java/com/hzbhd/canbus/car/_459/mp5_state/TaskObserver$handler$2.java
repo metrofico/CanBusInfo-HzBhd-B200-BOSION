@@ -9,9 +9,9 @@ import kotlin.jvm.functions.Function0;
 import kotlin.jvm.internal.Intrinsics;
 import kotlin.jvm.internal.Lambda;
 
-/* compiled from: TaskObserver.kt */
-@Metadata(d1 = {"\u0000\b\n\u0000\n\u0002\u0018\u0002\n\u0000\u0010\u0000\u001a\u00020\u0001H\n¢\u0006\u0002\b\u0002"}, d2 = {"<anonymous>", "Landroid/os/Handler;", "invoke"}, k = 3, mv = {1, 7, 1}, xi = 48)
-/* loaded from: classes2.dex */
+
+
+
 final class TaskObserver$handler$2 extends Lambda implements Function0<Handler> {
     final /* synthetic */ TaskObserver this$0;
 
@@ -39,7 +39,7 @@ final class TaskObserver$handler$2 extends Lambda implements Function0<Handler> 
     /* JADX INFO: Access modifiers changed from: private */
     /* renamed from: invoke$lambda-0, reason: not valid java name */
     public static final boolean m880invoke$lambda0(TaskObserver this$0, Message message) {
-        Intrinsics.checkNotNullParameter(this$0, "this$0");
+
         if (message.what != this$0.getMSG_REFRESH_MEMEORY()) {
             return true;
         }

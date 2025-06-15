@@ -10,7 +10,7 @@ import com.hzbhd.canbus.ui_set.PanelKeyPageUiSet;
 import com.hzbhd.canbus.util.TimerUtil;
 import java.util.TimerTask;
 
-/* loaded from: classes2.dex */
+
 public class UiMgr extends AbstractUiMgr {
     private OnPanelKeyPositionTouchListener mOnPanelKeyPositionTouchListener = new OnPanelKeyPositionTouchListener() { // from class: com.hzbhd.canbus.car._60.UiMgr$$ExternalSyntheticLambda0
         @Override // com.hzbhd.canbus.interfaces.OnPanelKeyPositionTouchListener
