@@ -13,7 +13,7 @@ public class MsgMgr extends AbstractMsgMgr {
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
         if (this.docking == null) {
-            this.docking = CanVm.INSTANCE.getVm().getCanDocking();
+            this.docking = CanVm.getVm().getCanDocking();
         }
         this.docking.afterServiceNormalSetting(context);
     }
@@ -22,7 +22,7 @@ public class MsgMgr extends AbstractMsgMgr {
     public void initCommand(Context context) {
         super.initCommand(context);
         if (this.docking == null) {
-            this.docking = CanVm.INSTANCE.getVm().getCanDocking();
+            this.docking = CanVm.getVm().getCanDocking();
         }
         this.docking.initCommand(context);
     }

@@ -68,15 +68,15 @@ public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
 
     @Override // com.hzbhd.canbus.park.parkui.BackCameraUiServiceBase
     public void onCreate() {
-        Vm.INSTANCE.getVm().getAction().getMain().init();
+        Vm.getVm().getAction().getMain().init();
         ScreenLogic.setOrientation(this.mService.getApplicationContext().getResources().getConfiguration().orientation);
         this.mService.setTheme(R.style.Theme_AppCompat_NoActionBar);
         this.mExternal360CamType = FutureUtil.instance.is360External();
-        HzbhdLog.d(TAG, "BackCameraUiService onCreate" + Vm.INSTANCE.getVm().getReverseListener().isReversing());
-        if (Vm.INSTANCE.getVm().getReverseListener().isReversing()) {
+        HzbhdLog.d(TAG, "BackCameraUiService onCreate" + Vm.getVm().getReverseListener().isReversing());
+        if (Vm.getVm().getReverseListener().isReversing()) {
             addViewToWindow();
         }
-        Vm.INSTANCE.getVm().getReverseListener().setActionBefortViewInit(new Runnable() {
+        Vm.getVm().getReverseListener().setActionBefortViewInit(new Runnable() {
             @Override
             public void run() {
                 addViewToWindow();
@@ -101,22 +101,22 @@ public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
         if (this.mIsShowRadarLayout != this.mParkPageUiSet.isIsShowRadar()) {
             this.mIsShowRadarLayout = this.mParkPageUiSet.isIsShowRadar();
             if (this.mParkPageUiSet.isIsShowRadar()) {
-                Vm.INSTANCE.getVm().getAction().getRadar().setRadarVisible(0);
+                Vm.getVm().getAction().getRadar().setRadarVisible(0);
                 if (SharePreUtil.getBoolValue(this.mService, BackCameraUiService.SHARE_IS_SHOW_RADAR, true)) {
-                    Vm.INSTANCE.getVm().getAction().getRadar().setRadarScale(true);
+                    Vm.getVm().getAction().getRadar().setRadarScale(true);
                 } else {
-                    Vm.INSTANCE.getVm().getAction().getRadar().setRadarScale(false);
+                    Vm.getVm().getAction().getRadar().setRadarScale(false);
                 }
             } else {
-                Vm.INSTANCE.getVm().getAction().getRadar().setRadarVisible(8);
+                Vm.getVm().getAction().getRadar().setRadarVisible(8);
             }
         }
         if (com.hzbhd.util.LogUtil.log5()) {
             com.hzbhd.util.LogUtil.d("refreshUi: " + this.mParkPageUiSet.isIsShowRadar());
         }
         if (this.mParkPageUiSet.isIsShowRadar()) {
-            Vm.INSTANCE.getVm().getAction().getRadar().setShowDistanceNotShowLocationUi(GeneralParkData.isShowDistanceNotShowLocationUi);
-            Vm.INSTANCE.getVm().getAction().getRadar().setShowLeftTopOneDistanceUi(GeneralParkData.isShowLeftTopOneDistanceUi);
+            Vm.getVm().getAction().getRadar().setShowDistanceNotShowLocationUi(GeneralParkData.isShowDistanceNotShowLocationUi);
+            Vm.getVm().getAction().getRadar().setShowLeftTopOneDistanceUi(GeneralParkData.isShowLeftTopOneDistanceUi);
         }
         List<PanoramicBtnUpdateEntity> list = GeneralParkData.dataList;
         if (list != null) {
@@ -125,9 +125,9 @@ public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
                     this.mParkPageUiSet.getPanoramicBtnList().get(panoramicBtnUpdateEntity.getIndex()).setSelect(panoramicBtnUpdateEntity.isSelect());
                 }
             }
-            Vm.INSTANCE.getVm().getAction().getReverse().updatePanoramic();
+            Vm.getVm().getAction().getReverse().updatePanoramic();
         }
-        Vm.INSTANCE.getVm().getAction().getReverse().setCustomPanoramicVisible(this.mParkPageUiSet.isShowCusPanoramicView());
+        Vm.getVm().getAction().getReverse().setCustomPanoramicVisible(this.mParkPageUiSet.isShowCusPanoramicView());
     }
 
     @Override // com.hzbhd.canbus.park.parkui.BackCameraUiServiceBase
@@ -151,32 +151,32 @@ public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
             boolean radarDispCheck = ((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getRadarDispCheck();
             LogUtil.showLog(TAG, "IsShowRadar:" + this.mParkPageUiSet.isIsShowRadar() + ", showRadarFromSetting:" + radarDispCheck);
             if ((radarDispCheck && this.mParkPageUiSet.isIsShowRadar()) || this.mService.getResources().getConfiguration().orientation == 1) {
-                Vm.INSTANCE.getVm().getAction().getRadar().setRadarVisible(0);
+                Vm.getVm().getAction().getRadar().setRadarVisible(0);
                 if (SharePreUtil.getBoolValue(this.mService, BackCameraUiService.SHARE_IS_SHOW_RADAR, true) || this.mService.getResources().getConfiguration().orientation == 1) {
-                    Vm.INSTANCE.getVm().getAction().getRadar().setRadarScale(true);
+                    Vm.getVm().getAction().getRadar().setRadarScale(true);
                 } else {
-                    Vm.INSTANCE.getVm().getAction().getRadar().setRadarScale(false);
+                    Vm.getVm().getAction().getRadar().setRadarScale(false);
                 }
-                Vm.INSTANCE.getVm().getAction().getRadar().setSmallRadar(this.mParkPageUiSet.isHaveLeftRightRadar());
+                Vm.getVm().getAction().getRadar().setSmallRadar(this.mParkPageUiSet.isHaveLeftRightRadar());
             } else {
-                Vm.INSTANCE.getVm().getAction().getRadar().setRadarVisible(8);
+                Vm.getVm().getAction().getRadar().setRadarVisible(8);
             }
             LogUtil.showLog(TAG, "IsShowPanoramic:" + this.mParkPageUiSet.isShowPanoramic());
             if (this.mParkPageUiSet.isShowPanoramic()) {
-                Vm.INSTANCE.getVm().getAction().getReverse().setPanoramicVisible(0);
+                Vm.getVm().getAction().getReverse().setPanoramicVisible(0);
             } else {
-                Vm.INSTANCE.getVm().getAction().getReverse().setPanoramicVisible(8);
+                Vm.getVm().getAction().getReverse().setPanoramicVisible(8);
             }
             LogUtil.showLog(TAG, "isShowCusPanoramic:" + this.mParkPageUiSet.isShowCusPanoramicView());
             if (this.mParkPageUiSet.isShowCusPanoramicView()) {
-                Vm.INSTANCE.getVm().getAction().getReverse().setCustomPanoramicVisible(true);
+                Vm.getVm().getAction().getReverse().setCustomPanoramicVisible(true);
             } else {
-                Vm.INSTANCE.getVm().getAction().getReverse().setCustomPanoramicVisible(false);
+                Vm.getVm().getAction().getReverse().setCustomPanoramicVisible(false);
             }
         } else {
             LogUtil.showLog(TAG, "mParkPageUiSet==null");
             if (this.mService.getResources().getConfiguration().orientation == 2) {
-                Vm.INSTANCE.getVm().getAction().getRadar().setRadarVisible(8);
+                Vm.getVm().getAction().getRadar().setRadarVisible(8);
             }
         }
         if (ParkPanoramic.isEnableParkPanoramic()) {
@@ -186,9 +186,9 @@ public class BackCameraUiServiceVm implements BackCameraUiServiceBase {
             }
             this.mParkPanoramic.constructParkPanoramic();
         }
-        Vm.INSTANCE.getVm().getReverseMainView().setOnTouchListener(new AnonymousClass2());
+        Vm.getVm().getReverseMainView().setOnTouchListener(new AnonymousClass2());
         if (CanIdSpecialConfig.hideRadarLayoutCanID(CanbusConfig.INSTANCE.getCanType())) {
-            Vm.INSTANCE.getVm().getAction().getRadar().setRadarVisible(8);
+            Vm.getVm().getAction().getRadar().setRadarVisible(8);
         }
     }
 

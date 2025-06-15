@@ -77,7 +77,7 @@ public final class ReverseListener {
                 HandlerThreadUtilKt.runUi(new Runnable() {
                     @Override
                     public void run() {
-                        Vm.INSTANCE.getVm().getData().getReverse().isReverse().setValue(false);
+                        Vm.getVm().getData().getReverse().isReverse().setValue(false);
                     }
                 });
 
@@ -98,7 +98,7 @@ public final class ReverseListener {
             HandlerThreadUtilKt.runUi(new Runnable() {
                 @Override
                 public void run() {
-                    Vm.INSTANCE.getVm().getData().getReverse().isReverse().setValue(true);
+                    Vm.getVm().getData().getReverse().isReverse().setValue(true);
                 }
             });
 

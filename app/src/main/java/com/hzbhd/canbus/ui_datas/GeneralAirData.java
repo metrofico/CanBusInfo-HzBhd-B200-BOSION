@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.ui_datas;
 
 import com.hzbhd.canbus.ui_set.AirBtnAction;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -116,7 +117,7 @@ public class GeneralAirData {
     public static boolean threeZone = false;
     public static boolean windshield_deicing = false;
 
-    public static String getAirInfo() throws JSONException {
+    public static String getAirInfo() {
         JSONObject jSONObject = new JSONObject();
         try {
             jSONObject.put("power", power);

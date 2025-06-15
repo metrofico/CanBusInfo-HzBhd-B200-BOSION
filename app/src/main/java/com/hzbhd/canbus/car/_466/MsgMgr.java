@@ -12,7 +12,7 @@ public class MsgMgr extends AbstractMsgMgr {
     @Override // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public MsgMgrInterface getInstance() {
         if (this.docking == null) {
-            this.docking = CanVm.INSTANCE.getVm().getCanDocking();
+            this.docking = CanVm.getVm().getCanDocking();
         }
         return this.docking;
     }

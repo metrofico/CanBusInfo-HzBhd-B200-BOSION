@@ -12,7 +12,7 @@ import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Message;
 import android.util.Log;
-import com.android.internal.util.ArrayUtils;
+
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.bean.CanTypeAllEntity;
 import com.hzbhd.canbus.comm.Constant;
@@ -42,6 +42,7 @@ import com.hzbhd.proxy.mcu.core.IMCUCanBoxControlListener;
 import com.hzbhd.proxy.mcu.core.MCUMainManager;
 import com.hzbhd.proxy.share.ShareDataManager;
 import com.hzbhd.proxy.share.interfaces.IShareIntListener;
+
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -311,7 +312,7 @@ public class CanbusMsgService extends Service {
 
     private CanTypeAllEntity getDbCanTypeAllEntity(int i) {
         ArrayList<CanTypeAllEntity> list = CanTypeUtil.INSTANCE.getCanType(i).getList();
-        if (ArrayUtils.isEmpty(list)) {
+        if (list.isEmpty()) {
             Log.i(TAG, "getDbCanTypeAllEntity: canTypeId:" + i);
             CanbusConfig.INSTANCE.setCanType(0);
             return getDbCanTypeAllEntity(0);
@@ -370,11 +371,15 @@ public class CanbusMsgService extends Service {
         LogUtil.showLog("getMsgMgrInterface() == null");
     }
 
+    public static int convByte(byte b) {
+        return b & 255;
+    }
+
     private void logCanData(byte[] bArr) {
         if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getCanDataLogSwith()) {
             String str = "A7 55————>";
             for (int i = 1; i < bArr.length; i++) {
-                String hexString = Integer.toHexString(CanbusMsgSender$$ExternalSyntheticBackport0.m(bArr[i]));
+                String hexString = Integer.toHexString(convByte(bArr[i]));
                 if (hexString.length() == 1) {
                     hexString = "0" + hexString;
                 }
