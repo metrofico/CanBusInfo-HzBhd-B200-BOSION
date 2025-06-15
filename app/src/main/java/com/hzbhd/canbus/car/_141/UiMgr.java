@@ -1,6 +1,7 @@
 package com.hzbhd.canbus.car._141;
 
 import android.content.Context;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.activity.AmplifierActivity;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
@@ -25,6 +26,7 @@ import com.hzbhd.canbus.ui_set.AmplifierPageUiSet;
 import com.hzbhd.canbus.ui_set.DriverDataPageUiSet;
 import com.hzbhd.canbus.ui_set.SettingPageUiSet;
 import com.hzbhd.canbus.util.SharePreUtil;
+
 import java.util.Iterator;
 import java.util.List;
 
@@ -689,36 +691,27 @@ public class UiMgr extends AbstractUiMgr {
     };
     OnPanelKeyPositionListener onPanelKeyPositionListener = new OnPanelKeyPositionListener() { // from class: com.hzbhd.canbus.car._141.UiMgr.13
         @Override // com.hzbhd.canbus.interfaces.OnPanelKeyPositionListener
-        public void click(int i) throws InterruptedException {
-            switch (i) {
-                case 0:
-                    UiMgr.this.sendPanelKeyInfo(2);
-                    break;
-                case 1:
-                    UiMgr.this.sendPanelKeyInfo(7);
-                    break;
-                case 2:
-                    UiMgr.this.sendPanelKeyInfo(4);
-                    break;
-                case 3:
-                    UiMgr.this.sendPanelKeyInfo(6);
-                    break;
-                case 4:
-                    UiMgr.this.sendPanelKeyInfo(9);
-                    break;
-                case 5:
-                    UiMgr.this.sendPanelKeyInfo(5);
-                    break;
-                case 6:
-                    UiMgr.this.sendPanelKeyInfo(1);
-                    break;
-                case 7:
-                    UiMgr.this.sendPanelKeyInfo(8);
-                    break;
-                case 8:
-                    UiMgr.this.sendPanelKeyInfo(3);
-                    break;
+        public void click(int i) {
+            if (i == 0) {
+                UiMgr.this.sendPanelKeyInfo(2);
+            } else if (i == 1) {
+                UiMgr.this.sendPanelKeyInfo(7);
+            } else if (i == 2) {
+                UiMgr.this.sendPanelKeyInfo(4);
+            } else if (i == 3) {
+                UiMgr.this.sendPanelKeyInfo(6);
+            } else if (i == 4) {
+                UiMgr.this.sendPanelKeyInfo(9);
+            } else if (i == 5) {
+                UiMgr.this.sendPanelKeyInfo(5);
+            } else if (i == 6) {
+                UiMgr.this.sendPanelKeyInfo(1);
+            } else if (i == 7) {
+                UiMgr.this.sendPanelKeyInfo(8);
+            } else if (i == 8) {
+                UiMgr.this.sendPanelKeyInfo(3);
             }
+
         }
     };
     OnWarningStatusChangeListener onWarningStatusChangeListener = new OnWarningStatusChangeListener() { // from class: com.hzbhd.canbus.car._141.UiMgr.14
@@ -962,7 +955,7 @@ public class UiMgr extends AbstractUiMgr {
     }
 
     /* JADX INFO: Access modifiers changed from: private */
-    public void sendPanelKeyInfo(int i) throws InterruptedException {
+    public void sendPanelKeyInfo(int i) {
         CanbusMsgSender.sendMsg(new byte[]{22, -116, (byte) i});
         try {
             Thread.sleep(300L);

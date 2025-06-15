@@ -35,7 +35,7 @@ public abstract class AirTemperatureControl extends AbstractAirControl {
     @Override
     // com.hzbhd.canbus.control.air_control.AbstractAirControl, com.hzbhd.canbus.interfaces.AirControlInterface
     public void most() {
-        AirControlHelper.INSTANCE.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.control.air_control.temperature.AirTemperatureControl.1
+        AirControlHelper.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.control.air_control.temperature.AirTemperatureControl.1
             @Override // java.util.TimerTask, java.lang.Runnable
             public void run() {
                 if (AirTemperatureControl.this.isComplete()) {
@@ -50,7 +50,7 @@ public abstract class AirTemperatureControl extends AbstractAirControl {
     @Override
     // com.hzbhd.canbus.control.air_control.AbstractAirControl, com.hzbhd.canbus.interfaces.AirControlInterface
     public void reset() {
-        AirControlHelper.INSTANCE.stopTimer();
+        AirControlHelper.stopTimer();
         this.mCount = 0;
     }
 }

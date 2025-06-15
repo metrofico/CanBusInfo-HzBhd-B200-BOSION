@@ -8,10 +8,7 @@ import android.os.Looper;
 import android.provider.Settings;
 import android.util.AttributeSet;
 
-import com.hzbhd.ui.view.R;
-
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
+import com.hzbhd.R;
 
 
 public final class DoubleChangeColorView extends ColorView {

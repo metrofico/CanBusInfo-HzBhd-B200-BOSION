@@ -7,11 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.hzbhd.ui.view.R;
-import com.hzbhd.ui.view.colorview.ColorUtil;
-
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
+import com.hzbhd.R;
 
 
 @SuppressLint("AppCompatCustomView")

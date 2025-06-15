@@ -21,6 +21,7 @@ import com.hzbhd.canbus.util.LogUtil;
 import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.canbus.view.EqSeekBarView;
 import com.hzbhd.canbus.view.LineBtnView;
+import com.hzbhd.proxy.keydispatcher.SendKeyManager;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

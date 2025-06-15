@@ -18,11 +18,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.hzbhd.ui.view.R;
-
-import kotlin.Metadata;
-import kotlin.jvm.internal.DefaultConstructorMarker;
-import kotlin.jvm.internal.Intrinsics;
+import com.hzbhd.R;
 
 
 @SuppressLint("AppCompatCustomView")

@@ -27,7 +27,7 @@ public class BcSettingSeekBarView extends RelativeLayout {
         this.mSeekBar = viewInflate.findViewById(R.id.seekbar);
         this.mTitleTv = viewInflate.findViewById(R.id.tv_title);
         this.mValueTv = viewInflate.findViewById(R.id.tv_value);
-        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.BcSettingSeekBarStyle);
+        TypedArray typedArrayObtainStyledAttributes = context.obtainStyledAttributes(attributeSet, R.styleable.BcSettingSeekBarView);
         String string = typedArrayObtainStyledAttributes.getString(0);
         typedArrayObtainStyledAttributes.recycle();
         this.mTitleTv.setText(string);

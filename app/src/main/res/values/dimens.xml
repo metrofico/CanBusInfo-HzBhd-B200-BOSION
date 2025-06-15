@@ -394,4 +394,12 @@
     <dimen name="dp0">0dp</dimen>
     <dimen name="dp100">100dp</dimen>
     <dimen name="dp96">96dp</dimen>
+    <dimen name="dp10">10dp</dimen>
+    <dimen name="dp167">167dp</dimen>
+    <dimen name="dp202">202dp</dimen>
+    <dimen name="dp241">241dp</dimen>
+    <dimen name="dp16">16dp</dimen>
+    <dimen name="dp174">174dp</dimen>
+    <dimen name="dp207">207dp</dimen>
+    <dimen name="dp74">74dp</dimen>
 </resources>

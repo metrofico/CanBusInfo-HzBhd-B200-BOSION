@@ -2,8 +2,9 @@ package com.hzbhd.canbus.util;
 
 import android.content.ComponentName;
 import android.content.Context;
+
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
-import com.hzbhd.canbus.car._462.AvmSwitchTag;
+import com.hzbhd.canbus.car._0.AvmSwitchTag;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.config.CanbusConfig;
 import com.hzbhd.commontools.utils.ConfigUtil;

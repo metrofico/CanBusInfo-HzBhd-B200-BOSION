@@ -21,7 +21,7 @@ public abstract class AirWindControl extends AbstractAirControl {
     @Override
     // com.hzbhd.canbus.control.air_control.AbstractAirControl, com.hzbhd.canbus.interfaces.AirControlInterface
     public void most() {
-        AirControlHelper.INSTANCE.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.control.air_control.wind.AirWindControl.1
+        AirControlHelper.startTimer(new TimerTask() { // from class: com.hzbhd.canbus.control.air_control.wind.AirWindControl.1
             @Override // java.util.TimerTask, java.lang.Runnable
             public void run() {
                 if (AirWindControl.this.isComplete()) {
@@ -36,6 +36,6 @@ public abstract class AirWindControl extends AbstractAirControl {
     @Override
     // com.hzbhd.canbus.control.air_control.AbstractAirControl, com.hzbhd.canbus.interfaces.AirControlInterface
     public void reset() {
-        AirControlHelper.INSTANCE.stopTimer();
+        AirControlHelper.stopTimer();
     }
 }

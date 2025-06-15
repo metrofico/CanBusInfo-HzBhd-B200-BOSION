@@ -6,6 +6,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
@@ -57,26 +58,20 @@ public class EnergyFeedbackActivity extends AbstractBaseActivity implements View
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btn_energy_downtime /* 2131362021 */:
-                mIsDowntime = !mIsDowntime;
-                break;
-            case R.id.ib_energy_decrease /* 2131362390 */:
-                int i = mStrength - 10;
-                mStrength = i;
-                if (i < 0) {
-                    mStrength = 0;
-                    break;
-                }
-                break;
-            case R.id.ib_energy_increase /* 2131362391 */:
-                int i2 = mStrength + 10;
-                mStrength = i2;
-                if (i2 > 100) {
-                    mStrength = 100;
-                    break;
-                }
-                break;
+        if (view.getId() == R.id.btn_energy_downtime) {
+            mIsDowntime = !mIsDowntime;
+        } else if (view.getId() == R.id.ib_energy_decrease) {
+            int i = mStrength - 10;
+            mStrength = i;
+            if (i < 0) {
+                mStrength = 0;
+            }
+        } else if (view.getId() == R.id.ib_energy_increase) {
+            int i2 = mStrength + 10;
+            mStrength = i2;
+            if (i2 > 100) {
+                mStrength = 100;
+            }
         }
         refreshUi(null);
     }
@@ -97,11 +92,11 @@ public class EnergyFeedbackActivity extends AbstractBaseActivity implements View
 
     private void refreshEnergyBar() {
         if (mStrength - 1 >= 0) {
-            this.mEnergyBar.setVisibility(0);
+            this.mEnergyBar.setVisibility(View.VISIBLE);
             this.mEnergyBar.setImageResource(CommUtil.getImgIdByResId(this, "energy_feedback_strength_" + (((mStrength - 1) / 10) + 1)));
             return;
         }
-        this.mEnergyBar.setVisibility(4);
+        this.mEnergyBar.setVisibility(android.view.View.INVISIBLE);
     }
 
     private void refreshENergyDowntime() {

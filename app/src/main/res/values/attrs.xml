@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <declare-styleable name="gradientAttr">
+        <attr name="gradient_startColor" format="color" />
+        <attr name="gradient_endColor" format="color" />
+    </declare-styleable>
     <declare-styleable name="recycleViewAttrs">
         <attr name="default_item_layout" format="reference" />
         <attr name="default_item_width" format="dimension" />
@@ -26,29 +31,66 @@
         <attr name="progressdrawable_p" format="reference" />
         <attr name="progressdrawable_p1" format="reference" />
         <attr name="background_n" format="reference" />
+        <attr name="background_n1" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="text_color_attr">
+        <attr name="textColor_n" format="color" />
+        <attr name="textColor_p" format="color" />
+        <attr name="textColor_s" format="color" />
+        <attr name="textColor_d" format="color" />
+        <attr name="textColor_n1" format="color" />
+        <attr name="textColor_p1" format="color" />
+        <attr name="textColor_s1" format="color" />
+        <attr name="textColor_d1" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowColor1" format="color" />
     </declare-styleable>
     <declare-styleable name="color_attr">
-        <attr name="focusFg" format="reference" />
         <attr name="focusid" format="integer" />
-        <attr name="p" format="reference" />
-        <attr name="p1" format="reference" />
-        <attr name="p2" format="reference" />
-        <attr name="p3" format="reference" />
-        <attr name="p4" format="reference" />
+        <attr name="focusFg" format="reference" />
+        <attr name="is_color_view" format="boolean" />
+        <attr name="mix_type" format="integer" />
+        <attr name="n_mix_color" format="color" />
+        <attr name="p_mix_color" format="color" />
         <attr name="n" format="reference" />
-        <attr name="n1" format="reference" />
-        <attr name="n2" format="reference" />
-        <attr name="n3" format="reference" />
-        <attr name="n4" format="reference" />
+        <attr name="p" format="reference" />
         <attr name="s" format="reference" />
-        <attr name="s1" format="reference" />
-        <attr name="s2" format="reference" />
-        <attr name="s3" format="reference" />
-        <attr name="s4" format="reference" />
         <attr name="d" format="reference" />
+        <attr name="n1" format="reference" />
+        <attr name="p1" format="reference" />
+        <attr name="s1" format="reference" />
         <attr name="d1" format="reference" />
+        <attr name="draw_gravity" format="integer" />
+        <attr name="draw_left" format="dimension" />
+        <attr name="draw_top" format="dimension" />
+        <attr name="draw_right" format="dimension" />
+        <attr name="draw_bottom" format="dimension" />
+        <attr name="draw_width" format="dimension" />
+        <attr name="draw_height" format="dimension" />
+        <attr name="draw_fg_gravity" format="integer" />
+        <attr name="draw_fg_left" format="dimension" />
+        <attr name="draw_fg_top" format="dimension" />
+        <attr name="draw_fg_right" format="dimension" />
+        <attr name="draw_fg_bottom" format="dimension" />
+        <attr name="draw_fg_width" format="dimension" />
+        <attr name="draw_fg_height" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="fontAttr">
+        <attr name="font_path" format="string" />
+    </declare-styleable>
+    <declare-styleable name="multi_color_attr">
+        <attr name="n2" format="reference" />
+        <attr name="p2" format="reference" />
+        <attr name="s2" format="reference" />
         <attr name="d2" format="reference" />
+        <attr name="n3" format="reference" />
+        <attr name="p3" format="reference" />
+        <attr name="s3" format="reference" />
         <attr name="d3" format="reference" />
+        <attr name="n4" format="reference" />
+        <attr name="p4" format="reference" />
+        <attr name="s4" format="reference" />
         <attr name="d4" format="reference" />
     </declare-styleable>
     <declare-styleable name="radioButtonAttrs">
@@ -143,48 +185,7 @@
     <attr name="dividerHorizontal" format="reference" />
     <attr name="dividerPadding" format="dimension" />
     <attr name="dividerVertical" format="reference" />
-    <attr name="double_d1" format="reference" />
-    <attr name="double_d2" format="reference" />
-    <attr name="double_n1" format="reference" />
-    <attr name="double_n2" format="reference" />
-    <attr name="double_p1" format="reference" />
-    <attr name="double_p2" format="reference" />
-    <attr name="double_s1" format="reference" />
-    <attr name="double_s2" format="reference" />
-    <attr name="draw_bottom" format="dimension" />
-    <attr name="draw_fg_bottom" format="dimension" />
-    <attr name="draw_fg_gravity">
-        <flag name="top" value="0x30" />
-        <flag name="bottom" value="0x50" />
-        <flag name="left" value="0x3" />
-        <flag name="right" value="0x5" />
-        <flag name="center_vertical" value="0x10" />
-        <flag name="center_horizontal" value="0x1" />
-        <flag name="center" value="0x11" />
-        <flag name="start" value="0x800003" />
-        <flag name="end" value="0x800005" />
-    </attr>
-    <attr name="draw_fg_height" format="dimension" />
-    <attr name="draw_fg_left" format="dimension" />
-    <attr name="draw_fg_right" format="dimension" />
-    <attr name="draw_fg_top" format="dimension" />
-    <attr name="draw_fg_width" format="dimension" />
-    <attr name="draw_gravity">
-        <flag name="top" value="0x30" />
-        <flag name="bottom" value="0x50" />
-        <flag name="left" value="0x3" />
-        <flag name="right" value="0x5" />
-        <flag name="center_vertical" value="0x10" />
-        <flag name="center_horizontal" value="0x1" />
-        <flag name="center" value="0x11" />
-        <flag name="start" value="0x800003" />
-        <flag name="end" value="0x800005" />
-    </attr>
-    <attr name="draw_height" format="dimension" />
-    <attr name="draw_left" format="dimension" />
-    <attr name="draw_right" format="dimension" />
-    <attr name="draw_top" format="dimension" />
-    <attr name="draw_width" format="dimension" />
+
 
     <attr name="drawableTopCompat" format="reference" />
     <attr name="drawerArrowStyle" format="reference" />
@@ -231,15 +232,9 @@
     <attr name="floatingActionButtonStyle" format="reference|string|integer|boolean|color|float|dimension|fraction" />
 
 
-
-    <attr name="fontVariationSettings" format="string" />
-    <attr name="fontWeight" format="integer" />
-    <attr name="font_path" format="string" />
-    <attr name="foregroundInsidePadding" format="boolean" />
     <attr name="gapBetweenBars" format="dimension" />
     <attr name="goIcon" format="reference" />
-    <attr name="gradient_endColor" format="color" />
-    <attr name="gradient_startColor" format="color" />
+
     <attr name="headerLayout" format="reference" />
     <attr name="height" format="dimension" />
     <attr name="helperText" format="string" />
@@ -261,7 +256,6 @@
     <attr name="initialActivityCount" format="string" />
     <attr name="insetForeground" format="reference|color" />
     <attr name="isLightTheme" format="boolean" />
-    <attr name="is_color_view" format="boolean" />
     <attr name="is_rotate_screen" format="boolean" />
     <attr name="is_support_nissan_360_cam" format="boolean" />
     <attr name="itemBackground" format="reference" />
@@ -287,10 +281,8 @@
     <attr name="mcs_p_enable" format="boolean" />
     <attr name="measureWithLargestChild" format="boolean" />
     <attr name="menu" format="reference" />
-    <attr name="mix_type" format="integer" />
     <attr name="multiChoiceItemLayout" format="reference" />
     <attr name="n54_ui_portrate" format="boolean" />
-    <attr name="n_mix_color" format="integer" />
     <attr name="navigationContentDescription" format="string" />
     <attr name="navigationIcon" format="reference" />
 
@@ -299,8 +291,19 @@
     <attr name="no_select_ic" format="integer" />
 
     <attr name="overlapAnchor" format="boolean" />
-    <attr name="p_mix_color" format="integer" />
+    <declare-styleable name="double_color_attr">
+        <attr name="double_n1" format="reference" />
+        <attr name="double_p1" format="reference" />
+        <attr name="double_s1" format="reference" />
+        <attr name="double_d1" format="reference" />
+        <attr name="double_n2" format="reference" />
+        <attr name="double_p2" format="reference" />
+        <attr name="double_s2" format="reference" />
+        <attr name="double_d2" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="BcSettingSeekBarStyle">
 
+    </declare-styleable>
     <attr name="popupMenuStyle" format="reference" />
     <attr name="popupTheme" format="reference" />
     <attr name="popupWindowStyle" format="reference" />
@@ -335,8 +338,6 @@
     <attr name="setting_title" format="string" />
     <attr name="setting_title_image" format="reference" />
     <attr name="setting_value" format="string" />
-    <attr name="shadowColor" format="color" />
-    <attr name="shadowColor1" format="color" />
     <attr name="shortcutMatchRequired" format="boolean" />
 
 
@@ -389,7 +390,6 @@
     <attr name="switchTextAppearance" format="reference" />
     <attr name="tabBackground" format="reference" />
     <attr name="tabContentStart" format="dimension" />
-
 
 
     <attr name="ttcIndex" format="integer" />

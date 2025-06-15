@@ -5,8 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
+import com.hzbhd.R;
 
 
 public final class ViewDrawAble implements BhdViewUtil.ViewUtilListener {

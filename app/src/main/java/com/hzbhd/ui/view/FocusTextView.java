@@ -9,10 +9,8 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
 
+import com.hzbhd.R;
 import com.hzbhd.util.LogUtil;
-
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
 
 @SuppressLint("AppCompatCustomView")
 

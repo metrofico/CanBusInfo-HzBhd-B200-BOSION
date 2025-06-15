@@ -6,8 +6,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
+import com.hzbhd.R;
 
 
 public final class ViewText implements BhdViewUtil.ViewUtilListener {

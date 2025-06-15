@@ -973,7 +973,7 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     private String getTimeInfo(int[] iArr) {
-        if (ArrayUtils.isEmpty(iArr)) {
+        if (iArr.length == 0) {
             return "";
         }
         String str = iArr.length > 0 ? "" + iArr[0] + CommUtil.getStrByResId(this.mContext, "_197_hour") : "";

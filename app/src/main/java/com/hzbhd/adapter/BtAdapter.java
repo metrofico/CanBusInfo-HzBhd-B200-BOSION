@@ -18,7 +18,7 @@ public final class BtAdapter {
     private static boolean isHfpConnected;
     private static boolean isMicMute;
     public static final BtAdapter INSTANCE = new BtAdapter();
-    private static final BtManager btManager = BtManager.INSTANCE.getInstance();
+    private static final BtManager btManager = BtManager.INSTANCE;
     private static byte[] phoneNumber = new byte[0];
     private static String mTitle = "";
     private static String mArtist = "";
@@ -145,37 +145,48 @@ public final class BtAdapter {
     public void registerListener() {
         btManager.setBtCallBack(new BtListener() {
             @Override
-            public void onCloseA2dp() {}
+            public void onCloseA2dp() {
+            }
 
             @Override
-            public void onCloseHfp() {}
+            public void onCloseHfp() {
+            }
 
             @Override
-            public void onCurrA2dpAddressChange(String address) {}
+            public void onCurrA2dpAddressChange(String address) {
+            }
 
             @Override
-            public void onCurrHfpAddressChange(String address) {}
+            public void onCurrHfpAddressChange(String address) {
+            }
 
             @Override
-            public void onMicOutChange(boolean out) {}
+            public void onMicOutChange(boolean out) {
+            }
 
             @Override
-            public void onPairedChange(ArrayList<Device> pairList) {}
+            public void onPairedChange(ArrayList<Device> pairList) {
+            }
 
             @Override
-            public void onVisibleDeviceChange(ArrayList<Device> deviceList) {}
+            public void onVisibleDeviceChange(ArrayList<Device> deviceList) {
+            }
 
             @Override
-            public void updateIsAutoAnswer(boolean autoAnswer) {}
+            public void updateIsAutoAnswer(boolean autoAnswer) {
+            }
 
             @Override
-            public void updateIsAutoConn(boolean autoConn) {}
+            public void updateIsAutoConn(boolean autoConn) {
+            }
 
             @Override
-            public void updateName(String name) {}
+            public void updateName(String name) {
+            }
 
             @Override
-            public void updateWechatCall(BtCall changeCall) {}
+            public void updateWechatCall(BtCall changeCall) {
+            }
 
             @Override
             public void onHfpConnChange(ArrayList<Device> hfpList) {

@@ -139,7 +139,7 @@ public final class CustomKeyConfig {
                 return false;
             }
             CustomKey customKey = (CustomKey) other;
-
+            return true;
         }
 
         @Override
@@ -190,7 +190,7 @@ public final class CustomKeyConfig {
                 return false;
             }
             CanIdKeyMap canIdKeyMap = (CanIdKeyMap) other;
-
+            return true;
         }
 
         // Hash code method
@@ -244,7 +244,7 @@ public final class CustomKeyConfig {
                 return false;
             }
             KeyMap keyMap = (KeyMap) other;
-
+            return true;
         }
 
         // Hash code function

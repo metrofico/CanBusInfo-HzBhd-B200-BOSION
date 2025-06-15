@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.FactoryItemAdapter;
-import com.hzbhd.canbus.car_cus._439.smartPanel.window.CarSelectWindow;
-import com.hzbhd.canbus.car_cus._439.smartPanel.window.PanelSwitchWindow;
+import com.hzbhd.canbus.car._0.CarSelectWindow;
+import com.hzbhd.canbus.car._0.PanelSwitchWindow;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.config.CanbusConfig;
 import com.hzbhd.canbus.config.GeneralSettingsConfig;
@@ -29,12 +29,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-
-import kotlin.Unit;
-import kotlin.collections.CollectionsKt;
-import kotlin.jvm.functions.Function0;
-import kotlin.jvm.functions.Function1;
-import kotlin.jvm.internal.Intrinsics;
 
 
 public final class FactoryActivity extends Activity {

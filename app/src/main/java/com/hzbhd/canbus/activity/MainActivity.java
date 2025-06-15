@@ -13,7 +13,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.hzbhd.R;
 import com.hzbhd.canbus.adapter.MainLvAdapter;
 import com.hzbhd.canbus.adapter.bean.CanTypeAllEntity;
-import com.hzbhd.canbus.car._206.MqbHybirdActivity;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.config.CanbusConfig;
 import com.hzbhd.canbus.config.GeneralSettingsConfig;
@@ -129,9 +128,7 @@ public class MainActivity extends AbstractBaseActivity implements MainLvAdapter.
             case "original_car_device":
                 startActivity(new Intent(this, OriginalCarDeviceActivity.class));
                 break;
-            case "mqb_hybrid":
-                startActivity(new Intent(this, MqbHybirdActivity.class));
-                break;
+
             case "general_settings":
                 startActivity(new Intent(this, FactoryActivity.class));
                 break;

@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.hzbhd.canbus.car_cus._283.MainActivity;
 import com.hzbhd.canbus.config.CanbusConfig;
 
 /* loaded from: classes2.dex */
@@ -53,14 +52,14 @@ public class ActivityUtils {
     }
 
     public static void startCanbusMainActivity(Context context) {
-        Class cls;
+        Class cls = com.hzbhd.canbus.activity.MainActivity.class;
         int canType = CanbusConfig.INSTANCE.getCanType();
         if (canType == 283) {
-            cls = MainActivity.class;
+            //cls = MainActivity.class;
         } else if (canType == 291) {
-            cls = com.hzbhd.canbus.car_cus._291.MainActivity.class;
+            //cls = com.hzbhd.canbus.car_cus._291.MainActivity.class;
         } else {
-            cls = com.hzbhd.canbus.activity.MainActivity.class;
+            // cls = com.hzbhd.canbus.activity.MainActivity.class;
         }
         Intent intent = new Intent(context, (Class<?>) cls);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

@@ -12,9 +12,8 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
 
+import com.hzbhd.R;
 import com.hzbhd.util.LogUtil;
-
-import kotlin.jvm.internal.Intrinsics;
 
 
 @SuppressLint("AppCompatCustomView")

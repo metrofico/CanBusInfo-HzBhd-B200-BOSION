@@ -10,9 +10,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.R;
 import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
+
 import java.util.Arrays;
 
 
@@ -60,7 +62,7 @@ public class TypeInView implements View.OnClickListener {
         String string = this.Factory_code.getText().toString();
         int i = 0;
         if (string.length() < 5) {
-            Toast.makeText(this.mContext, "Password error!", 0).show();
+            Toast.makeText(this.mContext, "Password error!", Toast.LENGTH_SHORT).show();
             return;
         }
         while (true) {
@@ -77,7 +79,7 @@ public class TypeInView implements View.OnClickListener {
     private void TypeInAdd() {
         String string = this.Add_page1_edit1.getText().toString();
         if (string.length() < 5) {
-            Toast.makeText(this.mContext, "Password error!", 0).show();
+            Toast.makeText(this.mContext, "Password error!", Toast.LENGTH_SHORT).show();
             return;
         }
         int i = 0;
@@ -103,7 +105,7 @@ public class TypeInView implements View.OnClickListener {
     private void TypeInConfirm() {
         String string = this.Add_page1_edit2.getText().toString();
         if (string.length() < 5) {
-            Toast.makeText(this.mContext, "Password error!", 0).show();
+            Toast.makeText(this.mContext, "Password error!", Toast.LENGTH_SHORT).show();
             return;
         }
         int i = 0;
@@ -139,7 +141,7 @@ public class TypeInView implements View.OnClickListener {
         int i2 = (iArr[2] << 4) | iArr[3];
         int i3 = (iArr[4] << 4) | 0;
         if (i == 0 && i2 == 0 && i3 == 0) {
-            Toast.makeText(this.mContext, "password error！", 0);
+            Toast.makeText(this.mContext, "password error！", Toast.LENGTH_SHORT);
         } else {
             CanbusMsgSender.sendMsg(new byte[]{22, 111, 4, (byte) i, (byte) i2, (byte) i3});
         }
@@ -211,38 +213,29 @@ public class TypeInView implements View.OnClickListener {
 
     @Override // android.view.View.OnClickListener
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.Add_page1_Enter /* 2131361795 */:
-                AddPassWard();
-                break;
-            case R.id.Add_page2_close /* 2131361801 */:
-            case R.id.Erase_page2_close /* 2131361816 */:
-            case R.id.Error_code_close /* 2131361821 */:
-            case R.id.enter_code_return /* 2131362215 */:
-                dismiss();
-                break;
-            case R.id.Erase_page1_no /* 2131361813 */:
-                switch_add_erase.setVisibility(View.VISIBLE);
-                erase_page1.setVisibility(View.GONE);
-                break;
-            case R.id.Erase_page1_yes /* 2131361814 */:
-                deletePassword();
-                break;
-            case R.id.enter_code_enter /* 2131362214 */:
-                verifyPassword();
-                break;
-            case R.id.true_code_add /* 2131363566 */:
-                switch_add_erase.setVisibility(View.GONE);
-                add_page1.setVisibility(View.VISIBLE);
-                break;
-            case R.id.true_code_cancel /* 2131363567 */:
-                switch_add_erase.setVisibility(View.GONE);
-                enter_code.setVisibility(View.VISIBLE);
-                break;
-            case R.id.true_code_erase /* 2131363569 */:
-                switch_add_erase.setVisibility(View.GONE);
-                erase_page1.setVisibility(View.VISIBLE);
-                break;
+        if (view.getId() == R.id.Add_page1_Enter) {
+            AddPassWard();
+        } else if (view.getId() == R.id.Add_page2_close ||
+                view.getId() == R.id.Erase_page2_close ||
+                view.getId() == R.id.Error_code_close ||
+                view.getId() == R.id.enter_code_return) {
+            dismiss();
+        } else if (view.getId() == R.id.Erase_page1_no) {
+            switch_add_erase.setVisibility(View.VISIBLE);
+            erase_page1.setVisibility(View.GONE);
+        } else if (view.getId() == R.id.Erase_page1_yes) {
+            deletePassword();
+        } else if (view.getId() == R.id.enter_code_enter) {
+            verifyPassword();
+        } else if (view.getId() == R.id.true_code_add) {
+            switch_add_erase.setVisibility(View.GONE);
+            add_page1.setVisibility(View.VISIBLE);
+        } else if (view.getId() == R.id.true_code_cancel) {
+            switch_add_erase.setVisibility(View.GONE);
+            enter_code.setVisibility(View.VISIBLE);
+        } else if (view.getId() == R.id.true_code_erase) {
+            switch_add_erase.setVisibility(View.GONE);
+            erase_page1.setVisibility(View.VISIBLE);
         }
     }
 
@@ -255,7 +248,7 @@ public class TypeInView implements View.OnClickListener {
             int i2 = (iArr[2] << 4) | iArr[3];
             int i3 = (iArr[4] << 4) | 0;
             if (i == 0 && i2 == 0 && i3 == 0) {
-                Toast.makeText(this.mContext, "The password is too simple", 0);
+                Toast.makeText(this.mContext, "The password is too simple", Toast.LENGTH_SHORT);
                 return;
             }
             CanbusMsgSender.sendMsg(new byte[]{22, 111, 5, (byte) i, (byte) i2, (byte) i3});
@@ -263,7 +256,7 @@ public class TypeInView implements View.OnClickListener {
             add_page2.setVisibility(View.VISIBLE);
             return;
         }
-        Toast.makeText(this.mContext, "Passwords do not match", 0);
+        Toast.makeText(this.mContext, "Passwords do not match", android.widget.Toast.LENGTH_SHORT);
     }
 
     private MsgMgr getMsgMgr(Context context) {

@@ -9,16 +9,11 @@ import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
 
+import com.hzbhd.R;
 import com.hzbhd.util.LogUtil;
-
-import kotlin.Lazy;
-import kotlin.LazyKt;
-import kotlin.Metadata;
-import kotlin.jvm.internal.Intrinsics;
 
 
 @SuppressLint("AppCompatCustomView")
