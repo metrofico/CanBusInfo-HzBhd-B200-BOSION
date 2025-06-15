@@ -20,17 +20,17 @@
             android:orientation="vertical"
             android:id="@+id/ford_sync_keyboard"
             android:background="@drawable/ford_sync_keyboard_bg"
-            android:padding="@dimen/dp1"
-            android:layout_width="@dimen/dp300"
+            android:padding="1dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/ford_sync_info_list"
             android:layout_centerHorizontal="true"/>
         <include
             android:id="@+id/ford_sync_info_list"
             android:layout_width="@dimen/dp509"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"
             layout="@layout/ford_sync_list_layout"/>
     </RelativeLayout>
@@ -41,32 +41,32 @@
         android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginBottom="20dp"
         android:layout_above="@+id/tv_ford_sync_play_time"
         android:layout_toStartOf="@+id/rl_right_area">
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@color/white"
             android:id="@+id/tv_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/ford_sync_screen_number"/>
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@color/white"
             android:id="@+id/tv_screen_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp20"/>
+            android:layout_marginStart="20dp"/>
     </LinearLayout>
     <TextView
-        android:textSize="@dimen/dp26"
+        android:textSize="26dp"
         android:textColor="@color/white"
         android:gravity="center"
         android:id="@+id/tv_ford_sync_play_time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginBottom="20dp"
         android:layout_alignParentBottom="true"
         android:layout_toStartOf="@+id/rl_right_area"/>
 </RelativeLayout>

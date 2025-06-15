@@ -9,10 +9,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:paddingStart="@dimen/dp20"
-        android:paddingEnd="@dimen/dp20">
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
         <TextView
-            android:textSize="@dimen/dp21"
+            android:textSize="21dp"
             android:textStyle="bold"
             android:textColor="#31b4e8"
             android:id="@+id/tv_selected_title"
@@ -21,21 +21,21 @@
             android:text="@string/selected_protocol"
             android:layout_centerVertical="true"/>
         <com.hzbhd.canbus.view.MarqueeTextView
-            android:textSize="@dimen/dp21"
+            android:textSize="21dp"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:id="@+id/tv_selected"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginStart="10dp"
             android:layout_toStartOf="@+id/update_canbus"
             android:layout_toEndOf="@+id/tv_selected_title"/>
         <androidx.appcompat.widget.AppCompatButton
             android:textColor="@color/white"
             android:id="@+id/update_canbus"
             android:background="@drawable/switch_can_type_btn_selector"
-            android:padding="@dimen/dp10"
+            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/update_can_bus_new_version_apk"
@@ -47,7 +47,7 @@
             android:textColor="@color/white"
             android:id="@+id/btn_select_can_type_id"
             android:background="@drawable/switch_can_type_btn_selector"
-            android:padding="@dimen/dp10"
+            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/select_cantype_id"
@@ -58,7 +58,7 @@
             android:textColor="@color/white"
             android:id="@+id/btn_input_id"
             android:background="@drawable/switch_can_type_btn_selector"
-            android:padding="@dimen/dp10"
+            android:padding="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/input_id"

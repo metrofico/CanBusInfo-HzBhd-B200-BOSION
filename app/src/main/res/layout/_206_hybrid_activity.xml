@@ -1,65 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <RelativeLayout
-        android:layout_gravity="center"
         android:id="@+id/rl_bg"
         android:layout_width="@dimen/_206_hybrid_rl_bg_width"
         android:layout_height="@dimen/_206_hybrid_iv_motor_height"
+        android:layout_gravity="center"
         android:layout_marginTop="@dimen/_206_hybrid_rl_bg_mt">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/vw_golf7_hybrid_view_base"/>
+            android:src="@drawable/vw_golf7_hybrid_view_base" />
+
         <ImageView
             android:id="@+id/iv_motor"
-            android:visibility="gone"
             android:layout_width="@dimen/_206_hybrid_iv_motor_width"
             android:layout_height="@dimen/_206_hybrid_iv_motor_height"
-            android:src="@drawable/vw_golf7_hybrid_e_motor"/>
+            android:src="@drawable/vw_golf7_hybrid_e_motor"
+            android:visibility="gone" />
+
         <ImageView
             android:id="@+id/iv_flow"
-            android:visibility="gone"
             android:layout_width="@dimen/_206_hybrid_rl_bg_width"
             android:layout_height="@dimen/_206_hybrid_iv_motor_height"
-            android:src="@drawable/vw_golf7_hybrid_flow_battery_to_motor"/>
+            android:src="@drawable/vw_golf7_hybrid_flow_battery_to_motor"
+            android:visibility="gone" />
+
         <ImageView
             android:id="@+id/iv_battery"
-            android:visibility="gone"
             android:layout_width="@dimen/_206_hybrid_iv_battery_width"
             android:layout_height="@dimen/_206_hybrid_iv_motor_height"
-            android:layout_alignParentEnd="true"/>
+            android:layout_alignParentEnd="true"
+            android:visibility="gone" />
+
         <ImageView
             android:id="@+id/iv_track_right"
-            android:visibility="gone"
             android:layout_width="@dimen/_206_hybrid_iv_motor_width"
             android:layout_height="@dimen/_206_hybrid_iv_motor_height"
-            android:src="@drawable/vw_golf7_hybrid_drive_hy_right"/>
+            android:src="@drawable/vw_golf7_hybrid_drive_hy_right"
+            android:visibility="gone" />
+
         <ImageView
             android:id="@+id/iv_track_left"
-            android:visibility="gone"
             android:layout_width="@dimen/_206_hybrid_iv_motor_width"
             android:layout_height="@dimen/_206_hybrid_iv_motor_height"
-            android:src="@drawable/vw_golf7_hybrid_drive_hy_left"/>
+            android:src="@drawable/vw_golf7_hybrid_drive_hy_left"
+            android:visibility="gone" />
+
         <TextView
-            android:textSize="@dimen/_206_hybrid_text_size"
-            android:textColor="#07a9fe"
             android:id="@+id/tv_battery_value"
-            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp70"
-            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="70dp"
             android:layout_marginEnd="@dimen/_206_hybrid_battery_value"
-            android:layout_alignParentEnd="true"/>
+            android:fontFamily="sans-serif-condensed-medium"
+            android:textColor="#07a9fe"
+            android:textSize="@dimen/_206_hybrid_text_size"
+            android:visibility="gone" />
     </RelativeLayout>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp50"/>
+        android:layout_marginTop="50dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" />
 </LinearLayout>

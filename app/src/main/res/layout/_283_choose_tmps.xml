@@ -3,8 +3,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <RelativeLayout
-        android:layout_width="@dimen/dp390"
-        android:layout_height="@dimen/dp168">
+        android:layout_width="390dp"
+        android:layout_height="168dp">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"

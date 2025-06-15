@@ -5,16 +5,16 @@
     android:id="@+id/itemLayout"
     android:background="@drawable/_283_selector_setting_select_cantype_view"
     android:layout_width="@dimen/dp313"
-    android:layout_height="@dimen/dp89">
+    android:layout_height="89dp">
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/__283__adapter_car_choose"
-        android:layout_marginStart="@dimen/dp16"
-        android:layout_marginEnd="@dimen/dp16"/>
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"/>
     <TextView
-        android:textSize="@dimen/dp26"
+        android:textSize="26dp"
         android:textColor="@color/white"
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"

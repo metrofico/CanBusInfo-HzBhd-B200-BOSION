@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
-    android:layout_height="@dimen/dp400"
-    android:layout_marginStart="@dimen/dp16">
+    android:layout_height="400dp"
+    android:layout_marginStart="16dp">
     <ImageView
         android:id="@+id/img_front_left"
-        android:layout_width="@dimen/dp39"
-        android:layout_height="@dimen/dp39"
-        android:layout_marginBottom="@dimen/dp_19"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="-19dp"
         android:layout_above="@+id/img_car"
-        android:layout_marginEnd="@dimen/dp_20"/>
+        android:layout_marginEnd="-20dp"/>
     <ImageView
         android:id="@+id/img_front_left_mid"
-        android:layout_width="@dimen/dp53"
-        android:layout_height="@dimen/dp45"
+        android:layout_width="53dp"
+        android:layout_height="45dp"
         android:layout_above="@+id/img_car"
         android:layout_toEndOf="@+id/img_front_left"/>
     <ImageView
         android:id="@+id/img_front_right_mid"
-        android:layout_width="@dimen/dp53"
-        android:layout_height="@dimen/dp45"
+        android:layout_width="53dp"
+        android:layout_height="45dp"
         android:layout_above="@+id/img_car"
         android:layout_toEndOf="@+id/img_front_left_mid"/>
     <ImageView
         android:id="@+id/img_front_right"
-        android:layout_width="@dimen/dp39"
-        android:layout_height="@dimen/dp39"
-        android:layout_marginBottom="@dimen/dp_19"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="-19dp"
         android:layout_above="@+id/img_car"
-        android:layout_marginStart="@dimen/dp_20"
+        android:layout_marginStart="-20dp"
         android:layout_toEndOf="@+id/img_front_right_mid"/>
     <ImageView
         android:id="@+id/img_car"
         android:layout_width="@dimen/dp134"
-        android:layout_height="@dimen/dp262"
-        android:layout_marginTop="@dimen/dp_9"
+        android:layout_height="262dp"
+        android:layout_marginTop="-9dp"
         android:src="@drawable/__331__car"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/dp5"/>
+        android:layout_marginStart="5dp"/>
     <ImageView
         android:id="@+id/img_rear_left"
-        android:layout_width="@dimen/dp49"
-        android:layout_height="@dimen/dp47"
-        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="49dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="-20dp"
         android:layout_below="@+id/img_car"
-        android:layout_marginStart="@dimen/dp_12"/>
+        android:layout_marginStart="-12dp"/>
     <ImageView
         android:id="@+id/img_rear_left_mid"
-        android:layout_width="@dimen/dp67"
-        android:layout_height="@dimen/dp71"
-        android:layout_marginTop="@dimen/dp_4"
+        android:layout_width="67dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="-4dp"
         android:layout_below="@+id/img_car"
-        android:layout_marginStart="@dimen/dp_35"
+        android:layout_marginStart="-35dp"
         android:layout_toEndOf="@+id/img_rear_left"/>
     <ImageView
         android:id="@+id/img_rear_right_mid"
-        android:layout_width="@dimen/dp67"
-        android:layout_height="@dimen/dp71"
-        android:layout_marginTop="@dimen/dp_4"
+        android:layout_width="67dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="-4dp"
         android:layout_below="@+id/img_car"
         android:layout_toEndOf="@+id/img_rear_left_mid"/>
     <ImageView
         android:id="@+id/img_rear_right"
-        android:layout_width="@dimen/dp49"
-        android:layout_height="@dimen/dp47"
-        android:layout_marginTop="@dimen/dp_20"
+        android:layout_width="49dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="-20dp"
         android:layout_below="@+id/img_car"
-        android:layout_marginStart="@dimen/dp_35"
+        android:layout_marginStart="-35dp"
         android:layout_toEndOf="@+id/img_rear_right_mid"/>
 </RelativeLayout>

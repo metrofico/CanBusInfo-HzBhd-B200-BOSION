@@ -12,39 +12,39 @@
         android:id="@+id/image_way"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp0"
+        android:layout_marginBottom="0dp"
         android:src="@drawable/dz_vehicle_information_bottom_road"
         android:layout_alignParentBottom="true"/>
     <com.hzbhd.canbus.car_cus._283.view.CarImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/dz_vehicle_information_car"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dp80"/>
+        android:layout_marginStart="80dp"/>
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/leftLinear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp40"
-        android:layout_marginStart="@dimen/dp210">
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="210dp">
         <LinearLayout
             android:gravity="center_vertical"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <TextView
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_283_hybrid_title_9"
-                android:layout_marginEnd="@dimen/dp32"/>
+                android:layout_marginEnd="32dp"/>
             <com.hzbhd.canbus.car_cus._283.view.TipsTextView
                 android:id="@+id/tipsTextView1"
-                android:layout_width="@dimen/dp400"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 app:setting_title="@string/_283_hybrid_title_10"/>
             <com.hzbhd.canbus.car_cus._283.view.TipsTextView
@@ -58,18 +58,18 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16">
+            android:layout_marginTop="16dp">
             <TextView
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/_283_hybrid_title_8"
-                android:layout_marginEnd="@dimen/dp32"/>
+                android:layout_marginEnd="32dp"/>
             <com.hzbhd.canbus.car_cus._283.view.TipsTextView
                 android:id="@+id/tipsTextView3"
-                android:layout_width="@dimen/dp400"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 app:setting_title="@string/_283_hybrid_title_10"/>
             <com.hzbhd.canbus.car_cus._283.view.TipsTextView
@@ -83,18 +83,18 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16">
+            android:layout_marginTop="16dp">
             <TextView
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_283_hybrid_title_7"
-                android:layout_marginEnd="@dimen/dp32"/>
+                android:layout_marginEnd="32dp"/>
             <com.hzbhd.canbus.car_cus._283.view.TipsTextView
                 android:id="@+id/tipsTextView5"
-                android:layout_width="@dimen/dp400"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 app:setting_title="@string/_283_hybrid_title_10"/>
             <com.hzbhd.canbus.car_cus._283.view.TipsTextView

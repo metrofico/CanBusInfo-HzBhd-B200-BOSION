@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="@dimen/dp270"
-    android:layout_height="@dimen/dp110">
+    android:layout_width="270dp"
+    android:layout_height="110dp">
     <ImageView
         android:background="@drawable/dz_air_big_bg"
-        android:layout_width="@dimen/dp250"
-        android:layout_height="@dimen/dp65"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
         android:layout_centerInParent="true"
-        android:layout_marginStart="@dimen/dp10"
-        android:layout_marginEnd="@dimen/dp10"/>
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
     <com.hzbhd.canbus.car_cus._283.view.BtnView
         android:id="@+id/subBtnView"
-        android:paddingTop="@dimen/dp23"
-        android:paddingBottom="@dimen/dp23"
-        android:layout_width="@dimen/dp85"
-        android:layout_height="@dimen/dp86"
+        android:paddingTop="23dp"
+        android:paddingBottom="23dp"
+        android:layout_width="85dp"
+        android:layout_height="86dp"
         android:layout_centerVertical="true"
-        android:paddingStart="@dimen/dp20"
-        android:paddingEnd="@dimen/dp20"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         app:dz_no_select_ic="@drawable/dz_air_less_n"
         app:dz_select_ic="@drawable/dz_air_less_p"/>
     <com.hzbhd.canbus.car_cus._283.view.MyTextView
@@ -30,13 +30,13 @@
         android:layout_centerInParent="true"/>
     <com.hzbhd.canbus.car_cus._283.view.BtnView
         android:id="@+id/addBtnView"
-        android:paddingTop="@dimen/dp23"
-        android:paddingBottom="@dimen/dp23"
-        android:layout_width="@dimen/dp85"
-        android:layout_height="@dimen/dp86"
+        android:paddingTop="23dp"
+        android:paddingBottom="23dp"
+        android:layout_width="85dp"
+        android:layout_height="86dp"
         android:layout_centerVertical="true"
-        android:paddingStart="@dimen/dp20"
-        android:paddingEnd="@dimen/dp20"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         android:layout_alignParentEnd="true"
         app:dz_no_select_ic="@drawable/dz_air_plus_n"
         app:dz_select_ic="@drawable/dz_air_plus_p"/>

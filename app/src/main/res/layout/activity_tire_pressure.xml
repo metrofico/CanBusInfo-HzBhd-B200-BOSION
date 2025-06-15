@@ -6,7 +6,7 @@
         android:id="@+id/iv_center_car"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/tire_car_height"
-        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginTop="20dp"
         android:src="@drawable/img_tire_m_n"
         android:layout_centerHorizontal="true"/>
     <View
@@ -19,40 +19,40 @@
         android:id="@+id/iv_tire_0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp100"
+        android:layout_marginTop="100dp"
         android:src="@drawable/icon_tire_tire_n"
         android:layout_toLeftOf="@+id/v_center"
         android:layout_alignBaseline="@+id/v_center"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_info_0"
-        android:layout_marginTop="@dimen/dp40"
-        android:layout_marginRight="@dimen/dp50"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="50dp"
         android:layout_toLeftOf="@+id/iv_tire_0"
         style="@style/TirInfoRv"/>
     <ImageView
         android:id="@+id/iv_tire_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp100"
+        android:layout_marginTop="100dp"
         android:src="@drawable/icon_tire_tire_n"
         android:layout_toRightOf="@+id/v_center"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_info_1"
-        android:layout_marginLeft="@dimen/dp50"
-        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="40dp"
         android:layout_toRightOf="@+id/iv_tire_1"
         style="@style/TirInfoRv"/>
     <ImageView
         android:id="@+id/iv_tire_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginTop="40dp"
         android:src="@drawable/icon_tire_tire_n"
         android:layout_toLeftOf="@+id/v_center"
         android:layout_below="@+id/v_center"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_info_2"
-        android:layout_marginRight="@dimen/dp50"
+        android:layout_marginRight="50dp"
         android:layout_toLeftOf="@+id/iv_tire_2"
         android:layout_below="@+id/v_center"
         style="@style/TirInfoRv"/>
@@ -60,13 +60,13 @@
         android:id="@+id/iv_tire_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginTop="40dp"
         android:src="@drawable/icon_tire_tire_n"
         android:layout_toRightOf="@+id/v_center"
         android:layout_below="@+id/v_center"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_info_3"
-        android:layout_marginLeft="@dimen/dp50"
+        android:layout_marginLeft="50dp"
         android:layout_toRightOf="@+id/iv_tire_3"
         android:layout_below="@+id/v_center"
         style="@style/TirInfoRv"/>
@@ -74,14 +74,14 @@
         android:id="@+id/iv_tire_4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp90"
+        android:layout_marginTop="90dp"
         android:src="@drawable/icon_tire_sparetire_n"
         android:layout_below="@+id/v_center"
         android:layout_centerHorizontal="true"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_info_4"
-        android:layout_width="@dimen/dp350"
-        android:layout_height="@dimen/dp100"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
         android:layout_marginTop="@dimen/tire_4_margin_top"
         android:layout_below="@+id/v_center"
         android:layout_centerHorizontal="true"
@@ -94,7 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
         <TextView
-            android:textSize="@dimen/dp20"
+            android:textSize="20dp"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

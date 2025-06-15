@@ -19,13 +19,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:id="@+id/file1_txt"
-                        android:paddingLeft="@dimen/dp30"
+                        android:paddingLeft="30dp"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="REC_20150101_010203_00001.AVI        紧急录像"
                         android:layout_weight="1"/>
                     <Button
@@ -47,13 +47,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:id="@+id/file2_txt"
-                        android:paddingLeft="@dimen/dp30"
+                        android:paddingLeft="30dp"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="REC_20150101_010203_00001.AVI        紧急录像"
                         android:layout_weight="1"/>
                     <Button
@@ -75,13 +75,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:id="@+id/file3_txt"
-                        android:paddingLeft="@dimen/dp30"
+                        android:paddingLeft="30dp"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="REC_20150101_010203_00001.AVI        紧急录像"
                         android:layout_weight="1"/>
                     <Button
@@ -103,13 +103,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:id="@+id/file4_txt"
-                        android:paddingLeft="@dimen/dp30"
+                        android:paddingLeft="30dp"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="REC_20150101_010203_00001.AVI        紧急录像"
                         android:layout_weight="1"/>
                     <Button
@@ -131,13 +131,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:id="@+id/file5_txt"
-                        android:paddingLeft="@dimen/dp30"
+                        android:paddingLeft="30dp"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="REC_20150101_010203_00001.AVI        紧急录像"
                         android:layout_weight="1"/>
                     <Button
@@ -159,13 +159,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:id="@+id/file6_txt"
-                        android:paddingLeft="@dimen/dp30"
+                        android:paddingLeft="30dp"
                         android:layout_width="0dp"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="REC_20150101_010203_00001.AVI        紧急录像"
                         android:layout_weight="1"/>
                     <Button
@@ -186,27 +186,27 @@
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp80">
+                android:layout_height="80dp">
                 <ImageButton
                     android:id="@+id/prev_page_imb"
                     android:background="@drawable/_436_prev_page_pressed"
-                    android:layout_width="@dimen/dp50"
-                    android:layout_height="@dimen/dp50"
-                    android:layout_marginLeft="@dimen/dp30"/>
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="30dp"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/page_number_txt"
                     android:visibility="invisible"
-                    android:layout_width="@dimen/dp180"
-                    android:layout_height="@dimen/dp72"
+                    android:layout_width="180dp"
+                    android:layout_height="72dp"
                     android:text="第1页"/>
                 <ImageButton
                     android:id="@+id/next_page_imb"
                     android:background="@drawable/_436_next_page_pressed"
-                    android:layout_width="@dimen/dp50"
-                    android:layout_height="@dimen/dp50"/>
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

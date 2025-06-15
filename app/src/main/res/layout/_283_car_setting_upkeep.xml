@@ -6,13 +6,13 @@
     <LinearLayout
         android:orientation="vertical"
         android:background="@drawable/_283_bg_line"
-        android:padding="@dimen/dp16"
+        android:padding="16dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/dp16"
-        android:layout_marginBottom="@dimen/dp16"
-        android:layout_marginStart="@dimen/dp32"
-        android:layout_marginEnd="@dimen/dp32">
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp">
         <TextView
             android:text="@string/_283_car_setting_upkeep_title_1"
             style="@style/_283_car_setting_little_title"/>

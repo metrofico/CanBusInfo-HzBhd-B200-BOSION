@@ -12,18 +12,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="@dimen/dp436"
-                android:layout_height="@dimen/dp378"
+                android:layout_width="436dp"
+                android:layout_height="378dp"
                 android:src="@drawable/_304_examined_vehicle"/>
             <ImageView
                 android:id="@+id/iv_cursor"
-                android:layout_width="@dimen/dp436"
-                android:layout_height="@dimen/dp378"
+                android:layout_width="436dp"
+                android:layout_height="378dp"
                 android:src="@drawable/_304_examined_cursor"/>
         </RelativeLayout>
         <View
-            android:layout_width="@dimen/dp32"
-            android:layout_height="@dimen/dp0"/>
+            android:layout_width="32dp"
+            android:layout_height="0dp"/>
         <LinearLayout
             android:gravity="center"
             android:orientation="vertical"
@@ -39,7 +39,7 @@
                     android:layout_height="wrap_content"
                     android:src="@drawable/_304_level_list_check_circle"/>
                 <TextView
-                    android:textSize="@dimen/dp24"
+                    android:textSize="24dp"
                     android:textColor="@color/_304_text_color_green"
                     android:id="@+id/tv_circle"
                     android:layout_width="wrap_content"
@@ -50,18 +50,18 @@
             <RelativeLayout
                 android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp130">
+                android:layout_height="130dp">
                 <LinearLayout
                     android:orientation="horizontal"
                     android:id="@+id/ll_check"
                     android:visibility="invisible"
-                    android:layout_width="@dimen/dp434"
+                    android:layout_width="434dp"
                     android:layout_height="wrap_content">
                     <androidx.recyclerview.widget.RecyclerView
                         android:layout_gravity="center"
                         android:id="@+id/rcv_check"
-                        android:paddingTop="@dimen/dp14"
-                        android:paddingBottom="@dimen/dp12"
+                        android:paddingTop="14dp"
+                        android:paddingBottom="12dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -79,36 +79,36 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:textSize="@dimen/dp24"
+                            android:textSize="24dp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/ac_diagnostic_info_item_6"/>
                         <TextView
-                            android:textSize="@dimen/dp24"
+                            android:textSize="24dp"
                             android:textColor="@color/white"
                             android:id="@+id/tv_warn_count"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp16"/>
+                            android:layout_marginStart="16dp"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp8">
+                        android:layout_marginTop="8dp">
                         <TextView
-                            android:textSize="@dimen/dp24"
+                            android:textSize="24dp"
                             android:textColor="@color/white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/_304_last_detection_time"/>
                         <TextView
-                            android:textSize="@dimen/dp24"
+                            android:textSize="24dp"
                             android:textColor="@color/white"
                             android:id="@+id/tv_check_time"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp16"/>
+                            android:layout_marginStart="16dp"/>
                     </LinearLayout>
                 </LinearLayout>
             </RelativeLayout>
@@ -120,18 +120,18 @@
                 <Button
                     android:id="@+id/btn_checked"
                     android:background="@drawable/_304_selector_checked"
-                    android:layout_width="@dimen/dp204"
-                    android:layout_height="@dimen/dp68"/>
+                    android:layout_width="204dp"
+                    android:layout_height="68dp"/>
                 <View
-                    android:layout_width="@dimen/dp24"
-                    android:layout_height="@dimen/dp0"/>
+                    android:layout_width="24dp"
+                    android:layout_height="0dp"/>
                 <Button
-                    android:textSize="@dimen/dp24"
+                    android:textSize="24dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/btn_check_details"
                     android:background="@drawable/_304_selector_btn_bg"
-                    android:layout_width="@dimen/dp204"
-                    android:layout_height="@dimen/dp68"
+                    android:layout_width="204dp"
+                    android:layout_height="68dp"
                     android:text="@string/_304_checked_details"/>
             </LinearLayout>
         </LinearLayout>

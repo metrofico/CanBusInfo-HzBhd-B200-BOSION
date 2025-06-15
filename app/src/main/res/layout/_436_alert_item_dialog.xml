@@ -9,23 +9,23 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <ImageButton
-            android:textSize="@dimen/dp22"
+            android:textSize="22dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:background="@drawable/warning_icon"
-            android:layout_width="@dimen/dp60"
-            android:layout_height="@dimen/dp60"/>
+            android:layout_width="60dp"
+            android:layout_height="60dp"/>
         <TextView
-            android:textSize="@dimen/dp22"
+            android:textSize="22dp"
             android:textColor="@color/red"
             android:gravity="center"
             android:id="@+id/alertContent"
             android:background="#454545"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp140"
+            android:layout_height="140dp"
             android:text="您确定要恢复出厂设置吗？"/>
         <Button
-            android:textSize="@dimen/dp24"
+            android:textSize="24dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:id="@+id/ok"

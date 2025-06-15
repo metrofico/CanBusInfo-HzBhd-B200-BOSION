@@ -4,13 +4,13 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <TextView
-        android:textSize="@dimen/dp22"
+        android:textSize="22dp"
         android:textColor="@color/white"
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <TextView
-        android:textSize="@dimen/dp26"
+        android:textSize="26dp"
         android:textColor="@color/white"
         android:id="@+id/tv_content"
         android:layout_width="wrap_content"

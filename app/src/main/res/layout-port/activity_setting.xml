@@ -6,15 +6,15 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_left_list"
         android:background="#2b2b2b"
-        android:paddingTop="@dimen/dp25"
+        android:paddingTop="25dp"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="0.3"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_right_list"
         android:background="@color/comm_bg"
-        android:paddingLeft="@dimen/dp15"
-        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="15dp"
+        android:paddingRight="10dp"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"/>

@@ -8,13 +8,13 @@
         android:layout_width="wrap_content"
         android:layout_height="70dp"/>
     <TextView
-        android:textSize="@dimen/dp17"
+        android:textSize="17dp"
         android:textColor="@android:color/white"
         android:id="@+id/tv"
-        android:padding="@dimen/dp5"
+        android:padding="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp2"
+        android:layout_marginBottom="2dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>
 </RelativeLayout>

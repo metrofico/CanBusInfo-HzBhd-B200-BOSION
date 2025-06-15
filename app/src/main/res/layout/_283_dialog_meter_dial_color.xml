@@ -5,28 +5,28 @@
     <com.hzbhd.canbus.car_cus._283.view.MeterDialColorView
         android:id="@+id/meterDialColorView"
         android:background="@drawable/_a6_meter_color_bg"
-        android:layout_width="@dimen/dp821"
-        android:layout_height="@dimen/dp468">
+        android:layout_width="821dp"
+        android:layout_height="468dp">
         <TextView
-            android:textSize="@dimen/dp24"
+            android:textSize="24dp"
             android:textColor="@color/white"
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginTop="24dp"
             android:text="@string/_283_meter_title_2"
-            android:drawablePadding="@dimen/dp16"
+            android:drawablePadding="16dp"
             android:drawableStart="@drawable/_a6_meter_dot_g"
-            android:layout_marginStart="@dimen/dp32"/>
+            android:layout_marginStart="32dp"/>
         <com.hzbhd.canbus.car_cus._283.view.MyRecyclerView
             android:id="@+id/recyclerView"
-            android:layout_width="@dimen/dp676"
+            android:layout_width="676dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="@dimen/dp10"
-            android:layout_marginBottom="@dimen/dp16"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
             android:layout_below="@+id/tv1"
             android:layout_centerHorizontal="true"
             android:overScrollMode="never"
-            android:layout_marginStart="@dimen/dp45"/>
+            android:layout_marginStart="45dp"/>
     </com.hzbhd.canbus.car_cus._283.view.MeterDialColorView>
 </RelativeLayout>

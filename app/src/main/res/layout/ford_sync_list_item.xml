@@ -10,20 +10,20 @@
         android:id="@+id/ll_list_item"
         android:background="@drawable/selector_list_item_new"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp68">
+        android:layout_height="68dp">
         <ImageView
             android:id="@+id/iv_left_icon"
-            android:layout_width="@dimen/dp47"
+            android:layout_width="47dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp5"/>
+            android:layout_marginStart="5dp"/>
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@color/white"
             android:id="@+id/tv_info"
             android:layout_width="@dimen/dp359"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:layout_marginStart="@dimen/dp8"/>
+            android:layout_marginStart="8dp"/>
         <ImageView
             android:id="@+id/iv_right_icon"
             android:layout_width="wrap_content"
@@ -32,5 +32,5 @@
     <TextView
         android:background="#888888"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp2"/>
+        android:layout_height="2dp"/>
 </LinearLayout>

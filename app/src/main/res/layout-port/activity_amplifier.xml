@@ -27,32 +27,32 @@
                 android:id="@+id/seek_bar_volume"
                 android:visibility="gone"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 app:seek_bar_title="@string/volume"/>
             <com.hzbhd.canbus.view.EqSeekBarView
                 android:id="@+id/seek_bar_high"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 app:seek_bar_title="@string/high_rate"/>
             <com.hzbhd.canbus.view.EqSeekBarView
                 android:id="@+id/seek_bar_middle"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 app:seek_bar_title="@string/middle_rate"/>
             <com.hzbhd.canbus.view.EqSeekBarView
                 android:id="@+id/seek_bar_low"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 app:seek_bar_title="@string/low_rate"/>
             <com.hzbhd.canbus.view.EqSeekBarView
                 android:id="@+id/seek_bar_mega_bass"
                 android:visibility="gone"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="1"
                 app:seek_bar_title="@string/mega_bass"/>
             <com.hzbhd.canbus.view.EqSeekBarView
@@ -60,13 +60,13 @@
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp15"/>
+                android:layout_marginTop="15dp"/>
             <com.hzbhd.canbus.view.EqSeekBarView
                 android:id="@+id/seek_bar_custom_2"
                 android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp15"/>
+                android:layout_marginTop="15dp"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -77,17 +77,17 @@
         <LinearLayout
             android:gravity="center"
             android:orientation="horizontal"
-            android:padding="@dimen/dp10"
+            android:padding="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingStart="@dimen/dp10"
-            android:paddingEnd="@dimen/dp10">
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
             <LinearLayout
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp10"
+                android:layout_marginLeft="10dp"
                 android:layout_weight="1">
                 <TextView
                     android:text="@string/front_rear"
@@ -102,7 +102,7 @@
                 android:orientation="horizontal"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
+                android:layout_marginLeft="20dp"
                 android:layout_weight="1">
                 <TextView
                     android:text="@string/left_right"
@@ -134,8 +134,8 @@
                 android:layout_centerInParent="true">
                 <ImageView
                     android:id="@+id/iv_point"
-                    android:layout_width="@dimen/dp45"
-                    android:layout_height="@dimen/dp45"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
                     android:src="@drawable/can_eq2_right_carmid"
                     android:layout_alignParentLeft="true"/>
             </RelativeLayout>

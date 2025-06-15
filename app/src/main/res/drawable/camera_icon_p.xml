@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:height="@dimen/dp64"
-        android:width="@dimen/dp64">
+        android:height="64dp"
+        android:width="64dp">
         <shape android:shape="rectangle">
             <corners android:radius="10dp"/>
             <stroke
@@ -11,9 +11,9 @@
         </shape>
     </item>
     <item
-        android:height="@dimen/dp56"
-        android:width="@dimen/dp56"
+        android:height="56dp"
+        android:width="56dp"
         android:drawable="@drawable/camera"
-        android:top="@dimen/dp4"
-        android:start="@dimen/dp4"/>
+        android:top="4dp"
+        android:start="4dp"/>
 </layer-list>

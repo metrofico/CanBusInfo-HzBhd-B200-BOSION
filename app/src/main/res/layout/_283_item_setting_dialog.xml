@@ -4,6 +4,6 @@
     android:layout_height="wrap_content">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
-        android:layout_marginEnd="@dimen/dp30"
+        android:layout_marginEnd="30dp"
         style="@style/_283_recyclerview"/>
 </RelativeLayout>

@@ -3,24 +3,24 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
-        android:textSize="@dimen/dp26"
+        android:textSize="26dp"
         android:textColor="@android:color/white"
         android:gravity="start"
         android:id="@+id/tv_cate"
-        android:paddingTop="@dimen/dp12"
-        android:paddingBottom="@dimen/dp12"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/dp30"/>
+        android:paddingStart="30dp"/>
     <TextView
-        android:textSize="@dimen/dp20"
+        android:textSize="20dp"
         android:textColor="@android:color/white"
         android:id="@+id/tv_value"
-        android:paddingTop="@dimen/dp12"
-        android:paddingBottom="@dimen/dp12"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:paddingEnd="@dimen/dp48"
+        android:paddingEnd="48dp"
         android:layout_alignParentEnd="true"/>
 </RelativeLayout>

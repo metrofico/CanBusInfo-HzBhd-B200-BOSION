@@ -9,16 +9,16 @@
     <RelativeLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp89"
+        android:layout_height="89dp"
         android:layout_marginTop="16dp">
         <ImageView
             android:id="@+id/leftImage"
-            android:layout_width="@dimen/dp92"
-            android:layout_height="@dimen/dp89"
+            android:layout_width="92dp"
+            android:layout_height="89dp"
             android:src="@drawable/_283_choose_left_top_click"
-            android:layout_marginStart="@dimen/dp32"/>
+            android:layout_marginStart="32dp"/>
         <TextView
-            android:textSize="@dimen/dp42"
+            android:textSize="42dp"
             android:textColor="@color/white"
             android:id="@+id/titleText"
             android:layout_width="wrap_content"
@@ -26,10 +26,10 @@
             android:layout_centerInParent="true"/>
         <ImageView
             android:id="@+id/rightImage"
-            android:layout_width="@dimen/dp92"
-            android:layout_height="@dimen/dp89"
+            android:layout_width="92dp"
+            android:layout_height="89dp"
             android:src="@drawable/_283_choose_right_top_click"
-            android:layout_marginEnd="@dimen/dp32"
+            android:layout_marginEnd="32dp"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
     <com.hzbhd.canbus.car_cus._291.view.DataAlarmView
@@ -48,23 +48,23 @@
         android:orientation="horizontal"
         android:background="@drawable/dz_vehicle_information_bottom_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp141">
+        android:layout_height="141dp">
         <LinearLayout
             android:gravity="center"
             android:orientation="vertical"
             android:id="@+id/linearMainChoose"
-            android:layout_width="@dimen/dp150"
+            android:layout_width="150dp"
             android:layout_height="match_parent">
             <TextView
-                android:textSize="@dimen/dp24"
+                android:textSize="24dp"
                 android:textColor="@drawable/_283_selector_textcolor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_283_choose"/>
             <ImageView
-                android:layout_width="@dimen/dp56"
-                android:layout_height="@dimen/dp41"
-                android:layout_marginTop="@dimen/dp16"
+                android:layout_width="56dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/_283_choose_bottom_1"/>
         </LinearLayout>
         <ImageView
@@ -76,18 +76,18 @@
             android:gravity="center"
             android:orientation="vertical"
             android:id="@+id/linearMainMedia"
-            android:layout_width="@dimen/dp150"
+            android:layout_width="150dp"
             android:layout_height="match_parent">
             <TextView
-                android:textSize="@dimen/dp24"
+                android:textSize="24dp"
                 android:textColor="@drawable/_283_selector_textcolor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_283_media"/>
             <ImageView
-                android:layout_width="@dimen/dp56"
-                android:layout_height="@dimen/dp41"
-                android:layout_marginTop="@dimen/dp16"
+                android:layout_width="56dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/_283_choose_bottom_2"/>
         </LinearLayout>
         <ImageView
@@ -103,18 +103,18 @@
             android:gravity="center"
             android:orientation="vertical"
             android:id="@+id/linearMainSetting"
-            android:layout_width="@dimen/dp150"
+            android:layout_width="150dp"
             android:layout_height="match_parent">
             <TextView
-                android:textSize="@dimen/dp24"
+                android:textSize="24dp"
                 android:textColor="@drawable/_283_selector_textcolor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/_283_setting"/>
             <ImageView
-                android:layout_width="@dimen/dp56"
-                android:layout_height="@dimen/dp41"
-                android:layout_marginTop="@dimen/dp16"
+                android:layout_width="56dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/_283_choose_bottom_3"/>
         </LinearLayout>
     </LinearLayout>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:paddingLeft="@dimen/dp14"
-    android:paddingRight="@dimen/dp11"
+    android:paddingLeft="14dp"
+    android:paddingRight="11dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ProgressBar

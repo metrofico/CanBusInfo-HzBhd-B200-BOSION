@@ -2,14 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/dp5"
-    android:layout_marginEnd="@dimen/dp5">
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp">
     <SeekBar
         android:id="@+id/seekbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp0"
-        android:maxHeight="@dimen/dp12"
+        android:layout_marginTop="0dp"
+        android:maxHeight="12dp"
         android:max="100"
         android:progress="2"
         android:progressDrawable="@drawable/seek_bar_bg"
@@ -18,31 +18,31 @@
         android:layout_toStartOf="@+id/ib_incs"
         android:layout_toEndOf="@+id/ib_decs"/>
     <TextView
-        android:textSize="@dimen/dp24"
+        android:textSize="24dp"
         android:textColor="@android:color/white"
         android:id="@+id/tv_value"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp64"
+        android:layout_marginTop="64dp"
         android:layout_below="@+id/seekbar"
-        android:layout_marginStart="@dimen/dp32"
+        android:layout_marginStart="32dp"
         android:layout_alignStart="@+id/seekbar"/>
     <ImageButton
         android:id="@+id/ib_decs"
         android:background="@color/transparent"
-        android:layout_width="@dimen/dp50"
-        android:layout_height="@dimen/dp50"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/setting_list_right_ic_selector"
         android:layout_centerVertical="true"
         android:rotation="180"
-        android:layout_marginStart="@dimen/dp16"/>
+        android:layout_marginStart="16dp"/>
     <ImageButton
         android:id="@+id/ib_incs"
         android:background="@color/transparent"
-        android:layout_width="@dimen/dp50"
-        android:layout_height="@dimen/dp50"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/setting_list_right_ic_selector"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/dp16"
+        android:layout_marginEnd="16dp"
         android:layout_alignParentEnd="true"/>
 </RelativeLayout>

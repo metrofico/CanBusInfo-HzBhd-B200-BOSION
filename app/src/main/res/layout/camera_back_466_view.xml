@@ -5,8 +5,8 @@
     android:layout_height="match_parent">
     <com.hzbhd.ui.view.colorview.ColorView
         android:id="@+id/back_view_back"
-        android:layout_width="@dimen/dp60"
-        android:layout_height="@dimen/dp43"
+        android:layout_width="60dp"
+        android:layout_height="43dp"
         bhd:n="@drawable/settings_return_n"
         bhd:p="@drawable/settings_return_p"/>
 </RelativeLayout>

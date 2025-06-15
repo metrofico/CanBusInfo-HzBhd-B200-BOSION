@@ -5,15 +5,15 @@
     <ImageView
         android:id="@+id/iv_click_item"
         android:background="@drawable/btn_normal_selector"
-        android:layout_width="@dimen/dp180"
-        android:layout_height="@dimen/dp42"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
         android:layout_centerInParent="true"/>
     <TextView
-        android:textSize="@dimen/dp20"
+        android:textSize="20dp"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:id="@+id/tv_display_item"
-        android:layout_width="@dimen/dp180"
-        android:layout_height="@dimen/dp42"
+        android:layout_width="180dp"
+        android:layout_height="42dp"
         android:layout_centerInParent="true"/>
 </RelativeLayout>

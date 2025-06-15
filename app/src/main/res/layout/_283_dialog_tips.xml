@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/dz_restore_bg"
-    android:layout_width="@dimen/dp582"
-    android:layout_height="@dimen/dp337">
+    android:layout_width="582dp"
+    android:layout_height="337dp">
     <RelativeLayout
-        android:layout_width="@dimen/dp582"
-        android:layout_height="@dimen/dp337">
+        android:layout_width="582dp"
+        android:layout_height="337dp">
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp86"
+            android:layout_height="86dp"
             android:text="@string/_283_revert_title_tips"/>
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@color/white"
             android:id="@+id/tv_content"
             android:layout_width="wrap_content"
@@ -24,14 +24,14 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp16"
+            android:layout_marginBottom="16dp"
             android:layout_alignParentBottom="true">
             <View
                 android:layout_width="0dp"
                 android:layout_height="1dp"
                 android:layout_weight="1"/>
             <Button
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textColor="@drawable/_283_selector_textcolor"
                 android:id="@+id/buttonConfirm"
                 android:background="@drawable/dz_radio_edit_small_button_n"
@@ -43,13 +43,13 @@
                 android:layout_height="1dp"
                 android:layout_weight="1"/>
             <Button
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textColor="@drawable/_283_selector_textcolor"
                 android:id="@+id/buttonCancel"
                 android:background="@drawable/dz_radio_edit_small_button_n"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginBottom="16dp"
                 android:text="@string/_283_revert_cancel"
                 android:layout_alignParentBottom="true"/>
             <View

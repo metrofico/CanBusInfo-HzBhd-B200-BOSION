@@ -7,60 +7,60 @@
         android:gravity="center"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp64"
-        android:layout_marginTop="@dimen/dp16">
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp">
         <TextView
-            android:textSize="@dimen/dp20"
+            android:textSize="20dp"
             android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/swc_match_info2"/>
         <com.hzbhd.canbus.view.MarqueeTextView
-            android:textSize="@dimen/dp20"
+            android:textSize="20dp"
             android:textColor="@android:color/white"
             android:ellipsize="marquee"
             android:gravity="center"
             android:id="@+id/tv_current_key"
             android:background="@drawable/layer_list_swc_current_key_bg"
-            android:layout_width="@dimen/dp220"
+            android:layout_width="220dp"
             android:layout_height="match_parent"
             android:lines="1"
             android:scrollHorizontally="true"
             android:singleLine="true"
             android:marqueeRepeatLimit="marquee_forever"
-            android:layout_marginStart="@dimen/dp16"/>
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_gravity="center_horizontal"
         android:id="@+id/rv_keys"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp16"/>
+        android:layout_marginTop="16dp"/>
     <LinearLayout
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="@dimen/dp32">
+        android:layout_marginTop="32dp">
         <Button
-            android:textSize="@dimen/dp20"
+            android:textSize="20dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:id="@+id/btn_save"
             android:background="@drawable/selector_swc_save"
-            android:layout_width="@dimen/dp267"
-            android:layout_height="@dimen/dp62"
+            android:layout_width="267dp"
+            android:layout_height="62dp"
             android:text="@string/swc_fun_save_exit"
-            android:paddingStart="@dimen/dp32"/>
+            android:paddingStart="32dp"/>
         <Button
-            android:textSize="@dimen/dp20"
+            android:textSize="20dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:id="@+id/btn_reset"
             android:background="@drawable/selector_swc_reset"
-            android:layout_width="@dimen/dp267"
-            android:layout_height="@dimen/dp62"
+            android:layout_width="267dp"
+            android:layout_height="62dp"
             android:text="@string/swc_btn_reset"
-            android:layout_marginStart="@dimen/dp24"/>
+            android:layout_marginStart="24dp"/>
     </LinearLayout>
 </LinearLayout>

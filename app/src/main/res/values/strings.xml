@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="ACC">ACC</string>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+    <string name="ACC" >ACC</string>
     <string name="ACCORD_8_OUDI">Accord 8(Oudi)</string>
     <string name="AT360_OTHER">AT360</string>
     <string name="AUDI_A3_SIMPLE">Audi A3</string>

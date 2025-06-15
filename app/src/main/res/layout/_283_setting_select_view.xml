@@ -12,5 +12,5 @@
         android:src="@drawable/dz_radio_set_list_not_selected"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="@dimen/dp32"/>
+        android:layout_marginEnd="32dp"/>
 </RelativeLayout>

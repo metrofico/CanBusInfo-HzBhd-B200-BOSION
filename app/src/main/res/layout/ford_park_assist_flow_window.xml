@@ -13,10 +13,10 @@
         android:gravity="center"
         android:layout_gravity="center"
         android:orientation="vertical"
-        android:layout_width="@dimen/dp286"
+        android:layout_width="286dp"
         android:layout_height="match_parent">
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="#009edc"
             android:gravity="center"
             android:layout_gravity="center"
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
         <TextView
-            android:textSize="@dimen/dp35"
+            android:textSize="35dp"
             android:gravity="center"
             android:layout_gravity="center"
             android:id="@+id/text_ford_pa_tips"

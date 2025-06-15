@@ -4,35 +4,35 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <RelativeLayout
-        android:layout_width="@dimen/dp532"
-        android:layout_height="@dimen/dp326">
+        android:layout_width="532dp"
+        android:layout_height="326dp">
         <LinearLayout
             android:orientation="vertical"
             android:background="@drawable/dz_air_small_bg"
-            android:layout_width="@dimen/dp532"
-            android:layout_height="@dimen/dp167"
-            android:layout_marginTop="@dimen/dp36"
-            android:layout_marginStart="@dimen/dp36">
+            android:layout_width="532dp"
+            android:layout_height="167dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginStart="36dp">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp30">
+                android:layout_marginTop="30dp">
                 <com.hzbhd.canbus.car_cus._283.view.BtnView
                     android:id="@+id/btn_wind_add"
-                    android:layout_width="@dimen/dp50"
-                    android:layout_height="@dimen/dp46"
-                    android:layout_marginStart="@dimen/dp26"
-                    android:layout_marginEnd="@dimen/dp26"
+                    android:layout_width="50dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="26dp"
                     app:dz_no_select_ic="@drawable/dz_air_wind_plus_n"
                     app:dz_select_ic="@drawable/dz_air_wind_plus_p"/>
                 <RelativeLayout
                     android:layout_gravity="center_vertical"
-                    android:layout_width="@dimen/dp301"
-                    android:layout_height="@dimen/dp6">
+                    android:layout_width="301dp"
+                    android:layout_height="6dp">
                     <ImageView
                         android:background="@drawable/dz_air_adjust_bar_bg"
-                        android:layout_width="@dimen/dp301"
+                        android:layout_width="301dp"
                         android:layout_height="wrap_content"/>
                     <LinearLayout
                         android:orientation="horizontal"
@@ -42,63 +42,63 @@
                             android:id="@+id/image_wind_1"
                             android:background="@drawable/dz_air_adjust_bar_1"
                             android:visibility="invisible"
-                            android:layout_width="@dimen/dp43"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"/>
                         <ImageView
                             android:id="@+id/image_wind_2"
                             android:background="@drawable/dz_air_adjust_bar_2"
                             android:visibility="invisible"
-                            android:layout_width="@dimen/dp43"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"/>
                         <ImageView
                             android:id="@+id/image_wind_3"
                             android:background="@drawable/dz_air_adjust_bar_3"
                             android:visibility="invisible"
-                            android:layout_width="@dimen/dp43"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"/>
                         <ImageView
                             android:id="@+id/image_wind_4"
                             android:background="@drawable/dz_air_adjust_bar_4"
                             android:visibility="invisible"
-                            android:layout_width="@dimen/dp43"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"/>
                         <ImageView
                             android:id="@+id/image_wind_5"
                             android:background="@drawable/dz_air_adjust_bar_5"
                             android:visibility="invisible"
-                            android:layout_width="@dimen/dp43"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"/>
                         <ImageView
                             android:id="@+id/image_wind_6"
                             android:background="@drawable/dz_air_adjust_bar_6"
                             android:visibility="invisible"
-                            android:layout_width="@dimen/dp43"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"/>
                         <ImageView
                             android:id="@+id/image_wind_7"
                             android:background="@drawable/dz_air_adjust_bar_7"
                             android:visibility="invisible"
-                            android:layout_width="@dimen/dp43"
+                            android:layout_width="43dp"
                             android:layout_height="wrap_content"/>
                     </LinearLayout>
                 </RelativeLayout>
                 <com.hzbhd.canbus.car_cus._283.view.BtnView
                     android:id="@+id/btn_wind_sub"
-                    android:layout_width="@dimen/dp50"
-                    android:layout_height="@dimen/dp46"
-                    android:layout_marginStart="@dimen/dp26"
-                    android:layout_marginEnd="@dimen/dp26"
+                    android:layout_width="50dp"
+                    android:layout_height="46dp"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginEnd="26dp"
                     app:dz_no_select_ic="@drawable/dz_air_wind_less_n"
                     app:dz_select_ic="@drawable/dz_air_wind_less_p"/>
             </LinearLayout>
             <View
                 android:background="@drawable/dz_air_small_bg_03"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp5"
-                android:layout_marginTop="@dimen/dp16"
-                android:layout_marginBottom="@dimen/dp16"
-                android:layout_marginStart="@dimen/dp26"
-                android:layout_marginEnd="@dimen/dp26"/>
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginStart="26dp"
+                android:layout_marginEnd="26dp"/>
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"

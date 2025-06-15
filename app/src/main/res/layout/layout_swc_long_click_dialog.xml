@@ -3,12 +3,12 @@
     android:orientation="vertical"
     android:background="@drawable/swc_long_key_bg"
     android:layout_width="@dimen/dp764"
-    android:layout_height="@dimen/dp466">
+    android:layout_height="466dp">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp82">
+        android:layout_height="82dp">
         <TextView
-            android:textSize="@dimen/dp24"
+            android:textSize="24dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:layout_width="match_parent"
@@ -17,11 +17,11 @@
         <ImageButton
             android:id="@+id/ib_close"
             android:background="@null"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="@dimen/dp52"
+            android:layout_width="84dp"
+            android:layout_height="52dp"
             android:src="@drawable/swc_close_n"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/dp12"
+            android:layout_marginEnd="12dp"
             android:layout_alignParentEnd="true"/>
     </RelativeLayout>
     <RelativeLayout

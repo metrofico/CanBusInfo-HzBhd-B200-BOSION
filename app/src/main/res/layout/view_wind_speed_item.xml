@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/iv_item"
-        android:layout_width="@dimen/dp14"
+        android:layout_width="14dp"
         android:layout_height="match_parent"
-        android:layout_marginLeft="@dimen/dp4"
-        android:layout_marginRight="@dimen/dp4"/>
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="4dp"/>
 </LinearLayout>

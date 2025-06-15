@@ -12,23 +12,23 @@
         android:id="@+id/image_way"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp32"
+        android:layout_marginBottom="32dp"
         android:src="@drawable/dz_vehicle_information_bottom_road"
         android:layout_alignParentBottom="true"/>
     <com.hzbhd.canbus.car_cus._283.view.CarImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp42"
+        android:layout_marginBottom="42dp"
         android:src="@drawable/dz_vehicle_information_car"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dp80"/>
+        android:layout_marginStart="80dp"/>
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp60"
+        android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
-        android:paddingEnd="@dimen/dp150">
+        android:paddingEnd="150dp">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
@@ -36,16 +36,16 @@
             <LinearLayout
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="@dimen/dp420"
+                android:layout_width="420dp"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/_291_data_alarm_1"/>
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:id="@+id/tv_alarm_belt"
                     android:layout_width="wrap_content"
@@ -55,16 +55,16 @@
             <LinearLayout
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="@dimen/dp420"
+                android:layout_width="420dp"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/_291_data_alarm_2"/>
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:id="@+id/tv_alarm_clean"
                     android:layout_width="wrap_content"
@@ -76,20 +76,20 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16">
+            android:layout_marginTop="16dp">
             <LinearLayout
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="@dimen/dp420"
+                android:layout_width="420dp"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/_291_data_alarm_3"/>
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:id="@+id/tv_alarm_oil"
                     android:layout_width="wrap_content"
@@ -99,16 +99,16 @@
             <LinearLayout
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="@dimen/dp420"
+                android:layout_width="420dp"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/_291_data_alarm_4"/>
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:id="@+id/tv_alarm_v"
                     android:layout_width="wrap_content"

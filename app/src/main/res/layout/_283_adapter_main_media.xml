@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp81">
+    android:layout_height="81dp">
     <LinearLayout
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -13,10 +13,10 @@
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/dp70"
-            android:layout_marginEnd="@dimen/dp32"/>
+            android:layout_marginStart="70dp"
+            android:layout_marginEnd="32dp"/>
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@color/white"
             android:id="@+id/textView"
             android:layout_width="wrap_content"

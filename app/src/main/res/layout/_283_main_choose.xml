@@ -4,10 +4,10 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:background="@drawable/dz_bullet_box_bg"
-        android:layout_width="@dimen/dp562"
-        android:layout_height="@dimen/dp243"
-        android:layout_marginTop="@dimen/dp256"
-        android:layout_marginStart="@dimen/dp20">
+        android:layout_width="562dp"
+        android:layout_height="243dp"
+        android:layout_marginTop="256dp"
+        android:layout_marginStart="20dp">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"

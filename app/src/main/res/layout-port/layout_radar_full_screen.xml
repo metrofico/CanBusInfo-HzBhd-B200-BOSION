@@ -13,43 +13,43 @@
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp200"
+            android:layout_marginTop="200dp"
             android:layout_toLeftOf="@+id/front_radar_right_mid">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/f_r_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/f_r_m_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/f_l_m_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/f_l_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
             </LinearLayout>
         </RelativeLayout>
@@ -58,7 +58,7 @@
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp200"
+            android:layout_marginTop="200dp"
             android:layout_toRightOf="@+id/back_radar_left_mid">
             <LinearLayout
                 android:gravity="center"
@@ -66,94 +66,94 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/r_r_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/r_r_m_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/r_l_m_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/r_l_txt"
                     android:visibility="gone"
                     android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_height="60dp"
                     android:text=""/>
             </LinearLayout>
         </RelativeLayout>
         <TextView
-            android:textSize="@dimen/dp32"
+            android:textSize="32dp"
             android:textColor="@android:color/white"
             android:id="@+id/back_dist_only_full"
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="@dimen/dp32"
+            android:layout_marginRight="32dp"
             android:text=""
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"/>
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@color/white"
             android:id="@+id/tv_left_top_tis"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp38"
-            android:layout_marginTop="@dimen/dp28"/>
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="28dp"/>
         <TextView
-            android:textSize="@dimen/dp21"
+            android:textSize="21dp"
             android:textColor="@color/white"
             android:id="@+id/tv_one_distance"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp18"
+            android:layout_marginTop="18dp"
             android:text=""
             android:layout_below="@+id/tv_left_top_tis"
-            android:layout_marginStart="@dimen/dp38"/>
+            android:layout_marginStart="38dp"/>
         <TextView
-            android:textSize="@dimen/dp38"
+            android:textSize="38dp"
             android:textColor="@color/white"
             android:id="@+id/tv_distance_unit"
             android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp38"
-            android:layout_marginTop="@dimen/dp38"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="38dp"
             android:text="@string/unit_cm"
             android:layout_below="@+id/tv_left_top_tis"
             android:layout_toEndOf="@+id/tv_one_distance"/>
         <ImageButton
             android:id="@+id/radar_camera_sw"
             android:background="#00000000"
-            android:padding="@dimen/dp8"
+            android:padding="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp38"
-            android:layout_marginRight="@dimen/dp38"
+            android:layout_marginTop="38dp"
+            android:layout_marginRight="38dp"
             android:src="@drawable/selector_radar_camera_btn"
             android:layout_alignParentRight="true"/>
         <ImageView
             android:id="@+id/radar_big_car"
-            android:layout_width="@dimen/dp271"
-            android:layout_height="@dimen/dp107"
+            android:layout_width="271dp"
+            android:layout_height="107dp"
             android:src="@drawable/__b1__radar_big_car"
             android:layout_centerInParent="true"/>
         <ImageView
@@ -168,30 +168,30 @@
             android:id="@+id/front_radar_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp182"
-            android:layout_marginRight="@dimen/dp_28"
+            android:layout_marginTop="182dp"
+            android:layout_marginRight="-28dp"
             android:layout_toLeftOf="@+id/radar_big_car"/>
         <ImageView
             android:id="@+id/front_radar_right_mid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp244"
-            android:layout_marginRight="@dimen/dp_17"
+            android:layout_marginTop="244dp"
+            android:layout_marginRight="-17dp"
             android:layout_toLeftOf="@+id/radar_big_car"/>
         <ImageView
             android:id="@+id/front_radar_left_mid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp310"
-            android:layout_marginRight="@dimen/dp_17"
+            android:layout_marginTop="310dp"
+            android:layout_marginRight="-17dp"
             android:src="@drawable/front_radar_left_mid_0"
             android:layout_toLeftOf="@+id/radar_big_car"/>
         <ImageView
             android:id="@+id/front_radar_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp350"
-            android:layout_marginRight="@dimen/dp_28"
+            android:layout_marginTop="350dp"
+            android:layout_marginRight="-28dp"
             android:src="@drawable/front_radar_left_0"
             android:layout_toLeftOf="@+id/radar_big_car"/>
         <ImageView
@@ -207,7 +207,7 @@
             android:id="@+id/back_radar_right"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_21"
+            android:layout_marginLeft="-21dp"
             android:layout_marginTop="@dimen/dp194"
             android:src="@drawable/back_radar_right_0"
             android:layout_toRightOf="@+id/radar_big_car"/>
@@ -215,8 +215,8 @@
             android:id="@+id/back_radar_right_probe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_34"
-            android:layout_marginTop="@dimen/dp150"
+            android:layout_marginLeft="-34dp"
+            android:layout_marginTop="150dp"
             android:src="@drawable/back_radar_right_0"
             android:layout_toRightOf="@+id/radar_big_car"
             android:rotation="-8"/>
@@ -224,32 +224,32 @@
             android:id="@+id/back_radar_right_mid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:layout_marginTop="@dimen/dp249"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginTop="249dp"
             android:src="@drawable/back_radar_right_mid_0"
             android:layout_toRightOf="@+id/radar_big_car"/>
         <ImageView
             android:id="@+id/back_radar_left_mid"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_14"
-            android:layout_marginTop="@dimen/dp310"
+            android:layout_marginLeft="-14dp"
+            android:layout_marginTop="310dp"
             android:src="@drawable/back_radar_left_mid_0"
             android:layout_toRightOf="@+id/radar_big_car"/>
         <ImageView
             android:id="@+id/back_radar_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_23"
-            android:layout_marginTop="@dimen/dp346"
+            android:layout_marginLeft="-23dp"
+            android:layout_marginTop="346dp"
             android:src="@drawable/back_radar_left_0"
             android:layout_toRightOf="@+id/radar_big_car"/>
         <ImageView
             android:id="@+id/back_radar_left_probe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_40"
-            android:layout_marginTop="@dimen/dp390"
+            android:layout_marginLeft="-40dp"
+            android:layout_marginTop="390dp"
             android:src="@drawable/back_radar_left_0"
             android:layout_toRightOf="@+id/radar_big_car"
             android:rotation="48"/>
@@ -265,39 +265,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/t_l_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""
-                    android:layout_marginEnd="@dimen/dp80"/>
+                    android:layout_marginEnd="80dp"/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="19dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/t_l_m_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""
-                    android:layout_marginEnd="@dimen/dp80"/>
+                    android:layout_marginEnd="80dp"/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="30dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/t_r_m_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""
-                    android:layout_marginEnd="@dimen/dp80"/>
+                    android:layout_marginEnd="80dp"/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="30dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/t_r_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""/>
             </LinearLayout>
         </RelativeLayout>
@@ -344,39 +344,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="30dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/b_l_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""
-                    android:layout_marginEnd="@dimen/dp80"/>
+                    android:layout_marginEnd="80dp"/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="30dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/b_l_m_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""
-                    android:layout_marginEnd="@dimen/dp80"/>
+                    android:layout_marginEnd="80dp"/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="30dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/b_r_m_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""
-                    android:layout_marginEnd="@dimen/dp80"/>
+                    android:layout_marginEnd="80dp"/>
                 <TextView
-                    android:textSize="@dimen/dp30"
+                    android:textSize="30dp"
                     android:textColor="@android:color/white"
                     android:id="@+id/b_r_txt"
                     android:visibility="gone"
-                    android:layout_width="@dimen/dp103"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="103dp"
+                    android:layout_height="60dp"
                     android:text=""/>
             </LinearLayout>
         </RelativeLayout>
@@ -416,19 +416,19 @@
             android:gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/dp38"
+            android:layout_marginBottom="38dp"
             android:layout_alignParentBottom="true">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/warning_icon"/>
             <TextView
-                android:textSize="@dimen/dp35"
+                android:textSize="35dp"
                 android:textColor="@color/white"
                 android:id="@+id/tv_bottom_warning_tis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp38"/>
+                android:layout_marginLeft="38dp"/>
         </LinearLayout>
     </RelativeLayout>
 </merge>

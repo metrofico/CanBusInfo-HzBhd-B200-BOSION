@@ -1,187 +1,216 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/air_conditioning_bg"
-    android:fitsSystemWindows="true"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/air_conditioning_bg"
+    android:fitsSystemWindows="true">
+
     <View
-        android:background="@drawable/dz_setting_bar_gray"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp1"/>
+        android:layout_height="1dp"
+        android:background="@drawable/dz_setting_bar_gray" />
+
     <TextView
-        android:textSize="@dimen/dp26"
-        android:textColor="@drawable/_283_selector_textcolor"
-        android:gravity="center"
         android:id="@+id/left_view"
+        android:layout_width="146dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/dz_air_l_bg"
-        android:layout_width="@dimen/dp146"
-        android:layout_height="@dimen/dp67"
-        android:layout_marginTop="@dimen/dp16"
-        android:text="MANU"/>
-    <ImageView
         android:gravity="center"
+        android:text="MANU"
+        android:textColor="@drawable/_283_selector_textcolor"
+        android:textSize="26dp" />
+
+    <ImageView
         android:id="@+id/left_view_iv"
+        android:layout_width="146dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="16dp"
         android:background="@drawable/dz_air_l_bg"
-        android:layout_width="@dimen/dp146"
-        android:layout_height="@dimen/dp67"
-        android:layout_marginTop="@dimen/dp16"/>
+        android:gravity="center" />
+
     <ImageView
-        android:gravity="center"
         android:id="@+id/right_view"
+        android:layout_width="146dp"
+        android:layout_height="67dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="16dp"
         android:background="@drawable/dz_air_r_bg"
-        android:layout_width="@dimen/dp146"
-        android:layout_height="@dimen/dp67"
-        android:layout_marginTop="@dimen/dp16"
-        android:src="@drawable/dz_air_r_icon_weak_n"
-        android:layout_alignParentRight="true"/>
+        android:gravity="center"
+        android:src="@drawable/dz_air_r_icon_weak_n" />
+
     <ImageView
         android:id="@+id/front_left_seat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp60"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dp252"/>
+        android:layout_marginStart="252dp"
+        android:layout_marginBottom="60dp" />
+
     <ImageView
         android:id="@+id/front_right_seat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp250"
-        android:layout_marginStart="@dimen/dp442"/>
+        android:layout_marginStart="442dp"
+        android:layout_marginTop="250dp" />
+
     <ImageView
         android:id="@+id/rear_right_seat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp350"
-        android:layout_marginStart="@dimen/dp779"/>
+        android:layout_marginStart="779dp"
+        android:layout_marginTop="350dp" />
+
     <ImageView
         android:id="@+id/front_windows_wind"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp55"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="55dp"
         android:src="@drawable/dz_blow_glass"
-        android:layout_marginStart="@dimen/dp125"/>
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/front_up_wind"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp80"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="80dp"
         android:src="@drawable/dz_blow_head"
-        android:layout_marginStart="@dimen/dp110"/>
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/front_down_wind"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp200"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="200dp"
         android:src="@drawable/dz_blow_foot"
-        android:layout_marginStart="@dimen/dp136"/>
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/rear_wind"
-        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp106"
-        android:src="@drawable/dz_blow_heat"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dp615"/>
+        android:layout_marginStart="615dp"
+        android:layout_marginBottom="106dp"
+        android:src="@drawable/dz_blow_heat"
+        android:visibility="gone" />
+
     <ImageView
         android:id="@+id/iv_centerControl"
-        android:padding="@dimen/dp10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp230"
-        android:src="@drawable/_283_selector_center_control"
-        android:layout_marginStart="@dimen/dp360"/>
+        android:layout_marginStart="360dp"
+        android:layout_marginTop="230dp"
+        android:padding="10dp"
+        android:src="@drawable/_283_selector_center_control" />
+
     <com.hzbhd.canbus.car_cus._283.view.AirTextView
         android:id="@+id/front_right_airTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp120"
-        android:layout_marginStart="@dimen/dp460"/>
+        android:layout_marginStart="460dp"
+        android:layout_marginTop="120dp" />
+
     <com.hzbhd.canbus.car_cus._283.view.AirTextView
         android:id="@+id/center_airTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp308"
-        android:layout_marginStart="@dimen/dp350"/>
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="308dp" />
+
     <com.hzbhd.canbus.car_cus._283.view.AirTextView
         android:id="@+id/rear_right_airTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp280"
-        android:layout_marginStart="@dimen/dp740"/>
+        android:layout_marginStart="740dp"
+        android:layout_marginTop="280dp" />
+
     <LinearLayout
-        android:orientation="horizontal"
-        android:background="@drawable/dz_seat_bottom_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp84"
-        android:layout_alignParentBottom="true">
+        android:layout_height="84dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/dz_seat_bottom_bg"
+        android:orientation="horizontal">
+
         <com.hzbhd.canbus.car_cus._283.view.BtnView
             android:id="@+id/btn_off_on"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:dz_no_select_ic="@drawable/__283__dz_air_bottom_icon_off_n"
-            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_off_p"/>
+            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_off_p" />
+
         <ImageView
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dz_vehicle_information_bottom_line"/>
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/dz_vehicle_information_bottom_line" />
+
         <com.hzbhd.canbus.car_cus._283.view.BtnView
             android:id="@+id/btn_sync"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:dz_no_select_ic="@drawable/__283__dz_air_bottom_icon_sync_n"
-            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_sync_p"/>
+            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_sync_p" />
+
         <ImageView
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dz_vehicle_information_bottom_line"/>
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/dz_vehicle_information_bottom_line" />
+
         <com.hzbhd.canbus.car_cus._283.view.BtnView
             android:id="@+id/btn_rear"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:dz_no_select_ic="@drawable/__283__dz_air_bottom_icon_rear_n"
-            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_rear_p"/>
+            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_rear_p" />
+
         <ImageView
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dz_vehicle_information_bottom_line"/>
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/dz_vehicle_information_bottom_line" />
+
         <com.hzbhd.canbus.car_cus._283.view.BtnView
             android:id="@+id/btn_cleanair"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:dz_no_select_ic="@drawable/__283__dz_air_bottom_icon_cleanair_n"
-            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_cleanair_p"/>
+            app:dz_select_ic="@drawable/__283__dz_air_bottom_icon_cleanair_p" />
+
         <ImageView
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dz_vehicle_information_bottom_line"/>
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/dz_vehicle_information_bottom_line" />
+
         <com.hzbhd.canbus.car_cus._283.view.BtnView
             android:id="@+id/btn_wheel"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:dz_no_select_ic="@drawable/dz_air_bottom_icon_wheel_n"
-            app:dz_select_ic="@drawable/dz_air_bottom_icon_wheel_p"/>
+            app:dz_select_ic="@drawable/dz_air_bottom_icon_wheel_p" />
+
         <ImageView
-            android:layout_gravity="center_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/dz_vehicle_information_bottom_line"/>
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/dz_vehicle_information_bottom_line" />
+
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1" />
+
         <com.hzbhd.canbus.car_cus._283.view.BtnView
             android:id="@+id/btn_setting"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             app:dz_no_select_ic="@drawable/dz_air_bottom_icon_setting_n"
-            app:dz_select_ic="@drawable/dz_air_bottom_icon_setting_p"/>
+            app:dz_select_ic="@drawable/dz_air_bottom_icon_setting_p" />
     </LinearLayout>
 </RelativeLayout>

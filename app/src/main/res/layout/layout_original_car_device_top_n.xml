@@ -4,5 +4,5 @@
     android:id="@+id/ll_top"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingStart="@dimen/dp10"
-    android:paddingEnd="@dimen/dp10"/>
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"/>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="door_back_margin_end">@dimen/dp423</dimen>
-    <dimen name="door_head_margin_end">@dimen/dp48</dimen>
-    <dimen name="door_left_front_margin_start">@dimen/dp3</dimen>
-    <dimen name="door_left_front_margin_top">@dimen/dp171</dimen>
-    <dimen name="door_left_rear_margin_top">@dimen/dp_19</dimen>
-    <dimen name="door_right_front_margin_end">@dimen/dp1</dimen>
-    <dimen name="door_right_front_margin_top">@dimen/dp171</dimen>
-    <dimen name="door_right_rear_margin_top">@dimen/dp_19</dimen>
+    <dimen name="door_back_margin_end">423dp</dimen>
+    <dimen name="door_head_margin_end">48dp</dimen>
+    <dimen name="door_left_front_margin_start">3dp</dimen>
+    <dimen name="door_left_front_margin_top">171dp</dimen>
+    <dimen name="door_left_rear_margin_top">19dp</dimen>
+    <dimen name="door_right_front_margin_end">1dp</dimen>
+    <dimen name="door_right_front_margin_top">171dp</dimen>
+    <dimen name="door_right_rear_margin_top">19dp</dimen>
     <dimen name="track_margin_bottom">0px</dimen>
-    <dimen name="track_view_cur_x_off">1000px</dimen>
+    <dimen name="track_view_cur_x_off">666dp</dimen>
     <dimen name="track_view_x_off">-110px</dimen>
     <dimen name="track_view_x_off_rtl">-22px</dimen>
     <dimen name="track_view_y_off">-210px</dimen>

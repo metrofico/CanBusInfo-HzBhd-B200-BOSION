@@ -10,7 +10,7 @@
         android:layout_height="match_parent"
         android:button="@null"/>
     <TextView
-        android:textSize="@dimen/dp20"
+        android:textSize="20dp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:id="@+id/tv_item"

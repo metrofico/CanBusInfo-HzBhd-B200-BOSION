@@ -2,10 +2,10 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@android:id/background"
-        android:height="@dimen/dp46"
+        android:height="46dp"
         android:drawable="@drawable/_a5_bar_small_bg"/>
     <item
         android:id="@android:id/progress"
-        android:height="@dimen/dp46"
+        android:height="46dp"
         android:drawable="@drawable/_a5_bar"/>
 </layer-list>

@@ -7,23 +7,23 @@
     <RelativeLayout
         android:background="@drawable/dz_vehicle_information_top_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp64">
+        android:layout_height="64dp">
         <TextView
-            android:textSize="@dimen/dp32"
+            android:textSize="32dp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_283_air_setting"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp32"/>
+            android:layout_marginStart="32dp"/>
         <ImageView
             android:id="@+id/iv_back"
-            android:layout_width="@dimen/dp77"
-            android:layout_height="@dimen/dp50"
+            android:layout_width="77dp"
+            android:layout_height="50dp"
             android:src="@drawable/_283_main_setting_back"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/dp64"/>
+            android:layout_marginEnd="64dp"/>
     </RelativeLayout>
     <com.hzbhd.canbus.car_cus._283.view.SettingSelectView
         android:id="@+id/sync_hot"

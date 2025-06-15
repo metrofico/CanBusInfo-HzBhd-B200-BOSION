@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:inputType="number"
-                    android:layout_marginStart="@dimen/dp10"/>
+                    android:layout_marginStart="10dp"/>
                 <TextView
                     android:textSize="28px"
                     android:textColor="@color/black"
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_marginStart="@dimen/dp10"/>
+                    android:layout_marginStart="10dp"/>
             </LinearLayout>
             <TextView
                 android:textSize="28px"
@@ -170,13 +170,13 @@
         android:background="@color/white"
         android:visibility="gone"
         android:layout_width="800px"
-        android:layout_height="@dimen/dp420">
+        android:layout_height="420dp">
         <LinearLayout
             android:gravity="center_horizontal"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp250">
+            android:layout_height="250dp">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -187,8 +187,8 @@
                     android:gravity="center"
                     android:id="@+id/time_day"
                     android:background="@drawable/__439__kongt_shuchuk_3"
-                    android:layout_width="@dimen/dp270"
-                    android:layout_height="@dimen/dp60"
+                    android:layout_width="270dp"
+                    android:layout_height="60dp"
                     android:text="@string/_439_time_tobay"/>
                 <LinearLayout
                     android:orientation="vertical"
@@ -201,8 +201,8 @@
                         android:textColor="@color/black"
                         android:gravity="center"
                         android:id="@+id/time_today"
-                        android:layout_width="@dimen/dp270"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_width="270dp"
+                        android:layout_height="60dp"
                         android:text="@string/_439_time_tobay"
                         bhd:n="@drawable/transparent"
                         bhd:p="@drawable/__439__kongt_shuchuk"
@@ -216,8 +216,8 @@
                         android:textColor="@color/black"
                         android:gravity="center"
                         android:id="@+id/time_tomorrow"
-                        android:layout_width="@dimen/dp270"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_width="270dp"
+                        android:layout_height="60dp"
                         android:text="@string/_439_time_tomorrow"
                         bhd:n="@drawable/transparent"
                         bhd:p="@drawable/__439__kongt_shuchuk"
@@ -239,7 +239,7 @@
                 android:layout_height="wrap_content"
                 android:hint="0-24H"
                 android:inputType="number"
-                android:layout_marginStart="@dimen/dp40"/>
+                android:layout_marginStart="40dp"/>
             <TextView
                 android:textSize="28px"
                 android:textColor="@color/black"
@@ -249,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:text=":"
                 android:inputType="number"
-                android:layout_marginStart="@dimen/dp10"/>
+                android:layout_marginStart="10dp"/>
             <EditText
                 android:textSize="28px"
                 android:textColor="@color/black"
@@ -261,7 +261,7 @@
                 android:layout_height="wrap_content"
                 android:hint="0-60Min"
                 android:inputType="number"
-                android:layout_marginStart="@dimen/dp10"/>
+                android:layout_marginStart="10dp"/>
             <TextView
                 android:textSize="28px"
                 android:textColor="@color/white"

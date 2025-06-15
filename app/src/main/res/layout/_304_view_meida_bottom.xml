@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
         <RelativeLayout
-            android:layout_width="@dimen/dp0"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <ImageView
@@ -21,66 +21,66 @@
                 android:background="@drawable/_304_media_bottom_wind_bg"
                 android:layout_width="@dimen/dp124"
                 android:layout_height="@dimen/dp124"
-                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginBottom="16dp"
                 android:src="@drawable/_304_level_list_wind_speed"
                 android:layout_centerHorizontal="true"/>
             <View
                 android:id="@+id/wind_center"
-                android:layout_width="@dimen/dp56"
-                android:layout_height="@dimen/dp0"
-                android:layout_marginTop="@dimen/dp60"
+                android:layout_width="56dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="60dp"
                 android:layout_alignTop="@+id/iv_wind_speed"
                 android:layout_centerInParent="true"/>
             <ImageButton
                 android:id="@+id/ib_wind_decrease"
                 android:background="@drawable/_304_selector_wind_decrease"
-                android:layout_width="@dimen/dp70"
-                android:layout_height="@dimen/dp70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_alignTop="@+id/wind_center"
                 android:layout_toStartOf="@+id/wind_center"/>
             <ImageButton
                 android:id="@+id/ib_wind_increase"
                 android:background="@drawable/_304_selector_wind_increase"
-                android:layout_width="@dimen/dp70"
-                android:layout_height="@dimen/dp70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_alignTop="@+id/wind_center"
                 android:layout_toEndOf="@+id/wind_center"/>
         </RelativeLayout>
         <LinearLayout
             android:gravity="bottom"
             android:layout_gravity="bottom"
-            android:paddingBottom="@dimen/dp4"
-            android:layout_width="@dimen/dp0"
+            android:paddingBottom="4dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2.8">
             <ImageButton
                 android:id="@+id/ib_phone"
                 android:background="@color/transparent"
-                android:layout_width="@dimen/dp64"
-                android:layout_height="@dimen/dp64"
-                android:layout_marginBottom="@dimen/dp4"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
                 android:src="@drawable/_304_selector_phone"
                 android:layout_weight="1"/>
             <ImageButton
                 android:id="@+id/ib_home"
                 android:background="@color/transparent"
-                android:layout_width="@dimen/dp64"
-                android:layout_height="@dimen/dp64"
-                android:layout_marginBottom="@dimen/dp4"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginBottom="4dp"
                 android:src="@drawable/_304_selector_home"
                 android:layout_weight="1"/>
             <ImageButton
                 android:id="@+id/ib_media"
                 android:background="@color/transparent"
                 android:visibility="gone"
-                android:layout_width="@dimen/dp64"
-                android:layout_height="@dimen/dp64"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 android:src="@drawable/_304_selector_media"
                 android:layout_weight="1"/>
         </LinearLayout>
         <RelativeLayout
             android:id="@+id/rl_media_adjust"
-            android:layout_width="@dimen/dp0"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1">
             <ImageView
@@ -88,27 +88,27 @@
                 android:background="@drawable/_304_media_bottom_media_bg"
                 android:layout_width="@dimen/dp124"
                 android:layout_height="@dimen/dp124"
-                android:layout_marginBottom="@dimen/dp16"
+                android:layout_marginBottom="16dp"
                 android:layout_centerHorizontal="true"/>
             <View
                 android:id="@+id/media_center"
-                android:layout_width="@dimen/dp56"
-                android:layout_height="@dimen/dp0"
-                android:layout_marginTop="@dimen/dp60"
+                android:layout_width="56dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="60dp"
                 android:layout_alignTop="@+id/iv_meida"
                 android:layout_centerInParent="true"/>
             <ImageButton
                 android:id="@+id/ib_meida_up"
                 android:background="@drawable/_304_selector_media_up"
-                android:layout_width="@dimen/dp70"
-                android:layout_height="@dimen/dp70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_alignTop="@+id/media_center"
                 android:layout_toStartOf="@+id/media_center"/>
             <ImageButton
                 android:id="@+id/ib_meida_down"
                 android:background="@drawable/_304_selector_media_down"
-                android:layout_width="@dimen/dp70"
-                android:layout_height="@dimen/dp70"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
                 android:layout_alignTop="@+id/media_center"
                 android:layout_toEndOf="@+id/media_center"/>
         </RelativeLayout>

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="@dimen/dp20"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ScrollView
@@ -14,54 +14,54 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <RadioButton
-                android:textSize="@dimen/dp25"
+                android:textSize="25dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/videoinput_cvbs_ntsc"
-                android:padding="@dimen/dp5"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp40"
+                android:padding="5dp"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
                 android:text="CVBS_NTSC"/>
             <RadioButton
-                android:textSize="@dimen/dp25"
+                android:textSize="25dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/videoinput_cvbs_pal"
-                android:padding="@dimen/dp5"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp40"
+                android:padding="5dp"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
                 android:text="CVBS_PAL"/>
             <RadioButton
-                android:textSize="@dimen/dp25"
+                android:textSize="25dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/videoinput_cvbs_ahd_720n"
-                android:padding="@dimen/dp5"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp40"
+                android:padding="5dp"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
                 android:text="AHD_720_NTSC"/>
             <RadioButton
-                android:textSize="@dimen/dp25"
+                android:textSize="25dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/videoinput_cvbs_ahd_720p"
-                android:padding="@dimen/dp5"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp40"
+                android:padding="5dp"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
                 android:text="AHD_720_PAL"/>
             <RadioButton
-                android:textSize="@dimen/dp25"
+                android:textSize="25dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/videoinput_cvbs_ahd_1080n"
-                android:padding="@dimen/dp5"
+                android:padding="5dp"
                 android:visibility="gone"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp40"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
                 android:text="AHD_1080_NTSC"/>
             <RadioButton
-                android:textSize="@dimen/dp25"
+                android:textSize="25dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/videoinput_cvbs_ahd_1080p"
-                android:padding="@dimen/dp5"
+                android:padding="5dp"
                 android:visibility="gone"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp40"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
                 android:text="AHD_1080_PAL"/>
         </RadioGroup>
     </ScrollView>

@@ -10,11 +10,11 @@
         android:src="@drawable/_304_selector_panoramic"
         android:layout_centerInParent="true"/>
     <TextView
-        android:textSize="@dimen/dp24"
+        android:textSize="24dp"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginTop="16dp"
         android:text="@string/_304_main_title_panoramic"
         android:layout_below="@+id/iv_panoramic"
         android:layout_centerHorizontal="true"/>

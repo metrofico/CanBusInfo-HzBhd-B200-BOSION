@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/dp160"
-    android:layout_height="@dimen/dp68">
+    android:layout_width="160dp"
+    android:layout_height="68dp">
     <ImageButton
         android:id="@+id/ibt_item"
         android:background="@drawable/btn_normal_selector"
@@ -10,12 +10,12 @@
         android:button="@null"
         android:layout_centerInParent="true"/>
     <TextView
-        android:textSize="@dimen/dp25"
+        android:textSize="25dp"
         android:textColor="@color/white"
         android:gravity="center"
         android:id="@+id/tv_item"
-        android:paddingLeft="@dimen/dp10"
-        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:singleLine="true"

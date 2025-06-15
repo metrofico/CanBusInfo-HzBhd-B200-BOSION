@@ -23,7 +23,7 @@
             android:progressDrawable="@drawable/hzbhd_upgrade_seekbar"
             android:thumb="@null"/>
         <TextView
-            android:textSize="@dimen/dp30"
+            android:textSize="30dp"
             android:textColor="#ffffff"
             android:gravity="center_horizontal"
             android:id="@+id/lbl_progress_info"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"/>
         <TextView
-            android:textSize="@dimen/dp30"
+            android:textSize="30dp"
             android:textColor="#ffffff"
             android:gravity="center_horizontal"
             android:id="@+id/lbl_upgrade_title"

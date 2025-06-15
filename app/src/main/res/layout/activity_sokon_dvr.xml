@@ -22,15 +22,15 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:background="@drawable/ford_sync_icon_134"
-                        android:layout_width="@dimen/dp32"
-                        android:layout_height="@dimen/dp32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_margin="8dp"/>
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="@string/_436_DVR_MODE1"/>
                 </LinearLayout>
                 <LinearLayout
@@ -40,15 +40,15 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:background="@drawable/ford_sync_icon_73"
-                        android:layout_width="@dimen/dp32"
-                        android:layout_height="@dimen/dp32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_margin="8dp"/>
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="@string/_436_DVR_MODE2"/>
                 </LinearLayout>
                 <LinearLayout
@@ -58,15 +58,15 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:background="@drawable/ford_sync_icon_150"
-                        android:layout_width="@dimen/dp32"
-                        android:layout_height="@dimen/dp32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_margin="8dp"/>
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="@string/_436_DVR_MODE3"/>
                 </LinearLayout>
                 <LinearLayout
@@ -76,15 +76,15 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:background="@drawable/ford_sync_icon_132"
-                        android:layout_width="@dimen/dp32"
-                        android:layout_height="@dimen/dp32"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
                         android:layout_margin="8dp"/>
                     <TextView
-                        android:textSize="@dimen/dp22"
+                        android:textSize="22dp"
                         android:textColor="@color/white"
                         android:gravity="center_vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp60"
+                        android:layout_height="60dp"
                         android:text="@string/_436_DVR_MODE4"/>
                 </LinearLayout>
                 <View

@@ -5,32 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:textSize="@dimen/dp55"
+        android:textSize="55dp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:gravity="end|center_vertical"
         android:id="@+id/close_alert"
-        android:padding="@dimen/dp20"
-        android:layout_width="@dimen/dp100"
+        android:padding="20dp"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="×"
-        android:layout_marginEnd="@dimen/dp10"
+        android:layout_marginEnd="10dp"
         android:layout_alignParentEnd="true"/>
     <TextView
-        android:textSize="@dimen/dp48"
+        android:textSize="48dp"
         android:textColor="@android:color/holo_red_dark"
         android:id="@+id/tv_diagnosis_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp40"
+        android:layout_marginTop="40dp"
         android:text="发生严重故障，请立即停车"
-        android:layout_marginStart="@dimen/dp40"/>
+        android:layout_marginStart="40dp"/>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_diagnosis_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/tv_diagnosis_title"
-        android:layout_marginStart="@dimen/dp30"
+        android:layout_marginStart="30dp"
         android:layout_alignStart="@+id/tv_diagnosis_title"/>
 </RelativeLayout>

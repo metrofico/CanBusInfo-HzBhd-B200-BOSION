@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android" android:autoMirrored="true">
     <item
-        android:height="@dimen/dp272"
-        android:width="@dimen/dp206"
+        android:height="272dp"
+        android:width="206dp"
         android:drawable="@drawable/ford_pa_0x0b"/>
     <item
-        android:height="@dimen/dp46"
-        android:width="@dimen/dp46"
+        android:height="46dp"
+        android:width="46dp"
         android:drawable="@drawable/ford_pa_stop"
-        android:top="@dimen/dp100"
-        android:start="@dimen/dp206"/>
+        android:top="100dp"
+        android:start="206dp"/>
 </layer-list>

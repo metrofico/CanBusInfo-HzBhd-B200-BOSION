@@ -12,35 +12,35 @@
         android:background="@drawable/_304_radar_alarm_bg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp100"
+        android:layout_marginBottom="100dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dp60"
+        android:layout_marginStart="60dp"
         android:layout_toEndOf="@+id/radar_view">
         <ImageView
-            android:layout_width="@dimen/dp32"
-            android:layout_height="@dimen/dp28"
+            android:layout_width="32dp"
+            android:layout_height="28dp"
             android:src="@drawable/_304_radar_alarm_icon"
-            android:layout_marginStart="@dimen/dp20"/>
+            android:layout_marginStart="20dp"/>
         <TextView
-            android:textSize="@dimen/dp16"
+            android:textSize="16dp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="请检查周边环境，确保安全！"
-            android:layout_marginStart="@dimen/dp20"/>
+            android:layout_marginStart="20dp"/>
     </LinearLayout>
     <com.hzbhd.canbus.car_cus._304.view.ParkBottomView
         android:id="@+id/media_bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
     <Button
-        android:textSize="@dimen/dp20"
+        android:textSize="20dp"
         android:textColor="@color/white"
         android:id="@+id/btn_exit_avm"
         android:background="@drawable/_304_selector_radar_btn_empty"
-        android:layout_width="@dimen/dp66"
-        android:layout_height="@dimen/dp66"
-        android:layout_margin="@dimen/dp20"
+        android:layout_width="66dp"
+        android:layout_height="66dp"
+        android:layout_margin="20dp"
         android:text="EXIT"
         android:layout_alignParentEnd="true"/>
 </RelativeLayout>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="_206_hybrid_battery_value">@dimen/dp126</dimen>
-    <dimen name="_206_hybrid_iv_battery_width">@dimen/dp181</dimen>
-    <dimen name="_206_hybrid_iv_motor_height">@dimen/dp273</dimen>
-    <dimen name="_206_hybrid_iv_motor_width">@dimen/dp344</dimen>
-    <dimen name="_206_hybrid_rl_bg_mt">@dimen/dp70</dimen>
-    <dimen name="_206_hybrid_rl_bg_width">@dimen/dp608</dimen>
     <dimen name="track_view_cur_x_off">590px</dimen>
     <dimen name="track_view_x_off">110px</dimen>
     <dimen name="track_view_y_off">-180px</dimen>
     <dimen name="track_view_y_translation">50px</dimen>
-    <dimen name="video_height">@dimen/dp450</dimen>
+    <dimen name="_206_hybrid_battery_value">126dp</dimen>
+    <dimen name="_206_hybrid_iv_battery_width">181dp</dimen>
+    <dimen name="_206_hybrid_iv_motor_height">273dp</dimen>
+    <dimen name="_206_hybrid_iv_motor_width">344dp</dimen>
+    <dimen name="_206_hybrid_rl_bg_mt">70dp</dimen>
+    <dimen name="_206_hybrid_rl_bg_width">608dp</dimen>
+    <dimen name="video_height">450dp</dimen>
 </resources>

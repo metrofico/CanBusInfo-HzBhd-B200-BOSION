@@ -19,15 +19,15 @@
         <View
             android:id="@+id/lineView"
             android:background="@drawable/dz_radio_set_list_dividing_line"
-            android:layout_width="@dimen/dp1"
-            android:layout_height="@dimen/dp86"
-            android:layout_marginEnd="@dimen/dp32"/>
+            android:layout_width="1dp"
+            android:layout_height="86dp"
+            android:layout_marginEnd="32dp"/>
         <TextView
-            android:textSize="@dimen/dp32"
+            android:textSize="32dp"
             android:textColor="@color/white"
             android:ellipsize="end"
             android:id="@+id/tv_value"
-            android:layout_width="@dimen/dp200"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:singleLine="true"
@@ -37,6 +37,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/dz_radio_set_list_triangle"
-            android:layout_marginEnd="@dimen/dp32"/>
+            android:layout_marginEnd="32dp"/>
     </LinearLayout>
 </RelativeLayout>

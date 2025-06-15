@@ -8,25 +8,25 @@
         android:layout_height="@dimen/dp316"
         android:layout_centerInParent="true">
         <TextView
-            android:textSize="@dimen/dp32"
+            android:textSize="32dp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:paddingTop="@dimen/dp16"
+            android:paddingTop="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/green_net_system"
-            android:paddingStart="@dimen/dp32"/>
+            android:paddingStart="32dp"/>
         <TextView
-            android:textSize="@dimen/dp64"
+            android:textSize="64dp"
             android:textColor="@color/white"
             android:id="@+id/tv_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="×"
-            android:layout_marginEnd="@dimen/dp28"
+            android:layout_marginEnd="28dp"
             android:layout_alignParentEnd="true"/>
         <TextView
-            android:textSize="@dimen/dp30"
+            android:textSize="30dp"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:layout_width="wrap_content"

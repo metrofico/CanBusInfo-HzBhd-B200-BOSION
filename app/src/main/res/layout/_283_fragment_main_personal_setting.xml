@@ -9,24 +9,24 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/system_ui_height">
         <TextView
-            android:textSize="@dimen/dp32"
+            android:textSize="32dp"
             android:textColor="@color/white"
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_283_car_setting"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp32"/>
+            android:layout_marginStart="32dp"/>
         <ImageView
             android:id="@+id/iv_back"
-            android:paddingTop="@dimen/dp3"
-            android:paddingBottom="@dimen/dp3"
-            android:layout_width="@dimen/dp102"
-            android:layout_height="@dimen/dp56"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_width="102dp"
+            android:layout_height="56dp"
             android:src="@drawable/_283_main_setting_back"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:paddingEnd="@dimen/dp32"/>
+            android:paddingEnd="32dp"/>
     </RelativeLayout>
     <com.hzbhd.canbus.car_cus._283.view.carsetting.CarSettingCombinationView
         android:id="@+id/carSettingCombinationView"

@@ -13,12 +13,12 @@
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s1_title_txt"
@@ -28,24 +28,24 @@
                     android:text="@string/_436_DVR_Setting1"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s1_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s2_title_txt"
@@ -55,24 +55,24 @@
                     android:text="@string/_436_DVR_Setting2"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s2_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s3_title_txt"
@@ -82,24 +82,24 @@
                     android:text="@string/_436_DVR_Setting3"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s3_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s4_title_txt"
@@ -109,24 +109,24 @@
                     android:text="@string/_436_DVR_Setting4"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s4_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s5_title_txt"
@@ -136,24 +136,24 @@
                     android:text="@string/_436_DVR_Setting5"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s5_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s6_title_txt"
@@ -163,24 +163,24 @@
                     android:text="@string/_436_DVR_Setting6"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s6_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s7_title_txt"
@@ -190,24 +190,24 @@
                     android:text="@string/_436_DVR_Setting7"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s7_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp0">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="0dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s8_title_txt"
@@ -217,24 +217,24 @@
                     android:text="@string/_436_DVR_Setting8"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s8_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
             <LinearLayout
                 android:background="@drawable/_436_setting_item_frame"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp20"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginRight="@dimen/dp20"
-                android:layout_marginBottom="@dimen/dp20">
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp">
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center_vertical"
                     android:id="@+id/s9_title_txt"
@@ -244,13 +244,13 @@
                     android:text="@string/_436_DVR_Setting9"
                     android:layout_weight="1"/>
                 <TextView
-                    android:textSize="@dimen/dp22"
+                    android:textSize="22dp"
                     android:textColor="@color/white"
                     android:gravity="center"
                     android:id="@+id/s9_item_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_margin="@dimen/dp20"/>
+                    android:layout_margin="20dp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

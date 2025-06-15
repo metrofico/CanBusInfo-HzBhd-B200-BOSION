@@ -9,36 +9,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
-            android:textSize="@dimen/dp22"
+            android:textSize="22dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:id="@+id/item_txt1"
             android:background="#5c5c5c"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp60"/>
+            android:layout_height="60dp"/>
         <TextView
-            android:textSize="@dimen/dp22"
+            android:textSize="22dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:id="@+id/item_txt2"
             android:background="#454545"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp60"/>
+            android:layout_height="60dp"/>
         <TextView
-            android:textSize="@dimen/dp22"
+            android:textSize="22dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:id="@+id/item_txt3"
             android:background="#5c5c5c"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp60"/>
+            android:layout_height="60dp"/>
         <TextView
-            android:textSize="@dimen/dp22"
+            android:textSize="22dp"
             android:textColor="@color/white"
             android:gravity="center"
             android:id="@+id/item_txt4"
             android:background="#454545"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp60"/>
+            android:layout_height="60dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

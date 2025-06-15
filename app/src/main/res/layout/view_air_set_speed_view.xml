@@ -7,10 +7,10 @@
     <ImageButton
         android:id="@+id/ib_down"
         android:background="@drawable/air_wind_btn_small_selector"
-        android:layout_width="@dimen/dp62"
-        android:layout_height="@dimen/dp62"
-        android:layout_marginLeft="@dimen/dp10"
-        android:layout_marginRight="@dimen/dp10"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_centerVertical="true"/>
     <LinearLayout
         android:gravity="center"
@@ -28,10 +28,10 @@
     <ImageButton
         android:id="@+id/ib_up"
         android:background="@drawable/air_wind_btn_big_selector"
-        android:layout_width="@dimen/dp62"
-        android:layout_height="@dimen/dp62"
-        android:layout_marginLeft="@dimen/dp10"
-        android:layout_marginRight="@dimen/dp10"
+        android:layout_width="62dp"
+        android:layout_height="62dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:layout_centerVertical="true"
         android:layout_alignParentEnd="true"/>
 </RelativeLayout>

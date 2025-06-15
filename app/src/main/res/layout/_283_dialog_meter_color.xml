@@ -4,25 +4,25 @@
     android:layout_height="wrap_content">
     <com.hzbhd.canbus.car_cus._283.view.MeterColorView
         android:background="@drawable/_a6_meter_bg_small"
-        android:layout_width="@dimen/dp821"
-        android:layout_height="@dimen/dp469">
+        android:layout_width="821dp"
+        android:layout_height="469dp">
         <TextView
-            android:textSize="@dimen/dp24"
+            android:textSize="24dp"
             android:textColor="@color/white"
             android:id="@+id/tv1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginTop="24dp"
             android:text="@string/_283_meter_title_1"
-            android:layout_marginStart="@dimen/dp70"/>
+            android:layout_marginStart="70dp"/>
         <com.hzbhd.canbus.car_cus._283.view.MyRecyclerView
             android:id="@+id/recyclerView1"
-            android:layout_width="@dimen/dp676"
-            android:layout_height="@dimen/dp140"
-            android:layout_marginTop="@dimen/dp10"
+            android:layout_width="676dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/tv1"
             android:overScrollMode="never"
-            android:layout_marginStart="@dimen/dp45"/>
+            android:layout_marginStart="45dp"/>
         <LinearLayout
             android:gravity="center"
             android:orientation="vertical"
@@ -31,37 +31,37 @@
             android:layout_toRightOf="@+id/recyclerView1"
             android:layout_alignTop="@+id/recyclerView1"
             android:layout_alignBottom="@+id/recyclerView1"
-            android:layout_marginStart="@dimen/dp_8">
+            android:layout_marginStart="-8dp">
             <View
                 android:id="@+id/view1"
                 android:background="@drawable/_a6_meter_dot_b"
-                android:layout_width="@dimen/dp13"
-                android:layout_height="@dimen/dp13"/>
+                android:layout_width="13dp"
+                android:layout_height="13dp"/>
             <View
                 android:id="@+id/view2"
                 android:background="@drawable/_a6_meter_dot_g"
-                android:layout_width="@dimen/dp13"
-                android:layout_height="@dimen/dp13"
-                android:layout_marginTop="@dimen/dp16"/>
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="16dp"/>
         </LinearLayout>
         <TextView
-            android:textSize="@dimen/dp24"
+            android:textSize="24dp"
             android:textColor="@color/white"
             android:id="@+id/tv2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp256"
+            android:layout_marginTop="256dp"
             android:text="@string/_283_meter_title_2"
-            android:layout_marginStart="@dimen/dp70"/>
+            android:layout_marginStart="70dp"/>
         <androidx.recyclerview.widget.RecyclerView
             android:scrollbarThumbVertical="@color/_283_color_blue"
             android:id="@+id/recyclerView2"
             android:scrollbars="vertical"
-            android:layout_width="@dimen/dp676"
-            android:layout_height="@dimen/dp140"
-            android:layout_marginTop="@dimen/dp10"
+            android:layout_width="676dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="10dp"
             android:layout_below="@+id/tv2"
             android:fadeScrollbars="false"
-            android:layout_marginStart="@dimen/dp45"/>
+            android:layout_marginStart="45dp"/>
     </com.hzbhd.canbus.car_cus._283.view.MeterColorView>
 </RelativeLayout>

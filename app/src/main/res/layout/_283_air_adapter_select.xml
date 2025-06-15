@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp60">
+    android:layout_height="60dp">
     <ImageView
         android:id="@+id/selectView"
         android:visibility="invisible"
@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/dz_air_icon_hook"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/dp26"/>
+        android:layout_marginStart="26dp"/>
     <LinearLayout
         android:gravity="center_vertical"
         android:orientation="horizontal"
@@ -22,10 +22,10 @@
             android:layout_height="wrap_content"/>
         <View
             android:id="@+id/view"
-            android:layout_width="@dimen/dp26"
+            android:layout_width="26dp"
             android:layout_height="1dp"/>
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@drawable/_283_selector_textcolor"
             android:id="@+id/textView"
             android:layout_width="wrap_content"

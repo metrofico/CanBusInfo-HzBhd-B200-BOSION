@@ -5,71 +5,71 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:layout_width="@dimen/dp380"
-        android:layout_height="@dimen/dp544"
+        android:layout_width="380dp"
+        android:layout_height="544dp"
         android:layout_centerVertical="true"
         android:scaleX="@dimen/_299_radar_scale"
         android:scaleY="@dimen/_299_radar_scale">
         <ImageView
             android:id="@+id/front_radar_left"
-            android:layout_width="@dimen/dp100"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginTop="@dimen/dp79"
-            android:layout_marginStart="@dimen/dp57"/>
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="79dp"
+            android:layout_marginStart="57dp"/>
         <ImageView
             android:id="@+id/front_radar_left_mid"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginTop="@dimen/dp79"
-            android:layout_marginStart="@dimen/dp106"/>
+            android:layout_width="84dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="79dp"
+            android:layout_marginStart="106dp"/>
         <ImageView
             android:id="@+id/front_radar_right_mid"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginTop="@dimen/dp79"
-            android:layout_marginEnd="@dimen/dp106"
+            android:layout_width="84dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="79dp"
+            android:layout_marginEnd="106dp"
             android:layout_alignParentEnd="true"/>
         <ImageView
             android:id="@+id/front_radar_right"
-            android:layout_width="@dimen/dp100"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginTop="@dimen/dp79"
-            android:layout_marginEnd="@dimen/dp57"
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="79dp"
+            android:layout_marginEnd="57dp"
             android:layout_alignParentEnd="true"/>
         <ImageView
             android:id="@+id/rear_radar_left"
-            android:layout_width="@dimen/dp100"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginBottom="@dimen/dp100"
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/dp57"/>
+            android:layout_marginStart="57dp"/>
         <ImageView
             android:id="@+id/rear_radar_left_mid"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginBottom="@dimen/dp100"
+            android:layout_width="84dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/dp106"/>
+            android:layout_marginStart="106dp"/>
         <ImageView
             android:id="@+id/rear_radar_right_mid"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginBottom="@dimen/dp100"
+            android:layout_width="84dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/dp106"
+            android:layout_marginEnd="106dp"
             android:layout_alignParentEnd="true"/>
         <ImageView
             android:id="@+id/rear_radar_right"
-            android:layout_width="@dimen/dp100"
-            android:layout_height="@dimen/dp128"
-            android:layout_marginBottom="@dimen/dp100"
+            android:layout_width="100dp"
+            android:layout_height="128dp"
+            android:layout_marginBottom="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/dp57"
+            android:layout_marginEnd="57dp"
             android:layout_alignParentEnd="true"/>
         <ImageView
             android:id="@+id/imageCar"
-            android:layout_width="@dimen/dp321"
-            android:layout_height="@dimen/dp360"
+            android:layout_width="321dp"
+            android:layout_height="360dp"
             android:src="@drawable/dz_baom_img_car"
             android:layout_centerInParent="true"/>
     </RelativeLayout>

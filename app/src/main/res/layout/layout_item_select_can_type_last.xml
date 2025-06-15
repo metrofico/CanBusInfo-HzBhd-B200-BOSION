@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <TextView
-        android:textSize="@dimen/dp18"
+        android:textSize="18dp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:id="@+id/tv_0"
@@ -15,13 +15,13 @@
         android:layout_centerVertical="true"
         android:paddingStart="20dp"/>
     <TextView
-        android:textSize="@dimen/dp18"
+        android:textSize="18dp"
         android:textColor="@android:color/white"
         android:id="@+id/tv_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/dp30"
+        android:layout_marginStart="30dp"
         android:layout_toEndOf="@+id/tv_0"/>
     <ImageView
         android:layout_gravity="end"

@@ -12,8 +12,8 @@
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp10"
-        android:layout_marginTop="@dimen/dp10"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@+id/video_sur"
         app:layout_constraintTop_toTopOf="@+id/video_sur">
         <TextView
@@ -28,10 +28,10 @@
         <com.hzbhd.canbus.car_cus._436.view.childView.Breathe
             android:id="@+id/breathe"
             android:visibility="gone"
-            android:layout_width="@dimen/dp32"
-            android:layout_height="@dimen/dp32"
-            android:layout_marginLeft="@dimen/dp6"
-            android:layout_marginRight="@dimen/dp6"/>
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"/>
     </LinearLayout>
     <ImageButton
         android:id="@+id/show_hide_img"
@@ -47,8 +47,8 @@
         android:gravity="center_vertical"
         android:id="@+id/play_time_txt"
         android:layout_width="wrap_content"
-        android:layout_height="@dimen/dp60"
-        android:layout_marginTop="@dimen/dp10"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/linearLayout2"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -64,58 +64,58 @@
             android:layout_gravity="center"
             android:background="@drawable/_436_play_frame"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp62">
+            android:layout_height="62dp">
             <ImageButton
                 android:id="@+id/menu"
                 android:background="@drawable/_436_menu_pressed"
                 android:visibility="gone"
-                android:layout_width="@dimen/dp50"
-                android:layout_height="@dimen/dp50"
-                android:layout_marginLeft="@dimen/dp30"
-                android:layout_marginRight="@dimen/dp30"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
             <ImageButton
                 android:id="@+id/prev"
                 android:background="@drawable/_436_left_presssed"
-                android:layout_width="@dimen/dp50"
-                android:layout_height="@dimen/dp50"
-                android:layout_marginLeft="@dimen/dp30"
-                android:layout_marginRight="@dimen/dp30"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
             <ImageButton
                 android:id="@+id/ok"
                 android:background="@drawable/_436_ok_pressed"
-                android:layout_width="@dimen/dp50"
-                android:layout_height="@dimen/dp50"
-                android:layout_marginLeft="@dimen/dp30"
-                android:layout_marginRight="@dimen/dp30"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
             <ImageButton
                 android:id="@+id/next"
                 android:background="@drawable/_436_right_pressed"
-                android:layout_width="@dimen/dp50"
-                android:layout_height="@dimen/dp50"
-                android:layout_marginLeft="@dimen/dp30"
-                android:layout_marginRight="@dimen/dp30"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
         </LinearLayout>
         <LinearLayout
             android:gravity="center"
             android:layout_gravity="center"
             android:background="@drawable/_436_play_frame"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/dp62"
+            android:layout_height="62dp"
             android:layout_marginLeft="10dp">
             <ImageButton
                 android:id="@+id/mode"
                 android:background="@drawable/_436_mode_pressed"
-                android:layout_width="@dimen/dp50"
-                android:layout_height="@dimen/dp50"
-                android:layout_marginLeft="@dimen/dp30"
-                android:layout_marginRight="@dimen/dp30"/>
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp10"
-        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
         app:layout_constraintEnd_toEndOf="@+id/video_sur"
         app:layout_constraintTop_toTopOf="@+id/video_sur">
         <TextView

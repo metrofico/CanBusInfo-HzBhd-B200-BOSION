@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="_299_bottom_layout">@dimen/dp150</dimen>
-    <dimen name="_299_icon_height">@dimen/dp208</dimen>
-    <dimen name="_299_icon_height_big">@dimen/dp353</dimen>
-    <dimen name="_299_icon_width">@dimen/dp197</dimen>
-    <dimen name="_299_icon_width_big">@dimen/dp320</dimen>
-    <dimen name="_299_instrument_car_bottom">@dimen/dp190</dimen>
-    <dimen name="_299_instrument_margin_left_right">@dimen/dp29</dimen>
-    <dimen name="_299_instrument_margin_top_bottom">@dimen/dp138</dimen>
-    <dimen name="_299_instrument_size">@dimen/dp420</dimen>
-    <dimen name="_299_instrument_text_normal">@dimen/dp34</dimen>
-    <dimen name="_299_instrument_text_select">@dimen/dp54</dimen>
-    <dimen name="_299_instrument_tips_bottom">@dimen/dp130</dimen>
-    <dimen name="_299_instrument_tips_margin">@dimen/dp210</dimen>
     <dimen name="_299_radar_scale">1.3</dimen>
-    <dimen name="_299_text_bottom_padding">@dimen/dp32</dimen>
+    <dimen name="_299_bottom_layout">150dp</dimen>
+    <dimen name="_299_icon_height">208dp</dimen>
+    <dimen name="_299_icon_height_big">353dp</dimen>
+    <dimen name="_299_icon_width">197dp</dimen>
+    <dimen name="_299_icon_width_big">320dp</dimen>
+    <dimen name="_299_instrument_car_bottom">190dp</dimen>
+    <dimen name="_299_instrument_margin_left_right">29dp</dimen>
+    <dimen name="_299_instrument_margin_top_bottom">138dp</dimen>
+    <dimen name="_299_instrument_size">420dp</dimen>
+    <dimen name="_299_instrument_text_normal">34dp</dimen>
+    <dimen name="_299_instrument_text_select">54dp</dimen>
+    <dimen name="_299_instrument_tips_bottom">130dp</dimen>
+    <dimen name="_299_instrument_tips_margin">210dp</dimen>
+
+    <dimen name="_299_text_bottom_padding">32dp</dimen>
 </resources>

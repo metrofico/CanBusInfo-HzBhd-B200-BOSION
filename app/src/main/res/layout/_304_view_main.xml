@@ -8,7 +8,7 @@
         android:id="@+id/ll_top_titles"
         android:background="@drawable/_304_main_top_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp66"/>
+        android:layout_height="66dp"/>
     <RelativeLayout
         android:gravity="center"
         android:id="@+id/rl_contents"

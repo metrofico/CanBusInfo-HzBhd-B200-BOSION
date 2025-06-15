@@ -2,23 +2,23 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ll_layout"
     android:background="@color/transparent"
-    android:layout_marginTop="@dimen/dp70"
+    android:layout_marginTop="70dp"
     style="@style/TvSettingItemLayout">
     <TextView
         android:id="@+id/tv_icon"
-        android:layout_width="@dimen/dp116"
-        android:layout_height="@dimen/dp116"/>
+        android:layout_width="116dp"
+        android:layout_height="116dp"/>
     <TextView
         android:id="@+id/tv_title"
-        android:layout_marginTop="@dimen/dp20"
-        android:paddingStart="@dimen/dp10"
+        android:layout_marginTop="20dp"
+        android:paddingStart="10dp"
         android:layout_toEndOf="@+id/tv_icon"
         style="@style/TvSettingItemTitle"/>
     <TextView
         android:id="@+id/tv_value"
-        android:layout_marginTop="@dimen/dp6"
+        android:layout_marginTop="6dp"
         android:layout_below="@+id/tv_title"
-        android:paddingStart="@dimen/dp10"
+        android:paddingStart="10dp"
         android:layout_toEndOf="@+id/tv_icon"
         style="@style/TvSettingItemValue"/>
 </RelativeLayout>

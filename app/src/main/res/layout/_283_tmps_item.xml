@@ -3,22 +3,22 @@
     android:orientation="horizontal"
     android:id="@+id/itemLayout"
     android:background="@drawable/dz_tpms_set_images_dow_selection_box"
-    android:layout_width="@dimen/dp390"
-    android:layout_height="@dimen/dp56">
+    android:layout_width="390dp"
+    android:layout_height="56dp">
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/dp57"
-        android:layout_height="@dimen/dp46"
+        android:layout_width="57dp"
+        android:layout_height="46dp"
         android:src="@drawable/dz_tpms_set_images_standard"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/dp100"/>
+        android:layout_marginStart="100dp"/>
     <TextView
-        android:textSize="@dimen/dp24"
+        android:textSize="24dp"
         android:textColor="@color/white"
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_marginStart="@dimen/dp76"
+        android:layout_marginStart="76dp"
         android:layout_toEndOf="@+id/imageView"/>
 </RelativeLayout>

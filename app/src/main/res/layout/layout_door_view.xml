@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/rl_door"
-        android:layout_width="@dimen/dp266"
-        android:layout_height="@dimen/dp410"
+        android:layout_width="266dp"
+        android:layout_height="410dp"
         android:layout_centerVertical="true">
         <ImageView
             android:id="@+id/iv_car_body"
@@ -16,35 +16,35 @@
         <ImageView
             android:id="@+id/iv_left_front"
             android:background="@drawable/car_door_front_left_off"
-            android:layout_width="@dimen/dp79"
-            android:layout_height="@dimen/dp100"
-            android:layout_marginLeft="@dimen/dp1"
+            android:layout_width="79dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="1dp"
             android:layout_marginTop="@dimen/dp131"
             android:layout_alignParentLeft="true"/>
         <ImageView
             android:id="@+id/iv_left_rear"
             android:background="@drawable/car_door_rear_left_off"
-            android:layout_width="@dimen/dp79"
-            android:layout_height="@dimen/dp87"
-            android:layout_marginLeft="@dimen/dp3"
-            android:layout_marginTop="@dimen/dp_19"
+            android:layout_width="79dp"
+            android:layout_height="87dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginTop="-19dp"
             android:layout_below="@+id/iv_left_front"
             android:layout_alignParentLeft="true"/>
         <ImageView
             android:id="@+id/iv_right_front"
             android:background="@drawable/car_door_front_right_off"
-            android:layout_width="@dimen/dp79"
-            android:layout_height="@dimen/dp100"
+            android:layout_width="79dp"
+            android:layout_height="100dp"
             android:layout_marginTop="@dimen/dp133"
-            android:layout_marginRight="@dimen/dp1"
+            android:layout_marginRight="1dp"
             android:layout_alignParentRight="true"/>
         <ImageView
             android:id="@+id/iv_right_rear"
             android:background="@drawable/car_door_rear_right_off"
-            android:layout_width="@dimen/dp79"
-            android:layout_height="@dimen/dp87"
-            android:layout_marginTop="@dimen/dp_19"
-            android:layout_marginRight="@dimen/dp3"
+            android:layout_width="79dp"
+            android:layout_height="87dp"
+            android:layout_marginTop="-19dp"
+            android:layout_marginRight="3dp"
             android:layout_below="@+id/iv_right_front"
             android:layout_alignParentRight="true"/>
         <ImageView
@@ -52,28 +52,28 @@
             android:background="@drawable/car_door_front_hood"
             android:visibility="invisible"
             android:layout_width="@dimen/dp124"
-            android:layout_height="@dimen/dp66"
-            android:layout_marginTop="@dimen/dp38"
+            android:layout_height="66dp"
+            android:layout_marginTop="38dp"
             android:layout_centerHorizontal="true"/>
         <ImageView
             android:id="@+id/iv_back"
             android:background="@drawable/car_back_trunk"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp108"
-            android:layout_height="@dimen/dp38"
+            android:layout_width="108dp"
+            android:layout_height="38dp"
             android:layout_marginTop="@dimen/dp325"
             android:layout_centerHorizontal="true"/>
         <ImageView
             android:id="@+id/iv_sky_window"
             android:background="@drawable/car_door_skylight_off"
-            android:layout_width="@dimen/dp78"
-            android:layout_height="@dimen/dp70"
-            android:layout_marginTop="@dimen/dp209"
+            android:layout_width="78dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="209dp"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
     <LinearLayout
         android:orientation="vertical"
-        android:paddingRight="@dimen/dp20"
+        android:paddingRight="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@+id/rl_door"

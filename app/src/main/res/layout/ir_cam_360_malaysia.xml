@@ -7,8 +7,8 @@
     <ImageButton
         android:id="@+id/cam_360_pull_btn"
         android:background="@drawable/nissan_avm_selector"
-        android:layout_width="@dimen/dp82"
-        android:layout_height="@dimen/dp82"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
         android:src="@drawable/selector_bottom_xs_down"/>
     <LinearLayout
         android:orientation="horizontal"
@@ -33,23 +33,23 @@
                 <ImageButton
                     android:id="@+id/front_all"
                     android:background="@drawable/selector_front_all"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/rear_all"
                     android:background="@drawable/selector_rear_all"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/left_all"
                     android:background="@drawable/selector_left_all"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/right_all"
                     android:background="@drawable/selector_right_all"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -60,23 +60,23 @@
                 <ImageButton
                     android:id="@+id/front_only"
                     android:background="@drawable/selector_front"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/rear_only"
                     android:background="@drawable/selector_rear"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/left_only"
                     android:background="@drawable/selector_left"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/right_only"
                     android:background="@drawable/selector_right"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -87,18 +87,18 @@
                 <ImageButton
                     android:id="@+id/left_right_front_all"
                     android:background="@drawable/selector_all_front_left_right"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/four_region"
                     android:background="@drawable/selector_four_region"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
                 <ImageButton
                     android:id="@+id/left_right_rear_all"
                     android:background="@drawable/selector_all_rear_left_right"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"/>
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"/>
             </LinearLayout>
             <LinearLayout
                 android:orientation="horizontal"
@@ -110,14 +110,14 @@
                 <ImageButton
                     android:id="@+id/btn_exit"
                     android:background="@drawable/nissan_avm_selector"
-                    android:layout_width="@dimen/dp168"
-                    android:layout_height="@dimen/dp82"
+                    android:layout_width="168dp"
+                    android:layout_height="82dp"
                     android:src="@drawable/bottom_exit_n"/>
                 <ImageButton
                     android:id="@+id/btn_next"
                     android:background="@drawable/nissan_avm_selector"
-                    android:layout_width="@dimen/dp82"
-                    android:layout_height="@dimen/dp82"
+                    android:layout_width="82dp"
+                    android:layout_height="82dp"
                     android:src="@drawable/selector_bottom_xs_right"/>
             </LinearLayout>
         </FrameLayout>

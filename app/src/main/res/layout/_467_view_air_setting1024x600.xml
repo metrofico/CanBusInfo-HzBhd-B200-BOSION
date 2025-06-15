@@ -97,7 +97,7 @@
                     android:layout_height="wrap_content"
                     android:text=":"
                     android:inputType="number"
-                    android:layout_marginStart="@dimen/dp10"/>
+                    android:layout_marginStart="10dp"/>
                 <TextView
                     android:textSize="28px"
                     android:textColor="@color/black"
@@ -106,7 +106,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:inputType="number"
-                    android:layout_marginStart="@dimen/dp10"/>
+                    android:layout_marginStart="10dp"/>
             </LinearLayout>
             <TextView
                 android:textSize="26px"
@@ -170,13 +170,13 @@
         android:background="@color/white"
         android:visibility="gone"
         android:layout_width="560px"
-        android:layout_height="@dimen/dp294">
+        android:layout_height="294dp">
         <LinearLayout
             android:gravity="center_horizontal"
             android:layout_gravity="center"
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp200">
+            android:layout_height="200dp">
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
@@ -188,7 +188,7 @@
                     android:id="@+id/time_day"
                     android:background="@drawable/__439__kongt_shuchuk_3"
                     android:layout_width="@dimen/dp189"
-                    android:layout_height="@dimen/dp42"
+                    android:layout_height="42dp"
                     android:text="@string/_439_time_tobay"/>
                 <LinearLayout
                     android:orientation="vertical"
@@ -202,7 +202,7 @@
                         android:gravity="center"
                         android:id="@+id/time_today"
                         android:layout_width="@dimen/dp189"
-                        android:layout_height="@dimen/dp42"
+                        android:layout_height="42dp"
                         android:text="@string/_439_time_tobay"
                         bhd:n="@drawable/transparent"
                         bhd:p="@drawable/__439__kongt_shuchuk"
@@ -217,7 +217,7 @@
                         android:gravity="center"
                         android:id="@+id/time_tomorrow"
                         android:layout_width="@dimen/dp189"
-                        android:layout_height="@dimen/dp42"
+                        android:layout_height="42dp"
                         android:text="@string/_439_time_tomorrow"
                         bhd:n="@drawable/transparent"
                         bhd:p="@drawable/__439__kongt_shuchuk"
@@ -236,10 +236,10 @@
                 android:id="@+id/time_hour"
                 android:background="@drawable/__439__kongt_shuchuk"
                 android:layout_width="@dimen/dp94_5"
-                android:layout_height="@dimen/dp42"
+                android:layout_height="42dp"
                 android:hint="0-24H"
                 android:inputType="number"
-                android:layout_marginStart="@dimen/dp28"/>
+                android:layout_marginStart="28dp"/>
             <TextView
                 android:textSize="20px"
                 android:textColor="@color/black"
@@ -249,7 +249,7 @@
                 android:layout_height="wrap_content"
                 android:text=":"
                 android:inputType="number"
-                android:layout_marginStart="@dimen/dp7"/>
+                android:layout_marginStart="7dp"/>
             <EditText
                 android:textSize="20px"
                 android:textColor="@color/black"
@@ -258,18 +258,18 @@
                 android:id="@+id/time_minute"
                 android:background="@drawable/__439__kongt_shuchuk"
                 android:layout_width="@dimen/dp94_5"
-                android:layout_height="@dimen/dp42"
+                android:layout_height="42dp"
                 android:hint="0-60Min"
                 android:inputType="number"
-                android:layout_marginStart="@dimen/dp7"/>
+                android:layout_marginStart="7dp"/>
             <TextView
                 android:textSize="20px"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:id="@+id/setTime"
                 android:background="@drawable/__439__kongt_anjian"
-                android:layout_width="@dimen/dp100"
-                android:layout_height="@dimen/dp42"
+                android:layout_width="100dp"
+                android:layout_height="42dp"
                 android:layout_marginLeft="10px"
                 android:text="@string/_439_air_title_03"
                 android:layout_marginStart="20dp"/>

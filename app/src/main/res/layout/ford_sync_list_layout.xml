@@ -9,17 +9,17 @@
         android:orientation="horizontal"
         android:id="@+id/sync_top_icon"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp38"/>
+        android:layout_height="38dp"/>
     <com.hzbhd.canbus.view.SyncInfoListView
         android:orientation="vertical"
         android:id="@+id/ford_sync_list"
         android:layout_width="@dimen/dp479"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp5"/>
+        android:layout_marginTop="5dp"/>
     <com.hzbhd.canbus.view.SyncSoftKeyView
         android:orientation="horizontal"
         android:id="@+id/ford_sync_soft_key"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp74"
-        android:layout_margin="@dimen/dp10"/>
+        android:layout_height="74dp"
+        android:layout_margin="10dp"/>
 </LinearLayout>

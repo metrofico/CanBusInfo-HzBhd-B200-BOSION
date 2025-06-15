@@ -9,8 +9,8 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp0"
-            android:layout_margin="@dimen/dp10"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
             android:layout_weight="1">
             <LinearLayout
                 android:gravity="center_horizontal"
@@ -18,7 +18,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <TextView
-                    android:textSize="@dimen/dp24"
+                    android:textSize="24dp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
@@ -26,42 +26,42 @@
                     android:text="AUTO"
                     android:scaleX="0.7"/>
                 <TextView
-                    android:textSize="@dimen/dp36"
+                    android:textSize="36dp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginTop="-8dp"
                     android:text="| P |"
                     android:scaleX="0.7"
                     android:scaleY="1.2"/>
             </LinearLayout>
             <TextView
-                android:textSize="@dimen/dp32"
+                android:textSize="32dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:gravity="center_vertical"
                 android:background="@drawable/_81_bg_line"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp72"
-                android:layout_marginTop="@dimen/dp16"
+                android:layout_height="72dp"
+                android:layout_marginTop="16dp"
                 android:text="@string/_81_active_park"
-                android:paddingStart="@dimen/dp16"
-                android:layout_marginStart="@dimen/dp10"
-                android:layout_marginEnd="@dimen/dp16"/>
+                android:paddingStart="16dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"/>
         </LinearLayout>
         <RelativeLayout
             android:orientation="horizontal"
-            android:paddingTop="@dimen/dp20"
+            android:paddingTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp0"
+            android:layout_height="0dp"
             android:layout_weight="4"
-            android:paddingStart="@dimen/dp16">
+            android:paddingStart="16dp">
             <RelativeLayout
                 android:id="@+id/rl_left_image"
                 android:background="@drawable/_81_left_icon_bg"
-                android:layout_width="@dimen/dp304"
-                android:layout_height="@dimen/dp272">
+                android:layout_width="304dp"
+                android:layout_height="272dp">
                 <ImageView
                     android:id="@+id/iv_left_side"
                     android:layout_width="wrap_content"
@@ -73,18 +73,18 @@
                     android:layout_alignParentEnd="true"/>
             </RelativeLayout>
             <TextView
-                android:textSize="@dimen/dp28"
+                android:textSize="28dp"
                 android:textColor="@color/white"
                 android:id="@+id/tv_message"
-                android:paddingTop="@dimen/dp16"
+                android:paddingTop="16dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:paddingStart="@dimen/dp16"
+                android:paddingStart="16dp"
                 android:layout_toEndOf="@+id/rl_left_image"/>
         </RelativeLayout>
         <View
-            android:layout_width="@dimen/dp0"
-            android:layout_height="@dimen/dp0"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_weight="1"/>
     </LinearLayout>
     <LinearLayout
@@ -95,33 +95,33 @@
         android:layout_height="match_parent">
         <RelativeLayout
             android:background="@drawable/_81_alert_bg"
-            android:layout_width="@dimen/dp400"
-            android:layout_height="@dimen/dp300">
+            android:layout_width="400dp"
+            android:layout_height="300dp">
             <ImageView
                 android:id="@+id/iv_alert_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp32"
+                android:layout_marginTop="32dp"
                 android:src="@drawable/ic_parking_warning"
                 android:layout_centerHorizontal="true"/>
             <TextView
-                android:textSize="@dimen/dp32"
+                android:textSize="32dp"
                 android:textColor="@color/white"
                 android:id="@+id/tv_be_careful"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp8"
+                android:layout_marginTop="8dp"
                 android:text="@string/_81_be_careful"
                 android:layout_below="@+id/iv_alert_icon"
                 android:layout_centerHorizontal="true"/>
             <TextView
-                android:textSize="@dimen/dp28"
+                android:textSize="28dp"
                 android:textColor="@color/white"
                 android:gravity="center"
                 android:id="@+id/tv_alert_message"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dp16"
+                android:layout_marginTop="16dp"
                 android:layout_below="@+id/tv_be_careful"
                 android:layout_centerHorizontal="true"/>
         </RelativeLayout>

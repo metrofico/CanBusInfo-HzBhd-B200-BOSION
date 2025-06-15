@@ -3,7 +3,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:id="@+id/ll_color_set"
-    android:padding="@dimen/dp20"
+    android:padding="20dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <com.hzbhd.canbus.view.BcSettingSeekBarView

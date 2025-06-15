@@ -7,31 +7,31 @@
         android:gravity="center"
         android:orientation="vertical"
         android:background="@drawable/dz_bg_dianjiu"
-        android:layout_width="@dimen/dp700"
-        android:layout_height="@dimen/dp360"
-        android:layout_marginTop="@dimen/dp100"
-        android:layout_marginStart="@dimen/dp450">
+        android:layout_width="700dp"
+        android:layout_height="360dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="450dp">
         <LinearLayout
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:src="@drawable/dz_radar_bright_icon"/>
             <SeekBar
                 android:id="@+id/lightSeekBar"
-                android:layout_width="@dimen/dp396"
-                android:layout_height="@dimen/dp27"
+                android:layout_width="396dp"
+                android:layout_height="27dp"
                 android:max="70"
                 android:progressDrawable="@drawable/__283__eq_type_seekbar_style"
                 android:thumb="@drawable/__283__eq_type_thumb_style"
-                android:layout_marginStart="@dimen/dp32"
-                android:layout_marginEnd="@dimen/dp32"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:min="30"/>
             <TextView
-                android:textSize="@dimen/dp24"
+                android:textSize="24dp"
                 android:textColor="@color/white"
                 android:id="@+id/tv_light"
                 android:layout_width="wrap_content"
@@ -43,24 +43,24 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp32"
-            android:layout_marginBottom="@dimen/dp32">
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp">
             <ImageView
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:src="@drawable/dz_radar_contrast_icon"/>
             <SeekBar
                 android:id="@+id/contrastSeekBar"
-                android:layout_width="@dimen/dp396"
-                android:layout_height="@dimen/dp27"
+                android:layout_width="396dp"
+                android:layout_height="27dp"
                 android:max="70"
                 android:progressDrawable="@drawable/__283__eq_type_seekbar_style"
                 android:thumb="@drawable/__283__eq_type_thumb_style"
-                android:layout_marginStart="@dimen/dp32"
-                android:layout_marginEnd="@dimen/dp32"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:min="30"/>
             <TextView
-                android:textSize="@dimen/dp24"
+                android:textSize="24dp"
                 android:textColor="@color/white"
                 android:id="@+id/tv_contrast"
                 android:layout_width="wrap_content"
@@ -73,21 +73,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <ImageView
-                android:layout_width="@dimen/dp35"
-                android:layout_height="@dimen/dp35"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:src="@drawable/dz_radar_color_icon"/>
             <SeekBar
                 android:id="@+id/colorSeekBar"
-                android:layout_width="@dimen/dp396"
-                android:layout_height="@dimen/dp27"
+                android:layout_width="396dp"
+                android:layout_height="27dp"
                 android:max="70"
                 android:progressDrawable="@drawable/__283__eq_type_seekbar_style"
                 android:thumb="@drawable/__283__eq_type_thumb_style"
-                android:layout_marginStart="@dimen/dp32"
-                android:layout_marginEnd="@dimen/dp32"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"
                 android:min="30"/>
             <TextView
-                android:textSize="@dimen/dp24"
+                android:textSize="24dp"
                 android:textColor="@color/white"
                 android:id="@+id/tv_color"
                 android:layout_width="wrap_content"

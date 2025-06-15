@@ -4,46 +4,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:textSize="@dimen/dp46"
+        android:textSize="46dp"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp36"
+        android:layout_marginBottom="36dp"
         android:text="@string/_283_title_meter"
         android:layout_above="@+id/linearLayout"
         android:layout_centerHorizontal="true"/>
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/linearLayout"
-        android:layout_width="@dimen/dp576"
+        android:layout_width="576dp"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true">
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@drawable/_283_meter_custom_textcolor"
             android:gravity="center"
             android:id="@+id/functionTv1"
             android:background="@drawable/_283_meter_custom_bg"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp80"
+            android:layout_height="80dp"
             android:text="@string/_283_driving_pattern_5"/>
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:id="@+id/functionTv2"
             android:background="@drawable/_283_meter_custom_bg"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp80"
+            android:layout_height="80dp"
             android:text="@string/_283_meter_value_14"/>
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:id="@+id/functionTv3"
             android:background="@drawable/_283_meter_custom_bg"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp80"
+            android:layout_height="80dp"
             android:text="@string/_283_meter_value_15"/>
     </LinearLayout>
     <com.hzbhd.canbus.car_cus._283.view.MeterRotateView

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/src_list_alert_view"
-    android:layout_width="@dimen/dp276"
+    android:layout_width="276dp"
     android:layout_height="match_parent">
     <ScrollView
         android:theme="@style/scrollHeaderColor"
@@ -17,60 +17,60 @@
             android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp10"
-            android:layout_marginStart="@dimen/dp10">
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp">
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_music"
                 android:background="@drawable/__82__selector_src_icon_music"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp84"
+                android:layout_height="84dp"
                 android:text="@string/music"
                 android:singleLine="true"
                 android:onClick="iconClick"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_video"
                 android:background="@drawable/__82__selector_src_icon_video"
                 android:clickable="true"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp84"
+                android:layout_height="84dp"
                 android:text="@string/video"
                 android:singleLine="true"
                 android:onClick="iconClick"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_bt_music"
                 android:background="@drawable/__82__selector_src_icon_bt_music"
                 android:clickable="true"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp84"
+                android:layout_height="84dp"
                 android:text="@string/src_list_bt_music"
                 android:singleLine="true"
                 android:onClick="iconClick"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_auxin"
                 android:background="@drawable/__82__selector_src_icon_aux"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp84"
+                android:layout_height="84dp"
                 android:text="@string/auxin"
                 android:singleLine="true"
                 android:onClick="iconClick"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_link"
@@ -80,42 +80,42 @@
                 android:text="@string/link"
                 android:singleLine="true"
                 android:onClick="iconClick"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_dvr"
                 android:background="@drawable/__82__selector_src_icon_dvr"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp84"
+                android:layout_height="84dp"
                 android:text="@string/dvr"
                 android:singleLine="true"
                 android:onClick="iconClick"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_disc"
                 android:background="@drawable/__82__selector_src_icon_disc"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp84"
+                android:layout_height="84dp"
                 android:text="@string/disc"
                 android:singleLine="true"
                 android:onClick="iconClick"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
             <TextView
-                android:textSize="@dimen/dp31"
+                android:textSize="31dp"
                 android:textColor="#f7f1e6"
                 android:gravity="start|center_vertical"
                 android:id="@+id/src_list_tv"
                 android:background="@drawable/__82__selector_src_icon_tv"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp84"
+                android:layout_height="84dp"
                 android:text="@string/dtv"
                 android:singleLine="true"
-                android:paddingStart="@dimen/dp110"/>
+                android:paddingStart="110dp"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

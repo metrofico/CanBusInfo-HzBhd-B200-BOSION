@@ -14,30 +14,30 @@
         android:id="@+id/iv_right_blow_window"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp15"
-        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
         android:layout_alignTop="@+id/iv_right_seat"
         android:layout_alignRight="@+id/iv_right_seat"/>
     <ImageView
         android:id="@+id/iv_right_blow_auto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp15"
-        android:layout_marginRight="@dimen/dp10"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="10dp"
         android:layout_alignTop="@+id/iv_right_seat"
         android:layout_alignRight="@+id/iv_right_seat"/>
     <ImageView
         android:id="@+id/iv_right_blow_head"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp20"
+        android:layout_marginTop="20dp"
         android:layout_alignTop="@+id/iv_right_seat"
         android:layout_centerHorizontal="true"/>
     <ImageView
         android:id="@+id/iv_right_blow_foot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/dp15"
+        android:layout_marginRight="15dp"
         android:layout_alignRight="@+id/iv_right_seat"
         android:layout_centerVertical="true"/>
     <ImageView

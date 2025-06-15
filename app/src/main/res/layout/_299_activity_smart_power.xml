@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:textSize="@dimen/dp50"
+        android:textSize="50dp"
         android:textColor="@color/white"
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp50"
+        android:layout_marginTop="50dp"
         android:text="@string/_283_smart_title"
         android:layout_centerHorizontal="true"/>
     <RadioGroup
@@ -18,12 +18,12 @@
         android:orientation="horizontal"
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp300"
-        android:layout_marginTop="@dimen/dp16"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
         android:layout_below="@+id/tv_title"
         android:layout_centerHorizontal="true">
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -34,9 +34,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/_283_driving_pattern_8"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -47,9 +47,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/_283_driving_pattern_9"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -60,9 +60,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/_283_driving_pattern_1"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -73,9 +73,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/_283_driving_pattern_3"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -89,8 +89,8 @@
     </RadioGroup>
     <RelativeLayout
         android:id="@+id/bottomRelative"
-        android:layout_width="@dimen/dp908"
-        android:layout_height="@dimen/dp48"
+        android:layout_width="908dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="@dimen/_299_bottom_layout"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
@@ -107,14 +107,14 @@
         android:gravity="end|center_vertical"
         android:orientation="horizontal"
         android:id="@+id/bottomLinear"
-        android:layout_width="@dimen/dp949"
+        android:layout_width="949dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp10"
-        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
         <TextView
-            android:textSize="@dimen/dp20"
+            android:textSize="20dp"
             android:textColor="@color/white"
             android:id="@+id/tv_version"
             android:layout_width="wrap_content"
@@ -122,8 +122,8 @@
         <Button
             android:id="@+id/btn_chooseVersion"
             android:background="@drawable/selector_smart_button"
-            android:layout_width="@dimen/dp116"
-            android:layout_height="@dimen/dp47"
-            android:layout_marginStart="@dimen/dp16"/>
+            android:layout_width="116dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
 </RelativeLayout>

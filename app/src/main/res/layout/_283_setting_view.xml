@@ -10,6 +10,6 @@
     <TextView
         android:id="@+id/tv_value"
         android:layout_alignParentRight="true"
-        android:layout_marginEnd="@dimen/dp32"
+        android:layout_marginEnd="32dp"
         style="@style/_283_setting_item_title"/>
 </RelativeLayout>

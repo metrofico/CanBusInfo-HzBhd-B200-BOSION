@@ -4,50 +4,50 @@
     android:orientation="horizontal"
     android:background="@drawable/__82__ic_navi_bar_top_bg"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/dp84">
+    android:layout_height="84dp">
     <TextView
-        android:textSize="@dimen/dp40"
+        android:textSize="40dp"
         android:textColor="@color/ic_btn_text"
         android:gravity="center"
         android:id="@+id/ic_navi"
         android:background="@drawable/__82__selector_navigation_top"
         android:layout_width="@dimen/dp198"
-        android:layout_height="@dimen/dp84"
+        android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
-        android:textSize="@dimen/dp40"
+        android:textSize="40dp"
         android:textColor="@color/ic_btn_text"
         android:gravity="center"
         android:id="@+id/ic_radio"
         android:background="@drawable/__82__selector_radio_top"
         android:layout_width="@dimen/dp198"
-        android:layout_height="@dimen/dp84"
+        android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
-        android:textSize="@dimen/dp40"
+        android:textSize="40dp"
         android:textColor="@color/ic_btn_text"
         android:gravity="center"
         android:id="@+id/ic_phone"
         android:background="@drawable/__82__selector_bluetooth_top"
         android:layout_width="@dimen/dp198"
-        android:layout_height="@dimen/dp84"
+        android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
-        android:textSize="@dimen/dp40"
+        android:textSize="40dp"
         android:textColor="@color/ic_btn_text"
         android:gravity="center"
         android:id="@+id/ic_media"
         android:background="@drawable/__82__selector_mmx_top"
         android:layout_width="@dimen/dp198"
-        android:layout_height="@dimen/dp84"
+        android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
-        android:textSize="@dimen/dp40"
+        android:textSize="40dp"
         android:textColor="@color/ic_btn_text"
         android:gravity="center"
         android:id="@+id/ic_setting"
         android:background="@drawable/__82__selector_set_top"
         android:layout_width="@dimen/dp198"
-        android:layout_height="@dimen/dp84"
+        android:layout_height="84dp"
         android:singleLine="true"/>
 </LinearLayout>

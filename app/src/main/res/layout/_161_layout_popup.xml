@@ -4,33 +4,33 @@
     android:layout_height="wrap_content">
     <RelativeLayout
         android:background="@drawable/_161_alert_bg"
-        android:layout_width="@dimen/dp560"
-        android:layout_height="@dimen/dp322">
+        android:layout_width="560dp"
+        android:layout_height="322dp">
         <ImageButton
             android:id="@+id/ib_close"
             android:background="@android:color/transparent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp16"
+            android:layout_margin="16dp"
             android:src="@drawable/selector_button_close"
             android:layout_alignParentEnd="true"/>
         <ImageView
             android:id="@+id/iv_alert_icon"
-            android:layout_width="@dimen/dp102"
-            android:layout_height="@dimen/dp102"
-            android:layout_marginTop="@dimen/dp80"
+            android:layout_width="102dp"
+            android:layout_height="102dp"
+            android:layout_marginTop="80dp"
             android:layout_centerHorizontal="true"/>
         <TextView
-            android:textSize="@dimen/dp24"
+            android:textSize="24dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:id="@+id/tv_alert_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginTop="16dp"
             android:layout_below="@+id/iv_alert_icon"
             android:layout_centerHorizontal="true"
-            android:paddingStart="@dimen/dp32"
-            android:paddingEnd="@dimen/dp32"/>
+            android:paddingStart="32dp"
+            android:paddingEnd="32dp"/>
     </RelativeLayout>
 </RelativeLayout>

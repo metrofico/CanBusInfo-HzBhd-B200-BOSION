@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="@dimen/dp101"
-    android:layout_height="@dimen/dp61">
+    android:layout_width="101dp"
+    android:layout_height="61dp">
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="@dimen/dp96"
-        android:layout_height="@dimen/dp56"
-        android:layout_marginTop="@dimen/dp10"
-        android:layout_marginBottom="@dimen/dp10"
+        android:layout_width="96dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_centerInParent="true"
-        android:layout_marginEnd="@dimen/dp20"/>
+        android:layout_marginEnd="20dp"/>
     <RelativeLayout
         android:id="@+id/itemLayout"
         android:background="@drawable/_a6_select_color"
-        android:layout_width="@dimen/dp101"
-        android:layout_height="@dimen/dp61"
+        android:layout_width="101dp"
+        android:layout_height="61dp"
         android:layout_centerInParent="true"/>
 </RelativeLayout>

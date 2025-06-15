@@ -7,16 +7,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
     <Button
-        android:textSize="@dimen/dp20"
+        android:textSize="20dp"
         android:textColor="@color/white"
         android:id="@+id/monitor_front_camera"
         android:background="@drawable/camera_ico_n01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="前置摄像头"
-        android:paddingStart="@dimen/dp50"/>
+        android:paddingStart="50dp"/>
     <Button
-        android:textSize="@dimen/dp20"
+        android:textSize="20dp"
         android:textColor="@color/white"
         android:id="@+id/monitor_center_camera"
         android:background="@drawable/camera_ico_n01"
@@ -24,9 +24,9 @@
         android:layout_height="wrap_content"
         android:text="中置摄像头"
         android:layout_toRightOf="@+id/monitor_front_camera"
-        android:paddingStart="@dimen/dp50"
-        android:layout_marginStart="@dimen/dp32"
-        android:layout_marginEnd="@dimen/dp32"/>
+        android:paddingStart="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"/>
     <Button
         android:id="@+id/monitor_back_camera"
         android:visibility="gone"

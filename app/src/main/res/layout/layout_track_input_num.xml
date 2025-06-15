@@ -7,7 +7,7 @@
     android:paddingEnd="@dimen/track_layout_padding"
     style="@android:style/Theme.Material">
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_1"
         android:visibility="gone"
@@ -16,7 +16,7 @@
         android:text="1"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_2"
         android:visibility="gone"
@@ -25,7 +25,7 @@
         android:text="2"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_3"
         android:visibility="gone"
@@ -34,7 +34,7 @@
         android:text="3"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_4"
         android:visibility="gone"
@@ -43,7 +43,7 @@
         android:text="4"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_5"
         android:visibility="gone"
@@ -52,7 +52,7 @@
         android:text="5"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_6"
         android:visibility="gone"
@@ -61,7 +61,7 @@
         android:text="6"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_7"
         android:visibility="gone"
@@ -70,7 +70,7 @@
         android:text="7"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_8"
         android:visibility="gone"
@@ -79,7 +79,7 @@
         android:text="8"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_9"
         android:visibility="gone"
@@ -88,7 +88,7 @@
         android:text="9"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_0"
         android:visibility="gone"
@@ -97,7 +97,7 @@
         android:text="0"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:id="@+id/layout_input_num_cut"
@@ -106,7 +106,7 @@
         android:text="-"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:textColor="@android:color/white"
         android:gravity="center"
         android:id="@+id/layout_input_num_add"
@@ -115,7 +115,7 @@
         android:text="+"
         android:layout_weight="1"/>
     <Button
-        android:textSize="@dimen/dp30"
+        android:textSize="30dp"
         android:gravity="center"
         android:id="@+id/layout_input_num_del"
         android:visibility="gone"

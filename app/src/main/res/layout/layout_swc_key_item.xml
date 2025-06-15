@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:background="@drawable/selector_swc_key_item_bg"
-    android:layout_width="@dimen/dp129"
-    android:layout_height="@dimen/dp93">
+    android:layout_width="129dp"
+    android:layout_height="93dp">
     <LinearLayout
         android:gravity="center_horizontal"
         android:id="@+id/ll_key_icons"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="@dimen/dp4"
+        android:layout_marginBottom="4dp"
         android:layout_above="@+id/ll_key_names">
         <ImageView
             android:id="@+id/iv_short_icon"
@@ -34,10 +34,10 @@
         android:id="@+id/ll_key_names"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="@dimen/dp25"
+        android:minHeight="25dp"
         android:layout_alignParentBottom="true">
         <TextView
-            android:textSize="@dimen/dp13"
+            android:textSize="13dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:id="@+id/tv_short_name"
@@ -45,7 +45,7 @@
             android:layout_height="wrap_content"
             android:text="Home"/>
         <TextView
-            android:textSize="@dimen/dp13"
+            android:textSize="13dp"
             android:textColor="@android:color/white"
             android:gravity="center"
             android:id="@+id/tv_long_name"

@@ -11,48 +11,48 @@
         android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp56"
+        android:layout_marginBottom="56dp"
         android:src="@drawable/_283_air_clean_tips"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dp32"/>
+        android:layout_marginStart="32dp"/>
     <ImageView
         android:id="@+id/iv_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp134"
-        android:layout_marginStart="@dimen/dp270"/>
+        android:layout_marginTop="134dp"
+        android:layout_marginStart="270dp"/>
     <TextView
-        android:textSize="@dimen/dp32"
+        android:textSize="32dp"
         android:textColor="@color/white"
         android:id="@+id/tv_tips"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp56"
+        android:layout_marginBottom="56dp"
         android:text="@string/_283_air_clean_tips1"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="@dimen/dp120"
-        android:layout_marginEnd="@dimen/dp120"/>
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"/>
     <RelativeLayout
         android:background="@drawable/dz_vehicle_information_top_bg"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp56">
+        android:layout_height="56dp">
         <TextView
-            android:textSize="@dimen/dp32"
+            android:textSize="32dp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_283_air_clean_title"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp32"/>
+            android:layout_marginStart="32dp"/>
         <RelativeLayout
             android:orientation="horizontal"
-            android:paddingTop="@dimen/dp5"
-            android:paddingBottom="@dimen/dp5"
-            android:layout_width="@dimen/dp250"
-            android:layout_height="@dimen/dp56"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_width="250dp"
+            android:layout_height="56dp"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="@dimen/dp32"
+            android:layout_marginEnd="32dp"
             android:layout_toStartOf="@+id/iv_back">
             <ImageView
                 android:background="@drawable/dz_air_purification_icon_long_n"
@@ -61,18 +61,18 @@
             <ImageView
                 android:id="@+id/iv_click_isSelect"
                 android:background="@drawable/_283_air_clean_start"
-                android:layout_width="@dimen/dp300"
-                android:layout_height="@dimen/dp50"/>
+                android:layout_width="300dp"
+                android:layout_height="50dp"/>
             <ImageView
                 android:id="@+id/tv_isSelect"
-                android:layout_width="@dimen/dp32"
-                android:layout_height="@dimen/dp29"
+                android:layout_width="32dp"
+                android:layout_height="19dp"
                 android:src="@drawable/dz_radio_set_list_not_selected"
                 android:layout_centerVertical="true"
-                android:layout_marginStart="@dimen/dp32"
-                android:layout_marginEnd="@dimen/dp32"/>
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"/>
             <TextView
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textColor="@color/white"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -82,13 +82,13 @@
         </RelativeLayout>
         <ImageView
             android:id="@+id/iv_back"
-            android:paddingTop="@dimen/dp3"
-            android:paddingBottom="@dimen/dp3"
-            android:layout_width="@dimen/dp102"
-            android:layout_height="@dimen/dp56"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_width="102dp"
+            android:layout_height="56dp"
             android:src="@drawable/_283_main_setting_back"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:paddingEnd="@dimen/dp32"/>
+            android:paddingEnd="32dp"/>
     </RelativeLayout>
 </RelativeLayout>

@@ -8,7 +8,7 @@
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp15"
+        android:layout_marginTop="15dp"
         android:src="@drawable/selector_hide_btn"
         android:layout_toRightOf="@+id/radar_small_screen"
         android:layout_alignTop="@+id/radar_small_screen"/>
@@ -18,7 +18,7 @@
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp30"
+        android:layout_marginTop="30dp"
         android:src="@drawable/selector_pull_btn"
         android:layout_alignTop="@+id/radar_small_screen"
         android:layout_alignParentLeft="true"/>
@@ -28,7 +28,7 @@
         android:visibility="invisible"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginBottom="15dp"
         android:src="@drawable/selector_full_screen_btn"
         android:layout_toRightOf="@+id/radar_small_screen"
         android:layout_alignBottom="@+id/radar_small_screen"/>
@@ -51,7 +51,7 @@
             android:id="@+id/radar_small_car"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp120"
+            android:layout_marginTop="120dp"
             android:src="@drawable/__b1__radar_small_car"
             android:layout_centerHorizontal="true"/>
         <View
@@ -80,14 +80,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_front_radar_left_small_probe"
-            android:layout_marginRight="@dimen/dp51"
+            android:layout_marginRight="51dp"
             android:layout_toLeftOf="@+id/v_center_line"/>
         <ImageView
             android:id="@+id/front_radar_left_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_front_radar_left_small"
-            android:layout_marginRight="@dimen/dp24"
+            android:layout_marginRight="24dp"
             android:src="@drawable/front_radar_left_small_0"
             android:layout_toLeftOf="@+id/v_center_line"/>
         <ImageView
@@ -108,7 +108,7 @@
             android:id="@+id/front_radar_right_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp26"
+            android:layout_marginLeft="26dp"
             android:layout_marginTop="@dimen/margin_top_front_radar_right_small"
             android:src="@drawable/front_radar_right_small_0"
             android:layout_toRightOf="@+id/v_center_line"/>
@@ -116,7 +116,7 @@
             android:id="@+id/front_radar_right_small_probe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp50"
+            android:layout_marginLeft="50dp"
             android:layout_marginTop="@dimen/margin_top_front_radar_right_small_probe"
             android:layout_toRightOf="@+id/v_center_line"/>
         <LinearLayout
@@ -140,14 +140,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_back_radar_left_probe_small"
-            android:layout_marginRight="@dimen/dp48"
+            android:layout_marginRight="48dp"
             android:layout_toLeftOf="@+id/v_center_line"/>
         <ImageView
             android:id="@+id/back_radar_left_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_back_radar_left_small"
-            android:layout_marginRight="@dimen/dp19"
+            android:layout_marginRight="19dp"
             android:src="@drawable/back_radar_left_small_0"
             android:layout_toLeftOf="@+id/v_center_line"/>
         <ImageView
@@ -168,7 +168,7 @@
             android:id="@+id/back_radar_right_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp21"
+            android:layout_marginLeft="21dp"
             android:layout_marginTop="@dimen/margin_top_back_radar_right_small"
             android:src="@drawable/back_radar_right_small_0"
             android:layout_toRightOf="@+id/v_center_line"/>
@@ -176,37 +176,37 @@
             android:id="@+id/back_radar_right_probe_small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp45"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="@dimen/margin_top_back_radar_right_probe_small"
             android:layout_toRightOf="@+id/v_center_line"/>
         <ImageView
             android:id="@+id/left_radar_front_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toLeftOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp10"/>
+            android:translationX="10dp"/>
         <ImageView
             android:id="@+id/left_radar_front_mid_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toLeftOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp10"/>
+            android:translationX="10dp"/>
         <ImageView
             android:id="@+id/left_radar_rear_mid_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toLeftOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp10"/>
+            android:translationX="10dp"/>
         <ImageView
             android:id="@+id/left_radar_rear_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toLeftOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp10"/>
+            android:translationX="10dp"/>
         <LinearLayout
             android:gravity="center_horizontal"
             android:orientation="vertical"
@@ -231,32 +231,32 @@
         </LinearLayout>
         <ImageView
             android:id="@+id/right_radar_front_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toRightOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp_10"/>
+            android:translationX="-10dp"/>
         <ImageView
             android:id="@+id/right_radar_front_mid_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toRightOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp_10"/>
+            android:translationX="-10dp"/>
         <ImageView
             android:id="@+id/right_radar_rear_mid_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toRightOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp_10"/>
+            android:translationX="-10dp"/>
         <ImageView
             android:id="@+id/right_radar_rear_small"
-            android:layout_width="@dimen/dp73"
-            android:layout_height="@dimen/dp288"
+            android:layout_width="73dp"
+            android:layout_height="288dp"
             android:layout_toRightOf="@+id/radar_small_car"
             android:layout_centerVertical="true"
-            android:translationX="@dimen/dp_10"/>
+            android:translationX="-10dp"/>
         <LinearLayout
             android:gravity="center_horizontal"
             android:orientation="vertical"

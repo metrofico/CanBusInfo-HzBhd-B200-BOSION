@@ -8,10 +8,10 @@
         android:background="@drawable/list_top_img"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingStart="@dimen/dp20"
-        android:paddingEnd="@dimen/dp20">
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp">
         <TextView
-            android:textSize="@dimen/dp21"
+            android:textSize="21dp"
             android:textStyle="bold"
             android:textColor="#31b4e8"
             android:id="@+id/tv_selected_title"
@@ -20,14 +20,14 @@
             android:text="@string/selected_protocol"
             android:layout_centerVertical="true"/>
         <TextView
-            android:textSize="@dimen/dp21"
+            android:textSize="21dp"
             android:textStyle="bold"
             android:textColor="@color/white"
             android:id="@+id/tv_selected"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginStart="@dimen/dp10"
+            android:layout_marginStart="10dp"
             android:layout_toEndOf="@+id/tv_selected_title"/>
     </RelativeLayout>
     <View

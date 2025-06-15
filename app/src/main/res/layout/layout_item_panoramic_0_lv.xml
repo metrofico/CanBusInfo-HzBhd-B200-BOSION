@@ -2,15 +2,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ll_layout"
     android:background="@drawable/selector_right_btn_bg"
-    android:layout_width="@dimen/dp199"
-    android:layout_height="@dimen/dp54">
+    android:layout_width="199dp"
+    android:layout_height="54dp">
     <TextView
-        android:textSize="@dimen/dp20"
+        android:textSize="20dp"
         android:textColor="@color/white"
         android:gravity="center"
         android:id="@+id/tv_text"
-        android:paddingLeft="@dimen/dp10"
-        android:paddingRight="@dimen/dp10"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:singleLine="true"/>

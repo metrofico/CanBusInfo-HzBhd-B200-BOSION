@@ -5,42 +5,42 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp290"
+        android:layout_marginTop="290dp"
         android:src="@drawable/dz_driv_blue_dot"/>
     <LinearLayout
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        android:layout_width="@dimen/dp200"
-        android:layout_height="@dimen/dp300"
-        android:layout_marginTop="@dimen/dp40"
-        android:layout_marginStart="@dimen/dp60">
+        android:layout_width="200dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="60dp">
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_283_hybrid_model_title_1"/>
         <ImageView
-            android:layout_width="@dimen/dp200"
-            android:layout_height="@dimen/dp2"
-            android:layout_marginTop="@dimen/dp5"
-            android:layout_marginBottom="@dimen/dp20"
+            android:layout_width="200dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp"
             android:src="@drawable/dz_driving_mode_line_short"/>
         <RelativeLayout
             android:id="@+id/mode1"
-            android:layout_width="@dimen/dp120"
-            android:layout_height="@dimen/dp100">
+            android:layout_width="120dp"
+            android:layout_height="100dp">
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/_283_hybrid_mode_1"/>
             <TextView
-                android:textSize="@dimen/dp12"
+                android:textSize="12dp"
                 android:textColor="@drawable/_283_driving_pattern_textcolor"
                 android:gravity="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dp10"
+                android:layout_marginBottom="10dp"
                 android:text="@string/_283_hybrid_model_1"
                 android:layout_alignParentBottom="true"/>
         </RelativeLayout>
@@ -48,21 +48,21 @@
     <LinearLayout
         android:gravity="center"
         android:orientation="vertical"
-        android:layout_width="@dimen/dp600"
-        android:layout_height="@dimen/dp300"
-        android:layout_marginTop="@dimen/dp40"
-        android:layout_marginEnd="@dimen/dp60"
+        android:layout_width="600dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="60dp"
         android:layout_alignParentEnd="true">
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/_283_hybrid_model_title_2"/>
         <ImageView
-            android:layout_width="@dimen/dp707"
-            android:layout_height="@dimen/dp2"
-            android:layout_marginTop="@dimen/dp5"
+            android:layout_width="707dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="5dp"
             android:src="@drawable/dz_driving_mode_line_long"/>
         <LinearLayout
             android:gravity="center_horizontal"
@@ -71,60 +71,60 @@
             android:layout_height="match_parent">
             <RelativeLayout
                 android:id="@+id/mode2"
-                android:layout_width="@dimen/dp120"
-                android:layout_height="@dimen/dp100"
-                android:layout_marginTop="@dimen/dp20">
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/_283_hybrid_mode_2"/>
                 <TextView
-                    android:textSize="@dimen/dp12"
+                    android:textSize="12dp"
                     android:textColor="@drawable/_283_driving_pattern_textcolor"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/_283_hybrid_mode_2"
                     android:layout_alignParentBottom="true"/>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/mode3"
-                android:layout_width="@dimen/dp120"
-                android:layout_height="@dimen/dp100"
-                android:layout_marginTop="@dimen/dp20"
-                android:layout_marginStart="@dimen/dp50"
-                android:layout_marginEnd="@dimen/dp50">
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="50dp"
+                android:layout_marginEnd="50dp">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/_283_hybrid_mode_3"/>
                 <TextView
-                    android:textSize="@dimen/dp12"
+                    android:textSize="12dp"
                     android:textColor="@drawable/_283_driving_pattern_textcolor"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/_283_hybrid_model_3"
                     android:layout_alignParentBottom="true"/>
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/mode4"
-                android:layout_width="@dimen/dp120"
-                android:layout_height="@dimen/dp100"
-                android:layout_marginTop="@dimen/dp20">
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="20dp">
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/_283_hybrid_mode_4"/>
                 <TextView
-                    android:textSize="@dimen/dp12"
+                    android:textSize="12dp"
                     android:textColor="@drawable/_283_driving_pattern_textcolor"
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dp10"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/_283_hybrid_model_4"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"/>
@@ -132,11 +132,11 @@
         </LinearLayout>
     </LinearLayout>
     <TextView
-        android:textSize="@dimen/dp22"
+        android:textSize="22dp"
         android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp42"
+        android:layout_marginBottom="42dp"
         android:text="@string/_283_hybrid_mode_tips"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"/>

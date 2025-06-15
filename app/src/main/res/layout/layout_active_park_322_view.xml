@@ -10,15 +10,15 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/dp10">
+            android:layout_margin="10dp">
             <LinearLayout
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/dp8">
+                android:layout_marginBottom="8dp">
                 <TextView
-                    android:textSize="@dimen/dp24"
+                    android:textSize="24dp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
@@ -26,18 +26,18 @@
                     android:text="AUTO"
                     android:scaleX="0.7"/>
                 <TextView
-                    android:textSize="@dimen/dp36"
+                    android:textSize="36dp"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginTop="-8dp"
                     android:text="| P |"
                     android:scaleX="0.7"
                     android:scaleY="1.2"/>
             </LinearLayout>
             <TextView
-                android:textSize="@dimen/dp32"
+                android:textSize="32dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:gravity="center_vertical"
@@ -45,10 +45,10 @@
                 android:id="@+id/tv_park_type"
                 android:background="@drawable/_81_bg_line"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp72"
-                android:paddingStart="@dimen/dp16"
-                android:layout_marginStart="@dimen/dp10"
-                android:layout_marginEnd="@dimen/dp16"/>
+                android:layout_height="72dp"
+                android:paddingStart="16dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="16dp"/>
         </LinearLayout>
         <LinearLayout
             android:orientation="horizontal"
@@ -56,195 +56,195 @@
             android:layout_height="match_parent">
             <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="@dimen/dp410"
+                android:layout_width="410dp"
                 android:layout_height="match_parent">
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:gravity="center_horizontal"
                     android:id="@+id/tv_message_1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp96"/>
+                    android:layout_marginTop="96dp"/>
                 <TextView
-                    android:textSize="@dimen/dp28"
+                    android:textSize="28dp"
                     android:textColor="@color/white"
                     android:gravity="center_horizontal"
                     android:id="@+id/tv_message_2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp48"/>
+                    android:layout_marginTop="48dp"/>
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
                     <LinearLayout
                         android:gravity="center"
                         android:id="@+id/ll_park_type_btns"
-                        android:paddingBottom="@dimen/dp32"
+                        android:paddingBottom="32dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_alignParentBottom="true">
                         <TextView
-                            android:textSize="@dimen/dp16"
+                            android:textSize="16dp"
                             android:gravity="center"
                             android:id="@+id/btn_parallel_park"
                             android:background="@drawable/_322_selector_pa_btn_bg"
-                            android:layout_width="@dimen/dp96"
-                            android:layout_height="@dimen/dp54"
+                            android:layout_width="96dp"
+                            android:layout_height="54dp"
                             android:text="@string/_322_parallel_parking"/>
                         <View
-                            android:layout_width="@dimen/dp3"
-                            android:layout_height="@dimen/dp0"/>
+                            android:layout_width="3dp"
+                            android:layout_height="0dp"/>
                         <TextView
-                            android:textSize="@dimen/dp16"
+                            android:textSize="16dp"
                             android:gravity="center"
                             android:id="@+id/btn_vertical_park"
                             android:background="@drawable/_322_selector_pa_btn_bg"
-                            android:layout_width="@dimen/dp96"
-                            android:layout_height="@dimen/dp54"
+                            android:layout_width="96dp"
+                            android:layout_height="54dp"
                             android:text="@string/_322_vertical_parking"/>
                         <View
-                            android:layout_width="@dimen/dp3"
-                            android:layout_height="@dimen/dp0"/>
+                            android:layout_width="3dp"
+                            android:layout_height="0dp"/>
                         <TextView
-                            android:textSize="@dimen/dp16"
+                            android:textSize="16dp"
                             android:gravity="center"
                             android:id="@+id/btn_parallel_park_out"
                             android:background="@drawable/_322_selector_pa_btn_bg"
-                            android:layout_width="@dimen/dp96"
-                            android:layout_height="@dimen/dp54"
+                            android:layout_width="96dp"
+                            android:layout_height="54dp"
                             android:text="@string/_322_parallel_parking_out"/>
                         <View
-                            android:layout_width="@dimen/dp3"
-                            android:layout_height="@dimen/dp0"/>
+                            android:layout_width="3dp"
+                            android:layout_height="0dp"/>
                         <TextView
-                            android:textSize="@dimen/dp16"
+                            android:textSize="16dp"
                             android:gravity="center"
                             android:id="@+id/btn_close"
                             android:background="@drawable/_322_selector_pa_btn_bg"
-                            android:layout_width="@dimen/dp96"
-                            android:layout_height="@dimen/dp54"
+                            android:layout_width="96dp"
+                            android:layout_height="54dp"
                             android:text="@string/close"/>
                     </LinearLayout>
                 </RelativeLayout>
             </LinearLayout>
             <RelativeLayout
-                android:layout_width="@dimen/dp500"
+                android:layout_width="500dp"
                 android:layout_height="match_parent">
                 <View
                     android:id="@+id/anchor"
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="@dimen/dp0"
-                    android:layout_marginBottom="@dimen/dp72"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginBottom="72dp"
                     android:layout_centerHorizontal="true"/>
                 <ImageView
                     android:id="@+id/iv_vertical_line"
                     android:layout_width="@dimen/dp187"
-                    android:layout_height="@dimen/dp100"
-                    android:layout_marginTop="@dimen/dp_28"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="-28dp"
                     android:src="@drawable/ford_pa_vertical_line"
                     android:layout_below="@+id/iv_vehicle"
                     android:scaleX="0.8"
                     android:scaleY="0.8"
-                    android:layout_marginEnd="@dimen/dp28"
+                    android:layout_marginEnd="28dp"
                     android:layout_alignEnd="@+id/iv_vehicle"/>
                 <ImageView
                     android:id="@+id/iv_parallel_line"
-                    android:layout_width="@dimen/dp108"
+                    android:layout_width="108dp"
                     android:layout_height="@dimen/dp166"
-                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginTop="-16dp"
                     android:src="@drawable/ford_pa_pala_line_2"
                     android:scaleType="fitXY"
                     android:layout_below="@+id/iv_vehicle"
                     android:rotationY="180"
-                    android:layout_marginEnd="@dimen/dp42"
+                    android:layout_marginEnd="42dp"
                     android:layout_alignEnd="@+id/iv_vehicle"/>
                 <LinearLayout
                     android:orientation="vertical"
                     android:id="@+id/ll_left_wall"
                     android:layout_width="@dimen/dp187"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp88"
+                    android:layout_marginTop="88dp"
                     android:layout_alignTop="@+id/iv_vehicle"
                     android:layout_toStartOf="@+id/iv_vehicle">
                     <View
                         android:background="#aaa"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp100"/>
+                        android:layout_height="100dp"/>
                     <View
                         android:background="#eee"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp10"/>
+                        android:layout_height="10dp"/>
                     <LinearLayout
                         android:gravity="center"
                         android:id="@+id/ll_left_park_space"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp100">
+                        android:layout_height="100dp">
                         <ImageView
                             android:id="@+id/iv_left_find"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/dp100"
+                            android:layout_height="100dp"
                             android:src="@drawable/ford_pa_find"
                             android:scaleType="centerInside"/>
                     </LinearLayout>
                     <View
                         android:background="#eee"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp10"/>
+                        android:layout_height="10dp"/>
                     <View
                         android:background="#aaa"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp100"/>
+                        android:layout_height="100dp"/>
                 </LinearLayout>
                 <LinearLayout
                     android:orientation="vertical"
                     android:id="@+id/ll_right_wall"
                     android:layout_width="@dimen/dp187"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp88"
+                    android:layout_marginTop="88dp"
                     android:layout_alignTop="@+id/iv_vehicle"
                     android:layout_toEndOf="@+id/iv_vehicle">
                     <View
                         android:background="#aaa"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp100"/>
+                        android:layout_height="100dp"/>
                     <View
                         android:background="#eee"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp10"/>
+                        android:layout_height="10dp"/>
                     <LinearLayout
                         android:gravity="center"
                         android:id="@+id/ll_right_park_space"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp100">
+                        android:layout_height="100dp">
                         <ImageView
                             android:id="@+id/iv_right_find"
                             android:layout_width="match_parent"
-                            android:layout_height="@dimen/dp100"
+                            android:layout_height="100dp"
                             android:src="@drawable/ford_pa_find"
                             android:scaleType="centerInside"/>
                     </LinearLayout>
                     <View
                         android:background="#eee"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp10"/>
+                        android:layout_height="10dp"/>
                     <View
                         android:background="#aaa"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp100"/>
+                        android:layout_height="100dp"/>
                 </LinearLayout>
                 <ImageView
                     android:id="@+id/iv_vehicle"
-                    android:layout_width="@dimen/dp100"
+                    android:layout_width="100dp"
                     android:layout_height="@dimen/dp187"
                     android:src="@drawable/ford_pa_car"
                     android:layout_below="@+id/anchor"
                     android:layout_centerHorizontal="true"/>
                 <ImageView
                     android:id="@+id/iv_warning"
-                    android:layout_width="@dimen/dp58"
-                    android:layout_height="@dimen/dp52"
-                    android:layout_marginTop="@dimen/dp64"
+                    android:layout_width="58dp"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="64dp"
                     android:src="@drawable/ic_parking_warning"
                     android:layout_alignTop="@+id/iv_vehicle"
                     android:layout_centerHorizontal="true"
@@ -252,9 +252,9 @@
                     android:scaleY="1.4"/>
                 <ImageView
                     android:id="@+id/iv_stop"
-                    android:layout_width="@dimen/dp46"
-                    android:layout_height="@dimen/dp48"
-                    android:layout_marginTop="@dimen/dp64"
+                    android:layout_width="46dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="64dp"
                     android:src="@drawable/ford_pa_stop"
                     android:layout_alignTop="@+id/iv_vehicle"
                     android:layout_centerHorizontal="true"
@@ -262,9 +262,9 @@
                     android:scaleY="1.6"/>
                 <ImageView
                     android:id="@+id/iv_flag"
-                    android:layout_width="@dimen/dp128"
-                    android:layout_height="@dimen/dp80"
-                    android:layout_marginTop="@dimen/dp48"
+                    android:layout_width="128dp"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="48dp"
                     android:src="@drawable/flag_3"
                     android:layout_alignTop="@+id/iv_vehicle"
                     android:layout_centerHorizontal="true"
@@ -272,16 +272,16 @@
                     android:scaleY="1.6"/>
                 <ImageView
                     android:id="@+id/iv_front_arrow"
-                    android:layout_width="@dimen/dp48"
-                    android:layout_height="@dimen/dp64"
+                    android:layout_width="48dp"
+                    android:layout_height="64dp"
                     android:src="@drawable/ford_pa_forward"
                     android:scaleType="fitXY"
                     android:layout_above="@+id/iv_vehicle"
                     android:layout_centerHorizontal="true"/>
                 <ImageView
                     android:id="@+id/iv_back_arrow"
-                    android:layout_width="@dimen/dp48"
-                    android:layout_height="@dimen/dp64"
+                    android:layout_width="48dp"
+                    android:layout_height="64dp"
                     android:src="@drawable/ford_pa_forward"
                     android:scaleType="fitXY"
                     android:layout_below="@+id/iv_vehicle"
@@ -289,9 +289,9 @@
                     android:rotation="180"/>
                 <ImageView
                     android:id="@+id/iv_left_arrow"
-                    android:layout_width="@dimen/dp64"
-                    android:layout_height="@dimen/dp54"
-                    android:layout_marginTop="@dimen/dp64"
+                    android:layout_width="64dp"
+                    android:layout_height="54dp"
+                    android:layout_marginTop="64dp"
                     android:src="@drawable/ford_pa_forward"
                     android:scaleType="fitXY"
                     android:layout_alignTop="@+id/iv_vehicle"
@@ -299,8 +299,8 @@
                     android:layout_toStartOf="@+id/iv_vehicle"/>
                 <ImageView
                     android:id="@+id/iv_right_arrow"
-                    android:layout_width="@dimen/dp64"
-                    android:layout_height="@dimen/dp54"
+                    android:layout_width="64dp"
+                    android:layout_height="54dp"
                     android:src="@drawable/ford_pa_forward"
                     android:scaleType="fitXY"
                     android:layout_alignTop="@+id/iv_left_arrow"
@@ -308,16 +308,16 @@
                     android:layout_toEndOf="@+id/iv_vehicle"/>
                 <ImageView
                     android:id="@+id/iv_left_radar"
-                    android:layout_width="@dimen/dp30"
-                    android:layout_height="@dimen/dp75"
-                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_width="30dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="-12dp"
                     android:src="@drawable/_81_active_park_left_wave"
                     android:layout_alignTop="@+id/iv_vehicle"
                     android:layout_toStartOf="@+id/iv_vehicle"/>
                 <ImageView
                     android:id="@+id/iv_right_radar"
-                    android:layout_width="@dimen/dp30"
-                    android:layout_height="@dimen/dp75"
+                    android:layout_width="30dp"
+                    android:layout_height="75dp"
                     android:src="@drawable/_81_active_park_right_wave"
                     android:layout_alignTop="@+id/iv_left_radar"
                     android:layout_toEndOf="@+id/iv_vehicle"/>

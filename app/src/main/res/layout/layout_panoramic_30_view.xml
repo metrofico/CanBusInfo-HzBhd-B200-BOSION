@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:layout_width="@dimen/dp0"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="100">
         <LinearLayout
@@ -15,45 +15,45 @@
             <ImageButton
                 android:id="@+id/ib_front_all"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_front_all"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_front_only"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_only_front"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_front_left"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_front_left_front"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_front_right"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_front_right_front"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_front_back"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_only_rear"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_front_right_left"
                 android:background="@drawable/drive_data_btn_n"
-                android:padding="@dimen/dp8"
+                android:padding="8dp"
                 android:visibility="invisible"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_front_right_left"
                 android:scaleType="centerInside"/>
         </LinearLayout>
@@ -66,44 +66,44 @@
             <ImageButton
                 android:id="@+id/ib_rear_all"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_rear_all"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_rear_only"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_only_rear"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_rear_left"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_rear_left_rear"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_rear_right"
                 android:background="@drawable/drive_data_btn_n"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/hyundai_rear_right_rear"
                 android:scaleType="centerInside"/>
             <ImageButton
                 android:id="@+id/ib_rear_down"
                 android:background="@drawable/drive_data_btn_n"
-                android:padding="@dimen/dp8"
+                android:padding="8dp"
                 android:visibility="invisible"
-                android:layout_width="@dimen/dp128"
-                android:layout_height="@dimen/dp58"
+                android:layout_width="128dp"
+                android:layout_height="58dp"
                 android:src="@drawable/rear"
                 android:scaleType="centerInside"/>
         </LinearLayout>
     </RelativeLayout>
     <View
-        android:layout_width="@dimen/dp0"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="60"/>
 </LinearLayout>

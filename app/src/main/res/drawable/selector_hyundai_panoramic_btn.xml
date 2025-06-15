@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:height="@dimen/dp86"
-        android:width="@dimen/dp164"
+        android:height="86dp"
+        android:width="164dp"
         android:drawable="@drawable/nissan_avm_selector"/>
     <item
-        android:height="@dimen/dp78"
-        android:width="@dimen/dp56"
+        android:height="78dp"
+        android:width="56dp"
         android:drawable="@drawable/hyundai_all_view"
-        android:start="@dimen/dp52"/>
+        android:start="52dp"/>
 </layer-list>

@@ -1,74 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="IvSettingItemRightImage" parent="">
-        <item name="android:layout_width">@dimen/dp45</item>
-        <item name="android:layout_height">@dimen/dp45</item>
+        <item name="android:layout_width">45dp</item>
+        <item name="android:layout_height">45dp</item>
         <item name="android:src">@drawable/setting_list_right_ic_selector</item>
         <item name="android:layout_alignParentEnd">true</item>
     </style>
+
     <style name="ParkVideoStyle" parent="">
-        <item name="android:layout_width">@dimen/dp768</item>
-        <item name="android:layout_height">@dimen/dp480</item>
+        <item name="android:layout_width">768dp</item>
+        <item name="android:layout_height">480dp</item>
         <item name="android:layout_alignParentTop">true</item>
     </style>
+
     <style name="RadarCenterCarStyle" parent="">
-        <item name="android:layout_width">-2</item>
-        <item name="android:layout_height">-2</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="RadarDistanceValueSmallLRTv" parent="">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:gravity">0x11</item>
-        <item name="android:padding">@dimen/dp2</item>
-        <item name="android:visibility">1</item>
-        <item name="android:layout_width">-2</item>
-        <item name="android:layout_height">@dimen/dp65</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">2dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">65dp</item>
         <item name="android:text">0</item>
         <item name="android:rotation">90</item>
     </style>
+
     <style name="RadarDistanceValueTv" parent="">
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:gravity">0x11</item>
-        <item name="android:visibility">1</item>
-        <item name="android:layout_width">@dimen/dp36</item>
-        <item name="android:layout_height">@dimen/dp23</item>
+        <item name="android:gravity">center</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_width">36dp</item>
+        <item name="android:layout_height">23dp</item>
         <item name="android:text">0</item>
         <item name="android:layout_alignParentTop">true</item>
         <item name="android:layout_alignParentStart">true</item>
     </style>
+
     <style name="RadarLeftTopOneDistance" parent="">
         <item name="android:textSize">20dp</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:padding">@dimen/dp5</item>
-        <item name="android:visibility">0</item>
-        <item name="android:layout_width">-2</item>
-        <item name="android:layout_height">-2</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@null</item>
         <item name="android:rotation">0</item>
     </style>
+
     <style name="RadarLeftTopUnitTv" parent="">
         <item name="android:textSize">20dp</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:padding">@dimen/dp5</item>
-        <item name="android:visibility">1</item>
-        <item name="android:layout_width">-2</item>
-        <item name="android:layout_height">-2</item>
+        <item name="android:padding">5dp</item>
+        <item name="android:visibility">invisible</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:text">@string/unit_cm</item>
         <item name="android:rotation">0</item>
     </style>
+
     <style name="RadarLocationFrontLeftRightStyle" parent="">
-        <item name="android:layout_width">-2</item>
-        <item name="android:layout_height">-2</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="RadarLocationUpDownStyle" parent="">
-        <item name="android:layout_width">-2</item>
-        <item name="android:layout_height">-2</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
+
     <style name="TvSettingItemTitle" parent="">
-        <item name="android:textSize">@dimen/dp22</item>
+        <item name="android:textSize">22dp</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:gravity">0x800003</item>
-        <item name="android:layout_width">-2</item>
-        <item name="android:layout_height">-2</item>
+        <item name="android:gravity">start</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:lines">1</item>
     </style>
 </resources>

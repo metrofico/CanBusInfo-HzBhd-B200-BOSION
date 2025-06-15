@@ -14,10 +14,10 @@
         android:id="@+id/titleLinear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp16"
+        android:layout_marginTop="16dp"
         android:layout_centerHorizontal="true">
         <TextView
-            android:textSize="@dimen/dp50"
+            android:textSize="50dp"
             android:textColor="@color/white"
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
@@ -29,12 +29,12 @@
         android:orientation="horizontal"
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp300"
-        android:layout_marginTop="@dimen/dp26"
+        android:layout_height="300dp"
+        android:layout_marginTop="26dp"
         android:layout_below="@+id/titleLinear"
         android:layout_centerHorizontal="true">
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -45,9 +45,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/driving_pattern_8"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -58,9 +58,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/driving_pattern_9"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -71,9 +71,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/driving_pattern_1"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -84,9 +84,9 @@
             android:layout_height="@dimen/_299_icon_height"
             android:button="@null"
             android:text="@string/driving_pattern_3"
-            android:layout_marginEnd="@dimen/dp10"/>
+            android:layout_marginEnd="10dp"/>
         <RadioButton
-            android:textSize="@dimen/dp25"
+            android:textSize="25dp"
             android:textStyle="italic"
             android:textColor="@color/white"
             android:gravity="bottom|center_horizontal"
@@ -106,19 +106,19 @@
         android:layout_centerHorizontal="true">
         <SeekBar
             android:id="@+id/seekBar"
-            android:layout_width="@dimen/dp908"
-            android:layout_height="@dimen/dp48"
+            android:layout_width="908dp"
+            android:layout_height="48dp"
             android:max="4"
             android:progressDrawable="@drawable/__299__seekbar"
             android:thumb="@drawable/dz_baom_c6_power_bar_bg2_02"
-            android:thumbOffset="@dimen/dp0"
+            android:thumbOffset="0dp"
             android:layout_centerHorizontal="true"/>
         <LinearLayout
             android:orientation="horizontal"
             android:id="@+id/numberLinear"
             android:layout_width="@dimen/dp1040"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginTop="5dp"
             android:layout_below="@+id/seekBar"
             android:layout_centerHorizontal="true">
             <ImageView
@@ -152,14 +152,14 @@
         android:gravity="end|center_vertical"
         android:orientation="horizontal"
         android:id="@+id/bottomLinear"
-        android:layout_width="@dimen/dp949"
+        android:layout_width="949dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp10"
-        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
         <TextView
-            android:textSize="@dimen/dp20"
+            android:textSize="20dp"
             android:textColor="@color/white"
             android:id="@+id/tv_version"
             android:layout_width="wrap_content"
@@ -167,8 +167,8 @@
         <Button
             android:id="@+id/btn_chooseVersion"
             android:background="@drawable/selector_smart_button"
-            android:layout_width="@dimen/dp116"
-            android:layout_height="@dimen/dp47"
-            android:layout_marginStart="@dimen/dp16"/>
+            android:layout_width="116dp"
+            android:layout_height="47dp"
+            android:layout_marginStart="16dp"/>
     </LinearLayout>
 </RelativeLayout>

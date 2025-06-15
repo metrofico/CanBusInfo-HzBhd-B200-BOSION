@@ -23,45 +23,45 @@
             android:orientation="vertical"
             android:id="@+id/radar_distan_front"
             android:visibility="visible"
-            android:layout_width="@dimen/dp100"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_toLeftOf="@+id/front_radar_right_mid"
             android:layout_centerVertical="true">
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/f_r_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"/>
+                android:layout_height="60dp"/>
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/f_r_m_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"/>
+                android:layout_height="60dp"/>
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/f_l_m_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"/>
+                android:layout_height="60dp"/>
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/f_l_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"/>
+                android:layout_height="60dp"/>
         </LinearLayout>
         <ImageView
             android:id="@+id/front_radar_right_probe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/front_radar_right_probe_margin_right"
-            android:layout_marginBottom="@dimen/dp74"
+            android:layout_marginBottom="74dp"
             android:layout_toLeftOf="@+id/radar_big_car"
             android:layout_alignBottom="@+id/v_center"/>
         <ImageView
@@ -69,7 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="@dimen/front_radar_right_margin_right"
-            android:layout_marginBottom="@dimen/dp41"
+            android:layout_marginBottom="41dp"
             android:src="@drawable/front_radar_right_0"
             android:layout_toLeftOf="@+id/radar_big_car"
             android:layout_alignBottom="@+id/v_center"/>
@@ -93,7 +93,7 @@
             android:id="@+id/front_radar_left"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp37"
+            android:layout_marginTop="37dp"
             android:layout_marginRight="@dimen/front_radar_left_margin_right"
             android:src="@drawable/front_radar_left_0"
             android:layout_toLeftOf="@+id/radar_big_car"
@@ -102,7 +102,7 @@
             android:id="@+id/front_radar_left_probe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp70"
+            android:layout_marginTop="70dp"
             android:layout_marginRight="@dimen/front_radar_left_probe_margin_right"
             android:layout_toLeftOf="@+id/radar_big_car"
             android:layout_alignTop="@+id/v_center"/>
@@ -111,41 +111,41 @@
             android:orientation="vertical"
             android:id="@+id/radar_distan_rear"
             android:visibility="visible"
-            android:layout_width="@dimen/dp100"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/back_radar_left_mid"
             android:layout_centerVertical="true">
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/r_r_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"
+                android:layout_height="60dp"
                 android:text=""/>
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/r_r_m_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"
+                android:layout_height="60dp"
                 android:text=""/>
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/r_l_m_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"
+                android:layout_height="60dp"
                 android:text=""/>
             <TextView
-                android:textSize="@dimen/dp30"
+                android:textSize="30dp"
                 android:textColor="@android:color/white"
                 android:id="@+id/r_l_txt"
                 android:visibility="gone"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/dp60"
+                android:layout_height="60dp"
                 android:text=""/>
         </LinearLayout>
         <ImageView
@@ -153,7 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/rear_radar_right_probe_margin_left"
-            android:layout_marginBottom="@dimen/dp65"
+            android:layout_marginBottom="65dp"
             android:layout_toRightOf="@+id/radar_big_car"
             android:layout_alignBottom="@+id/v_center"/>
         <ImageView
@@ -161,7 +161,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/rear_radar_right_margin_left"
-            android:layout_marginBottom="@dimen/dp35"
+            android:layout_marginBottom="35dp"
             android:src="@drawable/back_radar_right_0"
             android:layout_toRightOf="@+id/radar_big_car"
             android:layout_alignBottom="@+id/v_center"/>
@@ -186,7 +186,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/rear_radar_left_margin_left"
-            android:layout_marginTop="@dimen/dp31"
+            android:layout_marginTop="31dp"
             android:src="@drawable/back_radar_left_0"
             android:layout_toRightOf="@+id/radar_big_car"
             android:layout_alignTop="@+id/v_center"/>
@@ -195,7 +195,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/rear_radar_left_probe_margin_left"
-            android:layout_marginTop="@dimen/dp59"
+            android:layout_marginTop="59dp"
             android:layout_toRightOf="@+id/radar_big_car"
             android:layout_alignTop="@+id/v_center"/>
         <LinearLayout

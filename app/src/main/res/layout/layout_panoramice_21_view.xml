@@ -7,7 +7,7 @@
         android:layout_height="match_parent">
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="@dimen/dp0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="6">
             <TextView
@@ -18,13 +18,13 @@
                 android:background="@android:color/background_dark"
                 android:visibility="invisible"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="2"/>
             <include
                 android:id="@+id/layout_six_buttons"
                 android:visibility="invisible"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="6"
                 android:layout_centerVertical="true"
                 layout="@layout/layout_nissan_panoramic_buttons"/>
@@ -34,11 +34,11 @@
                 android:background="@android:color/background_dark"
                 android:visibility="invisible"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="2"
                 android:layout_alignParentBottom="true">
                 <RelativeLayout
-                    android:layout_width="@dimen/dp0"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="2">
                     <ImageView
@@ -52,12 +52,12 @@
                 </RelativeLayout>
                 <LinearLayout
                     android:orientation="horizontal"
-                    android:layout_width="@dimen/dp0"
+                    android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="8">
                     <RelativeLayout
                         android:layout_gravity="center"
-                        android:layout_width="@dimen/dp0"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
                         <RelativeLayout
@@ -74,7 +74,7 @@
                                 android:scaleType="centerInside"
                                 android:layout_centerInParent="true"/>
                             <TextView
-                                android:textSize="@dimen/dp24"
+                                android:textSize="24dp"
                                 android:textColor="@android:color/white"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -84,7 +84,7 @@
                     </RelativeLayout>
                     <RelativeLayout
                         android:layout_gravity="center"
-                        android:layout_width="@dimen/dp0"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
                         <RelativeLayout
@@ -101,7 +101,7 @@
                                 android:scaleType="centerInside"
                                 android:layout_centerInParent="true"/>
                             <TextView
-                                android:textSize="@dimen/dp24"
+                                android:textSize="24dp"
                                 android:textColor="@android:color/white"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -111,7 +111,7 @@
                     </RelativeLayout>
                     <RelativeLayout
                         android:layout_gravity="center"
-                        android:layout_width="@dimen/dp0"
+                        android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1">
                         <ImageButton
@@ -155,7 +155,7 @@
                                 android:scaleType="centerInside"
                                 android:layout_centerInParent="true"/>
                             <TextView
-                                android:textSize="@dimen/dp24"
+                                android:textSize="24dp"
                                 android:textColor="@android:color/white"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -168,15 +168,15 @@
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="@dimen/dp0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="4">
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="8">
                 <Button
-                    android:textSize="@dimen/dp32"
+                    android:textSize="32dp"
                     android:textStyle="bold"
                     android:id="@+id/ib_panoramic_camera"
                     android:background="@drawable/button_selector"
@@ -192,25 +192,25 @@
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp0"
+                android:layout_height="0dp"
                 android:layout_weight="2">
                 <View
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="@dimen/dp0"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_weight="3"/>
                 <ImageButton
                     android:layout_gravity="center_vertical"
                     android:id="@+id/btn_up_down"
                     android:background="@android:color/transparent"
                     android:visibility="invisible"
-                    android:layout_width="@dimen/dp0"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:src="@drawable/nissan_updown_selector"
                     android:scaleType="centerInside"
                     android:layout_weight="4"/>
                 <View
-                    android:layout_width="@dimen/dp0"
-                    android:layout_height="@dimen/dp0"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
                     android:layout_weight="3"/>
             </LinearLayout>
         </LinearLayout>
@@ -219,40 +219,40 @@
         android:orientation="vertical"
         android:id="@+id/ll_park_assist_introduce"
         android:background="@android:color/black"
-        android:paddingTop="@dimen/dp36"
+        android:paddingTop="36dp"
         android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingStart="@dimen/dp32">
+        android:paddingStart="32dp">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp0"
+            android:layout_height="0dp"
             android:layout_weight="6">
             <ImageView
                 android:background="@android:color/transparent"
-                android:layout_width="@dimen/dp0"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:src="@drawable/tree_cars"
                 android:scaleType="centerInside"
                 android:layout_weight="3"/>
             <TextView
-                android:textSize="@dimen/dp28"
+                android:textSize="28dp"
                 android:textColor="@android:color/white"
-                android:layout_width="@dimen/dp0"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:text="@string/nissan_warnning_1"
                 android:layout_weight="7"
-                android:lineSpacingExtra="@dimen/dp15"
-                android:paddingStart="@dimen/dp32"/>
+                android:lineSpacingExtra="15dp"
+                android:paddingStart="32dp"/>
         </LinearLayout>
         <TextView
-            android:textSize="@dimen/dp28"
+            android:textSize="28dp"
             android:textColor="@android:color/holo_orange_light"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/dp0"
+            android:layout_height="0dp"
             android:text="@string/nissan_warnning_2"
             android:layout_weight="4"
-            android:lineSpacingExtra="@dimen/dp10"/>
+            android:lineSpacingExtra="10dp"/>
     </LinearLayout>
 </RelativeLayout>

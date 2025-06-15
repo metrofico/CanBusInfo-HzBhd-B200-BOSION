@@ -12,40 +12,40 @@
         android:id="@+id/image_way"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp0"
+        android:layout_marginBottom="0dp"
         android:src="@drawable/dz_vehicle_information_bottom_road"
         android:layout_alignParentBottom="true"/>
     <com.hzbhd.canbus.car_cus._283.view.CarImageView
         android:id="@+id/carImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp10"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/dz_vehicle_information_car"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="@dimen/dp80"/>
+        android:layout_marginStart="80dp"/>
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp60"
+        android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true">
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@color/white"
             android:gravity="right"
             android:id="@+id/tv_mileage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="@dimen/dp230"
+            android:minWidth="230dp"
             android:text="0  km"/>
         <TextView
-            android:textSize="@dimen/dp26"
+            android:textSize="26dp"
             android:textColor="@color/white"
             android:gravity="right"
             android:id="@+id/tv_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp16"
-            android:minWidth="@dimen/dp230"
+            android:layout_marginTop="16dp"
+            android:minWidth="230dp"
             android:text="0  min"
             android:layout_below="@+id/tv_mileage"/>
         <LinearLayout
@@ -53,45 +53,45 @@
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp200"
+            android:layout_marginLeft="200dp"
             android:layout_toRightOf="@+id/tv_mileage">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginRight="16dp"
                 android:src="@drawable/dz_vehicle_information_icon_average"/>
             <TextView
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textColor="@color/white"
                 android:gravity="right"
                 android:id="@+id/tv_speed"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="@dimen/dp230"
+                android:minWidth="230dp"
                 android:text="0  km/h"
-                android:paddingEnd="@dimen/dp62"/>
+                android:paddingEnd="62dp"/>
         </LinearLayout>
         <LinearLayout
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp425"
-            android:layout_marginTop="@dimen/dp16"
+            android:layout_marginLeft="425dp"
+            android:layout_marginTop="16dp"
             android:layout_below="@+id/tv_mileage">
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/dp16"
+                android:layout_marginRight="16dp"
                 android:src="@drawable/dz_vehicle_information_icon_average"/>
             <TextView
-                android:textSize="@dimen/dp26"
+                android:textSize="26dp"
                 android:textColor="@color/white"
                 android:gravity="right"
                 android:id="@+id/tv_oil"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="@dimen/dp230"
+                android:minWidth="230dp"
                 android:text="0  L/100km"/>
         </LinearLayout>
     </RelativeLayout>
@@ -100,12 +100,12 @@
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp42"
+        android:layout_marginBottom="42dp"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="@dimen/dp80">
+        android:layout_marginEnd="80dp">
         <TextView
-            android:textSize="@dimen/dp32"
+            android:textSize="32dp"
             android:textColor="@color/white"
             android:id="@+id/tv_residu"
             android:layout_width="wrap_content"
@@ -116,6 +116,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/dz_vehicle_information_bottom_icon_oil"
-            android:layout_marginStart="@dimen/dp36"/>
+            android:layout_marginStart="36dp"/>
     </LinearLayout>
 </RelativeLayout>

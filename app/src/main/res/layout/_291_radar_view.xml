@@ -7,12 +7,12 @@
         android:id="@+id/LeftRelative"
         android:background="@drawable/dz_radar_left_bg"
         android:visibility="gone"
-        android:layout_width="@dimen/dp498"
-        android:layout_height="@dimen/dp600"/>
+        android:layout_width="498dp"
+        android:layout_height="600dp"/>
     <RelativeLayout
         android:id="@+id/radarLayout"
-        android:layout_width="@dimen/dp380"
-        android:layout_height="@dimen/dp600">
+        android:layout_width="380dp"
+        android:layout_height="600dp">
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -21,141 +21,141 @@
             android:alpha="0.5"/>
         <ImageView
             android:id="@+id/front_radar_left_mid"
-            android:layout_width="@dimen/dp79"
-            android:layout_height="@dimen/dp108"
-            android:layout_marginTop="@dimen/dp30"
-            android:layout_marginStart="@dimen/dp110"/>
+            android:layout_width="79dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="110dp"/>
         <ImageView
             android:id="@+id/front_radar_left"
-            android:layout_width="@dimen/dp83"
-            android:layout_height="@dimen/dp83"
-            android:layout_marginTop="@dimen/dp68"
-            android:layout_marginStart="@dimen/dp78"/>
+            android:layout_width="83dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="68dp"
+            android:layout_marginStart="78dp"/>
         <ImageView
             android:id="@+id/left_radar_front"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp83"
-            android:layout_height="@dimen/dp76"
-            android:layout_marginTop="@dimen/dp108"
-            android:layout_marginStart="@dimen/dp58"/>
+            android:layout_width="83dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="108dp"
+            android:layout_marginStart="58dp"/>
         <ImageView
             android:id="@+id/left_radar_mid_front"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp69"
-            android:layout_height="@dimen/dp97"
-            android:layout_marginTop="@dimen/dp2"
+            android:layout_width="69dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/left_radar_front"
-            android:layout_marginStart="@dimen/dp58"/>
+            android:layout_marginStart="58dp"/>
         <ImageView
             android:id="@+id/left_radar_mid_rear"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp69"
-            android:layout_height="@dimen/dp97"
-            android:layout_marginTop="@dimen/dp2"
+            android:layout_width="69dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/left_radar_mid_front"
-            android:layout_marginStart="@dimen/dp58"/>
+            android:layout_marginStart="58dp"/>
         <ImageView
             android:id="@+id/left_radar_rear"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp85"
-            android:layout_height="@dimen/dp76"
-            android:layout_marginTop="@dimen/dp2"
+            android:layout_width="85dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/left_radar_mid_rear"
-            android:layout_marginStart="@dimen/dp58"/>
+            android:layout_marginStart="58dp"/>
         <ImageView
             android:id="@+id/rear_radar_left"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="@dimen/dp84"
-            android:layout_marginBottom="@dimen/dp100"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginBottom="100dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/dp77"/>
+            android:layout_marginStart="77dp"/>
         <ImageView
             android:id="@+id/rear_radar_left_auxiliary"
-            android:layout_width="@dimen/dp106"
-            android:layout_height="@dimen/dp129"
-            android:layout_marginBottom="@dimen/dp6"
+            android:layout_width="106dp"
+            android:layout_height="129dp"
+            android:layout_marginBottom="6dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/dp8"/>
+            android:layout_marginStart="8dp"/>
         <ImageView
             android:id="@+id/rear_radar_left_mid"
-            android:layout_width="@dimen/dp96"
-            android:layout_height="@dimen/dp141"
-            android:layout_marginBottom="@dimen/dp30"
+            android:layout_width="96dp"
+            android:layout_height="141dp"
+            android:layout_marginBottom="30dp"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/dp92"/>
+            android:layout_marginStart="92dp"/>
         <ImageView
             android:id="@+id/front_radar_right_mid"
-            android:layout_width="@dimen/dp79"
-            android:layout_height="@dimen/dp108"
-            android:layout_marginTop="@dimen/dp30"
+            android:layout_width="79dp"
+            android:layout_height="108dp"
+            android:layout_marginTop="30dp"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="@dimen/dp110"/>
+            android:layout_marginEnd="110dp"/>
         <ImageView
             android:id="@+id/front_radar_right"
-            android:layout_width="@dimen/dp82"
-            android:layout_height="@dimen/dp83"
-            android:layout_marginTop="@dimen/dp68"
+            android:layout_width="82dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="68dp"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="@dimen/dp78"/>
+            android:layout_marginEnd="78dp"/>
         <ImageView
             android:id="@+id/right_radar_front"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp83"
-            android:layout_height="@dimen/dp76"
-            android:layout_marginTop="@dimen/dp108"
+            android:layout_width="83dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="108dp"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="@dimen/dp58"/>
+            android:layout_marginEnd="58dp"/>
         <ImageView
             android:id="@+id/right_radar_mid_front"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp68"
-            android:layout_height="@dimen/dp97"
-            android:layout_marginTop="@dimen/dp2"
+            android:layout_width="68dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/right_radar_front"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="@dimen/dp58"/>
+            android:layout_marginEnd="58dp"/>
         <ImageView
             android:id="@+id/right_radar_mid_rear"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp68"
-            android:layout_height="@dimen/dp97"
-            android:layout_marginTop="@dimen/dp2"
+            android:layout_width="68dp"
+            android:layout_height="97dp"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/right_radar_mid_front"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="@dimen/dp58"/>
+            android:layout_marginEnd="58dp"/>
         <ImageView
             android:id="@+id/right_radar_rear"
             android:visibility="invisible"
-            android:layout_width="@dimen/dp85"
-            android:layout_height="@dimen/dp76"
-            android:layout_marginTop="@dimen/dp2"
+            android:layout_width="85dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="2dp"
             android:layout_below="@+id/right_radar_mid_rear"
             android:layout_alignParentRight="true"
-            android:layout_marginEnd="@dimen/dp58"/>
+            android:layout_marginEnd="58dp"/>
         <ImageView
             android:id="@+id/rear_radar_right"
-            android:layout_width="@dimen/dp84"
-            android:layout_height="@dimen/dp84"
-            android:layout_marginBottom="@dimen/dp99"
+            android:layout_width="84dp"
+            android:layout_height="84dp"
+            android:layout_marginBottom="99dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/dp77"/>
+            android:layout_marginEnd="77dp"/>
         <ImageView
             android:id="@+id/rear_radar_right_auxiliary"
-            android:layout_width="@dimen/dp101"
-            android:layout_height="@dimen/dp129"
-            android:layout_marginBottom="@dimen/dp5"
+            android:layout_width="101dp"
+            android:layout_height="129dp"
+            android:layout_marginBottom="5dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/dp14"/>
+            android:layout_marginEnd="14dp"/>
         <ImageView
             android:id="@+id/rear_radar_right_mid"
-            android:layout_width="@dimen/dp96"
-            android:layout_height="@dimen/dp141"
-            android:layout_marginBottom="@dimen/dp30"
+            android:layout_width="96dp"
+            android:layout_height="141dp"
+            android:layout_marginBottom="30dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginEnd="@dimen/dp92"/>
+            android:layout_marginEnd="92dp"/>
         <ImageView
             android:id="@+id/imageCar"
             android:layout_width="wrap_content"

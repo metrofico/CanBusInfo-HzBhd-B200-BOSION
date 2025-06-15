@@ -19,14 +19,14 @@
             <TextView
                 android:textColor="#dddddd"
                 android:id="@+id/tv_value"
-                android:layout_marginTop="@dimen/dp10"
+                android:layout_marginTop="10dp"
                 android:layout_below="@+id/tv_title"
                 android:layout_alignParentEnd="true"
                 style="@style/TvSettingItemValue"/>
         </RelativeLayout>
         <ImageView
             android:id="@+id/iv_right_icon"
-            android:layout_marginStart="@dimen/dp20"
+            android:layout_marginStart="20dp"
             style="@style/IvSettingItemRightImage"/>
     </RelativeLayout>
     <ImageView

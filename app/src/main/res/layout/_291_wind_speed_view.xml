@@ -3,65 +3,65 @@
     android:gravity="center"
     android:orientation="horizontal"
     android:background="@drawable/dz_air1_big_bg"
-    android:paddingTop="@dimen/dp20"
-    android:layout_width="@dimen/dp342"
-    android:layout_height="@dimen/dp92">
+    android:paddingTop="20dp"
+    android:layout_width="342dp"
+    android:layout_height="92dp">
     <ImageView
-        android:layout_width="@dimen/dp20"
-        android:layout_height="@dimen/dp20"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
         android:src="@drawable/dz_air1_wind_less"/>
     <LinearLayout
         android:orientation="horizontal"
         android:background="@drawable/dz_air1_adjust_bar_bg"
-        android:layout_width="@dimen/dp213"
-        android:layout_height="@dimen/dp8"
-        android:layout_marginStart="@dimen/dp16"
-        android:layout_marginEnd="@dimen/dp16">
+        android:layout_width="213dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
         <ImageView
             android:id="@+id/iv_wind_1"
             android:visibility="gone"
-            android:layout_width="@dimen/dp30"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/dz_air1_adjust_bar_1"/>
         <ImageView
             android:id="@+id/iv_wind_2"
             android:visibility="gone"
-            android:layout_width="@dimen/dp30"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/dz_air1_adjust_bar_2"/>
         <ImageView
             android:id="@+id/iv_wind_3"
             android:visibility="gone"
-            android:layout_width="@dimen/dp30"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/dz_air1_adjust_bar_3"/>
         <ImageView
             android:id="@+id/iv_wind_4"
             android:visibility="gone"
-            android:layout_width="@dimen/dp30"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/dz_air1_adjust_bar_4"/>
         <ImageView
             android:id="@+id/iv_wind_5"
             android:visibility="gone"
-            android:layout_width="@dimen/dp30"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/dz_air1_adjust_bar_5"/>
         <ImageView
             android:id="@+id/iv_wind_6"
             android:visibility="gone"
-            android:layout_width="@dimen/dp30"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/dz_air1_adjust_bar_6"/>
         <ImageView
             android:id="@+id/iv_wind_7"
             android:visibility="gone"
-            android:layout_width="@dimen/dp30"
+            android:layout_width="30dp"
             android:layout_height="match_parent"
             android:src="@drawable/dz_air1_adjust_bar_7"/>
     </LinearLayout>
     <ImageView
-        android:layout_width="@dimen/dp32"
-        android:layout_height="@dimen/dp32"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:src="@drawable/dz_air1_wind_plus"/>
 </LinearLayout>
