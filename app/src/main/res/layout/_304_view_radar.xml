@@ -6,7 +6,7 @@
     <RelativeLayout
         android:id="@+id/rl_radar"
         android:layout_width="@dimen/_304_radar_layout_width"
-        android:layout_height="@dimen/dp570"
+        android:layout_height="570dp"
         android:layout_marginTop="-32dp">
         <ImageButton
             android:id="@+id/ib_front"

@@ -139,7 +139,7 @@
                     android:layout_centerHorizontal="true"/>
                 <ImageView
                     android:id="@+id/iv_vertical_line"
-                    android:layout_width="@dimen/dp187"
+                    android:layout_width="187dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="-28dp"
                     android:src="@drawable/ford_pa_vertical_line"
@@ -151,7 +151,7 @@
                 <ImageView
                     android:id="@+id/iv_parallel_line"
                     android:layout_width="108dp"
-                    android:layout_height="@dimen/dp166"
+                    android:layout_height="166dp"
                     android:layout_marginTop="-16dp"
                     android:src="@drawable/ford_pa_pala_line_2"
                     android:scaleType="fitXY"
@@ -162,7 +162,7 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:id="@+id/ll_left_wall"
-                    android:layout_width="@dimen/dp187"
+                    android:layout_width="187dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="88dp"
                     android:layout_alignTop="@+id/iv_vehicle"
@@ -199,7 +199,7 @@
                 <LinearLayout
                     android:orientation="vertical"
                     android:id="@+id/ll_right_wall"
-                    android:layout_width="@dimen/dp187"
+                    android:layout_width="187dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="88dp"
                     android:layout_alignTop="@+id/iv_vehicle"
@@ -236,7 +236,7 @@
                 <ImageView
                     android:id="@+id/iv_vehicle"
                     android:layout_width="100dp"
-                    android:layout_height="@dimen/dp187"
+                    android:layout_height="187dp"
                     android:src="@drawable/ford_pa_car"
                     android:layout_below="@+id/anchor"
                     android:layout_centerHorizontal="true"/>

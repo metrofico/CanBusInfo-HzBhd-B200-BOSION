@@ -8,7 +8,7 @@
         android:layout_height="match_parent">
         <FrameLayout
             android:id="@+id/left_rear"
-            android:layout_width="@dimen/dp512"
+            android:layout_width="512dp"
             android:layout_height="600dp">
             <ImageView
                 android:layout_gravity="bottom"
@@ -19,7 +19,7 @@
         </FrameLayout>
         <FrameLayout
             android:id="@+id/right_rear"
-            android:layout_width="@dimen/dp512"
+            android:layout_width="512dp"
             android:layout_height="600dp">
             <ImageView
                 android:layout_gravity="end|bottom"

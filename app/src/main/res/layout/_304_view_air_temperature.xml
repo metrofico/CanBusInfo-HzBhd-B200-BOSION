@@ -6,7 +6,7 @@
         android:id="@+id/rl_air_temperature"
         android:layout_width="304dp"
         android:layout_height="304dp"
-        android:layout_marginStart="@dimen/dp_152">
+        android:layout_marginStart="-152dp">
         <ImageView
             android:layout_width="158dp"
             android:layout_height="304dp"

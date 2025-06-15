@@ -20,7 +20,7 @@
             android:textSize="26dp"
             android:textColor="@color/white"
             android:id="@+id/tv_info"
-            android:layout_width="@dimen/dp359"
+            android:layout_width="359dp"
             android:layout_height="wrap_content"
             android:singleLine="true"
             android:layout_marginStart="8dp"/>

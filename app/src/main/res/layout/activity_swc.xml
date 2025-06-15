@@ -47,7 +47,7 @@
             android:gravity="center"
             android:id="@+id/btn_save"
             android:background="@drawable/selector_swc_save"
-            android:layout_width="@dimen/dp384"
+            android:layout_width="384dp"
             android:layout_height="88dp"
             android:text="@string/swc_fun_save_exit"/>
         <Button
@@ -56,7 +56,7 @@
             android:gravity="center"
             android:id="@+id/btn_reset"
             android:background="@drawable/selector_swc_reset"
-            android:layout_width="@dimen/dp384"
+            android:layout_width="384dp"
             android:layout_height="88dp"
             android:text="@string/swc_btn_reset"
             android:layout_marginStart="24dp"/>

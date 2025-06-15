@@ -8,7 +8,7 @@
         android:id="@+id/gm_onstar_left_bg"
         android:background="@drawable/gm_onstar_left_bg"
         android:layout_width="302dp"
-        android:layout_height="@dimen/dp494"
+        android:layout_height="494dp"
         android:layout_centerVertical="true">
         <TextView
             android:id="@+id/gm_onstar_mute_icon"
@@ -45,7 +45,7 @@
     <RelativeLayout
         android:id="@+id/gm_onstar_input_bg"
         android:background="@drawable/gm_onstar_input_bg"
-        android:layout_width="@dimen/dp686"
+        android:layout_width="686dp"
         android:layout_height="77dp"
         android:layout_toRightOf="@+id/gm_onstar_left_bg"
         android:layout_alignTop="@+id/gm_onstar_left_bg">
@@ -62,7 +62,7 @@
             android:textColor="@android:color/white"
             android:gravity="right"
             android:id="@+id/gm_onstar_input"
-            android:layout_width="@dimen/dp554"
+            android:layout_width="554dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:singleLine="true"
@@ -72,7 +72,7 @@
     <RelativeLayout
         android:id="@+id/gm_onstar_keyboard_bg"
         android:background="@drawable/gm_onstar_keyboard_bg"
-        android:layout_width="@dimen/dp686"
+        android:layout_width="686dp"
         android:layout_height="410dp"
         android:layout_toRightOf="@+id/gm_onstar_left_bg"
         android:layout_alignBottom="@+id/gm_onstar_left_bg">
@@ -228,7 +228,7 @@
             android:id="@+id/tv_onstar_phone_hand_on"
             android:background="@drawable/selector_onstar_dial_btn"
             android:layout_width="168dp"
-            android:layout_height="@dimen/dp132"
+            android:layout_height="132dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="7dp"
             android:layout_alignParentEnd="true"/>
@@ -236,7 +236,7 @@
             android:id="@+id/tv_onstar_phone_hand_off"
             android:background="@drawable/selector_onstar_hang_btn"
             android:layout_width="168dp"
-            android:layout_height="@dimen/dp132"
+            android:layout_height="132dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="7dp"
             android:layout_below="@+id/tv_onstar_phone_hand_on"
@@ -245,7 +245,7 @@
             android:id="@+id/tv_onstar_exit"
             android:background="@drawable/selector_onstar_power_btn"
             android:layout_width="168dp"
-            android:layout_height="@dimen/dp132"
+            android:layout_height="132dp"
             android:layout_marginTop="2dp"
             android:layout_marginRight="7dp"
             android:layout_below="@+id/tv_onstar_phone_hand_off"

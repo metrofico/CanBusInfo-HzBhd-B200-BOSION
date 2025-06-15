@@ -16,7 +16,7 @@
             android:id="@+id/seekbar_def"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
-            android:layout_width="@dimen/dp528"
+            android:layout_width="528dp"
             android:layout_height="wrap_content"
             android:max="100"
             android:progress="0"

@@ -100,7 +100,7 @@
     </RadioGroup>
     <RelativeLayout
         android:id="@+id/bottomRelative"
-        android:layout_width="@dimen/dp1040"
+        android:layout_width="1040dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/bottomLinear"
         android:layout_centerHorizontal="true">
@@ -116,7 +116,7 @@
         <LinearLayout
             android:orientation="horizontal"
             android:id="@+id/numberLinear"
-            android:layout_width="@dimen/dp1040"
+            android:layout_width="1040dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_below="@+id/seekBar"

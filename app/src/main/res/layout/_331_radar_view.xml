@@ -32,7 +32,7 @@
         android:layout_toEndOf="@+id/img_front_right_mid"/>
     <ImageView
         android:id="@+id/img_car"
-        android:layout_width="@dimen/dp134"
+        android:layout_width="134dp"
         android:layout_height="262dp"
         android:layout_marginTop="-9dp"
         android:src="@drawable/__331__car"

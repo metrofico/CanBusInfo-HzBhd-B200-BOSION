@@ -106,7 +106,7 @@
                 android:visibility="gone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/dp670">
+                android:layout_marginLeft="670dp">
                 <ImageButton
                     android:id="@+id/btn_exit"
                     android:background="@drawable/nissan_avm_selector"

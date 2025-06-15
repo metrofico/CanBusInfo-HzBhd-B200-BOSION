@@ -160,8 +160,8 @@
             android:id="@+id/front_radar_right_probe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp113"
-            android:layout_marginRight="@dimen/dp_89"
+            android:layout_marginTop="113dp"
+            android:layout_marginRight="-89dp"
             android:layout_toLeftOf="@+id/radar_big_car"
             android:rotation="45"/>
         <ImageView
@@ -198,8 +198,8 @@
             android:id="@+id/front_radar_left_probe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dp416"
-            android:layout_marginRight="@dimen/dp_89"
+            android:layout_marginTop="416dp"
+            android:layout_marginRight="-89dp"
             android:src="@drawable/golf_front_radar_left_0"
             android:layout_toLeftOf="@+id/radar_big_car"
             android:rotation="-45"/>
@@ -208,7 +208,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="-21dp"
-            android:layout_marginTop="@dimen/dp194"
+            android:layout_marginTop="194dp"
             android:src="@drawable/back_radar_right_0"
             android:layout_toRightOf="@+id/radar_big_car"/>
         <ImageView

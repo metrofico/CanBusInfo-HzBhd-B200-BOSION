@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:background="@drawable/swc_long_key_bg"
-    android:layout_width="@dimen/dp764"
+    android:layout_width="764dp"
     android:layout_height="466dp">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -29,8 +29,8 @@
         android:layout_height="match_parent">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_long_keys"
-            android:layout_width="@dimen/dp744"
-            android:layout_height="@dimen/dp372"
+            android:layout_width="744dp"
+            android:layout_height="372dp"
             android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 </LinearLayout>

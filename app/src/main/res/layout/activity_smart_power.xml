@@ -102,7 +102,7 @@
         android:paddingEnd="1px">
         <SeekBar
             android:id="@+id/seekBar"
-            android:layout_width="@dimen/dp895"
+            android:layout_width="895dp"
             android:layout_height="46dp"
             android:layout_marginTop="20dp"
             android:max="4"

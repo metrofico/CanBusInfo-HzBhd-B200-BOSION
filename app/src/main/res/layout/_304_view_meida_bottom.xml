@@ -19,8 +19,8 @@
             <ImageView
                 android:id="@+id/iv_wind_speed"
                 android:background="@drawable/_304_media_bottom_wind_bg"
-                android:layout_width="@dimen/dp124"
-                android:layout_height="@dimen/dp124"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/_304_level_list_wind_speed"
                 android:layout_centerHorizontal="true"/>
@@ -86,8 +86,8 @@
             <ImageView
                 android:id="@+id/iv_meida"
                 android:background="@drawable/_304_media_bottom_media_bg"
-                android:layout_width="@dimen/dp124"
-                android:layout_height="@dimen/dp124"
+                android:layout_width="124dp"
+                android:layout_height="124dp"
                 android:layout_marginBottom="16dp"
                 android:layout_centerHorizontal="true"/>
             <View

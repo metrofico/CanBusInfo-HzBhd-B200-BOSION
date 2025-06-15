@@ -5,8 +5,8 @@
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/iv_panoramic"
-        android:layout_width="@dimen/dp166"
-        android:layout_height="@dimen/dp176"
+        android:layout_width="166dp"
+        android:layout_height="176dp"
         android:src="@drawable/_304_selector_panoramic"
         android:layout_centerInParent="true"/>
     <TextView

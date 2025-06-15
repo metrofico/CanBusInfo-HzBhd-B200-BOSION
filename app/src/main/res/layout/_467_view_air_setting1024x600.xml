@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:bhd="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <LinearLayout
@@ -7,7 +8,8 @@
         android:id="@+id/out_view_lin"
         android:background="@color/white"
         android:layout_width="420px"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
         <TextView
             android:textSize="26px"
             android:gravity="center_vertical"
@@ -170,7 +172,8 @@
         android:background="@color/white"
         android:visibility="gone"
         android:layout_width="560px"
-        android:layout_height="294dp">
+        android:layout_height="294dp"
+        tools:ignore="MissingConstraints">
         <LinearLayout
             android:gravity="center_horizontal"
             android:layout_gravity="center"
@@ -187,7 +190,7 @@
                     android:gravity="center"
                     android:id="@+id/time_day"
                     android:background="@drawable/__439__kongt_shuchuk_3"
-                    android:layout_width="@dimen/dp189"
+                    android:layout_width="189dp"
                     android:layout_height="42dp"
                     android:text="@string/_439_time_tobay"/>
                 <LinearLayout
@@ -201,7 +204,7 @@
                         android:textColor="@color/black"
                         android:gravity="center"
                         android:id="@+id/time_today"
-                        android:layout_width="@dimen/dp189"
+                        android:layout_width="189dp"
                         android:layout_height="42dp"
                         android:text="@string/_439_time_tobay"
                         bhd:n="@drawable/transparent"
@@ -216,7 +219,7 @@
                         android:textColor="@color/black"
                         android:gravity="center"
                         android:id="@+id/time_tomorrow"
-                        android:layout_width="@dimen/dp189"
+                        android:layout_width="189dp"
                         android:layout_height="42dp"
                         android:text="@string/_439_time_tomorrow"
                         bhd:n="@drawable/transparent"
@@ -235,7 +238,7 @@
                 android:gravity="center"
                 android:id="@+id/time_hour"
                 android:background="@drawable/__439__kongt_shuchuk"
-                android:layout_width="@dimen/dp94_5"
+                android:layout_width="94.5dp"
                 android:layout_height="42dp"
                 android:hint="0-24H"
                 android:inputType="number"
@@ -257,7 +260,7 @@
                 android:gravity="center"
                 android:id="@+id/time_minute"
                 android:background="@drawable/__439__kongt_shuchuk"
-                android:layout_width="@dimen/dp94_5"
+                android:layout_width="94.5dp"
                 android:layout_height="42dp"
                 android:hint="0-60Min"
                 android:inputType="number"

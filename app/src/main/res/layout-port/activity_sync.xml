@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:id="@+id/ford_sync_left_icon"
         android:background="@color/select_protocol_company_color_1"
-        android:layout_width="@dimen/dp179"
+        android:layout_width="179dp"
         android:layout_height="match_parent"/>
     <RelativeLayout
         android:id="@+id/rl_right_area"
@@ -28,7 +28,7 @@
             android:layout_centerHorizontal="true"/>
         <include
             android:id="@+id/ford_sync_info_list"
-            android:layout_width="@dimen/dp509"
+            android:layout_width="509dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_centerHorizontal="true"

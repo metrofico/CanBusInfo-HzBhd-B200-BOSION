@@ -11,7 +11,7 @@
         android:gravity="center"
         android:id="@+id/ic_navi"
         android:background="@drawable/__82__selector_navigation_top"
-        android:layout_width="@dimen/dp198"
+        android:layout_width="198dp"
         android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
@@ -20,7 +20,7 @@
         android:gravity="center"
         android:id="@+id/ic_radio"
         android:background="@drawable/__82__selector_radio_top"
-        android:layout_width="@dimen/dp198"
+        android:layout_width="198dp"
         android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
@@ -29,7 +29,7 @@
         android:gravity="center"
         android:id="@+id/ic_phone"
         android:background="@drawable/__82__selector_bluetooth_top"
-        android:layout_width="@dimen/dp198"
+        android:layout_width="198dp"
         android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
@@ -38,7 +38,7 @@
         android:gravity="center"
         android:id="@+id/ic_media"
         android:background="@drawable/__82__selector_mmx_top"
-        android:layout_width="@dimen/dp198"
+        android:layout_width="198dp"
         android:layout_height="84dp"
         android:singleLine="true"/>
     <TextView
@@ -47,7 +47,7 @@
         android:gravity="center"
         android:id="@+id/ic_setting"
         android:background="@drawable/__82__selector_set_top"
-        android:layout_width="@dimen/dp198"
+        android:layout_width="198dp"
         android:layout_height="84dp"
         android:singleLine="true"/>
 </LinearLayout>

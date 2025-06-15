@@ -8,7 +8,7 @@
         android:id="@+id/gm_onstar_left_bg"
         android:background="@drawable/gm_onstar_left_bg"
         android:layout_width="302dp"
-        android:layout_height="@dimen/dp494">
+        android:layout_height="494dp">
         <TextView
             android:id="@+id/gm_onstar_mute_icon"
             android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
     <RelativeLayout
         android:id="@+id/gm_onstar_input_bg"
         android:background="@drawable/gm_onstar_input_bg"
-        android:layout_width="@dimen/dp686"
+        android:layout_width="686dp"
         android:layout_height="77dp"
         android:layout_toRightOf="@+id/gm_onstar_left_bg"
         android:layout_alignTop="@+id/gm_onstar_left_bg">
@@ -128,7 +128,7 @@
             android:textColor="@android:color/white"
             android:gravity="right"
             android:id="@+id/gm_onstar_input"
-            android:layout_width="@dimen/dp554"
+            android:layout_width="554dp"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
             android:singleLine="true"
@@ -139,7 +139,7 @@
         android:gravity="center_vertical"
         android:id="@+id/gm_onstar_keyboard_bg"
         android:background="@drawable/shape_onstar_remain_time_frame"
-        android:layout_width="@dimen/dp686"
+        android:layout_width="686dp"
         android:layout_height="410dp"
         android:layout_toRightOf="@+id/gm_onstar_left_bg"
         android:layout_alignBottom="@+id/gm_onstar_left_bg">

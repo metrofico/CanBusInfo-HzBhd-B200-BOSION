@@ -8,8 +8,8 @@
         android:orientation="vertical"
         android:id="@+id/id_seat_status_Layout"
         android:background="@color/comm_bg"
-        android:layout_width="@dimen/dp633"
-        android:layout_height="@dimen/dp391">
+        android:layout_width="633dp"
+        android:layout_height="391dp">
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">

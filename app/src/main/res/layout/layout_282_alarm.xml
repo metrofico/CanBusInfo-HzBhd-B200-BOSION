@@ -4,8 +4,8 @@
     android:layout_height="match_parent">
     <RelativeLayout
         android:background="#373737"
-        android:layout_width="@dimen/dp512"
-        android:layout_height="@dimen/dp316"
+        android:layout_width="512dp"
+        android:layout_height="316dp"
         android:layout_centerInParent="true">
         <TextView
             android:textSize="32dp"
