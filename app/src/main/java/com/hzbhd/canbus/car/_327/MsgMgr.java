@@ -60,7 +60,7 @@ public class MsgMgr extends AbstractMsgMgr {
     private String[] arr1 = new String[10];
     private String[] arr2 = new String[10];
     private String[] arr3 = new String[10];
-    int nowYear = PathInterpolatorCompat.MAX_NUM_POINTS;
+    int nowYear = 3000;
     int nowMonth = 13;
     int nowDay = 32;
     int nowHours = 24;
@@ -216,34 +216,34 @@ public class MsgMgr extends AbstractMsgMgr {
         } else if (i != 56) {
             if (i != 57) {
                 switch (i) {
-                    case 32:
+                    case 0x20:
                         set0x20WheelKey(context);
                         break;
-                    case 33:
+                    case 0x21:
                         set0x21AirInfo(context);
                         break;
-                    case 34:
+                    case 0x22:
                         set0x22RearRadarInfo();
                         break;
-                    case 35:
+                    case 0x23:
                         set0x23FrontRadarInfo();
                         break;
-                    case 36:
+                    case 0x24:
                         set0x24BaseInfo();
                         break;
-                    case 37:
+                    case 0x25:
                         set0x25RearRadarInfo();
                         break;
-                    case 38:
+                    case 0x26:
                         set0x26FrontRadarInfo();
                         break;
-                    case 39:
+                    case 0x27:
                         set0x27OutDoorTemperature(context);
                         break;
-                    case 40:
+                    case 0x28:
                         set0x28TrackData();
                         break;
-                    case 41:
+                    case 0x29:
                         set0x29TrackData();
                         break;
                     default:
@@ -285,7 +285,6 @@ public class MsgMgr extends AbstractMsgMgr {
     // com.hzbhd.canbus.msg_mgr.AbstractMsgMgr, com.hzbhd.canbus.interfaces.MsgMgrInterface
     public void voiceControlInfo(String str) {
         super.voiceControlInfo(str);
-        str.hashCode();
         if (str.equals("skylight.open")) {
             sendVoiceMsg(0, true);
         } else if (str.equals("skylight.close")) {

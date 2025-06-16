@@ -194,7 +194,7 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
     }
 
     @Override // com.hzbhd.canbus.interfaces.MsgMgrInterface
-    public void canbusInfoChange(Context context, byte[] bArr) {
+    public void canbusInfoChange(Context context, byte[] message) {
     }
 
     @Override // com.hzbhd.canbus.interfaces.MsgMgrInterface

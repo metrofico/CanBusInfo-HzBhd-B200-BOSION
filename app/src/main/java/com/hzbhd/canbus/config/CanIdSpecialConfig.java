@@ -8,9 +8,9 @@ import java.util.Arrays;
 /* loaded from: classes2.dex */
 public class CanIdSpecialConfig {
     private static int[] uiDifferentId = {283, 291, 206, 436};
-    private static int[] have_SpeechModule_ID = {283, MpegConstantsDef.MPEG_INFO_SUBTITLE_CFM, 439, 455, HotKeyConstant.K_1_PICKUP};
+    private static int[] have_SpeechModule_ID = {283, 163, 439, 455, 467};
     private static int[] canType = {446};
-    private static int[] supplement0x00InCanDataEndList = {HotKeyConstant.K_DOWN_HANGUP};
+    private static int[] supplement0x00InCanDataEndList = {466};
 
     public static boolean isNewVoiceCanID(int i) {
         return contains(uiDifferentId, i);

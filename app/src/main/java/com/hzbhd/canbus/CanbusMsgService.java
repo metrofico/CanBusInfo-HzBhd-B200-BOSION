@@ -67,38 +67,38 @@ public class CanbusMsgService extends Service {
     private final HandlerThread mHandlerThread;
     private SpeechReceiver mSpeechReceiver;
     private final Binder myBinder = new Binder();
-    byte[] lengthEnoughArray = new byte[20];
+    byte[] lengthEnoughArray = new byte[ENOUGH_LENGTH];
     private final IMCUCanBoxControlListener mCanBoxControlListener = new IMCUCanBoxControlListener() { // from class: com.hzbhd.canbus.CanbusMsgService.3
         @Override // com.hzbhd.proxy.mcu.core.IMCUCanBoxControlListener
         public void notifyCanboxData(int i, byte[] bArr) {
             Log.d(CanbusMsgService.TAG, "<notifyCanboxData> " + i + ": " + FgeString.bytes2HexString(bArr, bArr.length));
             if (161 == i) {
                 Message message = new Message();
-                message.what = 7;
+                message.what = MSG_MCU_ERROR_DATA;
                 message.obj = bArr;
                 CanbusMsgService.this.mHandler.sendMessage(message);
             }
             if (167 == i) {
                 Message message2 = new Message();
-                message2.what = 1;
+                message2.what = MSG_CANBOX_DATA;
                 message2.obj = bArr;
                 CanbusMsgService.this.mHandler.sendMessage(message2);
             }
             if (167 == i && bArr[0] == 91) {
                 Message message3 = new Message();
-                message3.what = 4;
+                message3.what = MSG_SERIAL_DATA;
                 message3.obj = bArr;
                 CanbusMsgService.this.mHandler.sendMessage(message3);
             }
             if (167 == i && bArr[0] == 92) {
                 Message message4 = new Message();
-                message4.what = 5;
+                message4.what = MSG_LIN_DATA;
                 message4.obj = bArr;
                 CanbusMsgService.this.mHandler.sendMessage(message4);
             }
             if (167 == i && bArr[0] == 93) {
                 Message message5 = new Message();
-                message5.what = 6;
+                message5.what = MSG_MEDIAN_CALIBRATION;
                 message5.obj = bArr;
                 CanbusMsgService.this.mHandler.sendMessage(message5);
             }
@@ -140,37 +140,37 @@ public class CanbusMsgService extends Service {
             @Override // android.os.Handler
             public void handleMessage(Message message) {
                 switch (message.what) {
-                    case 1:
+                    case MSG_CANBOX_DATA:
                         CanbusMsgService.this.canbusInfoChange((byte[]) message.obj);
                         break;
-                    case 2:
+                    case MSG_STATUS_REVERSE:
                         int i = message.arg1;
                         break;
-                    case 3:
+                    case ON_MCU_CONECT:
                         if (CanbusMsgService.this.getMsgMgrInterface() != null) {
                             Log.d("CAN_STATE", "Time to shake hands");
                             CanbusMsgService.this.getMsgMgrInterface().onHandshake(CanbusMsgService.this);
                             break;
                         }
                         break;
-                    case 4:
+                    case MSG_SERIAL_DATA:
                         CanbusMsgService.this.serialDataChange((byte[]) message.obj);
                         break;
-                    case 5:
+                    case MSG_LIN_DATA:
                         if (CanbusMsgService.this.getMsgMgrInterface() != null) {
                             Log.d("Lin_Bus", "Lin bus data change");
                             CanbusMsgService.this.getMsgMgrInterface().linInfoChange(CanbusMsgService.this, (byte[]) message.obj);
                             break;
                         }
                         break;
-                    case 6:
+                    case MSG_MEDIAN_CALIBRATION:
                         if (CanbusMsgService.this.getMsgMgrInterface() != null) {
                             Log.d("MedianCalibration", "Median calibration data change!");
                             CanbusMsgService.this.getMsgMgrInterface().medianCalibration(CanbusMsgService.this, (byte[]) message.obj);
                             break;
                         }
                         break;
-                    case 7:
+                    case MSG_MCU_ERROR_DATA:
                         if (CanbusMsgService.this.getMsgMgrInterface() != null) {
                             CanbusMsgService.this.getMsgMgrInterface().mcuErrorState(CanbusMsgService.this, (byte[]) message.obj);
                             break;
@@ -324,7 +324,7 @@ public class CanbusMsgService extends Service {
 
     /* JADX INFO: Access modifiers changed from: private */
     public void bindBackCameraUiService(final Context context) {
-        context.bindService(new Intent(context, (Class<?>) BackCameraUiService.class), new ServiceConnection() { // from class: com.hzbhd.canbus.CanbusMsgService.2
+        context.bindService(new Intent(context, BackCameraUiService.class), new ServiceConnection() { // from class: com.hzbhd.canbus.CanbusMsgService.2
             @Override // android.content.ServiceConnection
             public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
                 if (componentName != null && iBinder != null) {
@@ -376,7 +376,7 @@ public class CanbusMsgService extends Service {
     }
 
     private void logCanData(byte[] bArr) {
-        if (((CanSettingProxy) Dependency.get(CanSettingProxy.class)).getCanDataLogSwith()) {
+        if (Dependency.get(CanSettingProxy.class).getCanDataLogSwith()) {
             String str = "A7 55————>";
             for (int i = 1; i < bArr.length; i++) {
                 String hexString = Integer.toHexString(convByte(bArr[i]));
@@ -448,7 +448,7 @@ public class CanbusMsgService extends Service {
             @Override // com.hzbhd.proxy.share.interfaces.IShareIntListener
             public void onInt(int i) {
                 Message message = new Message();
-                message.what = 2;
+                message.what = MSG_STATUS_REVERSE;
                 message.arg1 = i;
                 CanbusMsgService.this.mHandler.sendMessage(message);
             }

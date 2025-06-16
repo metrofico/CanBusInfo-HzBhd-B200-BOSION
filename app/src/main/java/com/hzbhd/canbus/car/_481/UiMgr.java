@@ -37,4 +37,8 @@ import java.util.List;
 
 public class UiMgr extends AbstractUiMgr {
 
+    public void CartypeSend() {
+        // CanbusMsgSender.sendMsg(new byte[]{22, -18, -112, (byte) SharePreUtil.getIntValue(this.mContext, this.CAR_TYPE, 0)});
+    }
+
 }
