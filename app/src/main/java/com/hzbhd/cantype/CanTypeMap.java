@@ -64,6 +64,7 @@ public class CanTypeMap {
                 put("Benz", new ArrayList<>(List.of(265)));
                 put("Changan", new ArrayList<>(Arrays.asList(284, 375)));
                 put("ZOTYE", new ArrayList<>(List.of(327)));
+                put("SWM", new ArrayList<>(List.of(481)));
                 put("HUANGHAI", new ArrayList<>(List.of(327)));
                 put("YEMA", new ArrayList<>(List.of(327)));
                 put("Landrover", new ArrayList<>(List.of(327)));

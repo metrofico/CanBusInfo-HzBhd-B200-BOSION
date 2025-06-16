@@ -45,25 +45,25 @@ public class CanTypeAllEntity implements Parcelable {
     public CanTypeAllEntity() {
     }
 
-    public CanTypeAllEntity(String str, String str2, String str3, String str4, String str5, String str6, String str7, String str8, int i, int i2, int i3, int i4, int i5, int i6, int i7, int i8, int i9, String str9) {
-        this.protocol_company = str;
-        this.car_category = str2;
-        this.car_model = str3;
-        this.years = str4;
-        this.english_protocol_company = str5;
-        this.english_car_category = str6;
-        this.english_car_model = str7;
-        this.english_years = str8;
-        this.can_type_id = i;
-        this.can_different_id = i2;
-        this.each_can_id = i3;
-        this.baud_rate = i4;
-        this.is_app_handle_key = i5;
-        this.pack_type = i6;
-        this.is_show_app = i7;
-        this.is_use_new_camera = i8;
-        this.is_use_new_app = i9;
-        this.description = str9;
+    public CanTypeAllEntity(String protocol_company, String car_category, String car_model, String years, String english_protocol_company, String english_car_category, String english_car_model, String english_years, int can_type_id, int can_different_id, int each_can_id, int baud_rate, int is_app_handle_key, int pack_type, int is_show_app, int is_use_new_camera, int is_use_new_app, String description) {
+        this.protocol_company = protocol_company;
+        this.car_category = car_category;
+        this.car_model = car_model;
+        this.years = years;
+        this.english_protocol_company = english_protocol_company;
+        this.english_car_category = english_car_category;
+        this.english_car_model = english_car_model;
+        this.english_years = english_years;
+        this.can_type_id = can_type_id;
+        this.can_different_id = can_different_id;
+        this.each_can_id = each_can_id;
+        this.baud_rate = baud_rate;
+        this.is_app_handle_key = is_app_handle_key;
+        this.pack_type = pack_type;
+        this.is_show_app = is_show_app;
+        this.is_use_new_camera = is_use_new_camera;
+        this.is_use_new_app = is_use_new_app;
+        this.description = description;
     }
 
     public CanTypeAllEntity(Parcel parcel) {

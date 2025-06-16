@@ -423,6 +423,12 @@
                 <car_model name="SWMG01" car_id="3" />
             </protocol>
         </car_category>
+        <car_category name="斯威蒙 SWM">
+            <protocol name="SWM-RZ-01-0008-B1" baud_rate="0" id="481" pack_type="5">
+                <car_model name="G01" car_id="1" />
+                <car_model name="G01F" car_id="2" />
+            </protocol>
+        </car_category>
         <car_category name="长安 Changan">
             <protocol name="CNP001_14~17CS75,18款逸动DT_V1.5_2018.10" baud_rate="0" id="421"
                 pack_type="5">

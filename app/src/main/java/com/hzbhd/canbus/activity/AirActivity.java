@@ -1,5 +1,6 @@
 package com.hzbhd.canbus.activity;
 
+import android.annotation.SuppressLint;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -73,6 +74,7 @@ public class AirActivity extends AbstractBaseActivity {
         this.mAirRearView = findViewById(R.id.air_rear);
     }
 
+    @SuppressLint("UnspecifiedRegisterReceiverFlag")
     private void initViews() {
         AirPageUiSet airUiSet = getUiMgrInterface(this).getAirUiSet(this);
         this.mSet = airUiSet;

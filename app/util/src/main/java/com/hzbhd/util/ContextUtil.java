@@ -24,7 +24,7 @@ public final class ContextUtil {
     private static final Lazy screenSize = LazyKt.lazy(new Function0<Point>() { // from class: com.hzbhd.util.ContextUtil$screenSize$2
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // kotlin.jvm.functions.Function0
-        public final Point invoke() {
+        public Point invoke() {
             return new Point(1920, 1080);
         }
     });
@@ -33,7 +33,7 @@ public final class ContextUtil {
     private static final Lazy maxSize = LazyKt.lazy(new Function0<PointF>() { // from class: com.hzbhd.util.ContextUtil$maxSize$2
         /* JADX WARN: Can't rename method to resolve collision */
         @Override // kotlin.jvm.functions.Function0
-        public final PointF invoke() {
+        public PointF invoke() {
             return new PointF(1920.0f, 1080.0f);
         }
     });
@@ -43,40 +43,39 @@ public final class ContextUtil {
     private ContextUtil() {
     }
 
-    public final Point getScreenSize() {
+    public Point getScreenSize() {
         return (Point) screenSize.getValue();
     }
 
-    public final PointF getMaxSize() {
+    public PointF getMaxSize() {
         return (PointF) maxSize.getValue();
     }
 
-    public final long getTextColor() {
+    public long getTextColor() {
         return textColor;
     }
 
-    public final void setTextColor(long j) {
+    public void setTextColor(long j) {
         textColor = j;
     }
 
-    public final int getTextSize() {
+    public int getTextSize() {
         return textSize;
     }
 
-    public final void setTextSize(int i) {
+    public void setTextSize(int i) {
         textSize = i;
     }
 
-    public final void init(Context context) {
-        Intrinsics.checkNotNullParameter(context, "context");
+    public void init(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences("share", 0);
-        Intrinsics.checkNotNullExpressionValue(sharedPreferences, "context.getSharedPrefere…e\", Context.MODE_PRIVATE)");
+
         ContextUtilKt.setBaseShare(sharedPreferences);
         ContextUtilKt.setBaseContext(context);
-        ((WindowManager) context.getSystemService(WindowManager.class)).getDefaultDisplay().getRealSize(getScreenSize());
+        context.getSystemService(WindowManager.class).getDefaultDisplay().getRealSize(getScreenSize());
     }
 
-    public final void setSize(int x, int y, int xMax, int yMax) {
+    public void setSize(int x, int y, int xMax, int yMax) {
         getScreenSize().x = x;
         getScreenSize().y = y;
         getMaxSize().x = xMax;

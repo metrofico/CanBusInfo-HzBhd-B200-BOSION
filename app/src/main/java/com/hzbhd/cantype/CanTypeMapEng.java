@@ -61,6 +61,7 @@ public final class CanTypeMapEng extends CanTypeMap {
                 put("Benz", new ArrayList<>(List.of(265)));
                 put("Changan", new ArrayList<>(Arrays.asList(284, 375)));
                 put("ZOTYE", new ArrayList<>(List.of(327)));
+                put("SWM", new ArrayList<>(List.of(481)));
                 put("HUANGHAI", new ArrayList<>(List.of(327)));
                 put("YEMA", new ArrayList<>(List.of(327)));
                 put("Landrover", new ArrayList<>(List.of(327)));
@@ -79,6 +80,7 @@ public final class CanTypeMapEng extends CanTypeMap {
                 put("Volvo", new ArrayList<>(List.of(374)));
                 put("ISUZU", new ArrayList<>(List.of(MsgMgr.RADIO_MODE)));
                 put("JMC", new ArrayList<>(List.of(MsgMgr.RADIO_MODE)));
+
             }});
             put("Simple", new LinkedHashMap<>() {{
                 put("Peugeot", new ArrayList<>(Arrays.asList(HotKeyConstant.K_AIR_WIND_INC, 263, 141)));

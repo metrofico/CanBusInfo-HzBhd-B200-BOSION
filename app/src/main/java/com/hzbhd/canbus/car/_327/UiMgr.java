@@ -50,7 +50,7 @@ public class UiMgr extends AbstractUiMgr {
     public static final String L7R0 = "Share_327_Settings_L7R0";
     private static CountDownTimer mCountDownTimer;
     public static int outWinState;
-    private Context mContext;
+    private final Context mContext;
     private MsgMgr mMsgMgr;
     SettingPageUiSet settingPageUiSet;
     private final Handler mHandler = new Handler(Looper.getMainLooper());
@@ -61,6 +61,7 @@ public class UiMgr extends AbstractUiMgr {
     int appointmentHours = 0;
     int appointmentMins = 0;
     String CAR_TYPE = CarImageView.CARTYPE_Main;
+    private final int IS_SWM_G01_EACH_CAN_ID = 25;
     OnAirTemperatureUpDownClickListener mOnUpDownClickListenerFrontLeft = new OnAirTemperatureUpDownClickListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.4
         @Override // com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener
         public void onClickUp() {
@@ -317,16 +318,15 @@ public class UiMgr extends AbstractUiMgr {
             }
         }
     };
-    private OnSettingItemClickListener mOnSettingItemClickListener = new OnSettingItemClickListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.16
+    private final OnSettingItemClickListener mOnSettingItemClickListener = new OnSettingItemClickListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.16
         @Override // com.hzbhd.canbus.interfaces.OnSettingItemClickListener
         public void onClickItem(int i, int i2) {
         }
     };
-    private OnSettingItemSelectListener mOnSettingItemSelectListener = new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.17
+    private final OnSettingItemSelectListener mOnSettingItemSelectListener = new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.17
         @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
         public void onClickItem(int i, int i2, int i3) {
             String titleSrn = UiMgr.this.settingPageUiSet.getList().get(i).getTitleSrn();
-            titleSrn.hashCode();
             switch (titleSrn) {
                 case "_327_setting_atmosphere_lamp":
                     if (i2 == 0) {
@@ -530,23 +530,73 @@ public class UiMgr extends AbstractUiMgr {
             }
         }
     };
-    private OnSettingItemSeekbarSelectListener mOnSettingItemSeekbarSelectListener = new OnSettingItemSeekbarSelectListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.18
-        /* JADX WARN: Can't fix incorrect switch cases order, some code will duplicate */
-        /* JADX WARN: Removed duplicated region for block: B:4:0x003f  */
-        @Override // com.hzbhd.canbus.interfaces.OnSettingItemSeekbarSelectListener
-        /*
-            Code decompiled incorrectly, please refer to instructions dump.
-            To view partially-correct code enable 'Show inconsistent code' option in preferences
-        */
-        public void onClickItem(int r12, int r13, int r14) {
-            /*
-                Method dump skipped, instructions count: 804
-                To view this dump change 'Code comments level' option to 'DEBUG'
-            */
-            throw new UnsupportedOperationException("Method not decompiled: com.hzbhd.canbus.car._327.UiMgr.AnonymousClass18.onClickItem(int, int, int):void");
+    private final OnSettingItemSeekbarSelectListener mOnSettingItemSeekbarSelectListener = new OnSettingItemSeekbarSelectListener() {
+
+        @Override
+        public void onClickItem(int n, int n2, int n3) {
+            String title = settingPageUiSet.getList().get(n).getTitleSrn();
+            String itemTitle = settingPageUiSet.getList().get(n).getItemList().get(n2).getTitleSrn();
+
+            switch (title) {
+                case "_327_setting_the_light_that_accompanies_me_home":
+                    if (!itemTitle.equals("_327_setting_the_light_that_accompanies_me_home"))
+                        return;
+
+                    int[] durations = {
+                            1000, 20000, 40000, 60000, 80000, 100000, 120000,
+                            140000, 160000, 180000, 200000, 220000, 240000,
+                            260000, 280000
+                    };
+
+                    if (n3 >= 0 && n3 < durations.length) {
+                        byte durationByte = (byte) (-128 + n3 + 1);
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -106, durationByte});
+                        MyCountDownTimer(n, n2, durations[n3], 1000);
+                    }
+                    break;
+
+                case "_327_Reserve_charging":
+                    switch (itemTitle) {
+                        case "_327_day_setting":
+                            appointmentDay = n3;
+                            break;
+                        case "_327_month_setting":
+                            appointmentMonth = n3;
+                            break;
+                        case "_327_Hours_setting":
+                            appointmentHours = n3;
+                            break;
+                        case "_327_branch_setting":
+                            appointmentMins = n3;
+                            break;
+                        case "_327_year_setting":
+                            appointmentYear = n3;
+                            break;
+                        default:
+                            return;
+                    }
+                    getmMsgMgr(mContext).updateAppointmentSettings(n, n2, n3);
+                    break;
+
+                case "_327_function_level_setting":
+                    if (itemTitle.equals("_327_Setting_SOC_target_value_of_charging_management")) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -75, (byte) n3});
+                    } else if (itemTitle.equals("_327_Energy_feedback_level")) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -96, (byte) n3});
+                    }
+                    break;
+
+                case "_327_setting_atmosphere_lamp":
+                    CanbusMsgSender.sendMsg(new byte[]{22, -58, -107, (byte) n3});
+                    break;
+
+                default:
+                    // No acción si el título no coincide
+                    break;
+            }
         }
     };
-    private OnConfirmDialogListener confirmDialogListener = new OnConfirmDialogListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.19
+    private final OnConfirmDialogListener confirmDialogListener = new OnConfirmDialogListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.19
         @Override // com.hzbhd.canbus.interfaces.OnConfirmDialogListener
         public void onConfirmClick(int i, int i2) {
             UiMgr uiMgr = UiMgr.this;
@@ -563,8 +613,8 @@ public class UiMgr extends AbstractUiMgr {
             }
         }
     };
-    private int differentCanId = getCurrentCarId();
-    private int eachCanId = getEachId();
+    private final int differentCanId = getCurrentCarId();
+    private final int eachCanId = getEachId();
 
     public UiMgr(Context context) {
         this.mContext = context;
@@ -731,7 +781,7 @@ public class UiMgr extends AbstractUiMgr {
         CanbusMsgSender.sendMsg(new byte[]{22, -57, (byte) i, 0, 0, 0, 0, 0});
         this.mHandler.postDelayed(new Runnable() { // from class: com.hzbhd.canbus.car._327.UiMgr$$ExternalSyntheticLambda1
             @Override // java.lang.Runnable
-            public final void run() {
+            public void run() {
                 CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, 0, 0});
             }
         }, 100L);
@@ -742,7 +792,7 @@ public class UiMgr extends AbstractUiMgr {
         CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, (byte) i, 0, 0, 0, 0});
         this.mHandler.postDelayed(new Runnable() { // from class: com.hzbhd.canbus.car._327.UiMgr$$ExternalSyntheticLambda2
             @Override // java.lang.Runnable
-            public final void run() {
+            public void run() {
                 CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, 0, 0});
             }
         }, 100L);
@@ -753,7 +803,7 @@ public class UiMgr extends AbstractUiMgr {
         CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, (byte) i, 0, 0, 0});
         this.mHandler.postDelayed(new Runnable() { // from class: com.hzbhd.canbus.car._327.UiMgr$$ExternalSyntheticLambda5
             @Override // java.lang.Runnable
-            public final void run() {
+            public void run() {
                 CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, 0, 0});
             }
         }, 100L);
@@ -764,7 +814,7 @@ public class UiMgr extends AbstractUiMgr {
         CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, (byte) i, 0, 0});
         this.mHandler.postDelayed(new Runnable() { // from class: com.hzbhd.canbus.car._327.UiMgr$$ExternalSyntheticLambda0
             @Override // java.lang.Runnable
-            public final void run() {
+            public void run() {
                 CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, 0, 0});
             }
         }, 100L);
@@ -775,7 +825,7 @@ public class UiMgr extends AbstractUiMgr {
         CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, (byte) i, 0});
         this.mHandler.postDelayed(new Runnable() { // from class: com.hzbhd.canbus.car._327.UiMgr$$ExternalSyntheticLambda3
             @Override // java.lang.Runnable
-            public final void run() {
+            public void run() {
                 CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, 0, 0});
             }
         }, 100L);
@@ -786,13 +836,12 @@ public class UiMgr extends AbstractUiMgr {
         CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, 0, (byte) i});
         this.mHandler.postDelayed(new Runnable() { // from class: com.hzbhd.canbus.car._327.UiMgr$$ExternalSyntheticLambda4
             @Override // java.lang.Runnable
-            public final void run() {
+            public void run() {
                 CanbusMsgSender.sendMsg(new byte[]{22, -57, 0, 0, 0, 0, 0, 0});
             }
         }, 100L);
     }
 
-    /* JADX INFO: Access modifiers changed from: private */
     public MsgMgr getmMsgMgr(Context context) {
         if (this.mMsgMgr == null) {
             this.mMsgMgr = (MsgMgr) MsgMgrFactory.getCanMsgMgr(context);
@@ -821,7 +870,7 @@ public class UiMgr extends AbstractUiMgr {
             @Override // android.os.CountDownTimer
             public void onTick(long j) {
                 UiMgr uiMgr = UiMgr.this;
-                uiMgr.getmMsgMgr(uiMgr.mContext).countDownTimeUpdateSettings(i, i2, Long.valueOf((j / 1000) + 1));
+                uiMgr.getmMsgMgr(uiMgr.mContext).countDownTimeUpdateSettings(i, i2, (j / 1000) + 1);
             }
 
             @Override // android.os.CountDownTimer

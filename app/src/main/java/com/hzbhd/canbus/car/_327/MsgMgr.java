@@ -1441,8 +1441,8 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     public void countDownTimeUpdateSettings(int i, int i2, Long l) {
-        ArrayList arrayList = new ArrayList();
-        if (l.longValue() == 1) {
+        ArrayList<SettingUpdateEntity> arrayList = new ArrayList<>();
+        if (l == 1) {
             arrayList.add(new SettingUpdateEntity(i, i2 - 1, 0));
             arrayList.add(new SettingUpdateEntity(i, i2, "OFF"));
         } else {
