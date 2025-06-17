@@ -6,7 +6,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.widget.SeekBar;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.util.LogUtil;
 
 

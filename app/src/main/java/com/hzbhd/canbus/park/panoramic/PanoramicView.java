@@ -10,7 +10,7 @@ import android.widget.RelativeLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.PanoramiceBtnLvAdapter;
 import com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;

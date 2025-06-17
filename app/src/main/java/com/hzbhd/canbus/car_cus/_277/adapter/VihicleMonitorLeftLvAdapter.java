@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.car_cus._277.ui_set.VehicleMonitorPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;
 

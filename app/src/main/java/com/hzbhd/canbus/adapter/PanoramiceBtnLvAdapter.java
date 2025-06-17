@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.interfaces.OnPanoramicItemClickListener;
 import com.hzbhd.canbus.ui_set.ParkPageUiSet;
 import com.hzbhd.canbus.util.CommUtil;

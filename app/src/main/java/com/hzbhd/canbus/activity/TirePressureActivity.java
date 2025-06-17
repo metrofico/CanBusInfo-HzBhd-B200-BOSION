@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.TireInfoLvAdapter;
 import com.hzbhd.canbus.entity.TireUpdateEntity;
 import com.hzbhd.canbus.interfaces.OnTirePageStatusListener;

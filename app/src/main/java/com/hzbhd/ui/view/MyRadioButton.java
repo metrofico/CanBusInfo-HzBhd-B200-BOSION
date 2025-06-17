@@ -12,7 +12,7 @@ import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.RadioButton;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.util.LogUtil;
 
 

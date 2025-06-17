@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.hzbhd"
+    namespace = "com.hzbhd.canbus"
     compileSdk = 35
 
     buildFeatures {
@@ -11,11 +11,12 @@ android {
         buildConfig = true // Habilita la generación de BuildConfig
     }
     defaultConfig {
-        applicationId = "com.hzbhd"
+        applicationId = "com.hzbhd.canbus"
         minSdk = 28
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        //noinspection HighAppVersionCode
+        versionCode = 2024031119
+        versionName = "20240311-1942"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         ndk {
@@ -40,6 +41,12 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+    applicationVariants.all {
+        outputs.all {
+            val outputImpl = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+            outputImpl.outputFileName = "CanBusInfo.apk"
+        }
     }
 }
 

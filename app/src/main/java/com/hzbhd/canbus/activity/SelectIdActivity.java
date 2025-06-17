@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.SelectCanTypeIdAdapter;
 import com.hzbhd.canbus.adapter.bean.CanTypeAllEntity;
 import com.hzbhd.canbus.comm.MyApplication;

@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._309;
 
 import android.content.Context;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.PanelKeyActivity;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.comm.Constant;

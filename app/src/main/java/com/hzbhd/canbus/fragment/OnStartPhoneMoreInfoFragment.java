@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.OnStarActivity;
 import com.hzbhd.canbus.interfaces.OnOnStarPhoneMoreInfoClickListener;
 import com.hzbhd.canbus.ui_datas.GeneralOnStartData;

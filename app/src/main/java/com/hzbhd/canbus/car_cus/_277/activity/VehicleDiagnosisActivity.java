@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.car_cus._277.DialogUtil;
 import com.hzbhd.canbus.car_cus._277.adapter.VehicleDiagnosisLeftLvAdapter;

@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.text.TextUtils;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;

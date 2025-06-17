@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Handler;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.SettingActivity;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;

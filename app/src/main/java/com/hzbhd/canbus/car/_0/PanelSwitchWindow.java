@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.car._0.CheckItemView2;
 import com.hzbhd.ui.util.BaseUtil;
 

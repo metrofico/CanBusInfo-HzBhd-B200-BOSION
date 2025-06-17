@@ -8,7 +8,7 @@ import android.os.Looper;
 import android.provider.Settings;
 import android.util.AttributeSet;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 
 public final class DoubleChangeColorView extends ColorView {

@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 
 public final class ViewDrawAble implements BhdViewUtil.ViewUtilListener {

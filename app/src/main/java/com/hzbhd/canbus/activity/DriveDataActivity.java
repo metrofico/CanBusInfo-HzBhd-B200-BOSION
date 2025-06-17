@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.viewpager.widget.ViewPager;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.DriveDataPvAdapter;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;

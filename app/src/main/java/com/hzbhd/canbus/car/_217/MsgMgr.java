@@ -1,7 +1,7 @@
 package com.hzbhd.canbus.car._217;
 
 import android.content.Context;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;

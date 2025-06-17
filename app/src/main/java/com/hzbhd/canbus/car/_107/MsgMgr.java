@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._107;
 import android.content.Context;
 import android.content.res.Resources;
 import android.util.SparseArray;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
 import com.hzbhd.canbus.entity.PanoramicBtnUpdateEntity;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;

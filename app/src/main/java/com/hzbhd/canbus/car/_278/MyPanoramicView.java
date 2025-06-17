@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {

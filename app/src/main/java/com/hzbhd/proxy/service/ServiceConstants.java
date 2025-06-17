@@ -19,7 +19,7 @@ public class ServiceConstants {
     public static final String BrightnessChangeAction = "com.hzbhd.action.brightnesschange";
     public static final String CANBOX_VERSION = "canbox_version";
     public static final String CAR_SYSTEM_ACTION = "CAR.SYSTEM.ACTION";
-    public static final String COMMON_RECEIVER_ACTION = "com.hzbhd.receiver.CommonReceiver";
+    public static final String COMMON_RECEIVER_ACTION = "com.hzbhd.canbus.Receiver.CommonReceiver";
     public static final String ClassName_Flag = "ClassName";
     public static final String Class_Easyconn = "net.easyconn.WelcomeActivity";
     public static final String Class_Phonemirror = "cn.manstep.phonemirror.MainActivity";
@@ -65,7 +65,7 @@ public class ServiceConstants {
     public static final String Package_Easyconn = "net.easyconn";
     public static final String Package_Phonemirror = "cn.manstep.phonemirror";
     public static final String Protocol_version = "AN6Q01.0000.0003";
-    public static final String RESETSYSTEM_ACTION = "com.hzbhd.resetsystemAction";
+    public static final String RESETSYSTEM_ACTION = "com.hzbhd.canbus.ResetsystemAction";
     public static final String RequestCurSourceAction = "com.hzbhd.intent.action.requestcursource";
     public static final String SAVED_SOURCE_PRE = "saved_source";
     public static final String SD_INSERT_ACTION = "com.hzbhd.action.sdinsert";

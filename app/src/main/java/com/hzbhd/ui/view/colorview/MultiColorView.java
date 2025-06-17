@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 
 @SuppressLint("AppCompatCustomView")

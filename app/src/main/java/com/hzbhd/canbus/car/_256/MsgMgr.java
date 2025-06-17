@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.Log;
 
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.util.Util;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;

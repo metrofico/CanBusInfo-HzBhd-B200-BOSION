@@ -1,5 +1,8 @@
 package com.hzbhd.canbus.vm;
 
+import android.util.Log;
+
+import androidx.annotation.NonNull;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStore;
@@ -15,19 +18,49 @@ import com.hzbhd.ui.util.BaseUtil;
 
 public class Vm extends BaseViewModel {
 
-    private static Vm vmInstance;
+    // Instancia singleton
+    private static Vm instance;
 
-    private final CanBusData data = new CanBusData(this);
-    private final CanBusAction action = new CanBusAction(this);
-    private final ReverseListener reverseListener = new ReverseListener();
-    private final ReverseMainView reverseMainView = new ReverseMainView(BaseUtil.INSTANCE.getContext());
+    // Singleton seguro para hilos
+    public static Vm getVm() {
+        if (instance == null) {
+            // Crear el ViewModelStoreOwner
+            ViewModelStoreOwner vmOwner = createViewModelStoreOwner();
 
-    // Static block to initialize the ViewModel instance
-    static {
-        vmInstance = createVmInstance();
+            // Obtener la clase dinámica del ViewModel
+            Class<? extends Vm> vmClass = getVmClass();
+            Vm createdVm = new ViewModelProvider(vmOwner, new ViewModelProvider.Factory() {
+                @NonNull
+                @Override
+                public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
+                    try {
+                        return modelClass.newInstance();
+                    } catch (Exception e) {
+                        throw new RuntimeException("Cannot create ViewModel instance", e);
+                    }
+                }
+            }).get(vmClass);
+            instance = createdVm;
+        }
+        return instance;
     }
 
-    // Getter methods for data, action, reverseListener, and reverseMainView
+    // Componentes del ViewModel
+    private final CanBusData data;
+    private final CanBusAction action;
+    private final ReverseListener reverseListener;
+    private ReverseMainView reverseMainView;
+
+
+    public Vm() {
+        this.data = new CanBusData(this);
+        this.action = new CanBusAction(this);
+        this.reverseListener = new ReverseListener();
+
+        // La creación de ReverseMainView se pospone hasta que se necesite
+    }
+
+    // Métodos de acceso a los componentes
     public CanBusData getData() {
         return data;
     }
@@ -41,39 +74,47 @@ public class Vm extends BaseViewModel {
     }
 
     public ReverseMainView getReverseMainView() {
+        if (reverseMainView == null) {
+            initializeReverseMainView();
+        }
         return reverseMainView;
     }
 
-    // Static method to retrieve or create the ViewModel instance
-    public static Vm getVm() {
-        return vmInstance;
+    // Inicialización segura de ReverseMainView
+    private void initializeReverseMainView() {
+        if (BaseUtil.INSTANCE.getContext() != null) {
+            reverseMainView = new ReverseMainView(BaseUtil.INSTANCE.getContext());
+        } else {
+            throw new IllegalStateException("Context is not available for ReverseMainView");
+        }
     }
 
-    // Static method to create the Vm instance using ViewModelProvider
-    private static Vm createVmInstance() {
-        ViewModelStoreOwner vmOwner = new ViewModelStoreOwner() {
-            private final ViewModelStore mViewModelStore = new ViewModelStore();
 
+    // Crea un ViewModelStoreOwner para la instancia estática
+    private static ViewModelStoreOwner createViewModelStoreOwner() {
+        return new ViewModelStoreOwner() {
+            private final ViewModelStore viewModelStore = new ViewModelStore();
+
+            @NonNull
             @Override
             public ViewModelStore getViewModelStore() {
-                return mViewModelStore;
+                return viewModelStore;
             }
         };
-
-        // Use ViewModelProvider to get an instance of the Vm class
-        ViewModelProvider provider = new ViewModelProvider(vmOwner);
-        Class<? extends ViewModel> vmClass = getVmClass();
-        return (Vm) provider.get(vmClass);
     }
 
-    // Method to dynamically retrieve the Vm class based on the UI ID
-    private static Class<? extends BaseViewModel> getVmClass() {
+    // Obtiene dinámicamente la clase del ViewModel
+    private static Class<? extends Vm> getVmClass() {
+        Log.d("Vm.java", "getVmClass() " + UI.INSTANCE.getUIId());
+        String className = "com.hzbhd.canbus.vm" + UI.INSTANCE.getUIId() + ".VM";
         try {
-            String className = "com.hzbhd.canbus.vm." + UI.INSTANCE.getUIId() + ".VM";
-            return (Class<? extends BaseViewModel>) Class.forName(className);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-            return Vm.class; // Fallback to Vm class if dynamic class loading fails
+            Class<?> clazz = Class.forName(className);
+            if (Vm.class.isAssignableFrom(clazz)) {
+                return (Class<? extends Vm>) clazz;
+            }
+        } catch (Exception e) {
+            Log.e("Vm.java", "Error al cargar la clase dinámica: " + className, e);
         }
+        return Vm.class;
     }
 }

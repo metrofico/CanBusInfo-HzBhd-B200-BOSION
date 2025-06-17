@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._123;
 import android.content.Context;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.activity.AmplifierActivity;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;

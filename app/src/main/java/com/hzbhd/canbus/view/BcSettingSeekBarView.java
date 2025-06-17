@@ -9,7 +9,7 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 /* loaded from: classes2.dex */
 public class BcSettingSeekBarView extends RelativeLayout {

@@ -9,7 +9,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.AirActivity;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.bean.RearArea;

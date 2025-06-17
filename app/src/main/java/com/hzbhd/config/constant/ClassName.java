@@ -73,7 +73,7 @@ public class ClassName {
     public static final String bhd_ui_image = "com.hzbhd.ui.activity.ImageActivity";
     public static final String bhd_ui_modencall = "com.hzbhd.ui.modem.call.MainActivity";
     public static final String bhd_ui_music = "com.hzbhd.ui.activity.MusicActivity";
-    public static final String bhd_ui_radio = "com.hzbhd.radioui.RadioMainActivity";
+    public static final String bhd_ui_radio = "com.hzbhd.canbus.Radioui.RadioMainActivity";
     public static final String bhd_ui_sxm = "com.hzbhd.siriusxm.ui.SiriusXMActivity";
     public static final String bhd_ui_video = "com.hzbhd.ui.activity.VideoActivity";
     public static final String bhd_wireless_q_link = "com.example.carlink.autoplay.MainActivity";

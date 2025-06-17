@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.util.HzbhdComponentName;
 import com.hzbhd.canbus.comm.Config;
 import com.hzbhd.canbus.util.LogUtil;

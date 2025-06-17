@@ -10,7 +10,7 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.entity.SyncListUpdateEntity;
 import com.hzbhd.canbus.entity.SyncSoftKeyUpdateEntity;
 import com.hzbhd.canbus.interfaces.OnSyncItemClickListener;

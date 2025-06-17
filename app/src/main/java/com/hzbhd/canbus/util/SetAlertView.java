@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 /* loaded from: classes2.dex */
 public class SetAlertView {

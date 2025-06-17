@@ -36,7 +36,7 @@ public class CrashReportUtils {
     public static final String PACKAGENAME_EQ = "com.hzbhd.eq";
     public static final String PACKAGENAME_LAUNCHER = "com.android.launcher3";
     public static final String PACKAGENAME_MEDIA = "com.hzbhd.media";
-    public static final String PACKAGENAME_RADIO = "com.hzbhd.radio";
+    public static final String PACKAGENAME_RADIO = "com.hzbhd.canbus.Radio";
     public static final String PACKAGENAME_SETTING = "com.android.settings";
     public static final String PACKAGENAME_SWC = "com.hzbhd.swc";
     public static final String PACKAGENAME_SYSTEMUI = "com.android.systemui";
@@ -79,7 +79,7 @@ public class CrashReportUtils {
             case "com.hzbhd.media":
                 initCrashReport(context, BUGLY_APPID_MEDIA);
                 break;
-            case "com.hzbhd.radio":
+            case "com.hzbhd.canbus.Radio":
                 initCrashReport(context, BUGLY_APPID_RADIO);
                 break;
         }

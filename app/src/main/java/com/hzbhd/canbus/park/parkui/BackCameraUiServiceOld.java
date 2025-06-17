@@ -17,7 +17,7 @@ import android.view.WindowManager;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.externel360camera.VZ360Constance;
 import com.hzbhd.canbus.adapter.externel360camera.view.IrCam360VZLayout;
 import com.hzbhd.canbus.adapter.util.FutureUtil;

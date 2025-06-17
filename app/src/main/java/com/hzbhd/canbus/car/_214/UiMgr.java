@@ -7,7 +7,7 @@ import android.util.Base64;
 import android.view.MotionEvent;
 import android.widget.Toast;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.AmplifierActivity;
 import com.hzbhd.canbus.adapter.interfaces.OnAirPageStatusListener;
 import com.hzbhd.canbus.adapter.util.FutureUtil;

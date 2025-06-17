@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._131;
 
 import android.content.Context;
 import android.content.res.Resources;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;

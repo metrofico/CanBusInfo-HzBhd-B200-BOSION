@@ -10,7 +10,7 @@ import android.util.SparseArray;
 
 import androidx.core.view.MotionEventCompat;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;

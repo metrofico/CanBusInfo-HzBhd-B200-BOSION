@@ -48,7 +48,7 @@ public class BackCameraUiService extends Service implements AnalogColorSettingIn
 
     @Override // android.app.Service
     public IBinder onBind(Intent intent) {
-        return new MyBinder();
+        return new MyBinder(this);
     }
 
     @Override // com.hzbhd.canbus.interfaces.AnalogColorSettingInterface
@@ -61,12 +61,15 @@ public class BackCameraUiService extends Service implements AnalogColorSettingIn
         getBackCameraUiServiceBase().changeVideoType();
     }
 
-    public class MyBinder extends Binder {
-        public MyBinder() {
+    public static class MyBinder extends Binder {
+        BackCameraUiService service;
+
+        public MyBinder(BackCameraUiService service) {
+            this.service = service;
         }
 
         public BackCameraUiService getService() {
-            return BackCameraUiService.this;
+            return this.service;
         }
     }
 }

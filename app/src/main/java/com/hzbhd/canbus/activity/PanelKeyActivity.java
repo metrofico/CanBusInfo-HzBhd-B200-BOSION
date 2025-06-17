@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.PanelKeyLvAdapter;
 import com.hzbhd.canbus.interfaces.OnPanelKeyPositionListener;
 import com.hzbhd.canbus.interfaces.OnPanelKeyPositionTouchListener;

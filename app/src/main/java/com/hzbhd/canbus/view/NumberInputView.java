@@ -11,7 +11,7 @@ import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 public class NumberInputView extends RelativeLayout implements View.OnClickListener {
     private Button btn_0;

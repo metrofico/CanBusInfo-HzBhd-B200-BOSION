@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.FactoryActivity;
 import com.hzbhd.canbus.util.CommUtil;
 import com.hzbhd.canbus.util.DialogUtil;

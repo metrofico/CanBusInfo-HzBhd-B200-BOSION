@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_datas.GeneralAirData;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;

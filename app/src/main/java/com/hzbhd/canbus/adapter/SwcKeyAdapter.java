@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.SwcActivity;
 import com.hzbhd.canbus.config.CustomKeyConfig;
 import com.hzbhd.constant.share.lcd.LcdInfoShare;

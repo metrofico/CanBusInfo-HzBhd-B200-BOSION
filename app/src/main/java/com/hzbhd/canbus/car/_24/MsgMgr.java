@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.OriginalCarDeviceUpdateEntity;
 import com.hzbhd.canbus.entity.SongListEntity;

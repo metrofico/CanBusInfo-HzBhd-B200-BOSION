@@ -14,7 +14,7 @@ import android.widget.Toast;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.SelectCanTypeLastLvAdapter;
 import com.hzbhd.canbus.adapter.SelectCarCateLvAdapter;
 import com.hzbhd.canbus.adapter.SelectProtocolCompanyLvAdapter;

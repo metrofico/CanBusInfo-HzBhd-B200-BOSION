@@ -8,7 +8,7 @@ import android.content.IntentFilter;
 import android.util.Log;
 import android.util.SparseArray;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.SettingUpdateEntity;
 import com.hzbhd.canbus.entity.TireUpdateEntity;

@@ -13,7 +13,7 @@ import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.activity.AbstractBaseActivity;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.factory.Dependency;

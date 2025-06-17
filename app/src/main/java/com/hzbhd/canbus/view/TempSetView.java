@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.interfaces.OnAirTempTouchListener;
 import com.hzbhd.canbus.adapter.interfaces.OnAirTemperatureUpDownClickListener;
 import com.hzbhd.canbus.util.CommUtil;

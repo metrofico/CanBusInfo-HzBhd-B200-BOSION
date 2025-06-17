@@ -6,7 +6,7 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import android.util.SparseArray;
 import androidx.core.view.InputDeviceCompat;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.car._333.AlertView;
 import com.hzbhd.canbus.comm.Constant;

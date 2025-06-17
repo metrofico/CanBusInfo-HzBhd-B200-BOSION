@@ -7,7 +7,7 @@ import androidx.lifecycle.LifecycleOwner;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.vm.Vm;
 import com.hzbhd.canbus.vm.binding.ReverseMainBinding;
 import com.hzbhd.constant.share.ShareConstants;

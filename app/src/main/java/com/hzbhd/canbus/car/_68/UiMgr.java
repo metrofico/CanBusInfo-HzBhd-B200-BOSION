@@ -7,7 +7,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.adapter.interfaces.OnAirBtnClickListener;

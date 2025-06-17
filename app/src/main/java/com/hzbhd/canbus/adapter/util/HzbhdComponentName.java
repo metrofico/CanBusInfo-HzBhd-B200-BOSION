@@ -277,8 +277,8 @@ public class HzbhdComponentName {
         Disc = new ComponentName("com.hzbhd.disc", "com.hzbhd.disc.Disc");
         ColorMainActivity = new ComponentName("com.hzbhd.ColorLed", "com.hzbhd.ColorLed.MainActivity");
         DabMainActivity = new ComponentName("com.ex.dabplayer.pad", "com.ex.dabplayer.pad.activity.MainActivity");
-        DABRadioActivity = new ComponentName(CrashReportUtils.PACKAGENAME_RADIO, "com.hzbhd.radio.dab.DabActivity");
-        RadioActivity = new ComponentName(CrashReportUtils.PACKAGENAME_RADIO, "com.hzbhd.radio.MainActivity");
+        DABRadioActivity = new ComponentName(CrashReportUtils.PACKAGENAME_RADIO, "com.hzbhd.canbus.Radio.dab.DabActivity");
+        RadioActivity = new ComponentName(CrashReportUtils.PACKAGENAME_RADIO, "com.hzbhd.canbus.Radio.MainActivity");
         DvrCameraActivity = new ComponentName("com.hzbhd.dvr", "com.hzbhd.dvr.CameraActivity");
         TpmsoroMainActivity = new ComponentName("com.hzbhd.tpmsoro", "com.hzbhd.tpmsoro.MainActivity");
         TpmsoroBootCompleteReceiver = new ComponentName("com.hzbhd.tpmsoro", "com.hzbhd.tpmsoro.BootCompleteReceiver");
@@ -289,7 +289,7 @@ public class HzbhdComponentName {
         RecentMainActivity = new ComponentName("com.android.systemui", "com.android.systemui.recents.RecentsActivity");
         EasyConnectyActivity = new ComponentName("net.easyconn", "net.easyconn.ui.MainActivity");
         DualZoneActivityNew = new ComponentName("com.hzbhd.backapp", "com.hzbhd.backapp.MainActivity");
-        QzRadioActivity = new ComponentName(CrashReportUtils.PACKAGENAME_RADIO, "com.hzbhd.radio.MainActivity");
+        QzRadioActivity = new ComponentName(CrashReportUtils.PACKAGENAME_RADIO, "com.hzbhd.canbus.Radio.MainActivity");
         GocReceiver = new ComponentName(PackageName.gocsdk, "com.goodocom.gocsdk.receiver.GocReceiver");
         TakeScreenshotService = new ComponentName("com.android.systemui", "com.android.systemui.screenshot.TakeScreenshotService");
         SystemuiCanbusAirService = new ComponentName("com.android.systemui", "com.android.systemui.hzbhd.CanbusAirService");

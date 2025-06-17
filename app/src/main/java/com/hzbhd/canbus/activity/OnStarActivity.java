@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.fragment.OnStartMainFragment;
 import com.hzbhd.canbus.fragment.OnStartNavigationFragment;
 import com.hzbhd.canbus.fragment.OnStartPhoneFragment;

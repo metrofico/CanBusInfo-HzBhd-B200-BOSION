@@ -8,7 +8,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 
 public class RadarView extends RelativeLayout {

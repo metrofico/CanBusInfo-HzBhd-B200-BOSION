@@ -78,7 +78,7 @@ public class PackageName {
     public static final String bhd_ui_media_all = "com.hzbhd.ui.media.all";
     public static final String bhd_ui_misc = "com.hzbhd.ui.misc";
     public static final String bhd_ui_moden_call = "com.hzbhd.ui.modem.call";
-    public static final String bhd_ui_radio = "com.hzbhd.radioui";
+    public static final String bhd_ui_radio = "com.hzbhd.canbus.Radioui";
     public static final String bhd_ui_settings = "com.hzbhd.carsettings";
     public static final String bhd_ui_upgrade = "com.hzbhd.client.upgrade";
     public static final String bhd_wireless_q_link = "com.example.carlink.autoplay";

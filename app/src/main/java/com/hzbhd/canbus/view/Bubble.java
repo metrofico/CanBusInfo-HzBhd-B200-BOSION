@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.interfaces.OnBubbleClickListener;
 import com.hzbhd.canbus.ui_datas.GeneralBubbleData;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;

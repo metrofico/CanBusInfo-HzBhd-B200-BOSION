@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 /* loaded from: classes2.dex */
 public class TouchpadEvents {

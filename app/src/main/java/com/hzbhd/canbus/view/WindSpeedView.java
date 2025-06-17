@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 import java.util.ArrayList;
 import java.util.List;

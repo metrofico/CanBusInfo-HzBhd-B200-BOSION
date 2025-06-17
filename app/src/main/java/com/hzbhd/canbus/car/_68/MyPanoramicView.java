@@ -5,7 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 
 public class MyPanoramicView extends RelativeLayout {

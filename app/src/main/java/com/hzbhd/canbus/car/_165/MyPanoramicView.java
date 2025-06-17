@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 
 public class MyPanoramicView extends RelativeLayout implements View.OnClickListener {

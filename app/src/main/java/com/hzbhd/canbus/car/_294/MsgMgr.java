@@ -7,7 +7,7 @@ import android.os.RemoteException;
 import android.provider.Settings;
 import android.util.Base64;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.util.CanTypeMsg;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.adapter.util.Util;

@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.util.FutureUtil;
 import com.hzbhd.canbus.adapter.util.HzbhdLog;
 import com.hzbhd.canbus.adapter.util.ScreenLogic;

@@ -2,13 +2,14 @@ package com.hzbhd.canbus.activity;
 
 import android.app.Activity;
 import android.content.ComponentName;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.FactoryItemAdapter;
 import com.hzbhd.canbus.car._0.CarSelectWindow;
 import com.hzbhd.canbus.car._0.PanelSwitchWindow;
@@ -125,17 +126,21 @@ public final class FactoryActivity extends Activity {
         if (GeneralSettingsConfig.getInstance(CanbusConfig.INSTANCE.getCanType()).SWC_STUDY_TAG) {
 
             arrayList.add(new ItemUiSet("swc_app_name", STYLE_0, null, null, null, () -> {
-                BaseUtil baseUtil = BaseUtil.INSTANCE;
                 ComponentName SwcActivity = Constant.SwcActivity;
-                baseUtil.startActivity(SwcActivity);
+                Intent intent = new Intent();
+                intent.setComponent(SwcActivity);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(intent);
             }));
         }
         if (GeneralSettingsConfig.getInstance(CanbusConfig.INSTANCE.getCanType()).FRONT_CAMERA_TAG) {
 
             arrayList.add(new ItemUiSet("Factory_activity_open_camera", STYLE_0, null, null, null, () -> {
-                BaseUtil baseUtil = BaseUtil.INSTANCE;
-                ComponentName FrontCameraSettingActivity = Constant.FrontCameraSettingActivity;
-                baseUtil.startActivity(FrontCameraSettingActivity);
+                ComponentName SwcActivity = Constant.FrontCameraSettingActivity;
+                Intent intent = new Intent();
+                intent.setComponent(SwcActivity);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                getApplicationContext().startActivity(intent);
             }));
         }
         if (GeneralSettingsConfig.getInstance(CanbusConfig.INSTANCE.getCanType()).TOUCH_PAD_SETTING_TAG) {

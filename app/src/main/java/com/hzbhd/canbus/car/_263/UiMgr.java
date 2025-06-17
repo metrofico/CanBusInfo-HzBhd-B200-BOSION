@@ -2,7 +2,7 @@ package com.hzbhd.canbus.car._263;
 
 import android.content.Context;
 import android.widget.Toast;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.interfaces.OnConfirmDialogListener;
 import com.hzbhd.canbus.interfaces.OnDriveDataPageStatusListener;
 import com.hzbhd.canbus.interfaces.OnSettingItemClickListener;

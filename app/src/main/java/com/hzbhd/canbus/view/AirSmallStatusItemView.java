@@ -6,7 +6,7 @@ import android.view.LayoutInflater;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 /* loaded from: classes2.dex */
 public class AirSmallStatusItemView extends RelativeLayout {

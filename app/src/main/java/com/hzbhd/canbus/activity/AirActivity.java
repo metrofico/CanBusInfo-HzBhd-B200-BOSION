@@ -10,7 +10,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.bean.AirPageUiSet;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.factory.Dependency;

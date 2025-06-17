@@ -3,7 +3,7 @@ package com.hzbhd.canbus.car._272;
 import android.content.Context;
 import android.os.Bundle;
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.comm.Constant;
 import com.hzbhd.canbus.entity.DriverUpdateEntity;
 import com.hzbhd.canbus.entity.OriginalCarDeviceUpdateEntity;

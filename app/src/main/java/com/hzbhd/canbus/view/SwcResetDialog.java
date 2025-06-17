@@ -5,7 +5,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.Button;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 
 import kotlin.Metadata;
 import kotlin.Unit;

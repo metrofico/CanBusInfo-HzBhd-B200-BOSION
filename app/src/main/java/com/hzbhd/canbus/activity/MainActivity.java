@@ -10,7 +10,7 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.hzbhd.R;
+import com.hzbhd.canbus.R;
 import com.hzbhd.canbus.adapter.MainLvAdapter;
 import com.hzbhd.canbus.adapter.bean.CanTypeAllEntity;
 import com.hzbhd.canbus.comm.Constant;
