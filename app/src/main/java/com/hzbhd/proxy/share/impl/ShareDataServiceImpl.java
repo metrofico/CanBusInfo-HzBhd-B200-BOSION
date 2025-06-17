@@ -428,7 +428,7 @@ public final class ShareDataServiceImpl extends IShareDataService.Stub {
 
     public void notifyShareString(String str, String str2, int i) {
         Message message = new Message();
-        message.what = 2;
+        message.what = MSG_STRING_DATA;
         message.arg2 = i;
         Bundle bundle = new Bundle();
         bundle.putString("key", str);

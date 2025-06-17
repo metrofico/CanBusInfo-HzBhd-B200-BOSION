@@ -84,6 +84,7 @@ import com.hzbhd.proxy.share.ShareDataManager;
 import com.hzbhd.proxy.share.impl.ShareDataServiceImpl;
 import com.hzbhd.proxy.share.interfaces.IShareIntListener;
 
+import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -1063,21 +1064,23 @@ public abstract class AbstractMsgMgr implements MsgMgrInterface {
 
     public String getVersionStr(byte[] bArr) {
         CommUtil.printHexString("getVersionStr: ", bArr);
-        int length = bArr.length - 2;
-        byte[] bArr2 = new byte[length];
-        System.arraycopy(bArr, 2, bArr2, 0, length);
-        return new String(bArr2);
+        int start = 2;
+        int end = bArr.length;
+        for (int i = start; i < bArr.length; i++) {
+            if (bArr[i] == 0x00) {
+                end = i;
+                break;
+            }
+        }
+        byte[] bArr2 = new byte[end - start];
+        System.arraycopy(bArr, start, bArr2, 0, end - start);
+        return new String(bArr2, StandardCharsets.UTF_8);
     }
 
     protected int[] getByteArrayToIntArray(byte[] bArr) {
         int[] iArr = new int[bArr.length];
         for (int i = 0; i < bArr.length; i++) {
-            byte b = bArr[i];
-            if ((b & Byte.MIN_VALUE) == 0) {
-                iArr[i] = b;
-            } else {
-                iArr[i] = b & 255;
-            }
+            iArr[i] = bArr[i] & 0xFF;
         }
         return iArr;
     }
