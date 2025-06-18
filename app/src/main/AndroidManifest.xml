@@ -4,6 +4,7 @@
     android:versionCode="2024031119"
     android:versionName="20240311-1942">
 
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission
         android:name="android.permission.WRITE_SECURE_SETTINGS"
         tools:ignore="ProtectedPermissions" />

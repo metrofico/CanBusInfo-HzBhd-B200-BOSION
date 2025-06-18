@@ -376,7 +376,7 @@ public class DoorView {
         if (this.mLayoutParams == null) {
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
             this.mLayoutParams = layoutParams;
-            layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+            layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
             this.mLayoutParams.format = 1;
             this.mLayoutParams.gravity = 17;
             this.mLayoutParams.width = -2;

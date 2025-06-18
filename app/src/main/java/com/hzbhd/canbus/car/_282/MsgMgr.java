@@ -828,7 +828,7 @@ public class MsgMgr extends AbstractMsgMgr {
         if (this.mLayoutParams == null) {
             WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
             this.mLayoutParams = layoutParams;
-            layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+            layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
             this.mLayoutParams.gravity = android.view.Gravity.CENTER;
             this.mLayoutParams.width = -2;
             this.mLayoutParams.height = -2;

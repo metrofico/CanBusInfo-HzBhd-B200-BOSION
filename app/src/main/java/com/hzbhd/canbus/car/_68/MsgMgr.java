@@ -971,7 +971,7 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mWindowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
         this.mLayoutParams = layoutParams;
-        layoutParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+        layoutParams.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
         this.mLayoutParams.gravity = Gravity.CENTER;
         this.mLayoutParams.width = -1;
         this.mLayoutParams.height = -1;
