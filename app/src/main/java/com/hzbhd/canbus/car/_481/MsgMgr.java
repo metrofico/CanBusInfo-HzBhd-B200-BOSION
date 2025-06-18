@@ -25,6 +25,7 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mContext = context;
         mUiMgr = getUiMgr(this.mContext);
         GeneralTireData.isHaveSpareTire = false;
+        CanbusMsgSender.sendMsg(new byte[]{22, -58, 9, 1, 0, 0, 0, 0});
     }
 
     @Override
