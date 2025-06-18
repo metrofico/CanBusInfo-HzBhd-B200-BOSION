@@ -6,6 +6,7 @@
     <RelativeLayout
         android:id="@+id/rl_door"
         android:layout_width="266dp"
+        android:background="@drawable/background_door_view"
         android:layout_height="410dp"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">

@@ -25,6 +25,7 @@ public class MsgMgr extends AbstractMsgMgr {
         this.mContext = context;
         mUiMgr = getUiMgr(this.mContext);
         GeneralTireData.isHaveSpareTire = false;
+        //Siempre Ingles
         CanbusMsgSender.sendMsg(new byte[]{22, -58, 9, 1, 0, 0, 0, 0});
     }
 
@@ -60,6 +61,31 @@ public class MsgMgr extends AbstractMsgMgr {
         }
 
         Log.d("MsgMgrSWM", "CanbusInfoChange received");
+    }
+
+    @Override
+    public void dateTimeRepCanbus(int nowYear, int i2, int nowMonth, int nowDay, int nowHours, int nowMins, int nowSecond, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
+        // Enviar aviso de sincronización (sin cambios)
+        CanbusMsgSender.sendMsg(new byte[]{22, -112, 48, 0});
+
+        // Enviar tiempo en formato del head unit viejo
+        byte[] msg = new byte[]{22, (byte) 0xA6,                     // -90 (en unsigned)
+                (byte) (nowYear - 2000),              // Año base 2000
+                (byte) (nowMonth + 1),                // Mes (sumar 1 si es base 0)
+                (byte) nowDay,                      // Día
+                (byte) (nowHours & 0x7F),             // Hora (solo 7 bits)
+                (byte) nowMins,                      // Minuto
+                z ? (byte) 1 : (byte) 0         // ¿24h format?
+        };
+        CanbusMsgSender.sendMsg(msg);
+
+       /* // Guardar variables internas
+        this.nowYear = i;
+        this.nowMonth = i3;
+        this.nowDay = i4;
+        this.nowHours = i5;
+        this.nowMins = i6;
+        this.nowSecond = i7;*/
     }
 
     private void updateDoorState(int status) {
