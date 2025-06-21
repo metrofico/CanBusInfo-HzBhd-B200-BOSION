@@ -6,7 +6,6 @@ import android.net.wifi.WifiManager;
 import android.util.Log;
 
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.car._306.LanguageReceiver;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
 import com.hzbhd.canbus.ui_datas.GeneralTireData;
@@ -127,10 +126,50 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     @Override
+    public void dateTimeRepCanbus(int nowYear, int bYear2Dig, int nowMonth, int nowDay, int nowHours, int nowMins, int nowSecond, int bHours24H, int systemDateFormat, boolean isFormat24H, boolean isFormatPm, boolean isGpsTime, int dayOfWeek) {
+        // Enviar aviso de sincronización
+        CanbusMsgSender.sendMsg(new byte[]{22, -112, 48, 0});
+
+        if (isFormat24H) {
+            //Formato comprobado que funciona correctamente con 24h
+            byte[] msg = new byte[]{
+                    22, -90,
+                    (byte) (nowYear - 2000),
+                    (byte) nowMonth,
+                    (byte) nowDay,
+                    (byte) bHours24H, // Ya está formateado a 24h correctamente
+                    (byte) nowMins,
+                    0,
+                    1 // indicador de 24h
+            };
+            CanbusMsgSender.sendMsg(msg);
+        } else {
+            int sendHour = 0;
+            // Corrige la hora en AM/PM
+            if (isFormatPm && nowHours < 12) {
+                sendHour = nowHours + 12; // 1 PM → 13
+            } else {
+                sendHour = nowHours;
+            }
+
+            byte[] msg = new byte[]{
+                    22, (byte) 0xA6, // -90 unsigned
+                    (byte) (nowYear - 2000),
+                    (byte) (nowMonth + 1),
+                    (byte) nowDay,
+                    (byte) sendHour,
+                    (byte) nowMins,
+                    (byte) 0,
+                    (byte) 0 // indicador de 12h
+            };
+            CanbusMsgSender.sendMsg(msg);
+        }
+    }
+    /*@Override
     public void dateTimeRepCanbus(int bYearTotal, int bYear2Dig, int bMonth, int bDay, int bHours, int bMins, int bSecond, int bHours24H, int systemDateFormat, boolean isFormat24H, boolean isFormatPm, boolean isGpsTime, int dayOfWeek) {
         byte[] msg = new byte[]{22, -90, (byte) (bYearTotal - 2000), (byte) bMonth, (byte) bDay, (byte) bHours, (byte) bMins, 0, isFormat24H ? (byte) 1 : (byte) 0};
         CanbusMsgSender.sendMsg(msg);
-    }
+    }*/
 
     private void updateDoorState(int status) {
         GeneralDoorData.isLeftFrontDoorOpen = (status & 0x40) != 0;
