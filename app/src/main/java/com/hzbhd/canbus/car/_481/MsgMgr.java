@@ -278,7 +278,11 @@ public class MsgMgr extends AbstractMsgMgr {
                 realKeyClick3(context, HotKeyConstant.K_VOL_UP, keyCode, keyState);
                 break;
             case 0x87:
-                realKeyClick3(context, HotKeyConstant.K_ENTER, keyCode, keyState);
+                if (keyState == 0x02){
+                    realKeyLongClick1(context, HotKeyConstant.K_POWER, keyCode);
+                }else{
+                    realKeyClick3(context, HotKeyConstant.K_ENTER, keyCode, keyState);
+                }
                 break;
             case 0x8A:
                 realKeyClick3(context, HotKeyConstant.K_LEFT, keyCode, keyState);
