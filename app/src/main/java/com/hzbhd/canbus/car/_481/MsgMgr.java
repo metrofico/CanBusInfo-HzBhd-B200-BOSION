@@ -11,6 +11,7 @@ import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
 import com.hzbhd.canbus.ui_datas.GeneralTireData;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
+import com.hzbhd.commontools.SystemStatusDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
 
 
@@ -278,9 +279,9 @@ public class MsgMgr extends AbstractMsgMgr {
                 realKeyClick3(context, HotKeyConstant.K_VOL_UP, keyCode, keyState);
                 break;
             case 0x87:
-                if (keyState == 0x02){
-                    realKeyLongClick1(context, HotKeyConstant.K_POWER, keyCode);
-                }else{
+                if (keyState == 0x02) {
+                    realKeyClick3(context, HotKeyConstant.K_DISPLAY, keyCode, keyState);
+                } else {
                     realKeyClick3(context, HotKeyConstant.K_ENTER, keyCode, keyState);
                 }
                 break;
