@@ -1,9 +1,12 @@
 package com.hzbhd.canbus.car._481;
 
 import android.content.Context;
+import android.content.IntentFilter;
+import android.net.wifi.WifiManager;
 import android.util.Log;
 
 import com.hzbhd.canbus.CanbusMsgSender;
+import com.hzbhd.canbus.car._306.LanguageReceiver;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
 import com.hzbhd.canbus.ui_datas.GeneralTireData;
@@ -12,31 +15,91 @@ import com.hzbhd.midware.constant.HotKeyConstant;
 
 
 public class MsgMgr extends AbstractMsgMgr {
+    private static final String TAG = "_481_MsgMgr";
+
     Context mContext;
     private byte[] mCanBusInfoByte;
     private int[] mCanBusInfoInt;
     private UiMgr mUiMgr;
     private int lastDoorStatus = -1;
+    private boolean updatedLanguage = false;
+    private static String mLanguage;
 
     @Override
     public void initCommand(Context context) {
         super.initCommand(context);
-        CanbusMsgSender.sendMsg(new byte[]{22, -127, 1});
+        //CanbusMsgSender.sendMsg(new byte[]{22, -127, 1});
         this.mContext = context;
         mUiMgr = getUiMgr(this.mContext);
         GeneralTireData.isHaveSpareTire = false;
+        CanbusMsgSender.sendMsg(new byte[]{22, -112, 39, 0, 0, 0, 0, 0});
         //Siempre Ingles
-        CanbusMsgSender.sendMsg(new byte[]{22, -58, 9, 1, 0, 0, 0, 0});
+
+
+    }
+
+    @Override
+    public void onHandshake(Context context) {
+        super.onHandshake(context);
+        updatedLanguage = false;
+    }
+
+    @Override
+    public void onAccOff() {
+        super.onAccOff();
+        updatedLanguage = false;
+    }
+
+    @Override
+    public void onAccOn() {
+        super.onAccOn();
+        CanbusMsgSender.sendMsg(new byte[]{22, -58, 9, 1});
+    }
+
+    @Override
+    public void onSleep() {
+        super.onSleep();
+        CanbusMsgSender.sendMsg(new byte[]{22, -91, 0, 0, 0, 0, 0, 0});
+        updatedLanguage = false;
+    }
+
+    @Override
+    public void onPowerOff() {
+        super.onPowerOff();
+        updatedLanguage = false;
+    }
+
+    static void setLanguage(Context context) {
+        String country = context.getResources().getConfiguration().getLocales().get(0).getCountry();
+        Log.i(TAG, "setLanguage: country " + country);
+        if (country.endsWith("CN")) {
+            mLanguage = "_zh";
+        } else {
+            mLanguage = "_en";
+        }
+        Log.i(TAG, "setLanguage: mLanguage " + mLanguage);
     }
 
     @Override
     public void afterServiceNormalSetting(Context context) {
         super.afterServiceNormalSetting(context);
+        LanguageReceiver languageReceiver = new LanguageReceiver();
+        IntentFilter intentFilter = new IntentFilter();
+        intentFilter.addAction("android.intent.action.LOCALE_CHANGED");
+        context.registerReceiver(languageReceiver, intentFilter);
+        if (!updatedLanguage) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -58, 9, 1});
+            updatedLanguage = true;
+        }
     }
 
     @Override
     public void canbusInfoChange(Context context, byte[] msgReceived) {
         super.canbusInfoChange(context, msgReceived);
+        if (!updatedLanguage) {
+            CanbusMsgSender.sendMsg(new byte[]{22, -58, 9, 1});
+            updatedLanguage = true;
+        }
         this.mCanBusInfoByte = msgReceived;
         this.mCanBusInfoInt = getByteArrayToIntArray(msgReceived);
         int id = mCanBusInfoInt[1];
@@ -64,28 +127,9 @@ public class MsgMgr extends AbstractMsgMgr {
     }
 
     @Override
-    public void dateTimeRepCanbus(int nowYear, int i2, int nowMonth, int nowDay, int nowHours, int nowMins, int nowSecond, int i8, int i9, boolean z, boolean z2, boolean z3, int i10) {
-        // Enviar aviso de sincronización (sin cambios)
-        CanbusMsgSender.sendMsg(new byte[]{22, -112, 48, 0});
-
-        // Enviar tiempo en formato del head unit viejo
-        byte[] msg = new byte[]{22, (byte) 0xA6,                     // -90 (en unsigned)
-                (byte) (nowYear - 2000),              // Año base 2000
-                (byte) (nowMonth + 1),                // Mes (sumar 1 si es base 0)
-                (byte) nowDay,                      // Día
-                (byte) (nowHours & 0x7F),             // Hora (solo 7 bits)
-                (byte) nowMins,                      // Minuto
-                z ? (byte) 1 : (byte) 0         // ¿24h format?
-        };
+    public void dateTimeRepCanbus(int bYearTotal, int bYear2Dig, int bMonth, int bDay, int bHours, int bMins, int bSecond, int bHours24H, int systemDateFormat, boolean isFormat24H, boolean isFormatPm, boolean isGpsTime, int dayOfWeek) {
+        byte[] msg = new byte[]{22, -90, (byte) (bYearTotal - 2000), (byte) bMonth, (byte) bDay, (byte) bHours, (byte) bMins, 0, isFormat24H ? (byte) 1 : (byte) 0};
         CanbusMsgSender.sendMsg(msg);
-
-       /* // Guardar variables internas
-        this.nowYear = i;
-        this.nowMonth = i3;
-        this.nowDay = i4;
-        this.nowHours = i5;
-        this.nowMins = i6;
-        this.nowSecond = i7;*/
     }
 
     private void updateDoorState(int status) {
@@ -112,12 +156,6 @@ public class MsgMgr extends AbstractMsgMgr {
     private void set0x30VersionInfo() {
         Log.d("Swm", "Version car received");
         updateVersionInfo(this.mContext, getVersionStr(this.mCanBusInfoByte));
-    }
-
-    public void _0x20DoorInfo(byte[] msgReceived) {
-        if (msgReceived[1] == 0x35) {
-            GeneralDoorData.isLeftFrontDoorOpen = true;
-        }
     }
 
     public void buttonKey(int i) {

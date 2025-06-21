@@ -214,50 +214,20 @@ public class CanbusMsgService extends Service {
         ShareDataManager.getInstance().registerShareIntListener(ShareConstants.SHARE_SYS_POWER, new IShareIntListener() { // from class: com.hzbhd.canbus.CanbusMsgService.1
             @Override // com.hzbhd.proxy.share.interfaces.IShareIntListener
             public void onInt(int i) {
-                int i2 = AnonymousClass7.$SwitchMap$com$hzbhd$commontools$SystemStatusDef$POWER_STATUS[SystemStatusDef.POWER_STATUS.values()[i].ordinal()];
-                if (i2 == 1) {
+                SystemStatusDef.POWER_STATUS status = SystemStatusDef.POWER_STATUS.values()[i];
+                if (status == SystemStatusDef.POWER_STATUS.ACC_ON) {
                     CanbusMsgService.this.getMsgMgrInterface().onAccOn();
-                    return;
-                }
-                if (i2 == 2) {
+                } else if (status == SystemStatusDef.POWER_STATUS.ACC_OFF) {
                     CanbusMsgService.this.getMsgMgrInterface().onAccOff();
-                } else if (i2 == 3) {
+                } else if (status == SystemStatusDef.POWER_STATUS.SLEEP) {
                     CanbusMsgService.this.getMsgMgrInterface().onSleep();
-                } else {
-                    if (i2 != 4) {
-                        return;
-                    }
+                } else if (status == SystemStatusDef.POWER_STATUS.FAKE_POWER_OFF) {
                     CanbusMsgService.this.getMsgMgrInterface().onPowerOff();
                 }
             }
         });
     }
 
-    /* renamed from: com.hzbhd.canbus.CanbusMsgService$7, reason: invalid class name */
-    static /* synthetic */ class AnonymousClass7 {
-        static final /* synthetic */ int[] $SwitchMap$com$hzbhd$commontools$SystemStatusDef$POWER_STATUS;
-
-        static {
-            int[] iArr = new int[SystemStatusDef.POWER_STATUS.values().length];
-            $SwitchMap$com$hzbhd$commontools$SystemStatusDef$POWER_STATUS = iArr;
-            try {
-                iArr[SystemStatusDef.POWER_STATUS.ACC_ON.ordinal()] = 1;
-            } catch (NoSuchFieldError unused) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$commontools$SystemStatusDef$POWER_STATUS[SystemStatusDef.POWER_STATUS.ACC_OFF.ordinal()] = 2;
-            } catch (NoSuchFieldError unused2) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$commontools$SystemStatusDef$POWER_STATUS[SystemStatusDef.POWER_STATUS.SLEEP.ordinal()] = 3;
-            } catch (NoSuchFieldError unused3) {
-            }
-            try {
-                $SwitchMap$com$hzbhd$commontools$SystemStatusDef$POWER_STATUS[SystemStatusDef.POWER_STATUS.FAKE_POWER_OFF.ordinal()] = 4;
-            } catch (NoSuchFieldError unused4) {
-            }
-        }
-    }
 
     @Override // android.app.Service
     public void onDestroy() {
