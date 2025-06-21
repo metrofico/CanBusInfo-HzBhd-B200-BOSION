@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.IntentFilter;
 import android.net.wifi.WifiManager;
 import android.util.Log;
+import android.view.KeyEvent;
 
 import com.hzbhd.canbus.CanbusMsgSender;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
@@ -213,27 +214,27 @@ public class MsgMgr extends AbstractMsgMgr {
                 realKeyLongClick1(context, 0x00, keyState);
                 break;
             case 0x01:
-                realKeyLongClick1(context, 0x07, keyState);
+                realKeyLongClick1(context, HotKeyConstant.K_VOL_UP, keyState);
                 break;
             case 0x02:
-                realKeyLongClick1(context, 0x08, keyState);
+                realKeyLongClick1(context, HotKeyConstant.K_VOL_DN, keyState);
                 break;
             case 0x03:
-                buttonKey(0x2D);
+                buttonKey(HotKeyConstant.K_PREV);
                 break;
             case 0x04:
-                buttonKey(0x2E);
+                buttonKey(HotKeyConstant.K_NEXT);
                 break;
             case 0x05:
-                realKeyClick2(context, 0x0E, keyCode, keyState);
+                realKeyClick2(context, HotKeyConstant.K_PHONE_ON, keyCode, keyState);
                 break;
             case 0x06:
-                realKeyClick2(context, 0x03, keyCode, keyState);
+                realKeyClick2(context, HotKeyConstant.K_MUTE, keyCode, keyState);
                 break;
             case 0x07:
-                realKeyClick2(context, 0x02, keyCode, keyState);
+                realKeyClick2(context, HotKeyConstant.K_VIDEO, keyCode, keyState);
                 break;
-            case 0x08:
+            /*case 0x08:
                 realKeyClick2(context, 0x0F, keyCode, keyState);
                 break;
             case 0x09:
@@ -262,6 +263,34 @@ public class MsgMgr extends AbstractMsgMgr {
                 break;
             case 0x17:
                 realKeyClick1(context, 0x32, keyCode, keyState);
+                break;
+                // Nuevo debe ir a home obligatoriamente*/
+            case 0x86:
+                realKeyClick1(context, HotKeyConstant.K_HOME, keyCode, keyState);
+                break;
+            case 0x85:
+                realKeyClick1(context, HotKeyConstant.K_RETURN, keyCode, keyState);
+                break;
+            case 0x83:
+                realKeyClick3(context, HotKeyConstant.K_VOL_DN, keyCode, keyState);
+                break;
+            case 0x84:
+                realKeyClick3(context, HotKeyConstant.K_VOL_UP, keyCode, keyState);
+                break;
+            case 0x87:
+                realKeyClick3(context, HotKeyConstant.K_ENTER, keyCode, keyState);
+                break;
+            case 0x8A:
+                realKeyClick3(context, HotKeyConstant.K_LEFT, keyCode, keyState);
+                break;
+            case 0x88:
+                realKeyClick3(context, HotKeyConstant.K_UP, keyCode, keyState);
+                break;
+            case 0x89:
+                realKeyClick3(context, HotKeyConstant.K_DOWN, keyCode, keyState);
+                break;
+            case 0x8B:
+                realKeyClick3(context, HotKeyConstant.K_RIGHT, keyCode, keyState);
                 break;
         }
     }
