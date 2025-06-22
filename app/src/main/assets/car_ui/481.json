@@ -130,16 +130,6 @@
         "titleSrn": "_327_setting_the_light_that_accompanies_me_home",
         "itemList": [
           {
-            "titleSrn": "_327__switch",
-            "style": 1,
-            "valueSrnArray": [
-              "english_off",
-              "english_on"
-            ],
-            "selectIndex": 0,
-            "value": ""
-          },
-          {
             "titleSrn": "_327_setting_the_light_that_accompanies_me_home",
             "style": 1,
             "valueSrnArray": [

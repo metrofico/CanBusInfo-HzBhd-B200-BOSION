@@ -33,6 +33,7 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -1418,23 +1419,23 @@ public class MsgMgr extends AbstractMsgMgr {
 
     public void updateSettings(Context context, String str, int i, int i2, int i3) {
         SharePreUtil.setIntValue(context, str, i3);
-        ArrayList arrayList = new ArrayList();
-        arrayList.add(new SettingUpdateEntity(i, i2, Integer.valueOf(i3)));
+        ArrayList<SettingUpdateEntity> arrayList = new ArrayList<>();
+        arrayList.add(new SettingUpdateEntity<>(i, i2, i3));
         updateGeneralSettingData(arrayList);
         updateSettingActivity(null);
     }
 
     public void updateSettings(Context context, String str, int i, int i2, int i3, String str2) {
         SharePreUtil.setIntValue(context, str, i3);
-        ArrayList arrayList = new ArrayList();
-        arrayList.add(new SettingUpdateEntity(i, i2, i3 + str2));
+        ArrayList<SettingUpdateEntity> arrayList = new ArrayList<>();
+        arrayList.add(new SettingUpdateEntity<>(i, i2, i3 + str2));
         updateGeneralSettingData(arrayList);
         updateSettingActivity(null);
     }
 
     public void updateAppointmentSettings(int i, int i2, int i3) {
         ArrayList arrayList = new ArrayList();
-        arrayList.add(new SettingUpdateEntity(i, i2, Integer.valueOf(i3)));
+        arrayList.add(new SettingUpdateEntity(i, i2, i3));
         updateGeneralSettingData(arrayList);
         updateSettingActivity(null);
     }
