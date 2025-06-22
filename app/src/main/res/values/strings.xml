@@ -7667,6 +7667,15 @@
     <string name="_327_setting_color_setting">Color setting</string>
     <string name="_327_setting_color_white">White</string>
     <string name="_327_setting_company">Company</string>
+    <string name="_481_setting_driving">Driving</string>
+    <string name="_481_setting_driving_power_steering">Power Steering</string>
+    <string name="_481_setting_driving_power_comfort">Comfort</string>
+    <string name="_481_setting_driving_power_sport">Sport</string>
+    <string name="_481_setting_accompanies_me_home_off">OFF</string>
+    <string name="_481_setting_accompanies_me_home_15s">15s</string>
+    <string name="_481_setting_accompanies_me_home_30s">30s</string>
+    <string name="_481_setting_accompanies_me_home_45s">45s</string>
+    <string name="_481_setting_accompanies_me_home_60s">60s</string>
     <string name="_327_setting_environmental_lighting">Environmental lighting</string>
     <string name="_327_setting_environmental_lighting_switch">Environmental lighting switch</string>
     <string name="_327_setting_headlamp_height_adjustment">Headlamp height adjustment</string>

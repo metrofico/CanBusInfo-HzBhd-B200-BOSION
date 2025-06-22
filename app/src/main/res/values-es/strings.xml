@@ -7273,6 +7273,15 @@
     <string name="_327_setting_color_setting">Ajuste de color</string>
     <string name="_327_setting_color_white">Blanco</string>
     <string name="_327_setting_company">Compañía</string>
+    <string name="_481_setting_driving">Conducción</string>
+    <string name="_481_setting_driving_power_steering">Dirección asistida</string>
+    <string name="_481_setting_driving_power_comfort">Comodidad</string>
+    <string name="_481_setting_driving_power_sport">Deportivo</string>
+    <string name="_481_setting_accompanies_me_home_off">Apagado</string>
+    <string name="_481_setting_accompanies_me_home_15s">15 segundos</string>
+    <string name="_481_setting_accompanies_me_home_30s">30 segundos</string>
+    <string name="_481_setting_accompanies_me_home_45s">45 segundos</string>
+    <string name="_481_setting_accompanies_me_home_60s">60 segundos</string>
     <string name="_327_setting_environmental_lighting">Iluminación ambiental</string>
     <string name="_327_setting_environmental_lighting_switch">Interruptor de iluminación ambiental</string>
     <string name="_327_setting_headlamp_height_adjustment">Ajuste de altura del faro</string>

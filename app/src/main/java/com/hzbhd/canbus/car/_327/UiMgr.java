@@ -325,27 +325,27 @@ public class UiMgr extends AbstractUiMgr {
     };
     private final OnSettingItemSelectListener mOnSettingItemSelectListener = new OnSettingItemSelectListener() { // from class: com.hzbhd.canbus.car._327.UiMgr.17
         @Override // com.hzbhd.canbus.interfaces.OnSettingItemSelectListener
-        public void onClickItem(int i, int i2, int i3) {
-            String titleSrn = UiMgr.this.settingPageUiSet.getList().get(i).getTitleSrn();
+        public void onClickItem(int sectionId, int category, int itemSelected) {
+            String titleSrn = UiMgr.this.settingPageUiSet.getList().get(sectionId).getTitleSrn();
             switch (titleSrn) {
                 case "_327_setting_atmosphere_lamp":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -108, (byte) i3});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -108, (byte) itemSelected});
                         break;
                     }
                     break;
                 case "_327_car_type":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -18, -112, (byte) i3});
-                        SharePreUtil.setIntValue(UiMgr.this.mContext, UiMgr.this.CAR_TYPE, i3);
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -18, -112, (byte) itemSelected});
+                        SharePreUtil.setIntValue(UiMgr.this.mContext, UiMgr.this.CAR_TYPE, itemSelected);
                         UiMgr uiMgr = UiMgr.this;
-                        uiMgr.getmMsgMgr(uiMgr.mContext).updateSettings(UiMgr.this.mContext, UiMgr.L7R0, i, i2, i3);
+                        uiMgr.getmMsgMgr(uiMgr.mContext).updateSettings(UiMgr.this.mContext, UiMgr.L7R0, sectionId, category, itemSelected);
                         break;
                     }
                     break;
                 case "_327_source_setting":
-                    if (i2 == 0) {
-                        if (i3 == 0) {
+                    if (category == 0) {
+                        if (itemSelected == 0) {
                             CanbusMsgSender.sendMsg(new byte[]{22, -48, 0, 0});
                             Toast.makeText(UiMgr.this.mContext, "播放非原车CD", Toast.LENGTH_SHORT).show();
                             break;
@@ -357,172 +357,172 @@ public class UiMgr extends AbstractUiMgr {
                     }
                     break;
                 case "_327_function_mode_selection":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -95, (byte) i3});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -95, (byte) itemSelected});
                     }
-                    if (i2 == 1) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -92, (byte) (i3 + 1)});
+                    if (category == 1) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -92, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 2) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -78, (byte) i3});
+                    if (category == 2) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -78, (byte) itemSelected});
                     }
-                    if (i2 == 3) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -76, (byte) i3});
+                    if (category == 3) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -76, (byte) itemSelected});
                     }
-                    if (i2 == 4) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -70, (byte) i3});
+                    if (category == 4) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -70, (byte) itemSelected});
                     }
-                    if (i2 == 5) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -69, (byte) i3});
+                    if (category == 5) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -69, (byte) itemSelected});
                     }
-                    if (i2 == 6) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -66, (byte) i3});
+                    if (category == 6) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -66, (byte) itemSelected});
                         break;
                     }
                     break;
                 case "_327_setting_company":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -110, (byte) i3});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -110, (byte) itemSelected});
                         UiMgr uiMgr2 = UiMgr.this;
-                        uiMgr2.getmMsgMgr(uiMgr2.mContext).updateSettings(UiMgr.this.mContext, UiMgr.L0R0, i, i2, i3);
+                        uiMgr2.getmMsgMgr(uiMgr2.mContext).updateSettings(UiMgr.this.mContext, UiMgr.L0R0, sectionId, category, itemSelected);
                         break;
                     }
                     break;
                 case "_327_function_switch":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -94, (byte) (i3 + 1)});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -94, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 1) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -93, (byte) (i3 + 1)});
+                    if (category == 1) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -93, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 2) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -91, (byte) (i3 + 1)});
+                    if (category == 2) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -91, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 3) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -90, (byte) (i3 + 1)});
+                    if (category == 3) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -90, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 4) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -89, (byte) (i3 + 1)});
+                    if (category == 4) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -89, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 5) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -88, (byte) (i3 + 1)});
+                    if (category == 5) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -88, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 6) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -87, (byte) (i3 + 1)});
+                    if (category == 6) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -87, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 7) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -86, (byte) (i3 + 1)});
+                    if (category == 7) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -86, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 8) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -85, (byte) (i3 + 1)});
+                    if (category == 8) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -85, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 9) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -84, (byte) (i3 + 1)});
+                    if (category == 9) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -84, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 10) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -83, (byte) (i3 + 1)});
+                    if (category == 10) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -83, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 11) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -82, (byte) (i3 + 1)});
+                    if (category == 11) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -82, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 12) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -81, (byte) (i3 + 1)});
+                    if (category == 12) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -81, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 13) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -80, (byte) (i3 + 1)});
+                    if (category == 13) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -80, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 14) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -79, (byte) (i3 + 1)});
+                    if (category == 14) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -79, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 15) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -77, (byte) (i3 + 1)});
+                    if (category == 15) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -77, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 16) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -74, (byte) (i3 + 1)});
+                    if (category == 16) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -74, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 17) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -73, (byte) (i3 + 1)});
+                    if (category == 17) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -73, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 18) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -72, (byte) (i3 + 1)});
+                    if (category == 18) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -72, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 19) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -57, (byte) (i3 + 1)});
+                    if (category == 19) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -57, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 20) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -71, (byte) (i3 + 1)});
+                    if (category == 20) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -71, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 21) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -68, (byte) (i3 + 1)});
+                    if (category == 21) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -68, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 22) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -67, (byte) (i3 + 1)});
+                    if (category == 22) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -67, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 23) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -65, (byte) (i3 + 1)});
+                    if (category == 23) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -65, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 24) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -64, (byte) (i3 + 1)});
+                    if (category == 24) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -64, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 25) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -63, (byte) (i3 + 1)});
+                    if (category == 25) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -63, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 26) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -62, (byte) (i3 + 1)});
+                    if (category == 26) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -62, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 27) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -61, (byte) (i3 + 1)});
+                    if (category == 27) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -61, (byte) (itemSelected + 1)});
                         break;
                     }
                     break;
                 case "_327_setting_chair":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -109, (byte) i3});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -109, (byte) itemSelected});
                         break;
                     }
                     break;
                 case "_327_setting_the_headlamps":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -104, (byte) i3});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -104, (byte) itemSelected});
                         break;
                     }
                     break;
                 case "_327_setting_lane_departure":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -105, (byte) i3});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -105, (byte) itemSelected});
                         break;
                     }
                     break;
                 case "_327_setting_environmental_lighting":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -103, (byte) i3});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -103, (byte) itemSelected});
                     }
-                    if (i2 == 1) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -102, (byte) (i3 + 1)});
+                    if (category == 1) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -102, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 2) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -101, (byte) (i3 + 1)});
+                    if (category == 2) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -101, (byte) (itemSelected + 1)});
                         break;
                     }
                     break;
                 case "_327_Face_recognition":
-                    if (i2 == 0) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -60, (byte) (i3 + 1)});
+                    if (category == 0) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -60, (byte) (itemSelected + 1)});
                     }
-                    if (i2 == 1) {
-                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -59, (byte) i3});
+                    if (category == 1) {
+                        CanbusMsgSender.sendMsg(new byte[]{22, -58, -59, (byte) itemSelected});
                         break;
                     }
                     break;
                 case "_327_setting_the_light_that_accompanies_me_home":
-                    if (i2 == 0) {
-                        if (i3 == 1) {
+                    if (category == 0) {
+                        if (itemSelected == 1) {
                             CanbusMsgSender.sendMsg(new byte[]{22, -58, -106, -122});
-                            UiMgr.this.MyCountDownTimer(i, i2 + 1, 120000, 1000);
+                            UiMgr.this.MyCountDownTimer(sectionId, category + 1, 120000, 1000);
                             break;
                         } else {
                             CanbusMsgSender.sendMsg(new byte[]{22, -58, -106, 0});
-                            UiMgr.this.MyCountDownTimer(i, i2 + 1, 1000, 1000);
+                            UiMgr.this.MyCountDownTimer(sectionId, category + 1, 1000, 1000);
                             break;
                         }
                     }
