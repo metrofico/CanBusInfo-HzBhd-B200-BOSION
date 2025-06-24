@@ -7,12 +7,16 @@ import android.util.Log;
 import android.view.KeyEvent;
 
 import com.hzbhd.canbus.CanbusMsgSender;
+import com.hzbhd.canbus.entity.SettingUpdateEntity;
 import com.hzbhd.canbus.msg_mgr.AbstractMsgMgr;
 import com.hzbhd.canbus.ui_datas.GeneralDoorData;
 import com.hzbhd.canbus.ui_datas.GeneralTireData;
 import com.hzbhd.canbus.ui_mgr.UiMgrFactory;
+import com.hzbhd.canbus.util.SharePreUtil;
 import com.hzbhd.commontools.SystemStatusDef;
 import com.hzbhd.midware.constant.HotKeyConstant;
+
+import java.util.ArrayList;
 
 
 public class MsgMgr extends AbstractMsgMgr {
@@ -299,7 +303,13 @@ public class MsgMgr extends AbstractMsgMgr {
                 break;
         }
     }
-
+    public void updateSettings(Context context, String str, int i, int i2, int i3) {
+        SharePreUtil.setIntValue(context, str, i3);
+        ArrayList<SettingUpdateEntity> arrayList = new ArrayList<>();
+        arrayList.add(new SettingUpdateEntity<>(i, i2, i3));
+        updateGeneralSettingData(arrayList);
+        updateSettingActivity(null);
+    }
 
     private UiMgr getUiMgr(Context context) {
         if (this.mUiMgr == null) {

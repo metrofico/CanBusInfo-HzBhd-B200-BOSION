@@ -3,7 +3,6 @@ package com.hzbhd.canbus.car._481;
 import android.content.Context;
 
 import com.hzbhd.canbus.CanbusMsgSender;
-import com.hzbhd.canbus.car._327.MsgMgr;
 import com.hzbhd.canbus.interfaces.OnSettingItemSelectListener;
 import com.hzbhd.canbus.msg_mgr.MsgMgrFactory;
 import com.hzbhd.canbus.ui_mgr.AbstractUiMgr;
