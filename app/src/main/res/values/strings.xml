@@ -7669,8 +7669,8 @@
     <string name="_327_setting_company">Company</string>
     <string name="_481_setting_driving">Driving</string>
     <string name="_481_setting_driving_power_steering">Power Steering</string>
-    <string name="_481_setting_driving_power_comfort">Comfort</string>
-    <string name="_481_setting_driving_power_sport">Sport</string>
+    <string name="_481_setting_driving_power_steering_comfort">Comfort</string>
+    <string name="_481_setting_driving_power_steering_sport">Sport</string>
     <string name="_481_setting_accompanies_me_home_off">OFF</string>
     <string name="_481_setting_accompanies_me_home_15s">15s</string>
     <string name="_481_setting_accompanies_me_home_30s">30s</string>

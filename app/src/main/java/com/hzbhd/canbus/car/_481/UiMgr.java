@@ -27,7 +27,7 @@ public class UiMgr extends AbstractUiMgr {
                 if (category == 0) {
                     // comfort = 0
                     // sport = 1
-                    CanbusMsgSender.sendMsg(new byte[]{22, -58, 13, (byte) (itemSelected)});
+                    CanbusMsgSender.sendMsg(new byte[]{22, -58, 9, (byte) (itemSelected)});
                     getmMsgMgr().updateSettings(UiMgr.this.context, L0R0, sectionId, category, itemSelected);
                 }
                 break;
